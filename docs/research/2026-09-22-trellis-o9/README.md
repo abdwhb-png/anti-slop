@@ -2,11 +2,13 @@
 
 Date: 2026-09-22
 
-Status: the native CLI is a technically viable candidate for a bounded TypeScript evidence adapter. Its incremental value over the future TypeScript analyzer is not established. O9 is not selected as a production dependency by this experiment.
+Status: O9 is deferred by user decision D7 after this experiment. The native CLI demonstrated a usable TypeScript evidence boundary, but its measured cost conflicts with the current latency and memory priorities. It is excluded from the initial implementation and upcoming language qualification. The original observations and raw evidence remain unchanged.
 
-## Decision this experiment supports
+## Decision after the experiment
 
-O9 can be evaluated before the full TypeScript/PHP/Rust qualification. This experiment qualifies the existing Trellis process boundary and identifies integration constraints. Final adoption requires comparison with the selected TypeScript evidence path on representative changes; it does not need to wait for PHP and Rust qualification.
+This experiment evaluated the existing Trellis process boundary before the full TypeScript/PHP/Rust qualification. The user subsequently deferred O9, particularly in view of the configured workload's 9.7-second median and 461 MiB largest peak RSS. Low latency and controlled memory use are primary reasons for the Rust implementation, including a future Pi package that injects Anti-Slop results into agent context.
+
+Keep O8 as a research reference. Reconsider O9 only for a demonstrated gap in the selected TypeScript evidence path, with additional value and total resource cost measured against agreed budgets. The integration conditions below apply if that future reconsideration occurs; they are not an immediate implementation plan. See [D7, D8, and the performance design](../../brainstorming-decisions/2026-09-22-anti-slop-design.md).
 
 ## Scope and provenance
 
@@ -49,11 +51,11 @@ The initial probe disabled Bun's transpiler cache. It is retained as a controlle
 
 The configured checkout's remaining incomplete metrics concern two non-literal dynamic imports in `src/research/maintainability-spike.test.ts`. Their exact locations and reasons are retained in the reports. The native per-analysis states are `complete`, but affected metric states and the report's aggregate completeness still indicate the graph gap: an adapter must inspect the relevant metrics and coverage, not only a provider state.
 
-The configured and unconfigured scopes differ, and host load was not controlled; the timings do not establish a causal performance comparison between configurations. No latency or memory acceptance budget has been agreed for our product. These measurements establish that the extra CLI audit has a material cost to include in the TypeScript comparison.
+The configured and unconfigured scopes differ, and host load was not controlled; the timings do not establish a causal performance comparison between configurations. No numeric latency or memory acceptance budget has been agreed for our product. The user judged the observed extra CLI audit cost sufficient to defer O9; this is a product-priority decision, not a universal performance limit established for Trellis.
 
 See [cache-probe.json](cache-probe.json) and [configured-probe.json](configured-probe.json) for exact commands, repetitions and conditions.
 
-## Conditions for an adapter
+## Conditions for any future adapter
 
 1. **I1 — Own the contract.** Pin the executable and accepted report schema. Validate payloads, bound execution/output, and distinguish reports, policy failures, operational failures and malformed output. Normalize errors into our own public contract.
 2. **I2 — Own selection and policy.** Record the effective source selection and exclusions. Keep useful source exclusions when preparing the child request; do not silently inherit a second CI blocking policy or optional-provider execution from the audited repository.
@@ -61,7 +63,7 @@ See [cache-probe.json](cache-probe.json) and [configured-probe.json](configured-
 4. **I4 — Retain actual evidence.** Bind clone members, locations and measurements to our retained source snapshot. Do not treat a Trellis score as an adjudicated label or its report history as our training dataset.
 5. **I5 — Demonstrate additional value.** Compare candidate coverage and false-positive burden against the qualified TypeScript analyzer, including small duplicated invariants and legitimate repeated structures. Measure the same post-agent changes with and without Trellis, including cold/warm behavior and output size.
 
-The experiment supports proceeding with the TypeScript comparison. It does not yet justify a mandatory Trellis subprocess, an exclusive prefilter, or automatic CI blocking based on Trellis findings.
+No further Trellis comparison or integration is scheduled for the initial qualification. The experiment does not justify a mandatory Trellis subprocess, an exclusive prefilter, or automatic CI blocking based on Trellis findings.
 
 ## Reproduction and remaining limits
 

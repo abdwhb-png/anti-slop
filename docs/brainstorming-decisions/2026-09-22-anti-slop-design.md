@@ -2,13 +2,15 @@
 
 Date: 2026-09-22
 
-Status: D1–D6 confirmed with the user. Technical integration and quality claims still require qualification. This document defines the design and implementation handoff; it does not report an implemented product.
+Status: D1–D8 confirmed with the user. Technical integration and quality claims still require qualification. This document defines the design and implementation handoff; it does not report an implemented product.
 
 Working project name: `anti-slop`. Product commands, diagnostics, schemas, documentation, and code are in English.
 
 ## Destination
 
 Build a Rust tool that analyzes agent-produced changes in TypeScript, PHP, and Rust with repository context, identifies unnecessary design complexity, runs explicitly both locally and in CI, and naturally records evidence and feedback for evaluating and training replaceable semantic judges.
+
+Low latency and controlled memory use are primary reasons for choosing Rust. The same engine must support a future Pi package that injects relevant results into agent context, inspired by Pi-lens. Building that package is a later milestone; its repeated-use workload informs core qualification now.
 
 The intended result is an evidence-backed design analyzer. Existing linters, type checkers, tests, and security tools continue to own their respective checks.
 
@@ -44,6 +46,7 @@ Related material was inspected under `/home/abdwhb/projects/shared-services/pi-l
 - `clients/diagnostic-dispositions.ts` — distinct false-positive, suppress, defer, and flagged dispositions.
 - `clients/disposition-logger.ts` and `clients/disposition-publish.ts` — feedback history and delivery.
 - `clients/bounded-telemetry.ts` and `clients/degradation-ledger.ts` — operational telemetry and explicit degraded states.
+- `index.ts` and `clients/runtime-context.ts` — event delivery and consumption of stored findings, including session provenance checks. This source inspection is not a runtime performance qualification of Pi-lens.
 
 The useful precedent is the distinction between a false positive and a real problem deliberately left unresolved. The inspected feedback logger does not itself establish a complete training dataset containing the original evidence. Pi-lens is a reference, not a required dependency or a code-copying template.
 
@@ -60,7 +63,7 @@ The useful precedent is the distinction between a false positive and a real prob
 
 A research correction matters: Mago's older 2.0 tracking issue initially suggested that plugins were only planned. Published release evidence contradicts that reading. Plugins already exist; embedding and Rust API stability remain separate questions.
 
-No integration prototype, performance benchmark, rule evaluation, or paid model inference was run during this design phase.
+Initial design research did not execute analyzers. A subsequent [bounded Trellis O9 experiment](../research/2026-09-22-trellis-o9/README.md) exercised its CLI and measured execution cost. No production adapter, representative rule-accuracy evaluation, or paid model inference has been run.
 
 ## Confirmed decisions
 
@@ -72,6 +75,8 @@ No integration prototype, performance benchmark, rule evaluation, or paid model 
 | D4 | Optimize first for analyzing an agent's changes with repository context; use the same engine locally and in CI. |
 | D5 | The initial usable release covers comments, the four named smells, and the pertinent APOSD rules discussed, across TypeScript, PHP, and Rust. |
 | D6 | Use TOON as the default CLI output, with explicit JSON output available in the first version. Use JSONL for telemetry and dataset interchange. Keep the canonical data contract and model input formats independent of CLI encoding. Apply the AXI output principles described below. |
+| D7 | Defer O9, the optional Trellis TypeScript adapter, to a future reconsideration. Its measured process cost does not fit the user's current priorities. Keep the research as a reference; do not include Trellis integration in the initial implementation or upcoming language qualification. |
+| D8 | Treat latency and memory as acceptance constraints from the first release, including repeated analysis for the future Pi consumer. Evaluate the complete execution path and retained resources. Rust is the implementation choice, not evidence that those constraints are satisfied. Numeric budgets remain to be agreed. |
 
 ## Alternatives considered
 
@@ -83,6 +88,16 @@ No integration prototype, performance benchmark, rule evaluation, or paid model 
 | O4 — Contrarian: declared architecture contracts as the primary detector | Explicit expectations reduce inference, but users must anticipate and describe violations. | Rejected as the primary product. It does not sufficiently address emerging smells in ordinary agent changes. Existing contracts may still be evidence. |
 
 No option has demonstrated performance superiority. The recommendation concerns ownership and integration boundaries, not an unmeasured speed claim.
+
+### Trellis
+
+| Option | Disposition |
+| --- | --- |
+| O8 — Research reference | Retain the inspected contracts, experiments, and counterexamples as design evidence. This adds no runtime dependency. |
+| O9 — Optional TypeScript analyzer | Deferred by D7. The configured 378-file experiment measured 9.7 seconds median wall time and 461 MiB largest peak RSS, with incomplete import-graph coverage. These are bounded observations, not universal Trellis performance claims. |
+| O10 — Product foundation or fork | Not selected. Its TypeScript scope and existing runtime do not provide the agreed Rust, polyglot, replaceable-judge and dataset architecture. |
+
+Reconsidering O9 requires a concrete capability missing from the selected evidence path and new measurements demonstrating additional value within the agreed resource budgets. It is not a prerequisite for the initial three-language qualification. See the [experiment and its limitations](../research/2026-09-22-trellis-o9/README.md).
 
 ### Output formats
 
@@ -181,13 +196,37 @@ Loading build scripts or procedural macros is an execution capability of some an
 
 ## Change analysis and performance
 
-The main workflow snapshots changes after an agent finishes, then uses repository context to assess them. The diff selects changed elements; it does not bound all evidence to changed lines or an arbitrary fixed number of graph hops.
+The main workflow snapshots changes after an agent finishes, then uses repository context to assess them. The diff selects changed elements; it does not bound all evidence to changed lines or an arbitrary fixed number of graph hops. The future Pi package adds repeated consumption of results; its exact analysis triggers and injection cadence are not yet selected.
 
 Repository-wide analysis remains available for dispersed problems and evaluation. Missing history limits R9's evidence and must be visible.
 
 Reuse facts and assessments only when their dependencies are still valid. Invalidation includes relevant source changes, shared types, project configuration, analyzer/toolchain versions, candidate logic, evidence schema, rule definition, provider instructions, and model identity. Separate reusable analysis facts from provider-specific results. This is a correctness requirement, not a commitment to a persistent daemon.
 
-Measure cold and warm change analysis separately, with wall-clock latency, memory, files and symbols analyzed, cache reuse, candidate count, provider calls, tokens, and cost when available. Report extraction and inference costs separately. Numeric latency targets and resource budgets remain open until representative workloads are measured and the desired trade-off is chosen.
+D8 applies to the whole path: startup, repository discovery, analysis, evidence construction, model requests, persistence, serialization, and delivery. D2 still permits external analyzers, but their startup, child processes, output volume, and retained memory count toward acceptance. A fast Rust coordinator cannot compensate for an unsuitable dependency merely by moving its work into the background.
+
+Qualify these workloads on representative TypeScript, PHP, and Rust repositories, with source size, dependency shape, host conditions, and analysis coverage recorded:
+
+| Workload | Required measurements |
+| --- | --- |
+| Cold first analysis | End-to-end startup and analysis latency, peak process-tree memory, and initialization I/O. |
+| Warm unchanged repository | Result retrieval, freshness checks, serialization and delivery latency; work and provider calls reused or avoided. |
+| Small change or edit batch | Changed and affected files/symbols analyzed, invalidation work, time to deterministic findings, and time to completed semantic assessments. |
+| Repeated edits and idle periods | Latency distribution, peak and retained memory, cache/queue growth, cancellation and eviction behavior, including child processes. |
+| Pi context delivery | Time added before the next model call, payload bytes/tokens, duplicate delivery, and freshness/session checks, measured separately from analysis. |
+
+Report end-to-end latency alongside stage costs, cold/warm conditions, cache reuse, candidate count, provider calls, tokens, and cost when available. Use enough repetitions for meaningful latency distributions; the three-run Trellis experiment does not establish tail latency. Track p50 and p95 with the run count and a consistent memory measurement method. Model latency and durable data capture remain visible costs even when asynchronous.
+
+Bound concurrent analysis, queued work, caches, evidence buffers, and child lifetimes. Expired or superseded work must not publish results as current. A budget exhaustion or unavailable assessment stays explicit; reducing evidence or skipping required work cannot manufacture a fast, complete result. Bound retries and make capture loss visible rather than silently sacrificing the dataset requirement.
+
+Numeric budgets must distinguish cold analysis, repeated change analysis, context delivery, and idle memory. Establish them before accepting an analyzer integration, using initial measurements to inform the user's trade-off. The upcoming qualification evaluates resource use together with fact coverage; performance is not postponed to a later optimization phase. A persistent process, daemon, or Rust-to-Pi transport has not been selected: qualify reuse benefits against idle memory and lifecycle cost before introducing one.
+
+### Future Pi consumer boundary
+
+The package will connect Pi lifecycle events to the existing engine and deliver compact results. Rule selection, evidence, coverage, policy, feedback, and record generation remain owned by the Rust core; the package must not develop a second analyzer or training-data implementation.
+
+Separate analysis scheduling from context delivery. Preparing context should consume a bounded view of available results rather than initiate a full repository scan or model assessment on each context event. Group changes and reuse valid work. Source or dependency changes invalidate affected facts and assessments; session changes invalidate delivery state without automatically discarding reusable repository facts. An unfinished assessment is pending or incomplete, never implicitly clean. The explicit CLI/CI path still waits for its required checks and applies D1.
+
+Deliver relevant findings with stable identities, source provenance, and coverage. Avoid repeatedly injecting unchanged findings while ensuring changed, resolved, or incomplete states remain visible. Preserve valid message ordering and stable transcript prefixes; qualify actual provider-cache behavior with the future package. Its selected Pi hooks, delivery protocol, and integration tests belong to its later design; this boundary does not commit to per-edit invocation or a background service.
 
 ## Replaceable judge contract
 
@@ -247,6 +286,7 @@ Production behavior follows RED → GREEN → REFACTOR through the real public b
 - **V2 — Relevance:** positive, negative, and ambiguous examples for R1–R9; candidate recall separately from assessment precision; end-to-end false-positive burden and missed issues by language and rule.
 - **V3 — Contracts:** provider interchange, failures and abstention, cache invalidation, evidence freshness, feedback revisions, export round-trips, and replay from stored packets.
 - **V4 — Output:** semantic equivalence of TOON and JSON through the public CLI, schema versioning, text/value round-trips, explicit truncation, structured errors, zero findings versus incomplete analysis, and dataset export completeness independent of CLI previews. Qualify the selected TOON codec against its declared specification version.
+- **V5 — Resources:** reproducible cold, warm, unchanged, and repeated-edit experiments through the public boundary, with the agreed latency/memory budgets, source coverage, child-process cost, bounded retention, and telemetry capture included. Later Pi integration must also measure the actual delay and payload added to model calls.
 
 Blocking thresholds must be selected on validation data, not the frozen evaluation set. No numeric precision, recall, or latency target is asserted as achieved by this document.
 
@@ -258,13 +298,14 @@ The next technical milestone is qualification of the evidence path for all three
 
 | Unresolved item | Impact | Reliable next step |
 | --- | --- | --- |
-| Exact analyzer integrations and versions | Evidence completeness, deployment, and maintenance | Run the three bounded qualification experiments against verified releases. |
+| Exact analyzer integrations and versions | Evidence completeness, deployment, memory, and latency | Run the three bounded qualification experiments against verified releases. O9 is deferred and excluded from this milestone. |
 | Representative calibration corpus and label protocol | Validity of blocking and replacement claims | Define representative examples and independent review/adjudication before threshold selection. |
-| Numeric performance and false-positive budgets | Acceptance criteria | Measure D4 workloads, present trade-offs, and select explicit budgets. |
+| Numeric performance and false-positive budgets | Acceptance criteria | Measure D4 and repeated-use workloads, present trade-offs, and select explicit budgets before accepting integrations. |
+| Future Pi triggers, transport, and delivery cadence | Invocation frequency, user-visible latency, and idle resource use | Design the package after the core evidence path is qualified; retain the shared engine and separate scheduling from delivery. |
 | Local persistence and retention defaults | Replay and export completeness | Verify atomic capture, failure reporting, and reconstruction on a small complete path. |
 | Rust TOON codec and supported specification version | Encoding fidelity and interoperability | Check conformance fixtures and public CLI equivalence; measure representative results against compact JSON. |
 | Future replacement model, including the Laya reference | Training/export adapter details | Resolve the actual model when it is selected; retain provider-neutral records meanwhile. |
 
-Out of scope for this design phase: production implementation, automatic code rewriting, a hosted telemetry platform, and training a production replacement model. The product exports data and evaluates judges; it does not need to become a general training platform or agent orchestrator.
+Out of scope for this design phase: production implementation, the future Pi package, automatic code rewriting, a hosted telemetry platform, and training a production replacement model. The product exports data and evaluates judges; it does not need to become a general training platform or agent orchestrator.
 
-Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D6. No source-code tests or integration benchmarks were run because no production implementation was created.
+Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D8. The subsequent Trellis experiment passed 44 focused checks and 12 source-fingerprint checks and recorded bounded runtime measurements. No production implementation, production test suite, or end-to-end Anti-Slop/Pi benchmark exists yet.

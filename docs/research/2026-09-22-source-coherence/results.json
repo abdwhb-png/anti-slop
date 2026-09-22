@@ -1,0 +1,824 @@
+{
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "scope": "small controlled source fixtures; no product performance claim",
+  "binaries": {
+    "rust-analyzer": {
+      "path": "/tmp/anti-slop-language-qualification-20260922/bin/rust-analyzer",
+      "sha256": "8500d7c69a9b3df8929f06f6b95c42364ac83bc9aa6ae5fed22051ab87d0aa8a"
+    },
+    "mago": {
+      "path": "/tmp/anti-slop-language-qualification-20260922/bin/mago",
+      "sha256": "2d21c51fe6ca87778c6e9af237008122a9779e457b4eabbc3706d4fa865c8a66"
+    },
+    "typescript7-native": {
+      "path": "/home/abdwhb/projects/shared-services/pi-lens/node_modules/@typescript/typescript-linux-x64/lib/tsc",
+      "sha256": "4f2de678286401759b3fb4475bafe35b8f32b4b3a07d92642bbf37eadc9b34a4"
+    }
+  },
+  "checks": [
+    {
+      "name": "ts: independent source files",
+      "passed": true
+    },
+    {
+      "name": "ts: initial dependent fact",
+      "passed": true
+    },
+    {
+      "name": "ts: live edit cannot change captured file",
+      "passed": true
+    },
+    {
+      "name": "ts: live edit leaves captured analysis unchanged",
+      "passed": true
+    },
+    {
+      "name": "ts: disk manifest can stay unchanged while semantic input changes",
+      "passed": true
+    },
+    {
+      "name": "ts: explicit new generation matches captured bytes",
+      "passed": true
+    },
+    {
+      "name": "ts: new caller invalidates prior reference result",
+      "passed": true
+    },
+    {
+      "name": "ts: native process exits after shutdown",
+      "passed": true
+    },
+    {
+      "name": "rust: independent source files",
+      "passed": true
+    },
+    {
+      "name": "rust: initial dependent fact",
+      "passed": true
+    },
+    {
+      "name": "rust: live edit cannot change captured file",
+      "passed": true
+    },
+    {
+      "name": "rust: live edit leaves captured analysis unchanged",
+      "passed": true
+    },
+    {
+      "name": "rust: disk manifest can stay unchanged while semantic input changes",
+      "passed": true
+    },
+    {
+      "name": "rust: explicit new generation matches captured bytes",
+      "passed": true
+    },
+    {
+      "name": "rust: build script remains disabled",
+      "passed": true
+    },
+    {
+      "name": "rust: native process exits after shutdown",
+      "passed": true
+    },
+    {
+      "name": "php: independent source files",
+      "passed": true
+    },
+    {
+      "name": "php: live edit leaves captured SDK input unchanged",
+      "passed": true
+    },
+    {
+      "name": "php: explicit new generation reaches SDK",
+      "passed": true
+    },
+    {
+      "name": "php: native type mismatch remains visible",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "ts": {
+      "initialize": {
+        "method": "initialize",
+        "ms": 2.1489770151674747,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "result": {
+            "capabilities": {
+              "positionEncoding": "utf-16",
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 2,
+                "save": true
+              },
+              "completionProvider": {
+                "triggerCharacters": [
+                  ".",
+                  "\"",
+                  "'",
+                  "`",
+                  "/",
+                  "@",
+                  "<",
+                  "#",
+                  " ",
+                  "*"
+                ],
+                "resolveProvider": true,
+                "completionItem": {
+                  "labelDetailsSupport": true
+                }
+              },
+              "hoverProvider": true,
+              "signatureHelpProvider": {
+                "triggerCharacters": [
+                  "(",
+                  ",",
+                  "<"
+                ],
+                "retriggerCharacters": [
+                  ")"
+                ]
+              },
+              "definitionProvider": true,
+              "typeDefinitionProvider": true,
+              "implementationProvider": true,
+              "referencesProvider": true,
+              "documentHighlightProvider": true,
+              "documentSymbolProvider": true,
+              "codeActionProvider": {
+                "codeActionKinds": [
+                  "quickfix",
+                  "source.organizeImports",
+                  "source.removeUnusedImports",
+                  "source.sortImports",
+                  "source.fixAll"
+                ]
+              },
+              "codeLensProvider": {
+                "resolveProvider": true
+              },
+              "workspaceSymbolProvider": true,
+              "documentFormattingProvider": true,
+              "documentRangeFormattingProvider": true,
+              "documentOnTypeFormattingProvider": {
+                "firstTriggerCharacter": "{",
+                "moreTriggerCharacter": [
+                  "}",
+                  ";",
+                  "\n"
+                ]
+              },
+              "renameProvider": {
+                "prepareProvider": true
+              },
+              "foldingRangeProvider": true,
+              "selectionRangeProvider": true,
+              "callHierarchyProvider": true,
+              "linkedEditingRangeProvider": true,
+              "semanticTokensProvider": {
+                "legend": {
+                  "tokenTypes": [],
+                  "tokenModifiers": []
+                },
+                "range": true,
+                "full": true
+              },
+              "inlayHintProvider": true,
+              "diagnosticProvider": {
+                "identifier": "typescript",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "workspace": {
+                "fileOperations": {
+                  "willRename": {
+                    "filters": [
+                      {
+                        "scheme": "file",
+                        "pattern": {
+                          "glob": "**/*.{ts,tsx,js,jsx,cts,cjs,mts,mjs,json}"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "experimental": {
+                "customSourceDefinitionProvider": true,
+                "customMultiDocumentHighlightProvider": true
+              },
+              "_vs_onAutoInsertProvider": {
+                "_vs_triggerCharacters": [
+                  ">"
+                ]
+              },
+              "_vs_referencesProvider": true
+            },
+            "serverInfo": {
+              "name": "typescript-go",
+              "version": "7.0.2"
+            }
+          }
+        }
+      },
+      "initial": {
+        "method": "textDocument/hover",
+        "ms": 73.11226599267684,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 2,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "const result: OrderId"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 13
+              },
+              "end": {
+                "line": 2,
+                "character": 19
+              }
+            }
+          }
+        }
+      },
+      "after_live_edit": {
+        "method": "textDocument/hover",
+        "ms": 0.810939003713429,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "const result: OrderId"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 13
+              },
+              "end": {
+                "line": 2,
+                "character": 19
+              }
+            }
+          }
+        }
+      },
+      "overlay_only": {
+        "method": "textDocument/hover",
+        "ms": 2.7948099886998534,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 4,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "const result: number"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 13
+              },
+              "end": {
+                "line": 2,
+                "character": 19
+              }
+            }
+          }
+        }
+      },
+      "published_b": {
+        "method": "textDocument/hover",
+        "ms": 2.1122689940966666,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 5,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "const result: number"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 13
+              },
+              "end": {
+                "line": 2,
+                "character": 19
+              }
+            }
+          }
+        }
+      },
+      "references_before": {
+        "method": "textDocument/references",
+        "ms": 1.19385399739258,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 6,
+          "result": [
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/domain.ts",
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 16
+                },
+                "end": {
+                  "line": 2,
+                  "character": 25
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 9
+                },
+                "end": {
+                  "line": 0,
+                  "character": 18
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 22
+                },
+                "end": {
+                  "line": 2,
+                  "character": 29
+                }
+              }
+            }
+          ]
+        }
+      },
+      "references_after": {
+        "method": "textDocument/references",
+        "ms": 3.6876350059174,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 7,
+          "result": [
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/domain.ts",
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 16
+                },
+                "end": {
+                  "line": 2,
+                  "character": 25
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 9
+                },
+                "end": {
+                  "line": 0,
+                  "character": 18
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/new-caller.ts",
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 9
+                },
+                "end": {
+                  "line": 0,
+                  "character": 18
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/new-caller.ts",
+              "range": {
+                "start": {
+                  "line": 1,
+                  "character": 26
+                },
+                "end": {
+                  "line": 1,
+                  "character": 35
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                }
+              }
+            },
+            {
+              "uri": "file:///tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/ts/service.ts",
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 22
+                },
+                "end": {
+                  "line": 2,
+                  "character": 29
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "rust": {
+      "initialize": {
+        "method": "initialize",
+        "ms": 4.039908992126584,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 1,
+          "result": {
+            "capabilities": {
+              "positionEncoding": "utf-16",
+              "textDocumentSync": {
+                "openClose": true,
+                "change": 2,
+                "save": {}
+              },
+              "completionProvider": {
+                "triggerCharacters": [
+                  ":",
+                  ".",
+                  "'",
+                  "("
+                ],
+                "resolveProvider": false,
+                "completionItem": {
+                  "labelDetailsSupport": false
+                }
+              },
+              "hoverProvider": true,
+              "signatureHelpProvider": {
+                "triggerCharacters": [
+                  "(",
+                  ",",
+                  "<"
+                ]
+              },
+              "declarationProvider": true,
+              "definitionProvider": true,
+              "typeDefinitionProvider": true,
+              "implementationProvider": true,
+              "referencesProvider": true,
+              "documentHighlightProvider": true,
+              "documentSymbolProvider": true,
+              "codeActionProvider": true,
+              "codeLensProvider": {
+                "resolveProvider": true
+              },
+              "workspaceSymbolProvider": true,
+              "documentFormattingProvider": true,
+              "documentRangeFormattingProvider": false,
+              "documentOnTypeFormattingProvider": {
+                "firstTriggerCharacter": ".",
+                "moreTriggerCharacter": [
+                  "=",
+                  "<",
+                  ">",
+                  "{",
+                  "(",
+                  "|",
+                  "+"
+                ]
+              },
+              "renameProvider": {
+                "prepareProvider": true
+              },
+              "foldingRangeProvider": true,
+              "selectionRangeProvider": true,
+              "callHierarchyProvider": true,
+              "semanticTokensProvider": {
+                "legend": {
+                  "tokenTypes": [
+                    "comment",
+                    "decorator",
+                    "enumMember",
+                    "enum",
+                    "function",
+                    "interface",
+                    "keyword",
+                    "macro",
+                    "method",
+                    "namespace",
+                    "number",
+                    "operator",
+                    "parameter",
+                    "property",
+                    "string",
+                    "struct",
+                    "typeParameter",
+                    "variable",
+                    "type",
+                    "label",
+                    "angle",
+                    "arithmetic",
+                    "attributeBracket",
+                    "attribute",
+                    "bitwise",
+                    "boolean",
+                    "brace",
+                    "bracket",
+                    "builtinAttribute",
+                    "builtinType",
+                    "character",
+                    "colon",
+                    "comma",
+                    "comparison",
+                    "constParameter",
+                    "const",
+                    "deriveHelper",
+                    "derive",
+                    "dot",
+                    "escapeSequence",
+                    "formatSpecifier",
+                    "generic",
+                    "invalidEscapeSequence",
+                    "lifetime",
+                    "logical",
+                    "macroBang",
+                    "negation",
+                    "parenthesis",
+                    "procMacro",
+                    "punctuation",
+                    "selfKeyword",
+                    "selfTypeKeyword",
+                    "semicolon",
+                    "static",
+                    "toolModule",
+                    "typeAlias",
+                    "union",
+                    "unresolvedReference"
+                  ],
+                  "tokenModifiers": [
+                    "async",
+                    "documentation",
+                    "declaration",
+                    "static",
+                    "defaultLibrary",
+                    "deprecated",
+                    "associated",
+                    "attribute",
+                    "callable",
+                    "constant",
+                    "consuming",
+                    "controlFlow",
+                    "crateRoot",
+                    "injected",
+                    "intraDocLink",
+                    "library",
+                    "macro",
+                    "mutable",
+                    "procMacro",
+                    "public",
+                    "reference",
+                    "trait",
+                    "unsafe"
+                  ]
+                },
+                "range": true,
+                "full": {
+                  "delta": true
+                }
+              },
+              "inlayHintProvider": {
+                "resolveProvider": false
+              },
+              "diagnosticProvider": {
+                "identifier": "rust-analyzer",
+                "interFileDependencies": true,
+                "workspaceDiagnostics": false
+              },
+              "workspace": {
+                "workspaceFolders": {
+                  "supported": true,
+                  "changeNotifications": true
+                },
+                "fileOperations": {
+                  "willRename": {
+                    "filters": [
+                      {
+                        "scheme": "file",
+                        "pattern": {
+                          "glob": "**/*.rs",
+                          "matches": "file"
+                        }
+                      },
+                      {
+                        "scheme": "file",
+                        "pattern": {
+                          "glob": "**",
+                          "matches": "folder"
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "experimental": {
+                "externalDocs": true,
+                "hoverRange": true,
+                "joinLines": true,
+                "matchingBrace": true,
+                "moveItem": true,
+                "onEnter": true,
+                "openCargoToml": true,
+                "parentModule": true,
+                "childModules": true,
+                "runnables": {
+                  "kinds": [
+                    "cargo"
+                  ]
+                },
+                "ssr": true,
+                "workspaceSymbolScopeKindFiltering": true
+              }
+            },
+            "serverInfo": {
+              "name": "rust-analyzer",
+              "version": "0.3.3049-standalone"
+            }
+          }
+        }
+      },
+      "ready": {
+        "health": "ok",
+        "quiescent": true,
+        "message": null
+      },
+      "initial": {
+        "method": "textDocument/hover",
+        "ms": 3754.9818900006358,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 2,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "let id: OrderId\n\n\nsize = 8, align = 0x8, no Drop"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 8
+              },
+              "end": {
+                "line": 2,
+                "character": 10
+              }
+            }
+          }
+        }
+      },
+      "after_live_edit": {
+        "method": "textDocument/hover",
+        "ms": 0.8364310197066516,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "let id: OrderId\n\n\nsize = 8, align = 0x8, no Drop"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 8
+              },
+              "end": {
+                "line": 2,
+                "character": 10
+              }
+            }
+          }
+        }
+      },
+      "overlay_only": {
+        "method": "textDocument/hover",
+        "ms": 14.548691018717363,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 4,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "let id: OrderId\n\n\nsize = 4, align = 0x4, no Drop"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 8
+              },
+              "end": {
+                "line": 2,
+                "character": 10
+              }
+            }
+          }
+        }
+      },
+      "published_b": {
+        "method": "textDocument/hover",
+        "ms": 2.935347001766786,
+        "response": {
+          "jsonrpc": "2.0",
+          "id": 5,
+          "result": {
+            "contents": {
+              "kind": "plaintext",
+              "value": "let id: OrderId\n\n\nsize = 4, align = 0x4, no Drop"
+            },
+            "range": {
+              "start": {
+                "line": 2,
+                "character": 8
+              },
+              "end": {
+                "line": 2,
+                "character": 10
+              }
+            }
+          }
+        }
+      }
+    },
+    "php": {
+      "a-after-live-edit": {
+        "command": [
+          "/tmp/anti-slop-language-qualification-20260922/bin/mago",
+          "--workspace",
+          "/tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/php",
+          "analyze",
+          "--reporting-format",
+          "json"
+        ],
+        "exit": 0,
+        "ms": 1163.426065002568
+      },
+      "b": {
+        "command": [
+          "/tmp/anti-slop-language-qualification-20260922/bin/mago",
+          "--workspace",
+          "/tmp/anti-slop-source-coherence-sj1grazj/experiment-2/managed/php",
+          "analyze",
+          "--reporting-format",
+          "json"
+        ],
+        "exit": 1,
+        "ms": 406.3989320129622
+      }
+    }
+  },
+  "passed": true
+}

@@ -2,13 +2,13 @@
 
 Date: 2026-09-22
 
-Status: architecture proposal grounded in confirmed decisions D1–D12. D10 adds a resident mode in the first release; D11 binds its lifetime to its client session; D12 selects SQLite with JSONL/evidence exports. Interfaces, method names, module layout, and operational defaults below are proposed contracts, not implemented or performance-qualified behavior.
+Status: architecture proposal grounded in confirmed decisions D1–D17. Execution hosting, record storage, retention, performance targets, judge deadlines, storage threshold and performance repositories are selected. A bounded source-coherence experiment passes 20 checks. Interfaces and module layout remain proposed contracts; production behavior and performance are not yet qualified.
 
 ## Destination and authority
 
 Define one Rust engine that supports explicit CLI/CI analysis and a client-owned resident session, preserves the evidence needed for evaluation and training, and permits independent replacement of language analyzers and semantic judges.
 
-The [product design](2026-09-22-anti-slop-design.md) owns D1–D12, R1–R9, the output policy, and the dataset requirements. This document refines their implementation structure. All nine rule families across TypeScript, PHP, and Rust remain the scope of the first usable release. A first vertical implementation slice is a construction step, not a narrower release commitment.
+The [product design](2026-09-22-anti-slop-design.md) owns D1–D17, R1–R9, the output policy, and the dataset requirements. This document refines their implementation structure and owns the detailed operational targets below. All nine rule families across TypeScript, PHP, and Rust remain the scope of the first usable release. A first vertical implementation slice is a construction step, not a narrower release commitment.
 
 Known facts and limits:
 
@@ -20,6 +20,7 @@ Known facts and limits:
 | E4 | D10/D11 explicitly select both invocation modes, with residency ending when the client closes. | Share the engine and resource accounting. Do not install a machine-wide background service. |
 | E5 | [SQLite transactions](https://sqlite.org/lang_transaction.html) provide transactional reads/writes with one concurrent writer; [atomic commit](https://sqlite.org/atomiccommit.html) depends on documented storage assumptions. | SQLite is a credible local record store. Product durability, contention, size, and latency still require direct qualification. |
 | E6 | The [Jev API](https://docs.typesafe.ai/api) accepts structured state and questions, and reports answers, effective model identity, and usage. | A provider adapter can render canonical evidence without defining the rule or blocking policy. API documentation does not establish rule accuracy. |
+| E7 | The [source-coherence experiment](../research/2026-09-22-source-coherence/README.md) preserves managed input while live files change, then observes explicit updates in all three native analyzers. LSP input can differ from unchanged disk files. | Qualify a managed source view as the reference mechanism; bind overlay bytes as well as disk/configuration/dependency inputs. The experiment does not prove concurrent or hermetic production behavior. |
 
 Out of scope: the Pi package itself, Trellis O9, automatic code rewriting, a hosted collector, a distributed job system, dynamic plugins, and training a production replacement model.
 
@@ -41,7 +42,7 @@ These alternatives concern durable storage, not the selected TOON/JSON output or
 | O18 — Append-only JSONL plus derived indexes | Conventional ecosystem/pattern | Easy stream inspection and ingestion. Must implement recovery from partial writes, index rebuilding, concurrent writers, and consistency across source artifacts. Attractive if append throughput and direct file consumption dominate those costs. | Not selected as the primary store: additional consistency/index ownership. Retain JSONL for exports. |
 | O19 — Immutable bundle per analysis plus a catalog | Structural alternative | Each completed run is portable and independently inspectable. Feedback links, deduplication, partial-run recovery, and cross-run queries require additional coordination. Attractive when archive transfer dominates interactive use. | Not selected as the primary store: cross-run history and duplication cost. Retain self-contained bundles for exports. |
 
-The recommendation is about integrity and implementation ownership, not a measured speed advantage. No new database dependency has been installed. Native snapshot coherence, representative corpus quality, numeric resource budgets, retention defaults, and exact codec/client libraries remain unqualified.
+The recommendation is about integrity and implementation ownership, not a measured speed advantage. No new database dependency has been installed. D13–D17 now select retention, numeric targets, judge deadlines, a storage threshold, and performance repositories. Meeting those targets, production source coherence, representative adjudicated corpus quality, and exact codec/client libraries remain to qualify.
 
 ## Modules and ownership
 
@@ -117,7 +118,20 @@ Captured source bytes are immutable for a run. Spans use a declared internal byt
 
 **Native source consistency is a qualification gate.** Reading captured files in Rust does not prove that an external analyzer used those same files, configuration and dependencies. Waiting for an idle LSP server and hashing files before/after are not sufficient by themselves. An adapter must bind its queries to a coherent analyzer view and report the achieved consistency scope.
 
-The reference path to qualify is a managed source view whose contents change only between generations, with dependency inputs equally bound. A resident adapter updates that view, completes its reload/update barrier, and only then answers queries. Materialization, coherent native overlays, and immutable dependency reuse are implementation alternatives to measure. Avoid mandatory whole-repository copies in the abstract interface. Mutable or untracked external inputs that cannot be bound make affected evidence incomplete and ineligible for blocking qualification.
+The reference path to qualify is a managed source view whose contents change only between generations, with dependency inputs equally bound. The new controlled experiment establishes the feasibility of independent source copies for the three selected analyzers, not their cost on representative repositories. A resident implementation should update changed inputs while preserving stable native paths and unchanged content. Avoid mandatory fresh whole-repository copies per request in the abstract interface.
+
+The adapter protocol is now specified as follows:
+
+| Step | Required behavior |
+| --- | --- |
+| SG1 — Capture | Retain the selected file contents, configuration and dependency/toolchain identities. Include relevant dirty and untracked files. Record actual supplied overlay text and its version whenever overlays are used. |
+| SG2 — Bind | Map these inputs into the analyzer's managed view. Mutable symlinks or absolute dependencies outside it must be captured/bound or declared unresolved. Native-generated inputs require explicit provenance; silently rewritten inputs cannot keep the old generation identity. |
+| SG3 — Transition | Finish or cancel queries using the previous mutable view before applying the next generation. Synchronize native documents/configuration and pass an adapter-specific readiness check. An idle notification alone is not a universal coherence proof. |
+| SG4 — Query | Tag each request and result with the bound generation. Normalize spans against that generation's exact source bytes. Reject/discard a late result for current publication when its generation has been superseded. |
+| SG5 — Retain | Persist evidence with the same input identities before submitting a judgment. Source on disk, a native overlay and the packet must not silently describe different versions. |
+| SG6 — Publish | Compare against the client's current requested generation and the available source/configuration freshness checks. Retain stale results as history, with their last verification point, rather than presenting them as current. |
+
+Ordinary live-worktree analysis plus pre/post disk hashing is not an equivalent substitute: the experiment demonstrates an unchanged disk manifest with changed LSP semantics. A native overlay optimization remains possible if it passes the same contract, including configuration and dependency scope. Mutable external inputs that cannot be bound make affected evidence incomplete and ineligible for blocking qualification. Hard links to mutable input do not provide isolation.
 
 Capture is not asserted to be a filesystem-wide atomic operation. Detect observable edits during capture, retry within bounds, and mark unstable acquisition explicitly. Distinguish a successfully analyzed captured state from whether that state still matches the client's current workspace. A changed workspace can leave a valid historical assessment which is stale for current delivery. Clients provide their current edit generation; final publication also performs the available source/dependency freshness checks. Without a fresh match, display historical/unknown freshness rather than claiming current results.
 
@@ -182,6 +196,16 @@ An external provider response and a local commit cannot be made atomic by SQLite
 
 Disk full, retention limits, corruption, or failed export are explicit record failures. Already observed findings remain visible with `recording: incomplete`; the run cannot claim a complete dataset. Retention may delete eligible evidence only under an explicit policy, preserving tombstones and missing-content status. Protect pinned evaluation/export inputs. Cache eviction is independent and can be automatic; authoritative evidence must not silently become a cache.
 
+### Retention and storage admission
+
+D13 selects indefinite retention until explicit purge for authoritative analysis records, evidence, provider exchanges, feedback and qualification provenance. Export success does not authorize local deletion. Automatic cleanup is limited to reconstructible caches and technical logs; logs required to understand an assessment belong in its durable record instead of an expiring log stream. Dataset sources never expire merely because they are old or the model rejected a candidate.
+
+D16 selects a configurable **10 GiB per-workspace admission threshold**, with a warning at **80% (8 GiB)**. GiB means 1,073,741,824 bytes. Account for the actual authoritative store footprint, including SQLite auxiliary/journal files; report cache, managed-view and export sizes separately rather than hiding them inside the dataset estimate. Reserve space for bounded in-flight writes and terminal status before admitting work. This is an application admission policy, not a claim that a filesystem quota already exists.
+
+At the threshold, stop admitting new collection-dependent analysis before new judge requests. Expose `storage_limit_reached`, preserve the existing records and permit reads and explicit export where the destination has sufficient space. Do not continue with an apparently complete run while dropping its evidence. User actions can raise the limit, move/export the store, or explicitly purge selected records. Protection of pinned cases and the difference between logical deletion and physically reclaimed SQLite space must remain visible in the purge result.
+
+Unexpected low disk space or a concurrent writer can still cause a write to fail below the threshold; surface that failure under the same recording contract. No purge has been performed by this design work. Exact transaction reservation/page accounting and cleanup of reconstructible caches are executable implementation checks, not unresolved retention preferences.
+
 ## Feedback, datasets, and model replacement
 
 A finding has an occurrence bound to a run/packet and a separate continuity hint for matching related findings across revisions. Only the exact occurrence is the default feedback target. Similar code or a moved line is not sufficient to transfer an adjudicated label. Prior feedback may remain visible as history; any verified equivalence/carry-forward procedure needs its own version and provenance.
@@ -206,13 +230,52 @@ Results from superseded generations remain historical and never replace a newer 
 
 ## Performance and the future Pi consumer
 
-The engine owns a resource envelope for analysis concurrency, provider concurrency, native threads, queued work, captured/retained bytes, cache size, child lifetime, packet size, deadlines and retry count. Every limit is explicit in effective configuration and reports. Defaults and numeric acceptance targets must be measured and agreed; this document invents no performance SLA. Distinguish enforced limits from observed RSS where a portable hard cap is unavailable.
+The engine owns a resource envelope for analysis concurrency, provider concurrency, native threads, queued work, captured/retained bytes, cache size, child lifetime, packet size, deadlines and retry count. Every limit is explicit in effective configuration and reports. D14/D15 now select the targets and deadlines below. Distinguish acceptance targets from enforced limits, and observed RSS from a hard memory cap where portable enforcement is unavailable.
 
 Load project semantics lazily when required evidence demands them. Preserve useful resident state while under the session's budget; evict idle analyzers/caches according to measured benefit and configured policy. Record eviction/reload cost and the resulting cold/warm state. Rust-analyzer's accepted provisional cost does not authorize multiplying resident instances without accounting for them.
 
 The future Pi package owns event scheduling and delivery history; it calls the resident interface and contains no second rule engine, policy engine, or dataset writer. A context hook reads a bounded report matching its session/current generation. It does not synchronously scan a repository or call a judge. Pending, stale and incomplete states are visible; unchanged findings are not repeatedly injected. Read latency, payload and freshness checks need separate qualification from analysis latency.
 
 Measure p50/p95 with run counts for cold analysis, unchanged reuse, small edits, repeated edits/cancellation, idle retention, persistence/export, and report delivery. Include all child processes, external-model time/tokens and capture cost. A shorter foreground wait caused by background work is not a reduction in total resource use. No end-to-end architecture measurement exists yet.
+
+### Performance budgets
+
+These are user-selected acceptance targets under D14, not results established by the extraction or coherence probes. Apply them per declared workload, with the enabled rules and actual evidence coverage recorded. Failure must prompt an implementation/adapter trade-off or explicit target reconsideration; quietly dropping required work does not satisfy a budget.
+
+| Budget | Target | Measurement contract |
+| --- | --- | --- |
+| B1 — Available report | p95 ≤ **50 ms** | Public resident request through receipt of the default bounded report, including store access, freshness/status projection and serialization. No analyzer/model invocation. Freeze report contents and record returned bytes/counts before measuring. |
+| B2 — Small change, loaded analyzers | p95 ≤ **1 s** | Capture, invalidation, required local analysis, candidate/evidence work, durable recording and report completion. Remote waiting excluded, with provider responses replayed through the external seam for the controlled local-path benchmark. Include serialization/recording of those responses. |
+| B3 — First local analysis | p95 ≤ **2 s** for a TypeScript or PHP workload; **10 s** for Rust | Same local-path work as B2 plus application/native startup and first project load. State filesystem-cache conditions; a new process with warm OS caches is not a cold-disk result. |
+| B4 — Session memory | **256 MiB** for TypeScript or PHP; **768 MiB** for Rust; **1 GiB** for mixed-language sessions | Whole owned process tree, including workers, captured facts, buffers and database operations. Measure peak active/startup and retained idle use. Independent client sessions add up; the target is not a global host quota. |
+
+B1's request/read target is relevant to future Pi integration but does not prove the eventual Pi hook overhead. B2/B3 do not claim that actual provider inference is free: real end-to-end elapsed time, provider wait, retries and recording costs must also be reported from the same run. Never compare a local-only target with a selectively cropped native query time.
+
+Small-change scenarios initially cover one changed source file with dependent consumers and a batch of up to five source files/200 changed lines. Record exact edits and affected scope; this does not limit evidence to the changed files. Config/dependency changes have separate reload scenarios. Do not relabel an ordinary source edit as a cold run merely because an adapter unnecessarily restarts. Whole-repository scans and larger edit batches must report their actual latency and coverage separately; these initial latency targets are not universal promises for arbitrary repository sizes.
+
+Memory measurement must state its method. Sampled RSS sums may double-count shared pages and miss brief peaks; use stronger isolated accounting where available and retain the sampling/peak limitations otherwise. Core-only measurements cannot establish B4. A memory limit hit produces explicit unavailable/incomplete work, not a false clean result.
+
+### Judge deadline
+
+D15 selects a configurable **10-second interactive** and **60-second CI** deadline for the whole model-assessment phase of one analysis. Start the clock when that phase begins, including its admission/queueing, all candidate requests, backoff and retries. Concurrency does not grant a new deadline to every request. No retry or fallback resets the deadline, and no retry may start if its remaining budget is insufficient.
+
+These are maximum waiting budgets, not p95 model-speed targets. On expiry, mark affected assessments timed out, stop scheduling new calls, cancel supported outstanding requests and preserve ambiguous remote attempts/cost provenance. A remote provider may already have accepted work; local cancellation does not guarantee remote execution or billing ceased. Required CI checks remain incomplete/failed; completed findings remain available under their actual coverage. Deadline expiry does not redefine a partial analysis as complete or establish accuracy.
+
+### Reference workloads
+
+D17 selects these existing repositories for later performance qualification, in addition to controlled fixtures:
+
+| ID | Repository | Intended role |
+| --- | --- | --- |
+| K1 | `shared-services/pi-lens` | TypeScript project and the future consumer's repeated-use shape. |
+| K2 | `quickcoin-platform` | PHP application plus its TypeScript scope; framework/dependency behavior must be declared. |
+| K3 | `shared-services/sandboxes/zerobox` | Rust workspace with real multi-crate/dependency structure. |
+
+Manifest inspection confirms these repository candidates; they have not been analyzed by the coherence experiment. Before measuring, freeze each checkout's exact revision and dirty/untracked source manifest, toolchains/lockfiles, file/byte counts, dependency scope, configuration, selected rules, coverage expectations and edit scenarios. Work in controlled captures, without modifying the user's active checkout. Embedded/framework-generated or unsupported source must be explicit; silently excluding meaningful application code does not establish repository-wide coverage.
+
+The qualification procedure should use at least 30 process-cold runs and 100 warm observations across at least five independently loaded sessions per applicable case. Report raw observations, nearest-rank p95, host load, cache state and correlated-session limitations; these counts are a starting protocol, not proof of precise tail confidence. Include unchanged reads, ordinary edits, config/dependency reload, new/deleted callers, cancellation/supersession and idle retention. Repeat broad resource runs when the integration stabilizes or a substantive analyzer/resource change invalidates them, not between routine edits.
+
+These are performance repositories, not an independently labeled quality corpus. Rule accuracy, calibration and blocking qualification still require adjudicated R1–R9 examples and frozen evaluation partitions.
 
 ## Verification and implementation handoff
 
@@ -231,6 +294,6 @@ Production behavior must follow the repository's RED → GREEN → REFACTOR poli
 
 Build a first complete evidence path with narrowly chosen fixtures before broadening rule coverage: source generation → actual language facts → candidate/counterevidence → controlled judge response → policy → durable record → CLI/resident report → feedback → export. Include an R6 justified-adapter counterexample to exercise semantic boundaries; a comment-only path cannot establish project-evidence correctness. This sequencing leaves the D5 release scope unchanged.
 
-Before accepting production integrations, resolve native source-view coherence and the TypeScript/PHP/Rust contract gaps identified in qualification. Before blocking, resolve the corpus, adjudication and calibration protocol. Before claiming D8, choose numeric budgets and measure the complete implementation. Retention defaults, supported host cleanup behavior, exact libraries/versions and CLI ergonomics are remaining implementation decisions, not hidden approvals.
+Before accepting production integrations, complete the SG1–SG6 coherence checks and the TypeScript/PHP/Rust contract gaps identified in qualification. Before blocking, resolve the adjudicated corpus and calibration protocol. Before claiming D8, measure the complete implementation against the now-selected B1–B4 targets on the frozen reference workloads. Retention and storage-threshold preferences are resolved by D13/D16; transaction accounting, supported-host cleanup behavior, exact libraries/versions and CLI ergonomics remain implementation work. Selecting a target is not passing its acceptance test.
 
 This phase produces an architectural design. It does not install dependencies, implement the engine, authorize paid inference, or qualify production readiness.

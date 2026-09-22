@@ -1,0 +1,627 @@
+{
+  "schema": "anti-slop.dependency-research.v1",
+  "status": "proposal-not-a-lockfile",
+  "checked_on": "2026-09-22",
+  "recorded_at": "2026-09-22T13:05:27.081824+00:00",
+  "scope": "Official metadata and published source inspection only; no package archive downloads, installations, resolution, build, audit or conformance test. Native Mago binary provenance remains in the prior language qualification record.",
+  "proposal": "../brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md",
+  "rust_candidates": [
+    {
+      "name": "clap",
+      "stage": "A",
+      "version": "4.6.7",
+      "cargo_requirement": "=4.6.7",
+      "published_at": "2026-09-14T18:40:28.474794Z",
+      "yanked": false,
+      "declared_rust_version": "1.85",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "aa8876b300ab35ba921adea3dfd70157a46249b33f95c9084ae5709785478946",
+      "repository": "https://github.com/clap-rs/clap",
+      "registry_version_url": "https://crates.io/api/v1/crates/clap/4.6.7",
+      "proposed_features": {
+        "default_features": false,
+        "features": [
+          "std",
+          "derive",
+          "help",
+          "usage",
+          "error-context"
+        ]
+      },
+      "published_default_features": [
+        "std",
+        "color",
+        "help",
+        "usage",
+        "error-context",
+        "suggestions"
+      ]
+    },
+    {
+      "name": "serde",
+      "stage": "A",
+      "version": "1.0.229",
+      "cargo_requirement": "=1.0.229",
+      "published_at": "2026-07-18T23:05:13.266456Z",
+      "yanked": false,
+      "declared_rust_version": "1.56",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "repository": "https://github.com/serde-rs/serde",
+      "registry_version_url": "https://crates.io/api/v1/crates/serde/1.0.229",
+      "proposed_features": {
+        "default_features": true,
+        "features": [
+          "derive"
+        ]
+      },
+      "published_default_features": [
+        "std"
+      ]
+    },
+    {
+      "name": "serde_json",
+      "stage": "A",
+      "version": "1.0.151",
+      "cargo_requirement": "=1.0.151",
+      "published_at": "2026-07-20T05:54:44.078083Z",
+      "yanked": false,
+      "declared_rust_version": "1.71",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "c841b55ecdae098c80dcae9cf767f6f8a0c2cdb3416bbef72181df4d0fe73f14",
+      "repository": "https://github.com/serde-rs/json",
+      "registry_version_url": "https://crates.io/api/v1/crates/serde_json/1.0.151",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "std"
+      ]
+    },
+    {
+      "name": "toml",
+      "stage": "A",
+      "version": "1.1.6+spec-1.1.0",
+      "cargo_requirement": "=1.1.6",
+      "published_at": "2026-09-10T20:28:39.522017Z",
+      "yanked": false,
+      "declared_rust_version": "1.85",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "920602543f0911ab71da12c50d59701da54c196d1a2bf5cb4b75667f137a406a",
+      "repository": "https://github.com/toml-rs/toml",
+      "registry_version_url": "https://crates.io/api/v1/crates/toml/1.1.6+spec-1.1.0",
+      "proposed_features": {
+        "default_features": false,
+        "features": [
+          "std",
+          "serde",
+          "parse"
+        ]
+      },
+      "published_default_features": [
+        "std",
+        "serde",
+        "parse",
+        "display"
+      ]
+    },
+    {
+      "name": "thiserror",
+      "stage": "A",
+      "version": "2.0.20",
+      "cargo_requirement": "=2.0.20",
+      "published_at": "2026-08-08T06:22:23.795550Z",
+      "yanked": false,
+      "declared_rust_version": "1.71",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "ec86235f5fcc2a73650310756d2ac5b138a5780bbbdfae3eeccec992c435ba4f",
+      "repository": "https://github.com/dtolnay/thiserror",
+      "registry_version_url": "https://crates.io/api/v1/crates/thiserror/2.0.20",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "std"
+      ]
+    },
+    {
+      "name": "tracing",
+      "stage": "A",
+      "version": "0.1.44",
+      "cargo_requirement": "=0.1.44",
+      "published_at": "2025-12-18T14:26:12.360139Z",
+      "yanked": false,
+      "declared_rust_version": "1.65.0",
+      "license": "MIT",
+      "crate_checksum": "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "registry_version_url": "https://crates.io/api/v1/crates/tracing/0.1.44",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "std",
+        "attributes"
+      ]
+    },
+    {
+      "name": "tracing-subscriber",
+      "stage": "A",
+      "version": "0.3.23",
+      "cargo_requirement": "=0.3.23",
+      "published_at": "2026-03-13T10:04:15.571048Z",
+      "yanked": false,
+      "declared_rust_version": "1.65.0",
+      "license": "MIT",
+      "crate_checksum": "cb7f578e5945fb242538965c2d0b04418d38ec25c79d160cd279bf0731c8d319",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "registry_version_url": "https://crates.io/api/v1/crates/tracing-subscriber/0.3.23",
+      "proposed_features": {
+        "default_features": false,
+        "features": [
+          "fmt",
+          "env-filter"
+        ]
+      },
+      "published_default_features": [
+        "smallvec",
+        "fmt",
+        "ansi",
+        "tracing-log",
+        "std"
+      ]
+    },
+    {
+      "name": "tempfile",
+      "stage": "A-dev",
+      "version": "3.27.0",
+      "cargo_requirement": "=3.27.0",
+      "published_at": "2026-03-11T00:20:04.812840Z",
+      "yanked": false,
+      "declared_rust_version": "1.63",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "32497e9a4c7b38532efcdebeef879707aa9f794296a4f0244f6f69e9bc8574bd",
+      "repository": "https://github.com/Stebalien/tempfile",
+      "registry_version_url": "https://crates.io/api/v1/crates/tempfile/3.27.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "getrandom"
+      ]
+    },
+    {
+      "name": "assert_cmd",
+      "stage": "A-dev",
+      "version": "2.2.2",
+      "cargo_requirement": "=2.2.2",
+      "published_at": "2026-05-11T14:12:46.232740Z",
+      "yanked": false,
+      "declared_rust_version": "1.85",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "2aa3a22042e45de04255c7bf3626e239f450200fd0493c1e382263544b20aea6",
+      "repository": "https://github.com/assert-rs/assert_cmd.git",
+      "registry_version_url": "https://crates.io/api/v1/crates/assert_cmd/2.2.2",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "tokio",
+      "stage": "B",
+      "version": "1.53.1",
+      "cargo_requirement": "=1.53.1",
+      "published_at": "2026-07-20T17:06:09.996426Z",
+      "yanked": false,
+      "declared_rust_version": "1.71",
+      "license": "MIT",
+      "crate_checksum": "202caea871b69668250d242070849eb495be178ed697a3e98aebce5bc81a0bed",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "registry_version_url": "https://crates.io/api/v1/crates/tokio/1.53.1",
+      "proposed_features": {
+        "default_features": true,
+        "features": [
+          "rt-multi-thread",
+          "macros",
+          "io-std",
+          "io-util",
+          "process",
+          "sync",
+          "time",
+          "signal"
+        ]
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "tokio-util",
+      "stage": "B",
+      "version": "0.7.19",
+      "cargo_requirement": "=0.7.19",
+      "published_at": "2026-07-21T12:10:46.915710Z",
+      "yanked": false,
+      "declared_rust_version": "1.71",
+      "license": "MIT",
+      "crate_checksum": "494815d09bf52b5548659851081238f0ca39ff638363907596da739561c62c52",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "registry_version_url": "https://crates.io/api/v1/crates/tokio-util/0.7.19",
+      "proposed_features": {
+        "default_features": true,
+        "features": [
+          "rt"
+        ]
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "rusqlite",
+      "stage": "B",
+      "version": "0.40.2",
+      "cargo_requirement": "=0.40.2",
+      "published_at": "2026-08-08T14:21:52.570893Z",
+      "yanked": false,
+      "declared_rust_version": null,
+      "license": "MIT",
+      "crate_checksum": "23f2a97da3e3873c73cb2a2e71b35c40ff95e0b1eefa8d72d8499a6928c3b5b3",
+      "repository": "https://github.com/rusqlite/rusqlite",
+      "registry_version_url": "https://crates.io/api/v1/crates/rusqlite/0.40.2",
+      "proposed_features": {
+        "default_features": false,
+        "features": [
+          "bundled",
+          "cache"
+        ]
+      },
+      "published_default_features": [
+        "cache",
+        "ffi-sqlite-wasm-rs"
+      ]
+    },
+    {
+      "name": "sha2",
+      "stage": "B",
+      "version": "0.11.0",
+      "cargo_requirement": "=0.11.0",
+      "published_at": "2026-03-25T15:05:27.949444Z",
+      "yanked": false,
+      "declared_rust_version": "1.85",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "446ba717509524cb3f22f17ecc096f10f4822d76ab5c0b9822c5f9c284e825f4",
+      "repository": "https://github.com/RustCrypto/hashes",
+      "registry_version_url": "https://crates.io/api/v1/crates/sha2/0.11.0",
+      "proposed_features": {
+        "default_features": false,
+        "features": []
+      },
+      "published_default_features": [
+        "alloc",
+        "oid"
+      ]
+    },
+    {
+      "name": "uuid",
+      "stage": "B",
+      "version": "1.26.1",
+      "cargo_requirement": "=1.26.1",
+      "published_at": "2026-09-10T00:30:44.938530Z",
+      "yanked": false,
+      "declared_rust_version": "1.85.0",
+      "license": "Apache-2.0 OR MIT",
+      "crate_checksum": "2ef6dac1e96601b4fb3acccccff2139741fcb757cb9a36089bf5be91cfb285ce",
+      "repository": "https://github.com/uuid-rs/uuid",
+      "registry_version_url": "https://crates.io/api/v1/crates/uuid/1.26.1",
+      "proposed_features": {
+        "default_features": true,
+        "features": [
+          "v7",
+          "serde"
+        ]
+      },
+      "published_default_features": [
+        "std"
+      ]
+    },
+    {
+      "name": "toon-format",
+      "stage": "B-conditional",
+      "version": "0.5.0",
+      "cargo_requirement": "=0.5.0",
+      "published_at": "2026-05-22T04:54:24.601924Z",
+      "yanked": false,
+      "declared_rust_version": null,
+      "license": "MIT",
+      "crate_checksum": "8f89570c1a68d73941f728cca32a4345b2ffca36667ad921af336c60309a3e7e",
+      "repository": "https://github.com/toon-format/toon-rust",
+      "registry_version_url": "https://crates.io/api/v1/crates/toon-format/0.5.0",
+      "proposed_features": {
+        "default_features": false,
+        "features": []
+      },
+      "published_default_features": [
+        "cli"
+      ]
+    },
+    {
+      "name": "oxc_allocator",
+      "stage": "C",
+      "version": "0.150.0",
+      "cargo_requirement": "=0.150.0",
+      "published_at": "2026-09-14T11:33:20.894212Z",
+      "yanked": false,
+      "declared_rust_version": "1.96.0",
+      "license": "MIT",
+      "crate_checksum": "8c5deaaa43f0813b6d4a18dcc5f41bea1996f193f0a55d0242831d7f29bfa16d",
+      "repository": "https://github.com/oxc-project/oxc",
+      "registry_version_url": "https://crates.io/api/v1/crates/oxc_allocator/0.150.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "oxc_ast",
+      "stage": "C",
+      "version": "0.150.0",
+      "cargo_requirement": "=0.150.0",
+      "published_at": "2026-09-14T11:33:52.962046Z",
+      "yanked": false,
+      "declared_rust_version": "1.96.0",
+      "license": "MIT",
+      "crate_checksum": "7ef5ff9b1d70a32b100145065aec1c6c455c58b19c4681d092bd88c24c53972d",
+      "repository": "https://github.com/oxc-project/oxc",
+      "registry_version_url": "https://crates.io/api/v1/crates/oxc_ast/0.150.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "oxc_parser",
+      "stage": "C",
+      "version": "0.150.0",
+      "cargo_requirement": "=0.150.0",
+      "published_at": "2026-09-14T11:34:30.019900Z",
+      "yanked": false,
+      "declared_rust_version": "1.96.0",
+      "license": "MIT",
+      "crate_checksum": "44083f63120e1abe371cddd4eb209a580ab8490c2e5b42cacc11e7fe6fd1e7c2",
+      "repository": "https://github.com/oxc-project/oxc",
+      "registry_version_url": "https://crates.io/api/v1/crates/oxc_parser/0.150.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "regular_expression"
+      ]
+    },
+    {
+      "name": "oxc_semantic",
+      "stage": "C",
+      "version": "0.150.0",
+      "cargo_requirement": "=0.150.0",
+      "published_at": "2026-09-14T11:34:44.903700Z",
+      "yanked": false,
+      "declared_rust_version": "1.96.0",
+      "license": "MIT",
+      "crate_checksum": "bb42b29a8296620e5343a802038d323fde50707b2502ccaa82e10bdf0fd904e4",
+      "repository": "https://github.com/oxc-project/oxc",
+      "registry_version_url": "https://crates.io/api/v1/crates/oxc_semantic/0.150.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "oxc_span",
+      "stage": "C",
+      "version": "0.150.0",
+      "cargo_requirement": "=0.150.0",
+      "published_at": "2026-09-14T11:33:28.231119Z",
+      "yanked": false,
+      "declared_rust_version": "1.96.0",
+      "license": "MIT",
+      "crate_checksum": "674178f9b8af8135559b51fea7a416ea18efe6aa03ed5491f86f0c75f2336a43",
+      "repository": "https://github.com/oxc-project/oxc",
+      "registry_version_url": "https://crates.io/api/v1/crates/oxc_span/0.150.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "lsp-types",
+      "stage": "C",
+      "version": "0.97.0",
+      "cargo_requirement": "=0.97.0",
+      "published_at": "2024-06-04T12:38:56.735619Z",
+      "yanked": false,
+      "declared_rust_version": null,
+      "license": "MIT",
+      "crate_checksum": "53353550a17c04ac46c585feb189c2db82154fc84b79c7a66c96c2c644f66071",
+      "repository": "https://github.com/gluon-lang/lsp-types",
+      "registry_version_url": "https://crates.io/api/v1/crates/lsp-types/0.97.0",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": []
+    },
+    {
+      "name": "reqwest",
+      "stage": "C",
+      "version": "0.13.5",
+      "cargo_requirement": "=0.13.5",
+      "published_at": "2026-09-08T20:55:26.479356Z",
+      "yanked": false,
+      "declared_rust_version": "1.85.0",
+      "license": "MIT OR Apache-2.0",
+      "crate_checksum": "16a1cfa75cc186dd73d5818e510e042e40927bccc9c236b061cea97e1eb08029",
+      "repository": "https://github.com/seanmonstar/reqwest",
+      "registry_version_url": "https://crates.io/api/v1/crates/reqwest/0.13.5",
+      "proposed_features": {
+        "default_features": false,
+        "features": [
+          "json",
+          "rustls"
+        ]
+      },
+      "published_default_features": [
+        "default-tls",
+        "charset",
+        "http2",
+        "system-proxy"
+      ]
+    },
+    {
+      "name": "schemars",
+      "stage": "C",
+      "version": "1.2.2",
+      "cargo_requirement": "=1.2.2",
+      "published_at": "2026-07-27T14:35:28.246709Z",
+      "yanked": false,
+      "declared_rust_version": "1.74",
+      "license": "MIT",
+      "crate_checksum": "687274d293b6cdc6e73e0fee520bf2049650090d7164f87672d212a3c530cf4a",
+      "repository": "https://github.com/GREsau/schemars",
+      "registry_version_url": "https://crates.io/api/v1/crates/schemars/1.2.2",
+      "proposed_features": {
+        "default_features": true,
+        "features": []
+      },
+      "published_default_features": [
+        "derive",
+        "std"
+      ]
+    }
+  ],
+  "external_candidates": [
+    {
+      "ecosystem": "npm",
+      "name": "typescript",
+      "version": "7.0.2",
+      "stage": "bridge-typescript",
+      "registry_version_url": "https://registry.npmjs.org/typescript/7.0.2",
+      "registry_publication_metadata_url": "https://registry.npmjs.org/typescript",
+      "published_at": "2026-07-08T15:55:18.431Z",
+      "engines": {
+        "node": ">=16.20.0"
+      },
+      "deprecated": null,
+      "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+      "repository": {
+        "url": "git+https://github.com/microsoft/TypeScript.git",
+        "type": "git"
+      },
+      "optional_platform_dependencies": {
+        "@typescript/typescript-aix-ppc64": "7.0.2",
+        "@typescript/typescript-linux-arm": "7.0.2",
+        "@typescript/typescript-linux-x64": "7.0.2",
+        "@typescript/typescript-sunos-x64": "7.0.2",
+        "@typescript/typescript-win32-x64": "7.0.2",
+        "@typescript/typescript-darwin-x64": "7.0.2",
+        "@typescript/typescript-netbsd-x64": "7.0.2",
+        "@typescript/typescript-freebsd-x64": "7.0.2",
+        "@typescript/typescript-linux-arm64": "7.0.2",
+        "@typescript/typescript-linux-ppc64": "7.0.2",
+        "@typescript/typescript-linux-s390x": "7.0.2",
+        "@typescript/typescript-openbsd-x64": "7.0.2",
+        "@typescript/typescript-win32-arm64": "7.0.2",
+        "@typescript/typescript-darwin-arm64": "7.0.2",
+        "@typescript/typescript-netbsd-arm64": "7.0.2",
+        "@typescript/typescript-freebsd-arm64": "7.0.2",
+        "@typescript/typescript-linux-loong64": "7.0.2",
+        "@typescript/typescript-linux-riscv64": "7.0.2",
+        "@typescript/typescript-openbsd-arm64": "7.0.2",
+        "@typescript/typescript-linux-mips64el": "7.0.2"
+      }
+    },
+    {
+      "ecosystem": "composer",
+      "name": "carthage-software/mago",
+      "version": "1.48.1",
+      "stage": "bridge-php",
+      "registry_url": "https://repo.packagist.org/p2/carthage-software/mago.json",
+      "published_at": "2026-09-11T05:38:00+00:00",
+      "require": {
+        "php": "~8.1 || ~8.2 || ~8.3 || ~8.4 || ~8.5 || ~8.6",
+        "revolt/event-loop": "^1.0.9"
+      },
+      "source": {
+        "url": "https://github.com/carthage-software/mago.git",
+        "type": "git",
+        "reference": "4b833d559b9fc21da7c49a2458d0d057d9b2227a"
+      },
+      "dist": {
+        "url": "https://api.github.com/repos/carthage-software/mago/zipball/4b833d559b9fc21da7c49a2458d0d057d9b2227a",
+        "type": "zip",
+        "shasum": "",
+        "reference": "4b833d559b9fc21da7c49a2458d0d057d9b2227a"
+      },
+      "license": [
+        "MIT OR Apache-2.0"
+      ]
+    },
+    {
+      "ecosystem": "composer",
+      "name": "revolt/event-loop",
+      "version": "v1.0.9",
+      "stage": "bridge-php",
+      "registry_url": "https://repo.packagist.org/p2/revolt/event-loop.json",
+      "published_at": "2026-05-16T18:04:08+00:00",
+      "require": {
+        "php": ">=8.1"
+      },
+      "source": {
+        "url": "https://github.com/revoltphp/event-loop.git",
+        "type": "git",
+        "reference": "44061cf513e53c6200372fc935ac42271566295d"
+      },
+      "dist": {
+        "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/44061cf513e53c6200372fc935ac42271566295d",
+        "type": "zip",
+        "shasum": "",
+        "reference": "44061cf513e53c6200372fc935ac42271566295d"
+      },
+      "license": [
+        "MIT"
+      ]
+    },
+    {
+      "ecosystem": "github-release",
+      "name": "rust-analyzer",
+      "version": "2026-09-14",
+      "observed_qualified_binary_identity": "0.3.3049-standalone",
+      "stage": "adapter-rust",
+      "release_api_url": "https://api.github.com/repos/rust-lang/rust-analyzer/releases/tags/2026-09-14",
+      "release_url": "https://github.com/rust-lang/rust-analyzer/releases/tag/2026-09-14",
+      "published_at": "2026-09-14T05:58:56Z",
+      "prerelease": false,
+      "draft": false,
+      "initial_host_asset": {
+        "name": "rust-analyzer-x86_64-unknown-linux-gnu.gz",
+        "size": 14853937,
+        "digest": "sha256:7609ba53f85cd80a3bde77a4b2e94e304d0f94650e4f4cffc061b9bca454ba75",
+        "browser_download_url": "https://github.com/rust-lang/rust-analyzer/releases/download/2026-09-14/rust-analyzer-x86_64-unknown-linux-gnu.gz"
+      }
+    }
+  ],
+  "qualification_reference": "2026-09-22-language-qualification/provenance.json",
+  "limitations": [
+    "Combined transitive graph and native build prerequisites are unqualified.",
+    "A null declared Rust version is unknown, not proof of compatibility.",
+    "TOON output compatibility requires independent qualification; current Rust README and specification site announce different specification versions.",
+    "Published Composer dist metadata has empty shasum fields; it does not supply a verified archive SHA-256.",
+    "The snapshot is evidence; future package-manager-generated lockfiles own resolved dependencies."
+  ]
+}

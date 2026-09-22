@@ -1,0 +1,198 @@
+{
+  "date": "2026-09-22",
+  "scope": "Simulated workflow responses only; no product functionality or analyzer execution.",
+  "protocol": {
+    "common_input": "Selected canonical AGENTS.md sections and ADR-002/003/004/005/007 Decision sections; 90 lines. Both final executors confirmed the end marker and B1-B4 table were visible.",
+    "conditions": [
+      "baseline: canonical context and six prompts",
+      "with skills: same context and prompts, plus both complete skill bodies"
+    ],
+    "response_limit_words_per_case": 170,
+    "assertions_hidden_from_executors": true,
+    "grader": "Parent agent, manual and unblinded",
+    "samples_per_case_per_condition": 1,
+    "cases_batched_per_executor": 6,
+    "baseline_task": "/root/workflow_complete_baseline",
+    "with_skills_task": "/root/workflow_complete_with_skills",
+    "excluded_attempts": "Initial pair and focused rerun omitted ADR-007 by reading only the first 240 context lines; excluded from scoring.",
+    "limitations": [
+      "No statistical reliability or cross-model generalization established.",
+      "No automatic skill discovery or harness activation tested.",
+      "Equal results do not establish benefit from the skill.",
+      "Responses assess plans and evidence; they do not execute the proposed workflow."
+    ]
+  },
+  "cases": [
+    {
+      "case": "anti-slop-rule-evidence:1",
+      "definition": "../../.agents/skills/anti-slop-rule-evidence/evals/evals.json",
+      "definition_id": 1,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "observation": "Names authorization/error translation and bounded evidence, but does not give the requested positive, legitimate-negative and partial-evidence validation set."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "observation": "Explicitly proposes a supported pass-through defect, a legitimate thin wrapper and a partial-evidence case through the public rule path."
+      }
+    },
+    {
+      "case": "anti-slop-rule-evidence:2",
+      "definition": "../../.agents/skills/anti-slop-rule-evidence/evals/evals.json",
+      "definition_id": 2,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          false
+        ],
+        "observation": "Rejects automatic labels and score transfer, but stops at provider specificity without the requested independent calibration/qualification requirement."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "observation": "Attributes Jev's score and requires independent qualification on frozen adjudicated data; preserves the suppression's provenance."
+      }
+    },
+    {
+      "case": "anti-slop-rule-evidence:3",
+      "definition": "../../.agents/skills/anti-slop-rule-evidence/evals/evals.json",
+      "definition_id": 3,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true
+        ],
+        "observation": "Limits the correction to README prose and focused documentation checks; does not manufacture application tests."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true
+        ],
+        "observation": "Explicitly declines the rule workflow for the typo and keeps validation proportional."
+      }
+    },
+    {
+      "case": "anti-slop-analyzer-qualification:1",
+      "definition": "../../.agents/skills/anti-slop-analyzer-qualification/evals/evals.json",
+      "definition_id": 1,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true,
+          false,
+          true
+        ],
+        "observation": "Distinguishes B1-B4 boundaries and the roughly 435 MiB versus 256 MiB concern, but omits an explicit request for raw observations/run counts in the next qualification."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "observation": "Compares the process-tree total to B4 and asks for cold, warm, report and startup/active/idle measurements with raw observations, run count and conditions."
+      }
+    },
+    {
+      "case": "anti-slop-analyzer-qualification:2",
+      "definition": "../../.agents/skills/anti-slop-analyzer-qualification/evals/evals.json",
+      "definition_id": 2,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "observation": "Requires exact overlay bytes and generation provenance, includes configuration/dependency coherence, and rejects stale current evidence and invented macro spans."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "observation": "Requires overlay bytes/version, consumed generation, stale-result exclusion and explicit mapping/configuration/dependency limits."
+      }
+    },
+    {
+      "case": "anti-slop-analyzer-qualification:3",
+      "definition": "../../.agents/skills/anti-slop-analyzer-qualification/evals/evals.json",
+      "definition_id": 3,
+      "executor": {
+        "agent_type": "worker",
+        "model": "gpt-5.6-terra",
+        "reasoning_effort": "high",
+        "fit": "General-purpose planning and evidence assessment; suitable for both simulated conditions."
+      },
+      "baseline": {
+        "assertions_passed": [
+          true,
+          true
+        ],
+        "observation": "Checks the artifact identity, changes the summary only and avoids installation, native execution or broad validation."
+      },
+      "with_skills": {
+        "assertions_passed": [
+          true,
+          true
+        ],
+        "observation": "Keeps the historical artifact intact and uses focused text/documentation checks only."
+      }
+    }
+  ],
+  "totals": {
+    "assertions_per_condition": 20,
+    "baseline_passed": 17,
+    "with_skills_passed": 20
+  }
+}

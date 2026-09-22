@@ -1,0 +1,36 @@
+{
+  "skill_name": "anti-slop-rule-evidence",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design-only review: I want an R6 candidate detector that flags every wrapper returning one delegated call. Example A authorizes the caller, translates provider failures into domain errors, then delegates. Example B repeats the same call and contract through three layers, with no other responsibility established so far. Propose the smallest evidence and validation plan and state whether either can block CI now. Do not edit files or run analysis.",
+      "expected_output": "Treats forwarding as a candidate signal, tests the useful boundary in A and investigates B with caller/contract evidence. Proposes positive, legitimate-negative and incomplete cases through the real public boundary. Does not grant blocking without scoped qualification.",
+      "assertions": [
+        "Does not classify A as a defect solely because it forwards; names its authorization or error-isolation responsibility.",
+        "Separates B's candidate signal from a supported verdict and specifies caller/contract counterevidence.",
+        "Includes positive, legitimate-negative and partial-evidence validation through the real public boundary without copying rule logic.",
+        "Does not enable blocking without the relevant enabled and qualified rule/language/analyzer/judge scope."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design-only assessment: an R4 packet contains a Rust trait with one implementation, zero references returned by a partially resolved query, and a Jev confidence of 0.98. An agent suppressed the previous warning as a deliberate trade-off. May we call it unused speculative abstraction, export the suppression as an adjudicated negative, and reuse this threshold with the next judge? Explain the disposition and missing evidence. Do not modify anything.",
+      "expected_output": "Preserves uncertainty about callers and useful boundaries; keeps suppression and adjudication separate; refuses to transfer provider confidence calibration.",
+      "assertions": [
+        "Rejects zero partial references as proof of absence and one implementation as sufficient R4 evidence.",
+        "Keeps the assessment insufficient or conditional and identifies missing responsibility/caller evidence instead of accepting confidence as proof.",
+        "Does not convert the agent suppression into an adjudicated negative or equate a deliberate trade-off with a false positive.",
+        "Keeps the raw Jev score attributed and requires independent calibration/qualification for a replacement judge."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I only want a README spelling correction: change 'analysys' to 'analysis' in the introductory prose. Describe the proportionate workflow, including checks. Do not perform the edit in this evaluation.",
+      "expected_output": "Handles a narrow documentation edit with a focused diff/text check and no rule-evidence procedure, model inference, corpus run or artificial RED test.",
+      "assertions": [
+        "Keeps the work to the spelling correction and a focused documentation/diff check.",
+        "Does not require rule fixtures, model calls, analyzer execution or a failing application test."
+      ]
+    }
+  ]
+}

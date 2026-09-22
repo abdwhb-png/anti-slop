@@ -1,0 +1,36 @@
+{
+  "skill_name": "anti-slop-analyzer-qualification",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Assess supplied results only: a proposed TypeScript adapter reports a 4 ms p95 native query over ten repeats in one warm session. Its Rust process retains 95 MiB and its helper retains about 340 MiB by sampled RSS. Capture, SQLite persistence, report serialization and startup were not measured. The author claims B1-B4 pass and the adapter is production-ready. State what is established and the smallest next qualification work. Do not run tools or change files.",
+      "expected_output": "Limits the timing claim to the warm native query, identifies missing whole-path and startup work and the whole-tree memory concern, and separates resource evidence from production rule quality.",
+      "assertions": [
+        "Does not accept B1, B2 or B3 from a native query timing; identifies missing report/capture/recording/startup boundaries.",
+        "Includes the helper in memory accounting and flags that the supplied total conflicts with the TypeScript target while disclosing sampled-RSS limitations.",
+        "Requests representative cold/warm/idle observations with raw counts and conditions rather than claiming reliable general p95 from ten correlated repeats.",
+        "Does not infer rule accuracy or production readiness from these extraction/resource results."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Assess supplied evidence only: disk hashes match before and after an LSP query and the server reported idle. Between those points an unsaved overlay changed the called function. A result from generation 11 arrives after the client requested generation 12. The analyzer also returns macro expansion text without mapped source locations. The author proposes publishing this as current evidence with exact spans because the disk did not change. Explain the disposition and decisive checks; do not execute an experiment.",
+      "expected_output": "Requires actual overlay/generation binding, rejects stale publication and invented exact macro spans, and limits consistency/freshness claims.",
+      "assertions": [
+        "Does not treat disk hashes or idle status as proof that the analyzer consumed the captured source; requires overlay text/version and generation provenance.",
+        "Keeps generation 11 historical or rejects it for current publication rather than overwriting generation 12.",
+        "Keeps unmapped macro locations explicitly unmapped rather than inventing exact original-source spans.",
+        "Distinguishes captured-state coherence from current freshness and notes remaining configuration/dependency or external-input scope."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Documentation only: the existing qualification artifact already identifies Mago 1.48.1, but a new summary accidentally says 1.48.0. I want that summary corrected to match the artifact, without changing the old experiment. Describe the work and checks; do not execute them in this evaluation.",
+      "expected_output": "Checks the recorded artifact, corrects only the new summary and its diff, preserves original evidence and does not install or requalify Mago.",
+      "assertions": [
+        "Verifies the recorded identity and confines the correction to the new summary, preserving old experiment inputs/results.",
+        "Does not install, update or execute Mago or launch a full qualification for this metadata correction."
+      ]
+    }
+  ]
+}

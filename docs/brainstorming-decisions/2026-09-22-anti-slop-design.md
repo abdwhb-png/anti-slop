@@ -1,5 +1,7 @@
 # Anti-Slop: evidence-based design analysis
 
+> Historical design record. Accepted choices are now maintained in the [ADR index](../decisions/README.md); [ADR-003](../decisions/003-evidence-first-rules-and-selective-blocking.md) owns current rule semantics. The discussion and tables below preserve the original design context and do not override current ADRs. See the [root README](../../README.md#current-status) for implemented behavior.
+
 Date: 2026-09-22
 
 Status: D1–D17 confirmed with the user. Initial language extraction experiments are complete; rust-analyzer is provisionally retained with its observed resource cost under D9. The [core architecture proposal](2026-09-22-anti-slop-architecture.md) now includes selected retention, resource targets, deadlines, storage threshold and performance repositories. A source-coherence experiment passes 20 focused checks. Production integration, achievement of the resource targets and rule quality remain unqualified. These documents do not report an implemented product.

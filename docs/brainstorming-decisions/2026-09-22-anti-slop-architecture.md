@@ -1,5 +1,7 @@
 # Anti-Slop: core architecture
 
+> Historical architecture proposal. Accepted choices are now maintained in the [ADR index](../decisions/README.md); [ADR-007](../decisions/007-performance-budgets-and-qualification.md) owns current resource targets. Detailed protocols, interfaces and mechanisms below remain proposals unless adopted by an ADR or implemented contract. See the [root README](../../README.md#current-status) for implemented behavior.
+
 Date: 2026-09-22
 
 Status: architecture proposal grounded in confirmed decisions D1–D17. Execution hosting, record storage, retention, performance targets, judge deadlines, storage threshold and performance repositories are selected. A bounded source-coherence experiment passes 20 checks. Interfaces and module layout remain proposed contracts; production behavior and performance are not yet qualified.

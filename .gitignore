@@ -1,0 +1,12 @@
+/target/
+/.anti-slop/
+/bridges/typescript/node_modules/
+/bridges/php/vendor/
+/benchmarks/corpus.local.toml
+/examples/anti-slop.local.toml
+/.env
+/.env.*
+!/.env.example
+
+.pi/
+skills-lock.json

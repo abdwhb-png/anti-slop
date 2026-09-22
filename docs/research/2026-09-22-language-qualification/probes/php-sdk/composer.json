@@ -1,0 +1,6 @@
+{
+    "name": "anti-slop/qualification-sdk",
+    "require": {
+        "revolt/event-loop": "1.0.9"
+    }
+}

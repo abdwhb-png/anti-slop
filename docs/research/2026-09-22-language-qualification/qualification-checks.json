@@ -1,0 +1,394 @@
+{
+  "checks": [
+    {
+      "id": "oxc-small-all-selected-files",
+      "passed": true
+    },
+    {
+      "id": "oxc-small-no-parse-errors",
+      "passed": true
+    },
+    {
+      "id": "oxc-small-alias-local-reference",
+      "passed": true
+    },
+    {
+      "id": "oxc-small-dynamic-import-node",
+      "passed": true
+    },
+    {
+      "id": "oxc-small-honest-scope",
+      "passed": true
+    },
+    {
+      "id": "oxc-small-exact-byte-spans",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-0-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-0-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-0-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-small-0-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-1-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-1-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-1-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-small-1-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-2-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-small-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-2-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-small-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-2-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-small-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-small-2-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "mago-small-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-all-selected-files",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-no-parse-errors",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-alias-local-reference",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-dynamic-import-node",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-honest-scope",
+      "passed": true
+    },
+    {
+      "id": "oxc-medium-exact-byte-spans",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-0-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-0-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-0-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-0-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-0-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-1-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-1-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-1-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-1-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-1-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-2-alias-and-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts6-medium-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-2-real-alias-reference-implementation",
+      "passed": true
+    },
+    {
+      "id": "ts7-lsp-medium-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-2-typed-alias-and-span",
+      "passed": true
+    },
+    {
+      "id": "ts7-api-medium-2-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-healthy-ready",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-navigation-facts",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-macro-text-only",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-cfg-invalidation",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-build-script-disabled",
+      "passed": true
+    },
+    {
+      "id": "rust-medium-2-twenty-fresh-dependent-layouts",
+      "passed": true
+    },
+    {
+      "id": "mago-medium-twenty-fresh-dependent-types",
+      "passed": true
+    },
+    {
+      "id": "oxc-invalid-syntax-visible",
+      "passed": true
+    },
+    {
+      "id": "oxc-missing-import-not-resolved-project-wide",
+      "passed": true
+    },
+    {
+      "id": "mago-dynamic-dispatch-visible",
+      "passed": true
+    },
+    {
+      "id": "mago-interface-metadata",
+      "passed": true
+    },
+    {
+      "id": "mago-incoming-reference",
+      "passed": true
+    },
+    {
+      "id": "mago-reference-edge-lacks-call-site",
+      "passed": true
+    },
+    {
+      "id": "mago-composer-scope-must-include-vendor",
+      "passed": true
+    },
+    {
+      "id": "php-parse-not-success",
+      "passed": true
+    },
+    {
+      "id": "php-missing-not-success",
+      "passed": true
+    },
+    {
+      "id": "php-capture-failure-not-success",
+      "passed": true
+    },
+    {
+      "id": "mago-capture-failure-explicit",
+      "passed": true
+    }
+  ],
+  "passed": 97,
+  "failed": []
+}

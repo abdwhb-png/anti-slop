@@ -1,0 +1,25 @@
+{
+  "name": "typescript",
+  "version": "6.0.3",
+  "engines": {
+    "node": ">=14.17"
+  },
+  "dist": {
+    "shasum": "90251dc007916e972786cb94d74d15b185577d21",
+    "tarball": "https://registry.npmjs.org/typescript/-/typescript-6.0.3.tgz",
+    "fileCount": 140,
+    "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
+    "signatures": [
+      {
+        "sig": "MEYCIQDv8tVB8x5z1EeS+UHLgSqOywErEEFERRmMNef6kTXsPQIhAMO+L+ktR6FwCDSc+z0KD68md8mvKukeVzgjuBhoie9i",
+        "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+      }
+    ],
+    "unpackedSize": 24346827
+  },
+  "gitHead": "050880ce59e30b356b686bd3144efe24f875ebc8",
+  "repository": {
+    "url": "git+https://github.com/microsoft/TypeScript.git",
+    "type": "git"
+  }
+}

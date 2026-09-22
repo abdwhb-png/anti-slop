@@ -1,0 +1,114 @@
+{
+  "README.md": {
+    "bytes": 20870,
+    "sha256": "1a5755141185013c2b2e9fc0568c7f82adc3dfe1c6b3b2d0c34d8bc585bae0b3"
+  },
+  "evidence.tar.gz": {
+    "bytes": 1572332,
+    "sha256": "fa93032b50e1ecf67aa363cbd8fafb6e4192a301f3c73421e179cab5c77cb851"
+  },
+  "fixture-manifest.json": {
+    "bytes": 101514,
+    "sha256": "4bbf2d58c9579a099c822d6617d8ed6d03e378e7318cab39c9c6a7a93e93c4f9"
+  },
+  "oxc-lock-registry.json": {
+    "bytes": 19801,
+    "sha256": "c89b411c97aa54acb474b5003db2b21bf124a1368fec49f310171be9b73c7338"
+  },
+  "performance-summary.json": {
+    "bytes": 8425,
+    "sha256": "971f27c0e0789d30d0c5492735cbfc4ed2b50e77805d37c1b11208555376bf39"
+  },
+  "probes/generate_fixtures.py": {
+    "bytes": 4955,
+    "sha256": "2d7ed22682148a723aefb4d323b41123a1f6e7a0f4a4fc13f1d08d423deaa098"
+  },
+  "probes/mago_watch_probe.py": {
+    "bytes": 3455,
+    "sha256": "b93cc326cce37cd8ac36aa6ea8a5ec5717a6e081ea66066c0cabfbef8870e3de"
+  },
+  "probes/mago_worker.php": {
+    "bytes": 3010,
+    "sha256": "1dde3cce6e1cff757bfd67cfe4a76317828457416a89e374e22a2ff4a437aeb2"
+  },
+  "probes/measure.py": {
+    "bytes": 2410,
+    "sha256": "b11d5164f2d6ff8c3db7c0c295654854805ecce25c385bedd54078f151610832"
+  },
+  "probes/oxc-probe/Cargo.lock": {
+    "bytes": 20686,
+    "sha256": "b37cf4a81fe6c08a227fd698065996f567c1a843408b060a44ed7d35e4dc1096"
+  },
+  "probes/oxc-probe/Cargo.toml": {
+    "bytes": 234,
+    "sha256": "c2353b57d3cb741ae59384b3e6a8081e1fd2470fb2cbd34ef7282aaadf2850e6"
+  },
+  "probes/oxc-probe/src/main.rs": {
+    "bytes": 3651,
+    "sha256": "6a9a5a7666a774b5e97d56a5047c0ddc495fab31da2bd39d2164dc83f188d97c"
+  },
+  "probes/php-sdk/composer.json": {
+    "bytes": 107,
+    "sha256": "d7fd8e6188ee54070d4729ca2615c0a8a70ce9c5135d9b3ee891c926a6d56bdf"
+  },
+  "probes/php-sdk/composer.lock": {
+    "bytes": 3028,
+    "sha256": "128dc8e2a5242f4eecfbab4cae4fb3ace96252c37d8358303dc53d8b31ea4eb8"
+  },
+  "probes/run_measurements.py": {
+    "bytes": 1769,
+    "sha256": "1359eebb1b0de886ca3a7c5e63d70b683862f8a6891d5beb99c9ce756ef7001e"
+  },
+  "probes/rust_lsp_probe.py": {
+    "bytes": 8886,
+    "sha256": "038ee4e06ad7d3042c1d68e9365e76a3f10969c5f12cf41d3f344cd78e680d84"
+  },
+  "probes/summarize_results.py": {
+    "bytes": 3492,
+    "sha256": "e06e2668557eea0f060ede104b706f05264f2edfe15cfdd822f1b33547cde4fe"
+  },
+  "probes/typescript7_api_probe.mjs": {
+    "bytes": 2320,
+    "sha256": "ab0c80dc43c1ec998a4745a10dbe8bad963d92df31052d0150f95073d47d2cde"
+  },
+  "probes/typescript7_lsp_probe.py": {
+    "bytes": 3330,
+    "sha256": "19968281907e09dc11dcffd7bdd2bc25cf443e3d72c07440a5c92e9dd305cf7f"
+  },
+  "probes/typescript_probe.cjs": {
+    "bytes": 3886,
+    "sha256": "1072d28188294d545f370e6e28566245d53d6f32b2f85a8cd94a31b6f7e83842"
+  },
+  "probes/verify_results.py": {
+    "bytes": 6270,
+    "sha256": "8c78c4b653c66f1e8142e9ecf089c2a48eba1966ef76a589fabe3b76254ce8c6"
+  },
+  "provenance.json": {
+    "bytes": 3415,
+    "sha256": "f6e72c590befcb0a2e5d4f794d02176f7ebe32d9f89596c529c29bf98091cc71"
+  },
+  "qualification-checks.json": {
+    "bytes": 8309,
+    "sha256": "0300a59c3a302aac382a834cfec79321b136d37be941ac65498069e2f773ec6b"
+  },
+  "revolt-registry.json": {
+    "bytes": 1693,
+    "sha256": "b329c6205d692c1d9a1a245822ddd970aff5a820ce358db2034824e2f8490b47"
+  },
+  "rust-sysroot-registry.json": {
+    "bytes": 9557,
+    "sha256": "d5a11bc73ab073753859ded33ed0417994993a81f14750c4a37b630f8e6bcd99"
+  },
+  "typescript6-registry.json": {
+    "bytes": 800,
+    "sha256": "222c8b0fc18cb7d7c4f283dc04476831999dbdbb8db39072bf10300991bc1054"
+  },
+  "typescript7-registry.json": {
+    "bytes": 1854,
+    "sha256": "4fb7ca9be68fb21a9b149a0e1216c6272638dde67eaa461756045ca751f06c20"
+  },
+  "validation.json": {
+    "bytes": 708,
+    "sha256": "49ef71a2b9b8a1b722697d0ddf7e52f1b8bafa30f6f92ab79239d86f076a9c9d"
+  }
+}

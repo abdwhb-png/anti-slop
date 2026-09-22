@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-22",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "fixture_root": "/tmp/anti-slop-language-qualification-20260922",
+  "source_commits": {
+    "oxc": "5a6e37e5cf895143a5b34050c50109c46e2ae96a",
+    "mago": "4b833d559b9fc21da7c49a2458d0d057d9b2227a",
+    "rust-analyzer": "682a84e95b5a52cf06e9822fcaa4f628738554bf",
+    "typescript7": "2bd066d87f5bafd315be9f40889d0a60b9e58e0b"
+  },
+  "binaries_and_clients": {
+    "mago": {
+      "path": "/tmp/anti-slop-language-qualification-20260922/bin/mago",
+      "bytes": 30343480,
+      "sha256": "2d21c51fe6ca87778c6e9af237008122a9779e457b4eabbc3706d4fa865c8a66"
+    },
+    "rust-analyzer": {
+      "path": "/tmp/anti-slop-language-qualification-20260922/bin/rust-analyzer",
+      "bytes": 41872776,
+      "sha256": "8500d7c69a9b3df8929f06f6b95c42364ac83bc9aa6ae5fed22051ab87d0aa8a"
+    },
+    "oxc-probe": {
+      "path": "/tmp/anti-slop-language-qualification-20260922/oxc-probe/target/release/anti_slop_oxc_probe",
+      "bytes": 2030696,
+      "sha256": "5c6afc70eec0d71c9711f2c17c648569a5c1fabdf9b590cd3fceada1e6c86c72"
+    },
+    "typescript7-native": {
+      "path": "/home/abdwhb/projects/shared-services/pi-lens/node_modules/@typescript/typescript-linux-x64/lib/tsc",
+      "bytes": 24101026,
+      "sha256": "4f2de678286401759b3fb4475bafe35b8f32b4b3a07d92642bbf37eadc9b34a4"
+    },
+    "typescript7-api-client": {
+      "path": "/home/abdwhb/projects/shared-services/pi-lens/node_modules/typescript/dist/api/sync/api.js",
+      "bytes": 61166,
+      "sha256": "e27255574a3c1a3236c4083c769758de3327bba8d3cd19f015551b619ae783d2"
+    },
+    "typescript6-api": {
+      "path": "/tmp/anti-slop-trellis.vXVQlJ/node_modules/typescript/lib/typescript.js",
+      "bytes": 9144216,
+      "sha256": "569177652966bd528c319171c7dd22860dbf72bde116cbc4f644f1d02bb12e39"
+    }
+  },
+  "versions": {
+    "rustc": "rustc 1.96.0 (ac68faa20 2026-05-25)",
+    "cargo": "cargo 1.96.0 (30a34c682 2026-05-25)",
+    "php": "PHP 8.5.0 (cli) (built: Nov 20 2025 10:49:10) (NTS x86_64-linux-musl-gcc)",
+    "node": "v24.18.0",
+    "sfw": "Socket Firewall Free, version 1.15.2",
+    "mago": "mago 1.48.1",
+    "rust-analyzer": "rust-analyzer 0.3.3049-standalone",
+    "typescript7": "Version 7.0.2"
+  },
+  "mago-1481": {
+    "tag": "1.48.1",
+    "published_at": "2026-09-11T05:38:10Z",
+    "asset": {
+      "name": "mago-1.48.1-x86_64-unknown-linux-gnu.tar.gz",
+      "browser_download_url": "https://github.com/carthage-software/mago/releases/download/1.48.1/mago-1.48.1-x86_64-unknown-linux-gnu.tar.gz",
+      "digest": "sha256:a82d45166ce945171cad650b9908f08bec1bd28d29e520d9080b4c962a1cfd62",
+      "size": 10647608
+    }
+  },
+  "ra-0914": {
+    "tag": "2026-09-14",
+    "published_at": "2026-09-14T05:58:56Z",
+    "asset": {
+      "name": "rust-analyzer-x86_64-unknown-linux-gnu.gz",
+      "browser_download_url": "https://github.com/rust-lang/rust-analyzer/releases/download/2026-09-14/rust-analyzer-x86_64-unknown-linux-gnu.gz",
+      "digest": "sha256:7609ba53f85cd80a3bde77a4b2e94e304d0f94650e4f4cffc061b9bca454ba75",
+      "size": 14853937
+    }
+  },
+  "host_resources": {
+    "cpu_model": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "logical_cpus": 8,
+    "mem_total_kib": 18417272,
+    "isolated_host": false,
+    "filesystem_cache": "warm",
+    "load_samples": "measurements/*.measurement.json: load_before"
+  }
+}

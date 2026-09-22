@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-22",
+  "retained_result_checks": {
+    "passed": 97,
+    "failed": [],
+    "replayed_outside_original_workspace": true
+  },
+  "fixture_sha256_checks": 665,
+  "performance_statistics_recomputed": "identical JSON and formatting",
+  "small_fixture_sources_regenerated": "identical",
+  "python_syntax": "all probe files compiled without executing analyzers",
+  "php_syntax": "mago_worker.php passed php -l",
+  "javascript_syntax": "TypeScript 6 and 7 API probes passed node --check",
+  "oxc": "release build passed; sfw cargo fmt --all -- --check passed",
+  "not_run": [
+    "upstream analyzer full suites",
+    "production Anti-Slop tests",
+    "end-to-end Anti-Slop or Pi benchmark"
+  ]
+}

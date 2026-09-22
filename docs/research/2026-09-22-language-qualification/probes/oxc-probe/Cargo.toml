@@ -1,0 +1,12 @@
+[package]
+name = "anti_slop_oxc_probe"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+oxc_allocator = "=0.150.0"
+oxc_ast = "=0.150.0"
+oxc_parser = "=0.150.0"
+oxc_semantic = "=0.150.0"
+oxc_span = "=0.150.0"
+serde_json = "=1.0.149"

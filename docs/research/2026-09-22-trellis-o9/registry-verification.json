@@ -1,0 +1,46 @@
+[
+  {
+    "name": "commander",
+    "version": "15.0.0",
+    "published": "2026-05-29T09:16:23.076Z",
+    "integrity_matches": true,
+    "engines": {
+      "node": ">=22.12.0"
+    },
+    "deprecated": null
+  },
+  {
+    "name": "js-yaml",
+    "version": "4.2.0",
+    "published": "2026-05-31T22:17:13.783Z",
+    "integrity_matches": true,
+    "engines": {},
+    "deprecated": null
+  },
+  {
+    "name": "argparse",
+    "version": "2.0.1",
+    "published": "2020-08-28T21:14:26.713Z",
+    "integrity_matches": true,
+    "engines": {},
+    "deprecated": null
+  },
+  {
+    "name": "typescript",
+    "version": "6.0.3",
+    "published": "2026-04-16T23:38:27.905Z",
+    "integrity_matches": true,
+    "engines": {
+      "node": ">=14.17"
+    },
+    "deprecated": null
+  },
+  {
+    "name": "zod",
+    "version": "4.4.3",
+    "published": "2026-05-04T07:06:40.819Z",
+    "integrity_matches": true,
+    "engines": {},
+    "deprecated": null
+  }
+]

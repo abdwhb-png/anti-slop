@@ -1,0 +1,2307 @@
+{
+  "metadata": {
+    "commit": "42c2a26b7bbc6ff4fea08f838fff469af8c23fbe",
+    "bun": "1.3.14",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "measurement": "Three sequential fresh processes; warm filesystem cache; Bun transpiler cache disabled. No cold-cache claim.",
+    "scope": "Native Trellis CLI only; optional providers, Rust adapter and comparison with alternative TS analyzers are not qualified."
+  },
+  "cases": {
+    "clean": {
+      "purpose": "Simple complete negative control",
+      "index": 0,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 1
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 2926.53,
+      "max_peak_rss_kib": 299492,
+      "reports": [
+        "runs/clean-0.stdout",
+        "runs/clean-1.stdout",
+        "runs/clean-2.stdout"
+      ]
+    },
+    "shared-rule-duplicate": {
+      "purpose": "Two owners of the same declared billing calculation",
+      "index": 16,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 2,
+          "sloc": 30
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "duplication.clone-group": 1
+      },
+      "clone_groups": 1,
+      "cycle_groups": 0,
+      "median_wall_ms": 1598.0,
+      "max_peak_rss_kib": 313432,
+      "reports": [
+        "runs/shared-rule-duplicate-0.stdout",
+        "runs/shared-rule-duplicate-1.stdout",
+        "runs/shared-rule-duplicate-2.stdout"
+      ]
+    },
+    "shared-rule-centralized": {
+      "purpose": "Same billing calculation now owned once",
+      "index": 0,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 3,
+          "sloc": 17
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 1334.9,
+      "max_peak_rss_kib": 313280,
+      "reports": [
+        "runs/shared-rule-centralized-0.stdout",
+        "runs/shared-rule-centralized-1.stdout",
+        "runs/shared-rule-centralized-2.stdout"
+      ]
+    },
+    "independent-similarity": {
+      "purpose": "Intentionally independent domain policies; similar syntax is not by itself a design defect",
+      "index": 16,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 2,
+          "sloc": 30
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "duplication.clone-group": 1
+      },
+      "clone_groups": 1,
+      "cycle_groups": 0,
+      "median_wall_ms": 2323.65,
+      "max_peak_rss_kib": 313252,
+      "reports": [
+        "runs/independent-similarity-0.stdout",
+        "runs/independent-similarity-1.stdout",
+        "runs/independent-similarity-2.stdout"
+      ]
+    },
+    "short-shared-rule": {
+      "purpose": "Repeated ownership of the same small order invariant, below native clone minima",
+      "index": 0,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 2,
+          "sloc": 2
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 2748.82,
+      "max_peak_rss_kib": 308712,
+      "reports": [
+        "runs/short-shared-rule-0.stdout",
+        "runs/short-shared-rule-1.stdout",
+        "runs/short-shared-rule-2.stdout"
+      ]
+    },
+    "pass-through": {
+      "purpose": "Three delegations without additional behavior; qualitative candidate outside native metric catalog",
+      "index": 0,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 4
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 1575.52,
+      "max_peak_rss_kib": 307876,
+      "reports": [
+        "runs/pass-through-0.stdout",
+        "runs/pass-through-1.stdout",
+        "runs/pass-through-2.stdout"
+      ]
+    },
+    "runtime-cycle": {
+      "purpose": "Two modules forming a runtime import cycle",
+      "index": 12,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 2,
+          "sloc": 4
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "import-cycle": 1
+      },
+      "clone_groups": 0,
+      "cycle_groups": 1,
+      "median_wall_ms": 1623.31,
+      "max_peak_rss_kib": 309128,
+      "reports": [
+        "runs/runtime-cycle-0.stdout",
+        "runs/runtime-cycle-1.stdout",
+        "runs/runtime-cycle-2.stdout"
+      ]
+    },
+    "type-cycle": {
+      "purpose": "Type-only recursive relationship, distinct from a runtime cycle",
+      "index": 12,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 2,
+          "sloc": 4
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "import-cycle": 1
+      },
+      "clone_groups": 0,
+      "cycle_groups": 1,
+      "median_wall_ms": 1501.96,
+      "max_peak_rss_kib": 311692,
+      "reports": [
+        "runs/type-cycle-0.stdout",
+        "runs/type-cycle-1.stdout",
+        "runs/type-cycle-2.stdout"
+      ]
+    },
+    "unresolved-import": {
+      "purpose": "Missing local module must remain visible as incomplete analysis",
+      "index": 20,
+      "completeness": "incomplete",
+      "partial": true,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 2
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "graph.unresolved-import": 1
+      },
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 1432.58,
+      "max_peak_rss_kib": 309160,
+      "reports": [
+        "runs/unresolved-import-0.stdout",
+        "runs/unresolved-import-1.stdout",
+        "runs/unresolved-import-2.stdout"
+      ]
+    },
+    "parse-error": {
+      "purpose": "Malformed TypeScript must not become a clean complete result",
+      "index": 100,
+      "completeness": "incomplete",
+      "partial": true,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 1
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 1487.65,
+      "max_peak_rss_kib": 308064,
+      "reports": [
+        "runs/parse-error-0.stdout",
+        "runs/parse-error-1.stdout",
+        "runs/parse-error-2.stdout"
+      ]
+    },
+    "mixed-languages": {
+      "purpose": "PHP and Rust files must appear as unsupported coverage",
+      "index": 0,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 1
+        },
+        "test": {
+          "files": 0
+        },
+        "unsupported": {
+          "files": 2,
+          "note": "non-TS sources, not analyzed"
+        }
+      },
+      "finding_kinds": {},
+      "clone_groups": 0,
+      "cycle_groups": 0,
+      "median_wall_ms": 1585.16,
+      "max_peak_rss_kib": 308064,
+      "reports": [
+        "runs/mixed-languages-0.stdout",
+        "runs/mixed-languages-1.stdout",
+        "runs/mixed-languages-2.stdout"
+      ]
+    },
+    "hotspot": {
+      "purpose": "Named complex function for baseline attribution checks",
+      "index": 42,
+      "completeness": "complete",
+      "partial": false,
+      "source_coverage": {
+        "production": {
+          "files": 1,
+          "sloc": 19
+        },
+        "test": {
+          "files": 0
+        }
+      },
+      "finding_kinds": {
+        "complexity.hotspot": 1,
+        "duplication.clone-group": 1
+      },
+      "clone_groups": 1,
+      "cycle_groups": 0,
+      "median_wall_ms": 1183.58,
+      "max_peak_rss_kib": 312040,
+      "reports": [
+        "runs/hotspot-0.stdout",
+        "runs/hotspot-1.stdout",
+        "runs/hotspot-2.stdout"
+      ]
+    },
+    "baseline_comparisons": {
+      "comment_shift": {
+        "new": [],
+        "resolved": [],
+        "persistent": [
+          {
+            "baseline": {
+              "kind": "complexity.hotspot",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 1,
+                  "column": 1
+                },
+                "end": {
+                  "line": 19,
+                  "column": 2
+                }
+              },
+              "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+              "facts": {
+                "rank": 1,
+                "name": "classify",
+                "functionKind": "function-declaration",
+                "sourceSet": "production",
+                "cc": 17,
+                "maxNesting": 1,
+                "sloc": 19,
+                "mass": 74.101
+              },
+              "identity": {
+                "version": "1.0.0",
+                "state": "identified",
+                "sourceSet": "production",
+                "scopes": [],
+                "function": {
+                  "kind": "function-declaration",
+                  "name": "classify",
+                  "member": "none"
+                }
+              }
+            },
+            "current": {
+              "kind": "complexity.hotspot",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 3,
+                  "column": 1
+                },
+                "end": {
+                  "line": 21,
+                  "column": 2
+                }
+              },
+              "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+              "facts": {
+                "rank": 1,
+                "name": "classify",
+                "functionKind": "function-declaration",
+                "sourceSet": "production",
+                "cc": 17,
+                "maxNesting": 1,
+                "sloc": 19,
+                "mass": 74.101
+              },
+              "identity": {
+                "version": "1.0.0",
+                "state": "identified",
+                "sourceSet": "production",
+                "scopes": [],
+                "function": {
+                  "kind": "function-declaration",
+                  "name": "classify",
+                  "member": "none"
+                }
+              }
+            },
+            "lineShift": 2
+          },
+          {
+            "baseline": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 2
+                },
+                "end": {
+                  "line": 16
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 3,
+                      "endLine": 16
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 2,
+                    "endLine": 16
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 3,
+                    "endLine": 17
+                  }
+                ]
+              }
+            },
+            "current": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 4
+                },
+                "end": {
+                  "line": 18
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 5,
+                      "endLine": 18
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 4,
+                    "endLine": 18
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 5,
+                    "endLine": 19
+                  }
+                ]
+              }
+            },
+            "lineShift": 2
+          }
+        ]
+      },
+      "rename": {
+        "new": [
+          {
+            "kind": "complexity.hotspot",
+            "path": "src/main.ts",
+            "range": {
+              "start": {
+                "line": 1,
+                "column": 1
+              },
+              "end": {
+                "line": 19,
+                "column": 2
+              }
+            },
+            "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+            "facts": {
+              "rank": 1,
+              "name": "classifyRenamed",
+              "functionKind": "function-declaration",
+              "sourceSet": "production",
+              "cc": 17,
+              "maxNesting": 1,
+              "sloc": 19,
+              "mass": 74.101
+            },
+            "identity": {
+              "version": "1.0.0",
+              "state": "identified",
+              "sourceSet": "production",
+              "scopes": [],
+              "function": {
+                "kind": "function-declaration",
+                "name": "classifyRenamed",
+                "member": "none"
+              }
+            }
+          }
+        ],
+        "resolved": [
+          {
+            "kind": "complexity.hotspot",
+            "path": "src/main.ts",
+            "range": {
+              "start": {
+                "line": 1,
+                "column": 1
+              },
+              "end": {
+                "line": 19,
+                "column": 2
+              }
+            },
+            "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+            "facts": {
+              "rank": 1,
+              "name": "classify",
+              "functionKind": "function-declaration",
+              "sourceSet": "production",
+              "cc": 17,
+              "maxNesting": 1,
+              "sloc": 19,
+              "mass": 74.101
+            },
+            "identity": {
+              "version": "1.0.0",
+              "state": "identified",
+              "sourceSet": "production",
+              "scopes": [],
+              "function": {
+                "kind": "function-declaration",
+                "name": "classify",
+                "member": "none"
+              }
+            }
+          }
+        ],
+        "persistent": [
+          {
+            "baseline": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 2
+                },
+                "end": {
+                  "line": 16
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 3,
+                      "endLine": 16
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 2,
+                    "endLine": 16
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 3,
+                    "endLine": 17
+                  }
+                ]
+              }
+            },
+            "current": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 2
+                },
+                "end": {
+                  "line": 16
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 3,
+                      "endLine": 16
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 2,
+                    "endLine": 16
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 3,
+                    "endLine": 17
+                  }
+                ]
+              }
+            },
+            "lineShift": 0
+          }
+        ]
+      }
+    },
+    "trellis-source": {
+      "purpose": "Public real source tree; not a representative user workload",
+      "source_coverage": {
+        "production": {
+          "files": 235,
+          "sloc": 24879
+        },
+        "test": {
+          "files": 183,
+          "sloc": 30542
+        },
+        "unsupported": {
+          "files": 10,
+          "note": "non-TS sources, not analyzed"
+        }
+      },
+      "completeness": "incomplete",
+      "finding_count": 188,
+      "median_wall_ms": 5277.12,
+      "max_peak_rss_kib": 528308,
+      "max_stdout_bytes": 588643
+    }
+  },
+  "checks": [
+    {
+      "name": "clean: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "clean: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "c8458b7dd7b28438b6c155ed68a95a905a97121b765ec38087e7f47bdde827f7",
+        "src/main.ts": "c6d9b4a1d456dc7d8f3c4f3f15637d3b015901ea1ed73c185b795813051b06c8"
+      }
+    },
+    {
+      "name": "clean: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "shared-rule-duplicate: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "shared-rule-duplicate: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "c90e60b3e9eb8e97a142bf3387818694d58f1864071abb5f5d813e10a0fdbcc1",
+        "src/batch-billing.ts": "b1ebcf9953927837bb1cc4723a244ba9d3542343e5da306ff66c169766c9e01b",
+        "src/web-billing.ts": "f53bb2625e2ac2b61b7dcb5b0377846c3c661979ac855e9b20d391372605501c"
+      }
+    },
+    {
+      "name": "shared-rule-duplicate: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "shared-rule-centralized: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "shared-rule-centralized: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "56108108588013d20d9405f694e8f6d14d9af015ddea993b6992dc9641477004",
+        "src/batch-billing.ts": "56dff25af7f38344462024ad60c1f3dbe747b06c8ac375fd61ba04b4d9fdbdf3",
+        "src/billing.ts": "98882dc37989b4924bdb6b7e5581d3227021a39b897dc187ff4ae3576d08718d",
+        "src/web-billing.ts": "b3a4dd5714814e81e8763ea05febbd2a3412aa1159094d4b5a6bddcc87dbb807"
+      }
+    },
+    {
+      "name": "shared-rule-centralized: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "independent-similarity: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "independent-similarity: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "9a20f8feb6d71ca0151979ded543b86eebb1bc8a460fc60389a1703158709112",
+        "src/billing.ts": "00472cd4a1cd0a23eee0bd20a0f1fa62b8b2fd97ed035bedda6fbe39ce348bb9",
+        "src/sensor.ts": "a0af43b6fc225b5555ba170594f17b68ad7e97488ac8b2e84052c764ad83b6c7"
+      }
+    },
+    {
+      "name": "independent-similarity: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "short-shared-rule: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "short-shared-rule: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "d576d82cea8fd1d6372646b7d21aa7b1c5e160e5d49385bd7bc96d0a9d919839",
+        "src/batch.ts": "bace7d0d26fc691e408f3bc3de26c4f95b0cef8b20cf41098b91a1a2f8d03ec4",
+        "src/web.ts": "6c128e35efdb5e4e5cb993fa9af8e9400af949ca6f0b8b2b09611288920fcf31"
+      }
+    },
+    {
+      "name": "short-shared-rule: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "pass-through: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "pass-through: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "3e0697a2312a5666d492c4492b59468122c91953c5083a8a720f87526d149c82",
+        "src/main.ts": "f4ac0b42aa4691b1f3099c2a5bcecac3099b4f6992343a685f3dfb5a48719ebe"
+      }
+    },
+    {
+      "name": "pass-through: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "runtime-cycle: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "runtime-cycle: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "d8669babab6710b0d3ca020ee9f7aaad0accf51bac6fb235b5da5c7238b4d624",
+        "src/a.ts": "4f657a8627b09ffb62bae3cb8dbfb271de4590410dab52d176f458ef7a63d166",
+        "src/b.ts": "6fdba732d20a64683bcf8bac72e432dc79c388aef0256aaae514f68f3831e048"
+      }
+    },
+    {
+      "name": "runtime-cycle: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "type-cycle: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "type-cycle: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "f92713b480c234032ed807afd3a52c510aef8b62462a00294142c49202f586de",
+        "src/a.ts": "6248151f3b11c820ee858eebe4e9cb2855ead62b4fdc4d56323dca053c9d24e9",
+        "src/b.ts": "0f503773260b3466f9947e16a67c867085afc3e0f22debd775d81e92d1c5443c"
+      }
+    },
+    {
+      "name": "type-cycle: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "unresolved-import: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "unresolved-import: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "3842ac285f962d5005283d9c653431e745b6c4cd0536f99654c74ecd420676cf",
+        "src/main.ts": "90ac6e390afc84f2380f3277102c683db2cae437805c581b7fde023c3b7b0be7"
+      }
+    },
+    {
+      "name": "unresolved-import: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "parse-error: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "parse-error: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "3c5cb79a69d496102d11ed0c50fac64b2fa79358a2a1567384363a0e016c975a",
+        "src/main.ts": "7655f0419a5199fb98e58e69899a841769e176596f8de27fe5b2c22e3803f331"
+      }
+    },
+    {
+      "name": "parse-error: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "mixed-languages: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "mixed-languages: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "8f19451f591ae54a6712ae7dcc0e11fbb27666fb6131e6472463bc7f027b57fb",
+        "src/legacy.php": "380fae5e09274ddfa033611fa8ddbb205cadd68c2b613f470500e85e51a47a02",
+        "src/lib.rs": "0a99743dda35117a349b234de7a527105778c00c46e33bbd6f2c2850e5bf551f",
+        "src/main.ts": "5d8f65d2774e206bc9f7a7a4ad39ca2dc563b5c31e46ab57ef4874961237ce29"
+      }
+    },
+    {
+      "name": "mixed-languages: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "hotspot: valid JSON reports",
+      "passed": true,
+      "observed": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "hotspot: no target writes",
+      "passed": true,
+      "observed": {
+        "package.json": "a1caa6681c877d3fd1dd93449a9e771df8bbaf6a3769ddd2b78f82113c5b5128",
+        "src/main.ts": "0308e279975b5e21dae431de5de4cdabb202360a966bab34b11c08ea96a7c1aa"
+      }
+    },
+    {
+      "name": "hotspot: deterministic measurement",
+      "passed": true,
+      "observed": "run and per-analysis execution metadata excluded"
+    },
+    {
+      "name": "long shared rule generates a clone candidate",
+      "passed": true,
+      "observed": 1
+    },
+    {
+      "name": "centralizing the rule removes clone candidates",
+      "passed": true,
+      "observed": 0
+    },
+    {
+      "name": "unresolved-import: explicitly incomplete",
+      "passed": true,
+      "observed": "incomplete"
+    },
+    {
+      "name": "parse-error: explicitly incomplete",
+      "passed": true,
+      "observed": "incomplete"
+    },
+    {
+      "name": "comment shift preserves named hotspot identity",
+      "passed": true,
+      "observed": {
+        "new": [],
+        "resolved": [],
+        "persistent": [
+          {
+            "baseline": {
+              "kind": "complexity.hotspot",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 1,
+                  "column": 1
+                },
+                "end": {
+                  "line": 19,
+                  "column": 2
+                }
+              },
+              "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+              "facts": {
+                "rank": 1,
+                "name": "classify",
+                "functionKind": "function-declaration",
+                "sourceSet": "production",
+                "cc": 17,
+                "maxNesting": 1,
+                "sloc": 19,
+                "mass": 74.101
+              },
+              "identity": {
+                "version": "1.0.0",
+                "state": "identified",
+                "sourceSet": "production",
+                "scopes": [],
+                "function": {
+                  "kind": "function-declaration",
+                  "name": "classify",
+                  "member": "none"
+                }
+              }
+            },
+            "current": {
+              "kind": "complexity.hotspot",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 3,
+                  "column": 1
+                },
+                "end": {
+                  "line": 21,
+                  "column": 2
+                }
+              },
+              "summary": "CC 17, mass 74.101, nesting 1, SLOC 19",
+              "facts": {
+                "rank": 1,
+                "name": "classify",
+                "functionKind": "function-declaration",
+                "sourceSet": "production",
+                "cc": 17,
+                "maxNesting": 1,
+                "sloc": 19,
+                "mass": 74.101
+              },
+              "identity": {
+                "version": "1.0.0",
+                "state": "identified",
+                "sourceSet": "production",
+                "scopes": [],
+                "function": {
+                  "kind": "function-declaration",
+                  "name": "classify",
+                  "member": "none"
+                }
+              }
+            },
+            "lineShift": 2
+          },
+          {
+            "baseline": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 2
+                },
+                "end": {
+                  "line": 16
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 3,
+                      "endLine": 16
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 2,
+                    "endLine": 16
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 3,
+                    "endLine": 17
+                  }
+                ]
+              }
+            },
+            "current": {
+              "kind": "duplication.clone-group",
+              "path": "src/main.ts",
+              "range": {
+                "start": {
+                  "line": 4
+                },
+                "end": {
+                  "line": 18
+                }
+              },
+              "summary": "2 copies of 135 normalized tokens",
+              "facts": {
+                "groupId": "clone-group-1",
+                "lineOverlap": {
+                  "version": 1,
+                  "overlaps": true,
+                  "memberIndexes": [
+                    0,
+                    1
+                  ],
+                  "spans": [
+                    {
+                      "path": "src/main.ts",
+                      "startLine": 5,
+                      "endLine": 18
+                    }
+                  ]
+                },
+                "sourceSet": "production",
+                "memberCount": 2,
+                "tokenCount": 135,
+                "members": [
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 4,
+                    "endLine": 18
+                  },
+                  {
+                    "path": "src/main.ts",
+                    "startLine": 5,
+                    "endLine": 19
+                  }
+                ]
+              }
+            },
+            "lineShift": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "policy failure retains JSON report with exit 2",
+      "passed": true,
+      "observed": {
+        "name": "policy-failure",
+        "command": [
+          "/home/abdwhb/.bun/bin/bun",
+          "--no-install",
+          "--no-env-file",
+          "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+          "audit",
+          "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-duplicate",
+          "--config",
+          "/tmp/anti-slop-trellis-o9-results-20260922/policy.yaml",
+          "--json",
+          "--quiet"
+        ],
+        "exit": 2,
+        "wall_ms": 1121.04,
+        "peak_rss_kib": 312628,
+        "stdout_bytes": 15425,
+        "stderr_bytes": 105,
+        "stdout_json": true,
+        "stdout_file": "runs/policy-failure.stdout",
+        "stderr_file": "runs/policy-failure.stderr"
+      }
+    },
+    {
+      "name": "missing-root: nonzero failure",
+      "passed": true,
+      "observed": {
+        "name": "missing-root",
+        "command": [
+          "/home/abdwhb/.bun/bin/bun",
+          "--no-install",
+          "--no-env-file",
+          "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+          "audit",
+          "/tmp/anti-slop-trellis-o9-results-20260922/does-not-exist",
+          "--json",
+          "--quiet"
+        ],
+        "exit": 1,
+        "wall_ms": 1056.28,
+        "peak_rss_kib": 302804,
+        "stdout_bytes": 0,
+        "stderr_bytes": 141,
+        "stdout_json": false,
+        "stdout_file": "runs/missing-root.stdout",
+        "stderr_file": "runs/missing-root.stderr"
+      }
+    },
+    {
+      "name": "unknown-flag: nonzero failure",
+      "passed": true,
+      "observed": {
+        "name": "unknown-flag",
+        "command": [
+          "/home/abdwhb/.bun/bin/bun",
+          "--no-install",
+          "--no-env-file",
+          "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+          "audit",
+          "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/clean",
+          "--json",
+          "--unknown-o9-flag"
+        ],
+        "exit": 1,
+        "wall_ms": 1008.35,
+        "peak_rss_kib": 300392,
+        "stdout_bytes": 0,
+        "stderr_bytes": 42,
+        "stdout_json": false,
+        "stdout_file": "runs/unknown-flag.stdout",
+        "stderr_file": "runs/unknown-flag.stderr"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "name": "clean-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/clean",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 3426.64,
+      "peak_rss_kib": 299492,
+      "stdout_bytes": 13616,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/clean-0.stdout",
+      "stderr_file": "runs/clean-0.stderr"
+    },
+    {
+      "name": "clean-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/clean",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2872.05,
+      "peak_rss_kib": 288328,
+      "stdout_bytes": 13616,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/clean-1.stdout",
+      "stderr_file": "runs/clean-1.stderr"
+    },
+    {
+      "name": "clean-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/clean",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2926.53,
+      "peak_rss_kib": 295944,
+      "stdout_bytes": 13616,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/clean-2.stdout",
+      "stderr_file": "runs/clean-2.stderr"
+    },
+    {
+      "name": "shared-rule-duplicate-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-duplicate",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2058.91,
+      "peak_rss_kib": 307072,
+      "stdout_bytes": 15426,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-duplicate-0.stdout",
+      "stderr_file": "runs/shared-rule-duplicate-0.stderr"
+    },
+    {
+      "name": "shared-rule-duplicate-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-duplicate",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1598.0,
+      "peak_rss_kib": 298612,
+      "stdout_bytes": 15425,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-duplicate-1.stdout",
+      "stderr_file": "runs/shared-rule-duplicate-1.stderr"
+    },
+    {
+      "name": "shared-rule-duplicate-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-duplicate",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1251.31,
+      "peak_rss_kib": 313432,
+      "stdout_bytes": 15425,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-duplicate-2.stdout",
+      "stderr_file": "runs/shared-rule-duplicate-2.stderr"
+    },
+    {
+      "name": "shared-rule-centralized-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-centralized",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1334.9,
+      "peak_rss_kib": 313280,
+      "stdout_bytes": 15399,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-centralized-0.stdout",
+      "stderr_file": "runs/shared-rule-centralized-0.stderr"
+    },
+    {
+      "name": "shared-rule-centralized-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-centralized",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1225.05,
+      "peak_rss_kib": 309832,
+      "stdout_bytes": 15399,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-centralized-1.stdout",
+      "stderr_file": "runs/shared-rule-centralized-1.stderr"
+    },
+    {
+      "name": "shared-rule-centralized-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-centralized",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1629.41,
+      "peak_rss_kib": 310100,
+      "stdout_bytes": 15400,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/shared-rule-centralized-2.stdout",
+      "stderr_file": "runs/shared-rule-centralized-2.stderr"
+    },
+    {
+      "name": "independent-similarity-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/independent-similarity",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2323.65,
+      "peak_rss_kib": 308752,
+      "stdout_bytes": 15323,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/independent-similarity-0.stdout",
+      "stderr_file": "runs/independent-similarity-0.stderr"
+    },
+    {
+      "name": "independent-similarity-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/independent-similarity",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2437.19,
+      "peak_rss_kib": 299156,
+      "stdout_bytes": 15323,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/independent-similarity-1.stdout",
+      "stderr_file": "runs/independent-similarity-1.stderr"
+    },
+    {
+      "name": "independent-similarity-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/independent-similarity",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1675.13,
+      "peak_rss_kib": 313252,
+      "stdout_bytes": 15323,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/independent-similarity-2.stdout",
+      "stderr_file": "runs/independent-similarity-2.stderr"
+    },
+    {
+      "name": "short-shared-rule-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/short-shared-rule",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2748.82,
+      "peak_rss_kib": 295524,
+      "stdout_bytes": 14428,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/short-shared-rule-0.stdout",
+      "stderr_file": "runs/short-shared-rule-0.stderr"
+    },
+    {
+      "name": "short-shared-rule-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/short-shared-rule",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1813.19,
+      "peak_rss_kib": 308712,
+      "stdout_bytes": 14428,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/short-shared-rule-1.stdout",
+      "stderr_file": "runs/short-shared-rule-1.stderr"
+    },
+    {
+      "name": "short-shared-rule-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/short-shared-rule",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 3463.0,
+      "peak_rss_kib": 301100,
+      "stdout_bytes": 14428,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/short-shared-rule-2.stdout",
+      "stderr_file": "runs/short-shared-rule-2.stderr"
+    },
+    {
+      "name": "pass-through-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/pass-through",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1575.52,
+      "peak_rss_kib": 307876,
+      "stdout_bytes": 13629,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/pass-through-0.stdout",
+      "stderr_file": "runs/pass-through-0.stderr"
+    },
+    {
+      "name": "pass-through-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/pass-through",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2463.14,
+      "peak_rss_kib": 305332,
+      "stdout_bytes": 13629,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/pass-through-1.stdout",
+      "stderr_file": "runs/pass-through-1.stderr"
+    },
+    {
+      "name": "pass-through-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/pass-through",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1532.34,
+      "peak_rss_kib": 306084,
+      "stdout_bytes": 13630,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/pass-through-2.stdout",
+      "stderr_file": "runs/pass-through-2.stderr"
+    },
+    {
+      "name": "runtime-cycle-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/runtime-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1963.53,
+      "peak_rss_kib": 295288,
+      "stdout_bytes": 14971,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/runtime-cycle-0.stdout",
+      "stderr_file": "runs/runtime-cycle-0.stderr"
+    },
+    {
+      "name": "runtime-cycle-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/runtime-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1623.31,
+      "peak_rss_kib": 308540,
+      "stdout_bytes": 14970,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/runtime-cycle-1.stdout",
+      "stderr_file": "runs/runtime-cycle-1.stderr"
+    },
+    {
+      "name": "runtime-cycle-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/runtime-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1494.11,
+      "peak_rss_kib": 309128,
+      "stdout_bytes": 14971,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/runtime-cycle-2.stdout",
+      "stderr_file": "runs/runtime-cycle-2.stderr"
+    },
+    {
+      "name": "type-cycle-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/type-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1732.36,
+      "peak_rss_kib": 295408,
+      "stdout_bytes": 14865,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/type-cycle-0.stdout",
+      "stderr_file": "runs/type-cycle-0.stderr"
+    },
+    {
+      "name": "type-cycle-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/type-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1501.96,
+      "peak_rss_kib": 311692,
+      "stdout_bytes": 14865,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/type-cycle-1.stdout",
+      "stderr_file": "runs/type-cycle-1.stderr"
+    },
+    {
+      "name": "type-cycle-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/type-cycle",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1382.47,
+      "peak_rss_kib": 309000,
+      "stdout_bytes": 14865,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/type-cycle-2.stdout",
+      "stderr_file": "runs/type-cycle-2.stderr"
+    },
+    {
+      "name": "unresolved-import-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/unresolved-import",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1432.58,
+      "peak_rss_kib": 305452,
+      "stdout_bytes": 14389,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/unresolved-import-0.stdout",
+      "stderr_file": "runs/unresolved-import-0.stderr"
+    },
+    {
+      "name": "unresolved-import-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/unresolved-import",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1916.05,
+      "peak_rss_kib": 304252,
+      "stdout_bytes": 14389,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/unresolved-import-1.stdout",
+      "stderr_file": "runs/unresolved-import-1.stderr"
+    },
+    {
+      "name": "unresolved-import-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/unresolved-import",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1399.27,
+      "peak_rss_kib": 309160,
+      "stdout_bytes": 14389,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/unresolved-import-2.stdout",
+      "stderr_file": "runs/unresolved-import-2.stderr"
+    },
+    {
+      "name": "parse-error-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/parse-error",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 2114.84,
+      "peak_rss_kib": 299664,
+      "stdout_bytes": 16804,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/parse-error-0.stdout",
+      "stderr_file": "runs/parse-error-0.stderr"
+    },
+    {
+      "name": "parse-error-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/parse-error",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1486.49,
+      "peak_rss_kib": 308064,
+      "stdout_bytes": 16804,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/parse-error-1.stdout",
+      "stderr_file": "runs/parse-error-1.stderr"
+    },
+    {
+      "name": "parse-error-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/parse-error",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1487.65,
+      "peak_rss_kib": 307160,
+      "stdout_bytes": 16804,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/parse-error-2.stdout",
+      "stderr_file": "runs/parse-error-2.stderr"
+    },
+    {
+      "name": "mixed-languages-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/mixed-languages",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1585.16,
+      "peak_rss_kib": 306928,
+      "stdout_bytes": 13623,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/mixed-languages-0.stdout",
+      "stderr_file": "runs/mixed-languages-0.stderr"
+    },
+    {
+      "name": "mixed-languages-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/mixed-languages",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1470.04,
+      "peak_rss_kib": 308064,
+      "stdout_bytes": 13622,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/mixed-languages-1.stdout",
+      "stderr_file": "runs/mixed-languages-1.stderr"
+    },
+    {
+      "name": "mixed-languages-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/mixed-languages",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1824.37,
+      "peak_rss_kib": 305764,
+      "stdout_bytes": 13623,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/mixed-languages-2.stdout",
+      "stderr_file": "runs/mixed-languages-2.stderr"
+    },
+    {
+      "name": "hotspot-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/hotspot",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1667.51,
+      "peak_rss_kib": 309964,
+      "stdout_bytes": 15474,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/hotspot-0.stdout",
+      "stderr_file": "runs/hotspot-0.stderr"
+    },
+    {
+      "name": "hotspot-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/hotspot",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1183.58,
+      "peak_rss_kib": 312040,
+      "stdout_bytes": 15474,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/hotspot-1.stdout",
+      "stderr_file": "runs/hotspot-1.stderr"
+    },
+    {
+      "name": "hotspot-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/hotspot",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1116.57,
+      "peak_rss_kib": 310296,
+      "stdout_bytes": 15474,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/hotspot-2.stdout",
+      "stderr_file": "runs/hotspot-2.stderr"
+    },
+    {
+      "name": "hotspot-shift",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/hotspot",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1124.03,
+      "peak_rss_kib": 311536,
+      "stdout_bytes": 15474,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/hotspot-shift.stdout",
+      "stderr_file": "runs/hotspot-shift.stderr"
+    },
+    {
+      "name": "compare-shift",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "compare",
+        "/tmp/anti-slop-trellis-o9-results-20260922/runs/hotspot-0.stdout",
+        "/tmp/anti-slop-trellis-o9-results-20260922/runs/hotspot-shift.stdout",
+        "--json"
+      ],
+      "exit": 0,
+      "wall_ms": 1147.95,
+      "peak_rss_kib": 304980,
+      "stdout_bytes": 12442,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/compare-shift.stdout",
+      "stderr_file": "runs/compare-shift.stderr"
+    },
+    {
+      "name": "hotspot-rename",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/hotspot",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 1379.53,
+      "peak_rss_kib": 313244,
+      "stdout_bytes": 15489,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/hotspot-rename.stdout",
+      "stderr_file": "runs/hotspot-rename.stderr"
+    },
+    {
+      "name": "compare-rename",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "compare",
+        "/tmp/anti-slop-trellis-o9-results-20260922/runs/hotspot-0.stdout",
+        "/tmp/anti-slop-trellis-o9-results-20260922/runs/hotspot-rename.stdout",
+        "--json"
+      ],
+      "exit": 0,
+      "wall_ms": 1170.67,
+      "peak_rss_kib": 305308,
+      "stdout_bytes": 12257,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/compare-rename.stdout",
+      "stderr_file": "runs/compare-rename.stderr"
+    },
+    {
+      "name": "policy-failure",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/shared-rule-duplicate",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/policy.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 2,
+      "wall_ms": 1121.04,
+      "peak_rss_kib": 312628,
+      "stdout_bytes": 15425,
+      "stderr_bytes": 105,
+      "stdout_json": true,
+      "stdout_file": "runs/policy-failure.stdout",
+      "stderr_file": "runs/policy-failure.stderr"
+    },
+    {
+      "name": "missing-root",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/does-not-exist",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 1,
+      "wall_ms": 1056.28,
+      "peak_rss_kib": 302804,
+      "stdout_bytes": 0,
+      "stderr_bytes": 141,
+      "stdout_json": false,
+      "stdout_file": "runs/missing-root.stdout",
+      "stderr_file": "runs/missing-root.stderr"
+    },
+    {
+      "name": "unknown-flag",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis-o9-results-20260922/fixtures/clean",
+        "--json",
+        "--unknown-o9-flag"
+      ],
+      "exit": 1,
+      "wall_ms": 1008.35,
+      "peak_rss_kib": 300392,
+      "stdout_bytes": 0,
+      "stderr_bytes": 42,
+      "stdout_json": false,
+      "stdout_file": "runs/unknown-flag.stdout",
+      "stderr_file": "runs/unknown-flag.stderr"
+    },
+    {
+      "name": "trellis-source-0",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 5664.94,
+      "peak_rss_kib": 528308,
+      "stdout_bytes": 588643,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/trellis-source-0.stdout",
+      "stderr_file": "runs/trellis-source-0.stderr"
+    },
+    {
+      "name": "trellis-source-1",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 5277.12,
+      "peak_rss_kib": 464376,
+      "stdout_bytes": 588643,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/trellis-source-1.stdout",
+      "stderr_file": "runs/trellis-source-1.stderr"
+    },
+    {
+      "name": "trellis-source-2",
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis-o9-results-20260922/neutral.yaml",
+        "--json",
+        "--quiet"
+      ],
+      "exit": 0,
+      "wall_ms": 4949.84,
+      "peak_rss_kib": 469316,
+      "stdout_bytes": 588643,
+      "stderr_bytes": 0,
+      "stdout_json": true,
+      "stdout_file": "runs/trellis-source-2.stdout",
+      "stderr_file": "runs/trellis-source-2.stderr"
+    }
+  ]
+}

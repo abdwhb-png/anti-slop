@@ -1,0 +1,183 @@
+{
+  "conditions": "Fresh processes with warm dedicated Bun transpiler cache and warm filesystem. Original Trellis source exclusion corpus/** is applied; no optional provider selected.",
+  "runs": [
+    {
+      "exit": 0,
+      "wall_ms": 11305.34,
+      "peak_rss_kib": 465884,
+      "stdout_bytes": 534092,
+      "completeness": "incomplete",
+      "source_coverage": {
+        "production": {
+          "files": 199,
+          "sloc": 24437
+        },
+        "test": {
+          "files": 179,
+          "sloc": 30469
+        },
+        "excluded": {
+          "files": 40,
+          "note": "build outputs and config-excluded paths \u2014 not analyzed"
+        },
+        "unsupported": {
+          "files": 10,
+          "note": "non-TS sources, not analyzed"
+        }
+      },
+      "index": 61,
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis.vXVQlJ/trellis.yaml",
+        "--json",
+        "--quiet"
+      ]
+    },
+    {
+      "exit": 0,
+      "wall_ms": 9708.35,
+      "peak_rss_kib": 455376,
+      "stdout_bytes": 534092,
+      "completeness": "incomplete",
+      "source_coverage": {
+        "production": {
+          "files": 199,
+          "sloc": 24437
+        },
+        "test": {
+          "files": 179,
+          "sloc": 30469
+        },
+        "excluded": {
+          "files": 40,
+          "note": "build outputs and config-excluded paths \u2014 not analyzed"
+        },
+        "unsupported": {
+          "files": 10,
+          "note": "non-TS sources, not analyzed"
+        }
+      },
+      "index": 61,
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis.vXVQlJ/trellis.yaml",
+        "--json",
+        "--quiet"
+      ]
+    },
+    {
+      "exit": 0,
+      "wall_ms": 8640.08,
+      "peak_rss_kib": 472440,
+      "stdout_bytes": 534092,
+      "completeness": "incomplete",
+      "source_coverage": {
+        "production": {
+          "files": 199,
+          "sloc": 24437
+        },
+        "test": {
+          "files": 179,
+          "sloc": 30469
+        },
+        "excluded": {
+          "files": 40,
+          "note": "build outputs and config-excluded paths \u2014 not analyzed"
+        },
+        "unsupported": {
+          "files": 10,
+          "note": "non-TS sources, not analyzed"
+        }
+      },
+      "index": 61,
+      "command": [
+        "/home/abdwhb/.bun/bin/bun",
+        "--no-install",
+        "--no-env-file",
+        "/tmp/anti-slop-trellis.vXVQlJ/src/cli/main.ts",
+        "audit",
+        "/tmp/anti-slop-trellis.vXVQlJ",
+        "--config",
+        "/tmp/anti-slop-trellis.vXVQlJ/trellis.yaml",
+        "--json",
+        "--quiet"
+      ]
+    }
+  ],
+  "median_wall_ms": 9708.35,
+  "max_peak_rss_kib": 472440,
+  "fingerprint_checks": [
+    {
+      "case": "clean",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "shared-rule-duplicate",
+      "selected_file_entries": 8,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "shared-rule-centralized",
+      "selected_file_entries": 12,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "independent-similarity",
+      "selected_file_entries": 8,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "short-shared-rule",
+      "selected_file_entries": 8,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "pass-through",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "runtime-cycle",
+      "selected_file_entries": 8,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "type-cycle",
+      "selected_file_entries": 8,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "unresolved-import",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "parse-error",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "mixed-languages",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    },
+    {
+      "case": "hotspot",
+      "selected_file_entries": 4,
+      "fingerprints_match_known_input": true
+    }
+  ]
+}

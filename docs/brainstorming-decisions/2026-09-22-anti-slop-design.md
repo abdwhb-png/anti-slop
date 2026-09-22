@@ -2,7 +2,7 @@
 
 Date: 2026-09-22
 
-Status: D1–D8 confirmed with the user. Initial language extraction experiments are complete; production integration, resource acceptance and rule quality remain unqualified. This document defines the design and implementation handoff; it does not report an implemented product.
+Status: D1–D9 confirmed with the user. Initial language extraction experiments are complete; rust-analyzer is provisionally retained with its observed resource cost under D9. Production integration, broader resource budgets and rule quality remain unqualified. This document defines the design and implementation handoff; it does not report an implemented product.
 
 Working project name: `anti-slop`. Product commands, diagnostics, schemas, documentation, and code are in English.
 
@@ -77,6 +77,7 @@ Initial design research did not execute analyzers. A subsequent [bounded Trellis
 | D6 | Use TOON as the default CLI output, with explicit JSON output available in the first version. Use JSONL for telemetry and dataset interchange. Keep the canonical data contract and model input formats independent of CLI encoding. Apply the AXI output principles described below. |
 | D7 | Defer O9, the optional Trellis TypeScript adapter, to a future reconsideration. Its measured process cost does not fit the user's current priorities. Keep the research as a reference; do not include Trellis integration in the initial implementation or upcoming language qualification. |
 | D8 | Treat latency and memory as acceptance constraints from the first release, including repeated analysis for the future Pi consumer. Evaluate the complete execution path and retained resources. Rust is the implementation choice, not evidence that those constraints are satisfied. Numeric budgets remain to be agreed. |
+| D9 | Keep rust-analyzer provisionally for Rust analysis. The user accepts its measured cost given the current small number of Rust projects and wants later replacement to remain possible. This does not choose an always-resident process or waive D8 for future workloads. Keep engine-specific integration behind the language adapter. |
 
 ## Alternatives considered
 
@@ -182,7 +183,7 @@ Before selecting a Rust codec, qualify its supported TOON specification version 
 
 ## Language qualification
 
-Candidate integrations are Oxc plus native TypeScript project semantics when needed; rust-analyzer through an evaluated library or process boundary; and Mago, with PHPStan as a credible alternative, for PHP. These remain candidates, not settled dependency choices. The [initial qualification report](../research/2026-09-22-language-qualification/README.md) records exact versions, capabilities, measurements, raw evidence and 97 passing checks.
+Candidate integrations are Oxc plus native TypeScript project semantics when needed, and Mago with PHPStan as a credible alternative for PHP. D9 provisionally retains rust-analyzer for Rust; its precise production interface still requires qualification. The [initial qualification report](../research/2026-09-22-language-qualification/README.md) records exact versions, capabilities, measurements, raw evidence and 97 passing checks. Subsequent [Rust alternatives research](../research/2026-09-22-rust-analyzer-alternatives.md) records O11–O16 and the rationale for D9.
 
 Prefer one native source that supplies the required facts. Adding another parser is justified only by a demonstrated missing capability, not by a generic polyglot design preference.
 
@@ -200,7 +201,7 @@ The completed experiments establish these bounded results:
 | --- | --- | --- |
 | Q1 | Oxc supplies local structural facts; TypeScript 7 supplies project navigation and dependent type updates. Its separate typed API provides structured type/symbol access. | The typed API is explicitly unstable; LSP navigation and hover do not replace all structured type evidence. Qualify the chosen Rust-facing boundary. |
 | Q2 | Mago's PHP SDK captures expression types, source, metadata and reference edges, with fresh dependent results after edits. Composer dependencies resolve when included in source scope. | Exact reference call-site mapping, framework behavior, evidence targeting and a possible Rust worker remain unqualified. Existing watch mode was not automatically faster than a one-shot SDK run. |
-| Q3 | rust-analyzer provides fixture navigation, type/layout updates, cfg reloads and declarative macro text while build scripts and procedural macros stay disabled. | First queried facts take seconds and the server retains approximately 476–487 MiB. This is not accepted as a default for repeated Pi use. Embedded HIR/IDE cost and richer macro/source mapping remain unproven. |
+| Q3 | rust-analyzer provides fixture navigation, type/layout updates, cfg reloads and declarative macro text while build scripts and procedural macros stay disabled. | D9 accepts the observed startup and approximately 476–487 MiB retention provisionally for current use. Future Pi process lifetime, embedded HIR/IDE cost and richer macro/source mapping remain unproven. |
 | Q4 | Extraction, freshness and explicit-failure checks pass on generated fixtures. | Representative R1–R9 accuracy, CI blocking, durable dataset capture and the complete Anti-Slop/Pi resource budget still require validation. |
 
 Measurements use different operations and generated workloads; they are not a ranking of analyzers or directly comparable with the Trellis experiment. See the report for first-process, loaded-query, full-capture and memory boundaries. D8's numeric budgets are still unresolved.
@@ -309,7 +310,7 @@ Initial extraction qualification for all three languages is complete within the 
 
 | Unresolved item | Impact | Reliable next step |
 | --- | --- | --- |
-| Exact analyzer integrations and versions | Evidence completeness, deployment, memory, and latency | Use the initial results to qualify the TypeScript structured interface, PHP call-site/framework coverage and Rust resource/interface choice. O9 remains deferred. |
+| Exact analyzer integrations and versions | Evidence completeness, deployment, memory, and latency | Use the initial results to qualify the TypeScript structured interface, PHP call-site/framework coverage and the provisionally selected rust-analyzer interface. O9 remains deferred; O11 Rust Glancer is a possible later replacement requiring its own qualification. |
 | Representative calibration corpus and label protocol | Validity of blocking and replacement claims | Define representative examples and independent review/adjudication before threshold selection. |
 | Numeric performance and false-positive budgets | Acceptance criteria | Measure D4 and repeated-use workloads, present trade-offs, and select explicit budgets before accepting integrations. |
 | Future Pi triggers, transport, and delivery cadence | Invocation frequency, user-visible latency, and idle resource use | Design the package after the core evidence path is qualified; retain the shared engine and separate scheduling from delivery. |
@@ -319,4 +320,4 @@ Initial extraction qualification for all three languages is complete within the 
 
 Out of scope for this design phase: production implementation, the future Pi package, automatic code rewriting, a hosted telemetry platform, and training a production replacement model. The product exports data and evaluates judges; it does not need to become a general training platform or agent orchestrator.
 
-Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D8. The Trellis experiment passed 44 focused checks and 12 source-fingerprint checks. The subsequent language experiments passed 97 extraction/freshness/failure checks and retained reproducible runtime observations, with a completed Terra investigation of Rust interface boundaries. No production implementation, production test suite, or end-to-end Anti-Slop/Pi benchmark exists yet.
+Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D9. The Trellis experiment passed 44 focused checks and 12 source-fingerprint checks. The subsequent language experiments passed 97 extraction/freshness/failure checks and retained reproducible runtime observations, with a completed Terra investigation of Rust interface boundaries. Later Rust alternatives research verified official release metadata, versioned source and independent technical commentary; it did not rerun benchmarks. No production implementation, production test suite, or end-to-end Anti-Slop/Pi benchmark exists yet.

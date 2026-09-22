@@ -2,7 +2,7 @@
 
 Date: 2026-09-22
 
-Status: D1–D9 confirmed with the user. Initial language extraction experiments are complete; rust-analyzer is provisionally retained with its observed resource cost under D9. Production integration, broader resource budgets and rule quality remain unqualified. This document defines the design and implementation handoff; it does not report an implemented product.
+Status: D1–D12 confirmed with the user. Initial language extraction experiments are complete; rust-analyzer is provisionally retained with its observed resource cost under D9. The [core architecture proposal](2026-09-22-anti-slop-architecture.md) refines module ownership, execution, records and replacement contracts. Production integration, broader resource budgets and rule quality remain unqualified. These documents do not report an implemented product.
 
 Working project name: `anti-slop`. Product commands, diagnostics, schemas, documentation, and code are in English.
 
@@ -78,6 +78,9 @@ Initial design research did not execute analyzers. A subsequent [bounded Trellis
 | D7 | Defer O9, the optional Trellis TypeScript adapter, to a future reconsideration. Its measured process cost does not fit the user's current priorities. Keep the research as a reference; do not include Trellis integration in the initial implementation or upcoming language qualification. |
 | D8 | Treat latency and memory as acceptance constraints from the first release, including repeated analysis for the future Pi consumer. Evaluate the complete execution path and retained resources. Rust is the implementation choice, not evidence that those constraints are satisfied. Numeric budgets remain to be agreed. |
 | D9 | Keep rust-analyzer provisionally for Rust analysis. The user accepts its measured cost given the current small number of Rust projects and wants later replacement to remain possible. This does not choose an always-resident process or waive D8 for future workloads. Keep engine-specific integration behind the language adapter. |
+| D10 | Include both a one-shot CLI and an on-demand resident mode in the first version, sharing the same Rust engine and reusing useful analyzer state between analyses. |
+| D11 | Bind the resident process to its client session, such as a future Pi session. It stops when the client closes; a service surviving across client sessions is not selected. |
+| D12 | Use local SQLite as the authoritative store for analyses, evidence and feedback, with self-contained JSONL/evidence exports for CI, aggregation and training. The database's exact schema, resource cost, durability configuration and retention defaults still require qualification. |
 
 ## Alternatives considered
 
@@ -130,7 +133,7 @@ Candidate heuristics are not proven facts about intent. In particular, naming si
 
 ## Architecture and ownership
 
-Start with a Rust library and CLI organized by the responsibilities below. Separate crates or a plugin framework are not prerequisites.
+Start with a Rust library, CLI and client-owned resident interface organized by the responsibilities below. Separate crates or a plugin framework are not prerequisites. The [core architecture proposal](2026-09-22-anti-slop-architecture.md) specifies ownership, session lifecycle, fact/judge contracts, persistence and validation gates without changing the rule semantics here.
 
 ```mermaid
 flowchart LR
@@ -230,7 +233,7 @@ Report end-to-end latency alongside stage costs, cold/warm conditions, cache reu
 
 Bound concurrent analysis, queued work, caches, evidence buffers, and child lifetimes. Expired or superseded work must not publish results as current. A budget exhaustion or unavailable assessment stays explicit; reducing evidence or skipping required work cannot manufacture a fast, complete result. Bound retries and make capture loss visible rather than silently sacrificing the dataset requirement.
 
-Numeric budgets must distinguish cold analysis, repeated change analysis, context delivery, and idle memory. Establish them before accepting an analyzer integration, using initial measurements to inform the user's trade-off. The upcoming qualification evaluates resource use together with fact coverage; performance is not postponed to a later optimization phase. A persistent process, daemon, or Rust-to-Pi transport has not been selected: qualify reuse benefits against idle memory and lifecycle cost before introducing one.
+Numeric budgets must distinguish cold analysis, repeated change analysis, context delivery, and idle memory. Establish them before accepting a production analyzer integration, using initial measurements to inform the user's trade-off. Production qualification must evaluate resource use together with fact coverage; performance is not postponed to a later optimization phase. D10/D11 select a client-owned resident mode from the first release. Qualify each adapter's reuse benefits against idle memory and lifecycle cost; residency does not require keeping every analyzer loaded. The proposed stdio transport and lifecycle are detailed in the core architecture document; the future Pi package has not been implemented.
 
 ### Future Pi consumer boundary
 
@@ -238,7 +241,7 @@ The package will connect Pi lifecycle events to the existing engine and deliver 
 
 Separate analysis scheduling from context delivery. Preparing context should consume a bounded view of available results rather than initiate a full repository scan or model assessment on each context event. Group changes and reuse valid work. Source or dependency changes invalidate affected facts and assessments; session changes invalidate delivery state without automatically discarding reusable repository facts. An unfinished assessment is pending or incomplete, never implicitly clean. The explicit CLI/CI path still waits for its required checks and applies D1.
 
-Deliver relevant findings with stable identities, source provenance, and coverage. Avoid repeatedly injecting unchanged findings while ensuring changed, resolved, or incomplete states remain visible. Preserve valid message ordering and stable transcript prefixes; qualify actual provider-cache behavior with the future package. Its selected Pi hooks, delivery protocol, and integration tests belong to its later design; this boundary does not commit to per-edit invocation or a background service.
+Deliver relevant findings with stable identities, source provenance, and coverage. Avoid repeatedly injecting unchanged findings while ensuring changed, resolved, or incomplete states remain visible. Preserve valid message ordering and stable transcript prefixes; qualify actual provider-cache behavior with the future package. Its selected Pi hooks, delivery cadence, and integration tests belong to its later design. D10/D11 provide the client-owned resident engine interface without selecting per-edit invocation or a service surviving the client.
 
 ## Replaceable judge contract
 
@@ -258,7 +261,7 @@ Source code and comments are input data, not instructions for the judge. Contrac
 
 ## Telemetry, feedback, and datasets
 
-Maintain one authoritative local record store and evidence content. Exact storage technology and retention defaults are implementation choices to qualify. No central service is required by D3.
+Maintain one authoritative local record store and evidence content. D12 selects SQLite with derived JSONL/evidence exports; transaction details, resource use and retention defaults remain to qualify. No central service is required by D3.
 
 | Record | Required information |
 | --- | --- |
@@ -306,18 +309,18 @@ A replacement model first passes contract tests, then independent held-out evalu
 
 ## Handoff boundary and unresolved decisions
 
-Initial extraction qualification for all three languages is complete within the controlled fixture scope. The next milestone is resolving the remaining interface and resource constraints, then the first complete rule/evidence/judge/record/export path and representative-corpus qualification. These experiments are not permission to drop the D5 scope or to advertise unsupported language/rule combinations as complete.
+Initial extraction qualification for all three languages is complete within the controlled fixture scope. The core architecture proposal now specifies the shared engine, both invocation modes, adapter contracts and SQLite record ownership. The next milestone is reviewing this architecture, resolving the remaining interface and resource constraints, then the first complete rule/evidence/judge/record/export path and representative-corpus qualification. These experiments are not permission to drop the D5 scope or to advertise unsupported language/rule combinations as complete.
 
 | Unresolved item | Impact | Reliable next step |
 | --- | --- | --- |
 | Exact analyzer integrations and versions | Evidence completeness, deployment, memory, and latency | Use the initial results to qualify the TypeScript structured interface, PHP call-site/framework coverage and the provisionally selected rust-analyzer interface. O9 remains deferred; O11 Rust Glancer is a possible later replacement requiring its own qualification. |
 | Representative calibration corpus and label protocol | Validity of blocking and replacement claims | Define representative examples and independent review/adjudication before threshold selection. |
 | Numeric performance and false-positive budgets | Acceptance criteria | Measure D4 and repeated-use workloads, present trade-offs, and select explicit budgets before accepting integrations. |
-| Future Pi triggers, transport, and delivery cadence | Invocation frequency, user-visible latency, and idle resource use | Design the package after the core evidence path is qualified; retain the shared engine and separate scheduling from delivery. |
-| Local persistence and retention defaults | Replay and export completeness | Verify atomic capture, failure reporting, and reconstruction on a small complete path. |
+| Future Pi triggers and delivery cadence; production resident protocol | Invocation frequency, user-visible latency, and idle resource use | D10/D11 select client-owned residency; qualify the proposed stdio interface and design the package after the core evidence path is qualified. Separate scheduling from delivery. |
+| SQLite capture implementation and retention defaults | Replay and export completeness | D12 selects the store; verify transaction boundaries, failure reporting, reconstruction and cost on a small complete path. |
 | Rust TOON codec and supported specification version | Encoding fidelity and interoperability | Check conformance fixtures and public CLI equivalence; measure representative results against compact JSON. |
 | Future replacement model, including the Laya reference | Training/export adapter details | Resolve the actual model when it is selected; retain provider-neutral records meanwhile. |
 
 Out of scope for this design phase: production implementation, the future Pi package, automatic code rewriting, a hosted telemetry platform, and training a production replacement model. The product exports data and evaluates judges; it does not need to become a general training platform or agent orchestrator.
 
-Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D9. The Trellis experiment passed 44 focused checks and 12 source-fingerprint checks. The subsequent language experiments passed 97 extraction/freshness/failure checks and retained reproducible runtime observations, with a completed Terra investigation of Rust interface boundaries. Later Rust alternatives research verified official release metadata, versioned source and independent technical commentary; it did not rerun benchmarks. No production implementation, production test suite, or end-to-end Anti-Slop/Pi benchmark exists yet.
+Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D12. The Trellis experiment passed 44 focused checks and 12 source-fingerprint checks. The subsequent language experiments passed 97 extraction/freshness/failure checks and retained reproducible runtime observations, with a completed Terra investigation of Rust interface boundaries. Later Rust alternatives research verified official release metadata, versioned source and independent technical commentary; it did not rerun benchmarks. Architectural research additionally checked SQLite, JSON-RPC, JSON Lines, Git and Jev primary contracts. No production implementation, production test suite, or end-to-end Anti-Slop/Pi benchmark exists yet.

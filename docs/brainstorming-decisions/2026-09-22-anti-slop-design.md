@@ -2,7 +2,7 @@
 
 Date: 2026-09-22
 
-Status: D1–D5 confirmed with the user. Technical integration and quality claims still require qualification. This document defines the design and implementation handoff; it does not report an implemented product.
+Status: D1–D6 confirmed with the user. Technical integration and quality claims still require qualification. This document defines the design and implementation handoff; it does not report an implemented product.
 
 Working project name: `anti-slop`. Product commands, diagnostics, schemas, documentation, and code are in English.
 
@@ -71,6 +71,7 @@ No integration prototype, performance benchmark, rule evaluation, or paid model 
 | D3 | Store data locally and as exportable CI artifacts. Aggregate explicitly for training and evaluation. |
 | D4 | Optimize first for analyzing an agent's changes with repository context; use the same engine locally and in CI. |
 | D5 | The initial usable release covers comments, the four named smells, and the pertinent APOSD rules discussed, across TypeScript, PHP, and Rust. |
+| D6 | Use TOON as the default CLI output, with explicit JSON output available in the first version. Use JSONL for telemetry and dataset interchange. Keep the canonical data contract and model input formats independent of CLI encoding. Apply the AXI output principles described below. |
 
 ## Alternatives considered
 
@@ -82,6 +83,14 @@ No integration prototype, performance benchmark, rule evaluation, or paid model 
 | O4 — Contrarian: declared architecture contracts as the primary detector | Explicit expectations reduce inference, but users must anticipate and describe violations. | Rejected as the primary product. It does not sufficiently address emerging smells in ordinary agent changes. Existing contracts may still be evidence. |
 
 No option has demonstrated performance superiority. The recommendation concerns ownership and integration boundaries, not an unmeasured speed claim.
+
+### Output formats
+
+| Option | Fit and maintenance cost | Disposition |
+| --- | --- | --- |
+| O5 — TOON only | One public encoding, but every script, CI integration, and downstream data consumer needs a TOON decoder or conversion step. | Not selected: the encoding constraint adds integration work without a demonstrated benefit for all consumers. |
+| O6 — TOON by default, explicit JSON | Compact agent-facing output and direct structured consumption by scripts and CI. Two encoders share one output contract and result preparation path. | Selected through D6. Qualify semantic equivalence and the actual token/latency trade-off; no universal TOON performance advantage is assumed. |
+| O7 — JSON by default, explicit TOON | Conventional programmatic output, with a compact option for agents. Similar encoder maintenance to O6. | Not selected: agents would need to request TOON on each invocation instead of receiving the preferred agent-facing representation by default. |
 
 ## Rule semantics
 
@@ -133,6 +142,28 @@ flowchart LR
 7. **Records and exports** preserve evidence, assessments, policy actions, and feedback as distinct information. Dataset exports are derived from these records.
 
 Use the smallest common evidence vocabulary required by the rules. Do not build a universal AST or erase native semantics to force every language into the same capabilities. A missing reference is not evidence that there are no callers; an observed count is meaningful only within its declared analysis scope.
+
+## CLI output and AXI
+
+AXI prescribes TOON on stdout and conversion at the output boundary, while retaining structured data internally. D6 adds an explicit JSON option for this product's integrations. The reference is the [AXI specification at commit 85a8723](https://github.com/kunchenguid/axi/blob/85a8723276ca0b9ad0a115873da7d46024bb4f4f/.agents/skills/axi/SKILL.md); it does not require the JSON option proposed here.
+
+| Contract | Design |
+| --- | --- |
+| P1 — CLI | Offer `--format toon\|json`, defaulting to TOON. At identical content-selection options, both encodings expose the same information and schema version. `--full` controls detail separately. Do not switch formats automatically based on terminal detection. |
+| P2 — Canonical data | Express the versioned contract through Rust types. Prepare a result once and encode it at the output boundary. Encoders do not duplicate rule logic, compute different findings, or change CI policy. Internal JSON text conversion is not an architectural requirement. |
+| P3 — Dataset | Derive JSONL exports from complete retained C1/C2 records and evidence, with the provenance defined in the telemetry section. CLI previews and truncation never become the training source. JSONL interchange does not determine the local storage technology. |
+| P4 — Models | Judge adapters render the canonical evidence contract into inputs appropriate for their model and API. The CLI format flag does not select a model prompt format. Replacing Jev must not require changing the public CLI encoding. |
+
+Apply AXI's relevant output principles to the shared result preparation path:
+
+- **A1 — Minimal views:** show a small actionable summary by default, with stable finding identifiers and access to details. Keep execution status, analysis coverage, and the policy outcome visible even when the finding list is shortened.
+- **A2 — Explicit truncation:** preserve a preview, report the full size and the omitted scope, and provide the corresponding way to request full details. Both encodings carry the same truncation information.
+- **A3 — Precomputed totals:** report inexpensive aggregate counts with their analysis/filter scope and distinguish displayed counts from totals. Do not imply repository-wide completeness from a partial analysis.
+- **A4 — Structured outcomes:** distinguish a completed analysis with zero findings from unavailable or incomplete analysis. Emit structured results and actionable errors in the selected format on stdout; keep progress and debug logs on stderr. These presentation rules do not redefine D1's blocking policy.
+
+TOON's documented strength is uniform structured data. The [format's own guidance](https://toonformat.dev/guide/getting-started#when-not-to-use-toon) identifies cases where compact JSON can be smaller or faster. Measure representative diagnostic lists, irregular evidence packets, and source-heavy results with the relevant tokenizer and consumer; compare equivalent content against compact JSON. No token saving or model-accuracy improvement has been established for this product. A format/profile change must remain explicit and versioned rather than depend on an unannounced per-response optimization.
+
+Before selecting a Rust codec, qualify its supported TOON specification version and conformance fixtures, including exact preservation of retained text and values. The output contract is selected; its library implementation remains open. Additional formats require a concrete consumer need.
 
 ## Language qualification
 
@@ -192,7 +223,7 @@ Preserve the differences between no candidate, rejected candidate, insufficient 
 
 Retain rejected candidates and include a controlled sample outside candidate selection, with selection method and sampling probability. Also admit manually reported misses. Otherwise the evaluation cannot estimate what the candidate generator fails to notice.
 
-CI produces self-contained exportable artifacts with a manifest and retained evidence. Explicit aggregation deduplicates examples and preserves provenance. JSONL is a useful interchange format; vendor-specific training formats are generated views rather than the canonical data model.
+CI produces self-contained exportable artifacts with a manifest and retained evidence. Explicit aggregation deduplicates examples and preserves provenance. JSONL is the initial interchange format selected by D6; vendor-specific training formats are generated views rather than the canonical data model.
 
 Split evaluation data by related repository/code lineage and clone groups, with an appropriate time boundary. Do not randomly split near-identical functions or adjacent revisions across training and testing. Freeze a holdout before tuning rules, prompts, thresholds, or models. Use separately adjudicated examples to avoid proving a replacement against Jev's own labels.
 
@@ -215,6 +246,7 @@ Production behavior follows RED → GREEN → REFACTOR through the real public b
 - **V1 — Extraction:** real integrations on TypeScript, PHP, and Rust fixtures; cross-file facts, legitimate boundaries, macros/framework behavior, and unresolved coverage.
 - **V2 — Relevance:** positive, negative, and ambiguous examples for R1–R9; candidate recall separately from assessment precision; end-to-end false-positive burden and missed issues by language and rule.
 - **V3 — Contracts:** provider interchange, failures and abstention, cache invalidation, evidence freshness, feedback revisions, export round-trips, and replay from stored packets.
+- **V4 — Output:** semantic equivalence of TOON and JSON through the public CLI, schema versioning, text/value round-trips, explicit truncation, structured errors, zero findings versus incomplete analysis, and dataset export completeness independent of CLI previews. Qualify the selected TOON codec against its declared specification version.
 
 Blocking thresholds must be selected on validation data, not the frozen evaluation set. No numeric precision, recall, or latency target is asserted as achieved by this document.
 
@@ -230,8 +262,9 @@ The next technical milestone is qualification of the evidence path for all three
 | Representative calibration corpus and label protocol | Validity of blocking and replacement claims | Define representative examples and independent review/adjudication before threshold selection. |
 | Numeric performance and false-positive budgets | Acceptance criteria | Measure D4 workloads, present trade-offs, and select explicit budgets. |
 | Local persistence and retention defaults | Replay and export completeness | Verify atomic capture, failure reporting, and reconstruction on a small complete path. |
+| Rust TOON codec and supported specification version | Encoding fidelity and interoperability | Check conformance fixtures and public CLI equivalence; measure representative results against compact JSON. |
 | Future replacement model, including the Laya reference | Training/export adapter details | Resolve the actual model when it is selected; retain provider-neutral records meanwhile. |
 
 Out of scope for this design phase: production implementation, automatic code rewriting, a hosted telemetry platform, and training a production replacement model. The product exports data and evaluates judges; it does not need to become a general training platform or agent orchestrator.
 
-Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification, completed Terra research reports and critical follow-up, and user decisions D1–D5. No source-code tests or integration benchmarks were run because no production implementation was created.
+Validation performed during design: full referenced-conversation analysis, targeted local source reads, primary-source verification including AXI and TOON, completed Terra research reports and critical follow-up, and user decisions D1–D6. No source-code tests or integration benchmarks were run because no production implementation was created.

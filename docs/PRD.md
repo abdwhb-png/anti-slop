@@ -65,11 +65,20 @@ As a developer, I want to select the changes to analyze so that Anti-Slop evalua
 
 **D19 — Confirmed:** every analysis request requires an explicit scope; there is no default analysis scope.
 
-- Support an explicitly selected local-change scope and a comparison using an explicitly supplied Git base. Define their exact selectors and comparison semantics in the public contract before implementation.
-- A missing, invalid or unresolved selector produces a clear usage/configuration failure before starting analyzers or model calls. Do not fall back to the current branch, the previous analysis or a configured default silently.
-- Resolve and report the effective selection, comparison base where applicable, and captured source identity. Local selection must distinguish index, working-tree and relevant untracked inputs according to the requested scope.
-- Keep changed-code selection distinct from supporting repository context. Relevant unchanged callers, contracts and history may be gathered as evidence without claiming they were all selected changes.
-- Preserve the working tree. Detect unstable acquisition and state the achieved consistency/freshness scope; do not treat a commit hash alone as the complete local input identity.
+**Initial CLI contract (L01.1):** `anti-slop analyze` requires exactly one of these selectors:
+
+| Selector | Selected change bytes |
+| --- | --- |
+| `--staged` | Compare HEAD to the index and select the index snapshot. Working-tree edits beyond the index and untracked files are not selected changes. |
+| `--unstaged` | Compare the index to the current working tree, including the current bytes of nonignored untracked files. Staged-only changes are not selected changes. |
+| `--local` | Compare HEAD to the current working tree, including the current bytes of nonignored untracked files. |
+| `--base <ref>` | Compare the supplied base directly to the current working tree, including local changes and the current bytes of nonignored untracked files. |
+
+- Resolve and disclose the supplied `--base` once. Do not substitute a merge-base, branch default or implicit selection.
+- `anti-slop report <run-id>` reads retained state only; it requires no analysis selector and performs no source capture, native analysis or model call. Preserve the existing help and version operations.
+- Reject a missing, unknown, invalid or conflicting analysis selector before analyzer or model work. Do not fall back to the current branch, a previous analysis or a configured default silently.
+- Report selected change bytes separately from supporting repository context for every selector. Context may inform extraction or assessment but does not broaden the selected changes; attribute it to its own source generation. For example, `--staged` uses index bytes even when the working-tree copy differs, and any working-tree bytes used as context remain identified as context.
+- Resolve and report the effective selection, supplied base identity where applicable, and captured source identity. Preserve the working tree. Detect unstable acquisition and state the achieved consistency/freshness scope; a commit hash alone is not the complete local input identity.
 - Help and report-reading operations require no analysis scope because they do not analyze code.
 
 #### US-02 — Understand findings and uncertainty
@@ -78,7 +87,21 @@ As a developer, I want evidence and counterevidence for each finding so that I c
 
 - Identify the rule, captured source location where accurately mapped, actual observations, attributed assessment and relevant counterevidence. Missing or approximate mappings remain explicit.
 - Provide bounded report views with truthful counts, truncation and access to further detail. TOON and explicit JSON must express the same selected report under [ADR-006](decisions/006-output-formats-and-shared-projection.md).
-- Distinguish execution, evidence coverage, assessment, freshness, policy and recording state. No findings, rejected candidates, insufficient evidence and unavailable execution are different outcomes.
+- For analysis and retained-report reads, follow ADR-006's TOON default and explicit JSON choice. Encoding must not change findings, scope or policy; codec profile and detailed view limits remain under OPEN-06.
+- Keep execution, coverage, assessment, freshness, policy and recording independently observable. They are separate facts that may coexist, not one combined status. No candidates, a rejected candidate, insufficient evidence and unavailable execution are different outcomes.
+- A request identifies its selected-source generation separately from supporting-context generations, its requested scope and the effective configuration used. A run is one attempt for that captured request; it does not imply that every step completed or that anything was retained. A later request after relevant source or configuration changes must not be represented as using the earlier inputs.
+- A commit or byte hash can identify a revision or bytes but cannot recover their contents. A commit alone does not identify index, working-tree or untracked bytes. Retain or package the actual captured evidence required by [ADR-005](decisions/005-local-evidence-store-and-dataset-exports.md), and keep selected bytes distinct from supporting context. Unknown or unavailable source components remain explicit.
+- Effective provenance identifies resolved non-secret settings and the relevant analyzer, dependency, judge, model and renderer versions actually used. Do not claim an unknown identity is known, and never retain credential values.
+- Native facts, evidence and spans bind to the exact source generation and native overlay consumed, plus relevant configuration/dependency state, analyzer identity and query scope. A path and line alone do not establish that binding; partial resolution and approximate or unknown mappings remain visible.
+- A finding/evidence occurrence identifies the particular observed evidence and candidate under its source/configuration generation and rule version. It is not identified by a rule name or location alone. Materially changed evidence is a distinct occurrence and does not silently inherit adjudication, as required by US-06.
+- An attempt may have an identifier available for tracing before it is retained; that identifier does not claim a durable run record exists. Report attempt, request, source and configuration identities only when actually known. A durable run identity, durable-success acknowledgement or complete-record claim follows successful retention; failed admission or recording remains explicit.
+- Preserve these separate obligations in reports and retained records without defining a universal status enum:
+  - Execution says which work completed, failed, timed out, was cancelled or did not run.
+  - Freshness says whether results still match the selected source and context generations; stale or superseded results remain attributable but are not current.
+  - Coverage says which selected/context scope and analyzer capabilities were actually covered, including missing, unsupported and unresolved portions.
+  - Assessment records the provider-neutral result for each candidate: supports the issue, rejects it, or finds evidence insufficient. A timeout or an assessment that was not requested is not an insufficient-evidence result.
+  - Policy shows whether an enabled, qualified rule may act on current evidence. Stale evidence cannot authorize blocking.
+  - Recording says whether evidence and outcomes were durably retained; it is distinct from execution and policy.
 - Group related findings about one actionable issue without erasing their rule identities or inflating issue counts. Display filters do not change CI policy.
 - A useful thin adapter or necessary comment must remain a legitimate counterexample. Provider confidence or explanatory prose is not additional extracted evidence.
 
@@ -86,12 +109,37 @@ As a developer, I want evidence and counterevidence for each finding so that I c
 
 As a repository maintainer, I want selected rules to block only within their validated scope so that CI provides a trustworthy design gate.
 
-- Require an explicit analysis scope and comparison base when the selected CI mode needs one; CI environment metadata must not silently choose another scope.
+- Apply the US-01 explicit selector contract in CI; CI environment metadata must not silently choose another scope.
 - Allow blocking only for an enabled rule whose qualification profile matches the rule/candidate selector, language/project characteristics, analyzer/evidence contract, effective judge/renderer and required coverage.
 - Make at least one qualified combination available in the first release, subject to KPI-01 and the qualification procedure in Section 3. Shipping that profile does not automatically enable it in every repository.
 - Preserve separate public outcomes for qualified violations and inability to complete required work. Required analyzer/judge/recording failures must not report a complete clean check; advisory incompleteness remains visible even when it does not fail the job.
-- If a violation and operational failure coexist, retain both in the report. Exact process exit values belong to the public CLI contract and remain to be specified.
+- For the initial `anti-slop analyze` operation, use these process exit values:
+
+  | Exit | Analysis outcome |
+  | --- | --- |
+  | `0` | No blocking violation and no required operational failure. Advisory incompleteness remains visible in the report. |
+  | `1` | At least one qualified blocking violation and no required operational failure. |
+  | `2` | Invalid analysis input, including a missing, conflicting, invalid or unresolved selector; reject it before analyzer or model work. |
+  | `3` | Required operational failure. If a qualified blocking violation also exists, retain both outcomes in the report and return `3`. |
+
+- These analysis exits do not define exit behavior for the read-only report command or future resident methods.
 - Produce self-contained CI artifacts when export is requested. An artifact or recording failure cannot be reported as a complete dataset capture.
+
+#### Initial request and outcome examples (L01.1)
+
+- **V01 — Local and base selections:** Let HEAD be `H`; let the supplied `release` ref resolve to `B`; and let `merge-base(H, B)` be `M`, with `H`, `B` and `M` all distinct. For `src/example.ts`, assume the content is `common` at `M`, `base` at `B`, `head` at `H`, `staged` in the index and `disk` in the working tree. Let `staged-only.ts` change from `old` at `H` to `staged-only` in both the index and working tree, and let `new.ts` be nonignored and untracked. `--staged` selects index bytes against `H`, including `staged-only.ts` and excluding working-tree-only edits and `new.ts`; `--unstaged` selects the index-to-disk change for `src/example.ts`, excludes the staged-only file whose index and disk bytes match, and includes current `new.ts` bytes; `--local` selects current disk bytes against `H`, including `staged-only.ts` and `new.ts`; and `--base release` selects current disk bytes directly against `B`, including `new.ts`, not against `M`. Each result identifies selected bytes separately from supporting context, including any working-tree bytes used as context for the staged selection.
+- **V02 — Invalid request:** `anti-slop analyze` with no selector, `anti-slop analyze --staged --local`, `anti-slop analyze --unknown-selector`, `anti-slop analyze --base` or `anti-slop analyze --base missing-ref` (when that ref does not resolve) returns `2` before native or model work. Help, version and `anti-slop report <run-id>` do not require an analysis selector.
+- **V03 — Legitimate design:** A comment that explains a non-obvious invariant and a thin adapter that isolates provider-specific response types can be justified design choices. Neither is a violation solely because it adds a comment or a small layer; the finding still requires the evidence and counterevidence defined by [ADR-003](decisions/003-evidence-first-rules-and-selective-blocking.md).
+- **V04 — Required and advisory incompleteness:** A timeout, unsupported capability or stale source result stays visible as incomplete execution or freshness evidence, not as “no findings.” Required incompleteness returns `3`; advisory incompleteness remains visible and may return `0` when no blocking violation or required failure exists.
+- **V05 — Qualification and coexistence:** An unqualified candidate cannot block. A qualified blocking violation returns `1` when required work succeeds. If that violation coexists with a required operational failure, preserve both in the report and return `3`.
+- **V06 — Recording and empty selection:** A recording failure cannot receive a durable-success acknowledgement; when recording is required, it is a required operational failure and returns `3`. A valid empty selected set is visible and may return `0` without claiming native analysis ran.
+
+#### Provenance and state examples (L01.2)
+
+- **P2-E01 — No candidate, rejected candidate and legitimate negative:** A completed analysis with the required declared coverage and no emitted candidates records no candidates within that coverage; it does not claim universal absence. A candidate whose assessment rejects the issue remains a rejected candidate with that assessment. A legitimate negative is a separate attributed adjudicated example, not an inference from no candidate, rejection, insufficient evidence or execution failure.
+- **P2-E02 — Required capability, native failure and stale evidence:** Suppose a current run has already retained a qualified finding from source generation S and then a required native query fails or reports an unsupported capability. Preserve the finding and its evidence alongside the required failure and uncovered scope; apply the existing required-failure outcome in US-03. If a late result instead refers to older generation S0, retain it as stale evidence and do not let it support a current blocking decision. Report source/configuration identities in either failure only when actually observed.
+- **P2-E03 — Insufficient evidence and model timeout:** A completed assessment that cannot decide is “evidence insufficient” under [ADR-004](decisions/004-provider-neutral-assessment.md). A provider timeout is an execution failure with no completed support/reject/insufficient assessment. When model calls are disabled or a required judgment is unavailable, that missing assessment remains visible and cannot become a clean result.
+- **P2-E04 — In-flight inputs and failed recording:** Once a request begins, later edits to source, configuration or dependencies do not mutate the inputs of its in-flight native/model work; a later request has its own effective identities, and an old result is not current for it. If retention fails, expose the recording failure and only identities actually known; any available attempt identifier remains useful for tracing but does not claim a durable run identity or acknowledgement. Provider credentials remain outside retained request/transport evidence.
 
 #### US-04 — Reuse a session without stale results or leaked processes
 
@@ -118,9 +166,10 @@ As a maintainer, I want analyses to retain their evidence automatically so that 
 
 As a developer or reviewing agent, I want to record the disposition of a finding so that later training can distinguish incorrect warnings from accepted trade-offs.
 
-- Attach feedback to an exact finding/evidence occurrence and record actor kind, disposition, optional rationale and adjudication state.
-- Preserve false-positive reports, confirmed issues, suppression, accepted trade-offs and deferred work distinctly. Agent feedback is not silently relabeled as human adjudication.
-- Correct feedback through an attributed revision that preserves its history. A durable acknowledgement follows persistence, not merely queuing.
+- Keep model predictions and model-to-model agreement distinct from human feedback, agent feedback and independently adjudicated labels. A Jev verdict, agreement with Jev, a successful CI run or absence of candidates never supplies an independent label.
+- Attach feedback to an exact finding/evidence occurrence and record actor kind, disposition, optional rationale and adjudication state. Preserve false-positive reports, confirmed issues, suppression, accepted trade-offs, deferred real issues, insufficient evidence and execution or recording failures distinctly. None automatically becomes a positive or negative adjudicated label.
+- Label provenance identifies the exact evidence occurrence and source generation, actor kind and adjudicator role, label-protocol revision and recorded decision. Keep disagreements and their provenance visible; correct feedback and adjudications through attributed revisions that preserve prior values. Do not resolve disagreement by overwriting a record or treating unapproved consensus as a label. Adjudicator selection and the disagreement-resolution process remain gated under OPEN-02.
+- A durable acknowledgement follows persistence, not merely queuing.
 - Support reporting a missed issue, with its source context, so evaluation is not limited to candidates the system already selected.
 - Materially changed evidence does not silently inherit an adjudicated label from an earlier occurrence. A reviewed carry-forward mechanism needs explicit provenance.
 
@@ -130,8 +179,8 @@ As a dataset curator, I want complete portable exports so that local and CI exam
 
 - Export versioned JSONL with the evidence required to resolve every included example. Verify completeness after copying the artifact away from its originating workspace and database.
 - Preserve provenance, distinct dispositions, feedback revisions, transformation identity and split membership. Do not turn an incomplete example into a negative label.
-- Aggregate explicitly and preserve repository/code lineage while deduplicating related examples. Training and evaluation separation must account for clones, related revisions and time.
-- Freeze an independently adjudicated holdout before tuning. Performance repositories are not automatically a labeled quality corpus.
+- Aggregate explicitly and preserve repository/code lineage across related revisions, clones and examples while deduplicating. A deduplicated view must retain each source example's identity, provenance and history, and all related lineage must remain within one immutable partition.
+- Freeze an independently adjudicated, profile-specific holdout before tuning. Performance repositories are not automatically a labeled quality corpus; any use for quality evaluation requires separately declared selection, independent labels and lineage-aware partitions.
 - Failed export or missing evidence is explicit. A successful export does not authorize deleting the local source records or uploading them elsewhere.
 
 #### US-08 — Replace the judge without redesigning the product
@@ -181,13 +230,18 @@ Use the complete per-analysis model-phase deadline in [ADR-007](decisions/007-pe
 
 ### Evaluation Strategy
 
-1. Build positive, legitimate-negative and ambiguous fixtures for every R1–R9/language combination. Exercise actual native facts and the public engine path; use controlled provider responses only when testing the surrounding contract.
-2. Record candidate-generator recall separately from assessment precision, end-to-end recall, abstention and operational incompleteness. Include sampled non-candidates and independently found misses in the evaluation population.
-3. Establish a reviewed labeling/adjudication protocol, representative project scopes and lineage-aware partitions. Freeze the holdout before tuning candidate selectors, prompts, thresholds or models.
-4. Select thresholds on validation data and assess KPI-01 on the independent holdout. Publish true/false-positive counts, sample sizes, intervals/uncertainty and excluded cases. Do not pool unrelated scopes to hide a failing rule/language combination.
-5. Before declaring a profile qualified, approve its sample-size/confidence protocol and recall/abstention acceptance gates. Zero predicted positives leaves precision undefined; abstaining on nearly everything is not evidence of a useful detector. These details remain open and block qualification until resolved.
-6. Run the malformed-output, partial-resolution, stale-generation, timeout, cancellation and recording/export-failure cases through the real public boundary. Keep adjudicated labels independent of Jev's predictions.
-7. Requalify affected profiles when their evidence, analyzer, selector, renderer, model or relevant configuration changes. Run a prospective blocking configuration in non-blocking comparison before activation.
+1. Before constructing a corpus or tuning selectors, prompts, thresholds or models, identify the target population and representative project characteristics, intended evaluation scope, label/adjudication protocol and revision, immutable partition plan, and provenance for source selection and sampling. Record selection probabilities for sampled non-candidates. These declarations do not select the first qualifying rule/language profile or supply acceptance thresholds.
+2. Build positive, legitimate-negative and ambiguous examples for every R1–R9/language combination in the applicable release scope. Exercise actual native facts and the public engine path; use controlled provider responses only when testing the surrounding contract. Keep model predictions, human feedback, agent feedback, suppression, deferral, adjudication, insufficient evidence and execution or recording failure separately attributable as required by ADR-004 and ADR-005.
+3. Preserve repository, revision, clone and related-example lineage across aggregation. Keep every related lineage group wholly within one immutable training, validation or evaluation partition, while retaining each deduplicated example's identity, provenance and history. Freeze an independently adjudicated, profile-specific holdout before tuning candidate selectors, prompts, thresholds or models. Tuning on holdout results does not establish independent qualification.
+4. Report candidate-generator recall as unique independently adjudicated relevant issues for which the candidate generator emitted a candidate divided by all unique independently adjudicated relevant issues in the declared evaluation population. Candidate-only examples cannot establish candidate recall.
+5. Report assessment precision as independently adjudicated true issues among supported issue groups divided by all adjudicated supported issue groups, after grouping duplicate reports of the same actionable issue. Report end-to-end recall as unique independently adjudicated relevant issues surfaced as supported findings by the complete selection-and-assessment path divided by all unique independently adjudicated relevant issues in scope. For both recall metrics, distinguish directly adjudicated numerator/denominator counts from any estimated population totals. Estimates may use probability-sampled non-candidates with recorded inclusion probabilities only under an approved estimator and confidence method. Independently reported misses retain discovery/selection provenance but have no assumed inclusion probability or population weight unless they came from a documented probability sample. Do not present an opportunistic-miss count as a population estimate. Report abstention as completed assessments with an insufficient-evidence outcome divided by completed assessments in scope; provider or acquisition failures are not abstentions. For each required operation, report operationally incomplete evaluation examples divided by examples requiring that operation, including source resolution, native coverage, required assessment and recording. For every metric, state its numerator, denominator, exclusions, sample size, selection provenance and uncertainty, and do not hide failures by pooling unrelated scopes.
+6. Assess KPI-01 on the independent holdout using the existing target of at least 95% precision among blocking findings in each qualified scope. Report true/false-positive counts and uncertainty. If there are zero predicted positive findings, precision is undefined. A sample too small to support the approved uncertainty method, or near-total abstention, cannot establish qualification or usefulness.
+7. Before declaring any profile qualified, approve the sample-size/confidence method, per-profile recall and abstention floors, exact rule/language/project/analyzer/judge scope and prospective non-blocking comparison. These choices remain open and block qualification until approved. Performance workloads and limits remain governed separately by ADR-007; the performance reference repositories are not an adjudicated quality corpus by default.
+8. Run malformed-output, partial-resolution, stale-generation, timeout, cancellation and recording/export-failure cases through the real public boundary. Keep independent labels separate from Jev's predictions. Requalify affected profiles when their evidence, analyzer, selector, renderer, model or relevant configuration changes, and complete the approved prospective non-blocking comparison before blocking activation.
+
+#### Evaluation integrity example (L01.3)
+
+- **V07 — Independent labels, lineage and qualification gates:** Jev supports a candidate and CI completes successfully, but an independent adjudicator rejects the issue; retain the provider prediction separately from the attributed adjudication. A reviewer suppresses another finding or defers a real issue; retain those dispositions as feedback without turning either into an independent positive or negative label. Two clones or related revisions retain their individual example identities and history while sharing one lineage partition, even when a deduplicated view is used. Freeze the profile-specific independent holdout before tuning selectors, prompts, thresholds or models. If predicted positives are absent, precision stays undefined; if sample/confidence criteria, recall or abstention floors, the exact profile, or the prospective comparison remain unapproved, the profile cannot qualify.
 
 A qualification result identifies the exact validated scope and versions. It is not a repository-wide or language-wide quality guarantee. The first qualifying combination will be selected from the evidence, not guessed in this PRD.
 
@@ -199,7 +253,7 @@ The shared Rust engine follows the ownership boundaries in [ADR-001](decisions/0
 
 The CLI and resident transport invoke that engine; `output` prepares one projection for TOON/JSON. SQLite is the authoritative record store, while JSONL/evidence artifacts are derived exports. Language and model adapters isolate native/provider-specific types. Reusable facts and assessments retain source/configuration identity and cannot be published as current after invalidation or supersession.
 
-Detailed wire methods, exit values, source-view mechanics, database schema and codec profile are implementation contracts still to specify. They must satisfy the user-visible criteria above and cannot silently redefine them.
+Detailed resident methods, read-report exit behavior, source-view mechanics, database schema and codec profile remain implementation contracts to specify. The initial analyze exits are defined in US-03. These later contracts must satisfy the user-visible criteria above and cannot silently redefine them.
 
 ### Project Configuration
 
@@ -215,7 +269,7 @@ Configuration support must provide schema-assisted editing and explicit validati
 | Native analyzers | Consume a coherent source/configuration/dependency view; report capabilities, mapping quality and coverage. Use verified provisioning separately from normal analysis. |
 | Model provider | Use configured credentials through secure runtime configuration, record identity and request/response provenance without credentials, and apply D22 and the total phase deadline. |
 | Local SQLite | Own durable analyses/evidence/feedback; expose capture, migration, quota and export failures honestly. No hosted database is required. |
-| CLI and CI | English machine-consumable reports, explicit scope, format equivalence and distinct policy/operational outcomes. Exact command names and codes remain to specify. |
+| CLI and CI | English machine-consumable reports, explicit scope, format equivalence and distinct policy/operational outcomes. Initial analyze commands, selectors and exits are defined in US-01/US-03; retained-report errors and future resident operations remain to specify. |
 | Resident client | Client-owned lifetime, bounded operations and source-generation-aware reports. No specific future Pi event schedule is assumed. |
 
 ### Security & Privacy
@@ -260,8 +314,8 @@ The provider-neutral boundary is part of the MVP; only adoption of an actual fut
 
 | Item | Remaining choice | Resolve before |
 | --- | --- | --- |
-| OPEN-01 | Exact local-change selectors, Git-base comparison semantics, command/method names, compatibility rules and process exit values. D19 already settles that a scope is mandatory. | Implementing/publishing the corresponding public contract. |
-| OPEN-02 | First qualifying combination, adjudicators, corpus composition, sample sizes/confidence method, recall/abstention floors and representative project characteristics. D20/D21 settle the minimum release qualification and precision target. | Declaring a profile qualified or shipping the first usable release. |
+| OPEN-01 | The initial CLI commands, four analysis selectors, direct base comparison and analysis exit values are resolved under US-01/US-03. The public compatibility policy for later CLI/protocol revisions, error outcomes for read-only report requests and method names/semantics for the future resident API remain open. D19 settles that every analysis request requires an explicit scope. | Publishing versioned CLI or resident-protocol compatibility guarantees. |
+| OPEN-02 | **Established protocol:** independent, attributed labels remain distinct from provider predictions, feedback, suppression, deferral, insufficient evidence and failures; related repository/revision/clone lineage stays in one immutable partition; a profile-specific independent holdout is frozen before tuning; non-candidate samples and independently found misses retain selection provenance; candidate recall, assessment precision, end-to-end recall, abstention and operational incompleteness are reported separately with counts, denominators, exclusions and uncertainty. **Before corpus construction or tuning:** declare the target population, representative project characteristics, corpus composition, label/adjudication protocol and revision, immutable partition plan, and sampling/selection provenance. **Before labels are assigned:** explicitly select and approve adjudicator identities and the disagreement-resolution process. **Before qualification:** approve the population-estimation and sample-size/confidence methods, per-profile recall and abstention floors, exact rule/language/project/analyzer/judge scope, and prospective non-blocking comparison. No first qualifying rule/language or numeric sampling/recall/abstention criterion is selected here. D20/D21 keep KPI-01 at at least 95% blocking precision and require at least one qualified combination for the first usable release. | Declare the population, representation, corpus and labeling/partition plan before corpus construction or tuning; approve the adjudicator process before assigning labels; approve the named qualification gates and complete the prospective non-blocking comparison before qualification or activation. Those unresolved gates block qualification and shipping the first usable release. |
 | OPEN-03 | Provider/version and endpoint setup, credential handling, repository transmission authorization, source exclusions, native code-execution controls and monetary budgets if required. D22 settles invocation behavior after configuration/authorization. | Real remote inference or executing project-supplied native code. |
 | OPEN-04 | Source-view/cache mechanisms, Linux/WSL2 descendant cleanup and effective whole-tree accounting. | Production adapter/session acceptance and resource claims. |
 | OPEN-05 | SQLite schema, transactions/journaling, quota reservations, export layout and purge/recovery mechanics. | Durable collection/export acceptance. |

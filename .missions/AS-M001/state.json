@@ -2,28 +2,131 @@
   "schemaVersion": 1,
   "kind": "state",
   "id": "AS-M001",
-  "revision": 1,
+  "revision": 15,
   "mission": {
     "kind": "mission",
     "id": "AS-M001",
-    "revision": 1,
-    "path": "../../docs/missions/AS-M001/r1.md"
+    "revision": 2,
+    "path": "../../docs/missions/AS-M001/r2.md"
   },
-  "status": "draft",
-  "interruption": {
-    "kind": "needs_decision",
-    "reason": "W01 and AS-M001 execution are not approved; current authority is preparation only. The draft contract identifies remaining product choices."
-  },
+  "status": "completed",
+  "interruption": null,
   "history": "history.jsonl",
-  "lastSequence": 1,
+  "lastSequence": 15,
   "currentPacket": null,
-  "attempts": [],
+  "attempts": [
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M001-P001",
+        "revision": 1,
+        "path": "packets/AS-M001-P001.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M001-P001-acceptance",
+        "revision": 1,
+        "path": "results/AS-M001-P001-acceptance.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M001-P002",
+        "revision": 1,
+        "path": "packets/AS-M001-P002.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M001-P002-acceptance",
+        "revision": 1,
+        "path": "results/AS-M001-P002-acceptance.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M001-P003",
+        "revision": 1,
+        "path": "packets/AS-M001-P003.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M001-P003-acceptance",
+        "revision": 1,
+        "path": "results/AS-M001-P003-acceptance.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M001-P004",
+        "revision": 1,
+        "path": "packets/AS-M001-P004.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M001-P004-acceptance",
+        "revision": 1,
+        "path": "results/AS-M001-P004-acceptance.json"
+      }
+    }
+  ],
   "checkpoints": [],
   "evidence": [
     {
       "kind": "evidence",
       "path": "evidence/preparation-2026-09-23.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/authorization-2026-10-13.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/AS-M001-P003-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/AS-M001-P001-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/AS-M001-P002-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/mission-validation-handoff.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/mission-validation-01.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/AS-M001-P004-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/mission-validation-handoff-02.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/mission-validation-02.md"
     }
   ],
-  "validation": null
+  "validation": {
+    "kind": "result",
+    "id": "AS-M001-validation-02",
+    "revision": 1,
+    "path": "results/AS-M001-validation-02.json"
+  },
+  "refs": [
+    {
+      "kind": "result",
+      "id": "AS-M001-validation-01",
+      "revision": 1,
+      "path": "results/AS-M001-validation-01.json"
+    }
+  ]
 }

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-validation-01",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "/root/mission_validator",
+  "implementers": [
+    "/root/p001_author",
+    "/root/p002_author",
+    "/root/p003_author",
+    "codex-coordinator"
+  ],
+  "freshContext": true,
+  "outcome": "correction_required",
+  "summary": "F1: required P003 next-task handoff substitutes evaluation-corpus work for O1 configuration/capture. PRD contracts and checks pass; preserve report and correct handoff before mission acceptance.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/mission-validation-01.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/review-boundary.json"
+    }
+  ]
+}

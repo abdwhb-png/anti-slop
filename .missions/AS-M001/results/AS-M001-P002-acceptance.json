@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-P002-acceptance",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M001-P002",
+    "revision": 1,
+    "path": "../packets/AS-M001-P002.md"
+  },
+  "actor": "codex-coordinator",
+  "implementers": [
+    "/root/p002_author"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted L01.2 after complete author terminal report and actual diff review. Minimal attempt/run/source/context/configuration/evidence obligations and six independent status axes are documented without a storage/wire schema. P2-E01\u2013P2-E04 distinguish no candidates/rejection/adjudicated negatives, native gaps, stale evidence, timeout versus insufficient assessment and trace identifiers versus durability. P001 semantics remain intact.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/AS-M001-P002-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P002-author.md"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-validation-02",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "/root/mission_validator_02",
+  "implementers": [
+    "/root/p001_author",
+    "/root/p002_author",
+    "/root/p003_author",
+    "/root/p004_author",
+    "codex-coordinator"
+  ],
+  "freshContext": true,
+  "outcome": "accepted",
+  "summary": "Complete AS-M001 r2 independently accepted at corrected boundary: V01\u2013V10 satisfied, F1 corrected by attributed P004 supplement, original unsuccessful result retained, no remaining actionable findings. Documentation only; later choices and authority remain gated.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/mission-validation-02.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/review-boundary-02.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P004-author.md"
+    }
+  ],
+  "refs": [
+    {
+      "kind": "result",
+      "id": "AS-M001-validation-01",
+      "revision": 1,
+      "path": "AS-M001-validation-01.json"
+    }
+  ]
+}

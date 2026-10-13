@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-P003-acceptance",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M001-P003",
+    "revision": 1,
+    "path": "../packets/AS-M001-P003.md"
+  },
+  "actor": "codex-coordinator",
+  "implementers": [
+    "/root/p003_author"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted L01.3 after complete author terminal report and actual PRD diff review. Independent labels, lineage-aware immutable partitions and pre-tuning holdout are documented. Metrics separate candidate recall, assessment precision, end-to-end recall, abstention and operational incompleteness, with direct counts distinct from population estimates. Manual misses do not receive fabricated inclusion probabilities. V07 is present; OPEN-02 names pre-corpus, pre-labeling and qualification gates without selecting numeric thresholds or a qualifying combination.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/AS-M001-P003-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P003-author.md"
+    }
+  ]
+}

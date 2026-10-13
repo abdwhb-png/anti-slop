@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-P001-acceptance",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M001-P001",
+    "revision": 1,
+    "path": "../packets/AS-M001-P001.md"
+  },
+  "actor": "codex-coordinator",
+  "implementers": [
+    "/root/p001_author"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted L01.1 after the author returned its complete terminal report. Actual PRD diff matches approved D1\u2013D3 and operation names. V01 distinguishes H/B/M, index/disk and staged-only/untracked files; V02 gives invalid calls and exit 2; V03\u2013V06 retain legitimate design, partial work, qualified policy, coexisting failures, recording and empty selection. No source behavior is claimed.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/AS-M001-P001-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P001-author.md"
+    }
+  ]
+}

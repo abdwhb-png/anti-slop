@@ -8,7 +8,7 @@
     { "kind": "document", "path": "PRD.md" },
     { "kind": "document", "path": "decisions/README.md" },
     { "kind": "document", "path": "../README.md" },
-    { "kind": "mission", "id": "AS-M001", "revision": 1, "path": "missions/AS-M001/r1.md" },
+    { "kind": "mission", "id": "AS-M001", "revision": 2, "path": "missions/AS-M001/r2.md" },
     { "kind": "evidence", "path": "../.missions/AS-M001/evidence/preparation-2026-09-23.md" }
   ]
 }
@@ -16,7 +16,7 @@
 
 # Anti-Slop progressive implementation roadmap
 
-Prepared: 2026-09-23. **Preparation only. W01 is proposed; AS-M001 is draft. No mission, delegation, commit or publication is authorized by this document.**
+Prepared: 2026-09-23. Updated: 2026-10-13. **AS-M001 documentation execution and sequential fresh-context agents are authorized by the user-approved plan. W01 as a whole and later mission execution remain proposed. No commit or publication is authorized.**
 
 This is the existing roadmap's first workflow revision. It retains the complete 2026-09-22 plan [below](#retained-2026-09-22-plan), unchanged, as historical planning context. The active view above that history owns current sequencing. Historical subtask prompts are not current dispatch instructions. No PRD, ADR, research record or roadmap file has been replaced or moved.
 
@@ -28,10 +28,10 @@ This is the existing roadmap's first workflow revision. It retains the complete 
 | Accepted architecture and its rationale | [Existing ADRs](decisions/README.md) |
 | Implemented capabilities | [README current status](../README.md#current-status), checked against source |
 | Destination, dependencies and the next approval frame | This roadmap |
-| One bounded outcome and its validation/authority | [AS-M001 revision 1](missions/AS-M001/r1.md), currently the only detailed Mission Contract |
+| One bounded outcome and its validation/authority | [AS-M001 revision 2](missions/AS-M001/r2.md), currently the only detailed Mission Contract |
 | Starting evidence and resumable mission state | [Preparation evidence](../.missions/AS-M001/evidence/preparation-2026-09-23.md), [state](../.missions/AS-M001/state.json) and append-only [history](../.missions/AS-M001/history.jsonl) |
 
-Use the supplied [mission-driven-dev skill](../../agent-tools/skills/mission-driven-dev/SKILL.md) for phase instructions and artifact formats. This link targets the sibling `agent-tools` checkout on the preparation host; the skill is not bundled or installed by Anti-Slop. On another host, locate the supplied skill before using the workflow. Do not substitute the retained generic prompt if it is unavailable. The [standalone task template](templates/task.md) remains available for work outside a mission; Task Packets are derived from an approved contract just before authorized dispatch.
+Use the repository-installed [mission-driven-dev skill](../.agents/skills/mission-driven-dev/SKILL.md) for phase instructions and artifact formats. Historical preparation used a sibling checkout; current execution uses this installed copy. Do not substitute the retained generic prompt if it is unavailable. The [standalone task template](templates/task.md) remains available for work outside a mission; Task Packets are derived from an approved contract just before authorized dispatch.
 
 ## Destination and starting evidence
 
@@ -39,13 +39,13 @@ The accepted destination remains the first usable Linux/WSL2 release described b
 
 **TypeScript is the user-selected first complete analysis path.** Use controlled fixtures before the initial real-repository corpus. R1 remains the earlier proposed narrow pilot, not an approved first blocking combination. A pilot does not reduce the release matrix or waive its quality/resource gates.
 
-The inspected starting point is `main` at `0168328e1bd1328bd2ca613e3840656367fca3e7`, with existing uncommitted documentation listed in the preparation evidence. Source and CLI test inspection show help/version and rejection of unavailable analysis only; reserved directories are not working modules. No application tests, analyzers or corpus runs were executed during this preparation.
+The historical preparation inspected `main` at `0168328e1bd1328bd2ca613e3840656367fca3e7`, with the dirty state retained in preparation evidence. Current execution uses clean base `4f16dca764a6037176f5796e50d8e25db523dd92` in `/tmp/anti-slop-as-m001`, as recorded in authorization evidence. Source and CLI test inspection show help/version and rejection of unavailable analysis only; reserved directories are not working modules. No application tests, analyzers or corpus runs were executed during this preparation.
 
 O2 configuration composition, Pi packaging/hooks, later operating systems, Trellis, hosted collection, automatic rewriting and training/deploying a replacement model stay outside v1. Preserve the accepted extensibility boundaries without implementing those future products.
 
 ## Next approval frame: W01
 
-**Decision pending:** approve or revise these three outcomes, boundaries and exit criteria. Only AS-M001 has a detailed contract. Each eventual executable mission concerns the Anti-Slop repository alone. Approval of this frame does not resolve a substantive open product choice or authorize launch, delegation, commits, installation, external transmission or publication.
+**Wave decision pending:** AS-M001 alone has execution authority in its [authorization evidence](../.missions/AS-M001/evidence/authorization-2026-10-13.md). Approve or revise the remaining wave outcomes separately. Only AS-M001 has a detailed contract. Each eventual executable mission concerns the Anti-Slop repository alone. Approval of this frame does not resolve a substantive open product choice or authorize launch, delegation, commits, installation, external transmission or publication.
 
 | Mission | Observable outcome and dependency | Boundary | Exit evidence required |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ O2 configuration composition, Pi packaging/hooks, later operating systems, Trell
 | **AS-M002 — Effective root configuration** | One inspectable effective `.anti-slop.jsonc` configuration resolves and validates under ADR-008. Depends on accepted AS-M001; maps to L02. | O1 root configuration, ordered overrides, offline validation and local schema generation/conformance. Resolve the relevant OPEN-08 choices first. No O2, analyzer/model work, public hosting or dependency installation without the applicable authority. | Focused behavior tests cover overrides, origins, path bases and invalid/ambiguous JSONC; schema/runtime/editor agreement is demonstrated locally. No implicit scope or transmission permission. Unpublished schema status is explicit. |
 | **AS-M003 — Coherent selected sources** | Explicitly selected changes and supporting source are captured with reproducible identities. Depends on accepted AS-M001 and AS-M002; maps to L03. | Controlled local/Git repositories and bounded source acquisition without working-tree mutation. No native adapter, model, storage system or resident implementation. | Public-boundary tests cover index/worktree/untracked distinctions, additions/deletions/renames, invalid bases, exclusions and unstable reads; spans bind to actual bytes. Native overlay acceptance remains a later adapter gate. |
 
-W01 unlocks configuration and source capture, not a successful analysis command. AS-M001 may refine examples within accepted decisions; a new product trade-off still needs a recorded user decision. Do not create AS-M002/AS-M003 contract files or any Task Packet during this preparation.
+W01 unlocks configuration and source capture, not a successful analysis command. AS-M001 may refine examples within accepted decisions; a new product trade-off still needs a recorded user decision. Do not launch AS-M002/AS-M003. AS-M001 packets are created only immediately before authorized dispatch.
 
 ## Later outcomes and dependencies
 
@@ -80,9 +80,9 @@ L01's evaluation work is not postponed to L13: AS-M001 establishes the protocol 
 | C01 | The earlier roadmap detailed distant work; the selected workflow progressively details only the next mission. | Keep all previous text unchanged below as history; use this outcome view and W01 for future elaboration. Historical task lists cannot authorize dispatch. |
 | C02 | The earlier first-assignment prompt and general task-template routing do not supply Mission Contract/state/history semantics. | Keep the prompt/template for history and standalone work; route mission work through AS-M001 and the supplied skill. Create Task Packets only at authorized dispatch. |
 | C03 | The scaffold has a TOML dependency while accepted project configuration is JSONC. This is already explained in the README. | Preserve the scaffold now. AS-M002 reviews the actual dependency change under the existing supply-chain workflow; no competing TOML product contract is introduced. |
-| G01 | W01, AS-M001 execution and any delegation are not approved. | Ask for the concrete frame and subsequent execution authority; current records remain `draft`. No approval is inferred from preparing these files. |
-| G02 | OPEN-01 leaves exact local selectors, Git comparison semantics, operations, compatibility and outcome/exit precedence unresolved. Minimal identity/status obligations also need concrete examples. | AS-M001 resolves the initial path in existing PRD/ADR owners before corresponding implementation. Later transport/serialization details remain with their owning outcomes. |
-| G03 | OPEN-02 leaves adjudication, corpus composition, statistics and recall/abstention decisions open; R1 is only a pilot proposal. | AS-M001 records the protocol and which choices gate tuning or qualification; subsequent rule/evaluation work supplies the corpus and evidence. Do not infer qualification from model confidence or an R1 pilot. |
+| G01 | AS-M001 documentation execution and sequential fresh authors/validation are authorized. W01 as a whole and later missions remain unapproved. | Follow r2 and authorization evidence. No commit, installation, integration or publication is implied. |
+| G02 | The PRD now specifies initial analyze/report operations, exact selectors, direct-base comparison, analysis exits and minimal provenance/status obligations. | The mission state owns independent acceptance. Later CLI/protocol compatibility, report-read failures and detailed transport/serialization remain at their owning gates. No command is implemented. |
+| G03 | The PRD now defines independent labels, lineage partitions, holdout-before-tuning and distinct metrics. OPEN-02 still gates corpus/adjudicator choices, statistics, recall/abstention floors and exact profiles. R1 is only a pilot proposal. | Follow the established protocol and unresolved gates. No corpus is labeled or profile qualified by this documentary result. |
 | G04 | OPEN-08 leaves configuration details, parser and the real public schema URL unresolved. | AS-M002 must settle its local contract and state publication limits; verify the chosen real schema endpoint before public support/release. Do not invent a URL or alter ADR-008. |
 | G05 | OPEN-03–OPEN-06 include provider/execution controls, native views, storage, report encoding and session accounting. | Resolve just before the owning L03–L09 contract or external action needs them; prior probes do not settle production behavior. OPEN-07 and O2 stay future work. |
 
@@ -90,9 +90,9 @@ No conflict between accepted product decisions was found in this preparation. Th
 
 ## Reassessment and records
 
-At each accepted mission boundary, check actual behavior, retained evidence, unresolved gates and downstream dependencies before detailing the next contract. Stop earlier if a contradiction changes scope, constraints, authority, outcome or validation. Keep approved revisions and completed history; changed approved intent requires a new revision and reassessment of affected work. This currently unapproved revision does not freeze speculative future task details.
+At each accepted mission boundary, check actual behavior, retained evidence, unresolved gates and downstream dependencies before detailing the next contract. Stop earlier if a contradiction changes scope, constraints, authority, outcome or validation. Keep approved revisions and completed history; changed approved intent requires a new revision and reassessment of affected work. The unapproved wave does not freeze speculative future task details.
 
-The next Mission Contract and `.missions/AS-M001/` describe workflow preparation, not Anti-Slop's future product dataset. Keep these auditable records separate from ignored `.anti-slop/` application data. The initial state has no packet, attempt, result or checkpoint. Structural checks establish artifact consistency only; they do not establish readiness, independent acceptance or permission to run a mission.
+The active Mission Contract and `.missions/AS-M001/` describe documentation execution and its acceptance evidence, not Anti-Slop's future product dataset. Keep these auditable records separate from ignored `.anti-slop/` application data. The preserved initial state had no packet, attempt, result or checkpoint. Current state and history track authorized execution; no commit checkpoints are permitted. Structural checks establish artifact consistency only; they do not establish readiness, independent acceptance or permission to run a mission.
 
 ## Retained 2026-09-22 plan
 

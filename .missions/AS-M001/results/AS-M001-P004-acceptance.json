@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M001-P004-acceptance",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M001",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M001/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M001-P004",
+    "revision": 1,
+    "path": "../packets/AS-M001-P004.md"
+  },
+  "actor": "codex-coordinator",
+  "implementers": [
+    "/root/p004_author"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted bounded F1 correction after full author report and actual supplementary handoff review. P004-author.md supersedes only P003-author.md:88, correctly names prospective L02.1/O1 configuration contract, shared owner/public behavior, decisive override/path/JSONC/error cases and unresolved OPEN-08 choices. AS-M003 follows accepted configuration; corpus/evaluation and later authority remain separately gated. Original P003 and failed mission-validation-01 are preserved.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/AS-M001-P004-acceptance.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P004-author.md"
+    }
+  ]
+}

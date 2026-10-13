@@ -1,5 +1,7 @@
 # Task: <one observable outcome>
 
+> Standalone task template. For mission-based work, use the current Mission Contract and supplied workflow linked by the [roadmap](../IMPLEMENTATION_ROADMAP.md). This template is not a Mission Contract or a Task Packet; derive packets only just before authorized dispatch. Existing task documents remain historical records.
+
 Use this template for a bounded unit of work another agent can finish and verify. Remove irrelevant fields; do not expand a small task into an entire release. Write the task in English.
 
 ## Intent and authority

@@ -4,11 +4,13 @@ A Rust tool for evidence-based code review, designed for explicit CLI/CI analysi
 
 ## Current status
 
-This repository contains [accepted architecture decisions](docs/decisions/README.md), qualification experiments and the initial Rust scaffold. The executable provides help and version information only. Analysis, resident sessions, configuration loading, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
+This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the initial Rust scaffold. The executable provides help and version information only. Analysis, resident sessions, configuration loading, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
 
 The first usable version targets Linux, including WSL2. macOS and native Windows are later work. This is the selected support scope, not a completed platform qualification.
 
 The initial dependency group is installed in the root Cargo package. Later engine, storage, codec and language dependencies remain in the [bootstrap design](docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md) until the corresponding implementation begins. The existing research probes retain their own manifests and lockfiles; they are not workspace members.
+
+Project configuration is specified as a root `.anti-slop.jsonc` with a versioned `$schema` link and path overrides in [ADR-008](docs/decisions/008-project-configuration-and-schema.md). That decision documents O1's limits and the compatible path toward O2 subproject configurations. The loader and published schema are not available yet; the installed TOML parser belongs to the earlier scaffold and does not define the selected format.
 
 ## Toolchain and dependencies
 
@@ -64,13 +66,15 @@ Future workspace state belongs in an excluded data directory, defaulting to `.an
 
 ## Working with agents
 
-Start an implementation or documentation task with [AGENTS.md](AGENTS.md), this current-status section and the relevant [accepted ADRs](docs/decisions/README.md). Use the [bounded task template](docs/templates/task.md) when handing substantive work to another agent. It separates the requested outcome, authority, acceptance checks and unfinished work without requiring a PRD.
+Start an implementation or documentation task with [AGENTS.md](AGENTS.md), this current-status section and the relevant [accepted ADRs](docs/decisions/README.md). Read the [PRD](docs/PRD.md) for product workflows and release acceptance, observing its status and open specifications. The [bounded task template](docs/templates/task.md) remains available for standalone work outside a mission.
+
+The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00–L15 plan and presents W01 for approval. Only [AS-M001](docs/missions/AS-M001/r1.md) has a detailed Mission Contract; its [state](.missions/AS-M001/state.json) is `draft`. The roadmap links the supplied mission-driven-dev workflow. Mission preparation, execution, delegation and commits require their respective authority; historical prompts and draft records do not authorize launch. Completed behavior remains recorded in the current-status section above.
 
 The [repository skill catalog](.agents/skills/README.md) contains workflows for rule evidence and analyzer qualification. An agent can read these files directly; automatic skill discovery depends on its harness and is not assumed. The [workflow validation notes](docs/agent-workflow-validation.md) state the checks performed and their limits.
 
 ## Decisions and research
 
-The [ADR index](docs/decisions/README.md) is the current source of architectural decisions and unresolved specifications. Accepted decisions do not establish implemented behavior. Historical design documents below retain discussion and proposals; research retains the original measured inputs and limitations.
+The [ADR index](docs/decisions/README.md) is the current source of architectural decisions and links product decisions to their owner in the [PRD](docs/PRD.md). Accepted decisions do not establish implemented behavior. Historical design documents below retain discussion and proposals; research retains the original measured inputs and limitations.
 
 - [Historical design discussion](docs/brainstorming-decisions/2026-09-22-anti-slop-design.md)
 - [Historical architecture proposal](docs/brainstorming-decisions/2026-09-22-anti-slop-architecture.md)

@@ -2,7 +2,7 @@
 
 This directory is the authoritative record of accepted architectural choices. It consolidates the decisions made during the initial design and approved scaffold preparation on 2026-09-22. The [root README](../../README.md#current-status) records what is implemented.
 
-**Accepted is a design status, not an implementation or qualification result.** The Rust scaffold currently exposes help and version only. Each ADR states which details remain open. No PRD is maintained at this stage.
+**Accepted is a design status, not an implementation or qualification result.** The Rust scaffold currently exposes help and version only. Each ADR states which details remain open. The [PRD](../PRD.md) consolidates the confirmed interview decisions, approved product workflows and acceptance criteria, while retaining explicit implementation and qualification gates.
 
 ## Accepted records
 
@@ -15,10 +15,11 @@ This directory is the authoritative record of accepted architectural choices. It
 | [ADR-005: Local evidence store and dataset exports](005-local-evidence-store-and-dataset-exports.md) | SQLite authority, provenance, retention, quota and export integrity. |
 | [ADR-006: Output formats and shared projection](006-output-formats-and-shared-projection.md) | TOON/JSON CLI equivalence, bounded views and JSONL interchange. |
 | [ADR-007: Performance budgets and qualification](007-performance-budgets-and-qualification.md) | B1–B4, model deadlines and reference workloads. |
+| [ADR-008: Project configuration and schema](008-project-configuration-and-schema.md) | JSONC with linked schema; root overrides, O1 limits and compatible O2 evolution. |
 
 ## Decision lineage
 
-The existing D identifiers remain stable. They are historical decision references, not a second specification to maintain. Detailed accepted requirements now live in the linked ADRs.
+The D identifiers remain stable. They are decision references, not a second specification to maintain. Detailed requirements live in the linked ADRs or PRD sections; observe each document's status.
 
 | Earlier decision | Current owner |
 | --- | --- |
@@ -40,6 +41,13 @@ The existing D identifiers remain stable. They are historical decision reference
 | D16 — Storage admission threshold | ADR-005 |
 | D17 — Initial performance repositories | ADR-007 |
 | D18 — Linux first, including WSL2 | ADR-001 |
+| D19 — Explicit scope required for every analysis | [PRD, US-01](../PRD.md#us-01--select-exactly-what-is-analyzed) |
+| D20 — At least one qualified blocking combination in the first release | [PRD, release boundary](../PRD.md#scope-and-release-boundary) |
+| D21 — Initial blocking precision target | [PRD, KPI-01](../PRD.md#success-criteria) |
+| D22 — Automatic eligible judgments after configuration/authorization; explicit mode without model calls | [PRD, inference policy](../PRD.md#inference-policy) |
+| D23 — One root project configuration with path overrides (O1) | ADR-008 |
+| D24 — JSONC with a published, versioned schema link | ADR-008 |
+| D25 — Documented O1 limits and planned, compatible O2 expansion | ADR-008 |
 | Approved bootstrap BP1 | ADR-001; installed state in the root README and Cargo files |
 | Initial requirement: replace Jev and collect training evidence | ADR-004, ADR-005 |
 
@@ -50,11 +58,12 @@ Resolve these when the corresponding work becomes concrete. An open item is not 
 | Item | Must be resolved before |
 | --- | --- |
 | Linux/WSL2 process-cleanup mechanisms and resource measurement | Claiming the selected hosts' resident lifecycle or resource guarantees. Platform scope is settled by D18. |
-| CLI commands, change/base selection, protocol version, methods and compatibility rules | Publishing the first usable CLI/resident contract. Historical signatures and exit codes are proposals. |
+| CLI commands, exact change/base selectors, protocol version, methods and compatibility rules | Publishing the first usable CLI/resident contract. D19 requires explicit scope; historical signatures and exit codes remain proposals. |
+| Configuration fields/resolution, cross-file policy attribution, JSONC parser and published schema/runtime parity | Publishing O1 configuration support. D23–D25 and O2 compatibility obligations are owned by ADR-008; O2 implementation remains later work. |
 | Source acquisition, dependency binding, cache invalidation and native capability gaps | Accepting a production adapter's evidence. The existing managed-view experiment establishes only bounded feasibility. |
 | SQLite schema, journal/transaction strategy, export layout, quota accounting and purge mechanics | Claiming durable recording, self-contained exports or quota enforcement. |
 | TOON codec and supported specification profile | Claiming interoperable TOON output. A candidate library is not a qualified codec. |
-| Adjudicated rule corpus, label protocol and per-scope precision/recall/abstention gates | Enabling blocking or approving a replacement judge. Performance repositories do not provide labels. |
+| Adjudicated rule corpus, label protocol, sample/confidence requirements and per-scope recall/abstention gates | Enabling blocking or approving a replacement judge. D20/D21 set the initial release and precision requirements in the PRD; performance repositories do not provide labels. |
 | Actual replacement model and its training interface | Building a vendor-specific training export. The “Laya” reference is not a resolved model identity. |
 | Future Pi triggers and delivery cadence | Building that package. Repeated-use performance is already a core requirement. |
 

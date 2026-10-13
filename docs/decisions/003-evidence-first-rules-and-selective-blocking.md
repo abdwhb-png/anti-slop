@@ -45,7 +45,7 @@ Keep rule assessment, execution completion and policy action distinct. Required 
 
 Every rule needs positive, legitimate-negative and ambiguous examples across its supported languages. Measure candidate recall separately from judgment/policy precision; otherwise a precise judge can hide a candidate generator that misses most issues.
 
-No numeric quality threshold has been accepted yet. Define the adjudicated corpus, label protocol and per-scope precision/recall/abstention criteria before enabling blocking. Choose thresholds on validation data and evaluate on a frozen independent holdout. [ADR-005](005-local-evidence-store-and-dataset-exports.md) owns provenance and dataset separation.
+The initial blocking precision target and minimum first-release qualification are selected in the [PRD](../PRD.md#success-criteria). Define the adjudicated corpus, label protocol, sample/confidence requirements and per-scope recall/abstention gates before enabling blocking. Choose model/policy thresholds on validation data and evaluate on a frozen independent holdout. [ADR-005](005-local-evidence-store-and-dataset-exports.md) owns provenance and dataset separation.
 
 ## Evidence and Remaining Qualification
 

@@ -6,7 +6,7 @@ Develop Anti-Slop as an evidence-based Rust analyzer with replaceable language a
 
 ## Establish the task and its sources
 
-The repository contains an executable scaffold alongside decisions for a larger product. Confusing these states produces false completion claims. Read [README.md](README.md) for implemented behavior, then the [ADR index](docs/decisions/README.md) and the decisions relevant to the task.
+The repository contains an executable scaffold alongside decisions for a larger product. Confusing these states produces false completion claims. Read [README.md](README.md) for implemented behavior, then the [ADR index](docs/decisions/README.md) and the decisions relevant to the task. For product behavior and release criteria, read the [PRD](docs/PRD.md), observing its current status and open specifications.
 
 - Follow the current request's scope. Preparing documentation, qualification or scaffolding does not authorize implementing the product. Conversely, an earlier documentation-only task does not prohibit a later authorized implementation.
 - Accepted ADRs govern the design; they do not prove implementation or successful qualification. Treat `docs/brainstorming-decisions/` as historical discussion and remaining proposals, and `docs/research/` as evidence limited to its recorded experiments.
@@ -55,3 +55,5 @@ Repository-local skills provide the longer procedures. Read their files directly
 ## Leave a usable handoff
 
 Use the [task template](docs/templates/task.md) for a substantive task that another agent will continue; a small fix does not require a new planning document. Report what changed, the exact checks and their results, checks not run, and remaining uncertainty. Distinguish implemented, tested, committed and activated state. Update the current-status documentation when behavior actually becomes available.
+
+For mission-based work, use the [progressive roadmap](docs/IMPLEMENTATION_ROADMAP.md), its current Mission Contract and `.missions/` state/history instead of the generic task template. Read the supplied mission-driven-dev skill linked by the roadmap for the requested phase; do not infer execution authority from a draft contract, a historical prompt or successful structural validation. Keep PRD/ADR ownership and approved mission history intact. Derive Task Packets only just before authorized dispatch.

@@ -2,6 +2,8 @@
 
 > Historical approved bootstrap scope. [ADR-001](../decisions/001-rust-engine-and-client-owned-sessions.md) now owns the package/module decision; the [root README](../../README.md#current-status) and Cargo files record actual installed state. Deferred package candidates and detailed interfaces below remain proposals, not instructions to install or implement them all.
 
+> The TOML project-configuration proposal below is superseded by [ADR-008](../decisions/008-project-configuration-and-schema.md), which selects JSONC with a linked schema. Historical dependency choices remain recorded here; changing the installed parser belongs to the future configuration implementation.
+
 Date: 2026-09-22
 
 Status: **approved on 2026-09-22 for bootstrap A**, with the user's explicit constraint that application features must not be implemented yet. Bootstrap execution is recorded in the root [README](../../README.md). Groups B/C, bridge installations and substantive application behavior remain deferred.

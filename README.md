@@ -36,16 +36,59 @@ cargo run --frozen -- --version
 
 ## Development checks
 
+After fetching locked dependencies through Socket Firewall, run the same
+repository-wide verification used by CI:
+
 ```sh
 (cd tools/config-conformance && sfw npm ci --ignore-scripts --no-audit --no-fund)
-cargo test --frozen --test cli --test config --test output --test schema
-cargo run --frozen --example config_schema -- --check
-node tools/config-conformance/schema.mjs
-cargo fmt --all -- --check
-cargo clippy --frozen --all-targets -- -D warnings
+sfw cargo fetch --locked
+bash scripts/ci/check.sh
 ```
 
+The command checks formatting, CI policy regressions, changed-file whitespace,
+the workspace build, all workspace test targets and doctests, Clippy, schema
+regeneration and actual editor-service conformance. New Rust workspace members
+and tests are discovered automatically; research probes are separate packages.
+New production ecosystems need their own verification when introduced.
+
+Before deliberately changing or fetching a new dependency graph, run
+`python3 scripts/ci/policy.py dependencies --base <comparison-commit>`.
+This checks added/changed crates.io and public npm lock entries against official
+release metadata for seven-day age, yank status and matching locked integrity.
+Omit `--base` to check the complete current graph. An unavailable comparison
+commit or missing comparison lock also requires the complete candidate graph.
+Unavailable or invalid metadata fails qualification; it never permits downloads.
+
 Use a focused RED → GREEN → REFACTOR cycle for application behavior. Configuration and scaffold changes use proportionate executable validation. Expand test coverage with the implemented public boundary; avoid test copies of production logic and empty success paths.
+
+## Continuous integration
+
+The single `Linux CI` job runs on Ubuntu 24.04 for PRs targeting `main`, including
+drafts, direct pushes to `main`, and manual dispatch. Other branch pushes and
+schedules do not start it. A newer run cancels its superseded PR/branch run.
+Actions use immutable commit pins; Rust 1.96.1, Node 24.19.0 and Socket Firewall
+1.15.4 are pinned. Qualified package archives and Rust compilation outputs are
+cached. Package fetches retain explicit `sfw` wrappers; subsequent Rust checks
+are frozen. The job uses read-only repository, PR and Actions API permissions.
+
+PR checks validate GitHub's test merge tree and retain a small JSON verification
+receipt for 90 days. A push to `main` first checks for a merged PR whose final
+head and successful CI receipt match the exact pushed Git tree. On a match, the
+job links that successful run and skips setup, downloads, builds and tests.
+The post-merge lookup is lightweight; there is no duplicate full verification.
+Missing, expired, malformed, mismatched, failed or unreadable proof requires full
+verification. Direct pushes also run fully; commit messages never determine
+reuse. Manual dispatch always forces a full run. A changed base tree needs new
+PR verification because it represents different combined inputs.
+
+After the first successful Actions run, require `Linux CI` from GitHub Actions
+on `main` with **Require branches to be up to date before merging**. Preserve
+existing unrelated protection rules and leave administrator bypass enabled for
+the approved owner override. That bypass permits direct pushes and can also
+override PR checks; ordinary collaborators must satisfy the required check.
+The workflow alone does not configure branch protection. CI is automated
+repository verification, separate from mission acceptance or production
+analysis qualification.
 
 ## Repository layout
 

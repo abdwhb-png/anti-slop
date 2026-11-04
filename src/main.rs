@@ -1,7 +1,5 @@
 mod cli;
 
-use clap::Parser;
-
 fn main() {
-    cli::Cli::parse();
+    std::process::exit(cli::run(std::env::args_os().collect()));
 }

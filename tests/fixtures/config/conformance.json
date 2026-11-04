@@ -1,0 +1,246 @@
+[
+  {
+    "name": "minimal",
+    "valid": true,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json"
+    }
+  },
+  {
+    "name": "all-policies",
+    "valid": true,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R1": "off",
+        "R2": "advisory",
+        "R3": "block"
+      }
+    }
+  },
+  {
+    "name": "empty-rules-overrides",
+    "valid": true,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {},
+      "overrides": []
+    }
+  },
+  {
+    "name": "ordered-overrides",
+    "valid": true,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R1": "off"
+      },
+      "overrides": [
+        {
+          "include": [
+            "src/**"
+          ],
+          "exclude": [
+            "**/generated/**"
+          ],
+          "rules": {
+            "R1": "block"
+          }
+        },
+        {
+          "include": [
+            "**/*.ts"
+          ],
+          "rules": {
+            "R2": "off"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "unknown-root-field",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "provider": {
+        "token": "controlled-test-value"
+      }
+    }
+  },
+  {
+    "name": "unknown-rule",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R10": "off"
+      }
+    }
+  },
+  {
+    "name": "unknown-policy",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R1": "permit"
+      }
+    }
+  },
+  {
+    "name": "options-unsupported",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R1": {
+          "policy": "off"
+        }
+      }
+    }
+  },
+  {
+    "name": "rules-null",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": null
+    }
+  },
+  {
+    "name": "numeric-policy",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "rules": {
+        "R1": 1
+      }
+    }
+  },
+  {
+    "name": "missing-identity",
+    "valid": false,
+    "document": {
+      "rules": {}
+    }
+  },
+  {
+    "name": "unknown-identity",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json?latest"
+    }
+  },
+  {
+    "name": "overrides-not-array",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": {}
+    }
+  },
+  {
+    "name": "empty-include",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": [],
+          "rules": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "missing-include",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "rules": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "missing-override-rules",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": [
+            "**"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "unknown-override-field",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": [
+            "**"
+          ],
+          "rules": {},
+          "scope": "all"
+        }
+      ]
+    }
+  },
+  {
+    "name": "include-not-array",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": "**",
+          "rules": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "exclude-not-string",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": [
+            "**"
+          ],
+          "exclude": [
+            1
+          ],
+          "rules": {}
+        }
+      ]
+    }
+  },
+  {
+    "name": "override-rule-unknown",
+    "valid": false,
+    "document": {
+      "$schema": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "overrides": [
+        {
+          "include": [
+            "**"
+          ],
+          "rules": {
+            "R0": "off"
+          }
+        }
+      ]
+    }
+  }
+]

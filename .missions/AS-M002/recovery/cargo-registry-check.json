@@ -1,0 +1,213 @@
+{
+  "queriedAt": "2026-11-04T17:34:18.036112+00:00",
+  "existingPackagesPreserved": true,
+  "packages": [
+    {
+      "crate": "block-buffer",
+      "version": "0.12.1",
+      "publishedAt": "2026-06-11T15:40:05.682576Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/block-buffer"
+    },
+    {
+      "crate": "borsh",
+      "version": "1.8.1",
+      "publishedAt": "2026-08-26T20:58:11.161301Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/borsh"
+    },
+    {
+      "crate": "bytes",
+      "version": "1.12.1",
+      "publishedAt": "2026-07-08T10:01:28.616466Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/bytes"
+    },
+    {
+      "crate": "cfg_aliases",
+      "version": "0.2.2",
+      "publishedAt": "2026-07-16T14:57:16.699789Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/cfg_aliases"
+    },
+    {
+      "crate": "cpufeatures",
+      "version": "0.3.1",
+      "publishedAt": "2026-08-26T18:39:59.636708Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/cpufeatures"
+    },
+    {
+      "crate": "crypto-common",
+      "version": "0.2.2",
+      "publishedAt": "2026-05-19T16:01:22.304187Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/crypto-common"
+    },
+    {
+      "crate": "digest",
+      "version": "0.11.3",
+      "publishedAt": "2026-05-03T12:54:48.023505Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/digest"
+    },
+    {
+      "crate": "dyn-clone",
+      "version": "1.0.20",
+      "publishedAt": "2025-07-27T19:29:46.625527Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/dyn-clone"
+    },
+    {
+      "crate": "globset",
+      "version": "0.4.20",
+      "publishedAt": "2026-08-04T13:59:29.810360Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/globset"
+    },
+    {
+      "crate": "hybrid-array",
+      "version": "0.4.15",
+      "publishedAt": "2026-09-08T18:21:39.618460Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/hybrid-array"
+    },
+    {
+      "crate": "jsonc-parser",
+      "version": "0.34.0",
+      "publishedAt": "2026-09-27T17:10:38.897378Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/jsonc-parser"
+    },
+    {
+      "crate": "ref-cast",
+      "version": "1.0.27",
+      "publishedAt": "2026-08-19T04:27:28.040119Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/ref-cast"
+    },
+    {
+      "crate": "ref-cast-impl",
+      "version": "1.0.27",
+      "publishedAt": "2026-08-19T04:27:24.118760Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/ref-cast-impl"
+    },
+    {
+      "crate": "ryu",
+      "version": "1.0.23",
+      "publishedAt": "2026-02-08T20:34:03.456199Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/ryu"
+    },
+    {
+      "crate": "schemars",
+      "version": "1.2.2",
+      "publishedAt": "2026-07-27T14:35:28.246709Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/schemars"
+    },
+    {
+      "crate": "schemars_derive",
+      "version": "1.2.2",
+      "publishedAt": "2026-07-27T14:35:25.339689Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/schemars_derive"
+    },
+    {
+      "crate": "serde_derive_internals",
+      "version": "0.30.0",
+      "publishedAt": "2026-07-25T14:58:00.367023Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/serde_derive_internals"
+    },
+    {
+      "crate": "serde_path_to_error",
+      "version": "0.1.20",
+      "publishedAt": "2025-09-15T15:05:54.817744Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/serde_path_to_error"
+    },
+    {
+      "crate": "serde_toon_format",
+      "version": "0.2.0",
+      "publishedAt": "2026-09-29T07:13:15.375524Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/serde_toon_format"
+    },
+    {
+      "crate": "sha2",
+      "version": "0.11.0",
+      "publishedAt": "2026-03-25T15:05:27.949444Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/sha2"
+    },
+    {
+      "crate": "smallvec",
+      "version": "1.16.2",
+      "publishedAt": "2026-09-25T05:54:44.970885Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/smallvec"
+    },
+    {
+      "crate": "smol_str",
+      "version": "0.3.6",
+      "publishedAt": "2026-03-04T06:27:06.114096Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/smol_str"
+    },
+    {
+      "crate": "typenum",
+      "version": "1.20.1",
+      "publishedAt": "2026-05-29T16:00:41.793255Z",
+      "ageEligible": true,
+      "yanked": false,
+      "checksumMatches": true,
+      "source": "https://crates.io/api/v1/crates/typenum"
+    }
+  ]
+}

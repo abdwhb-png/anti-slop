@@ -16,7 +16,7 @@
 
 # Anti-Slop progressive implementation roadmap
 
-Prepared: 2026-09-23. Updated: 2026-10-13. **AS-M001 documentation execution and sequential fresh-context agents are authorized by the user-approved plan. W01 as a whole and later mission execution remain proposed. No commit or publication is authorized.**
+Prepared: 2026-09-23. Recovery update: 2026-11-04. **AS-M001 is independently accepted. AS-M002 was implemented and independently accepted in its original cloud worktree, then recovered for a draft PR after those uncommitted files disappeared.** The [recovery record](../.missions/AS-M002/recovery/README.md) records fresh checks and missing audit evidence. The user authorized creating this PR. AS-M003 remains unstarted; W01 as a whole remains unapproved.
 
 This is the existing roadmap's first workflow revision. It retains the complete 2026-09-22 plan [below](#retained-2026-09-22-plan), unchanged, as historical planning context. The active view above that history owns current sequencing. Historical subtask prompts are not current dispatch instructions. No PRD, ADR, research record or roadmap file has been replaced or moved.
 
@@ -28,7 +28,7 @@ This is the existing roadmap's first workflow revision. It retains the complete 
 | Accepted architecture and its rationale | [Existing ADRs](decisions/README.md) |
 | Implemented capabilities | [README current status](../README.md#current-status), checked against source |
 | Destination, dependencies and the next approval frame | This roadmap |
-| One bounded outcome and its validation/authority | [AS-M001 revision 2](missions/AS-M001/r2.md), currently the only detailed Mission Contract |
+| One bounded outcome and its validation/authority | [AS-M001 revision 2](missions/AS-M001/r2.md); [recovered AS-M002 contract](../.missions/AS-M002/recovery/contract-r4.txt), retained as historical evidence |
 | Starting evidence and resumable mission state | [Preparation evidence](../.missions/AS-M001/evidence/preparation-2026-09-23.md), [state](../.missions/AS-M001/state.json) and append-only [history](../.missions/AS-M001/history.jsonl) |
 
 Use the repository-installed [mission-driven-dev skill](../.agents/skills/mission-driven-dev/SKILL.md) for phase instructions and artifact formats. Historical preparation used a sibling checkout; current execution uses this installed copy. Do not substitute the retained generic prompt if it is unavailable. The [standalone task template](templates/task.md) remains available for work outside a mission; Task Packets are derived from an approved contract just before authorized dispatch.
@@ -39,13 +39,13 @@ The accepted destination remains the first usable Linux/WSL2 release described b
 
 **TypeScript is the user-selected first complete analysis path.** Use controlled fixtures before the initial real-repository corpus. R1 remains the earlier proposed narrow pilot, not an approved first blocking combination. A pilot does not reduce the release matrix or waive its quality/resource gates.
 
-The historical preparation inspected `main` at `0168328e1bd1328bd2ca613e3840656367fca3e7`, with the dirty state retained in preparation evidence. Current execution uses clean base `4f16dca764a6037176f5796e50d8e25db523dd92` in `/tmp/anti-slop-as-m001`, as recorded in authorization evidence. Source and CLI test inspection show help/version and rejection of unavailable analysis only; reserved directories are not working modules. No application tests, analyzers or corpus runs were executed during this preparation.
+The historical preparation inspected `main` at `0168328e1bd1328bd2ca613e3840656367fca3e7`, with the dirty state retained in preparation evidence. Current execution uses clean base `4f16dca764a6037176f5796e50d8e25db523dd92` in `/tmp/anti-slop-as-m001`, as recorded in authorization evidence. That historical inspection showed help/version and rejection of unavailable analysis only. The recovered AS-M002 branch adds local configuration inspection as documented in README; other reserved directories remain unavailable. No application tests, analyzers or corpus runs were executed during this preparation.
 
 O2 configuration composition, Pi packaging/hooks, later operating systems, Trellis, hosted collection, automatic rewriting and training/deploying a replacement model stay outside v1. Preserve the accepted extensibility boundaries without implementing those future products.
 
 ## Next approval frame: W01
 
-**Wave decision pending:** AS-M001 alone has execution authority in its [authorization evidence](../.missions/AS-M001/evidence/authorization-2026-10-13.md). Approve or revise the remaining wave outcomes separately. Only AS-M001 has a detailed contract. Each eventual executable mission concerns the Anti-Slop repository alone. Approval of this frame does not resolve a substantive open product choice or authorize launch, delegation, commits, installation, external transmission or publication.
+**Wave decision pending:** AS-M001 and the original AS-M002 execution have separate recorded authority. AS-M002 recovery does not authorize AS-M003. Approve or revise the remaining wave outcomes separately. Each eventual executable mission concerns the Anti-Slop repository alone. Approval of this frame does not resolve a substantive open product choice or authorize launch, delegation, commits, installation, external transmission or publication.
 
 | Mission | Observable outcome and dependency | Boundary | Exit evidence required |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ O2 configuration composition, Pi packaging/hooks, later operating systems, Trell
 | **AS-M002 — Effective root configuration** | One inspectable effective `.anti-slop.jsonc` configuration resolves and validates under ADR-008. Depends on accepted AS-M001; maps to L02. | O1 root configuration, ordered overrides, offline validation and local schema generation/conformance. Resolve the relevant OPEN-08 choices first. No O2, analyzer/model work, public hosting or dependency installation without the applicable authority. | Focused behavior tests cover overrides, origins, path bases and invalid/ambiguous JSONC; schema/runtime/editor agreement is demonstrated locally. No implicit scope or transmission permission. Unpublished schema status is explicit. |
 | **AS-M003 — Coherent selected sources** | Explicitly selected changes and supporting source are captured with reproducible identities. Depends on accepted AS-M001 and AS-M002; maps to L03. | Controlled local/Git repositories and bounded source acquisition without working-tree mutation. No native adapter, model, storage system or resident implementation. | Public-boundary tests cover index/worktree/untracked distinctions, additions/deletions/renames, invalid bases, exclusions and unstable reads; spans bind to actual bytes. Native overlay acceptance remains a later adapter gate. |
 
-W01 unlocks configuration and source capture, not a successful analysis command. AS-M001 may refine examples within accepted decisions; a new product trade-off still needs a recorded user decision. Do not launch AS-M002/AS-M003. AS-M001 packets are created only immediately before authorized dispatch.
+W01 unlocks configuration and source capture, not a successful analysis command. AS-M001 may refine examples within accepted decisions; a new product trade-off still needs a recorded user decision. AS-M002 is preserved in the recovery PR; do not launch AS-M003 from this planning frame. AS-M001 packets are created only immediately before authorized dispatch.
 
 ## Later outcomes and dependencies
 

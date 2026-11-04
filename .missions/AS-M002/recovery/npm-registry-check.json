@@ -1,0 +1,61 @@
+{
+  "queriedAt": "2026-11-04T17:34:18.036112+00:00",
+  "packages": [
+    {
+      "package": "@toon-format/toon",
+      "version": "4.1.1",
+      "publishedAt": "2026-08-05T11:58:04.389Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/@toon-format%2Ftoon"
+    },
+    {
+      "package": "@vscode/l10n",
+      "version": "0.0.18",
+      "publishedAt": "2023-12-10T22:05:53.371Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/@vscode%2Fl10n"
+    },
+    {
+      "package": "jsonc-parser",
+      "version": "3.3.1",
+      "publishedAt": "2024-06-24T21:12:45.445Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/jsonc-parser"
+    },
+    {
+      "package": "vscode-json-languageservice",
+      "version": "5.7.2",
+      "publishedAt": "2026-02-23T21:19:20.541Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/vscode-json-languageservice"
+    },
+    {
+      "package": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "publishedAt": "2026-09-24T18:49:15.476Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/vscode-languageserver-textdocument"
+    },
+    {
+      "package": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "publishedAt": "2026-09-25T07:03:31.266Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/vscode-languageserver-types"
+    },
+    {
+      "package": "vscode-uri",
+      "version": "3.2.0",
+      "publishedAt": "2026-08-24T22:41:22.545Z",
+      "ageEligible": true,
+      "integrityMatches": true,
+      "source": "https://registry.npmjs.org/vscode-uri"
+    }
+  ]
+}

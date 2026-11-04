@@ -1,0 +1,28 @@
+{
+  "exec-5abab2b7-72f3-4225-8d06-a3491fee710c": {
+    "files": [
+      "src/config/parse.rs",
+      "src/config/pattern.rs"
+    ],
+    "exact": true
+  },
+  "exec-b7fbe209-b4a9-4a14-ba0e-74e631f98266": {
+    "files": [
+      "tests/cli.rs",
+      "tests/output.rs",
+      "tests/schema.rs"
+    ],
+    "exact": true
+  },
+  "exec-af0efc79-265e-4999-9a50-0cba6a3fbb5c": {
+    "files": [
+      "src/config/mod.rs",
+      "src/cli.rs",
+      "src/output.rs",
+      "src/config/schema.rs",
+      "examples/config_schema.rs"
+    ],
+    "firstFileStartsAtLine": 390,
+    "exact": true
+  }
+}

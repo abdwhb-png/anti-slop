@@ -1,0 +1,185 @@
+---
+{
+  "schemaVersion": 1,
+  "kind": "mission",
+  "id": "AS-M002",
+  "revision": 4,
+  "repository": "../../..",
+  "refs": [
+    {
+      "kind": "document",
+      "path": "../../PRD.md"
+    },
+    {
+      "kind": "document",
+      "path": "../../decisions/008-project-configuration-and-schema.md"
+    },
+    {
+      "kind": "document",
+      "path": "../../IMPLEMENTATION_ROADMAP.md"
+    },
+    {
+      "kind": "state",
+      "id": "AS-M001",
+      "revision": 15,
+      "path": "../../../.missions/AS-M001/state.json"
+    },
+    {
+      "kind": "result",
+      "id": "AS-M001-validation-02",
+      "revision": 1,
+      "path": "../../../.missions/AS-M001/results/AS-M001-validation-02.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.missions/AS-M002/evidence/preparation-2026-10-14.md"
+    },
+    {
+      "kind": "mission",
+      "id": "AS-M002",
+      "revision": 1,
+      "path": "r1.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.missions/AS-M002/evidence/decisions-01.md"
+    },
+    {
+      "kind": "mission",
+      "id": "AS-M002",
+      "revision": 2,
+      "path": "r2.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.missions/AS-M002/evidence/decisions-02.md"
+    },
+    {
+      "kind": "mission",
+      "id": "AS-M002",
+      "revision": 3,
+      "path": "r3.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.missions/AS-M002/evidence/decisions-03.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.missions/AS-M002/evidence/format-and-schema-research-2026-10-14.md"
+    }
+  ]
+}
+---
+
+# AS-M002: Effective root configuration
+
+Prepared contract revision 4, 2026-10-14. The user selected the resolver/schema outcome, documented absent-root defaults, advisory defaults, explicit include/exclude globs, per-path settings with finding policy deferred, TOON and JSON inspection now, and draft 2020-12 with future GitHub release assets. Revisions 1–3 are retained. The mission definition below is ready for execution review; execution/mode and associated authority remain unselected. No packet has been launched.
+
+## Outcome
+
+A user can select a workspace/configuration and relevant path, then inspect validated effective settings from `.anti-slop.jsonc` or documented built-in defaults when the root file is absent. Each value has an explicit origin; invalid inputs produce actionable located errors. TOON-default and explicit JSON inspection encode one effective view. The shared Rust resolver and locally generated JSON Schema agree on the supported contract. This is the first production configuration slice under L02, not an analysis command or published configuration release.
+
+## Starting Evidence
+
+E01 — Preparation began in `/workspace/anti-slop` at HEAD `cdc3acafd21ce25f629ffa647e11584b0dab32b8`. A later inspection observed `96a2521d3bb024361f31fdc788e957f7c63c49bb` (skill update), with the pre-existing skill contents preserved. The [preparation evidence](../../../.missions/AS-M002/evidence/preparation-2026-10-14.md) records both observations and checks; no execution base is selected by this draft.
+
+E02 — AS-M001 state revision 15 is completed with an accepted independent result. Its accepted PRD, mission contract, roadmap and README hashes matched current files before this preparation. The [corrected handoff](../../../.missions/AS-M001/evidence/P004-author.md) identifies O1 configuration as the next assignment; completed history is immutable.
+
+E03 — `src/cli.rs`, `src/lib.rs` and `tests/cli.rs` still supply only help/version and rejection of unavailable analysis. Configuration parsing, resolution, inspection and schema generation do not exist. Root Cargo versions and toolchain pins remain authoritative; the installed TOML parser is not a JSONC implementation.
+
+## Decisions and Constraints
+
+Follow [AGENTS.md](../../../AGENTS.md), [PRD Project Configuration and OPEN-08](../../PRD.md#project-configuration), [ADR-008](../../decisions/008-project-configuration-and-schema.md), [ADR-001](../../decisions/001-rust-engine-and-client-owned-sessions.md), and the PRD's existing scope, qualification and transmission obligations. None is superseded.
+
+Already accepted: one root file with an explicit-path alternative; no nested discovery or `extends`; patterns relative to their declaring configuration; root rules followed by matching overrides in declaration order; whole-rule replacement with unrelated entries preserved; comments/trailing commas accepted; duplicate keys, unknown fields/rules, invalid values and unsupported contracts rejected. Whole-analysis controls stay outside rule overrides. Configuration grants neither analysis scope, blocking qualification nor transmission authorization.
+
+The [PRD configuration section](../../PRD.md#project-configuration) owns the user-selected default behavior; [decision evidence](../../../.missions/AS-M002/evidence/decisions-01.md) attributes the choices. A missing root file uses documented defaults, with built-in origins rather than a claim that file bytes were read. An unspecified rule is advisory, never implicitly blocking. Absence is distinct from an existing invalid or unreadable file; the latter must still fail. Neither default bypasses explicit analysis scope, capabilities, recording requirements or trusted transmission authorization.
+
+D03 selects explicit include/exclude globs and D05 selects per-path views with finding policy deferred, as attributed in [override decision evidence](../../../.missions/AS-M002/evidence/decisions-02.md). The [latest choices](../../../.missions/AS-M002/evidence/decisions-03.md) select the minimal inspection/field surface with TOON plus JSON now, and draft 2020-12 with GitHub release assets. Routine details below compile those choices into a concrete contract; they do not grant execution authority or select dependencies. Do not reopen selected behavior while qualifying technology.
+
+| Decision | Selected behavior and qualification boundary |
+| --- | --- |
+| D01 — Selection and inspection | `config explain --workspace <dir> --path <path> [--config <file>] [--format toon|json]`. Only the selected root file or explicit file is loaded, with no parent/nested search. Absent root uses documented defaults; explicit missing paths and existing invalid/unreadable files fail. Both arguments are explicit. Freeze and test the path, identity, error and format behavior below. |
+| D02 — Supported settings | `$schema`, optional `rules`, optional ordered `overrides`; identifiers R1–R9 and scalar policies `off`, `advisory`, `block`. Unspecified rules are advisory. Overrides contain nonempty `include`, optional `exclude`, and `rules`. Unknown/options/provider/storage/resource-control fields fail in this slice; their later owners must extend the contract explicitly. Recognizing a rule identifier or requested policy does not implement or qualify that rule. |
+| D03 — Matching and bounds | An override applies when any include matches and no exclude matches; all matching overrides still apply in declaration order. Excludes affect only that override, never source/context access or later overrides. Use the explicit case-sensitive `/` grammar, path semantics and limits below; qualify the actual matcher against these independently specified cases before integrating it. No ordered gitignore re-inclusion. |
+| D04 — Schema identity and compatibility | Draft 2020-12 generated from the authoritative Rust definition; present files require `$schema`. Future versioned schema assets belong to `abdwhb-png/anti-slop` GitHub releases. Reserve the exact initial URL/contract mapping below, reject unknown identities/revisions offline, and use local editor association for qualification. No asset publication is authorized here; a reserved identity is not a working endpoint. Immutable publication and availability remain release gates. |
+| D05 — Multi-file policy boundary | **Selected:** expose each path's settings and origins; defer combined finding policy to rule implementation. AS-M002 does not select most-permissive, most-restrictive, primary-file or another aggregate policy. Keep the rule-specific attribution gate explicit before cross-file blocking. Per-path disagreement is observable configuration data, not a qualified policy result. |
+
+### Concrete local contract
+
+P01 — Read-only inspection: `anti-slop config explain --workspace <dir> --path <workspace-relative-path> [--config <file>] [--format toon|json]`. TOON is the default, including redirected stdout; format selection is explicit and independent of terminal detection. Workspace and path are required. An explicitly requested missing file is an error; root absence without `--config` uses defaults. Unknown arguments, invalid configuration, invalid paths and unsupported formats fail before other work. Preserve the existing top-level help/version/no-analysis behavior.
+
+P02 — Initial field shape: `$schema`, optional `rules`, optional ordered `overrides`. Rule identifiers are R1–R9; values are the scalar strings `off`, `advisory`, `block`. Override fields are `include`, optional `exclude`, and `rules`; include is a nonempty array, omitted excludes mean no exclusions. Rule options and provider/storage/resource-control fields are not supported in this slice and fail explicitly; their owning missions add them under the compatibility gate. These settings identify requested policy, not implemented rules or qualified capabilities.
+
+P03 — One configuration inspection projection is encoded as TOON or JSON with identical settings, identities, origins and errors. Include the selected workspace/path, configuration source or built-in origin, supported contract/schema identity, ordered matching-override identities and all nine effective rule policies with winning origins. For built-in defaults there are no captured configuration-file bytes or applied overrides. Exits: 0 for the returned configuration/default view, 2 for invalid arguments/configuration/identity, 3 for missing explicitly requested files, unreadable inputs or required operational failure. Structured inspection output/errors go to stdout in the selected format; debug/progress diagnostics belong on stderr. Unknown/invalid format selection uses the default TOON error envelope with exit 2. Do not echo rejected credential values or raw input in diagnostics. This view is not an analysis report, policy verdict or durable record.
+
+P04 — Qualify the actual parser, matcher, schema generator and encoder against the technical contract below before dependent implementation relies on them. Numeric bounds and grammar are executable expectations, not claims of existing implementation. Do not silently change the dialect, limits, path bases or compatibility mapping to accommodate a library. Runtime/library ownership, not the CLI adapter, owns configuration semantics.
+
+### Technical qualification contract
+
+T01 — Paths: the workspace must be an existing directory; capture its absolute resolved identity once. `--path` is a nonempty relative path normalized lexically inside that workspace; upward escapes and absolute paths fail. It need not exist, so configuration can be inspected for a future/deleted path. This operation does not read the target's source or follow its symlinks. Relative `--config` is resolved against the selected workspace, independently of cwd; explicitly supplied absolute configuration files are permitted. Resolve the actual configuration file identity before loading, and base patterns on its resolved declaring directory, including a selected symlink target. Do not discover other files. Dangling configuration symlinks and unreadable files are errors, not absent-root defaults. A path outside the declaring directory can be represented by a lexical relative path; literal `..` in a pattern is permitted for an explicitly external configuration, but cannot expand the inspected workspace or access source.
+
+T02 — Glob grammar: case-sensitive UTF-8 paths with `/` as separator. `*` matches within one segment, `?` one Unicode scalar within one segment, and a complete `**` segment matches zero or more path segments, including a final filename. `**/*.ts` includes root-level `.ts` files; `src/**` includes files directly or transitively under `src`. Support literal characters, classes such as `[abc]`, inclusive ranges such as `[a-z]`, class-local negation such as `[!abc]`, and non-nested brace alternatives such as `{ts,tsx}`. Dot-prefixed names are ordinary names. Backslash is a literal character, not a separator/escape convention. Reject leading `!` re-inclusion syntax, malformed classes/alternatives and unsupported `**` placements. Includes are ORed and excludes are ORed, with any exclusion defeating that override only. Compile patterns without walking the filesystem, and demonstrate root-level/nested, dotfile, case, Unicode, overlapping and excluded-then-later-override cases against the qualified matcher.
+
+T03 — Initial bounded inputs: at most 1 MiB of UTF-8 configuration bytes, JSON nesting depth 64, 256 override entries, 1,024 total include/exclude patterns, and 4,096 UTF-8 bytes per pattern/inspection path. Enforce limits before unbounded allocation/recursion, including malformed input; test each actual boundary with independently constructed inputs. Duplicate decoded keys, including escaped-equivalent spellings, are rejected at every object depth. Diagnostics identify the known file and one-based line/column where meaningful, without exposing rejected values. Measure parser/matcher behavior at these boundaries; no whole-analysis or native performance claim follows. A change to this documented contract needs a recorded revision, not a silent larger limit or fallback.
+
+T04 — Schema: initial contract identity `config-v1.0.0`; local generated artifact `schemas/anti-slop.schema.json`. Its JSON Schema dialect is draft 2020-12. Reserve the future asset identity `https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json` and map only that exact configuration `$schema` to the supported local contract. Missing/unknown/revision-altered/query/fragment aliases in an existing file are invalid, not fetched. An absent root uses the same built-in contract identity without pretending a file/$schema value was read. The generated schema's meta-schema `$schema` describes draft 2020-12; its `$id` and the project file's `$schema` identify the Anti-Slop contract. Keep these roles distinct. The reserved asset URL has not been published or availability-tested; local qualification explicitly associates the generated artifact in the editor. Public examples/support require later actual immutable publication and a successful fetch. No release, tag, setting or asset is created here.
+
+T05 — Output: qualify one explicitly pinned TOON specification/profile before shipping the inspection encoder, starting from the observed official v4.4 specification and its normative encoder checklist. Freeze the exact source revision/fixture provenance and the supported JSON-domain behavior; package versions remain to qualify through the dependency workflow. Use deterministic field order and stable rule/override ordering. Cover nested origin objects, empty arrays, null/known identities, Unicode, punctuation, quotes, backslashes, multiline/control characters and numeric locations. The required claim is interoperable inspection output under the declared profile; success on these payloads alone cannot establish a universal encoder or completed L05 report codec. Do not replace TOON with TOON-like handwritten text to avoid codec qualification.
+
+Parser, matcher and schema-generation technology may be selected during authorized implementation after bounded qualification against these decisions. Any required dependency change must follow the existing exact-version, release-age and Socket Firewall controls. A blocked download is reported without an alternative unreviewed download path.
+
+## Scope
+
+S01 — Finalize the initial O1 contract in the existing requirement owners and this mission; keep later provider, storage, codec and resident details at their assigned gates. Do not duplicate the PRD or replace ADR-008.
+
+S02 — Implement JSONC parsing, validation, root/explicit-path/default loading, deterministic ordered rule overrides and effective-value origins in one shared Rust configuration owner. Add the selected thin read-only CLI inspection boundary. Other entrypoints reuse this owner when they exist.
+
+S03 — Generate a local schema from that configuration definition, retain positive/negative conformance fixtures, and demonstrate completion, descriptions and invalid-setting diagnostics through an actual local editor workflow. Keep the unpublished status explicit.
+
+S04 — Retain immutable resolved inputs/provenance sufficient for a future run to identify its configuration; demonstrate that resolving changed configuration cannot mutate an earlier returned value. For paths with different settings, return their individual values/origins without calculating a finding policy. Do not implement run storage, resident invalidation or a generic cache framework.
+
+S05 — Implement the bounded configuration view through the shared `output` owner, with TOON-default and explicit JSON encoding and independent interoperability evidence. Reuse this owner in later output work; do not duplicate configuration semantics in either encoder. This does not deliver analysis/report projection, retained-report reads or the full report codec acceptance.
+
+Excluded: source capture/Git selectors (AS-M003), native analyzers, rules or findings, judges/model calls, real credential/provider setup, data transmission, storage/exports, analysis/report projection, resident processes, O2, `extends`, schema hosting, public distribution and corpus qualification. No background service is required. Dependency changes, delegation, commits and publication have no authority from this preparation request.
+
+## Validation Contract
+
+| Case | Required executable evidence and falsifier |
+| --- | --- |
+| V01 — JSONC and errors | Valid comments and trailing commas load through the real configuration owner. Malformed JSONC, duplicate keys (including nested/escaped-equivalent keys), unknown fields/rules, invalid settings and unsupported contracts fail with useful file/location diagnostics. No silent last-key-wins or partial successful configuration. |
+| V02 — Whole-rule replacement | Documented advisory defaults apply first with built-in origins; root settings replace assigned rules. For two matching overrides that assign the same rule, the later complete value wins and an unrelated rule remains. Unmatched paths retain root/default settings. Origins identify the actual winning assignment. Under the scalar-only contract, option objects fail as unsupported; do not manufacture option-merging tests for options the contract does not support. Any later option support must retain ADR-008 whole-value replacement. |
+| V03 — Paths and selection | An absent root file produces the same documented advisory defaults from any cwd, identifies the absence and built-in contract/default origins, and creates no file. An existing malformed or unreadable file cannot fall back to defaults. Explicit configuration cases obey P01 and the technical path contract below. Cover out-of-root paths, symlinks and malformed patterns under D03. Resolving the same selected inputs from another cwd yields identical values/origins. Nested files and `extends` cannot alter O1 behavior. |
+| V04 — Limits and immutability | Chosen file/depth/pattern bounds fail explicitly. Earlier resolved settings/identity remain unchanged after file edits and a later load; origins describe the actual captured input. A byte hash is not claimed to recover missing contents. No resident lifecycle claim. |
+| V05 — Control separation | Missing analysis scope still fails; configuration cannot enable analysis or infer scope. Requested blocking cannot claim qualification. Unsupported credential/authorization fields fail without leaking their supplied values in diagnostics. An override exclude does not remove analysis evidence/context. Two paths with different settings preserve both effective views/origins without selecting a combined finding policy. No read-only inspection triggers analyzer/model work, creates a store or changes configuration. |
+| V06 — Schema conformance | The generated schema and runtime accept/reject the same supported structural/value cases. Parser-only checks such as duplicate keys and runtime-only path checks are explicitly distinguished, with no false parity claim. Regeneration is deterministic and a deliberate contract/schema mismatch is detected. |
+| V07 — Offline and editor behavior | Runtime loads without fetching `$schema` or remote references. Record actual editor/tool identity, local schema association, completion/descriptions and invalid-value observations. If no suitable editor is available, record the missing check and keep acceptance pending rather than inferring UI behavior from schema structure. |
+| V08 — Real use | From a temporary controlled workspace, use the actual selected inspection entrypoint for matching/unmatched paths, overlapping overrides, explicit configuration, another cwd and an invalid file. Effective values/origins match independently specified fixture expectations and the operation makes no writes. |
+| V09 — Regression and records | Preserve help/version and unavailable-analysis rejection. Run the focused production configuration tests, CLI target, build, formatting and Clippy as applicable below; validate state/artifacts, diff scope and links. Retain all attempted results and actual command/revision evidence. |
+
+V10 — Encode the same actual default/matching/overlapping/error inspection views in TOON and JSON. Compare to independently specified expected settings, origins and identities; decode emitted TOON with an independent conforming implementation or reference fixtures pinned to the declared profile. A round trip through the same codec is insufficient. Encoding choice cannot change defaults, rule order, matching overrides, error class or exit. No terminal detection, progress text, fabricated path/file identity or durable-success acknowledgement in stdout.
+
+Require RED → GREEN through the real owning public boundary for new behavior. Record the intended failing assertion, then the passing result; tests must not copy the resolver. Schema/tooling may use a proportionate executable before/after check with the reason recorded. Future test target names are selected after inspecting actual implemented targets, not assumed to exist now.
+
+Final Rust checks from the repository root: `cargo build --frozen`, `cargo test --frozen --test cli`, `cargo fmt --all -- --check`, `cargo clippy --frozen --all-targets -- -D warnings`, plus the implemented focused configuration/conformance target. If an authorized dependency change is needed, first verify versions/graph and run `sfw cargo fetch --locked`; retain the paired manifest/lockfile change. Always run the installed mission validator on current state before implementation/progression and after record changes. Successful structural checks do not establish semantic acceptance.
+
+## Execution Boundaries
+
+Current authority is mission preparation only. Keep state `draft`, `executionMode: null`, no packets/attempts/checkpoints, and no claimed independent result. Record the actual user choices rather than inferring them from this recommendation or the previous mission's agents.
+
+Before ready: review this exact contract and obtain mission execution, required dependency and independent review authority; select direct or coordinated mode under the installed skill. D01–D05 product choices are selected; technical qualification remains bounded work inside the mission, before dependent code relies on it. Recommend **direct** because parsing, resolution, schema and provenance share one tightly coupled contract. **Coordinated** execution can provide fresh authors for separable outcomes, with sequential ownership. Both require independent packet acceptance and a distinct fresh-context final validator. Delegation tools exist; no reviewer/worker delegation is authorized yet. Do not launch either mode from a draft.
+
+Observable progress within the contract: first qualify the required technologies against exact examples; then produce the real inspectable validated configuration with equivalent TOON/JSON; then demonstrate local schema/editor conformance against the same owner. Create only the next packet immediately before authorized implementation or dispatch, preserving these dependencies. Do not split parser/resolver/schema invariants into incompatible partial interfaces or materialize a future packet plan during preparation.
+
+Use one recorded mission worktree and base revision under the execution skill. Preserve unrelated dirty skill work; do not copy it into a new worktree, commit, stash, reset or clean it implicitly. Keep mission records and their local references available. Routine implementation details remain within selected semantics; changed scope, defaults, privacy, path policy, unsupported-contract behavior, resource gates or public compatibility require a recorded decision. Native/model/storage work cannot become an incidental extension.
+
+## Completion
+
+A01 — The actual shared resolver and inspection boundary satisfy V01–V05/V08/V10, including selected defaults, ordered include/exclude overrides, effective origins and equivalent TOON/JSON. D05 attribution remains explicitly deferred with its downstream blocking gate. README describes only implemented local capabilities and limits.
+
+A02 — Local generated schema, runtime conformance and actual editor evidence satisfy V06–V07. Public URL/support remains explicitly unpublished until the separate hosting/release gate is met. Local success does not satisfy ADR-008's published-schema requirement.
+
+A03 — Required checks and V09 pass; all launched attempts are reconciled; an authorized fresh independent validator accepts the complete active contract, with no active work/interruption before closure. No self-acceptance or invented checkpoints.
+
+This unlocks detailed AS-M003 preparation: coherent explicitly selected sources can consume the resolved configuration. It does not authorize launching AS-M003, qualify blocking, provide a successful analysis command or reduce the release scope.

@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-11-04T17:35:34.889188+00:00",
+  "checks": [
+    {
+      "command": [
+        "cargo",
+        "build",
+        "--frozen"
+      ],
+      "exitCode": 0,
+      "output": "check-01.txt"
+    },
+    {
+      "command": [
+        "cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "cli",
+        "--test",
+        "config",
+        "--test",
+        "output",
+        "--test",
+        "schema"
+      ],
+      "exitCode": 0,
+      "output": "check-02.txt"
+    },
+    {
+      "command": [
+        "cargo",
+        "run",
+        "--frozen",
+        "--example",
+        "config_schema",
+        "--",
+        "--check"
+      ],
+      "exitCode": 0,
+      "output": "check-03.txt"
+    },
+    {
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "exitCode": 0,
+      "output": "check-04.txt"
+    },
+    {
+      "command": [
+        "cargo",
+        "clippy",
+        "--frozen",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exitCode": 0,
+      "output": "check-05.txt"
+    },
+    {
+      "command": [
+        "node",
+        "tools/config-conformance/schema.mjs"
+      ],
+      "exitCode": 0,
+      "output": "check-06.txt"
+    }
+  ]
+}

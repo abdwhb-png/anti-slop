@@ -1,0 +1,169 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+      "description": "Exact supported contract identity. This reserved release asset is unpublished; validation is offline."
+    },
+    "rules": {
+      "type": "object",
+      "properties": {
+        "R1": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R1. It does not establish rule capabilities or qualification."
+        },
+        "R2": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R2. It does not establish rule capabilities or qualification."
+        },
+        "R3": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R3. It does not establish rule capabilities or qualification."
+        },
+        "R4": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R4. It does not establish rule capabilities or qualification."
+        },
+        "R5": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R5. It does not establish rule capabilities or qualification."
+        },
+        "R6": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R6. It does not establish rule capabilities or qualification."
+        },
+        "R7": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R7. It does not establish rule capabilities or qualification."
+        },
+        "R8": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R8. It does not establish rule capabilities or qualification."
+        },
+        "R9": {
+          "$ref": "#/$defs/Policy",
+          "description": "Requested policy for R9. It does not establish rule capabilities or qualification."
+        }
+      },
+      "additionalProperties": false,
+      "description": "Root requested policies. Unspecified rules use built-in advisory defaults.",
+      "default": {}
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Override"
+      },
+      "description": "Matching overrides apply in declaration order, replacing assigned whole policies.",
+      "maxItems": 256,
+      "default": []
+    }
+  },
+  "required": [
+    "$schema"
+  ],
+  "title": "Anti-Slop local configuration",
+  "description": "Local configuration contract. It grants neither analysis scope nor transmission authorization.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "Policy": {
+      "oneOf": [
+        {
+          "type": "string",
+          "const": "off",
+          "description": "Request no evaluation of this rule."
+        },
+        {
+          "type": "string",
+          "const": "advisory",
+          "description": "Request evaluation without blocking; the default for unspecified root rules."
+        },
+        {
+          "type": "string",
+          "const": "block",
+          "description": "Request blocking, subject to separate scope and qualification requirements."
+        }
+      ],
+      "description": "Requested policy; `block` does not establish qualification."
+    },
+    "Override": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "include": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "description": "Any include must match. Case-sensitive globs relative to the real declaring file; grammar and UTF-8 byte limits are checked at runtime.",
+          "minItems": 1,
+          "maxItems": 1024
+        },
+        "exclude": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "description": "Any exclude prevents only this override. All include/exclude patterns combined are limited to 1,024 at runtime.",
+          "maxItems": 1024,
+          "default": []
+        },
+        "rules": {
+          "type": "object",
+          "properties": {
+            "R1": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R1. It does not establish rule capabilities or qualification."
+            },
+            "R2": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R2. It does not establish rule capabilities or qualification."
+            },
+            "R3": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R3. It does not establish rule capabilities or qualification."
+            },
+            "R4": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R4. It does not establish rule capabilities or qualification."
+            },
+            "R5": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R5. It does not establish rule capabilities or qualification."
+            },
+            "R6": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R6. It does not establish rule capabilities or qualification."
+            },
+            "R7": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R7. It does not establish rule capabilities or qualification."
+            },
+            "R8": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R8. It does not establish rule capabilities or qualification."
+            },
+            "R9": {
+              "$ref": "#/$defs/Policy",
+              "description": "Requested policy for R9. It does not establish rule capabilities or qualification."
+            }
+          },
+          "additionalProperties": false,
+          "description": "Replace assigned policies; omitted rules preserve earlier root/override values."
+        }
+      },
+      "required": [
+        "include",
+        "rules"
+      ],
+      "description": "One self-contained path override; exclusions affect this override only."
+    }
+  },
+  "$id": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json"
+}

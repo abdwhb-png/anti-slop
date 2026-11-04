@@ -1,0 +1,740 @@
+{
+  "tool": "VS Code JSON language service",
+  "version": "5.7.2",
+  "mode": "headless editor-service API",
+  "association": {
+    "artifact": "schemas/anti-slop.schema.json",
+    "registeredUri": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+    "fileMatch": "*.jsonc"
+  },
+  "schemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "remoteRequests": [],
+  "cases": [
+    {
+      "name": "minimal",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "all-policies",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "empty-rules-overrides",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "ordered-overrides",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "unknown-root-field",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 12
+            }
+          },
+          "message": "Property provider is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-rule",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 9
+            }
+          },
+          "message": "Property R10 is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-policy",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 18
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "options-unsupported",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 5
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        },
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 5
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "rules-null",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 11
+            },
+            "end": {
+              "line": 2,
+              "character": 15
+            }
+          },
+          "message": "Incorrect type. Expected \"object\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "numeric-policy",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        },
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-identity",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "Missing property \"$schema\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-identity",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 13
+            },
+            "end": {
+              "line": 1,
+              "character": 115
+            }
+          },
+          "message": "Value must be \"https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "overrides-not-array",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 15
+            },
+            "end": {
+              "line": 2,
+              "character": 17
+            }
+          },
+          "message": "Incorrect type. Expected \"array\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "empty-include",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 17
+            },
+            "end": {
+              "line": 4,
+              "character": 19
+            }
+          },
+          "message": "Array has too few items. Expected 1 or more.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-include",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 5
+            }
+          },
+          "message": "Missing property \"include\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-override-rules",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 5
+            }
+          },
+          "message": "Missing property \"rules\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-override-field",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 6
+            },
+            "end": {
+              "line": 8,
+              "character": 13
+            }
+          },
+          "message": "Property scope is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "include-not-array",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 17
+            },
+            "end": {
+              "line": 4,
+              "character": 21
+            }
+          },
+          "message": "Incorrect type. Expected \"array\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "exclude-not-string",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 8
+            },
+            "end": {
+              "line": 8,
+              "character": 9
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "override-rule-unknown",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 8
+            },
+            "end": {
+              "line": 8,
+              "character": 12
+            }
+          },
+          "message": "Property R0 is not allowed.",
+          "severity": 1
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "fields": [
+      {
+        "kind": 10,
+        "label": "$schema",
+        "insertText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\"",
+        "insertTextFormat": 2,
+        "filterText": "\"$schema\"",
+        "documentation": "Exact supported contract identity. This reserved release asset is unpublished; validation is offline.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "rules",
+        "insertText": "\"rules\": {$1}",
+        "insertTextFormat": 2,
+        "filterText": "\"rules\"",
+        "documentation": "Root requested policies. Unspecified rules use built-in advisory defaults.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"rules\": {$1}"
+        }
+      },
+      {
+        "kind": 10,
+        "label": "overrides",
+        "insertText": "\"overrides\": [$1]",
+        "insertTextFormat": 2,
+        "filterText": "\"overrides\"",
+        "documentation": "Matching overrides apply in declaration order, replacing assigned whole policies.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"overrides\": [$1]"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "kind": 10,
+        "label": "R1",
+        "insertText": "\"R1\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R1\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R1\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R2",
+        "insertText": "\"R2\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R2\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R2\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R3",
+        "insertText": "\"R3\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R3\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R3\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R4",
+        "insertText": "\"R4\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R4\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R4\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R5",
+        "insertText": "\"R5\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R5\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R5\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R6",
+        "insertText": "\"R6\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R6\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R6\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R7",
+        "insertText": "\"R7\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R7\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R7\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R8",
+        "insertText": "\"R8\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R8\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R8\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R9",
+        "insertText": "\"R9\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R9\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R9\""
+        }
+      }
+    ],
+    "policies": [
+      {
+        "kind": 12,
+        "label": "\"off\"",
+        "insertText": "\"off\"",
+        "insertTextFormat": 2,
+        "documentation": "Request no evaluation of this rule.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"off\""
+        }
+      },
+      {
+        "kind": 12,
+        "label": "\"advisory\"",
+        "insertText": "\"advisory\"",
+        "insertTextFormat": 2,
+        "documentation": "Request evaluation without blocking; the default for unspecified root rules.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"advisory\""
+        }
+      },
+      {
+        "kind": 12,
+        "label": "\"block\"",
+        "insertText": "\"block\"",
+        "insertTextFormat": 2,
+        "documentation": "Request blocking, subject to separate scope and qualification requirements.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"block\""
+        }
+      }
+    ]
+  },
+  "hover": {
+    "contents": [
+      "Request evaluation without blocking; the default for unspecified root rules\\."
+    ],
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 116
+      },
+      "end": {
+        "line": 0,
+        "character": 120
+      }
+    }
+  },
+  "invalidSettingDiagnostics": [
+    {
+      "range": {
+        "start": {
+          "line": 0,
+          "character": 121
+        },
+        "end": {
+          "line": 0,
+          "character": 129
+        }
+      },
+      "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+      "severity": 1,
+      "code": 1
+    }
+  ],
+  "jsoncCommentsTrailingCommas": "accepted",
+  "overrideBounds": "256 accepted;257 rejected"
+}

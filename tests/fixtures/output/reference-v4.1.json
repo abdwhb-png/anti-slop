@@ -1,0 +1,7 @@
+[
+  {"input":{"tags":[]},"toon":"tags: []"},
+  {"input":{"users":[{"id":1,"name":"Ada","role":"admin"},{"id":2,"name":"Bob","role":"user"}]},"toon":"users[2]{id,name,role}:\n  1,Ada,admin\n  2,Bob,user"},
+  {"input":{"orders":[{"id":1,"customer":{"name":"Ada","country":"DK"},"total":99},{"id":2,"customer":{"name":"Bob","country":"UK"},"total":149}]},"toon":"orders[2]{id,customer{name,country},total}:\n  1,Ada,DK,99\n  2,Bob,UK,149"},
+  {"input":{"users":{"alice":{"age":30,"city":"Berlin"},"bob":{"age":25,"city":"Oslo"}}},"toon":"users[2:]{age,city}:\n  alice: 30,Berlin\n  bob: 25,Oslo"},
+  {"input":{"message":"Hello 世界 👋","tags":["🎉","🎊","🎈"]},"toon":"message: Hello 世界 👋\ntags[3]: 🎉,🎊,🎈"}
+]

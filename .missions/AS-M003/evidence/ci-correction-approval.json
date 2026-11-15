@@ -1,0 +1,7 @@
+{
+  "userWords": "mais pourquoi CI rouge ? c'est \u00e0 adresser",
+  "scope": "Correct the demonstrated raw-evidence whitespace CI failure in existing AS-M003 r2 and PR #2. Preserve actual evidence bytes, architecture, independent final validation and the existing publication grant. No merge, No-Mistakes, dependency installation, force push or destructive cleanup.",
+  "previousPublicationAuthority": "Retained local delivery-authority-2026-11-15.md and existing PR #2.",
+  "observedHead": "aab8746a39859edccd1e4326fef45c5e8bf0959e",
+  "observedRemoteFailure": "Linux CI run 43771124016 job 132987038769; reproduced on the committed tree."
+}

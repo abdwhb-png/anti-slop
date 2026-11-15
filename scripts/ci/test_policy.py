@@ -4,6 +4,7 @@ import io
 import json
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -193,6 +194,103 @@ class ReuseTests(unittest.TestCase):
                                        env=environment, capture_output=True, text=True, check=True)
             self.assertTrue(json.loads(completed.stdout)["run_full"])
             self.assertIn("run_full=true", (path / "output").read_text())
+
+
+class WhitespaceTests(unittest.TestCase):
+    def setUp(self):
+        directory = tempfile.TemporaryDirectory()
+        self.addCleanup(directory.cleanup)
+        self.root = Path(directory.name)
+        self.git("init", "-q")
+        self.git("config", "user.email", "fixture@example.invalid")
+        self.git("config", "user.name", "Fixture")
+        self.git("config", "core.attributesFile", "/dev/null")
+        self.git("config", "core.whitespace", "blank-at-eol,blank-at-eof,space-before-tab")
+        candidate = Path(policy.__file__).resolve().parents[2]
+        for name in (".gitattributes", ".missions/AS-M003/evidence/.gitattributes"):
+            source = candidate / name
+            target = self.root / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(source.read_bytes() if source.exists() else b"")
+        self.git("add", ".")
+        self.git("commit", "-qm", "baseline attributes")
+        self.base = self.git("rev-parse", "HEAD").decode().strip()
+
+    def git(self, *args):
+        return subprocess.check_output(["git", *args], cwd=self.root, stderr=subprocess.DEVNULL)
+
+    def whitespace(self):
+        return subprocess.run(
+            [sys.executable, str(Path(policy.__file__).resolve()), "whitespace", "--base", self.base],
+            cwd=self.root, capture_output=True, text=True)
+
+    def test_raw_evidence_is_publishable_without_rewriting_bytes(self):
+        raw = {
+            ".missions/AS-M003/evidence/P01/preparation.diff": b"diff --git a/a b/a\n \n context\n",
+            ".missions/AS-M003/evidence/P02/07-hold-format-check.log": b"formatter output\n \ncontinued\n",
+            ".missions/AS-M003/evidence/P03/03-capture-regressions.log": b"test result: ok\n\n",
+            ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.log": b"elapsed: 1\n\n",
+        }
+        for name, data in raw.items():
+            path = self.root / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(data)
+        self.git("add", ".")
+        self.git("commit", "-qm", "byte-preserved raw evidence")
+        result = self.whitespace()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        for name, data in raw.items():
+            with self.subTest(path=name):
+                self.assertEqual((self.root / name).read_bytes(), data)
+                self.assertEqual(self.git("show", "HEAD:" + name), data)
+        self.assertEqual(self.git("status", "--porcelain"), b"")
+
+    def test_maintained_files_and_unrelated_evidence_still_reject_whitespace(self):
+        paths = (
+            "src/lib.rs", "docs/README.md", "scripts/ci/example.py",
+            ".missions/AS-M003/evidence/P03/09-final-audit.json",
+            ".missions/AS-M003/evidence/P03/trial-staged-001/measurements-staged.json",
+            ".missions/AS-M003/evidence/P04/unrelated.log",
+            ".missions/AS-M003/evidence/P03/trial-staged-001/unrelated.log",
+            ".missions/AS-M004/evidence/P01/preparation.diff",
+            "docs/unrelated.diff",
+        )
+        for name in paths:
+            with self.subTest(path=name):
+                path = self.root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(b"maintained content \n\n")
+                self.git("add", "--", name)
+                result = self.whitespace()
+                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                self.assertIn(name + ":1: trailing whitespace.", result.stdout)
+                self.assertIn(name + ":2: new blank line at EOF.", result.stdout)
+                path.write_bytes(b"maintained content\n")
+                self.git("add", "--", name)
+        result = self.whitespace()
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_raw_evidence_keeps_checks_for_other_whitespace_classes(self):
+        cases = (
+            (".missions/AS-M003/evidence/P01/preparation.diff", b"patch\n\n",
+             "new blank line at EOF."),
+            (".missions/AS-M003/evidence/P03/03-capture-regressions.log", b"result \n",
+             "trailing whitespace."),
+            (".missions/AS-M003/evidence/P02/07-hold-format-check.log", b" \tindent\n",
+             "space before tab in indent."),
+        )
+        for name, data, diagnostic in cases:
+            with self.subTest(path=name, diagnostic=diagnostic):
+                path = self.root / name
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_bytes(data)
+                self.git("add", "--", name)
+                result = self.whitespace()
+                self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+                self.assertIn(name + ":", result.stdout)
+                self.assertIn(diagnostic, result.stdout)
+                path.write_bytes(b"raw output\n")
+                self.git("add", "--", name)
 
 
 class DependencyTests(unittest.TestCase):

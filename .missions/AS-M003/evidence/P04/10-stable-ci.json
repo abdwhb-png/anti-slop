@@ -1,0 +1,15 @@
+{
+  "command": [
+    "bash",
+    "scripts/ci/check.sh"
+  ],
+  "environment": {
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+    "CI_BASE_SHA": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+  },
+  "pathPrefix": "/home/abdwhb/.cargo/bin",
+  "startedAt": "2026-11-15T23:14:15.843295+00:00",
+  "elapsedSeconds": 8.608435472939163,
+  "exit": 0,
+  "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log"
+}

@@ -1,0 +1,269 @@
+{
+  "actor": "AS-M003-capture:s1794784176.1476361.7246",
+  "recordedAt": "2026-11-15T23:15:15.522209+00:00",
+  "plan": {
+    "version": 1,
+    "kind": "nonvisual",
+    "authority": {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/delivery-authority-2026-11-15.md",
+      "digest": "11573da572c420a603a734182d80df767cf39393e915998e6fb43c6d24679702"
+    },
+    "evidenceRoot": ".missions/AS-M003/evidence",
+    "journey": [
+      {
+        "id": "comparison",
+        "actor": "library caller",
+        "context": "real Git fixture and four selection modes",
+        "action": "capture each exact comparison and supporting context",
+        "result": "before/after roles and independent context retain their actual bytes"
+      },
+      {
+        "id": "retained",
+        "actor": "library caller",
+        "context": "captured input followed by filesystem edits",
+        "action": "inspect the retained input and its configuration/ranges",
+        "result": "owned bytes and attribution still represent the captured generation"
+      },
+      {
+        "id": "failure",
+        "actor": "library caller",
+        "context": "excluded, unavailable and bounded inputs",
+        "action": "request a capture that cannot meet its contract",
+        "result": "explicit error instead of a successful partial capture"
+      }
+    ],
+    "criteria": [
+      {
+        "id": "capture-contract",
+        "description": "Complete AS-M003 r2 capture outcome and bounded failure behavior",
+        "reference": {
+          "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+          "digest": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3"
+        }
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "id": "comparison",
+      "journey": {
+        "id": "comparison",
+        "actor": "library caller",
+        "context": "real Git fixture and four selection modes",
+        "action": "capture each exact comparison and supporting context",
+        "result": "before/after roles and independent context retain their actual bytes"
+      },
+      "status": "reused-observed",
+      "evidence": [
+        {
+          "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+          "expectedSha256": "001f862b0f6f93357973ef8754ec43e83fa3e6119a01b453c1206105f832e046",
+          "actualSha256": "001f862b0f6f93357973ef8754ec43e83fa3e6119a01b453c1206105f832e046"
+        }
+      ],
+      "previousIndependentReport": {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+        "digest": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f"
+      },
+      "currentCI": "10-stable-ci.json",
+      "applicability": "All eight accepted product/source/document/fixture hashes match P03; prior raw evidence unchanged. Only evidence attributes and policy regression tests changed. Current stable CI reran the real capture suite. Prior observation remains evidence for this exact implementation, not a new performance measurement.",
+      "remainingGap": "P04 independent whole-mission validation and Firstmate full-report examination pending; no self-acceptance or publication."
+    },
+    {
+      "id": "retained",
+      "journey": {
+        "id": "retained",
+        "actor": "library caller",
+        "context": "captured input followed by filesystem edits",
+        "action": "inspect the retained input and its configuration/ranges",
+        "result": "owned bytes and attribution still represent the captured generation"
+      },
+      "status": "reused-observed",
+      "evidence": [
+        {
+          "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+          "expectedSha256": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16",
+          "actualSha256": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16"
+        }
+      ],
+      "previousIndependentReport": {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+        "digest": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f"
+      },
+      "currentCI": "10-stable-ci.json",
+      "applicability": "All eight accepted product/source/document/fixture hashes match P03; prior raw evidence unchanged. Only evidence attributes and policy regression tests changed. Current stable CI reran the real capture suite. Prior observation remains evidence for this exact implementation, not a new performance measurement.",
+      "remainingGap": "P04 independent whole-mission validation and Firstmate full-report examination pending; no self-acceptance or publication."
+    },
+    {
+      "id": "failure",
+      "journey": {
+        "id": "failure",
+        "actor": "library caller",
+        "context": "excluded, unavailable and bounded inputs",
+        "action": "request a capture that cannot meet its contract",
+        "result": "explicit error instead of a successful partial capture"
+      },
+      "status": "reused-observed",
+      "evidence": [
+        {
+          "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+          "expectedSha256": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16",
+          "actualSha256": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16"
+        }
+      ],
+      "previousIndependentReport": {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+        "digest": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f"
+      },
+      "currentCI": "10-stable-ci.json",
+      "applicability": "All eight accepted product/source/document/fixture hashes match P03; prior raw evidence unchanged. Only evidence attributes and policy regression tests changed. Current stable CI reran the real capture suite. Prior observation remains evidence for this exact implementation, not a new performance measurement.",
+      "remainingGap": "P04 independent whole-mission validation and Firstmate full-report examination pending; no self-acceptance or publication."
+    }
+  ],
+  "sourceApplicability": {
+    "src/workspace/acquire.rs": {
+      "expected": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+      "actual": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390"
+    },
+    "src/workspace/mod.rs": {
+      "expected": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+      "actual": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d"
+    },
+    "src/workspace/git.rs": {
+      "expected": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+      "actual": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147"
+    },
+    "src/config/mod.rs": {
+      "expected": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "actual": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7"
+    },
+    "src/lib.rs": {
+      "expected": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "actual": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57"
+    },
+    "tests/workspace.rs": {
+      "expected": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+      "actual": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92"
+    },
+    "README.md": {
+      "expected": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18",
+      "actual": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+    },
+    "tests/fixtures/process/observe-kill.c": {
+      "expected": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+      "actual": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+    }
+  },
+  "measurements": {
+    "newRuns": false,
+    "reason": "No Rust, fixture, measurement wrapper/sampler, manifest or lockfile changed; correction changes only Git whitespace classification of retained evidence. Existing independent behavioral validation and controlled measurements remain applicable to their recorded scope.",
+    "files": {
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-5.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-5.log": {
+        "expected": "9ee43cd5e58d2d5b9850df5dd9668cbc01a1d05c4d461270d5d6c0da18e354b4",
+        "actual": "9ee43cd5e58d2d5b9850df5dd9668cbc01a1d05c4d461270d5d6c0da18e354b4"
+      },
+      ".missions/AS-M003/evidence/P03/trial-base-001/measurement-build-base.log": {
+        "expected": "8e8124be3f9d711349c894ddc3f2f497a4919371751975c88558624a7aa2170e",
+        "actual": "8e8124be3f9d711349c894ddc3f2f497a4919371751975c88558624a7aa2170e"
+      },
+      ".missions/AS-M003/evidence/P03/trial-base-001/measurements-base.json": {
+        "expected": "3d253dbce48fde4cc29f06288790010f7aad3391db79d2e84b09efb4ba1ab34b",
+        "actual": "3d253dbce48fde4cc29f06288790010f7aad3391db79d2e84b09efb4ba1ab34b"
+      },
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-1.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-1.log": {
+        "expected": "54c753c47976adfad6ed850fee240b1ae8ecddc5c1d5545009c267bcbe70267d",
+        "actual": "54c753c47976adfad6ed850fee240b1ae8ecddc5c1d5545009c267bcbe70267d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-1.log": {
+        "expected": "1758895cb09837705e890006808a4da707f99c6f3351f4198905b9cbbf58ec50",
+        "actual": "1758895cb09837705e890006808a4da707f99c6f3351f4198905b9cbbf58ec50"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/measurements-local.json": {
+        "expected": "f83cb491d38cb0e3976b826e2aa5a9ad40d755c39a40a75192d000633234303b",
+        "actual": "f83cb491d38cb0e3976b826e2aa5a9ad40d755c39a40a75192d000633234303b"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-1.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-5.log": {
+        "expected": "42f1f66a41f0daba6e6430627aa8558a20edb827aad03ff5e885f116f0ca50f4",
+        "actual": "42f1f66a41f0daba6e6430627aa8558a20edb827aad03ff5e885f116f0ca50f4"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/measurement-build-local.log": {
+        "expected": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877",
+        "actual": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877"
+      },
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-5.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-5.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-1.log": {
+        "expected": "635214b567cd801d2411ec7b3fbf4ace6d23e21b198ae3fe139b3f661a946ae4",
+        "actual": "635214b567cd801d2411ec7b3fbf4ace6d23e21b198ae3fe139b3f661a946ae4"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/measurement-build-unstaged.log": {
+        "expected": "8e8124be3f9d711349c894ddc3f2f497a4919371751975c88558624a7aa2170e",
+        "actual": "8e8124be3f9d711349c894ddc3f2f497a4919371751975c88558624a7aa2170e"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-1.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-5.log": {
+        "expected": "32c5a8aaf216d2ac021eb162c91757ec2e7fe7dc854eb7fa7c49fda6762a2f32",
+        "actual": "32c5a8aaf216d2ac021eb162c91757ec2e7fe7dc854eb7fa7c49fda6762a2f32"
+      },
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/measurements-unstaged.json": {
+        "expected": "f265745c816f00f95d225f5a260a939fb86e132b7575f20b14db5b352818dcc5",
+        "actual": "f265745c816f00f95d225f5a260a939fb86e132b7575f20b14db5b352818dcc5"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-5.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-5.log": {
+        "expected": "fb72e0fb1e35947434780af79ca6f89d711ba45c84e1d2edb146b49523702491",
+        "actual": "fb72e0fb1e35947434780af79ca6f89d711ba45c84e1d2edb146b49523702491"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/measurement-build-staged.log": {
+        "expected": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877",
+        "actual": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.phase": {
+        "expected": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+        "actual": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/measurements-staged.json": {
+        "expected": "728736e5971711929566b25b4f8f421c811f929d5120c9d3a8830681312ccfec",
+        "actual": "728736e5971711929566b25b4f8f421c811f929d5120c9d3a8830681312ccfec"
+      },
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.log": {
+        "expected": "f99775aa938ff0641b503ea88b0e95f87bcad5ab96d50662f52cbbcf397f038d",
+        "actual": "f99775aa938ff0641b503ea88b0e95f87bcad5ab96d50662f52cbbcf397f038d"
+      }
+    },
+    "limitations": [
+      "No previous capture implementation exists; these are scenario observations, not a speedup claim.",
+      "RSS sums include the complete observed benchmark process tree and fixture setup. Process discovery and RSS reads are sequential, not atomic: a sweep can include sequential Git processes. Counts are observations per sweep, not proof of instantaneous concurrency. Sums may double count shared pages or sequential process readings, miss brief peaks, and are not a kernel-enforced memory bound.",
+      "Every capture starts fresh Git processes; filesystem caches are warm from fixture creation; cold disk and reference repositories were not measured.",
+      "Thirty warm samples and one first call per scenario do not establish reliable production tail latency.",
+      "Capture only: no native analyzer, model, storage, serialization or resident lifecycle; ADR-007 budgets remain unqualified."
+    ],
+    "retainedOutlier": "Base/five-file warm p95 124.504 ms and maximum sampling gap 55.57859386317432 ms preserved; no favorable rerun or new explanation."
+  },
+  "notification": "notify-me skill loaded; candidate return does not establish independent acceptance. No external notification sent under the Firstmate-only return boundary.",
+  "notVisual": "The approved demonstration plan is nonvisual. No UI or screen-composition check performed; no UI acceptance claimed."
+}

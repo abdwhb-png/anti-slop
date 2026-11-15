@@ -1,0 +1,15 @@
+"""Reuse P01's canonical sampler; choose a final comparison and distinct P02 outputs."""
+import argparse
+import os
+from pathlib import Path
+
+parser = argparse.ArgumentParser()
+parser.add_argument("selection", choices=["staged", "unstaged", "local", "base"])
+selection = parser.parse_args().selection
+os.environ["CAPTURE_OBSERVATION_SELECTION"] = selection
+canonical = Path(__file__).resolve().parent.parent / "P01" / "measure.py"
+source = canonical.read_text()
+source = source.replace('f"observation-{count}', 'f"observation-' + selection + '-{count}')
+source = source.replace('"measurements.json"', '"measurements-' + selection + '.json"')
+source = source.replace('"measurement-build.log"', '"measurement-build-' + selection + '.log"')
+exec(compile(source, str(canonical), "exec"), {"__name__": "__main__", "__file__": __file__})

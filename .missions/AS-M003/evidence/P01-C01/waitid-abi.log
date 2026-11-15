@@ -1,0 +1,3 @@
+siginfo_t size=128 align=8 si_signo_offset=0 P_PID=1 WEXITED=4 WNOHANG=1 WNOWAIT=0x1000000
+
+exit=0

@@ -1,0 +1,161 @@
+[
+  {
+    "case": "virtual-empty-tree",
+    "oid": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "exit": 0,
+    "stdout": "tree\n",
+    "stderr": ""
+  },
+  {
+    "attributeSource": null,
+    "command": [
+      "show-ref"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 59
+  },
+  {
+    "attributeSource": null,
+    "command": [
+      "ls-files",
+      "-v",
+      "-z"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 7
+  },
+  {
+    "attributeSource": null,
+    "command": [
+      "ls-files",
+      "--others",
+      "--exclude-standard",
+      "-z"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 15
+  },
+  {
+    "attributeSource": null,
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeSource": null,
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "show-ref"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 59
+  },
+  {
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "ls-files",
+      "-v",
+      "-z"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 7
+  },
+  {
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "ls-files",
+      "--others",
+      "--exclude-standard",
+      "-z"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 15
+  },
+  {
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 104
+  }
+]

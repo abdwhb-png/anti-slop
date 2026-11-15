@@ -1,0 +1,467 @@
+{
+  "assignment": "6508c722-06cb-4a2a-a694-d4bd33999ec4",
+  "generation": "s1794768506.3553234.1173",
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "protectedFiles": [
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/final-consistency.json",
+      "sha256": "fd11129410686349c689518a4bdb2549e13a384ee21ed90f20a8ebc1b8dc1796"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/baseline.json",
+      "sha256": "773416d4efca75d16f7ae8dd7e05a4bf302f816f2e017903f8336c9f214b7773"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-initial.log",
+      "sha256": "ba727d435dabc0da4bd83a5e681e07a75e970b7cd0143bfb86f96d839344a746"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-initial.json",
+      "sha256": "dba6b7dac310c703f912c0f39aa514555cc25896703487c0b2d0ab8bcbbaa65e"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/09-green-mode.log",
+      "sha256": "55eac3cfccba509e328c5da086f32682755e24f3a662e4c4cd8b2aeca5f93490"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/12-remote-probe.log",
+      "sha256": "4acdea5822a12a551a625b0aeaf53bebaa3efbb27f62455c89ba3e70eaa9e619"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-0-green-object-admission.log",
+      "sha256": "d06c92cf7b53d7ae7f585447dfcaa03fc37129ed03d611954f82433be716665f"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-3-final-check.log",
+      "sha256": "551dbe22938c29a385657e1ba7fedec7940eb16294a937232927f50091260a4d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red.log",
+      "sha256": "2ea3bd6398e435db2b0264984177f65dd243ef626ee979596e99ad060a95eea0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-setup-inclusive.json",
+      "sha256": "bab5c54eab543ff459328e5419b082810f75a3a666b030a034fb1b8bce7f4a41"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-1-final-check.log",
+      "sha256": "94fefbd940650846e35c64f7ecb0305c4e409617b0bbd0e8a9c2cd1a0d9f648d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02-green.log",
+      "sha256": "cbe658afcec1b271d6d2cd575e5ad445cd4f4a3a9cc9dc9bb471b1b5da7ce857"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-5-final-evidence.log",
+      "sha256": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-0-final-check.log",
+      "sha256": "09c63f52264050369c2283f53e39c35e0829591927db1fe8c269712389b33f5f"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-before-object-admission.log",
+      "sha256": "3fab889cb0265b0a66dbcd08ccebdf3d7414758d266f00f9207a4f64f0526158"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/06-green.log",
+      "sha256": "11b3e2c7bd78b60c8e852e6275b4d8ddda17a6aef63909382a35a02695285f96"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-1-recheck.log",
+      "sha256": "64a69d67dc83d00a806f1c8c74d0e64b6357acdb5480322d283bedf37a1674cf"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/11-focused-refactor.log",
+      "sha256": "5aebc1d6135a46824e1a0a132cff8816552ea0fbc11654af6b4b47a127861829"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-before-object-admission.json",
+      "sha256": "4ad91ac1efab856f310cfc478f7caf338c23895604453848d2480af95e69cc90"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/08-red-mode.log",
+      "sha256": "a5d7eeff1810713728edc74501cfae758f49dd9f1505f4aa764d5e71a7916a2e"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-1-green-object-admission.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-2-final-evidence.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/04-green.log",
+      "sha256": "3a827afe218b53fc477bb906a6b441dda70d3d2719426774859cddc4dad61ee9"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-before-object-admission.log",
+      "sha256": "bc8ce3641a75abed00319646a28f1b113cb8f2d3c3fb6c39be94d6e0235a0fed"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5.log",
+      "sha256": "3f6a041e06e28a7b337e681662a12a28bf852eb1246a7c0c5a87a9f77dd098f0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-4-final-evidence.log",
+      "sha256": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/01-red.log",
+      "sha256": "4ed98555bfc9d93b9ea3acb2ee23f8b0c3ef5a1db2690691ca3d3e491cd5888e"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log",
+      "sha256": "bd6b7744f4be84d3641f8b65bc63561c711f535c972921de72d71c22b404d7b5"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/source-state.json",
+      "sha256": "1296ab6232003e1f262cb76c574dc916d534852b9bc2b7b555300d4fc24f90f5"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-0-recheck.log",
+      "sha256": "762c624d69a5c0a0c936e83d7651d2940bf600db45955bb3bee13ac3bc62a641"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/07-controlled.log",
+      "sha256": "cff5213d8d23c00f152023cb1d6f7e654fd8ae5a6374830f897757bc635e9e19"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/14-clippy.log",
+      "sha256": "c3144e72794964cec7041df7d7250943907aeba9f6d96e7e7fe22033c87d1a77"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1.log",
+      "sha256": "49dfd888fc73170a02c2363bd62e30340db6bce39284c47e172186bd6961f6b5"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-2-final-check.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/05-red.log",
+      "sha256": "b9b0828c3e06157d53e957bc28ba3353e1d0e4430f21ce55b77d924e82df6332"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurement-build.log",
+      "sha256": "438145a40e66c46097a1a3084f49421e644a887257ea00b2594cd49cd1b6d4bb"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/locked-npm-verification.json",
+      "sha256": "67ff9286ce89ee264da50f9a94d0d3346c41babb3cd06963e4a4f4c9b12ee83f"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-2-green-object-admission.log",
+      "sha256": "ccc03bb44368c8733872d6a2f26130c23a481368d8c2e3daf8d9f8508ba33557"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-1-final-evidence.log",
+      "sha256": "e1f31117003fa241f79b1698465952ec4a1332b77d8f5fdf5a9d274f23e4c26e"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-3-recheck.log",
+      "sha256": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02b-green.log",
+      "sha256": "09fab6ab2a23e1c9e3ce2bb6f4bbdb0c746107613cc7664b53e66ead848ce711"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/10-locked-restore.log",
+      "sha256": "111fd75a14af536c19935a4c0c02c8cb6fbf255e1f9ddbf96632ba3fc1427245"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log",
+      "sha256": "1fa314ecdac708784d223fffbb89d1c9ced775996646ddf54618b092ba043e23"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/19-final-build.log",
+      "sha256": "8da0eaad822d2f7a60a6d75187818dbbbe80b3cfa403ec1517f3f8067519530c"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/17-red-object-admission.log",
+      "sha256": "0477b978b1a741a794e018f80ca3e39bd3a95368ef00e4d8a4f4f403f796beac"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/state-validation.log",
+      "sha256": "0b991f6dea584a336b927daec0f7c74d3257d3103598a56857f1371b8f48cd22"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements.json",
+      "sha256": "b2295b9010c94d43d578066567fc864bbefd1e42436e08a65dfbee4e1fea4c37"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-initial.log",
+      "sha256": "acbaffa0e6e505581c0938f77ca4491f5b489ebefe3bb7c38fffdf1d2056fe2a"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/preparation.diff",
+      "sha256": "dbc8f9185d99003597efe612c4e56ee8162926c05a15cd2cf9c9a2793ed3d4c9"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measure.py",
+      "sha256": "fa68f1160d76978749948b70593fc27eecc5810537939a763172703d8b75eab9"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-0-final-evidence.log",
+      "sha256": "607f0fdadf8d9b5b6851106a13ee8ca822812ecce21383134a42dd5dff6ec7aa"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red-compaction.json",
+      "sha256": "07e0aba1dc4e325bb7b7dd97279466d87101d805549b19e155545b55c6cdbe68"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/report-receipt.json",
+      "sha256": "3080821dc50c341932e05440b928a86e890f7d8172ca99fb72c6747abc921f94"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-3-final-evidence.log",
+      "sha256": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-2-recheck.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/baseline.json",
+      "sha256": "addfc0d0054ab11fb277497b483a6ecad96b0c7ee9f514996cc65e068fb262b0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json",
+      "sha256": "98e4b8cb701c2bf3f7cf63dfca411b21b901d7c433bad4064434c366e4bfe9a7"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log",
+      "sha256": "90e262b0808ac049a944a3edb395d16be56184d3de793b26f07c93057a904489"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/02-green.log",
+      "sha256": "c48b2d9d83696529739feb79474e47542c408f0eb9865fe434e28b47f26989bd"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/state-before.log",
+      "sha256": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log",
+      "sha256": "2c293386bc557fee049673e776cbad1ada26df8ae08ba1acbca57ce19a5948e8"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5.log",
+      "sha256": "98d52dcf2a6731fbb640b4e7351a9c5e25e0734747367ca692859bb6cf983c20"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-2-checks.log",
+      "sha256": "be466c0e72501dcb52972bff59f31dcf2b388e68a878d49a458f60cedab6ac41"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+      "sha256": "8a93cda7c31becb589d6e22b37bde9e9bf56edc5904a45f1ff533c39416a67ff"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json",
+      "sha256": "c68b375a75d23695955d8ce60d338f3fc4e4320f1d2fe5afe6fd4f372cd9ffeb"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/03-descendant-green.log",
+      "sha256": "a174a8165ce476d14c2eb8f6af0dd272a7fb28880ee48cc06f3959ca55822279"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/source-state.json",
+      "sha256": "c37c516244b55ed992369dd347d1e6f4d18fa390bd9580c9a02b0e5023f0e196"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1.log",
+      "sha256": "19b2f654b6b89bd323772ddd5b098671bec8d22b4a9f8a41e986cdd17dddfed5"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-1-checks.log",
+      "sha256": "a7f6c4cc7b20061af86cf9468f71ffd9bc30f2a199819087ee4bf4f94978112a"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.c",
+      "sha256": "ad2db765a7af983cc650e76eb2d6b8c0a3bef89c7c8c3595e3f5fc8f14776721"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/workspace-correction.diff",
+      "sha256": "6d951f1f24bf2f8bffa9a18c0a51283543d7bc52633e3b4dd2b091e1d9100794"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurement-build.log",
+      "sha256": "06172201da34d3a06618c59c87fc3456106eb3e7943e523fb933f1bd1515fb39"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green.json",
+      "sha256": "085427e853e36f4e1cce6c0c15e2cbfb1962ab77a04dc205d6ef2dabe355014d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-0-checks.log",
+      "sha256": "12b59811769d23b2d94b4736a555662c7bd2da4e87831e69050625af5a1121d4"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/04-0-checks.log",
+      "sha256": "5a63b3293e7286a02e265d6f1fcd19b9eb29b16e60ede59c39277a293529a5ad"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.log",
+      "sha256": "713055c7af14b73fb22d0cc99fa4761b98d00b02f097280811e1404d1f4728ae"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-1-final-check.log",
+      "sha256": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements.json",
+      "sha256": "96cb293377285501cb60d3ee3d0f4c7d0c54aeb37d26f9f76d53485fda5a99f6"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-3-checks.log",
+      "sha256": "cc06b20de8f4bf52226cae6d47e6a446ed5a36e898c1c6b4c3cacea88705c328"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/git-correction.diff",
+      "sha256": "b5b20d6e0e7f0394123c62d727e248cc2461ae0a18096a7cc2af20d47a941d2b"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measure.py",
+      "sha256": "249a470bbcdb35c86ae0d397fbf5d80a530442130ea91076b41feb4103232165"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-0-final-check.log",
+      "sha256": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/report-receipt.json",
+      "sha256": "11b6aa5011fd9b2ac20bb02a6db70c3a8f8cc49d8bba45ec9d29fd96c46aa2c7"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stdout",
+      "sha256": "083a755b1be7dad53318b523e21cc734f58a5760654884b28dfef53126073f2d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/observe-kill.so",
+      "sha256": "6332f0250216a3944cdd7b78ef99f7d00255258f1f1a8bf45a7eb0ecfa9bbcc7"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-regression-red.json",
+      "sha256": "cce4991929d987d7ea1e0217c8225416d16c541c001fa4fb3d64967618ca72e8"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/observe-kill.c",
+      "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stderr",
+      "sha256": "0942c4510d7ce932c7de7a39428f0347eff88cc933deea89046431d1f7b4a214"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.json",
+      "sha256": "16dad0ab660aa51ec9df4b48abbf92e9ba5dd5d1ef145f4a6aa1be550b3b6be0"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source-manifest.json",
+      "sha256": "57f13f86c6647e05e6aa36341264f308e6e329eef40cdc0bdffceb88ea992498"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/source-review.md",
+      "sha256": "fcd744af0cf8dcbdb930f1e81183c76ffcaee135211d1071f14cf3aced376171"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/README.md",
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/tests/workspace.rs",
+      "sha256": "ddaf80cf7c5434e6c918ea1f5950458ac6812e8e22d50ba9df07d89ce5e2766c"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/git.rs",
+      "sha256": "c545f4a0e7df4f92141efd28d10417d04d643d418f747184c4cbbcbe863fa111"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/mod.rs",
+      "sha256": "843ea9e16063819a697fcd51f3b17fc08061bbf36d852bba4900a579ae488cf9"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/acquire.rs",
+      "sha256": "9401934c580df51925325bebc60ec1498ba9765793a20e358544e5a416ca200a"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/review.md",
+      "sha256": "f0fabe7c014b3c7501d0aafb8ce99fbef49f1d635dcb6885c9a807dc5d2ea5e4"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/kill-observation-green.json",
+      "sha256": "5f7ace3908495419b7071723bc41908556e7b27c95dbc88e0ef5db8162976041"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source.tar.gz",
+      "sha256": "90b38d8702f9a5618fec834f317643a3bc4e62c6bec8b5e97ac91b1564e398ea"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/cleanup-regression.json",
+      "sha256": "d5de1f1da1bba2f5088f1c1e592ffc180a9f1110f0f72da6cb01b0f6fa14b7a5"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source-archive.json",
+      "sha256": "1cd120bee9414f68a2886ea2bbce364279bb132493ae2694c089218e702146b2"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P02-r1.md",
+      "sha256": "a1c1007e674883bdfbc357540af4964866e51d4108c61639b6271df30cfac311"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-r1.md",
+      "sha256": "b39648f92445c290f9951202a0776767d466f5feb8a2134d36a75b5e0803790e"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-C01-r1.md",
+      "sha256": "2caa022ea231b33ee596a60f33b1ae98a1d81da98042eb5d9a5634c44db5ffeb"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-C01-r1-review.json",
+      "sha256": "dbe55da2fe92bce36d72c32288a1a634495fd1d117da3f0c21ae31d40b8eec45"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-r1-review.json",
+      "sha256": "77b4f95d3bfced683687a863b2496ad8a925ea000613ad397c817163fac5b8ad"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+      "sha256": "0d941a1cbb25c02cf3fe317d446868a6cb1d02a9a9c3958ec12248d12a1681a1"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/history.jsonl",
+      "sha256": "de700f0fd81cf789843e4d0fdfb778aeb4aa27fd173b0419fde61e4bc3dfbed6"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+      "sha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3"
+    }
+  ]
+}

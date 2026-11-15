@@ -1,0 +1,33 @@
+{
+  "recordedAt": "2026-11-15T17:32:29.315487+00:00",
+  "question": "Capitaine, approuvez-vous la proposition AS-M003 r2, puis une revue indépendante du contrat et de la récupération AS-M002 avant l’implémentation ? Les seules préparations MDD locales et le skill v0.5 seront transférés dans la copie isolée ; AS-M003 démarrera uniquement après acceptation, sans commit, publication ni pipeline No-Mistakes.",
+  "answer": "Oui, valider ces prérequis puis implémenter.",
+  "approvedProposal": {
+    "source": "data/AS-M003/r2-proposal.md",
+    "sha256": "1c813302fbea7a73f95fccf99d35a29ae1b81d6be6135cfc905094a84160b4d7"
+  },
+  "canonicalRevision": {
+    "path": "docs/missions/AS-M003/r2.md",
+    "sha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3",
+    "changesFromProposal": "Relocated local references; recorded the actual approval and conditional execution authority; corrected preparation-only status wording. Observable scope and validation requirements are unchanged."
+  },
+  "authorized": [
+    "Independent contract review",
+    "Independent recovered AS-M002 prerequisite review",
+    "Transfer only local MDD preparation and approved v0.5 skill into isolated mission copy",
+    "Implementation after prerequisite acceptance in coordinated mode"
+  ],
+  "notAuthorized": [
+    "Dependency installation",
+    "Commit",
+    "Publication",
+    "Merge or integration",
+    "No-Mistakes invocation"
+  ],
+  "remainingPrerequisites": [
+    "Independent contract acceptance",
+    "Independent suitability acceptance of recovered AS-M002 tree",
+    "Required development and dispatch tools are available"
+  ],
+  "preservedR1Sha256": "4a6981c711bd422ac9e2ca2e91dc005624a16f2361c0b6ba22de14cf2d850d91"
+}

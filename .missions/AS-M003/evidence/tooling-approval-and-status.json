@@ -1,0 +1,77 @@
+{
+  "recordedAt": "2026-11-15T17:51:46.522126+00:00",
+  "answers": [
+    "Oui, installer et poursuivre.",
+    "tu peux les installer et rust peut être global"
+  ],
+  "scope": "Necessary Rust/Treehouse/C build tooling and locked dependency restoration are authorized. Rust may be global to the user account. No commit, publication or No-Mistakes authority.",
+  "installed": [
+    {
+      "command": [
+        "/home/abdwhb/.cargo/bin/rustc",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "cargo 1.96.1 (356927216 2026-06-26)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/abdwhb/.cargo/bin/rustfmt",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "rustfmt 1.9.0-stable (31fca3adb2 2026-06-26)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "clippy",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "clippy 0.1.96 (31fca3adb2 2026-06-26)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/.tools/runtime-tools/bin/treehouse",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "v3.1.8",
+      "stderr": ""
+    }
+  ],
+  "globalRust": {
+    "cargoHome": "/home/abdwhb/.cargo",
+    "rustupHome": "/home/abdwhb/.rustup",
+    "shellProfileChanges": false,
+    "toolchain": "1.96.1"
+  },
+  "treehouse": {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/.tools/runtime-tools/bin/treehouse",
+    "version": "3.1.8",
+    "leaseCapabilityVerified": true
+  },
+  "remainingBlocker": "sudo -n apt-get --simulate install --no-install-recommends build-essential=12.12ubuntu2.26.04.2 returned exit 1: sudo: interactive authentication is required. No apt packages installed by this agent. The user has been given the exact approved apt command to run locally.",
+  "preflight": {
+    "task": "AS-M003-preflight",
+    "runtime": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "worktree": "/home/abdwhb/.treehouse/anti-slop-d009d5/1/anti-slop",
+    "processingVerified": "Captured pane showed actual d75639c HEAD check and loading authoritative MDD v0.5 validation/artifact references after folder trust."
+  },
+  "limits": "Tool versions and reviewer startup are verified; project compilation and independent prerequisite acceptance remain pending."
+}

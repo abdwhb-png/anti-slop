@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-11-15T16:42:33.738Z",
+  "authority": "oui met à jour le skill du projet",
+  "scope": "Adopt the exact approved v0.5 project skill and resolve only that distribution prerequisite. No mission execution or historical migration.",
+  "previous": {
+    "version": "v0.2-experimental",
+    "digest": "83644914d023112deca5ff487150480e703585480b48e3000bd5a3874f31942d",
+    "archive": "data/pilot-mdd-source/mdd-v0.2-83644914d023",
+    "gitCommit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "gitPath": ".agents/skills/mission-driven-dev"
+  },
+  "installed": {
+    "version": "v0.5-experimental",
+    "source": "abdwhb-png/agent-stack:working-tree",
+    "digest": "2e05f0d56bf47d215627110021fa26fc7e0b96c24a5736f87bcace661f0345b8",
+    "sourcePath": "/home/abdwhb/engineering/firstmate-anti-slop-test/projects/anti-slop/.agents/skills/mission-driven-dev",
+    "path": "projects/anti-slop/.agents/skills/mission-driven-dev"
+  },
+  "before": {
+    "accepted": false,
+    "diagnostic": "MDD distribution is unknown, incomplete or altered; a compatibility decision is required",
+    "outputDirectoryCreated": false
+  },
+  "after": {
+    "accepted": true,
+    "selected": {
+      "version": "v0.5-experimental",
+      "source": "abdwhb-png/agent-stack:working-tree",
+      "digest": "2e05f0d56bf47d215627110021fa26fc7e0b96c24a5736f87bcace661f0345b8",
+      "sourcePath": "/home/abdwhb/engineering/firstmate-anti-slop-test/projects/anti-slop/.agents/skills/mission-driven-dev"
+    }
+  },
+  "protectedFileCount": 80,
+  "protectedFilesUnchanged": true,
+  "verification": {
+    "historicalAS001WithOriginalV02": {
+      "valid": true,
+      "issues": []
+    },
+    "historicalAS001WithArchivedV02": {
+      "valid": true,
+      "issues": []
+    },
+    "AS003WithInstalledV05BeforeRecordUpdate": {
+      "valid": true,
+      "issues": []
+    },
+    "trackedWhitespaceCheck": {
+      "exitCode": 0
+    }
+  },
+  "preservation": "The approved contract, product source and AS-M001/AS-M002 artifacts retain their baseline bytes. Previous approval and evidence records are historical and remain unchanged.",
+  "limits": [
+    "No historical mission conversion",
+    "No claim of independent AS-M002 acceptance",
+    "No agent launch or full live MDD cycle",
+    "No application build/test or dependency installation",
+    "No No-Mistakes pipeline, commit or publication"
+  ]
+}

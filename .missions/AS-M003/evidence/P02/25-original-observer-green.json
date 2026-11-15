@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+    "staged_bytes_and_working_context_remain_independent",
+    "--exact",
+    "--nocapture",
+    "--test-threads=1"
+  ],
+  "exit": 0,
+  "observedAfterReap": 0,
+  "stdout": "\nrunning 1 test\ntest staged_bytes_and_working_context_remain_independent ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 33 filtered out; finished in 0.08s\n\n",
+  "stderr": "",
+  "instrumentSourceSha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+  "instrumentBinarySha256": "6332f0250216a3944cdd7b78ef99f7d00255258f1f1a8bf45a7eb0ecfa9bbcc7",
+  "executableSha256": "bad705fc1ae28d75c2b47c8532e927a7cb6cdb56c19e41de9fd67374a98bc306",
+  "limits": "This proves group signaling after loss of leader PID reservation; it does not reproduce PID reuse or harm to another process."
+}

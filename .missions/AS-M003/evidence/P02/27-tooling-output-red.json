@@ -1,0 +1,11 @@
+{
+  "case": "isolated existing-output refusal before correction",
+  "sampler": "harmless external-boundary stand-in; no Cargo or real measurements",
+  "wrapperSha256": "693ae9a4438d6abe3c8bea1d3ff37a06b32c27905ee7f74e4509f93c87cc7e81",
+  "exit": 0,
+  "existingOutputPreserved": false,
+  "samplerStarted": true,
+  "expectedSafeAssertionExit": 1,
+  "stdout": "",
+  "stderr": ""
+}

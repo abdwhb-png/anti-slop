@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-15T21:51:52.813192+00:00",
+  "report": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+  "reportSha256": "f68373b16ebe8fe73577f94460e3ca73f14eccce8e5498f95436a9ce2737fce7",
+  "localLinksChecked": 29,
+  "missingLinks": [],
+  "candidateStillMatchesCiSourceHashes": true,
+  "inboxPending": [],
+  "status": "done: candidate ready for examination",
+  "acceptance": "not claimed; coordinator examination and fresh independent mission review required"
+}

@@ -1,0 +1,50 @@
+{
+  "recordedAt": "2026-11-15T15:01:50Z",
+  "scope": "Approval of the AS-M003 contract and local preparation documents only.",
+  "proposalPresented": "Approve the AS-M003 contract for capture of Git changes and explicit context, then clone https://github.com/abdwhb-png/anti-slop into projects/anti-slop and place only its MDD preparation documents there. Agent launches, implementation, installation, commits and publication remain excluded.",
+  "answer": "Oui, finaliser le contrat et ses documents locaux.",
+  "acceptedContextDecision": "Supporting context is an explicit caller-provided list; automatic dependency discovery remains later analyzer work.",
+  "captureRepresentation": "No memory/directory/streaming representation was approved. The earlier request to choose was withdrawn; internal representation remains an implementation choice under the observable contract.",
+  "localRepository": {
+    "path": "projects/anti-slop",
+    "branch": "main",
+    "origin": "https://github.com/abdwhb-png/anti-slop",
+    "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "initialStatus": "## main...origin/main; no changes"
+  },
+  "baselineReconciliation": {
+    "originalInspectedHead": "8b8555ca23dc02835b289cce69012d52344799ed",
+    "actualHead": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "observedChange": "Only AGENTS.md changed, to clarify TDD at the integration boundary.",
+    "unchangedScopeCommand": "git diff 8b8555ca23dc02835b289cce69012d52344799ed HEAD -- docs/PRD.md docs/IMPLEMENTATION_ROADMAP.md docs/configuration.md docs/decisions src Cargo.toml .missions .agents/skills/mission-driven-dev",
+    "unchangedScopeResult": "Exit 0, empty diff.",
+    "gitVersion": "2.56.0",
+    "forgeDetection": "forge=none",
+    "nodeVersion": "v26.13.0"
+  },
+  "workflow": {
+    "selectedBundle": "MDD v0.5-experimental pilot",
+    "expectedFingerprint": "2e05f0d56bf47d215627110021fa26fc7e0b96c24a5736f87bcace661f0345b8",
+    "projectBundle": "v0.2-experimental, unchanged",
+    "executionMode": "coordinated",
+    "modeAuthority": "Explicit home preference provided in the session-start digest.",
+    "limit": "No migration or execution authority is granted."
+  },
+  "notAuthorized": [
+    "Agent launch",
+    "Product implementation",
+    "Dependency installation",
+    "No-Mistakes invocation",
+    "Commit",
+    "Publication",
+    "Merge",
+    "Replacing the project's MDD distribution"
+  ],
+  "remainingPrerequisites": [
+    "Independent acceptance or an explicit decision concerning the recovered AS-M002 inputs",
+    "Explicit MDD distribution decision before migration",
+    "Task-scoped execution and any required worker/reviewer authority"
+  ],
+  "priorPrivateDraft": "The earlier private draft and failed missing-repository check are retained in the supervising home's preparation history. They are not the active project contract or execution state.",
+  "preservation": "The initial clone was clean. No application source, previous mission archive, installed skill or operational daily Firstmate installation was modified."
+}

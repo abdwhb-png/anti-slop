@@ -1,0 +1,56 @@
+{
+  "at": "2026-11-15T21:49:41.501715+00:00",
+  "initialFiles": 414,
+  "changed": [
+    "README.md",
+    "tests/workspace.rs",
+    "src/workspace/acquire.rs"
+  ],
+  "missing": [],
+  "newOutsideP03": [],
+  "preservedFiles": 411,
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "branch": "fm/AS-M003-capture",
+  "checks": [
+    {
+      "command": [
+        "node",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+        ".missions/AS-M003/state.json",
+        "--json"
+      ],
+      "exit": 0,
+      "output": "{\"valid\":true,\"issues\":[]}\n"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "output": ""
+    }
+  ],
+  "negativeReviewSha256": "6c47a59760b25e10c36746a120db9290b633ddd77ae2166d5f72ed28764d05d4",
+  "rejectedArchive": {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/final-r1/rejected-source.tar.gz",
+    "sha256": "fd6add9533bcecd4daf5f22eccf059c4aa8ec8ab12efb6fe6e90afbc7c0d0646",
+    "matchesManifest": true,
+    "allEightInputSourceHashesMatchArchiveManifest": true
+  },
+  "priorP02EvidenceAndException": "All baseline file hashes unchanged; includes complete P02 directory and approved exception",
+  "dependencyFilesMatchHead": [
+    "Cargo.toml",
+    "Cargo.lock",
+    "tools/config-conformance/package.json",
+    "tools/config-conformance/package-lock.json"
+  ],
+  "gitStatus": " M .agents/skills/mission-driven-dev/MAINTENANCE.md\n M .agents/skills/mission-driven-dev/SKILL.md\n M .agents/skills/mission-driven-dev/VALIDATION.md\n M .agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md\n M .agents/skills/mission-driven-dev/assets/handoffs.md\n M .agents/skills/mission-driven-dev/evals/evals.json\n M .agents/skills/mission-driven-dev/references/artifacts.md\n M .agents/skills/mission-driven-dev/references/execution.md\n M .agents/skills/mission-driven-dev/references/preparation.md\n M .agents/skills/mission-driven-dev/references/resumption.md\n M .agents/skills/mission-driven-dev/references/validation.md\n M .agents/skills/mission-driven-dev/scripts/validate.mjs\n M .agents/skills/mission-driven-dev/src/cli.ts\n M .agents/skills/mission-driven-dev/src/schema.ts\n M .agents/skills/mission-driven-dev/src/validate.ts\n M .agents/skills/mission-driven-dev/tests/cli.test.ts\n M .agents/skills/mission-driven-dev/tests/validate.test.ts\n M README.md\n M docs/IMPLEMENTATION_ROADMAP.md\n M src/config/mod.rs\n M src/lib.rs\n D src/workspace/.gitkeep\n?? .agents/skills/mission-driven-dev/.gitignore\n?? .agents/skills/mission-driven-dev/assets/example/.missions/\n?? .agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json\n?? .missions/AS-M003/\n?? docs/missions/AS-M003/\n?? src/workspace/acquire.rs\n?? src/workspace/git.rs\n?? src/workspace/mod.rs\n?? tests/fixtures/process/\n?? tests/workspace.rs\n",
+  "sourceHashes": {
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390"
+  },
+  "inboxPending": []
+}

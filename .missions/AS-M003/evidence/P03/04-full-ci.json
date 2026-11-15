@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-15T21:47:28.724674+00:00",
+  "command": [
+    "bash",
+    "scripts/ci/check.sh"
+  ],
+  "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+  "environment": {
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+    "CI_BASE_SHA": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+  },
+  "exit": 0,
+  "durationSeconds": 8.971245672088116,
+  "log": ".missions/AS-M003/evidence/P03/04-full-ci.log",
+  "sourceHashes": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+  },
+  "logSha256": "2d11bb78e7a6524b4737fd97c27d451773c56cede7b30f024bd040a3e52fc984"
+}

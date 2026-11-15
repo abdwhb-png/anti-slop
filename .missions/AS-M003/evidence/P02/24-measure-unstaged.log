@@ -1,0 +1,89 @@
+$ python3 /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measure.py unstaged
+{
+  "scenarios": [
+    {
+      "selection": "unstaged",
+      "acquiredInputs": 9,
+      "acquiredBytes": 605,
+      "selectedFiles": 1,
+      "changedLines": 40,
+      "contextFiles": 1,
+      "firstCaptureMicros": 42305,
+      "warmP50Micros": 43288,
+      "warmP95Micros": 51531,
+      "retainedInputs": 3,
+      "retainedBytes": 489,
+      "gitProcessesPerCapture": 16,
+      "gitConcurrency": 1,
+      "cache": "first call in fresh test executable with OS caches warmed by fixture creation; new Git processes on every call; subsequent calls share caller process only; no application cache",
+      "sampledPeakTreeRssKiBIncludingFixtureSetup": 24192,
+      "capturePhasePeakTreeRssKiB": 12424,
+      "capturePhaseProcessNames": [
+        "capture_observa",
+        "git",
+        "workspace-98a92"
+      ],
+      "capturePhaseMaxObservedProcessesPerSweep": 2,
+      "maxObservedProcessesInNonAtomicSweep": 6,
+      "observedProcessNames": [
+        "basename",
+        "bash",
+        "capture_observa",
+        "dirname",
+        "git",
+        "mktemp",
+        "mv",
+        "tr",
+        "workspace-98a92"
+      ],
+      "observedThreadIdsMisclassified": 0,
+      "observedUniquePidsIncludingFixtureSetup": 545,
+      "samplingIntervalP50Ms": 1.2968755327165127,
+      "samplingIntervalMaxMs": 3.0526898335665464,
+      "executableWallSecondsIncludingFixtureSetup": 1.4507200729567558,
+      "exit": 0
+    },
+    {
+      "selection": "unstaged",
+      "acquiredInputs": 17,
+      "acquiredBytes": 2365,
+      "selectedFiles": 5,
+      "changedLines": 200,
+      "contextFiles": 1,
+      "firstCaptureMicros": 73864,
+      "warmP50Micros": 65324,
+      "warmP95Micros": 75094,
+      "retainedInputs": 11,
+      "retainedBytes": 2249,
+      "gitProcessesPerCapture": 24,
+      "gitConcurrency": 1,
+      "cache": "first call in fresh test executable with OS caches warmed by fixture creation; new Git processes on every call; subsequent calls share caller process only; no application cache",
+      "sampledPeakTreeRssKiBIncludingFixtureSetup": 28768,
+      "capturePhasePeakTreeRssKiB": 12544,
+      "capturePhaseProcessNames": [
+        "capture_observa",
+        "git",
+        "workspace-98a92"
+      ],
+      "capturePhaseMaxObservedProcessesPerSweep": 2,
+      "maxObservedProcessesInNonAtomicSweep": 6,
+      "observedProcessNames": [
+        "basename",
+        "bash",
+        "dirname",
+        "git",
+        "mktemp",
+        "tr",
+        "workspace-98a92"
+      ],
+      "observedThreadIdsMisclassified": 0,
+      "observedUniquePidsIncludingFixtureSetup": 790,
+      "samplingIntervalP50Ms": 1.2995779979974031,
+      "samplingIntervalMaxMs": 4.388302098959684,
+      "executableWallSecondsIncludingFixtureSetup": 2.1716598300263286,
+      "exit": 0
+    }
+  ]
+}
+
+exit=0

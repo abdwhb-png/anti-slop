@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-15T21:47:52.883235+00:00",
+  "command": [
+    "python3",
+    ".missions/AS-M003/evidence/P02/measure.py",
+    "unstaged",
+    "--output",
+    ".missions/AS-M003/evidence/P03/trial-unstaged-001"
+  ],
+  "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+  "environment": {
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  "exit": 0,
+  "durationSeconds": 3.801079081837088,
+  "log": ".missions/AS-M003/evidence/P03/05-observe-unstaged.log",
+  "sourceHashes": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    ".missions/AS-M003/evidence/P02/measure.py": "e5737659ec5e57a0798a9f38f1a1b1e518f96def2329e64756e178d6a1af0839",
+    ".missions/AS-M003/evidence/P01/measure.py": "fa68f1160d76978749948b70593fc27eecc5810537939a763172703d8b75eab9"
+  }
+}

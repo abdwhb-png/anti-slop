@@ -1,0 +1,25 @@
+$ cargo test --frozen --test workspace working_selections_reject_index_flags_that_hide_mutable_changes -- --exact
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.61s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test working_selections_reject_index_flags_that_hide_mutable_changes ... FAILED
+
+failures:
+
+---- working_selections_reject_index_flags_that_hide_mutable_changes stdout ----
+
+thread 'working_selections_reject_index_flags_that_hide_mutable_changes' (265264) panicked at tests/workspace.rs:1202:13:
+--assume-unchanged Unstaged: Ok(Capture { comparison: Comparison { selection: Unstaged, commit: None, before_role: Index, after_role: Working, command: ["diff-files", "--raw", "--no-renames", "--no-relative", "--no-ext-diff", "--no-textconv", "--ignore-submodules=none", "--abbrev=64", "-z", "--"] }, generation: "2eb6a2dfa2e139174222836c1d734a39966b3867d5c412d95fa2e8c0b1a5b41e", changes: [], context: [], configuration: Configuration { generation: "fd30b2dc2b75af93f39c79666f0698c68a42c3086d8ea195a405712d85d711ce", source: BuiltIn }, stats: CaptureStats { retained_files: 0, retained_bytes: 0, attempts: 1, git_processes: 5 } })
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    working_selections_reject_index_flags_that_hide_mutable_changes
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.06s
+
+error: test failed, to rerun pass `--test workspace`
+
+exit=101

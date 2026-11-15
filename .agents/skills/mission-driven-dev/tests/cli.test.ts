@@ -51,3 +51,31 @@ test("CLI separates invalid artifacts, invocation errors, read failures and help
   expect(invoke(["--help"], root).status).toBe(0);
   expect(invoke([bad], root).stdout).toContain("parse");
 });
+
+test("the delivered CLI checks a candidate transition without changing the active files", () => {
+  const root = setup();
+  const mission = { kind: "mission", id: "m", revision: 1, path: "mission.md" };
+  writeFileSync(join(root, "mission.md"), `---\n${JSON.stringify({ schemaVersion: 1, ...mission, repository: ".", delivery: { mode: "local-only", baseCommit: "a".repeat(40), rationale: "One outcome." } })}\n---\n# Mission\n`);
+  const state = { schemaVersion: 1, kind: "state", id: "m", revision: 1, mission, status: "draft", interruption: null, history: "history.jsonl", lastSequence: 1, currentPacket: null, attempts: [], checkpoints: [], evidence: [], validation: null };
+  const event = { schemaVersion: 1, kind: "event", sequence: 1, stateRevision: 1, at: "2026-11-15T00:00:00Z", actor: "fixture", mission, status: "draft", interruption: null, reason: "Prepare.", evidence: [] };
+  const history = JSON.stringify(event) + "\n";
+  const file = join(root, "state.json"), journal = join(root, "history.jsonl"), candidate = join(root, "candidate.json");
+  writeFileSync(file, JSON.stringify(state)); writeFileSync(journal, history);
+  writeFileSync(candidate, JSON.stringify({ state: { ...state, revision: 2, lastSequence: 2, status: "ready", executionMode: "coordinated" }, journal: history + JSON.stringify({ ...event, sequence: 2, stateRevision: 2, status: "ready" }) + "\n" }));
+  const result = invoke([file, "--candidate", candidate, "--json"], tmpdir());
+  expect(result.status).toBe(0);
+  expect(JSON.parse(result.stdout)).toEqual({ valid: true, issues: [] });
+  expect(readFileSync(file, "utf8")).toBe(JSON.stringify(state));
+  expect(readFileSync(journal, "utf8")).toBe(history);
+});
+
+test("candidate diagnostics distinguish malformed JSON from unavailable input", () => {
+  const root = setup(), artifact = join(root, "artifact.json"), candidate = join(root, "candidate.json");
+  writeFileSync(artifact, "{}"); writeFileSync(candidate, "{bad");
+  const invalid = invoke([artifact, "--candidate", candidate, "--json"], root);
+  expect(invalid.status).toBe(1);
+  expect(JSON.parse(invalid.stdout).issues[0].rule).toBe("parse");
+  const missing = invoke([artifact, "--candidate", join(root, "absent"), "--json"], root);
+  expect(missing.status).toBe(2);
+  expect(JSON.parse(missing.stdout).issues[0].rule).toBe("read");
+});

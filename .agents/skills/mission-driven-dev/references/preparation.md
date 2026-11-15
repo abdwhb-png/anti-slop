@@ -25,12 +25,22 @@ Present the next wave of two or three outcomes, boundaries and exit criteria for
 
 For a one-mission change, prepare the contract directly. A small fix may still need explicit regression evidence, but not a roadmap or product document.
 
+## Choose a Reviewable Delivery
+
+Choose one coherent delivered outcome per mission, normally one PR in PR mode. Small packets accumulate in a mission worktree and do not alone make a small PR. Keep backend, interface and tests for one behavior together; split by useful observable outcomes rather than layers. Record the delivered result and exclusions in Scope and Outcome, and explain the grouping in `delivery.rationale`. File and line counts prompt reassessment, not a universal acceptance threshold.
+
+Before each packet, examine the cumulative diff from the mission delivery base and record `deliveryAssessment` at that packet's exact base commit. Use `continue` only when its outcome belongs in this delivery; otherwise use `needs_decision` and resolve the boundary before dispatch. Reassess unexpected growth at return and acceptance. Put a separable outcome in a later mission within the approved roadmap; do not silently move approved scope or close unfinished work.
+
+A wave's scope approval does not grant execution or external actions. Record explicit authority for mission progression, publication, dependent branch updates and integration separately. A dependent mission may start on an accepted published parent's exact revision when the authority covers that progression. Keep its own PR targeted at the parent branch until reconciliation, and retain the final integration target. Do not apply PR dependencies to local-only work.
+
 ## Prepare the Next Contract
 
 Use the Mission Contract sections in [the artifact contract](artifacts.md). Record the outcome, starting evidence, applicable decisions, scope, validation, execution boundaries and completion conditions. Make behavior, counterexamples, failure states and real-use checks concrete before implementation.
 
+Expose intermediate observable outcomes and their dependencies where they help execution, within the existing contract rather than a separate packet plan. Apply [execution mode selection](execution.md#choose-the-execution-mode) before implementation, preserving any choice and authority already given during preparation. Do not materialize future packets to choose the mode.
+
 Mark a validation layer not applicable only with a reason. For documentation-only work, use proportionate consistency checks instead of inventing a RED test. For production behavior, require executable RED evidence through the owning public boundary.
 
-Create the draft execution state and its initial history event together. Keep unapproved and blocked matters explicit. Move to ready only when dependencies, authority and decisive unknowns are resolved; structural validity alone is insufficient. Do not prepare all future packets or start agents while merely aligning documentation.
+Create the draft execution state and its initial history event together. Keep unapproved and blocked matters explicit, including an unresolved execution mode. Move to ready only when dependencies, authority, mode choice and decisive unknowns are resolved; structural validity alone is insufficient. Do not prepare all future packets or start agents while merely aligning documentation.
 
 Preserve approved contract revisions. When new evidence changes scope or decisions, create a revision and reassess affected future work. Keep completed history unchanged. Reassess the roadmap at mission boundaries, but stop an in-progress mission immediately on a blocking contradiction or missing authority.

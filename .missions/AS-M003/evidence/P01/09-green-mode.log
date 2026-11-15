@@ -1,0 +1,11 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.15s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test executable_mode_changes_belong_to_the_captured_generation ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 15 filtered out; finished in 0.08s
+
+
+exit=0

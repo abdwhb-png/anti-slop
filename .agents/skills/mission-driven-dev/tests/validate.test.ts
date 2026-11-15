@@ -1,6 +1,6 @@
 import { afterEach, expect, test } from "bun:test";
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -36,11 +36,11 @@ function fixture() {
   return { root, write };
 }
 
-function missionFixture() {
+function missionFixture(status: "draft" | "ready" | "executing" | "validating" = "draft") {
   const f = fixture();
   f.write(
     "docs/missions/m1/r1.md",
-    { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../.." },
+    { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../..", ...(status === "draft" ? {} : { delivery: { mode: "local-only", baseCommit: "a".repeat(40), rationale: "Fixture outcome." } }) },
     "# Mission",
   );
   const mission = { kind: "mission", id: "m1", revision: 1, path: "../../docs/missions/m1/r1.md" };
@@ -52,6 +52,7 @@ function missionFixture() {
     revision: 1,
     mission,
     baseCommit: "a".repeat(40),
+    ...(status === "draft" ? {} : { deliveryAssessment: { commit: "a".repeat(40), decision: "continue", rationale: "Fixture packet boundary." } }),
   };
   f.write(".missions/m1/packet.md", packet, "# Assignment");
   const event = {
@@ -67,17 +68,26 @@ function missionFixture() {
     reason: "Prepare mission",
     evidence: [],
   };
-  f.write(".missions/m1/history.jsonl", `${JSON.stringify(event)}\n`);
+  const phases = ["draft", "ready", "executing", "validating"];
+  const events = phases
+    .slice(0, phases.indexOf(status) + 1)
+    .map((phase, index) => ({
+      ...event,
+      sequence: index + 1,
+      stateRevision: index + 1,
+      status: phase,
+    }));
+  f.write(".missions/m1/history.jsonl", events.map((e) => JSON.stringify(e)).join("\n"));
   const state = {
     schemaVersion: 1,
     kind: "state",
     id: "m1",
-    revision: 1,
+    revision: events.length,
     mission,
-    status: "draft",
+    status,
     interruption: null,
     history: "history.jsonl",
-    lastSequence: 1,
+    lastSequence: events.length,
     currentPacket: null as typeof packetRef | null,
     attempts: [{ packet: packetRef, result: null }],
     checkpoints: [],
@@ -108,6 +118,127 @@ test("accepts a versioned mission contract at the public module boundary", async
   );
   expect(await validateArtifact(path)).toEqual({ valid: true, issues: [], exitCode: 0 });
 });
+
+test.each(["ready", "executing", "validating"] as const)(
+  "requires an execution mode in %s, even when interrupted",
+  async (status) => {
+    const f = missionFixture(status);
+    const historyPath = join(f.root, ".missions/m1/history.jsonl");
+    const initialHistory = readFileSync(historyPath, "utf8");
+    for (const interruption of [
+      null,
+      { kind: "blocked", reason: "Access unavailable" },
+      { kind: "needs_decision", reason: "Choose scope" },
+    ]) {
+      const events = initialHistory.split("\n").map((line) => JSON.parse(line));
+      events[events.length - 1].interruption = interruption;
+      f.write(".missions/m1/history.jsonl", events.map((e) => JSON.stringify(e)).join("\n"));
+      for (const executionMode of [undefined, null, "direct", "coordinated"]) {
+        f.write(".missions/m1/state.json", { ...f.state, executionMode, interruption });
+        const before = [f.path, historyPath].map((path) => [
+          readFileSync(path, "utf8"),
+          statSync(path).mtimeMs,
+        ]);
+        const report = await validateArtifact(f.path);
+        if (executionMode === undefined || executionMode === null) {
+          expect(report).toEqual({
+            valid: false,
+            exitCode: 1,
+            issues: [
+              {
+                path: f.path,
+                rule: "execution-mode",
+                message: `${status} requires executionMode to be direct or coordinated. Record the user's explicit choice before dispatch.`,
+              },
+            ],
+          });
+        } else {
+          expect(report).toEqual({ valid: true, issues: [], exitCode: 0 });
+        }
+        expect(
+          [f.path, historyPath].map((path) => [readFileSync(path, "utf8"), statSync(path).mtimeMs]),
+        ).toEqual(before);
+      }
+    }
+  },
+);
+
+test("drafts can await a choice without defaulting the execution mode", async () => {
+  const f = missionFixture();
+  for (const executionMode of [undefined, null, "direct", "coordinated"]) {
+    f.write(".missions/m1/state.json", { ...f.state, executionMode });
+    expect(await validateArtifact(f.path)).toEqual({ valid: true, issues: [], exitCode: 0 });
+  }
+});
+
+test.each(["", "automatic", "DIRECT", false, 1, {}, []].map((mode) => [mode]))(
+  "rejects a malformed execution mode even in draft: %j",
+  async (executionMode) => {
+    const f = missionFixture();
+    f.write(".missions/m1/state.json", { ...f.state, executionMode });
+    const report = await validateArtifact(f.path);
+    expect(report.valid).toBe(false);
+    expect(report.exitCode).toBe(1);
+    expect(report.issues).toContainEqual({
+      path: f.path,
+      rule: "schema",
+      message: "executionMode must be direct, coordinated or null when present.",
+    });
+  },
+);
+
+test("an older active state can record its mode without rewriting historical events", async () => {
+  const f = missionFixture("executing");
+  expect((await validateArtifact(f.path)).issues.some((i) => i.rule === "execution-mode")).toBe(
+    true,
+  );
+  const historyPath = join(f.root, ".missions/m1/history.jsonl");
+  const originalHistory = readFileSync(historyPath, "utf8");
+  const choice = {
+    ...f.event,
+    sequence: 4,
+    stateRevision: 4,
+    status: "executing",
+    reason: "User explicitly selected coordinated implementation on resumption.",
+  };
+  f.write(".missions/m1/history.jsonl", `${originalHistory}\n${JSON.stringify(choice)}\n`);
+  f.write(".missions/m1/state.json", {
+    ...f.state,
+    revision: 4,
+    lastSequence: 4,
+    executionMode: "coordinated",
+  });
+  expect(await validateArtifact(f.path)).toEqual({ valid: true, issues: [], exitCode: 0 });
+  expect(readFileSync(historyPath, "utf8")).toBe(`${originalHistory}\n${JSON.stringify(choice)}\n`);
+});
+
+test.each(["failed", "cancelled", "superseded"])(
+  "retains legacy %s archives without inventing a mode",
+  async (status) => {
+    const f = missionFixture("executing");
+    const historyPath = join(f.root, ".missions/m1/history.jsonl");
+    f.write(
+      ".missions/m1/history.jsonl",
+      `${readFileSync(historyPath, "utf8")}\n${JSON.stringify({
+        ...f.event,
+        sequence: 4,
+        stateRevision: 4,
+        status,
+        reason: "Explicit terminal decision retained from the previous workflow version.",
+      })}\n`,
+    );
+    for (const executionMode of [undefined, null, "direct", "coordinated"]) {
+      f.write(".missions/m1/state.json", {
+        ...f.state,
+        revision: 4,
+        lastSequence: 4,
+        status,
+        executionMode,
+      });
+      expect(await validateArtifact(f.path)).toEqual({ valid: true, issues: [], exitCode: 0 });
+    }
+  },
+);
 
 test.each([
   { schemaVersion: 2, kind: "mission", id: "m1", revision: 1, repository: "." },
@@ -482,4 +613,73 @@ test("accepts completed evidence and refuses a reopened terminal history", async
   expect((await validateArtifact(f.path)).issues.some((i) => i.rule === "history-transition")).toBe(
     true,
   );
+});
+
+test("delivery packets require a current boundary assessment and typed parent evidence", async () => {
+  const f = missionFixture();
+  const delivery = { mode: "pull-request", target: "main", baseCommit: "a".repeat(40), rationale: "One complete caller-visible outcome." };
+  f.write("docs/missions/m1/r1.md", { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../..", delivery }, "# Mission");
+  let report = await validateModule(f.path);
+  expect(report.issues.some(i => i.rule === "delivery-assessment")).toBe(true);
+  f.write(".missions/m1/packet.md", { ...f.packet, deliveryAssessment: { commit: "a".repeat(40), decision: "continue", rationale: "This packet completes the same delivered outcome." } }, "# Assignment");
+  expect((await validateModule(f.path)).valid).toBe(true);
+  f.write(".missions/m1/packet.md", { ...f.packet, deliveryAssessment: { commit: "b".repeat(40), decision: "continue", rationale: "Wrong snapshot." } }, "# Assignment");
+  expect((await validateModule(f.path)).issues.some(i => i.rule === "delivery-assessment")).toBe(true);
+  f.write("docs/missions/m1/r1.md", { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../..", delivery: { ...delivery, parent: { mission: { ...f.mission, path: "missing.md" }, pr: "https://github.com/example/repo/pull/1", branch: "parent", head: "a".repeat(40) } } }, "# Mission");
+  expect((await validateModule(f.path)).issues.some(i => i.rule === "reference-missing")).toBe(true);
+});
+
+test("a PR mission cannot close on acceptance alone and validates integration evidence", async () => {
+  const f = missionFixture();
+  f.write("docs/missions/m1/r1.md", { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../..", delivery: { mode: "pull-request", target: "main", baseCommit: "a".repeat(40), rationale: "One outcome." } }, "# Mission");
+  f.write(".missions/m1/state.json", { ...f.state, status: "completed" });
+  expect((await validateModule(f.path)).issues.some(i => i.rule === "completion-integration")).toBe(true);
+  f.write(".missions/m1/state.json", { ...f.state, integration: { head: "not-a-commit", target: "main", evidence: [] } });
+  expect((await validateModule(f.path)).issues.some(i => i.rule === "schema")).toBe(true);
+});
+
+test("accepted delivery results reconsider the returned scope without blocking negative reports", async () => {
+  const f = missionFixture();
+  f.write("docs/missions/m1/r1.md", { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../..", delivery: { mode: "local-only", baseCommit: "a".repeat(40), rationale: "One outcome." } }, "# Mission");
+  f.write(".missions/m1/packet.md", { ...f.packet, deliveryAssessment: { commit: f.packet.baseCommit, decision: "continue", rationale: "One outcome." } }, "# Packet");
+  f.write(".missions/m1/proof.md", "Observed checks.");
+  const result = { schemaVersion: 1, kind: "result", id: "r", revision: 1, mission: f.mission, scope: "packet", packet: f.packetRef, actor: "reviewer", implementers: ["worker"], freshContext: true, outcome: "accepted", summary: "Examined.", evidence: [{ kind: "evidence", path: "proof.md" }] };
+  const file = f.write(".missions/m1/result.json", result);
+  expect((await validateModule(file)).issues.some(i => i.rule === "delivery-assessment")).toBe(true);
+  f.write(".missions/m1/result.json", { ...result, deliveryAssessment: { commit: "b".repeat(40), decision: "continue", rationale: "Returned scope remains coherent." } });
+  expect((await validateModule(file)).valid).toBe(true);
+  f.write(".missions/m1/result.json", { ...result, outcome: "blocked" });
+  expect((await validateModule(file)).valid).toBe(true);
+});
+
+test("active missions require a delivery boundary while legacy drafts remain readable", async () => {
+  const f = missionFixture("ready");
+  f.write("docs/missions/m1/r1.md", { schemaVersion: 1, kind: "mission", id: "m1", revision: 1, repository: "../../.." }, "# Legacy mission");
+  f.write(".missions/m1/state.json", { ...f.state, executionMode: "coordinated" });
+  expect((await validateModule(f.path)).issues.some(issue => issue.rule === "delivery-boundary")).toBe(true);
+  const draft = missionFixture();
+  expect((await validateModule(draft.path)).valid).toBe(true);
+});
+
+test("a candidate state and journal are validated without replacing the active records", async () => {
+  const f = missionFixture("validating");
+  const state = { ...f.state, executionMode: "coordinated" };
+  f.write(".missions/m1/state.json", state);
+  const journal = join(f.root, ".missions/m1/history.jsonl");
+  const beforeState = readFileSync(f.path, "utf8"), beforeHistory = readFileSync(journal, "utf8");
+  const next = { ...state, revision: state.revision + 1, lastSequence: state.lastSequence + 1, status: "completed" };
+  const event = { ...f.event, sequence: next.lastSequence, stateRevision: next.revision, status: next.status };
+  const candidate = { state: next, journal: beforeHistory.trimEnd() + "\n" + JSON.stringify(event) + "\n" };
+  const rejected = await validateModule(f.path, candidate);
+  expect(rejected.valid).toBe(false);
+  expect(rejected.issues.some(issue => issue.rule === "completion-pending")).toBe(true);
+  candidate.state.status = "validating";
+  candidate.journal = beforeHistory.trimEnd() + "\n" + JSON.stringify({ ...event, status: "validating" }) + "\n";
+  expect((await validateModule(f.path, candidate)).valid).toBe(true);
+  candidate.journal = JSON.stringify(event) + "\n";
+  expect((await validateModule(f.path, candidate)).issues.some(issue => issue.rule === "candidate-history")).toBe(true);
+  candidate.state.history = "other-history.jsonl";
+  expect((await validateModule(f.path, candidate)).issues.some(issue => issue.rule === "candidate")).toBe(true);
+  expect(readFileSync(f.path, "utf8")).toBe(beforeState);
+  expect(readFileSync(journal, "utf8")).toBe(beforeHistory);
 });

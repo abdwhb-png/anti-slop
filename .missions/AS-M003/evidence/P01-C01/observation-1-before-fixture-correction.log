@@ -1,0 +1,7 @@
+
+running 1 test
+OBSERVATION {"selectedFiles":1,"changedLines":40,"contextFiles":1,"firstCaptureMicros":20611,"warmCaptureMicros":[20537,20255,20457,20474,21673,20215,20602,22787,21412,22798,22611,22510,21528,23598,24596,23433,20014,20341,20363,20575,26782,20976,20901,23941,44429,29782,31306,23973,20078,20432],"warmP50Micros":21412,"warmP95Micros":31306,"retainedInputs":3,"retainedBytes":489,"gitProcessesPerCapture":8,"gitConcurrency":1,"cache":"first call in fresh test executable with OS caches warmed by fixture creation; new Git processes on every call; subsequent calls share caller process only; no application cache"}
+test capture_observations ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 21 filtered out; finished in 0.79s
+

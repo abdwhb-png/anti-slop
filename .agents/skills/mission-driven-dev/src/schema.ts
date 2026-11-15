@@ -14,6 +14,10 @@ export const transitions: Record<string, readonly string[]> = {
 };
 export const outcomes = ["accepted", "correction_required", "needs_decision", "blocked"];
 
+export function isExecutionMode(value: unknown): value is "direct" | "coordinated" {
+  return value === "direct" || value === "coordinated";
+}
+
 export function isStatus(value: unknown): value is string {
   return typeof value === "string" && Object.hasOwn(transitions, value);
 }
@@ -89,8 +93,59 @@ export function schemaErrors(value: unknown): string[] {
     errors.push("mission must reference an exact Mission Contract revision.");
   if (value.kind === "packet" && !isCommit(value.baseCommit))
     errors.push("baseCommit must be a full Git object id.");
+  if (value.kind === "mission" && value.delivery !== undefined) {
+    const delivery = value.delivery;
+    if (
+      !isObject(delivery) ||
+      !["pull-request", "local-only"].includes(delivery.mode as string) ||
+      !isCommit(delivery.baseCommit) || !isText(delivery.rationale) ||
+      (delivery.mode === "pull-request" && !isText(delivery.target)) ||
+      (delivery.mode === "local-only" && (delivery.parent !== undefined || delivery.target !== undefined))
+    )
+      errors.push("delivery requires mode, baseCommit, rationale and a PR target; local-only has no PR parent or target.");
+    if (isObject(delivery) && delivery.parent !== undefined) {
+      const parent = delivery.parent;
+      if (
+        !isObject(parent) || !isReference(parent.mission, "mission") ||
+        !isText(parent.pr) || !isText(parent.branch) || !isCommit(parent.head)
+      )
+        errors.push("delivery.parent requires an exact mission, PR, branch and head.");
+    }
+  }
+  if (["packet", "result"].includes(value.kind as string) && value.deliveryAssessment !== undefined) {
+    const assessment = value.deliveryAssessment;
+    if (
+      !isObject(assessment) || !isCommit(assessment.commit) ||
+      !["continue", "needs_decision"].includes(assessment.decision as string) ||
+      !isText(assessment.rationale)
+    )
+      errors.push("deliveryAssessment requires commit, decision and rationale.");
+  }
   if (value.kind === "state") {
+    if (value.deliveryBase !== undefined) {
+      const base = value.deliveryBase;
+      if (
+        !isObject(base) || !isCommit(base.commit) || !isText(base.target) ||
+        (base.parentHead !== undefined && !isCommit(base.parentHead))
+      )
+        errors.push("deliveryBase requires commit, target and optional parentHead.");
+    }
+    if (value.integration !== undefined) {
+      const integration = value.integration;
+      if (
+        !isObject(integration) || !isCommit(integration.head) || !isText(integration.target) ||
+        !Array.isArray(integration.evidence) || integration.evidence.length === 0 ||
+        !integration.evidence.every(evidence => isReference(evidence, "evidence"))
+      )
+        errors.push("integration requires head, target and retained evidence.");
+    }
     if (!isStatus(value.status)) errors.push("Unsupported mission status.");
+    if (
+      value.executionMode !== undefined &&
+      value.executionMode !== null &&
+      !isExecutionMode(value.executionMode)
+    )
+      errors.push("executionMode must be direct, coordinated or null when present.");
     if (!isInterruption(value.interruption))
       errors.push("interruption must be null or a blocked/needs_decision record with reason.");
     if (!isText(value.history)) errors.push("history must name the local JSONL journal.");

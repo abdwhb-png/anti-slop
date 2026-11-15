@@ -1,0 +1,101 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.24
+   Compiling memchr v2.8.3
+   Compiling serde_core v1.0.229
+   Compiling regex-syntax v0.8.11
+   Compiling aho-corasick v1.1.5
+   Compiling syn v3.0.5
+   Compiling regex-automata v0.4.18
+   Compiling zmij v1.0.23
+   Compiling cfg-if v1.0.4
+   Compiling typenum v1.20.1
+   Compiling itoa v1.0.18
+   Compiling serde_json v1.0.151
+   Compiling once_cell v1.21.4
+   Compiling libc v0.2.189
+   Compiling hashbrown v0.17.1
+   Compiling hybrid-array v0.4.15
+   Compiling serde v1.0.229
+   Compiling anstyle v1.0.14
+   Compiling equivalent v1.0.2
+   Compiling indexmap v2.14.2
+   Compiling syn v2.0.119
+   Compiling serde_derive v1.0.229
+   Compiling ref-cast v1.0.27
+   Compiling thiserror v2.0.20
+   Compiling bstr v1.13.1
+   Compiling ref-cast-impl v1.0.27
+   Compiling thiserror-impl v2.0.20
+   Compiling crypto-common v0.2.2
+   Compiling block-buffer v0.12.1
+   Compiling serde_derive_internals v0.30.0
+   Compiling tracing-core v0.1.36
+   Compiling clap_lex v1.1.1
+   Compiling tracing-attributes v0.1.31
+   Compiling winnow v1.0.4
+   Compiling lazy_static v1.5.0
+   Compiling pin-project-lite v0.2.17
+   Compiling heck v0.5.0
+   Compiling sharded-slab v0.1.7
+   Compiling clap_derive v4.6.7
+   Compiling schemars_derive v1.2.2
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling tracing v0.1.44
+   Compiling clap_builder v4.6.7
+   Compiling digest v0.11.3
+   Compiling matchers v0.2.0
+   Compiling thread_local v1.1.10
+   Compiling serde_spanned v1.1.1
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling smol_str v0.3.6
+   Compiling smallvec v1.16.2
+   Compiling getrandom v0.4.3
+   Compiling predicates-core v1.0.10
+   Compiling rustix v1.1.4
+   Compiling cpufeatures v0.3.1
+   Compiling ryu v1.0.23
+   Compiling dyn-clone v1.0.20
+   Compiling schemars v1.2.2
+   Compiling serde_toon_format v0.2.0
+   Compiling sha2 v0.11.0
+   Compiling clap v4.6.7
+   Compiling toml v1.1.6+spec-1.1.0
+   Compiling tracing-subscriber v0.3.23
+   Compiling globset v0.4.20
+   Compiling serde_path_to_error v0.1.20
+   Compiling difflib v0.4.0
+   Compiling termtree v0.5.1
+   Compiling bitflags v2.13.2
+   Compiling linux-raw-sys v0.12.1
+   Compiling jsonc-parser v0.34.0
+   Compiling assert_cmd v2.2.2
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+   Compiling predicates v3.1.4
+   Compiling predicates-tree v1.0.13
+   Compiling wait-timeout v0.2.1
+   Compiling fastrand v2.5.0
+   Compiling tempfile v3.27.0
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.49s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test staged_bytes_and_working_context_remain_independent ... FAILED
+
+failures:
+
+---- staged_bytes_and_working_context_remain_independent stdout ----
+
+thread 'staged_bytes_and_working_context_remain_independent' (3577780) panicked at tests/workspace.rs:34:10:
+staged capture must return retained HEAD/index and independent context: CaptureError
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    staged_bytes_and_working_context_remain_independent
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+error: test failed, to rerun pass `--test workspace`
+
+exit=101

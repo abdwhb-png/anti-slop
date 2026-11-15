@@ -1,0 +1,35 @@
+$ cargo test --frozen --test workspace
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 25 tests
+test capture_observations ... ignored, run explicitly with --ignored --exact capture_observations --nocapture
+test controlled_git_child ... ignored, subprocess entrypoint for controlled external Git observations
+test absent_and_invalid_selected_configuration_fail_without_defaults ... ok
+test capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers ... ok
+test additions_deletions_literal_paths_and_empty_selection_are_distinct ... ok
+test exclusions_required_inputs_and_workspace_boundaries_are_explicit ... ok
+test executable_mode_changes_belong_to_the_captured_generation ... ok
+test expanding_git_inventory_stops_at_its_byte_limit ... ok
+test file_acquisition_is_bounded_before_success ... ok
+test exact_content_renames_keep_both_paths_and_reject_either_exclusion ... ok
+test identical_ambiguous_rename_groups_remain_unpaired_evidence ... ok
+test live_growing_context_cannot_escape_acquisition_limits ... ok
+test four_comparisons_select_their_exact_sides_and_independent_context ... ok
+test missing_promised_object_is_not_retrieved ... ok
+test missing_head_unmerged_index_and_unsupported_kinds_cannot_succeed ... ok
+test relative_external_configuration_keeps_existing_resolution_semantics ... ok
+test oversized_git_blob_is_rejected_before_body_acquisition ... ok
+test relevant_index_configuration_and_context_mutation_retries_a_bound_generation ... ok
+test repeatedly_changing_inventory_is_explicitly_unstable ... ok
+test retained_configuration_and_ranges_share_the_actual_generation ... ok
+test staged_bytes_and_working_context_remain_independent ... ok
+test retained_count_total_bytes_and_sparse_input_are_bounded ... ok
+test early_exited_git_leader_cleans_up_stalled_descendant_pipe ... ok
+test stalled_git_is_killed_and_reaped ... ok
+test owned_group_signals_reserve_the_leader_until_cleanup_finishes ... ok
+
+test result: ok. 23 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 4.81s
+
+
+exit=0

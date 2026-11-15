@@ -1,0 +1,30 @@
+$ cargo test --frozen --test config
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.29s
+     Running tests/config.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/config-0e8ad7dcfa2cac61)
+
+running 19 tests
+test absent_root_uses_advisory_defaults_without_writes ... ok
+test backslash_is_a_literal_filename_character ... ok
+test captured_values_and_bytes_survive_configuration_edits ... ok
+test commas_and_partial_alternatives_do_not_make_recursive_segment_boundaries ... ok
+test duplicate_decoded_keys_are_rejected_even_in_unmatched_overrides ... ok
+test explicit_file_and_symlinks_use_the_real_declaring_directory ... ok
+test alternatives_compile_compositionally_at_the_pattern_limit ... ok
+test jsonc_ast_preserves_duplicate_decoded_keys_and_comments ... ok
+test invalid_fields_have_actionable_locations_and_debug_omits_raw_bytes ... ok
+test missing_explicit_invalid_and_dangling_files_do_not_fall_back ... ok
+test jsonc_comments_and_trailing_commas_are_accepted ... ok
+test invalid_jsonc_fields_values_and_contracts_fail_without_echoing_credentials ... ok
+test per_path_disagreement_keeps_both_views_and_transmission_controls_are_rejected ... ok
+test question_mark_matches_one_unicode_scalar ... ok
+test ordered_overrides_replace_policies_and_preserve_unrelated_rules_and_origins ... ok
+test unreadable_or_non_utf8_existing_files_are_errors ... ok
+test recursive_segments_keep_their_meaning_inside_alternatives ... ok
+test glob_dialect_handles_unicode_classes_braces_and_literal_control_characters ... ok
+test parser_and_matcher_enforce_actual_input_boundaries ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+
+exit=0

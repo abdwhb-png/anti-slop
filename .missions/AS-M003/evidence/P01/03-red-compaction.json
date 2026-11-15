@@ -1,0 +1,6 @@
+{
+  "originalSha256": "8ab1cb8c5be4c91640564be71f72119c18077dbca0f247baa7b654673f81942b",
+  "originalBytes": 5246425,
+  "reason": "Compact synthetic repeated byte-array Debug output; retained failing assertions and test summary.",
+  "retainedBytes": 5033
+}

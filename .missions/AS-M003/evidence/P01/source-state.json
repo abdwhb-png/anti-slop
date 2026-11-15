@@ -1,0 +1,110 @@
+{
+  "recordedAt": "2026-11-15T19:16:13.935806+00:00",
+  "task": "AS-M003-capture",
+  "assignment": "cc7e6b14-818f-41b2-8135-f0bb9c5d01cf",
+  "generation": "s1794768506.3553234.1173",
+  "executionIdentity": "AS-M003-capture:s1794768506.3553234.1173",
+  "role": "implementer",
+  "worktree": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+  "branch": "fm/AS-M003-capture",
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "taskFiles": [
+    {
+      "path": "README.md",
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d",
+      "bytes": 16052
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "bytes": 239
+    },
+    {
+      "path": "src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "bytes": 19096
+    },
+    {
+      "path": "src/workspace/.gitkeep",
+      "sha256": null,
+      "bytes": 0
+    },
+    {
+      "path": "src/workspace/mod.rs",
+      "sha256": "843ea9e16063819a697fcd51f3b17fc08061bbf36d852bba4900a579ae488cf9",
+      "bytes": 15536
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "sha256": "9401934c580df51925325bebc60ec1498ba9765793a20e358544e5a416ca200a",
+      "bytes": 4220
+    },
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "c545f4a0e7df4f92141efd28d10417d04d643d418f747184c4cbbcbe863fa111",
+      "bytes": 6526
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "ddaf80cf7c5434e6c918ea1f5950458ac6812e8e22d50ba9df07d89ce5e2766c",
+      "bytes": 34267
+    }
+  ],
+  "protectedInputs": [
+    {
+      "path": ".missions/AS-M003/state.json",
+      "sha256": "c2ec901fe858ff74e1ea67cfd4fdd50d3a8656eecf6629245a9b9ed9c4bfee67"
+    },
+    {
+      "path": ".missions/AS-M003/history.jsonl",
+      "sha256": "80059e186fb099073a4435e0619207f1e323fbadf42badd003a6744727b3c531"
+    },
+    {
+      "path": ".missions/AS-M003/packets/P01-r1.md",
+      "sha256": "b39648f92445c290f9951202a0776767d466f5feb8a2134d36a75b5e0803790e"
+    },
+    {
+      "path": "docs/missions/AS-M003/r2.md",
+      "sha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "d34ba9820b310561cfedeed17ae5412c46e74eb867a93947d02d90b109310f78"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "cac979bc7c283de4d7b1e0a29d836741df59c806a4cf2a0dfc1a0612106c7e9e"
+    },
+    {
+      "path": "tools/config-conformance/package.json",
+      "sha256": "f686b1444e7962cdeae3b3619fcba1b84955023c6125528635889de45f0a5604"
+    },
+    {
+      "path": "tools/config-conformance/package-lock.json",
+      "sha256": "4c10ac58900b5ec68a168d9742f66bf747b002847eeee64245e2bd31138dcaf4"
+    }
+  ],
+  "gitStatus": " M .agents/skills/mission-driven-dev/MAINTENANCE.md\n M .agents/skills/mission-driven-dev/SKILL.md\n M .agents/skills/mission-driven-dev/VALIDATION.md\n M .agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md\n M .agents/skills/mission-driven-dev/assets/handoffs.md\n M .agents/skills/mission-driven-dev/evals/evals.json\n M .agents/skills/mission-driven-dev/references/artifacts.md\n M .agents/skills/mission-driven-dev/references/execution.md\n M .agents/skills/mission-driven-dev/references/preparation.md\n M .agents/skills/mission-driven-dev/references/resumption.md\n M .agents/skills/mission-driven-dev/references/validation.md\n M .agents/skills/mission-driven-dev/scripts/validate.mjs\n M .agents/skills/mission-driven-dev/src/cli.ts\n M .agents/skills/mission-driven-dev/src/schema.ts\n M .agents/skills/mission-driven-dev/src/validate.ts\n M .agents/skills/mission-driven-dev/tests/cli.test.ts\n M .agents/skills/mission-driven-dev/tests/validate.test.ts\n M README.md\n M docs/IMPLEMENTATION_ROADMAP.md\n M src/config/mod.rs\n M src/lib.rs\n D src/workspace/.gitkeep\n?? .agents/skills/mission-driven-dev/.gitignore\n?? .agents/skills/mission-driven-dev/assets/example/.missions/\n?? .agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json\n?? .missions/AS-M003/\n?? docs/missions/AS-M003/\n?? src/workspace/acquire.rs\n?? src/workspace/git.rs\n?? src/workspace/mod.rs\n?? tests/workspace.rs\n",
+  "commitOrPublicationPerformed": false,
+  "missionStateUpdatedByWorker": false,
+  "observedProfile": {
+    "harness": "codex",
+    "model": "gpt-6.1-sol",
+    "effort": "xhigh",
+    "source": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/profile-observation.json"
+  },
+  "frozenWorkflow": [
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/SKILL.md",
+      "sha256": "07ea8e04b84306f5342e30d9090989bd662c9e52b8f60a57e62b5b5314a147e9"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/references/execution.md",
+      "sha256": "28b802af62b9065ad480a9942a2fd08baa99522b59c5554ad8fbbab949411dc1"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/references/artifacts.md",
+      "sha256": "a8db2129edbc35f31791802295aca6623e30b98f3d42b21dde224ec06469a6d5"
+    }
+  ]
+}

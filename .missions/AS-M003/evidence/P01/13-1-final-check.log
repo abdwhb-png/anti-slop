@@ -1,0 +1,7 @@
+$ cargo build --frozen
+   Compiling bstr v1.13.1
+   Compiling globset v0.4.20
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 2.00s
+
+exit=0

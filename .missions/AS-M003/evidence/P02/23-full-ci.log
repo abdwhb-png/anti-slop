@@ -1,0 +1,898 @@
+$ CI_BASE_SHA=d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add CARGO_TARGET_DIR=/home/abdwhb/.cache/anti-slop/898a1afa07c789d2 bash scripts/ci/check.sh
+test_eligible_versions_match_locked_integrity (test_policy.DependencyTests.test_eligible_versions_match_locked_integrity) ... ok
+test_exact_seven_day_boundary_is_eligible (test_policy.DependencyTests.test_exact_seven_day_boundary_is_eligible) ... ok
+test_lock_comparison_checks_added_changed_and_missing_history (test_policy.DependencyTests.test_lock_comparison_checks_added_changed_and_missing_history) ... ok
+test_metadata_network_failure_fails_dependency_qualification (test_policy.DependencyTests.test_metadata_network_failure_fails_dependency_qualification) ... ok
+test_new_yanked_and_checksum_mismatched_cargo_versions_fail (test_policy.DependencyTests.test_new_yanked_and_checksum_mismatched_cargo_versions_fail) ... ok
+test_unavailable_or_wrong_npm_integrity_fails (test_policy.DependencyTests.test_unavailable_or_wrong_npm_integrity_fails) ... ok
+test_young_npm_version_and_changed_tarball_fail (test_policy.DependencyTests.test_young_npm_version_and_changed_tarball_fail) ... ok
+test_api_errors_fall_back_to_full_verification (test_policy.ReuseTests.test_api_errors_fall_back_to_full_verification) ... CI reuse unavailable (OSError); running full verification.
+ok
+test_cli_manual_dispatch_always_requests_full_verification (test_policy.ReuseTests.test_cli_manual_dispatch_always_requests_full_verification) ... ok
+test_cross_host_redirect_drops_authentication (test_policy.ReuseTests.test_cross_host_redirect_drops_authentication) ... ok
+test_direct_push_and_non_tip_pr_associations_run_fully (test_policy.ReuseTests.test_direct_push_and_non_tip_pr_associations_run_fully) ... ok
+test_merge_squash_and_rebase_reuse_identical_tested_trees (test_policy.ReuseTests.test_merge_squash_and_rebase_reuse_identical_tested_trees) ... ok
+test_missing_expired_or_malformed_proof_runs_fully (test_policy.ReuseTests.test_missing_expired_or_malformed_proof_runs_fully) ... ok
+test_receipt_mismatches_cannot_claim_success (test_policy.ReuseTests.test_receipt_mismatches_cannot_claim_success) ... ok
+test_receipts_are_bounded_data_and_never_extracted (test_policy.ReuseTests.test_receipts_are_bounded_data_and_never_extracted) ... ok
+test_server_metadata_must_confirm_successful_current_pr_attempt (test_policy.ReuseTests.test_server_metadata_must_confirm_successful_current_pr_attempt) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.628s
+
+OK
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.30s
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.96s
+     Running unittests src/lib.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/anti_slop-96eebf57032cf330)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/anti_slop-6dca5a08916fc246)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cli.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/cli-00799c8ac7757c52)
+
+running 11 tests
+test config_help_describes_the_exact_local_inspection_surface ... ok
+test help_is_available ... ok
+test config_explain_returns_defaults_as_json ... ok
+test invocation_without_arguments_is_not_a_successful_analysis ... ok
+test missing_flag_values_identify_the_flag_and_preserve_encoding ... ok
+test invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits ... ok
+test default_toon_and_explicit_json_have_identical_real_cli_views ... ok
+test unavailable_analysis_is_rejected ... ok
+test version_matches_package_metadata ... ok
+test real_cli_explicit_selection_ordered_overrides_and_cwd_are_read_only ... ok
+test inspection_argument_errors_are_structured_redacted_and_precede_file_access ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests/config.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/config-0e8ad7dcfa2cac61)
+
+running 19 tests
+test absent_root_uses_advisory_defaults_without_writes ... ok
+test captured_values_and_bytes_survive_configuration_edits ... ok
+test backslash_is_a_literal_filename_character ... ok
+test duplicate_decoded_keys_are_rejected_even_in_unmatched_overrides ... ok
+test commas_and_partial_alternatives_do_not_make_recursive_segment_boundaries ... ok
+test explicit_file_and_symlinks_use_the_real_declaring_directory ... ok
+test invalid_fields_have_actionable_locations_and_debug_omits_raw_bytes ... ok
+test jsonc_ast_preserves_duplicate_decoded_keys_and_comments ... ok
+test invalid_jsonc_fields_values_and_contracts_fail_without_echoing_credentials ... ok
+test jsonc_comments_and_trailing_commas_are_accepted ... ok
+test missing_explicit_invalid_and_dangling_files_do_not_fall_back ... ok
+test ordered_overrides_replace_policies_and_preserve_unrelated_rules_and_origins ... ok
+test alternatives_compile_compositionally_at_the_pattern_limit ... ok
+test per_path_disagreement_keeps_both_views_and_transmission_controls_are_rejected ... ok
+test question_mark_matches_one_unicode_scalar ... ok
+test unreadable_or_non_utf8_existing_files_are_errors ... ok
+test recursive_segments_keep_their_meaning_inside_alternatives ... ok
+test glob_dialect_handles_unicode_classes_braces_and_literal_control_characters ... ok
+test parser_and_matcher_enforce_actual_input_boundaries ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/output.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/output-fed2477924a3c744)
+
+running 3 tests
+test default_and_mixed_origins_interoperate_with_independent_reference_decoder ... ok
+test pinned_specification_examples_qualify_the_selected_codec_forms ... ok
+test all_inspection_string_forms_and_located_null_errors_interoperate ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+     Running tests/schema.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/schema-41f1cd6f2cbcec11)
+
+running 3 tests
+test generated_schema_requires_the_exact_runtime_identity ... ok
+test regeneration_is_deterministic_and_local_artifact_matches_the_real_owner ... ok
+test structural_conformance_fixtures_pass_through_the_actual_resolver ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 34 tests
+test capture_observations ... ignored, run explicitly with --ignored --exact capture_observations --nocapture
+test absent_and_invalid_selected_configuration_fail_without_defaults ... ok
+test controlled_git_child ... ignored, subprocess entrypoint for controlled external Git observations
+test additions_deletions_literal_paths_and_empty_selection_are_distinct ... ok
+test empty_unstaged_capture_identity_still_binds_the_observed_index_generation ... ok
+test cancellation_empty_comparisons_and_required_head_are_distinct ... ok
+test exclusions_required_inputs_and_workspace_boundaries_are_explicit ... ok
+test capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers ... ok
+test expanding_git_inventory_stops_at_its_byte_limit ... ok
+test executable_mode_changes_belong_to_the_captured_generation ... ok
+test exact_content_renames_keep_both_paths_and_reject_either_exclusion ... ok
+test expanding_untracked_inventory_has_the_same_bounded_process_cleanup ... ok
+test explicit_base_is_resolved_once_even_when_the_reference_moves ... ok
+test file_acquisition_is_bounded_before_success ... ok
+test identical_ambiguous_rename_groups_remain_unpaired_evidence ... ok
+test intent_to_add_is_absent_from_staged_and_is_a_working_addition ... ok
+test live_growing_context_cannot_escape_acquisition_limits ... ok
+test four_comparisons_select_their_exact_sides_and_independent_context ... ok
+test missing_head_unmerged_index_and_unsupported_kinds_cannot_succeed ... ok
+test oversized_git_blob_is_rejected_before_body_acquisition ... ok
+test relative_external_configuration_keeps_existing_resolution_semantics ... ok
+test relevant_index_configuration_and_context_mutation_retries_a_bound_generation ... ok
+test missing_promised_object_is_not_retrieved ... ok
+test repeatedly_changing_inventory_is_explicitly_unstable ... ok
+test retained_configuration_and_ranges_share_the_actual_generation ... ok
+test staged_bytes_and_working_context_remain_independent ... ok
+test retained_count_total_bytes_and_sparse_input_are_bounded ... ok
+test early_exited_git_leader_cleans_up_stalled_descendant_pipe ... ok
+test working_inputs_apply_limits_and_exclusions_before_retaining_untracked_content ... ok
+test working_and_untracked_mutations_retry_without_combining_views ... ok
+test working_selections_reject_index_flags_that_hide_mutable_changes ... ok
+test working_ranges_absence_and_configuration_survive_later_edits ... ok
+test stalled_git_is_killed_and_reaped ... ok
+test owned_group_signals_reserve_the_leader_until_cleanup_finishes ... ok
+
+test result: ok. 32 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 5.31s
+
+     Running unittests examples/config_schema.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/examples/config_schema-34403f702153538e)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+   Doc-tests anti_slop
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+    Checking anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.72s
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.23s
+     Running `/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/examples/config_schema --check`
+{
+  "tool": "VS Code JSON language service",
+  "version": "5.7.2",
+  "mode": "headless editor-service API",
+  "association": {
+    "artifact": "schemas/anti-slop.schema.json",
+    "registeredUri": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+    "fileMatch": "*.jsonc"
+  },
+  "schemaDialect": "https://json-schema.org/draft/2020-12/schema",
+  "remoteRequests": [],
+  "cases": [
+    {
+      "name": "minimal",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "all-policies",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "empty-rules-overrides",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "ordered-overrides",
+      "accepted": true,
+      "diagnostics": []
+    },
+    {
+      "name": "unknown-root-field",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 2
+            },
+            "end": {
+              "line": 2,
+              "character": 12
+            }
+          },
+          "message": "Property provider is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-rule",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 9
+            }
+          },
+          "message": "Property R10 is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-policy",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 18
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "options-unsupported",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 5
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        },
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 5,
+              "character": 5
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "rules-null",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 11
+            },
+            "end": {
+              "line": 2,
+              "character": 15
+            }
+          },
+          "message": "Incorrect type. Expected \"object\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "numeric-policy",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        },
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 10
+            },
+            "end": {
+              "line": 3,
+              "character": 11
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-identity",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 0
+            },
+            "end": {
+              "line": 0,
+              "character": 1
+            }
+          },
+          "message": "Missing property \"$schema\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-identity",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 13
+            },
+            "end": {
+              "line": 1,
+              "character": 115
+            }
+          },
+          "message": "Value must be \"https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json\".",
+          "severity": 1,
+          "code": 1
+        }
+      ]
+    },
+    {
+      "name": "overrides-not-array",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 2,
+              "character": 15
+            },
+            "end": {
+              "line": 2,
+              "character": 17
+            }
+          },
+          "message": "Incorrect type. Expected \"array\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "empty-include",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 17
+            },
+            "end": {
+              "line": 4,
+              "character": 19
+            }
+          },
+          "message": "Array has too few items. Expected 1 or more.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-include",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 5
+            }
+          },
+          "message": "Missing property \"include\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "missing-override-rules",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 3,
+              "character": 4
+            },
+            "end": {
+              "line": 3,
+              "character": 5
+            }
+          },
+          "message": "Missing property \"rules\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "unknown-override-field",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 6
+            },
+            "end": {
+              "line": 8,
+              "character": 13
+            }
+          },
+          "message": "Property scope is not allowed.",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "include-not-array",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 4,
+              "character": 17
+            },
+            "end": {
+              "line": 4,
+              "character": 21
+            }
+          },
+          "message": "Incorrect type. Expected \"array\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "exclude-not-string",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 8
+            },
+            "end": {
+              "line": 8,
+              "character": 9
+            }
+          },
+          "message": "Incorrect type. Expected \"string\".",
+          "severity": 1
+        }
+      ]
+    },
+    {
+      "name": "override-rule-unknown",
+      "accepted": false,
+      "diagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 8,
+              "character": 8
+            },
+            "end": {
+              "line": 8,
+              "character": 12
+            }
+          },
+          "message": "Property R0 is not allowed.",
+          "severity": 1
+        }
+      ]
+    }
+  ],
+  "completion": {
+    "fields": [
+      {
+        "kind": 10,
+        "label": "$schema",
+        "insertText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\"",
+        "insertTextFormat": 2,
+        "filterText": "\"$schema\"",
+        "documentation": "Exact supported contract identity. This reserved release asset is unpublished; validation is offline.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "rules",
+        "insertText": "\"rules\": {$1}",
+        "insertTextFormat": 2,
+        "filterText": "\"rules\"",
+        "documentation": "Root requested policies. Unspecified rules use built-in advisory defaults.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"rules\": {$1}"
+        }
+      },
+      {
+        "kind": 10,
+        "label": "overrides",
+        "insertText": "\"overrides\": [$1]",
+        "insertTextFormat": 2,
+        "filterText": "\"overrides\"",
+        "documentation": "Matching overrides apply in declaration order, replacing assigned whole policies.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 1,
+              "character": 2
+            },
+            "end": {
+              "line": 1,
+              "character": 2
+            }
+          },
+          "newText": "\"overrides\": [$1]"
+        }
+      }
+    ],
+    "rules": [
+      {
+        "kind": 10,
+        "label": "R1",
+        "insertText": "\"R1\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R1\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R1\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R2",
+        "insertText": "\"R2\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R2\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R2\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R3",
+        "insertText": "\"R3\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R3\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R3\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R4",
+        "insertText": "\"R4\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R4\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R4\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R5",
+        "insertText": "\"R5\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R5\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R5\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R6",
+        "insertText": "\"R6\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R6\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R6\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R7",
+        "insertText": "\"R7\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R7\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R7\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R8",
+        "insertText": "\"R8\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R8\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R8\""
+        }
+      },
+      {
+        "kind": 10,
+        "label": "R9",
+        "insertText": "\"R9\"",
+        "insertTextFormat": 2,
+        "filterText": "\"R9\"",
+        "documentation": "Requested policy; `block` does not establish qualification.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 117
+            },
+            "end": {
+              "line": 0,
+              "character": 117
+            }
+          },
+          "newText": "\"R9\""
+        }
+      }
+    ],
+    "policies": [
+      {
+        "kind": 12,
+        "label": "\"off\"",
+        "insertText": "\"off\"",
+        "insertTextFormat": 2,
+        "documentation": "Request no evaluation of this rule.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"off\""
+        }
+      },
+      {
+        "kind": 12,
+        "label": "\"advisory\"",
+        "insertText": "\"advisory\"",
+        "insertTextFormat": 2,
+        "documentation": "Request evaluation without blocking; the default for unspecified root rules.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"advisory\""
+        }
+      },
+      {
+        "kind": 12,
+        "label": "\"block\"",
+        "insertText": "\"block\"",
+        "insertTextFormat": 2,
+        "documentation": "Request blocking, subject to separate scope and qualification requirements.",
+        "textEdit": {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 122
+            },
+            "end": {
+              "line": 0,
+              "character": 122
+            }
+          },
+          "newText": "\"block\""
+        }
+      }
+    ]
+  },
+  "hover": {
+    "contents": [
+      "Request evaluation without blocking; the default for unspecified root rules\\."
+    ],
+    "range": {
+      "start": {
+        "line": 0,
+        "character": 116
+      },
+      "end": {
+        "line": 0,
+        "character": 120
+      }
+    }
+  },
+  "invalidSettingDiagnostics": [
+    {
+      "range": {
+        "start": {
+          "line": 0,
+          "character": 121
+        },
+        "end": {
+          "line": 0,
+          "character": 129
+        }
+      },
+      "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+      "severity": 1,
+      "code": 1
+    }
+  ],
+  "jsoncCommentsTrailingCommas": "accepted",
+  "overrideBounds": "256 accepted;257 rejected"
+}
+exit=0

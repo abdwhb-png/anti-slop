@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-P01-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M003-P01",
+    "revision": 1,
+    "path": "../packets/P01-r1.md"
+  },
+  "actor": "firstmate:primary-1890471",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173"
+  ],
+  "freshContext": false,
+  "outcome": "correction_required",
+  "summary": "Functional evidence is substantial, but normal Git completion still sends group SIGKILL after the leader has been reaped. A real integration-path syscall observation recorded 12 such signals and the ownership regression failed. Correct identity ownership before continuing.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01/source-review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01/kill-observation.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01/kill-regression-red.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01/candidate-source-manifest.json"
+    }
+  ]
+}

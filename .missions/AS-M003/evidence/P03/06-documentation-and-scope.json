@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-15T21:48:14.540433+00:00",
+  "readme": "exactly two authorized status replacements; capability section, local journey and limits unchanged; new state links exist",
+  "acquire": "one 0o111 -> 0o100 replacement",
+  "workspaceTests": "two new public regressions; all pre-existing test bytes unchanged",
+  "patch": ".missions/AS-M003/evidence/P03/06-bounded-delta.patch",
+  "sourceHashes": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+  }
+}

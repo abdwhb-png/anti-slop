@@ -1,0 +1,41 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.98s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 4 tests
+test exclusions_required_inputs_and_workspace_boundaries_are_explicit ... FAILED
+test staged_bytes_and_working_context_remain_independent ... ok
+test retained_configuration_and_ranges_share_the_actual_generation ... FAILED
+test file_acquisition_is_bounded_before_success ... FAILED
+
+failures:
+
+---- exclusions_required_inputs_and_workspace_boundaries_are_explicit stdout ----
+
+thread 'exclusions_required_inputs_and_workspace_boundaries_are_explicit' (3600478) panicked at tests/workspace.rs:101:109:
+called `Result::unwrap_err()` on an `Ok` value: Capture { head: "fac759ffd6a8c284fd4d3c3120733850b3ca98e0", changes: [Change { path: "a.ts", before: Some(Source { path: "a.ts", role: Head, generation: "", git_blob: Some("564b12f45becba5fb2f70e270af067c1f13b3aab"), bytes: [104, 101, 97, 100, 10] }), after: Some(Source { path: "a.ts", role: Index, generation: "", git_blob: Some("867e33f23d4510956a317ad31882d45057f0f402"), bytes: [115, 101, 108, 101, 99, 116, 101, 100] }) }], context: [], configuration: Configuration { generation: "2e4ccb44d53055a6fa441527ed58b677307f4412a7af9b168653d4ce6f01a0c7", source: BuiltIn }, generation: "" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- retained_configuration_and_ranges_share_the_actual_generation stdout ----
+
+thread 'retained_configuration_and_ranges_share_the_actual_generation' (3600480) panicked at tests/workspace.rs:62:5:
+assertion `left == right` failed
+  left: None
+ right: Some([123, 34, 36, 115, 99, 104, 101, 109, 97, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 97, 98, 100, 119, 104, 98, 45, 112, 110, 103, 47, 97, 110, 116, 105, 45, 115, 108, 111, 112, 47, 114, 101, 108, 101, 97, 115, 101, 115, 47, 100, 111, 119, 110, 108, 111, 97, 100, 47, 99, 111, 110, 102, 105, 103, 45, 118, 49, 46, 48, 46, 48, 47, 97, 110, 116, 105, 45, 115, 108, 111, 112, 46, 115, 99, 104, 101, 109, 97, 46, 106, 115, 111, 110, 34, 44, 34, 114, 117, 108, 101, 115, 34, 58, 123, 34, 82, 49, 34, 58, 34, 98, 108, 111, 99, 107, 34, 125, 44, 34, 111, 118, 101, 114, 114, 105, 100, 101, 115, 34, 58, 91, 123, 34, 105, 110, 99, 108, 117, 100, 101, 34, 58, 91, 34, 42, 42, 47, 42, 46, 116, 115, 34, 93, 44, 34, 114, 117, 108, 101, 115, 34, 58, 123, 34, 82, 49, 34, 58, 34, 111, 102, 102, 34, 125, 125, 93, 125])
+
+---- file_acquisition_is_bounded_before_success stdout ----
+
+thread 'file_acquisition_is_bounded_before_success' (3600479) panicked at tests/workspace.rs:125:114:
+called `Result::unwrap_err()` on an `Ok` value: Capture { head: "fac759ffd6a8c284fd4d3c3120733850b3ca98e0", changes: [], context: [Source { path: "huge", role: Context, generation: "", git_blob: None, bytes: [120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 1 [synthetic Debug bytes omitted: 5241444 characters]
+
+
+failures:
+    exclusions_required_inputs_and_workspace_boundaries_are_explicit
+    file_acquisition_is_bounded_before_success
+    retained_configuration_and_ranges_share_the_actual_generation
+
+test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+error: test failed, to rerun pass `--test workspace`
+
+exit=101

@@ -1,0 +1,49 @@
+{
+  "recordedAt": "2026-11-15T21:49:08.691467+00:00",
+  "actor": "AS-M003-capture:s1794779016.795528.15663",
+  "assignment": "e56f7570-c50b-4a74-b58c-b3149c43c30b",
+  "threadId": "01a1e12a-785d-7580-8d36-251d1762418d",
+  "sourceHead": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "sourceBranch": "fm/AS-M003-capture",
+  "sourceFiles": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+  },
+  "profileLimit": "Launch brief deliberately retains codex/gpt-6.1-sol/xhigh because MDD start drops prepared model/effort axes; no model/account/provider/settings changes were made. No claim that low effort or forwarding works; serving-side routing/account identity is not independently authenticated.",
+  "observedLocalProfile": {
+    "model": "gpt-6.1-sol",
+    "model_reasoning_effort": "xhigh"
+  },
+  "currentProcessAncestry": [
+    {
+      "pid": 867710,
+      "name": "python3"
+    },
+    {
+      "pid": 797501,
+      "name": "codex"
+    },
+    {
+      "pid": 3553909,
+      "name": "bash"
+    },
+    {
+      "pid": 3108050,
+      "name": "tmux: server"
+    },
+    {
+      "pid": 1326,
+      "name": "systemd"
+    },
+    {
+      "pid": 1,
+      "name": "systemd"
+    }
+  ]
+}

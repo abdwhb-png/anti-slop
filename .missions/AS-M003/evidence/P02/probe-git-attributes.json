@@ -1,0 +1,186 @@
+[
+  {
+    "attributeLocation": "working",
+    "attributeSource": null,
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmppddmf3cd/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmppddmf3cd/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeLocation": "working",
+    "attributeSource": null,
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmppddmf3cd/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmppddmf3cd/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 218
+  },
+  {
+    "attributeLocation": "working",
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeLocation": "working",
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [],
+    "stderr": "",
+    "inventoryBytes": 218
+  },
+  {
+    "attributeLocation": "info",
+    "attributeSource": null,
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeLocation": "info",
+    "attributeSource": null,
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 218
+  },
+  {
+    "attributeLocation": "info",
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-files",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 104
+  },
+  {
+    "attributeLocation": "info",
+    "attributeSource": "4b825dc642cb6eb9a060e54bf8d69288fbee4904",
+    "command": [
+      "diff-index",
+      "--raw",
+      "--ita-invisible-in-index",
+      "--no-renames",
+      "--no-relative",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--ignore-submodules=none",
+      "--abbrev=64",
+      "-z",
+      "HEAD",
+      "--"
+    ],
+    "exit": 0,
+    "helpers": [
+      "helper-ran-filter.probe.process"
+    ],
+    "stderr": "error: Unexpected line 'git-filter-client', expected git-filter-server\nerror: initialization for subprocess 'touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat' failed\nerror: touch /tmp/tmp36rmnb0y/helper-ran-filter.probe.process; cat died of signal 15\n",
+    "inventoryBytes": 218
+  }
+]

@@ -1,0 +1,128 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.06s
+     Running tests/cli.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/cli-00799c8ac7757c52)
+
+running 11 tests
+test config_help_describes_the_exact_local_inspection_surface ... ok
+test config_explain_returns_defaults_as_json ... ok
+test help_is_available ... ok
+test invocation_without_arguments_is_not_a_successful_analysis ... ok
+test default_toon_and_explicit_json_have_identical_real_cli_views ... FAILED
+test invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits ... FAILED
+test inspection_argument_errors_are_structured_redacted_and_precede_file_access ... FAILED
+test version_matches_package_metadata ... ok
+test unavailable_analysis_is_rejected ... ok
+test missing_flag_values_identify_the_flag_and_preserve_encoding ... FAILED
+test real_cli_explicit_selection_ordered_overrides_and_cwd_are_read_only ... ok
+
+failures:
+
+---- default_toon_and_explicit_json_have_identical_real_cli_views stdout ----
+
+thread 'default_toon_and_explicit_json_have_identical_real_cli_views' (3641432) panicked at tests/cli.rs:72:5:
+node:internal/modules/package_json_reader:343
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@toon-format/toon' imported from /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tools/config-conformance/decode.mjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:343:9)
+    at packageResolve (node:internal/modules/esm/resolve:751:25)
+    at moduleResolve (node:internal/modules/esm/resolve:840:18)
+    at defaultResolve (node:internal/modules/esm/resolve:973:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+    at #resolve (node:internal/modules/esm/loader:690:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v26.13.0
+
+
+---- invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits stdout ----
+
+thread 'invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits' (3641443) panicked at tests/cli.rs:72:5:
+node:internal/modules/package_json_reader:343
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@toon-format/toon' imported from /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tools/config-conformance/decode.mjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:343:9)
+    at packageResolve (node:internal/modules/esm/resolve:751:25)
+    at moduleResolve (node:internal/modules/esm/resolve:840:18)
+    at defaultResolve (node:internal/modules/esm/resolve:973:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+    at #resolve (node:internal/modules/esm/loader:690:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v26.13.0
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- inspection_argument_errors_are_structured_redacted_and_precede_file_access stdout ----
+
+thread 'inspection_argument_errors_are_structured_redacted_and_precede_file_access' (3641442) panicked at tests/cli.rs:72:5:
+node:internal/modules/package_json_reader:343
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@toon-format/toon' imported from /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tools/config-conformance/decode.mjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:343:9)
+    at packageResolve (node:internal/modules/esm/resolve:751:25)
+    at moduleResolve (node:internal/modules/esm/resolve:840:18)
+    at defaultResolve (node:internal/modules/esm/resolve:973:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+    at #resolve (node:internal/modules/esm/loader:690:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v26.13.0
+
+
+---- missing_flag_values_identify_the_flag_and_preserve_encoding stdout ----
+
+thread 'missing_flag_values_identify_the_flag_and_preserve_encoding' (3641458) panicked at tests/cli.rs:72:5:
+node:internal/modules/package_json_reader:343
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@toon-format/toon' imported from /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tools/config-conformance/decode.mjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:343:9)
+    at packageResolve (node:internal/modules/esm/resolve:751:25)
+    at moduleResolve (node:internal/modules/esm/resolve:840:18)
+    at defaultResolve (node:internal/modules/esm/resolve:973:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:708:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:728:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:766:56)
+    at #resolve (node:internal/modules/esm/loader:690:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:610:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:277:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v26.13.0
+
+
+
+failures:
+    default_toon_and_explicit_json_have_identical_real_cli_views
+    inspection_argument_errors_are_structured_redacted_and_precede_file_access
+    invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits
+    missing_flag_values_identify_the_flag_and_preserve_encoding
+
+test result: FAILED. 7 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `--test cli`
+
+exit=101

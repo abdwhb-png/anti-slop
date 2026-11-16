@@ -1,0 +1,11 @@
+$ cargo test --frozen --test workspace cancellation_empty_comparisons_and_required_head_are_distinct -- --exact
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test cancellation_empty_comparisons_and_required_head_are_distinct ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.28s
+
+
+exit=0

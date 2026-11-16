@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "case": "existing",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: output already exists; choose a new --output directory\n"
+    },
+    {
+      "case": "missing-output",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: the following arguments are required: --output\n"
+    },
+    {
+      "case": "fresh",
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "case": "repeat",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: output already exists; choose a new --output directory\n"
+    },
+    {
+      "case": "unknown",
+      "exit": 2,
+      "stdout": "",
+      "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: the following arguments are required: --output\n"
+    },
+    {
+      "case": "help",
+      "exit": 0,
+      "stdout": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\n\nReuse P01's canonical sampler with a comparison and a fresh output directory.\n\npositional arguments:\n  {staged,unstaged,local,base}\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT       new directory for observations; existing paths are\n                        refused before sampling\n",
+      "stderr": ""
+    }
+  ],
+  "sampler": "harmless external-boundary stand-in; no application sampling or Cargo",
+  "realObservationsUnchanged": {
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-local.json": "afa33906c1e04d74ea77c52655b845703c6b58969558bd8ca6cd6817e8f398b3",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-base.json": "59a7038290bbdacc634c3c770cb866182617c904ccb98262c47cdca3de85e857",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-staged.json": "948da000d0ba042a2b49b57dac9423be438bdee3d06c9a429daee10f7ce0dc93",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-unstaged.json": "094d2bb10444661f49bb5f6c0706c475e1446a15b55ed04e012a8652467a6065",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-1.log": "ed19788b5b85ac5ae2c5c34770acd9caa181035b1fa98139d3d6f77b4128b62a",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-5.log": "d0ae9aa10e0f8b0978c1f4a20512a992eda382ed5c8c0457cf9c54dc9c966afa",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-1.log": "18c73bbe6c709dcf73b92d8f75323e42d8a068eb7e62b0d30b3b5ca32a959444",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-5.log": "432284a13e5a0b50d783ce8e10ecd9ae690e205769222b69025dea8c9c2d96c8",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-5.log": "cbab431fad3c143fdb3ba208d826b21e55a09f721448036c19dd522e5647b55b",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-1.log": "b54df3808067501752d996ab10cd46e3f53744c25f31b0f988079f9ebd50db0d",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-5.log": "2c48322481f55e2e623aa86ef3555d8f31e2513f5fbebcfbeb9a066f59de25f7",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-1.log": "948e5a17f8ca837de55d7ae29ae6e4d61551d6bc77d36800a619c2664657a9a3"
+  },
+  "existingRefusedBeforeSampler": true,
+  "freshDestinationExercised": true,
+  "measurementsApplicability": "Destination/argument validation only; capture code, scenarios and sampler unchanged."
+}

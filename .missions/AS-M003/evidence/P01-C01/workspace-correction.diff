@@ -1,0 +1,148 @@
+diff --git a/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/tests/workspace.rs b/tests/workspace.rs
+index 6b7f7cc..d504074 100644
+--- a/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/tests/workspace.rs
++++ b/tests/workspace.rs
+@@ -644,13 +644,19 @@ fn controlled_git(kind: &str, intervention: &str) {
+         .env("CAPTURE_SCENARIO_KIND", kind)
+         .output()
+         .unwrap();
++    assert!(
++        !String::from_utf8_lossy(&output.stderr)
++            .contains("OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP"),
++        "{kind}: {}",
++        String::from_utf8_lossy(&output.stderr)
++    );
+     assert!(
+         output.status.success(),
+         "{kind}: {}\n{}",
+         String::from_utf8_lossy(&output.stdout),
+         String::from_utf8_lossy(&output.stderr)
+     );
+-    if matches!(kind, "stall" | "inventory") {
++    if matches!(kind, "stall" | "inventory" | "early-exit") {
+         let pid: u32 = fs::read_to_string(root.path().join("owned-pid"))
+             .unwrap()
+             .trim()
+@@ -688,6 +694,13 @@ fn controlled_git_child() {
+     use anti_slop::workspace::CaptureError;
+     let root = std::env::var_os("CAPTURE_SCENARIO_ROOT").expect("controlled fixture");
+     let kind = std::env::var("CAPTURE_SCENARIO_KIND").unwrap();
++    if kind == "early-exit" {
++        unsafe extern "C" {
++            fn prctl(option: i32, ...) -> i32;
++        }
++        // Isolated test subprocess adopts the stalled descendant so the fixture can reap it.
++        assert_eq!(unsafe { prctl(36, 1u64, 0u64, 0u64, 0u64) }, 0);
++    }
+     let result = capture_staged(
+         Path::new(&root),
+         &StagedRequest {
+@@ -740,6 +753,36 @@ fn controlled_git_child() {
+         }
+         "unstable" => assert!(matches!(result, Err(CaptureError::Unstable)), "{result:?}"),
+         "stall" => assert!(matches!(result, Err(CaptureError::Timeout)), "{result:?}"),
++        "early-exit" => {
++            assert!(matches!(result, Err(CaptureError::Timeout)), "{result:?}");
++            let pid: i32 = fs::read_to_string(Path::new(&root).join("descendant-pid"))
++                .unwrap()
++                .trim()
++                .parse()
++                .unwrap();
++            unsafe extern "C" {
++                fn waitpid(pid: i32, status: *mut i32, options: i32) -> i32;
++            }
++            let start = std::time::Instant::now();
++            let mut status = 0;
++            loop {
++                let waited = unsafe { waitpid(pid, &mut status, 1) };
++                if waited == pid {
++                    break;
++                }
++                assert_eq!(waited, 0, "Failed to observe owned descendant exit");
++                assert!(
++                    start.elapsed() < std::time::Duration::from_secs(2),
++                    "Owned descendant remained alive"
++                );
++                std::thread::sleep(std::time::Duration::from_millis(2));
++            }
++            assert_eq!(
++                status & 0x7f,
++                9,
++                "Owned descendant must be killed, not merely abandoned"
++            );
++        }
+         "oversize" => assert!(matches!(result, Err(CaptureError::Limit(_))), "{result:?}"),
+         "inventory" => assert!(matches!(result, Err(CaptureError::Limit(_))), "{result:?}"),
+         _ => panic!("unknown controlled scenario"),
+@@ -886,13 +929,13 @@ fn live_growing_context_cannot_escape_acquisition_limits() {
+     let writer = std::thread::spawn(move || {
+         let mut file = fs::OpenOptions::new().append(true).open(path).unwrap();
+         let chunk = [b'x'; 8192];
+-        for _ in 0..128 {
++        for _ in 0..129 {
+             file.write_all(&chunk).unwrap();
+         }
+         send.send(()).unwrap();
+         while !other.load(Ordering::Relaxed) {
+             // Keep the fixture bounded too, while repeatedly changing the observed input.
+-            file.set_len(anti_slop::workspace::MAX_FILE_BYTES as u64)
++            file.set_len((anti_slop::workspace::MAX_FILE_BYTES + chunk.len()) as u64)
+                 .unwrap();
+             file.write_all(&chunk).unwrap();
+             std::thread::yield_now();
+@@ -1013,3 +1056,55 @@ esac
+ "#,
+     );
+ }
++
++// Observes the actual caller path's syscalls while the existing workflow assertions stay real.
++#[test]
++fn owned_group_signals_reserve_the_leader_until_cleanup_finishes() {
++    let observer = TempDir::new().unwrap();
++    let library = observer.path().join("observe-kill.so");
++    let build = Command::new("cc")
++        .args(["-shared", "-fPIC", "-O2"])
++        .arg(Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/fixtures/process/observe-kill.c"))
++        .args(["-o"])
++        .arg(&library)
++        .arg("-ldl")
++        .output()
++        .unwrap();
++    assert!(
++        build.status.success(),
++        "{}",
++        String::from_utf8_lossy(&build.stderr)
++    );
++    for scenario in [
++        "staged_bytes_and_working_context_remain_independent",
++        "stalled_git_is_killed_and_reaped",
++        "expanding_git_inventory_stops_at_its_byte_limit",
++        "early_exited_git_leader_cleans_up_stalled_descendant_pipe",
++    ] {
++        let output = Command::new(std::env::current_exe().unwrap())
++            .args([scenario, "--exact", "--nocapture", "--test-threads=1"])
++            .env("LD_PRELOAD", &library)
++            .output()
++            .unwrap();
++        assert!(
++            output.status.success(),
++            "{scenario}: {}\n{}",
++            String::from_utf8_lossy(&output.stdout),
++            String::from_utf8_lossy(&output.stderr)
++        );
++        assert!(
++            !String::from_utf8_lossy(&output.stderr)
++                .contains("OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP"),
++            "{scenario}: Group signaling after leader PID reservation was lost: {}",
++            String::from_utf8_lossy(&output.stderr)
++        );
++    }
++}
++
++#[test]
++fn early_exited_git_leader_cleans_up_stalled_descendant_pipe() {
++    controlled_git(
++        "early-exit",
++        "echo $$ > owned-pid\n/bin/sleep 30 &\necho $! > descendant-pid\nexit 0",
++    );
++}

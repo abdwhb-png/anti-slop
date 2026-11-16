@@ -1,0 +1,36 @@
+$ cargo test --frozen --test workspace four_comparisons_select_their_exact_sides_and_independent_context -- --exact
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+error[E0618]: expected function, found `Capture`
+   --> tests/workspace.rs:151:16
+    |
+ 86 |     let capture = capture(
+    |         ------- `capture` has type `Capture`
+...
+151 |     let next = capture(root.path(), &CaptureRequest::new(Selection::Staged)).unwrap();
+    |                ^^^^^^^------------------------------------------------------
+    |                |
+    |                call expression requires function
+
+error[E0618]: expected function, found `Capture`
+   --> tests/workspace.rs:350:21
+    |
+333 |       let capture = capture(
+    |           ------- `capture` has type `Capture`
+...
+350 |           let error = capture(
+    |                       -^^^^^^- help: consider using a semicolon here to finish the statement: `;`
+    |  _____________________|
+    | |
+351 | |             root.path(),
+352 | |             &CaptureRequest {
+353 | |                 exclusions: vec![path.into(), path.into()],
+354 | |                 ..CaptureRequest::new(Selection::Staged)
+355 | |             },
+356 | |         )
+    | |_________- call expression requires function
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `anti-slop` (test "workspace") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...
+
+exit=101

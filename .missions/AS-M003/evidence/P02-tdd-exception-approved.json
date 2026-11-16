@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-11-15T20:37:06.251639+00:00",
+  "mission": "AS-M003",
+  "revision": 2,
+  "packet": "AS-M003-P02 r1",
+  "assignment": "6508c722-06cb-4a2a-a694-d4bd33999ec4",
+  "question": "Capitaine, votre AGENTS.md et le contrat AS-M003 imposent un test qui échoue pour la bonne raison avant chaque changement. Les nouvelles comparaisons ont été codées avant cette preuve. Autorisez-vous exceptionnellement leur conservation, avec cet écart consigné, les tests complets et la revue finale indépendante ? L’autre option est de conserver cette tentative comme archive puis reprendre ces comparaisons depuis le dernier code accepté.",
+  "exactUserAnswer": "Conserver avec l’écart explicite et toutes les vérifications",
+  "questionItemId": "[\"request_user_input_async\",\"call_023864284e2b40fc8bff576d2cf59346\",0]",
+  "scope": "Retain the comparison extension already implemented before a valid behavioral RED, explicitly disclosed in P02/tdd-gap.md and bound to the unchanged held source. No retroactive RED claim. New behavior and corrections still require intended RED before production changes.",
+  "evidence": [
+    "P02/tdd-gap.md",
+    "P02/decision-hold-source.json",
+    "P02-tdd-decision-pending.json"
+  ],
+  "conditions": [
+    "Complete r2 verification including stable-candidate CI and controlled resource observations.",
+    "Fresh independent final whole-mission review."
+  ],
+  "unchangedAuthority": "No commit, publication, integration, No-Mistakes, cleanup, new account or provider authorization."
+}

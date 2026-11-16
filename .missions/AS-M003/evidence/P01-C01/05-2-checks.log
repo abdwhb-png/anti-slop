@@ -1,0 +1,3 @@
+$ rustfmt --edition 2024 --check src/workspace/git.rs tests/workspace.rs
+
+exit=0

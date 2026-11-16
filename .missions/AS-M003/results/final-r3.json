@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-final-review",
+  "revision": 3,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "AS-M003-capture:s1794784897.1580054.32156",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173",
+    "AS-M003-capture:s1794779016.795528.15663",
+    "AS-M003-capture:s1794784176.1476361.7246"
+  ],
+  "freshContext": true,
+  "outcome": "accepted",
+  "summary": "Fresh independent whole-mission reviewer accepts the complete r2 capture outcome with the exact earlier approved P02 TDD exception and P04 correction. Actual exact-path and whitespace-class attributes preserve historical raw bytes while maintaining source/docs/metadata/unrelated-path checks. Independent focused policy and capture checks passed; current local CI receipt/log, all accepted source hashes, prior negative evidence and measurement applicability were verified. Corrected remote CI and publication provenance remain separately required.",
+  "deliveryAssessment": {
+    "commit": "aab8746a39859edccd1e4326fef45c5e8bf0959e",
+    "decision": "continue",
+    "rationale": "The corrected candidate remains the same coherent capture delivery targeting main. Local acceptance is separate from authorized commit/publication and the still-required actual remote CI and reader examination; integration is not claimed."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-5823ce78/initial-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-5823ce78/final-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-5823ce78/evidence-inspection.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-5823ce78/focused-checks.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/10-stable-ci.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/13-return-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/ci-correction-approval.json"
+    }
+  ]
+}

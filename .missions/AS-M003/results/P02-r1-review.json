@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-P02-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M003-P02",
+    "revision": 1,
+    "path": "../packets/P02-r1.md"
+  },
+  "actor": "firstmate:primary-1890471",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The complete comparison/rename/qualification packet is accepted with the exact user-approved TDD sequencing exception retained. Actual source, failure and CI evidence, controlled observations and two independently rerun public-boundary scenarios support this packet. Fresh independent whole-mission validation remains required.",
+  "deliveryAssessment": {
+    "commit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "decision": "continue",
+    "rationale": "All capture selectors, configuration ownership, bounded acquisition and their qualification form the approved coherent source-capture outcome. No unrelated product or delivery scope was added; commit, publication and integration remain unauthorized."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P02/review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P02/focused-checks.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/source-state.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/23-full-ci.log"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/measurements-staged.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/measurements-unstaged.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/measurements-local.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/measurements-base.json"
+    }
+  ]
+}

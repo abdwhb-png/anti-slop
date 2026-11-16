@@ -1,0 +1,77 @@
+{
+  "reason": "Git diff BASE omits untracked additions. Explicit no-index checks require exit 1 for a nonempty clean diff and empty diagnostics; actual invalid probes return 3. No staging used.",
+  "beforeAfterGitProbes": [
+    {
+      "case": "clean",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/no-index-clean.txt"
+      ],
+      "exit": 1,
+      "output": ""
+    },
+    {
+      "case": "trailing",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/no-index-trailing.txt"
+      ],
+      "exit": 3,
+      "output": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/no-index-trailing.txt:1: trailing whitespace.\n+content \n"
+    },
+    {
+      "case": "blank-eof",
+      "command": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/no-index-blank-eof.txt"
+      ],
+      "exit": 3,
+      "output": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/no-index-blank-eof.txt:2: new blank line at EOF.\n"
+    }
+  ],
+  "untrackedFilesCheckedExplicitly": [
+    {
+      "path": ".missions/AS-M003/evidence/P04/00-before-manifest.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/01-live-profile.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/09-stable-candidate.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/.gitattributes",
+      "exit": 1,
+      "diagnostics": ""
+    }
+  ],
+  "failedAuditRetained": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/12-audit-recorder-failure.json"
+}

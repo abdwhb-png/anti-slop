@@ -1,0 +1,9 @@
+{
+  "harness": "codex",
+  "model": "gpt-6.1-sol",
+  "effort": "xhigh",
+  "method": "Own live tmux pane %2 footer",
+  "verified": true,
+  "rawOutput": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/live-profile.log",
+  "limitation": "MDD start does not forward prepared model/effort axes; deliberately retain the accepted current profile. No configuration, account, provider, route or quota-gate change. Serving-side routing and account identity not independently authenticated."
+}

@@ -28,7 +28,7 @@ This is the existing roadmap's first workflow revision. It retains the complete 
 | Accepted architecture and its rationale | [Existing ADRs](decisions/README.md) |
 | Implemented capabilities | [README current status](../README.md#current-status), checked against source |
 | Destination, dependencies and the next approval frame | This roadmap |
-| One bounded outcome and its validation/authority | [AS-M001 revision 2](missions/AS-M001/r2.md); [recovered AS-M002 contract](../.missions/AS-M002/recovery/contract-r4.txt), retained as historical evidence |
+| One bounded outcome and its validation/authority | [AS-M001 revision 2](missions/AS-M001/r2.md); [recovered AS-M002 contract](../.missions/AS-M002/recovery/contract-r4.txt), retained as historical evidence; [AS-M003 revision 2](missions/AS-M003/r2.md), approved with independent prerequisite reviews and conditional implementation; commit and publication remain unauthorized |
 | Starting evidence and resumable mission state | [Preparation evidence](../.missions/AS-M001/evidence/preparation-2026-09-23.md), [state](../.missions/AS-M001/state.json) and append-only [history](../.missions/AS-M001/history.jsonl) |
 
 Use the repository-installed [mission-driven-dev skill](../.agents/skills/mission-driven-dev/SKILL.md) for phase instructions and artifact formats. Historical preparation used a sibling checkout; current execution uses this installed copy. Do not substitute the retained generic prompt if it is unavailable. The [standalone task template](templates/task.md) remains available for work outside a mission; Task Packets are derived from an approved contract just before authorized dispatch.
@@ -44,6 +44,8 @@ The historical preparation inspected `main` at `0168328e1bd1328bd2ca613e38406563
 O2 configuration composition, Pi packaging/hooks, later operating systems, Trellis, hosted collection, automatic rewriting and training/deploying a replacement model stay outside v1. Preserve the accepted extensibility boundaries without implementing those future products.
 
 ## Next approval frame: W01
+
+AS-M003 has an [approved revision 2 contract](missions/AS-M003/r2.md) and [ready state](../.missions/AS-M003/state.json). The user explicitly authorized independent prerequisite reviews, transfer of the local MDD preparation and approved v0.5 skill into an isolated mission copy, then coordinated implementation after acceptance. The [complete independent prerequisite verdict](../.missions/AS-M003/evidence/prerequisites-accepted.json) accepts both the unchanged contract and the recovered AS-M002 configuration tree at the recorded commit, without recreating missing historical evidence. Supporting context remains an explicit caller-provided list. The [skill transition](../.missions/AS-M003/evidence/mdd-skill-transition.json) preserves the exact v0.5 identity and archived v0.2; previous mission archives and contract revision 1 are unchanged. Commit, publication, integration and No-Mistakes invocation remain unauthorized. This individual execution authority does not approve the remaining wave or later missions.
 
 **Wave decision pending:** AS-M001 and the original AS-M002 execution have separate recorded authority. AS-M002 recovery does not authorize AS-M003. Approve or revise the remaining wave outcomes separately. Each eventual executable mission concerns the Anti-Slop repository alone. Approval of this frame does not resolve a substantive open product choice or authorize launch, delegation, commits, installation, external transmission or publication.
 

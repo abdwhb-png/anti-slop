@@ -1,0 +1,11 @@
+$ cargo test --frozen --test workspace intent_to_add_is_absent_from_staged_and_is_a_working_addition -- --exact
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test intent_to_add_is_absent_from_staged_and_is_a_working_addition ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.15s
+
+
+exit=0

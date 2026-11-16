@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-P03-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M003-P03",
+    "revision": 1,
+    "path": "../packets/P03-r1.md"
+  },
+  "actor": "firstmate:primary-1890471",
+  "implementers": [
+    "AS-M003-capture:s1794779016.795528.15663"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The bounded Git owner-execute correction, real public RED/GREEN regressions, current source/CI proof and renewed observations are examined and accepted as a packet. A fresh independent corrected whole-mission verdict remains required.",
+  "deliveryAssessment": {
+    "commit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "decision": "continue",
+    "rationale": "The correction restores exact selected modes within the existing capture mission and changes no product or delivery scope; no commit/publication/integration authority is added."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P03/review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P03/focused-checks.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/01-red-working-modes.log"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/02-green-working-modes.log"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/04-full-ci.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/07-measurement-inspection.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/08-source-identity.json"
+    }
+  ]
+}

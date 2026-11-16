@@ -1,0 +1,26 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.77s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 2 tests
+
+thread 'working_modes_ignore_group_or_other_execute_without_owner_execute' (816772) panicked at tests/workspace.rs:1089:13:
+Unstaged must ignore non-owner execute permission 654: [Change { path: "a.ts", before: Some(Source { path: "a.ts", role: Index, generation: "7f53e6c1bb5e1a1c9aff8ba6b2016412ecd9bde51dcfd696b5b736474f791b9c", bytes: 5 }), after: Some(Source { path: "a.ts", role: Working, generation: "e2f2ef0ceca91daa108c6388bf74e585640878f5d3780239519a2b40a8ec82de", bytes: 5 }) }]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test working_modes_ignore_group_or_other_execute_without_owner_execute ... FAILED
+
+thread 'working_modes_capture_owner_execute_removal_with_group_execute_remaining' (816771) panicked at tests/workspace.rs:1041:9:
+assertion `left == right` failed: Unstaged must retain the real Git executable-mode removal
+  left: []
+ right: ["a.ts"]
+test working_modes_capture_owner_execute_removal_with_group_execute_remaining ... FAILED
+
+failures:
+
+failures:
+    working_modes_capture_owner_execute_removal_with_group_execute_remaining
+    working_modes_ignore_group_or_other_execute_without_owner_execute
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 34 filtered out; finished in 0.24s
+
+error: test failed, to rerun pass `--test workspace`

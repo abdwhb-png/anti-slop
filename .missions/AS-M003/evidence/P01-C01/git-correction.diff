@@ -1,0 +1,148 @@
+diff --git a/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/git.rs b/src/workspace/git.rs
+index 092a0cf..f7ca7a4 100644
+--- a/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/git.rs
++++ b/src/workspace/git.rs
+@@ -68,48 +68,42 @@ impl Git {
+             let start = Instant::now();
+             let mut output = None;
+             let mut error_output = false;
+-            let mut status = None;
+-            let result = loop {
++            let result = 'waiting: loop {
+                 while let Ok((is_stdout, bytes)) = receive.try_recv() {
+                     match bytes {
+                         Ok(bytes) if is_stdout => output = Some(bytes),
+                         Ok(_) => error_output = true,
+-                        Err(error) => {
+-                            owned.stop();
+-                            return Err(error);
+-                        }
++                        Err(error) => break 'waiting Err(error),
+                     }
+                 }
+-                if status.is_none() {
+-                    status = match owned.child.try_wait() {
+-                        Ok(status) => status,
+-                        Err(_) => {
+-                            owned.stop();
+-                            return Err(CaptureError::Unavailable("Cannot wait for Git".into()));
+-                        }
+-                    };
+-                }
+-                if let Some(status) = status
+-                    && output.is_some()
+-                    && error_output
+-                {
+-                    break if status.success() {
+-                        Ok(output.take().expect("received stdout"))
+-                    } else {
+-                        Err(CaptureError::Unavailable(format!(
+-                            "Git {} failed; required repository data is unavailable",
+-                            args[0]
+-                        )))
+-                    };
++                let exited = match owned.exited() {
++                    Ok(exited) => exited,
++                    Err(_) => {
++                        break Err(CaptureError::Unavailable("Cannot observe Git exit".into()));
++                    }
++                };
++                if exited && output.is_some() && error_output {
++                    break Ok(());
+                 }
+                 if start.elapsed() >= GIT_TIMEOUT {
+                     break Err(CaptureError::Timeout);
+                 }
+                 thread::sleep(Duration::from_millis(2));
+             };
+-            // Kill the whole owned group before scoped readers are joined, including on timeout.
+-            owned.stop();
+-            result
++            // Finish all group signaling while the leader still reserves its numeric identity,
++            // then reap it before joining readers (a descendant may have kept a pipe open).
++            let status = owned
++                .finish()
++                .map_err(|_| CaptureError::Unavailable("Cannot clean up Git".into()))?;
++            result?;
++            if status.success() {
++                Ok(output.take().expect("received stdout"))
++            } else {
++                Err(CaptureError::Unavailable(format!(
++                    "Git {} failed; required repository data is unavailable",
++                    args[0]
++                )))
++            }
+         })
+     }
+ 
+@@ -174,24 +168,60 @@ struct OwnedChild {
+     stopped: bool,
+ }
+ impl OwnedChild {
+-    fn stop(&mut self) {
+-        if self.stopped {
+-            return;
++    fn exited(&self) -> std::io::Result<bool> {
++        let mut observation = ChildObservation {
++            signal: 0,
++            payload: [0; 124],
++        };
++        // Linux waitid(P_PID, ..., WEXITED | WNOHANG | WNOWAIT) observes exit without
++        // reaping. A zombie leader keeps the PID/PGID reserved through group cleanup.
++        let result = unsafe { waitid(1, self.child.id(), &mut observation, 4 | 1 | 0x01000000) };
++        if result == 0 {
++            return Ok(observation.signal != 0);
++        }
++        let error = std::io::Error::last_os_error();
++        if error.kind() == std::io::ErrorKind::Interrupted {
++            Ok(false)
++        } else {
++            Err(error)
++        }
++    }
++
++    fn finish(&mut self) -> std::io::Result<std::process::ExitStatus> {
++        let mut signal_error = None;
++        if !self.stopped {
++            self.stopped = true;
++            let result = unsafe { kill(-(self.child.id() as i32), 9) };
++            if result != 0 {
++                let error = std::io::Error::last_os_error();
++                // An exited group with no live members can report ESRCH while its leader
++                // is still an unreaped zombie. Any other signaling failure stays visible.
++                if error.raw_os_error() != Some(3) {
++                    signal_error = Some(error);
++                    let _ = self.child.kill();
++                }
++            }
+         }
+-        self.stopped = true;
+-        // Each child starts a new process group. Negative PID addresses only that owned group.
+-        unsafe {
+-            kill(-(self.child.id() as i32), 9);
++        let status = self.child.wait()?;
++        if let Some(error) = signal_error {
++            return Err(error);
+         }
+-        let _ = self.child.kill();
+-        let _ = self.child.wait();
++        Ok(status)
+     }
+ }
+ impl Drop for OwnedChild {
+     fn drop(&mut self) {
+-        self.stop();
++        let _ = self.finish();
+     }
+ }
++
++// Linux siginfo_t is 128 bytes. Only its leading si_signo is read; the union stays opaque.
++#[repr(C, align(8))]
++struct ChildObservation {
++    signal: i32,
++    payload: [u8; 124],
++}
+ unsafe extern "C" {
+     fn kill(pid: i32, signal: i32) -> i32;
++    fn waitid(kind: i32, id: u32, observation: *mut ChildObservation, options: i32) -> i32;
+ }

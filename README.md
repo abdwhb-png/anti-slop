@@ -4,13 +4,52 @@ A Rust tool for evidence-based code review, designed for explicit CLI/CI analysi
 
 ## Current status
 
-This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
+This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides bounded four-selector source capture through `workspace::capture`; the [AS-M003 mission state](.missions/AS-M003/state.json) owns its packet and whole-mission verdicts. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
 
 The first usable version targets Linux, including WSL2. macOS and native Windows are later work. This is the selected support scope, not a completed platform qualification.
 
 The initial dependency group is installed in the root Cargo package. Later engine, storage, codec and language dependencies remain in the [bootstrap design](docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md) until the corresponding implementation begins. The existing research probes retain their own manifests and lockfiles; they are not workspace members.
 
 Project configuration is specified as a root `.anti-slop.jsonc` with a versioned `$schema` link and path overrides in [ADR-008](docs/decisions/008-project-configuration-and-schema.md). That decision documents O1's limits and the compatible path toward O2 subproject configurations. The local loader and inspection boundary are available; see [the local configuration contract](docs/configuration.md). The generated local schema and headless VS Code editor-service conformance are available; the reserved public schema URL is unpublished; the installed TOML parser belongs to the earlier scaffold and does not define the selected format.
+
+## Source capture through the library
+
+Call `workspace::capture` with exactly one explicit `Selection`. `CaptureRequest::new` requires it; the Rust type has no default, missing or conflicting selector state. The existing executable remains a configuration inspector; there is no analysis/capture CLI command.
+
+| Selection | Before and selected after inputs |
+| --- | --- |
+| `Staged` | Once-resolved HEAD to index; after-side role `Index`. Worktree-only and untracked changes are absent. |
+| `Unstaged` | Index to actual working files, including nonignored untracked inputs; HEAD is not required. Equal index/working bytes and modes produce no change. |
+| `Local` | Once-resolved HEAD directly to working files, including nonignored untracked inputs. An index edit canceled by working bytes produces no local change. |
+| `Base(reference)` | The supplied reference, resolved once, directly to working files; never merge-base or an implicit branch fallback. |
+
+```rust,no_run
+use anti_slop::workspace::{capture, CaptureRequest, Selection};
+use std::path::Path;
+
+let request = CaptureRequest {
+    context: vec!["src/consumer.ts".into()],
+    exclusions: vec!["private.txt".into()],
+    ..CaptureRequest::new(Selection::Base("release".into()))
+};
+let captured = capture(Path::new("/path/to/repository"), &request)?;
+let policy = captured.configuration().resolve(Path::new("src/consumer.ts"))?;
+# Ok::<(), Box<dyn std::error::Error>>(())
+```
+
+The read-only result retains both available comparison sides, actual bytes, paths, roles, regular/executable modes, available Git blob identities and comparison/configuration generations. A deletion has an absent after-side; an empty file has zero bytes; a valid empty selection has no changes and still binds its observed inputs. Working and context roles remain separate at the same path, sharing one captured working-file observation. Earlier sources and compiled configuration remain inspectable after the originals change or disappear. Byte ranges bind exact retained source path, role and generation; offsets are bytes, including empty/EOF and partial Unicode slices.
+
+Rename attribution is deterministic: pair a deletion and addition only when their exact bytes and normalized mode agree and the content group contains exactly one of each. Differing `before.path` and `after.path` identify that attribution; `Change.path` is the after path (or the old path for a deletion). The rule is exact-content evidence, not proof of the author's physical move operation. Indistinguishable groups remain explicit unpaired deletions/additions. Both names are checked for exclusions before acquiring their content.
+
+One configuration is captured and compiled per attempt; every path view uses its retained bytes, policies and origins. Existing explicit external configuration selection stays supported. Caller exclusions are normalized literal workspace-relative paths, independent of override globs. Overlap with any required comparison candidate, explicit context or selected configuration returns `CaptureError::Excluded` with observed paths/roles and no partial capture. A candidate cannot be read through an exclusion merely to decide that it was unchanged. Names must be UTF-8; spaces, tabs, newlines and literal backslashes are preserved. Source symlinks, submodules, unmerged indexes and unavailable required inputs fail explicitly. Working selectors also reject indexes with assume-unchanged or skip-worktree entries; intent-to-add is not staged content and is a working addition.
+
+Git supplies only object/index/tree/path inventories and raw stored blobs. Working comparisons enumerate the baseline tree or logical index, current index paths and nonignored untracked paths, then Rust compares actual bytes and modes. This intentionally inspects unchanged comparison candidates too: raw Git working diffs can run clean/process filters while checking racy timestamps. No project helper/filter, external diff, model or fetch is allowed. No normalized/filter-transformed working view is substituted. Descriptor-anchored Linux reads never follow source symlinks, including intermediate components; configuration symlinks retain their separately supported selection semantics.
+
+Acquisition limits are 512 input observations/roles, 1 MiB per content input and 16 MiB total admitted content per attempt. Unchanged comparison candidates, absence observations and repeated context roles consume admission; `acquired_files`/`acquired_bytes` report that work separately from actual retained inputs. Thus a small edit in a large baseline can fail the bound explicitly. Caller lists have at most 512 entries each and normalized paths/configuration arguments at most 4,096 bytes. Each metadata inventory is capped at 2 MiB; working capture holds baseline/index-path/untracked inventories with at most one extra bounded inventory during verification. Each owned Git command has a two-second deadline and 8 KiB stderr cap, with one Git command at a time. Blob sizes are checked before body requests; regular-file reads enforce caps while growing. Verification uses at most one extra 1 MiB content input at a time. These are admission/content/buffer bounds, not a total allocator, compiled-configuration or owned-process RSS quota.
+
+HEAD/base is pinned once. Captured object identities supply stored bytes; relevant metadata inventories and exact working/configuration bytes are observed twice, with one retry before explicit instability. Capture identity includes those inventories and mutable observations even when the selected set is empty. Git leaders remain unreaped through group signaling, then are reaped before reader threads join, including timeout/held-descendant-pipe cleanup. The achieved scope is bounded relevant observations and owned retained inputs; global filesystem atomicity, detection of edits that revert between observations, perpetual freshness, arbitrary dependency hermeticity and native-overlay coherence are not claimed. Capture performs no analysis, model call, storage or export.
+
+For the complete small nonvisual journey, run `cargo test --frozen --test workspace four_comparisons_select_their_exact_sides_and_independent_context -- --exact --nocapture`; the real fixture has distinct base/merge-base/HEAD/index/working bytes, staged-only and ignored/untracked inputs, plus independent context. Failure, mutation and retained-range cases are in the same public-boundary test target. Run `python3 .missions/AS-M003/evidence/P02/measure.py staged --output .missions/AS-M003/evidence/P02/trial-staged-001` (or `unstaged`, `local`, `base`, with a fresh output directory) for one-file and five-file/200-changed-line timing, acquisition/retention counts and owned-process sampling. Existing output paths are refused before build/sampling; choose a new directory for each relaunch. [P02 evidence](.missions/AS-M003/evidence/P02/) retains current observations, limits and the explicitly approved TDD sequencing exception; historical evidence stays unchanged. This is a local library demonstration, with no hosted trial or published PR.
 
 ## Toolchain and dependencies
 
@@ -96,7 +135,8 @@ analysis qualification.
 | --- | --- |
 | `src/main.rs`, `src/cli.rs` | Thin read-only configuration CLI plus help/version. |
 | `src/lib.rs`, `src/config/` | Shared resolution, validated inputs, immutable provenance and schema generation. |
-| `src/workspace/`, `src/analysis/` | Reserved source-generation and language-analysis modules. |
+| `src/workspace/` | Four explicit source comparisons, retained generations and bounded read-only Git/filesystem acquisition. |
+| `src/analysis/` | Reserved language-analysis module. |
 | `src/rules/`, `src/judges/`, `src/policy/` | Reserved evidence rules, provider adapters and qualification decisions. |
 | `src/records/`, `src/engine/` | Reserved durable records and shared orchestration. |
 | `src/output.rs` | Shared configuration inspection projection and TOON/JSON encoding. |
@@ -116,7 +156,7 @@ Future workspace state belongs in an excluded data directory, defaulting to `.an
 
 Start an implementation or documentation task with [AGENTS.md](AGENTS.md), this current-status section and the relevant [accepted ADRs](docs/decisions/README.md). Read the [PRD](docs/PRD.md) for product workflows and release acceptance, observing its status and open specifications. The [bounded task template](docs/templates/task.md) remains available for standalone work outside a mission.
 
-The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00–L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 remains unstarted.
+The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00–L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 has a local implementation of all four source comparisons, retained inputs and exact-content rename attribution. Its [mission state](.missions/AS-M003/state.json) records packet examination and independent whole-mission validation.
 
 The [repository skill catalog](.agents/skills/README.md) contains workflows for rule evidence and analyzer qualification. An agent can read these files directly; automatic skill discovery depends on its harness and is not assumed. The [workflow validation notes](docs/agent-workflow-validation.md) state the checks performed and their limits.
 

@@ -1,6 +1,14 @@
 import { readFile, realpath, stat } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { eventErrors, schemaErrors, transitions, type Data, type Reference } from "./schema.js";
+import {
+  eventErrors,
+  isExecutionMode,
+  isObject,
+  schemaErrors,
+  transitions,
+  type Data,
+  type Reference,
+} from "./schema.js";
 
 export interface Issue {
   path: string;
@@ -14,7 +22,27 @@ export interface ValidationReport {
   exitCode: 0 | 1 | 2;
 }
 
-export async function validateArtifact(path: string): Promise<ValidationReport> {
+export async function validateArtifact(path: string, candidate?: unknown): Promise<ValidationReport> {
+  const replacements = new Map<string, string>();
+  if (candidate !== undefined) {
+    const original = await validateArtifact(path);
+    if (!original.valid) return original;
+    try {
+      const statePath = await realpath(path);
+      const previous = JSON.parse(await readFile(statePath, "utf8")) as Data;
+      if (!isObject(candidate) || !isObject(candidate.state) || typeof candidate.journal !== "string" ||
+          previous.kind !== "state" || candidate.state.history !== previous.history)
+        return { valid: false, exitCode: 1, issues: [{ path, rule: "candidate", message: "A candidate requires state and journal, preserving the active journal path." }] };
+      const journalPath = await realpath(resolve(dirname(statePath), previous.history as string));
+      const priorJournal = await readFile(journalPath, "utf8");
+      if (!candidate.journal.startsWith(priorJournal))
+        return { valid: false, exitCode: 1, issues: [{ path, rule: "candidate-history", message: "A candidate must preserve the existing journal bytes." }] };
+      replacements.set(statePath, JSON.stringify(candidate.state));
+      replacements.set(journalPath, candidate.journal);
+    } catch {
+      return { valid: false, exitCode: 2, issues: [{ path, rule: "read", message: "Cannot read candidate inputs." }] };
+    }
+  }
   const issues: Issue[] = [];
   const cache = new Map<string, Data | undefined>();
   let readError = false;
@@ -129,7 +157,7 @@ export async function validateArtifact(path: string): Promise<ValidationReport> 
         return cached;
       }
       if (!(await stat(key)).isFile()) throw new Error("Not a regular file");
-      text = await readFile(key, "utf8");
+      text = replacements.get(key) ?? await readFile(key, "utf8");
     } catch {
       issue(file, "read", "Cannot read artifact.");
       readError = true;
@@ -175,7 +203,31 @@ export async function validateArtifact(path: string): Promise<ValidationReport> 
       }
     }
     for (const ref of (data.refs ?? []) as Reference[]) await reference(file, ref);
-    if (data.mission) await reference(file, data.mission as Reference);
+    const contract = data.mission ? await reference(file, data.mission as Reference) : undefined;
+    const delivery = (data.kind === "mission" ? data.delivery : contract?.delivery) as Data | undefined;
+    if (data.kind === "mission" && delivery?.parent) {
+      const parent = delivery.parent as Data;
+      await reference(file, parent.mission as Reference);
+      if ((parent.mission as Reference).id === data.id)
+        issue(file, "delivery-parent", "A mission cannot depend on itself.");
+    }
+    if (data.kind === "packet" && delivery) {
+      const assessment = data.deliveryAssessment as Data | undefined;
+      if (!assessment || assessment.commit !== data.baseCommit)
+        issue(file, "delivery-assessment", "Delivery assessment must address this packet's exact base commit.");
+    }
+    if (data.kind === "result" && delivery && data.outcome === "accepted" &&
+        (!data.deliveryAssessment || (data.deliveryAssessment as Data).decision !== "continue"))
+      issue(file, "delivery-assessment", "Accepted delivery results require a current returned-scope assessment.");
+    if (data.kind === "state") {
+      if (["ready", "executing", "validating"].includes(data.status as string) && !delivery)
+        issue(file, "delivery-boundary", "Active missions require an explicit delivery boundary before execution or progression.");
+      const integration = data.integration as Data | undefined;
+      for (const evidence of (integration?.evidence ?? []) as Reference[]) await reference(file, evidence);
+      if (data.status === "completed" && delivery?.mode === "pull-request" &&
+          (!integration || integration.target !== delivery.target))
+        issue(file, "completion-integration", "PR mission completion requires integration evidence for its final target.");
+    }
     if (data.kind === "result") {
       if (data.packet) {
         const ref = data.packet as Reference;
@@ -210,6 +262,15 @@ export async function validateArtifact(path: string): Promise<ValidationReport> 
       }
     }
     if (data.kind === "state") {
+      if (
+        ["ready", "executing", "validating"].includes(data.status as string) &&
+        !isExecutionMode(data.executionMode)
+      )
+        issue(
+          file,
+          "execution-mode",
+          `${data.status} requires executionMode to be direct or coordinated. Record the user's explicit choice before dispatch.`,
+        );
       const mission = data.mission as Reference;
       if (data.id !== mission.id)
         issue(file, "mission-identity", "State id must match its mission id.");

@@ -241,12 +241,103 @@ impl std::fmt::Display for ConfigError {
 }
 impl std::error::Error for ConfigError {}
 
+/// A single retained configuration evaluated for any number of lexical source paths.
+pub struct Configuration {
+    workspace: PathBuf,
+    base: Snapshot,
+    overrides: Vec<CapturedOverride>,
+    generation: String,
+}
+
+impl std::fmt::Debug for Configuration {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("Configuration")
+            .field("generation", &self.generation)
+            .field("source", &self.source())
+            .finish()
+    }
+}
+
+struct CapturedOverride {
+    include: Vec<pattern::Matcher>,
+    exclude: Vec<pattern::Matcher>,
+    rules: Vec<RuleSetting>,
+}
+
+impl Configuration {
+    pub fn generation(&self) -> &str {
+        &self.generation
+    }
+    pub fn captured_bytes(&self) -> Option<&[u8]> {
+        self.base.captured_bytes()
+    }
+    pub fn source(&self) -> &Source {
+        &self.base.view.source
+    }
+
+    /// Evaluate captured policy without accessing the filesystem again.
+    pub fn resolve(&self, path: &Path) -> Result<Snapshot, ConfigError> {
+        let relative = normalize_path(path)?;
+        let mut view = self.base.view.clone();
+        view.path = relative.clone();
+        if let Source::File { file, .. } = &view.source {
+            let matched_path = relative_to(
+                &self.workspace.join(relative),
+                file.parent().expect("absolute file"),
+            );
+            for (index, item) in self.overrides.iter().enumerate() {
+                if item.include.iter().any(|p| p.is_match(&matched_path))
+                    && !item.exclude.iter().any(|p| p.is_match(&matched_path))
+                {
+                    view.matched_overrides.push(index);
+                    for setting in &item.rules {
+                        view.rules[setting.rule as usize] = setting.clone();
+                    }
+                }
+            }
+        }
+        Ok(Snapshot {
+            view,
+            captured: self.base.captured.clone(),
+        })
+    }
+}
+
 /// Resolve configuration for a lexical workspace-relative path without reading that source path.
 pub fn resolve(
     workspace: &Path,
     path: &Path,
     explicit: Option<&Path>,
 ) -> Result<Snapshot, ConfigError> {
+    let workspace = normalize_workspace(workspace)?;
+    normalize_path(path)?;
+    let file = locate(&workspace, explicit)?;
+    let bytes = if let Some(file) = &file {
+        let mut bytes = Vec::new();
+        File::open(file)
+            .and_then(|f| f.take((MAX_FILE_BYTES + 1) as u64).read_to_end(&mut bytes))
+            .map_err(|_| {
+                ConfigError::new(
+                    ErrorCode::Io,
+                    "Cannot read the selected configuration file.",
+                )
+                .at_file(file)
+            })?;
+        if bytes.len() > MAX_FILE_BYTES {
+            return Err(ConfigError::new(
+                ErrorCode::InputLimit,
+                "Configuration exceeds the 1 MiB limit.",
+            )
+            .at_file(file));
+        }
+        Some(bytes)
+    } else {
+        None
+    };
+    from_captured(workspace, file, bytes)?.resolve(path)
+}
+
+pub(crate) fn normalize_workspace(workspace: &Path) -> Result<PathBuf, ConfigError> {
     let workspace = fs::canonicalize(workspace).map_err(|_| {
         ConfigError::new(
             ErrorCode::InvalidInput,
@@ -259,29 +350,13 @@ pub fn resolve(
             "Workspace must be an existing UTF-8 directory.",
         ));
     }
-    let relative = normalize_path(path)?;
-    let target = workspace.join(&relative);
-    let mut snapshot = Snapshot {
-        view: EffectiveView {
-            workspace: workspace.clone(),
-            path: relative,
-            contract: CONTRACT_ID.to_owned(),
-            schema: SCHEMA_URL.to_owned(),
-            source: Source::BuiltIn,
-            matched_overrides: Vec::new(),
-            rules: RuleId::ALL
-                .into_iter()
-                .map(|rule| RuleSetting {
-                    rule,
-                    policy: Policy::Advisory,
-                    origin: Origin::BuiltIn {
-                        contract: CONTRACT_ID.to_owned(),
-                    },
-                })
-                .collect(),
-        },
-        captured: None,
-    };
+    Ok(workspace)
+}
+
+pub(crate) fn selected_path(
+    workspace: &Path,
+    explicit: Option<&Path>,
+) -> Result<PathBuf, ConfigError> {
     let selected = explicit.map_or_else(
         || workspace.join(".anti-slop.jsonc"),
         |p| {
@@ -298,9 +373,17 @@ pub fn resolve(
             "Configuration paths must be UTF-8.",
         ));
     }
+    Ok(selected)
+}
+
+pub(crate) fn locate(
+    workspace: &Path,
+    explicit: Option<&Path>,
+) -> Result<Option<PathBuf>, ConfigError> {
+    let selected = selected_path(workspace, explicit)?;
     match fs::symlink_metadata(&selected) {
         Err(e) if e.kind() == std::io::ErrorKind::NotFound && explicit.is_none() => {
-            return Ok(snapshot);
+            return Ok(None);
         }
         Err(_) => {
             return Err(ConfigError::new(
@@ -331,109 +414,140 @@ pub fn resolve(
         )
         .at_file(&file));
     }
-    let mut bytes = Vec::new();
-    File::open(&file)
-        .and_then(|f| f.take((MAX_FILE_BYTES + 1) as u64).read_to_end(&mut bytes))
-        .map_err(|_| {
+    Ok(Some(file))
+}
+
+pub(crate) fn from_captured(
+    workspace: PathBuf,
+    file: Option<PathBuf>,
+    bytes: Option<Vec<u8>>,
+) -> Result<Configuration, ConfigError> {
+    let mut snapshot = Snapshot {
+        view: EffectiveView {
+            workspace: workspace.clone(),
+            path: String::new(),
+            contract: CONTRACT_ID.to_owned(),
+            schema: SCHEMA_URL.to_owned(),
+            source: Source::BuiltIn,
+            matched_overrides: Vec::new(),
+            rules: RuleId::ALL
+                .into_iter()
+                .map(|rule| RuleSetting {
+                    rule,
+                    policy: Policy::Advisory,
+                    origin: Origin::BuiltIn {
+                        contract: CONTRACT_ID.to_owned(),
+                    },
+                })
+                .collect(),
+        },
+        captured: None,
+    };
+    let mut overrides = Vec::new();
+    if let (Some(file), Some(bytes)) = (file, bytes) {
+        let text = std::str::from_utf8(&bytes).map_err(|_| {
             ConfigError::new(
-                ErrorCode::Io,
-                "Cannot read the selected configuration file.",
+                ErrorCode::InvalidConfiguration,
+                "Configuration must be valid UTF-8.",
             )
             .at_file(&file)
         })?;
-    if bytes.len() > MAX_FILE_BYTES {
-        return Err(ConfigError::new(
-            ErrorCode::InputLimit,
-            "Configuration exceeds the 1 MiB limit.",
-        )
-        .at_file(&file));
-    }
-    let text = std::str::from_utf8(&bytes).map_err(|_| {
-        ConfigError::new(
-            ErrorCode::InvalidConfiguration,
-            "Configuration must be valid UTF-8.",
-        )
-        .at_file(&file)
-    })?;
-    let parsed = parse::document(text, &file)?;
-    let config = &parsed.config;
-    if config.schema != SCHEMA_URL {
-        return Err(parsed.error(
-            "/$schema",
-            ErrorCode::InvalidConfiguration,
-            "Unsupported schema identity; use the supported version-pinned schema.",
-        ));
-    }
-    if config.overrides.len() > MAX_OVERRIDES {
-        return Err(parsed.error(
-            "/overrides",
-            ErrorCode::InputLimit,
-            "Configuration exceeds 256 overrides.",
-        ));
-    }
-    let count: usize = config
-        .overrides
-        .iter()
-        .map(|o| o.include.len() + o.exclude.len())
-        .sum();
-    if count > MAX_PATTERNS {
-        return Err(parsed.error(
-            "/overrides",
-            ErrorCode::InputLimit,
-            "Configuration exceeds 1024 include/exclude patterns.",
-        ));
-    }
-    for (rule, policy) in &config.rules {
-        let pointer = format!("/rules/{}", rule.as_str());
-        let setting = &mut snapshot.view.rules[*rule as usize];
-        setting.policy = *policy;
-        setting.origin = Origin::Root {
-            location: parsed.location(&pointer),
-            pointer,
-        };
-    }
-    let base = file
-        .parent()
-        .expect("absolute configuration path has a parent");
-    let matched_path = relative_to(&target, base);
-    for (index, item) in config.overrides.iter().enumerate() {
-        let pointer = format!("/overrides/{index}");
-        if item.include.is_empty() {
+        let parsed = parse::document(text, &file)?;
+        let config = &parsed.config;
+        if config.schema != SCHEMA_URL {
             return Err(parsed.error(
-                &format!("{pointer}/include"),
+                "/$schema",
                 ErrorCode::InvalidConfiguration,
-                "Override include must contain at least one pattern.",
+                "Unsupported schema identity; use the supported version-pinned schema.",
             ));
         }
-        let include = compile_patterns(&item.include, &format!("{pointer}/include"), &parsed)?;
-        let exclude = compile_patterns(&item.exclude, &format!("{pointer}/exclude"), &parsed)?;
-        if include.iter().any(|p| p.is_match(&matched_path))
-            && !exclude.iter().any(|p| p.is_match(&matched_path))
-        {
-            snapshot.view.matched_overrides.push(index);
-            for (rule, policy) in &item.rules {
-                let pointer = format!("{pointer}/rules/{}", rule.as_str());
-                let setting = &mut snapshot.view.rules[*rule as usize];
-                setting.policy = *policy;
-                setting.origin = Origin::Override {
-                    index,
+        if config.overrides.len() > MAX_OVERRIDES {
+            return Err(parsed.error(
+                "/overrides",
+                ErrorCode::InputLimit,
+                "Configuration exceeds 256 overrides.",
+            ));
+        }
+        let count: usize = config
+            .overrides
+            .iter()
+            .map(|o| o.include.len() + o.exclude.len())
+            .sum();
+        if count > MAX_PATTERNS {
+            return Err(parsed.error(
+                "/overrides",
+                ErrorCode::InputLimit,
+                "Configuration exceeds 1024 include/exclude patterns.",
+            ));
+        }
+        for (rule, policy) in &config.rules {
+            let pointer = format!("/rules/{}", rule.as_str());
+            snapshot.view.rules[*rule as usize] = RuleSetting {
+                rule: *rule,
+                policy: *policy,
+                origin: Origin::Root {
                     location: parsed.location(&pointer),
                     pointer,
-                };
-            }
+                },
+            };
         }
+        for (index, item) in config.overrides.iter().enumerate() {
+            let pointer = format!("/overrides/{index}");
+            if item.include.is_empty() {
+                return Err(parsed.error(
+                    &format!("{pointer}/include"),
+                    ErrorCode::InvalidConfiguration,
+                    "Override include must contain at least one pattern.",
+                ));
+            }
+            let include = compile_patterns(&item.include, &format!("{pointer}/include"), &parsed)?;
+            let exclude = compile_patterns(&item.exclude, &format!("{pointer}/exclude"), &parsed)?;
+            let rules = item
+                .rules
+                .iter()
+                .map(|(rule, policy)| {
+                    let pointer = format!("{pointer}/rules/{}", rule.as_str());
+                    RuleSetting {
+                        rule: *rule,
+                        policy: *policy,
+                        origin: Origin::Override {
+                            index,
+                            location: parsed.location(&pointer),
+                            pointer,
+                        },
+                    }
+                })
+                .collect();
+            overrides.push(CapturedOverride {
+                include,
+                exclude,
+                rules,
+            });
+        }
+        let digest = Sha256::digest(&bytes)
+            .iter()
+            .map(|b| format!("{b:02x}"))
+            .collect();
+        snapshot.view.source = Source::File {
+            file,
+            sha256: digest,
+            bytes: bytes.len(),
+        };
+        snapshot.captured = Some(bytes.into());
     }
-    let digest = Sha256::digest(&bytes)
-        .iter()
-        .map(|b| format!("{b:02x}"))
-        .collect();
-    snapshot.view.source = Source::File {
-        file,
-        sha256: digest,
-        bytes: bytes.len(),
-    };
-    snapshot.captured = Some(bytes.into());
-    Ok(snapshot)
+    let generation = Sha256::digest(
+        serde_json::to_vec(&(&workspace, CONTRACT_ID, &snapshot.view.source))
+            .expect("configuration identity"),
+    )
+    .iter()
+    .map(|b| format!("{b:02x}"))
+    .collect();
+    Ok(Configuration {
+        workspace,
+        base: snapshot,
+        overrides,
+        generation,
+    })
 }
 
 fn compile_patterns(
@@ -464,7 +578,7 @@ fn compile_patterns(
         .collect()
 }
 
-fn normalize_path(path: &Path) -> Result<String, ConfigError> {
+pub(crate) fn normalize_path(path: &Path) -> Result<String, ConfigError> {
     let invalid = || {
         ConfigError::new(
             ErrorCode::InvalidInput,

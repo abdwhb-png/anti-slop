@@ -1,0 +1,182 @@
+{
+  "recordedAt": "2026-11-15T23:16:10.679365+00:00",
+  "commandsAndAttempts": [
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.json",
+      "recordSha256": "44ff7453a5b2862a5e58ae791f5e1a7edbcdf255384a4a63a33fba3693808cab",
+      "result": {
+        "command": [
+          "python3",
+          "scripts/ci/policy.py",
+          "whitespace",
+          "--base",
+          "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+        ],
+        "exit": 1
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.log",
+      "logSha256": "6e25e94dc3ca1bf6494f04c10430a612f830a0266482f1ca87495204291c0a6c"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.json",
+      "recordSha256": "02294e3ec1e3532568e7f27282ca9dfff2971f8174d151041af48c6058edd891",
+      "result": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/ci",
+          "-p",
+          "test_policy.py",
+          "-k",
+          "WhitespaceTests",
+          "-v"
+        ],
+        "exit": 1
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.log",
+      "logSha256": "a5ea78ad46bbfcb1c93dc718d5b14f64489eb82074078e4e06db4411cc677f35"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.json",
+      "recordSha256": "02294e3ec1e3532568e7f27282ca9dfff2971f8174d151041af48c6058edd891",
+      "result": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/ci",
+          "-p",
+          "test_policy.py",
+          "-k",
+          "WhitespaceTests",
+          "-v"
+        ],
+        "exit": 1
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.log",
+      "logSha256": "257a56304e3e1875fc55a6206dd110d563b5125c16fb5be686fee7a71db864da"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.json",
+      "recordSha256": "1cd47b9691be88a785607447026453498848ce0b08c05555dd7bd5d50bf3d0a7",
+      "result": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/ci",
+          "-p",
+          "test_policy.py",
+          "-k",
+          "WhitespaceTests",
+          "-v"
+        ],
+        "exit": 0
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.log",
+      "logSha256": "48070d65820c493b933c2d78ac7e04fbdcaa7610e8b195756e3f2ddc55e2c31c"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.json",
+      "recordSha256": "1cd47b9691be88a785607447026453498848ce0b08c05555dd7bd5d50bf3d0a7",
+      "result": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/ci",
+          "-p",
+          "test_policy.py",
+          "-k",
+          "WhitespaceTests",
+          "-v"
+        ],
+        "exit": 0
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.log",
+      "logSha256": "49f3e48291c28cc8bbe4e916248bfa8259c43e081e91470f706e9004b1b18f52"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.json",
+      "recordSha256": "18f71bc18ec5bf828930a9b20132eda12cad53355ec4035aecb89867fb1543fc",
+      "result": {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/ci",
+          "-p",
+          "test_policy.py",
+          "-v"
+        ],
+        "exit": 0
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.log",
+      "logSha256": "efec169418f0851e1d07c26580ff8ffc5ade35cd4247f6d2ddf041f429915ad7"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.json",
+      "recordSha256": "3ccf77c4778d215d1445a5f93f514a86770d10ca04eb68e86c9c2da349fd29a8",
+      "result": {
+        "command": [
+          "python3",
+          "scripts/ci/policy.py",
+          "whitespace",
+          "--base",
+          "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+        ],
+        "exit": 0
+      },
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/12-audit-recorder-failure.json",
+      "recordSha256": "c4c5b583c134ee31476493bab297dbea008612bf42f08347bf6ccdd4b9f2bd41",
+      "result": {
+        "step": "First explicit untracked-file whitespace audit after demonstration hash reconciliation",
+        "failure": "AssertionError at recorder line 30: expected git diff --no-index --check exit 0. Git returns 1 for a clean nonempty no-index diff, with empty diagnostics.",
+        "candidateFilesChanged": false,
+        "correction": "Probe actual Git exit behavior and require the clean result with no diagnostics; preserve this audit-recorder failure."
+      },
+      "log": null,
+      "logSha256": null
+    }
+  ],
+  "stableCI": "10-stable-ci.json",
+  "externalInputs": [
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/remote-ci-outcome.json",
+      "sha256": "67e8cdea031fd86fd5d42ac5242a4ea81931cc8bbf16b3b76e2e0717035cd0bb"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/committed-whitespace-reproduction.log",
+      "sha256": "6e25e94dc3ca1bf6494f04c10430a612f830a0266482f1ca87495204291c0a6c"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/demonstration.json",
+      "sha256": "70ca5bbfbe8736f5670298bfd1570921cbb908acfed4ff3156b7cd03a0ed2b73"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "sha256": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P04/preparation-applicability.md",
+      "sha256": "ecf889606a2a55345b66915820dcde8541fe14b88c9053dc7e572714e8124125"
+    }
+  ],
+  "testRefinement": "Initial positive fixtures also had final blank lines in the patch/formatter cases. Refined them before changing attributes to separate observed whitespace classes; both intended failing executions retained. No retrospective RED, hidden implementation, copied policy logic or weakened assertion.",
+  "independentValidation": "Pending with Firstmate; previous final-r2 accepted result preserved as historical input."
+}

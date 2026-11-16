@@ -1,0 +1,57 @@
+{
+  "task": "AS-M003-capture",
+  "assignment": "02753f98-756b-4bac-93e1-c2301cb37b10",
+  "generation": "s1794768506.3553234.1173",
+  "executionIdentity": "AS-M003-capture:s1794768506.3553234.1173",
+  "role": "implementer",
+  "retainedContext": true,
+  "worktree": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "branch": "fm/AS-M003-capture",
+  "taskFiles": [
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "e90906d54da7f8c266aa6f81d604cd2164815b4851b560604816e7f091069395"
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "23d634ba6bac0e297aac7893fce5f96370580ee6cf322a180f1e897d54012376"
+    },
+    {
+      "path": "tests/fixtures/process/observe-kill.c",
+      "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+    }
+  ],
+  "preservedFilesVerified": 79,
+  "unchangedP01SourceInputs": [
+    {
+      "path": "README.md",
+      "matchesP01": true,
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d"
+    },
+    {
+      "path": "src/lib.rs",
+      "matchesP01": true,
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57"
+    },
+    {
+      "path": "src/config/mod.rs",
+      "matchesP01": true,
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7"
+    },
+    {
+      "path": "src/workspace/mod.rs",
+      "matchesP01": true,
+      "sha256": "843ea9e16063819a697fcd51f3b17fc08061bbf36d852bba4900a579ae488cf9"
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "matchesP01": true,
+      "sha256": "9401934c580df51925325bebc60ec1498ba9765793a20e358544e5a416ca200a"
+    }
+  ],
+  "gitStatus": " M .agents/skills/mission-driven-dev/MAINTENANCE.md\n M .agents/skills/mission-driven-dev/SKILL.md\n M .agents/skills/mission-driven-dev/VALIDATION.md\n M .agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md\n M .agents/skills/mission-driven-dev/assets/handoffs.md\n M .agents/skills/mission-driven-dev/evals/evals.json\n M .agents/skills/mission-driven-dev/references/artifacts.md\n M .agents/skills/mission-driven-dev/references/execution.md\n M .agents/skills/mission-driven-dev/references/preparation.md\n M .agents/skills/mission-driven-dev/references/resumption.md\n M .agents/skills/mission-driven-dev/references/validation.md\n M .agents/skills/mission-driven-dev/scripts/validate.mjs\n M .agents/skills/mission-driven-dev/src/cli.ts\n M .agents/skills/mission-driven-dev/src/schema.ts\n M .agents/skills/mission-driven-dev/src/validate.ts\n M .agents/skills/mission-driven-dev/tests/cli.test.ts\n M .agents/skills/mission-driven-dev/tests/validate.test.ts\n M README.md\n M docs/IMPLEMENTATION_ROADMAP.md\n M src/config/mod.rs\n M src/lib.rs\n D src/workspace/.gitkeep\n?? .agents/skills/mission-driven-dev/.gitignore\n?? .agents/skills/mission-driven-dev/assets/example/.missions/\n?? .agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json\n?? .missions/AS-M003/\n?? docs/missions/AS-M003/\n?? src/workspace/acquire.rs\n?? src/workspace/git.rs\n?? src/workspace/mod.rs\n?? tests/fixtures/process/\n?? tests/workspace.rs\n",
+  "limitsChanged": false,
+  "newDependencies": false,
+  "accepted": false
+}

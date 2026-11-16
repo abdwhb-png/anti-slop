@@ -1,0 +1,207 @@
+{
+  "identity": "AS-M003-capture:s1794768506.3553234.1173",
+  "assignment": "cc7e6b14-818f-41b2-8135-f0bb9c5d01cf",
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "branch": "fm/AS-M003-capture",
+  "transferVerification": [
+    {
+      "path": ".agents/skills/mission-driven-dev/.gitignore",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/MAINTENANCE.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/SKILL.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/VALIDATION.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/README.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/state.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/docs/roadmaps/example/r1.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/handoffs.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/bun.lock",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/bunfig.toml",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/brainstorming-compatibility.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/evals.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/qualification-2026-09-23.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/package.json",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/artifacts.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/conception.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/execution.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/preparation.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/resumption.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/validation.md",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/scripts/build.mjs",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/scripts/validate.mjs",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/cli.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/schema.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/validate.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/bundle.test.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/cli.test.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/validate.test.ts",
+      "matches": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tsconfig.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/approval.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/compiler-ready-and-resumption.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/mdd-skill-transition.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/oracle-contract-r1.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/orchestration-approval.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/preparation-checks.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/preparation.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/prerequisite-review.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/prerequisites-accepted.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/tooling-approval-and-status.json",
+      "matches": true
+    },
+    {
+      "path": ".missions/AS-M003/history.jsonl",
+      "matches": false
+    },
+    {
+      "path": ".missions/AS-M003/state.json",
+      "matches": false
+    },
+    {
+      "path": "docs/missions/AS-M003/r1.md",
+      "matches": true
+    },
+    {
+      "path": "docs/missions/AS-M003/r2.md",
+      "matches": true
+    },
+    {
+      "path": "docs/IMPLEMENTATION_ROADMAP.md",
+      "matches": true
+    }
+  ],
+  "initialStatus": " M .agents/skills/mission-driven-dev/MAINTENANCE.md\n M .agents/skills/mission-driven-dev/SKILL.md\n M .agents/skills/mission-driven-dev/VALIDATION.md\n M .agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md\n M .agents/skills/mission-driven-dev/assets/handoffs.md\n M .agents/skills/mission-driven-dev/evals/evals.json\n M .agents/skills/mission-driven-dev/references/artifacts.md\n M .agents/skills/mission-driven-dev/references/execution.md\n M .agents/skills/mission-driven-dev/references/preparation.md\n M .agents/skills/mission-driven-dev/references/resumption.md\n M .agents/skills/mission-driven-dev/references/validation.md\n M .agents/skills/mission-driven-dev/scripts/validate.mjs\n M .agents/skills/mission-driven-dev/src/cli.ts\n M .agents/skills/mission-driven-dev/src/schema.ts\n M .agents/skills/mission-driven-dev/src/validate.ts\n M .agents/skills/mission-driven-dev/tests/cli.test.ts\n M .agents/skills/mission-driven-dev/tests/validate.test.ts\n M docs/IMPLEMENTATION_ROADMAP.md\n?? .agents/skills/mission-driven-dev/.gitignore\n?? .agents/skills/mission-driven-dev/assets/example/.missions/\n?? .agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json\n?? .missions/AS-M003/\n?? docs/missions/AS-M003/\n",
+  "cache": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+  "inbox": "Absent at initial read"
+}

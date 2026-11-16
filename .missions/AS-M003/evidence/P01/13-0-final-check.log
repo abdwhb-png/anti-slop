@@ -1,0 +1,72 @@
+$ cargo test --frozen --test workspace --test config --test cli
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.00s
+     Running tests/cli.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/cli-00799c8ac7757c52)
+
+running 11 tests
+test config_help_describes_the_exact_local_inspection_surface ... ok
+test help_is_available ... ok
+test config_explain_returns_defaults_as_json ... ok
+test invocation_without_arguments_is_not_a_successful_analysis ... ok
+test default_toon_and_explicit_json_have_identical_real_cli_views ... ok
+test missing_flag_values_identify_the_flag_and_preserve_encoding ... ok
+test real_cli_explicit_selection_ordered_overrides_and_cwd_are_read_only ... ok
+test unavailable_analysis_is_rejected ... ok
+test version_matches_package_metadata ... ok
+test invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits ... ok
+test inspection_argument_errors_are_structured_redacted_and_precede_file_access ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.13s
+
+     Running tests/config.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/config-0e8ad7dcfa2cac61)
+
+running 19 tests
+test absent_root_uses_advisory_defaults_without_writes ... ok
+test backslash_is_a_literal_filename_character ... ok
+test captured_values_and_bytes_survive_configuration_edits ... ok
+test commas_and_partial_alternatives_do_not_make_recursive_segment_boundaries ... ok
+test duplicate_decoded_keys_are_rejected_even_in_unmatched_overrides ... ok
+test invalid_fields_have_actionable_locations_and_debug_omits_raw_bytes ... ok
+test explicit_file_and_symlinks_use_the_real_declaring_directory ... ok
+test jsonc_ast_preserves_duplicate_decoded_keys_and_comments ... ok
+test jsonc_comments_and_trailing_commas_are_accepted ... ok
+test invalid_jsonc_fields_values_and_contracts_fail_without_echoing_credentials ... ok
+test missing_explicit_invalid_and_dangling_files_do_not_fall_back ... ok
+test ordered_overrides_replace_policies_and_preserve_unrelated_rules_and_origins ... ok
+test alternatives_compile_compositionally_at_the_pattern_limit ... ok
+test question_mark_matches_one_unicode_scalar ... ok
+test per_path_disagreement_keeps_both_views_and_transmission_controls_are_rejected ... ok
+test unreadable_or_non_utf8_existing_files_are_errors ... ok
+test recursive_segments_keep_their_meaning_inside_alternatives ... ok
+test glob_dialect_handles_unicode_classes_braces_and_literal_control_characters ... ok
+test parser_and_matcher_enforce_actual_input_boundaries ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 19 tests
+test capture_observations ... ignored, run explicitly with --ignored --exact capture_observations --nocapture
+test controlled_git_child ... ignored, subprocess entrypoint for controlled external Git observations
+test absent_and_invalid_selected_configuration_fail_without_defaults ... ok
+test capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers ... ok
+test exclusions_required_inputs_and_workspace_boundaries_are_explicit ... ok
+test additions_deletions_literal_paths_and_empty_selection_are_distinct ... ok
+test expanding_git_inventory_stops_at_its_byte_limit ... ok
+test executable_mode_changes_belong_to_the_captured_generation ... ok
+test live_growing_context_cannot_escape_acquisition_limits ... ok
+test file_acquisition_is_bounded_before_success ... ok
+test missing_head_unmerged_index_and_unsupported_kinds_cannot_succeed ... ok
+test missing_promised_object_is_not_retrieved ... ok
+test relative_external_configuration_keeps_existing_resolution_semantics ... ok
+test relevant_index_configuration_and_context_mutation_retries_a_bound_generation ... ok
+test repeatedly_changing_inventory_is_explicitly_unstable ... ok
+test retained_configuration_and_ranges_share_the_actual_generation ... ok
+test staged_bytes_and_working_context_remain_independent ... ok
+test retained_count_total_bytes_and_sparse_input_are_bounded ... ok
+test stalled_git_is_killed_and_reaped ... ok
+
+test result: ok. 17 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 2.40s
+
+
+exit=0

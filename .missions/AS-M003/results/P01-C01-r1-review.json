@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-P01-C01-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M003-P01-C01",
+    "revision": 1,
+    "path": "../packets/P01-C01-r1.md"
+  },
+  "actor": "firstmate:primary-1890471",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The corrected staged-capture outcome is accepted. WNOWAIT preserves leader identity through group signaling; the original observer now reports zero after-reap signals and the independent real cleanup regression passes. Source/protected artifacts and renewed measurements were examined. Remaining selectors and whole-mission acceptance are not claimed.",
+  "deliveryAssessment": {
+    "commit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "decision": "continue",
+    "rationale": "Corrected staged capture and retained configuration belong to the approved coherent source-capture delivery. The remaining comparison modes and rename qualification can now extend this examined core without adding unrelated product scope."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01-C01/review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01-C01/kill-observation-green.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../coordinator/P01-C01/cleanup-regression.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01-C01/source-state.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01-C01/measurements.json"
+    }
+  ]
+}

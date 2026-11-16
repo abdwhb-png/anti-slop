@@ -1,0 +1,24 @@
+$ cargo test --frozen --test workspace intent_to_add_is_absent_from_staged_and_is_a_working_addition -- --exact
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test intent_to_add_is_absent_from_staged_and_is_a_working_addition ... FAILED
+
+failures:
+
+---- intent_to_add_is_absent_from_staged_and_is_a_working_addition stdout ----
+
+thread 'intent_to_add_is_absent_from_staged_and_is_a_working_addition' (265321) panicked at tests/workspace.rs:1213:5:
+Intent is not a staged empty-file addition: Capture { comparison: Comparison { selection: Staged, commit: Some("48dc09eeb0f407d7d7e57a1f9681eab3b2fb62d4"), before_role: Head, after_role: Index, command: ["diff-index", "--cached", "--raw", "--no-renames", "--no-relative", "--no-ext-diff", "--no-textconv", "--ignore-submodules=none", "--abbrev=64", "-z", "48dc09eeb0f407d7d7e57a1f9681eab3b2fb62d4", "--"] }, generation: "ed79d3fbc8c64439b0d9423cc1aa7f45b489508811de26ef19542add28e87839", changes: [Change { path: "intent.ts", before: None, after: Some(Source { path: "intent.ts", role: Index, generation: "4ccea8ba9a8e67f4d0ef40179d6e87efd728dc0de17e697aed0822d09984d44e", bytes: 0 }) }], context: [], configuration: Configuration { generation: "1615f2f739537b61b5e1fb60a5b32ad584f42bcc5e392683465d46455fbd6af9", source: BuiltIn }, stats: CaptureStats { retained_files: 1, retained_bytes: 0, attempts: 1, git_processes: 6 } }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    intent_to_add_is_absent_from_staged_and_is_a_working_addition
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.08s
+
+error: test failed, to rerun pass `--test workspace`
+
+exit=101

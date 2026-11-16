@@ -1,0 +1,12 @@
+$ cargo test --frozen --test workspace working_inputs_apply_limits_and_exclusions_before_retaining_untracked_content -- --exact
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.52s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+test working_inputs_apply_limits_and_exclusions_before_retaining_untracked_content ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 33 filtered out; finished in 0.19s
+
+
+exit=0

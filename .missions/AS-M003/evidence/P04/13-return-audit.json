@@ -1,0 +1,82 @@
+{
+  "recordedAt": "2026-11-15T23:18:19.810274+00:00",
+  "actor": "AS-M003-capture:s1794784176.1476361.7246",
+  "head": "aab8746a39859edccd1e4326fef45c5e8bf0959e",
+  "branch": "fm/AS-M003-capture",
+  "trackedFiles": 467,
+  "unchangedTrackedFiles": 466,
+  "changedTrackedFiles": [
+    "scripts/ci/test_policy.py"
+  ],
+  "priorEvidenceFiles": 234,
+  "changedPriorEvidence": [],
+  "changedCoordinatorRecords": [],
+  "indexEntriesUnchanged": true,
+  "indexFileSha256Unchanged": true,
+  "stagedChanges": false,
+  "stateValidator": {
+    "command": [
+      "node",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+      ".missions/AS-M003/state.json",
+      "--json"
+    ],
+    "exit": 0,
+    "output": {
+      "valid": true,
+      "issues": []
+    }
+  },
+  "pendingInbox": [],
+  "statusBeforeThisAuditWrite": " M .missions/AS-M003/history.jsonl\n M .missions/AS-M003/state.json\n M scripts/ci/test_policy.py\n?? .missions/AS-M003/evidence/.gitattributes\n?? .missions/AS-M003/evidence/P04/00-before-manifest.json\n?? .missions/AS-M003/evidence/P04/01-live-profile.json\n?? .missions/AS-M003/evidence/P04/02-validation-ledger.json\n?? .missions/AS-M003/evidence/P04/09-stable-candidate.json\n?? .missions/AS-M003/evidence/P04/10-stable-ci.json\n?? .missions/AS-M003/evidence/P04/11-demonstration-applicability.json\n?? .missions/AS-M003/evidence/P04/12-new-file-checks.json\n?? .missions/AS-M003/evidence/ci-correction-approval.json\n?? .missions/AS-M003/packets/P04-r1.md\n",
+  "newMaintainedEvidenceChecks": [
+    {
+      "path": ".missions/AS-M003/evidence/P04/00-before-manifest.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/01-live-profile.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/09-stable-candidate.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "exit": 1,
+      "diagnostics": ""
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "exit": 1,
+      "diagnostics": ""
+    }
+  ],
+  "report": {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+    "sha256": "258ee329c52036ef82982eaaf5b13637e658b0ad73158ba0eea675de33c8b3c4"
+  },
+  "currentCandidateFiles": {
+    "scripts/ci/test_policy.py": "cf152e7ab23a613cc7f83daa1d378cec2f3d6dcbcd4c12ac37dbf082e08d29d8",
+    ".missions/AS-M003/evidence/.gitattributes": "b75cfeed3f7896d28a1dbe2429e4e20c28d19bad6a1327dc0597148a9fef126a"
+  },
+  "stableCILog": {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log",
+    "sha256": "193a0fe1230b2862df1b19803c80b2c8e9edf34887c86a6aa85a46197566b8b9"
+  },
+  "currentAcceptance": "not claimed; candidate ready for examination"
+}

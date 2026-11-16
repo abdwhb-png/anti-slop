@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-11-15T19:01:15.002253+00:00",
+  "packages": [
+    {
+      "name": "@toon-format/toon",
+      "version": "4.1.1",
+      "source": "https://registry.npmjs.org/%40toon-format%2Ftoon/4.1.1",
+      "published": "2026-08-05T11:58:04.389Z",
+      "ageDays": 102.29,
+      "distTags": {
+        "latest": "4.4.0"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "@vscode/l10n",
+      "version": "0.0.18",
+      "source": "https://registry.npmjs.org/%40vscode%2Fl10n/0.0.18",
+      "published": "2023-12-10T22:05:53.371Z",
+      "ageDays": 1070.87,
+      "distTags": {
+        "latest": "0.0.18"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "jsonc-parser",
+      "version": "3.3.1",
+      "source": "https://registry.npmjs.org/jsonc-parser/3.3.1",
+      "published": "2024-06-24T21:12:45.445Z",
+      "ageDays": 873.91,
+      "distTags": {
+        "latest": "3.3.1",
+        "next": "4.0.0-next.2"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "vscode-json-languageservice",
+      "version": "5.7.2",
+      "source": "https://registry.npmjs.org/vscode-json-languageservice/5.7.2",
+      "published": "2026-02-23T21:19:20.541Z",
+      "ageDays": 264.9,
+      "distTags": {
+        "next": "6.0.0-next.4",
+        "latest": "6.0.0-next.3"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "source": "https://registry.npmjs.org/vscode-languageserver-textdocument/1.0.15",
+      "published": "2026-09-24T18:49:15.476Z",
+      "ageDays": 52.01,
+      "distTags": {
+        "next": "1.0.13",
+        "latest": "1.0.16"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "source": "https://registry.npmjs.org/vscode-languageserver-types/3.18.4",
+      "published": "2026-09-25T07:03:31.266Z",
+      "ageDays": 51.5,
+      "distTags": {
+        "next": "3.17.6-next.7",
+        "latest": "3.18.5"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.2.0",
+      "source": "https://registry.npmjs.org/vscode-uri/3.2.0",
+      "published": "2026-08-24T22:41:22.545Z",
+      "ageDays": 82.85,
+      "distTags": {
+        "latest": "3.2.0"
+      },
+      "engines": null,
+      "peerDependencies": null,
+      "deprecated": null,
+      "lockedIntegrityVerified": true
+    }
+  ],
+  "restoreAuthority": "P01 necessary existing locked restoration; no dependency graph changes",
+  "socketFirewall": "1.16.0",
+  "npm": "12.2.1"
+}

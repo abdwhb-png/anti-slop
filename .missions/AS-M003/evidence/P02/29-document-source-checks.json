@@ -1,0 +1,103 @@
+{
+  "READMEtargets": [
+    {
+      "path": "docs/decisions/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/PRD.md",
+      "exists": true
+    },
+    {
+      "path": "docs/PRD.md",
+      "exists": true
+    },
+    {
+      "path": ".missions/AS-M001/state.json",
+      "exists": true
+    },
+    {
+      "path": "docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md",
+      "exists": true
+    },
+    {
+      "path": "docs/decisions/008-project-configuration-and-schema.md",
+      "exists": true
+    },
+    {
+      "path": "docs/configuration.md",
+      "exists": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/P02/",
+      "exists": true
+    },
+    {
+      "path": "AGENTS.md",
+      "exists": true
+    },
+    {
+      "path": "docs/decisions/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/PRD.md",
+      "exists": true
+    },
+    {
+      "path": "docs/templates/task.md",
+      "exists": true
+    },
+    {
+      "path": "docs/IMPLEMENTATION_ROADMAP.md",
+      "exists": true
+    },
+    {
+      "path": ".missions/AS-M001/state.json",
+      "exists": true
+    },
+    {
+      "path": ".missions/AS-M002/recovery/README.md",
+      "exists": true
+    },
+    {
+      "path": ".agents/skills/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/agent-workflow-validation.md",
+      "exists": true
+    },
+    {
+      "path": "docs/decisions/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/PRD.md",
+      "exists": true
+    },
+    {
+      "path": "docs/brainstorming-decisions/2026-09-22-anti-slop-design.md",
+      "exists": true
+    },
+    {
+      "path": "docs/brainstorming-decisions/2026-09-22-anti-slop-architecture.md",
+      "exists": true
+    },
+    {
+      "path": "docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md",
+      "exists": true
+    },
+    {
+      "path": "docs/research/2026-09-22-language-qualification/README.md",
+      "exists": true
+    },
+    {
+      "path": "docs/research/2026-09-22-source-coherence/README.md",
+      "exists": true
+    }
+  ],
+  "gitDiffCheckExit": 0,
+  "protectedPriorArtifactCount": 113,
+  "postCIToolingChange": "Only measurement output destination validation/README command changed after full application CI; isolated before/after tooling checks passed; capture/scenarios/sampler unchanged, measurements remain applicable."
+}

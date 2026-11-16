@@ -1,0 +1,169 @@
+--- P03-input/src/workspace/acquire.rs
++++ P03-candidate/src/workspace/acquire.rs
+@@ -87,7 +87,7 @@
+         let metadata = directory
+             .metadata()
+             .map_err(|_| CaptureError::Unavailable(path.into()))?;
+-        let mode = if metadata.permissions().mode() & 0o111 == 0 {
++        let mode = if metadata.permissions().mode() & 0o100 == 0 {
+             GitMode::Regular
+         } else {
+             GitMode::Executable
+--- P03-input/tests/workspace.rs
++++ P03-candidate/tests/workspace.rs
+@@ -1007,6 +1007,135 @@
+ }
+ 
+ #[test]
++fn working_modes_capture_owner_execute_removal_with_group_execute_remaining() {
++    use anti_slop::workspace::GitMode;
++    use std::os::unix::fs::PermissionsExt;
++    let root = repository();
++    let path = root.path().join("a.ts");
++    git(root.path(), &["config", "core.filemode", "true"]);
++    fs::set_permissions(&path, fs::Permissions::from_mode(0o744)).unwrap();
++    git(root.path(), &["add", "a.ts"]);
++    git(root.path(), &["commit", "-qm", "owner executable"]);
++    assert!(git(root.path(), &["ls-files", "--stage", "a.ts"]).starts_with("100755 "));
++    for (selection, before_role) in [
++        (Selection::Unstaged, Role::Index),
++        (Selection::Local, Role::Head),
++        (Selection::Base("HEAD".into()), Role::Base),
++    ] {
++        fs::set_permissions(&path, fs::Permissions::from_mode(0o744)).unwrap();
++        let request = CaptureRequest {
++            context: vec!["a.ts".into()],
++            ..CaptureRequest::new(selection)
++        };
++        let executable = capture_sources(root.path(), &request).unwrap();
++        assert!(executable.changes().is_empty());
++        assert_eq!(executable.context()[0].git_mode, Some(GitMode::Executable));
++        fs::set_permissions(&path, fs::Permissions::from_mode(0o654)).unwrap();
++        assert_eq!(
++            git(
++                root.path(),
++                &["diff", "--no-ext-diff", "--no-textconv", "--summary"]
++            ),
++            "mode change 100755 => 100644 a.ts"
++        );
++        let captured = capture_sources(root.path(), &request).unwrap();
++        assert_eq!(captured.selection(), &request.selection);
++        assert_eq!(captured.stats().attempts, 1);
++        assert_eq!(
++            captured
++                .changes()
++                .iter()
++                .map(|c| c.path.as_str())
++                .collect::<Vec<_>>(),
++            ["a.ts"],
++            "{:?} must retain the real Git executable-mode removal",
++            request.selection
++        );
++        let change = &captured.changes()[0];
++        let before = change.before.as_ref().unwrap();
++        let after = change.after.as_ref().unwrap();
++        assert_eq!(
++            (before.path.as_str(), before.role, before.git_mode),
++            ("a.ts", before_role, Some(GitMode::Executable))
++        );
++        assert_eq!(
++            (after.path.as_str(), after.role, after.git_mode),
++            ("a.ts", Role::Working, Some(GitMode::Regular))
++        );
++        assert_eq!(before.bytes(), b"head\n");
++        assert_eq!(after.bytes(), b"head\n");
++        assert_eq!(captured.context().len(), 1);
++        let context = &captured.context()[0];
++        assert_eq!(
++            (context.path.as_str(), context.role, context.git_mode),
++            ("a.ts", Role::Context, Some(GitMode::Regular))
++        );
++        assert_eq!(context.bytes(), after.bytes());
++        assert_ne!(context.generation, after.generation);
++        assert_ne!(context.generation, executable.context()[0].generation);
++        assert_ne!(captured.generation(), executable.generation());
++        let repeated = capture_sources(root.path(), &request).unwrap();
++        assert_eq!(captured.generation(), repeated.generation());
++        assert_eq!(
++            after.generation,
++            repeated.changes()[0].after.as_ref().unwrap().generation
++        );
++        assert_eq!(context.generation, repeated.context()[0].generation);
++    }
++}
++
++#[test]
++fn working_modes_ignore_group_or_other_execute_without_owner_execute() {
++    use anti_slop::workspace::GitMode;
++    use std::os::unix::fs::PermissionsExt;
++    let root = repository();
++    let path = root.path().join("a.ts");
++    git(root.path(), &["config", "core.filemode", "true"]);
++    assert!(git(root.path(), &["ls-files", "--stage", "a.ts"]).starts_with("100644 "));
++    for selection in [
++        Selection::Unstaged,
++        Selection::Local,
++        Selection::Base("HEAD".into()),
++    ] {
++        fs::set_permissions(&path, fs::Permissions::from_mode(0o644)).unwrap();
++        let request = CaptureRequest {
++            context: vec!["a.ts".into()],
++            ..CaptureRequest::new(selection)
++        };
++        let regular = capture_sources(root.path(), &request).unwrap();
++        assert!(regular.changes().is_empty());
++        for mode in [0o654, 0o645] {
++            fs::set_permissions(&path, fs::Permissions::from_mode(mode)).unwrap();
++            assert!(
++                git(
++                    root.path(),
++                    &["diff", "--no-ext-diff", "--no-textconv", "--raw"]
++                )
++                .is_empty()
++            );
++            let captured = capture_sources(root.path(), &request).unwrap();
++            assert_eq!(captured.selection(), &request.selection);
++            assert_eq!(captured.stats().attempts, 1);
++            assert!(
++                captured.changes().is_empty(),
++                "{:?} must ignore non-owner execute permission {mode:o}: {:?}",
++                request.selection,
++                captured.changes()
++            );
++            assert_eq!(captured.context().len(), 1);
++            let context = &captured.context()[0];
++            assert_eq!(
++                (context.path.as_str(), context.role, context.git_mode),
++                ("a.ts", Role::Context, Some(GitMode::Regular))
++            );
++            assert_eq!(context.bytes(), b"head\n");
++            assert_eq!(context.generation, regular.context()[0].generation);
++            assert_eq!(captured.generation(), regular.generation());
++        }
++    }
++}
++
++#[test]
+ fn executable_mode_changes_belong_to_the_captured_generation() {
+     use std::os::unix::fs::PermissionsExt;
+     let root = repository();
+--- P03-input/README.md
++++ P03-candidate/README.md
+@@ -4,7 +4,7 @@
+ 
+ ## Current status
+ 
+-This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides a bounded four-selector source-capture candidate through `workspace::capture`; AS-M003 whole-mission acceptance remains pending. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
++This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides bounded four-selector source capture through `workspace::capture`; the [AS-M003 mission state](.missions/AS-M003/state.json) owns its packet and whole-mission verdicts. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
+ 
+ The first usable version targets Linux, including WSL2. macOS and native Windows are later work. This is the selected support scope, not a completed platform qualification.
+ 
+@@ -156,7 +156,7 @@
+ 
+ Start an implementation or documentation task with [AGENTS.md](AGENTS.md), this current-status section and the relevant [accepted ADRs](docs/decisions/README.md). Read the [PRD](docs/PRD.md) for product workflows and release acceptance, observing its status and open specifications. The [bounded task template](docs/templates/task.md) remains available for standalone work outside a mission.
+ 
+-The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00–L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 now has a local candidate for all four source comparisons, retained inputs and exact-content rename attribution. Corrected staged capture was accepted; the complete candidate still requires packet examination and fresh independent whole-mission validation.
++The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00–L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 has a local implementation of all four source comparisons, retained inputs and exact-content rename attribution. Its [mission state](.missions/AS-M003/state.json) records packet examination and independent whole-mission validation.
+ 
+ The [repository skill catalog](.agents/skills/README.md) contains workflows for rule evidence and analyzer qualification. An agent can read these files directly; automatic skill discovery depends on its harness and is not assumed. The [workflow validation notes](docs/agent-workflow-validation.md) state the checks performed and their limits.
+ 

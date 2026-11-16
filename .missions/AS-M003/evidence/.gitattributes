@@ -1,0 +1,36 @@
+# Preserve the observed whitespace in these immutable raw command logs and Git patches.
+# All other paths and whitespace error classes retain the existing checks.
+P01-C01/git-correction.diff whitespace=-blank-at-eol
+P01-C01/observation-1-before-fixture-correction.log whitespace=-blank-at-eof
+P01-C01/observation-1.log whitespace=-blank-at-eof
+P01-C01/observation-5-before-fixture-correction.log whitespace=-blank-at-eof
+P01-C01/observation-5.log whitespace=-blank-at-eof
+P01/02b-green.log whitespace=-blank-at-eof
+P01/observation-1-before-object-admission.log whitespace=-blank-at-eof
+P01/observation-1-initial.log whitespace=-blank-at-eof
+P01/observation-1-setup-inclusive.log whitespace=-blank-at-eof
+P01/observation-1.log whitespace=-blank-at-eof
+P01/observation-5-before-object-admission.log whitespace=-blank-at-eof
+P01/observation-5-initial.log whitespace=-blank-at-eof
+P01/observation-5-setup-inclusive.log whitespace=-blank-at-eof
+P01/observation-5.log whitespace=-blank-at-eof
+P01/preparation.diff whitespace=-blank-at-eol
+P02/07-hold-format-check.log whitespace=-blank-at-eol
+P02/observation-base-1.log whitespace=-blank-at-eof
+P02/observation-base-5.log whitespace=-blank-at-eof
+P02/observation-local-1.log whitespace=-blank-at-eof
+P02/observation-local-5.log whitespace=-blank-at-eof
+P02/observation-staged-1.log whitespace=-blank-at-eof
+P02/observation-staged-5.log whitespace=-blank-at-eof
+P02/observation-unstaged-1.log whitespace=-blank-at-eof
+P02/observation-unstaged-5.log whitespace=-blank-at-eof
+P03/02-green-working-modes.log whitespace=-blank-at-eof
+P03/03-capture-regressions.log whitespace=-blank-at-eof
+P03/trial-base-001/observation-base-1.log whitespace=-blank-at-eof
+P03/trial-base-001/observation-base-5.log whitespace=-blank-at-eof
+P03/trial-local-001/observation-local-1.log whitespace=-blank-at-eof
+P03/trial-local-001/observation-local-5.log whitespace=-blank-at-eof
+P03/trial-staged-001/observation-staged-1.log whitespace=-blank-at-eof
+P03/trial-staged-001/observation-staged-5.log whitespace=-blank-at-eof
+P03/trial-unstaged-001/observation-unstaged-1.log whitespace=-blank-at-eof
+P03/trial-unstaged-001/observation-unstaged-5.log whitespace=-blank-at-eof

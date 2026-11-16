@@ -1,0 +1,5 @@
+$ cargo clippy --frozen --lib --test workspace -- -D warnings
+    Checking anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.97s
+
+exit=0

@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-11-15T18:48:23.435708+00:00",
+  "worktree": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+  "branch": "fm/AS-M003-capture",
+  "baseCommit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "transferManifest": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/transfer-manifest.json",
+  "transferManifestSha256": "cf0da54d4ccf59d2f4c58072962d0961893dd3e4364078c2a687effc7f448052",
+  "allowedTransfer": "Only the explicit MDD preparation, roadmap delta and approved exact v0.5 skill. No application delta.",
+  "activeState": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+  "authority": "orchestration-approval.json records the exact user approval; prerequisites-accepted.json resolves its condition.",
+  "delivery": "direct-PR, yolo off; commit/publication/integration/No-Mistakes remain unauthorized."
+}

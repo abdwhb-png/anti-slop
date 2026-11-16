@@ -1,0 +1,9 @@
+{
+  "report": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+  "sha256": "6a5d317606b8ca8ec956f22aba112e1f009cee89d365a04ccaed3f10661cd3ae",
+  "sourceManifest": "source-state.json",
+  "reportLocalLinksValid": true,
+  "taskAndProtectedHashesStillMatch": true,
+  "status": "candidate ready for examination",
+  "acceptanceClaimed": false
+}

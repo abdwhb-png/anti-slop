@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-P04-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M003-P04",
+    "revision": 1,
+    "path": "../packets/P04-r1.md"
+  },
+  "actor": "firstmate:ci-correction",
+  "implementers": [
+    "AS-M003-capture:s1794784176.1476361.7246"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The complete P04 return, actual exact-path/exact-whitespace-class attributes and real policy regression diff were examined. Three real policy boundary tests were independently rerun successfully; actual stable CI receipt/log and unchanged source/evidence hashes were verified. Raw historical bytes remain unchanged and maintained/unrelated paths and other whitespace classes still reject errors. This is bounded packet acceptance only; fresh whole-mission acceptance and remote qualification remain required.",
+  "deliveryAssessment": {
+    "commit": "aab8746a39859edccd1e4326fef45c5e8bf0959e",
+    "decision": "continue",
+    "rationale": "The bounded correction restores publication verification for the existing coherent capture delivery without product/source or historical evidence changes."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-156023ed-1926-49dc-a382-4f58dbc884e9.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/10-stable-ci.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/13-return-audit.json"
+    }
+  ]
+}

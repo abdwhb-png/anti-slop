@@ -1,0 +1,4 @@
+$ node /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json --json
+{"valid":true,"issues":[]}
+
+exit=0

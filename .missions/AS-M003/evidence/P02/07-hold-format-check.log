@@ -1,0 +1,763 @@
+$ rustfmt --edition 2024 --check src/workspace/mod.rs src/workspace/acquire.rs src/workspace/git.rs tests/workspace.rs
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:5:
+     io::Read,
+     os::fd::AsRawFd,
+     os::unix::fs::{OpenOptionsExt, PermissionsExt},
+[31m-    sync::Arc,
+[m     path::{Path, PathBuf},
+[32m+    sync::Arc,
+[m };
+ 
+ // Linux asm-generic/fcntl.h. NONBLOCK avoids hanging on a regular-file-to-FIFO swap.
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:15:
+ const NONBLOCK: i32 = 0o4000;
+ 
+ #[derive(Clone, PartialEq, Eq)]
+[31m-pub(super) struct WorkingFile { pub bytes: Arc<[u8]>, pub mode: GitMode }
+[m[32m+pub(super) struct WorkingFile {
+[m[32m+    pub bytes: Arc<[u8]>,
+[m[32m+    pub mode: GitMode,
+[m[32m+}
+[m 
+ pub(super) struct Acquisition {
+     root: File,
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:74:
+             directory = match OpenOptions::new().read(true).custom_flags(flags).open(next) {
+                 Ok(file) => file,
+                 Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(None),
+[31m-                Err(_) => return Err(CaptureError::Unavailable(format!("Required path is unavailable or contains a symlink: {path}"))),
+[m[32m+                Err(_) => {
+[m[32m+                    return Err(CaptureError::Unavailable(format!(
+[m[32m+                        "Required path is unavailable or contains a symlink: {path}"
+[m[32m+                    )));
+[m[32m+                }
+[m             };
+         }
+[31m-        let metadata = directory.metadata().map_err(|_| CaptureError::Unavailable(path.into()))?;
+[m[31m-        let mode = if metadata.permissions().mode() & 0o111 == 0 { GitMode::Regular } else { GitMode::Executable };
+[m[31m-        Ok(Some(WorkingFile { bytes: read_file(directory, limit)?.into(), mode }))
+[m[32m+        let metadata = directory
+[m[32m+            .metadata()
+[m[32m+            .map_err(|_| CaptureError::Unavailable(path.into()))?;
+[m[32m+        let mode = if metadata.permissions().mode() & 0o111 == 0 {
+[m[32m+            GitMode::Regular
+[m[32m+        } else {
+[m[32m+            GitMode::Executable
+[m[32m+        };
+[m[32m+        Ok(Some(WorkingFile {
+[m[32m+            bytes: read_file(directory, limit)?.into(),
+[m[32m+            mode,
+[m[32m+        }))
+[m     }
+ 
+     pub fn configuration(&self, file: &Path, limit: usize) -> Result<Vec<u8>, CaptureError> {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/git.rs:124:
+         }
+         Ok(bytes)
+     }
+[31m-
+[m[31m-
+[m }
+ 
+ fn bounded(mut input: impl Read, limit: usize) -> Result<Vec<u8>, CaptureError> {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:9:
+ use sha2::{Digest, Sha256};
+ use std::{
+     collections::{BTreeMap, BTreeSet},
+[31m-    sync::Arc,
+[m     ops::Range,
+     path::{Path, PathBuf},
+[32m+    sync::Arc,
+[m     time::Duration,
+ };
+ 
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:113:
+ 
+ /// One explicit comparison; missing/conflicting selectors are unrepresentable.
+ #[derive(Debug, Clone, PartialEq, Eq)]
+[31m-pub enum Selection { Staged, Unstaged, Local, Base(String) }
+[m[32m+pub enum Selection {
+[m[32m+    Staged,
+[m[32m+    Unstaged,
+[m[32m+    Local,
+[m[32m+    Base(String),
+[m[32m+}
+[m 
+ #[derive(Debug)]
+ pub struct CaptureRequest {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:125:
+ 
+ impl CaptureRequest {
+     pub fn new(selection: Selection) -> Self {
+[31m-        Self { selection, context: Vec::new(), exclusions: Vec::new(), configuration: None }
+[m[32m+        Self {
+[m[32m+            selection,
+[m[32m+            context: Vec::new(),
+[m[32m+            exclusions: Vec::new(),
+[m[32m+            configuration: None,
+[m[32m+        }
+[m     }
+ }
+ 
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:164:
+     pub range: Range<usize>,
+ }
+ impl Capture {
+[31m-    pub fn selection(&self) -> &Selection { &self.comparison.selection }
+[m[31m-    pub fn resolved_commit(&self) -> Option<&str> { self.comparison.commit.as_deref() }
+[m[32m+    pub fn selection(&self) -> &Selection {
+[m[32m+        &self.comparison.selection
+[m[32m+    }
+[m[32m+    pub fn resolved_commit(&self) -> Option<&str> {
+[m[32m+        self.comparison.commit.as_deref()
+[m[32m+    }
+[m     pub fn generation(&self) -> &str {
+         &self.generation
+     }
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:212:
+     command: Vec<String>,
+ }
+ 
+[31m-fn resolve_comparison(git: &mut Git, cwd: &Path, selection: &Selection) -> Result<Comparison, CaptureError> {
+[m[32m+fn resolve_comparison(
+[m[32m+    git: &mut Git,
+[m[32m+    cwd: &Path,
+[m[32m+    selection: &Selection,
+[m[32m+) -> Result<Comparison, CaptureError> {
+[m     let (reference, before_role, after_role) = match selection {
+         Selection::Staged => (Some("HEAD"), Role::Head, Role::Index),
+         Selection::Unstaged => (None, Role::Index, Role::Working),
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:220:
+         Selection::Base(reference) => (Some(reference.as_str()), Role::Base, Role::Working),
+     };
+     let commit = if let Some(reference) = reference {
+[31m-        if reference.is_empty() || reference.len() > config::MAX_PATH_BYTES || reference.contains('\0') {
+[m[31m-            return Err(CaptureError::InvalidInput("Base must be a nonempty bounded Git reference".into()));
+[m[32m+        if reference.is_empty()
+[m[32m+            || reference.len() > config::MAX_PATH_BYTES
+[m[32m+            || reference.contains('\0')
+[m[32m+        {
+[m[32m+            return Err(CaptureError::InvalidInput(
+[m[32m+                "Base must be a nonempty bounded Git reference".into(),
+[m[32m+            ));
+[m         }
+[31m-        let bytes = git.read(cwd, &["rev-parse", "--verify", "--end-of-options", &format!("{reference}^{{commit}}")], 65)?;
+[m[32m+        let bytes = git.read(
+[m[32m+            cwd,
+[m[32m+            &[
+[m[32m+                "rev-parse",
+[m[32m+                "--verify",
+[m[32m+                "--end-of-options",
+[m[32m+                &format!("{reference}^{{commit}}"),
+[m[32m+            ],
+[m[32m+            65,
+[m[32m+        )?;
+[m         let value = std::str::from_utf8(bytes.strip_suffix(b"\n").unwrap_or(&bytes))
+[31m-            .map_err(|_| CaptureError::InvalidInput("Invalid commit identity".into()))?.to_owned();
+[m[31m-        if !oid(&value) { return Err(CaptureError::InvalidInput("Invalid commit identity".into())); }
+[m[32m+            .map_err(|_| CaptureError::InvalidInput("Invalid commit identity".into()))?
+[m[32m+            .to_owned();
+[m[32m+        if !oid(&value) {
+[m[32m+            return Err(CaptureError::InvalidInput("Invalid commit identity".into()));
+[m[32m+        }
+[m         Some(value)
+[31m-    } else { None };
+[m[31m-    let mut command = vec![if reference.is_none() { "diff-files" } else { "diff-index" }.to_owned()];
+[m[31m-    if after_role == Role::Index { command.push("--cached".into()); }
+[m[31m-    command.extend(["--raw", "--no-renames", "--no-relative", "--no-ext-diff", "--no-textconv", "--ignore-submodules=none", "--abbrev=64", "-z"].into_iter().map(str::to_owned));
+[m[31m-    if let Some(commit) = &commit { command.push(commit.clone()); }
+[m[32m+    } else {
+[m[32m+        None
+[m[32m+    };
+[m[32m+    let mut command = vec![
+[m[32m+        if reference.is_none() {
+[m[32m+            "diff-files"
+[m[32m+        } else {
+[m[32m+            "diff-index"
+[m[32m+        }
+[m[32m+        .to_owned(),
+[m[32m+    ];
+[m[32m+    if after_role == Role::Index {
+[m[32m+        command.push("--cached".into());
+[m[32m+    }
+[m[32m+    command.extend(
+[m[32m+        [
+[m[32m+            "--raw",
+[m[32m+            "--no-renames",
+[m[32m+            "--no-relative",
+[m[32m+            "--no-ext-diff",
+[m[32m+            "--no-textconv",
+[m[32m+            "--ignore-submodules=none",
+[m[32m+            "--abbrev=64",
+[m[32m+            "-z",
+[m[32m+        ]
+[m[32m+        .into_iter()
+[m[32m+        .map(str::to_owned),
+[m[32m+    );
+[m[32m+    if let Some(commit) = &commit {
+[m[32m+        command.push(commit.clone());
+[m[32m+    }
+[m     command.push("--".into());
+[31m-    Ok(Comparison { selection: selection.clone(), commit, before_role, after_role, command })
+[m[32m+    Ok(Comparison {
+[m[32m+        selection: selection.clone(),
+[m[32m+        commit,
+[m[32m+        before_role,
+[m[32m+        after_role,
+[m[32m+        command,
+[m[32m+    })
+[m }
+ 
+ /// Capture is read-only. An error returns no partial source bytes or replacement source view.
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:241:
+ pub fn capture(workspace: &Path, request: &CaptureRequest) -> Result<Capture, CaptureError> {
+     let root = config::normalize_workspace(workspace)?;
+[31m-    if request.configuration.as_ref().is_some_and(|p| p.as_os_str().len() > config::MAX_PATH_BYTES) {
+[m[32m+    if request
+[m[32m+        .configuration
+[m[32m+        .as_ref()
+[m[32m+        .is_some_and(|p| p.as_os_str().len() > config::MAX_PATH_BYTES)
+[m[32m+    {
+[m         return Err(CaptureError::Limit("Configuration path bytes"));
+     }
+     let contexts = paths(&request.context)?;
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:247:
+     let exclusions = paths(&request.exclusions)?;
+     let mut git = Git { processes: 0 };
+     let check = Acquisition::new(&root)?;
+[31m-    let top = git.read(&check.cwd(), &["rev-parse", "--show-toplevel"], config::MAX_PATH_BYTES + 1)?;
+[m[32m+    let top = git.read(
+[m[32m+        &check.cwd(),
+[m[32m+        &["rev-parse", "--show-toplevel"],
+[m[32m+        config::MAX_PATH_BYTES + 1,
+[m[32m+    )?;
+[m     if top.strip_suffix(b"\n") != Some(root.as_os_str().as_encoded_bytes()) {
+[31m-        return Err(CaptureError::InvalidInput("Workspace must be the repository root".into()));
+[m[32m+        return Err(CaptureError::InvalidInput(
+[m[32m+            "Workspace must be the repository root".into(),
+[m[32m+        ));
+[m     }
+     let comparison = resolve_comparison(&mut git, &check.cwd(), &request.selection)?;
+     let command: Vec<_> = comparison.command.iter().map(String::as_str).collect();
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:259:
+         let mut acquire = Acquisition::new(&root)?;
+         let cwd = acquire.cwd();
+         let inventory = git.read(&cwd, &command, MAX_INVENTORY_BYTES)?;
+[31m-        let mut entries: BTreeMap<_, _> = inventory_entries(&inventory)?.into_iter().map(|e| (e.path.clone(), e)).collect();
+[m[31m-        let untracked = if working_selection { git.read(&cwd, &untracked_command, MAX_INVENTORY_BYTES)? } else { Vec::new() };
+[m[32m+        let mut entries: BTreeMap<_, _> = inventory_entries(&inventory)?
+[m[32m+            .into_iter()
+[m[32m+            .map(|e| (e.path.clone(), e))
+[m[32m+            .collect();
+[m[32m+        let untracked = if working_selection {
+[m[32m+            git.read(&cwd, &untracked_command, MAX_INVENTORY_BYTES)?
+[m[32m+        } else {
+[m[32m+            Vec::new()
+[m[32m+        };
+[m         for path in inventory_paths(&untracked)? {
+[31m-            entries.entry(path.clone()).or_insert(Entry { path, old: None, new: None, old_mode: None, new_mode: None });
+[m[32m+            entries.entry(path.clone()).or_insert(Entry {
+[m[32m+                path,
+[m[32m+                old: None,
+[m[32m+                new: None,
+[m[32m+                old_mode: None,
+[m[32m+                new_mode: None,
+[m[32m+            });
+[m         }
+[31m-        if entries.len() > MAX_FILES { return Err(CaptureError::Limit("Selected path count")); }
+[m[32m+        if entries.len() > MAX_FILES {
+[m[32m+            return Err(CaptureError::Limit("Selected path count"));
+[m[32m+        }
+[m         let entries: Vec<_> = entries.into_values().collect();
+         let config_path = config::selected_path(&root, request.configuration.as_deref())?;
+         let mut excluded = Vec::new();
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:316:
+         let mut changes = Vec::new();
+         let mut working = BTreeMap::new();
+         for entry in entries {
+[31m-            let mut stored = |blob: Option<String>, mode, role| -> Result<Option<Source>, CaptureError> {
+[m[31m-                let Some(blob) = blob else { return Ok(None); };
+[m[31m-                acquire.admit_file()?;
+[m[31m-                let bytes = git.blob(&cwd, &blob, acquire.remaining())?;
+[m[31m-                acquire.admit_bytes(bytes.len())?;
+[m[31m-                Ok(Some(Source::new(entry.path.clone(), role, Some(blob), mode, bytes.into())))
+[m[31m-            };
+[m[32m+            let mut stored =
+[m[32m+                |blob: Option<String>, mode, role| -> Result<Option<Source>, CaptureError> {
+[m[32m+                    let Some(blob) = blob else {
+[m[32m+                        return Ok(None);
+[m[32m+                    };
+[m[32m+                    acquire.admit_file()?;
+[m[32m+                    let bytes = git.blob(&cwd, &blob, acquire.remaining())?;
+[m[32m+                    acquire.admit_bytes(bytes.len())?;
+[m[32m+                    Ok(Some(Source::new(
+[m[32m+                        entry.path.clone(),
+[m[32m+                        role,
+[m[32m+                        Some(blob),
+[m[32m+                        mode,
+[m[32m+                        bytes.into(),
+[m[32m+                    )))
+[m[32m+                };
+[m             let before = stored(entry.old, entry.old_mode, comparison.before_role)?;
+             let after = if working_selection {
+                 let file = load_working(&mut acquire, &mut working, &entry.path)?;
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:329:
+[31m-                file.map(|f| Source::new(entry.path.clone(), Role::Working, None, Some(f.mode), f.bytes))
+[m[31m-            } else { stored(entry.new, entry.new_mode, comparison.after_role)? };
+[m[32m+                file.map(|f| {
+[m[32m+                    Source::new(
+[m[32m+                        entry.path.clone(),
+[m[32m+                        Role::Working,
+[m[32m+                        None,
+[m[32m+                        Some(f.mode),
+[m[32m+                        f.bytes,
+[m[32m+                    )
+[m[32m+                })
+[m[32m+            } else {
+[m[32m+                stored(entry.new, entry.new_mode, comparison.after_role)?
+[m[32m+            };
+[m             let unchanged = match (&before, &after) {
+                 (Some(a), Some(b)) => a.bytes == b.bytes && a.git_mode == b.git_mode,
+                 (None, None) => true,
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:334:
+                 _ => false,
+             };
+[31m-            if !unchanged { changes.push(Change { path: entry.path, before, after }); }
+[m[32m+            if !unchanged {
+[m[32m+                changes.push(Change {
+[m[32m+                    path: entry.path,
+[m[32m+                    before,
+[m[32m+                    after,
+[m[32m+                });
+[m[32m+            }
+[m         }
+         let mut context = Vec::new();
+         for path in &contexts {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:340:
+[31m-            let file = load_working(&mut acquire, &mut working, path)?
+[m[31m-                .ok_or_else(|| CaptureError::Unavailable(format!("Required context is missing: {path}")))?;
+[m[31m-            context.push(Source::new(path.clone(), Role::Context, None, Some(file.mode), file.bytes));
+[m[32m+            let file = load_working(&mut acquire, &mut working, path)?.ok_or_else(|| {
+[m[32m+                CaptureError::Unavailable(format!("Required context is missing: {path}"))
+[m[32m+            })?;
+[m[32m+            context.push(Source::new(
+[m[32m+                path.clone(),
+[m[32m+                Role::Context,
+[m[32m+                None,
+[m[32m+                Some(file.mode),
+[m[32m+                file.bytes,
+[m[32m+            ));
+[m         }
+         // Relevant inventories and exact mutable bytes are checked again. This is not a
+         // globally atomic snapshot: edits that revert between observations may be unobserved.
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:346:
+         let mut stable = inventory == git.read(&cwd, &command, MAX_INVENTORY_BYTES)?;
+[31m-        if working_selection { stable &= untracked == git.read(&cwd, &untracked_command, MAX_INVENTORY_BYTES)?; }
+[m[32m+        if working_selection {
+[m[32m+            stable &= untracked == git.read(&cwd, &untracked_command, MAX_INVENTORY_BYTES)?;
+[m[32m+        }
+[m         for (path, captured) in &working {
+             stable &= *captured == acquire.working(path, MAX_FILE_BYTES)?;
+         }
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:352:
+         stable &= file == current_file;
+         if let Some(file) = &current_file {
+             check_configuration_exclusion(&root, file, &exclusions, &mut excluded)?;
+[31m-            if !excluded.is_empty() { return Err(CaptureError::Excluded(excluded)); }
+[m[31m-            stable &= configuration.captured_bytes() == Some(acquire.configuration(file, MAX_FILE_BYTES)?.as_slice());
+[m[32m+            if !excluded.is_empty() {
+[m[32m+                return Err(CaptureError::Excluded(excluded));
+[m[32m+            }
+[m[32m+            stable &= configuration.captured_bytes()
+[m[32m+                == Some(acquire.configuration(file, MAX_FILE_BYTES)?.as_slice());
+[m         }
+[31m-        if !stable { continue; }
+[m[32m+        if !stable {
+[m[32m+            continue;
+[m[32m+        }
+[m         let changes = attribute_renames(changes);
+[31m-        let mut generations = vec![format!("{:?}", comparison.selection).into_bytes(), comparison.commit.as_deref().unwrap_or("").as_bytes().to_vec(), configuration.generation().as_bytes().to_vec()];
+[m[31m-        generations.extend(changes.iter().flat_map(|c| c.before.iter().chain(c.after.iter())).chain(context.iter()).map(|s| s.generation.as_bytes().to_vec()));
+[m[32m+        let mut generations = vec![
+[m[32m+            format!("{:?}", comparison.selection).into_bytes(),
+[m[32m+            comparison
+[m[32m+                .commit
+[m[32m+                .as_deref()
+[m[32m+                .unwrap_or("")
+[m[32m+                .as_bytes()
+[m[32m+                .to_vec(),
+[m[32m+            configuration.generation().as_bytes().to_vec(),
+[m[32m+        ];
+[m[32m+        generations.extend(
+[m[32m+            changes
+[m[32m+                .iter()
+[m[32m+                .flat_map(|c| c.before.iter().chain(c.after.iter()))
+[m[32m+                .chain(context.iter())
+[m[32m+                .map(|s| s.generation.as_bytes().to_vec()),
+[m[32m+        );
+[m         let generation = identity(&generations.iter().map(Vec::as_slice).collect::<Vec<_>>());
+[31m-        let retained = changes.iter().flat_map(|c| c.before.iter().chain(c.after.iter())).chain(context.iter());
+[m[32m+        let retained = changes
+[m[32m+            .iter()
+[m[32m+            .flat_map(|c| c.before.iter().chain(c.after.iter()))
+[m[32m+            .chain(context.iter());
+[m         let (mut retained_files, mut retained_bytes) = (0, 0);
+[31m-        for source in retained { retained_files += 1; retained_bytes += source.bytes.len(); }
+[m[31m-        if let Some(bytes) = configuration.captured_bytes() { retained_files += 1; retained_bytes += bytes.len(); }
+[m[31m-        return Ok(Capture { comparison, generation, changes, context, configuration,
+[m[31m-            stats: CaptureStats { retained_files, retained_bytes, attempts: attempt, git_processes: git.processes } });
+[m[32m+        for source in retained {
+[m[32m+            retained_files += 1;
+[m[32m+            retained_bytes += source.bytes.len();
+[m[32m+        }
+[m[32m+        if let Some(bytes) = configuration.captured_bytes() {
+[m[32m+            retained_files += 1;
+[m[32m+            retained_bytes += bytes.len();
+[m[32m+        }
+[m[32m+        return Ok(Capture {
+[m[32m+            comparison,
+[m[32m+            generation,
+[m[32m+            changes,
+[m[32m+            context,
+[m[32m+            configuration,
+[m[32m+            stats: CaptureStats {
+[m[32m+                retained_files,
+[m[32m+                retained_bytes,
+[m[32m+                attempts: attempt,
+[m[32m+                git_processes: git.processes,
+[m[32m+            },
+[m[32m+        });
+[m     }
+     Err(CaptureError::Unstable)
+ }
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:380:
+         };
+         let key = identity(&[&source.bytes, format!("{:?}", source.git_mode).as_bytes()]);
+         let group = groups.entry(key).or_default();
+[31m-        if deletion { group.0.push(index); } else { group.1.push(index); }
+[m[32m+        if deletion {
+[m[32m+            group.0.push(index);
+[m[32m+        } else {
+[m[32m+            group.1.push(index);
+[m[32m+        }
+[m     }
+     let mut slots: Vec<_> = changes.into_iter().map(Some).collect();
+     for (deletions, additions) in groups.into_values() {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:387:
+[31m-        if deletions.len() != 1 || additions.len() != 1 { continue; }
+[m[32m+        if deletions.len() != 1 || additions.len() != 1 {
+[m[32m+            continue;
+[m[32m+        }
+[m         let (old, new) = (deletions[0], additions[0]);
+[31m-        let before = slots[old].as_ref().and_then(|c| c.before.as_ref()).expect("deletion");
+[m[31m-        let after = slots[new].as_ref().and_then(|c| c.after.as_ref()).expect("addition");
+[m[31m-        if before.bytes != after.bytes || before.git_mode != after.git_mode { continue; }
+[m[32m+        let before = slots[old]
+[m[32m+            .as_ref()
+[m[32m+            .and_then(|c| c.before.as_ref())
+[m[32m+            .expect("deletion");
+[m[32m+        let after = slots[new]
+[m[32m+            .as_ref()
+[m[32m+            .and_then(|c| c.after.as_ref())
+[m[32m+            .expect("addition");
+[m[32m+        if before.bytes != after.bytes || before.git_mode != after.git_mode {
+[m[32m+            continue;
+[m[32m+        }
+[m         let before = slots[old].take().expect("deletion").before;
+         let added = slots[new].take().expect("addition");
+[31m-        slots[new] = Some(Change { path: added.path, before, after: added.after });
+[m[32m+        slots[new] = Some(Change {
+[m[32m+            path: added.path,
+[m[32m+            before,
+[m[32m+            after: added.after,
+[m[32m+        });
+[m     }
+     let mut result: Vec<_> = slots.into_iter().flatten().collect();
+     result.sort_by(|a, b| a.path.cmp(&b.path));
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:398:
+     result
+ }
+ 
+[31m-fn load_working(acquire: &mut Acquisition, working: &mut BTreeMap<String, Option<WorkingFile>>, path: &str) -> Result<Option<WorkingFile>, CaptureError> {
+[m[32m+fn load_working(
+[m[32m+    acquire: &mut Acquisition,
+[m[32m+    working: &mut BTreeMap<String, Option<WorkingFile>>,
+[m[32m+    path: &str,
+[m[32m+) -> Result<Option<WorkingFile>, CaptureError> {
+[m     acquire.admit_file()?;
+     if let Some(file) = working.get(path) {
+[31m-        if let Some(file) = file { acquire.admit_bytes(file.bytes.len())?; }
+[m[32m+        if let Some(file) = file {
+[m[32m+            acquire.admit_bytes(file.bytes.len())?;
+[m[32m+        }
+[m         return Ok(file.clone());
+     }
+     let file = acquire.working(path, acquire.remaining())?;
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:408:
+[31m-    if let Some(file) = &file { acquire.admit_bytes(file.bytes.len())?; }
+[m[32m+    if let Some(file) = &file {
+[m[32m+        acquire.admit_bytes(file.bytes.len())?;
+[m[32m+    }
+[m     working.insert(path.to_owned(), file.clone());
+     Ok(file)
+ }
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/mod.rs:412:
+ 
+ fn inventory_paths(bytes: &[u8]) -> Result<Vec<String>, CaptureError> {
+[31m-    if !bytes.is_empty() && !bytes.ends_with(&[0]) { return Err(CaptureError::Unsupported("Truncated Git path inventory")); }
+[m[32m+    if !bytes.is_empty() && !bytes.ends_with(&[0]) {
+[m[32m+        return Err(CaptureError::Unsupported("Truncated Git path inventory"));
+[m[32m+    }
+[m     let mut result = Vec::new();
+     for path in bytes.split(|b| *b == 0).filter(|s| !s.is_empty()) {
+[31m-        if result.len() >= MAX_FILES { return Err(CaptureError::Limit("Untracked path count")); }
+[m[31m-        let path = std::str::from_utf8(path).map_err(|_| CaptureError::Unsupported("Non-UTF-8 source path"))?;
+[m[32m+        if result.len() >= MAX_FILES {
+[m[32m+            return Err(CaptureError::Limit("Untracked path count"));
+[m[32m+        }
+[m[32m+        let path = std::str::from_utf8(path)
+[m[32m+            .map_err(|_| CaptureError::Unsupported("Non-UTF-8 source path"))?;
+[m         let normalized = config::normalize_path(Path::new(path))?;
+[31m-        if path != normalized { return Err(CaptureError::Unsupported("Noncanonical Git path")); }
+[m[32m+        if path != normalized {
+[m[32m+            return Err(CaptureError::Unsupported("Noncanonical Git path"));
+[m[32m+        }
+[m         result.push(normalized);
+     }
+     Ok(result)
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:5:
+     io::Read,
+     os::fd::AsRawFd,
+     os::unix::fs::{OpenOptionsExt, PermissionsExt},
+[31m-    sync::Arc,
+[m     path::{Path, PathBuf},
+[32m+    sync::Arc,
+[m };
+ 
+ // Linux asm-generic/fcntl.h. NONBLOCK avoids hanging on a regular-file-to-FIFO swap.
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:15:
+ const NONBLOCK: i32 = 0o4000;
+ 
+ #[derive(Clone, PartialEq, Eq)]
+[31m-pub(super) struct WorkingFile { pub bytes: Arc<[u8]>, pub mode: GitMode }
+[m[32m+pub(super) struct WorkingFile {
+[m[32m+    pub bytes: Arc<[u8]>,
+[m[32m+    pub mode: GitMode,
+[m[32m+}
+[m 
+ pub(super) struct Acquisition {
+     root: File,
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/acquire.rs:74:
+             directory = match OpenOptions::new().read(true).custom_flags(flags).open(next) {
+                 Ok(file) => file,
+                 Err(error) if error.kind() == std::io::ErrorKind::NotFound => return Ok(None),
+[31m-                Err(_) => return Err(CaptureError::Unavailable(format!("Required path is unavailable or contains a symlink: {path}"))),
+[m[32m+                Err(_) => {
+[m[32m+                    return Err(CaptureError::Unavailable(format!(
+[m[32m+                        "Required path is unavailable or contains a symlink: {path}"
+[m[32m+                    )));
+[m[32m+                }
+[m             };
+         }
+[31m-        let metadata = directory.metadata().map_err(|_| CaptureError::Unavailable(path.into()))?;
+[m[31m-        let mode = if metadata.permissions().mode() & 0o111 == 0 { GitMode::Regular } else { GitMode::Executable };
+[m[31m-        Ok(Some(WorkingFile { bytes: read_file(directory, limit)?.into(), mode }))
+[m[32m+        let metadata = directory
+[m[32m+            .metadata()
+[m[32m+            .map_err(|_| CaptureError::Unavailable(path.into()))?;
+[m[32m+        let mode = if metadata.permissions().mode() & 0o111 == 0 {
+[m[32m+            GitMode::Regular
+[m[32m+        } else {
+[m[32m+            GitMode::Executable
+[m[32m+        };
+[m[32m+        Ok(Some(WorkingFile {
+[m[32m+            bytes: read_file(directory, limit)?.into(),
+[m[32m+            mode,
+[m[32m+        }))
+[m     }
+ 
+     pub fn configuration(&self, file: &Path, limit: usize) -> Result<Vec<u8>, CaptureError> {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/src/workspace/git.rs:124:
+         }
+         Ok(bytes)
+     }
+[31m-
+[m[31m-
+[m }
+ 
+ fn bounded(mut input: impl Read, limit: usize) -> Result<Vec<u8>, CaptureError> {
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1:
+[31m-use anti_slop::workspace::{Role, CaptureRequest, Selection, capture as capture_sources};
+[m[32m+use anti_slop::workspace::{CaptureRequest, Role, Selection, capture as capture_sources};
+[m use std::{fs, path::Path, process::Command};
+ use tempfile::TempDir;
+ 
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:49:
+         },
+     )
+     .expect("staged capture must return retained HEAD/index and independent context");
+[31m-    assert_eq!(capture.resolved_commit().unwrap(), git(root.path(), &["rev-parse", "HEAD"]));
+[m     assert_eq!(
+[32m+        capture.resolved_commit().unwrap(),
+[m[32m+        git(root.path(), &["rev-parse", "HEAD"])
+[m[32m+    );
+[m[32m+    assert_eq!(
+[m         capture
+             .changes()
+             .iter()
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1134:
+     git(root.path(), &["add", ".gitignore"]);
+     fs::write(root.path().join("ignored.ts"), b"ignored\n").unwrap();
+     for (selection, before, after, expected_paths) in [
+[31m-        (Selection::Staged, b"new head\n".as_slice(), b"index\n".as_slice(), vec![".gitignore", "a.ts", "staged-only.ts"]),
+[m[31m-        (Selection::Unstaged, b"index\n".as_slice(), b"working\n".as_slice(), vec!["a.ts", "untracked.ts"]),
+[m[31m-        (Selection::Local, b"new head\n".as_slice(), b"working\n".as_slice(), vec![".gitignore", "a.ts", "staged-only.ts", "untracked.ts"]),
+[m[31m-        (Selection::Base("release".into()), b"base\n".as_slice(), b"working\n".as_slice(), vec![".gitignore", "a.ts", "staged-only.ts", "untracked.ts"]),
+[m[32m+        (
+[m[32m+            Selection::Staged,
+[m[32m+            b"new head\n".as_slice(),
+[m[32m+            b"index\n".as_slice(),
+[m[32m+            vec![".gitignore", "a.ts", "staged-only.ts"],
+[m[32m+        ),
+[m[32m+        (
+[m[32m+            Selection::Unstaged,
+[m[32m+            b"index\n".as_slice(),
+[m[32m+            b"working\n".as_slice(),
+[m[32m+            vec!["a.ts", "untracked.ts"],
+[m[32m+        ),
+[m[32m+        (
+[m[32m+            Selection::Local,
+[m[32m+            b"new head\n".as_slice(),
+[m[32m+            b"working\n".as_slice(),
+[m[32m+            vec![".gitignore", "a.ts", "staged-only.ts", "untracked.ts"],
+[m[32m+        ),
+[m[32m+        (
+[m[32m+            Selection::Base("release".into()),
+[m[32m+            b"base\n".as_slice(),
+[m[32m+            b"working\n".as_slice(),
+[m[32m+            vec![".gitignore", "a.ts", "staged-only.ts", "untracked.ts"],
+[m[32m+        ),
+[m     ] {
+[31m-        let request = CaptureRequest {context: vec!["a.ts".into()], ..CaptureRequest::new(selection.clone())};
+[m[31m-        let captured = capture_sources(root.path(), &request).expect("every explicit comparison must capture its intended sources");
+[m[31m-        assert_eq!(captured.changes().iter().map(|c| c.path.as_str()).collect::<Vec<_>>(), expected_paths, "{selection:?}");
+[m[31m-        let change = captured.changes().iter().find(|c| c.path == "a.ts").unwrap();
+[m[32m+        let request = CaptureRequest {
+[m[32m+            context: vec!["a.ts".into()],
+[m[32m+            ..CaptureRequest::new(selection.clone())
+[m[32m+        };
+[m[32m+        let captured = capture_sources(root.path(), &request)
+[m[32m+            .expect("every explicit comparison must capture its intended sources");
+[m[32m+        assert_eq!(
+[m[32m+            captured
+[m[32m+                .changes()
+[m[32m+                .iter()
+[m[32m+                .map(|c| c.path.as_str())
+[m[32m+                .collect::<Vec<_>>(),
+[m[32m+            expected_paths,
+[m[32m+            "{selection:?}"
+[m[32m+        );
+[m[32m+        let change = captured
+[m[32m+            .changes()
+[m[32m+            .iter()
+[m[32m+            .find(|c| c.path == "a.ts")
+[m[32m+            .unwrap();
+[m         assert_eq!(change.before.as_ref().unwrap().bytes(), before);
+         assert_eq!(change.after.as_ref().unwrap().bytes(), after);
+         assert_eq!(captured.context()[0].bytes(), b"working\n");
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1149:
+[31m-        assert_ne!(change.after.as_ref().unwrap().generation, captured.context()[0].generation);
+[m[31m-        if selection == Selection::Staged { assert_eq!(captured.resolved_commit().unwrap(), head); }
+[m[32m+        assert_ne!(
+[m[32m+            change.after.as_ref().unwrap().generation,
+[m[32m+            captured.context()[0].generation
+[m[32m+        );
+[m[32m+        if selection == Selection::Staged {
+[m[32m+            assert_eq!(captured.resolved_commit().unwrap(), head);
+[m[32m+        }
+[m     }
+ }
+ 
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1154:
+ #[test]
+ fn exact_content_renames_keep_both_paths_and_reject_either_exclusion() {
+[31m-    for selection in [Selection::Staged, Selection::Unstaged, Selection::Local, Selection::Base("HEAD".into())] {
+[m[32m+    for selection in [
+[m[32m+        Selection::Staged,
+[m[32m+        Selection::Unstaged,
+[m[32m+        Selection::Local,
+[m[32m+        Selection::Base("HEAD".into()),
+[m[32m+    ] {
+[m         let root = repository();
+         let destination = "moved\tname\n.ts";
+         fs::rename(root.path().join("a.ts"), root.path().join(destination)).unwrap();
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1160:
+[31m-        if selection == Selection::Staged { git(root.path(), &["add", "-A"]); }
+[m[31m-        let captured = capture_sources(root.path(), &CaptureRequest::new(selection.clone())).unwrap();
+[m[31m-        assert_eq!(captured.changes().len(), 1, "Unique identical deletion/addition must be attributed once: {selection:?}");
+[m[32m+        if selection == Selection::Staged {
+[m[32m+            git(root.path(), &["add", "-A"]);
+[m[32m+        }
+[m[32m+        let captured =
+[m[32m+            capture_sources(root.path(), &CaptureRequest::new(selection.clone())).unwrap();
+[m[32m+        assert_eq!(
+[m[32m+            captured.changes().len(),
+[m[32m+            1,
+[m[32m+            "Unique identical deletion/addition must be attributed once: {selection:?}"
+[m[32m+        );
+[m         let renamed = &captured.changes()[0];
+         assert_eq!(renamed.path, destination);
+         assert_eq!(renamed.before.as_ref().unwrap().path, "a.ts");
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1167:
+         assert_eq!(renamed.before.as_ref().unwrap().bytes(), b"head\n");
+         assert_eq!(renamed.after.as_ref().unwrap().bytes(), b"head\n");
+         for excluded in ["a.ts", destination] {
+[31m-            let error = capture_sources(root.path(), &CaptureRequest {exclusions: vec![excluded.into()], ..CaptureRequest::new(selection.clone())}).unwrap_err();
+[m[31m-            let anti_slop::workspace::CaptureError::Excluded(observed) = error else { panic!("{error}") };
+[m[32m+            let error = capture_sources(
+[m[32m+                root.path(),
+[m[32m+                &CaptureRequest {
+[m[32m+                    exclusions: vec![excluded.into()],
+[m[32m+                    ..CaptureRequest::new(selection.clone())
+[m[32m+                },
+[m[32m+            )
+[m[32m+            .unwrap_err();
+[m[32m+            let anti_slop::workspace::CaptureError::Excluded(observed) = error else {
+[m[32m+                panic!("{error}")
+[m[32m+            };
+[m             assert!(observed.iter().any(|i| i.path == excluded));
+         }
+     }
+Diff in /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/tests/workspace.rs:1185:
+     git(root.path(), &["add", "-A"]);
+     for selection in [Selection::Staged, Selection::Local] {
+         let captured = capture_sources(root.path(), &CaptureRequest::new(selection)).unwrap();
+[31m-        assert_eq!(captured.changes().iter().map(|c| c.path.as_str()).collect::<Vec<_>>(), ["a.ts", "second.ts", "x.ts", "y.ts"]);
+[m[31m-        assert!(captured.changes().iter().all(|c| c.before.is_none() != c.after.is_none()));
+[m[31m-        for source in captured.changes().iter().flat_map(|c| c.before.iter().chain(c.after.iter())) { assert_eq!(source.bytes(), b"head\n"); }
+[m[32m+        assert_eq!(
+[m[32m+            captured
+[m[32m+                .changes()
+[m[32m+                .iter()
+[m[32m+                .map(|c| c.path.as_str())
+[m[32m+                .collect::<Vec<_>>(),
+[m[32m+            ["a.ts", "second.ts", "x.ts", "y.ts"]
+[m[32m+        );
+[m[32m+        assert!(
+[m[32m+            captured
+[m[32m+                .changes()
+[m[32m+                .iter()
+[m[32m+                .all(|c| c.before.is_none() != c.after.is_none())
+[m[32m+        );
+[m[32m+        for source in captured
+[m[32m+            .changes()
+[m[32m+            .iter()
+[m[32m+            .flat_map(|c| c.before.iter().chain(c.after.iter()))
+[m[32m+        {
+[m[32m+            assert_eq!(source.bytes(), b"head\n");
+[m[32m+        }
+[m     }
+ }
+ 
+
+exit=1

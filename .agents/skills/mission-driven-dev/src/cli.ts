@@ -1,9 +1,13 @@
+import { readFile } from "node:fs/promises";
 import { validateArtifact, type ValidationReport } from "./validate.js";
 
 const args = process.argv.slice(2);
-const usage = "Usage: node scripts/validate.mjs <artifact-path> [--json]";
+const usage = "Usage: node scripts/validate.mjs <artifact-path> [--json] [--candidate <state-and-journal.json>]";
 const json = args.includes("--json");
-const paths = args.filter((arg) => !arg.startsWith("--"));
+const candidateIndex = args.indexOf("--candidate");
+const candidatePath = candidateIndex >= 0 ? args[candidateIndex + 1] : undefined;
+const flags = candidateIndex >= 0 ? args.filter((_, index) => index !== candidateIndex && index !== candidateIndex + 1) : args;
+const paths = flags.filter((arg) => !arg.startsWith("--"));
 
 function print(report: ValidationReport): void {
   if (json)
@@ -23,7 +27,9 @@ if (args.length === 1 && args[0] === "--help") {
   process.stdout.write(`${usage}\n`);
 } else if (
   paths.length !== 1 ||
-  args.some((arg) => arg.startsWith("--") && arg !== "--json") ||
+  flags.some((arg) => arg.startsWith("--") && arg !== "--json") ||
+  (candidateIndex >= 0 && (!candidatePath || candidatePath.startsWith("--"))) ||
+  args.filter((arg) => arg === "--candidate").length > 1 ||
   args.filter((arg) => arg === "--json").length > 1
 ) {
   print({
@@ -32,5 +38,16 @@ if (args.length === 1 && args[0] === "--help") {
     exitCode: 2,
   });
 } else {
-  print(await validateArtifact(paths[0]));
+  if (candidatePath) {
+    let text: string | undefined;
+    try { text = await readFile(candidatePath, "utf8"); }
+    catch { print({ valid: false, exitCode: 2, issues: [{ path: candidatePath, rule: "read", message: "Cannot read candidate JSON." }] }); }
+    if (text !== undefined) {
+      let candidate: unknown;
+      let parsed = false;
+      try { candidate = JSON.parse(text); parsed = true; }
+      catch { print({ valid: false, exitCode: 1, issues: [{ path: candidatePath, rule: "parse", message: "Invalid candidate JSON." }] }); }
+      if (parsed) print(await validateArtifact(paths[0], candidate));
+    }
+  } else print(await validateArtifact(paths[0]));
 }

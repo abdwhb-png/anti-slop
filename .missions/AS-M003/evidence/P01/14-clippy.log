@@ -1,0 +1,19 @@
+    Checking anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+    Checking tempfile v3.27.0
+error: this range is empty so it will yield no values
+   --> tests/workspace.rs:120:19
+    |
+120 |     range.range = 3..2;
+    |                   ^^^^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.96.0/index.html#reversed_empty_ranges
+    = note: `#[deny(clippy::reversed_empty_ranges)]` on by default
+help: consider using the following if you are attempting to iterate over this range in reverse
+    |
+120 -     range.range = 3..2;
+120 +     range.range = (2..3).rev();
+    |
+
+error: could not compile `anti-slop` (test "workspace") due to 1 previous error
+
+exit=101

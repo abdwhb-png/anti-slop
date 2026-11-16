@@ -1,0 +1,37 @@
+{
+  "recordedAt": "2026-11-15T20:09:08.494789+00:00",
+  "assignment": "6508c722-06cb-4a2a-a694-d4bd33999ec4",
+  "generation": "s1794768506.3553234.1173",
+  "authority": "steering 005: freeze production modifications pending explicit decision; only focused read-only verification and exact TDD-gap documentation",
+  "files": [
+    {
+      "path": "src/workspace/mod.rs",
+      "sha256": "4be84ed0dbd9f8741871c0225b99dfb5ce8825bd13f9922378141bd393991fbb"
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "sha256": "e85356beeca039a3fb03d423c0e12a753febc2c988ae0bbaab1675d6576d6913"
+    },
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "7b6f9dc2a27b8e5f6e7773837eca1287b5719ba4728dc7000718a790555a0eb3"
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "e993c89bbd07e50e3efb3484c5c4062d2188c1250ca1410e043d70ca24bb7712"
+    },
+    {
+      "path": "README.md",
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d"
+    },
+    {
+      "path": "src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7"
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57"
+    }
+  ],
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+}

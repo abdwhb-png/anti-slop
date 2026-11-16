@@ -1,0 +1,22 @@
+$ cargo test --frozen --test workspace four_comparisons_select_their_exact_sides_and_independent_context -- --exact
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree)
+error[E0277]: `Comparison` doesn't implement `Debug`
+   --> src/workspace/mod.rs:96:5
+    |
+ 94 | #[derive(Debug)]
+    |          ----- in this derive macro expansion
+ 95 | pub struct Capture {
+ 96 |     comparison: Comparison,
+    |     ^^^^^^^^^^^^^^^^^^^^^^ the trait `Debug` is not implemented for `Comparison`
+    |
+    = note: add `#[derive(Debug)]` to `Comparison` or manually `impl Debug for Comparison`
+help: consider annotating `Comparison` with `#[derive(Debug)]`
+    |
+204 + #[derive(Debug)]
+205 | struct Comparison {
+    |
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `anti-slop` (lib) due to 1 previous error
+
+exit=101

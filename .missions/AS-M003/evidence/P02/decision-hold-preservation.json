@@ -1,0 +1,29 @@
+{
+  "archive": "decision-hold-source.tar.gz",
+  "sha256": "d3d96bf2a67c0cae01cbde2dcf2e88517ba43902c4030fb8c45fd73d12a73d03",
+  "priorImmutableFilesVerified": 113,
+  "coordinatorActiveRecordChanges": [
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+      "before": "0d941a1cbb25c02cf3fe317d446868a6cb1d02a9a9c3958ec12248d12a1681a1",
+      "current": "9e030f466b87a86b3762ab892d9042ecb6fe8690730cb55984441b89fad8c947",
+      "owner": "firstmate:primary-1890471",
+      "evidence": "mission history sequence 12 records the decision hold"
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/history.jsonl",
+      "before": "de700f0fd81cf789843e4d0fdfb778aeb4aa27fd173b0419fde61e4bc3dfbed6",
+      "current": "256e8c7cb6a0d9e8b652ffe18ae693b5c726b462bb71cebd7fdeb4888c368ee4",
+      "owner": "firstmate:primary-1890471",
+      "evidence": "mission history sequence 12 records the decision hold"
+    }
+  ],
+  "observedStateRevision": 12,
+  "observedInterruption": {
+    "kind": "needs_decision",
+    "reason": "P02 comparisons preceded a valid behavioral RED; awaiting explicit decision on exception or archived restart."
+  },
+  "decisionPending": true,
+  "exceptionAccepted": false,
+  "fullCIRun": false
+}

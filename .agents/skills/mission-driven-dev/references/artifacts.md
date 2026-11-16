@@ -39,6 +39,10 @@ For a **mission**, additionally require `repository`: a path to the existing rep
 - **Execution Boundaries:** decisions workers may make and escalation conditions.
 - **Completion:** deliverables, independent acceptance and capabilities unlocked.
 
+Delivery-aware missions additionally declare `delivery: { mode, baseCommit, rationale, target?, parent? }`. Use `mode: pull-request | local-only`, a full starting commit and a nonempty grouping rationale. PR delivery requires the final target branch; local-only has neither PR target nor parent. An optional PR parent is `{ mission, pr, branch, head }`: an exact typed mission reference, PR URL, branch and full observed head. Its mission reference is resolved relative to this contract. Old contracts without delivery metadata remain readable in drafts and terminal archives; active states in this version require a delivery boundary. Existing active missions keep their previously qualified validator until explicit migration.
+
+A delivery-aware packet includes `deliveryAssessment: { commit, decision, rationale }`, with its exact `baseCommit`, `decision: continue | needs_decision` and the coordinator's reason for retaining or reconsidering this delivery. The validator checks the snapshot, not the judgment or invocation. Runtime dispatch must refuse `needs_decision`. Accepted delivery-aware results carry the same assessment shape against the actual returned head, with `decision: continue`; incomplete, negative or blocked reports remain recordable without it. The integration checks the actual Git head.
+
 For a **packet**, additionally require `mission`: an exact contract reference, and `baseCommit`: the full 40- or 64-character lowercase Git object id. Describe one objective, prerequisites, relevant files, exclusions, checks, required handoff and authority. Verify the commit and actual working state separately; a syntactically valid hash is not proof that it exists.
 
 ## Results and Checkpoints
@@ -68,6 +72,7 @@ For **state**, additionally require:
 | --- | --- |
 | `mission` | Active contract reference; its id equals state id. |
 | `status` | `draft`, `ready`, `executing`, `validating`, `completed`, `failed`, `cancelled` or `superseded`. |
+| `executionMode` | `direct` or `coordinated`, recording the user's choice. Initialize to null while unresolved. |
 | `interruption` | null, or `{ "kind": "needs_decision" | "blocked", "reason": "..." }`; preserve the current phase. |
 | `history`, `lastSequence` | Local journal path and last positive event sequence. |
 | `currentPacket` | Active packet reference or null; register it in attempts first. |
@@ -75,6 +80,12 @@ For **state**, additionally require:
 | `checkpoints` | Accepted checkpoints as defined above. |
 | `evidence` | Local evidence references supporting the current state. |
 | `validation` | Mission result reference for the active revision, or null. |
+
+Require a selected `executionMode` in `ready`, `executing` and `validating`, including when interrupted. Missing or null values fail with rule `execution-mode`; any other value fails schema validation in every phase. Drafts and terminal archives may omit the field or retain null for compatibility, but this never grants dispatch authority. Preserve a selected mode through closure. No automatic default or retroactive approval is supplied.
+
+Keep the current mode in state only, with its decision and authority evidence in the existing journal's `reason`/`evidence` or linked execution evidence. Do not add a mode field to old events or rewrite approved contracts. On authorized resumption of an older active state, record a verified existing explicit choice or obtain one, increment state revision and append an event before rerunning validation. Inspection alone does not authorize that update. Journal checks do not authenticate the mode choice or reconstruct its history.
+
+Optional state `deliveryBase: { commit, target, parentHead? }` records the current reconciled base without rewriting approved contracts or historical packets. All commit values are full object ids. Optional `integration: { head, target, evidence }` records the integrated source head, final target and nonempty typed evidence references. A completed delivery-aware PR mission requires integration for the contract's final target. Structural validation checks referenced files, not forge truth; the executing integration must verify that separately.
 
 Increment state revision whenever recording a change. Append one JSONL **event** with `schemaVersion: 1`, `kind: event`, consecutive `sequence` starting at 1, `stateRevision`, ISO timestamp with timezone `at`, `actor`, exact `mission` reference, resulting `status`, `interruption`, `reason` and `evidence`. Paths in an event belong to the journal file. Start in draft. Keep one mission id, nondecreasing contract revisions and increasing state revisions. Keep the state snapshot aligned with the last event; this is an audit journal, not a required event-sourcing system.
 
@@ -97,3 +108,5 @@ Before completion, clear active work and interruptions, reconcile every launched
 Run `node <skill>/scripts/validate.mjs <artifact> [--json]` on Markdown, JSON or a JSONL journal. The JSON output is `{ "valid": boolean, "issues": [{ "path": string, "rule": string, "message": string }] }`. Exit 0 means structurally consistent; 1 means invalid input or a missing typed reference; 2 means invocation or artifact-read failure.
 
 Inspect the diagnostics and underlying evidence. Do not treat a schema check as semantic approval, a scheduler, a journal writer, a Git check or enforcement against concurrent/manual edits. No cited command is executed, no remote URL is fetched and no input is rewritten.
+
+For a managed state update, `node scripts/validate.mjs <state-path> --candidate <candidate.json> --json` validates `{ "state": <next state>, "journal": <complete next journal text> }` against the original artifact paths without writing them. The current graph must be valid, the journal path must be preserved and the candidate journal must retain the existing bytes. This checks the complete proposed graph, including phase policy and closure requirements; it does not publish files or grant authority. The host must compare the original files before publication and retain both previous files if publication fails.

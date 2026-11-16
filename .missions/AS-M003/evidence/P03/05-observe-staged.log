@@ -1,0 +1,87 @@
+{
+  "scenarios": [
+    {
+      "selection": "staged",
+      "acquiredInputs": 3,
+      "acquiredBytes": 489,
+      "selectedFiles": 1,
+      "changedLines": 40,
+      "contextFiles": 1,
+      "firstCaptureMicros": 21148,
+      "warmP50Micros": 20763,
+      "warmP95Micros": 23008,
+      "retainedInputs": 3,
+      "retainedBytes": 489,
+      "gitProcessesPerCapture": 8,
+      "gitConcurrency": 1,
+      "cache": "first call in fresh test executable with OS caches warmed by fixture creation; new Git processes on every call; subsequent calls share caller process only; no application cache",
+      "sampledPeakTreeRssKiBIncludingFixtureSetup": 26600,
+      "capturePhasePeakTreeRssKiB": 12592,
+      "capturePhaseProcessNames": [
+        "capture_observa",
+        "git",
+        "workspace-98a92"
+      ],
+      "capturePhaseMaxObservedProcessesPerSweep": 2,
+      "maxObservedProcessesInNonAtomicSweep": 6,
+      "observedProcessNames": [
+        "basename",
+        "bash",
+        "dirname",
+        "git",
+        "mktemp",
+        "mv",
+        "tr",
+        "workspace-98a92"
+      ],
+      "observedThreadIdsMisclassified": 0,
+      "observedUniquePidsIncludingFixtureSetup": 298,
+      "samplingIntervalP50Ms": 1.2957630679011345,
+      "samplingIntervalMaxMs": 2.7088229544460773,
+      "executableWallSecondsIncludingFixtureSetup": 0.7854821069631726,
+      "exit": 0
+    },
+    {
+      "selection": "staged",
+      "acquiredInputs": 11,
+      "acquiredBytes": 2249,
+      "selectedFiles": 5,
+      "changedLines": 200,
+      "contextFiles": 1,
+      "firstCaptureMicros": 62558,
+      "warmP50Micros": 63267,
+      "warmP95Micros": 67836,
+      "retainedInputs": 11,
+      "retainedBytes": 2249,
+      "gitProcessesPerCapture": 24,
+      "gitConcurrency": 1,
+      "cache": "first call in fresh test executable with OS caches warmed by fixture creation; new Git processes on every call; subsequent calls share caller process only; no application cache",
+      "sampledPeakTreeRssKiBIncludingFixtureSetup": 26972,
+      "capturePhasePeakTreeRssKiB": 12776,
+      "capturePhaseProcessNames": [
+        "capture_observa",
+        "git",
+        "workspace-98a92"
+      ],
+      "capturePhaseMaxObservedProcessesPerSweep": 2,
+      "maxObservedProcessesInNonAtomicSweep": 6,
+      "observedProcessNames": [
+        "basename",
+        "bash",
+        "capture_observa",
+        "dirname",
+        "git",
+        "mktemp",
+        "mv",
+        "tr",
+        "workspace-98a92"
+      ],
+      "observedThreadIdsMisclassified": 0,
+      "observedUniquePidsIncludingFixtureSetup": 795,
+      "samplingIntervalP50Ms": 1.2904240284115076,
+      "samplingIntervalMaxMs": 3.282716032117605,
+      "executableWallSecondsIncludingFixtureSetup": 2.071200674865395,
+      "exit": 0
+    }
+  ]
+}

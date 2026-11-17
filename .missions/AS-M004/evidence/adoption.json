@@ -1,0 +1,20 @@
+{
+  "origin": "private conception-only preparation in firstmate-orchestration-test; AS-M004 revision 1 and state revision 2",
+  "adoptedContractRevision": 2,
+  "baseCommit": "45dac3c241338c94166369fe821fe1d3499cf974",
+  "executionMode": "coordinated",
+  "reason": "Preserve private originals byte-for-byte; establish a self-contained repository-owned graph rather than rewrite historical references or depend on operational home paths. Approved behavior remains unchanged. Current user authority and completed prerequisite replace stale starting facts.",
+  "historicalSha256": {
+    "preparation-contract-r1.raw.txt": "f166bcc8042d0bb6edef46fd3aa0d0ef7ae597f0e7a334c057107725b1f3c2fc",
+    "preparation-state-r2.raw.txt": "25c99a9bf1f8879102b7471250493848fa1f3f894b227a917acd65ea88f1fe8e",
+    "preparation-history.raw.txt": "4e50309edd24d580e6c85a901442c8044c98fc7b4b9b3dab5163a3affc73c610"
+  },
+  "review": "Codex final independent whole-mission review; Firstmate intermediate packet acceptance",
+  "implementationProfile": {
+    "harness": "opencode",
+    "model": "opencode-go/deepseek-v4.1-flash",
+    "effortIntent": "high",
+    "effortVariantEnforced": false,
+    "existingAuthentication": "OpenCode Go stored credential listed; inference/quota unproven"
+  }
+}

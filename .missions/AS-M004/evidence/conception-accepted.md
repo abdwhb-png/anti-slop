@@ -1,0 +1,76 @@
+# Historical conception input
+
+Archived before formal MDD metadata was added. This evidence preserves the accepted conception and its previous preparation limitations; it is not the current contract owner.
+
+# Durable capture records — mission contract proposal
+
+Status: conception accepted; mission preparation remains draft. The explicit decision was “Valider la conception seulement”, answering the proposal for synchronous capture bytes and metadata in one SQLite database, retained reads independent of the original files, and explicit failures/admission limits without implementation authority. This private review draft belongs to preparation for the next Anti-Slop mission. It is not an executable Mission Contract, does not change the project, and grants no implementation or external-action authority. The proposed mission identity is AS-M004; the existing repository has no contract under that identity at the inspected revision. Formal MDD metadata, state and initial history must be created together in an authorized Anti-Slop checkout after its location and delivery posture are established. No packets are prepared here.
+
+## Outcome
+
+An application using the Rust library can save a real selected-source capture, close, and read back the exact retained bytes and attributable identities after the original files change or disappear. Interrupted or failed writes never produce a falsely complete capture. Reaching the configured collection threshold prevents new admissions without deleting authoritative data or disabling ordinary reads of retained data.
+
+This is a library outcome, demonstrated through executable integration tests. Terminal report inspection belongs to the later report mission. It is not an analysis command or an accepted first usable release.
+
+## Starting Evidence
+
+Repository: https://github.com/abdwhb-png/anti-slop. The inspected main commit is e8e7b8b4bca28aa397437083966228d3cdbefa67, reconfirmed during preparation. Its source capture is implemented in `src/workspace/`; `src/lib.rs` exports configuration, output and workspace. `src/records/` contains only a reservation marker. Cargo.toml has no SQLite dependency. Existing root JSONC fields cover schema identity, policies and overrides; they do not expose storage settings.
+
+The AS-M003 final result records independent acceptance, while its state still says validating. Its source is present on main. This proposal does not resume, repair or close AS-M003 or reconstruct missing historical evidence. Any prerequisite record needed for later launch must be checked under the project's workflow.
+
+Functional scope was explicitly accepted in this conversation: durable capture and re-read in L04, library tests for this mission, terminal consultation in L05. The specific recommendation to keep bytes and metadata together in SQLite with synchronous acknowledgements was then explicitly ratified by “Valider la conception seulement”. This decision does not turn the required failure tests or resource measurements into completed evidence.
+
+## Decisions and Constraints
+
+The authoritative requirements remain [ADR-001](https://github.com/abdwhb-png/anti-slop/blob/e8e7b8b4bca28aa397437083966228d3cdbefa67/docs/decisions/001-rust-engine-and-client-owned-sessions.md), [ADR-005](https://github.com/abdwhb-png/anti-slop/blob/e8e7b8b4bca28aa397437083966228d3cdbefa67/docs/decisions/005-local-evidence-store-and-dataset-exports.md), [ADR-007](https://github.com/abdwhb-png/anti-slop/blob/e8e7b8b4bca28aa397437083966228d3cdbefa67/docs/decisions/007-performance-budgets-and-qualification.md), the [PRD](https://github.com/abdwhb-png/anti-slop/blob/e8e7b8b4bca28aa397437083966228d3cdbefa67/docs/PRD.md), and the L04 outcome in the [roadmap](https://github.com/abdwhb-png/anti-slop/blob/e8e7b8b4bca28aa397437083966228d3cdbefa67/docs/IMPLEMENTATION_ROADMAP.md). Their retention policy, admission thresholds, provenance distinctions and measurement boundaries are not reopened or copied into a second specification.
+
+Accepted implementation boundary: `records` owns the database, schema version, writes, admission accounting and retained reads. It consumes the existing public capture boundary and preserves source/configuration identities instead of reimplementing capture, path selection or generation rules. All bytes required by a successfully recorded capture and their references commit together in one SQLite database. SQL and database-specific errors stay behind the library boundary. No background recorder, external content-file store, generic repository framework, universal analysis-result interface or new crate is justified by this outcome.
+
+The background recorder alternative was not retained: no concurrent producer is implemented yet, so its queue, shutdown and error-delivery lifecycle have no demonstrated benefit for this mission. The external immutable-file alternative was not retained: no measurement establishes a benefit that justifies coordinating file publication, SQLite references and quota recovery. These reasons support the accepted choice; they are not technical impossibility claims. Reconsider only with changed requirements or measured evidence.
+
+Recorded capture occurrences retain their own attempt identities even when they refer to equal content. Storage deduplication must not merge occurrence provenance. A capture-only result does not claim that a native analyzer, rule, model or policy check ran. Do not prepopulate unrelated future subsystems with success values.
+
+## Scope
+
+Include storage initialization and explicit schema-version compatibility; exact persistence and retained reads of the implemented capture inputs and provenance; truthful capture-attempt recording outcomes; transactional failure recovery; bounded writer contention; workspace admission accounting and reservation of required write/terminal capacity; and measured database, journal and buffer cost.
+
+Expose only the Rust library operations needed to save and read these records. Proposed storage path and budget inputs are explicit library inputs for this slice; they are distinct from the captured rule configuration. Do not create another configuration parser. Root JSONC expansion is not assumed necessary merely to make the quota configurable through this library boundary; any required shared configuration change must use its existing owner and preserve schema/runtime conformance.
+
+Exclude analysis commands, public report encodings, language adapters, inference, resident execution, feedback, export/aggregation, purge operations, remote collection and release publication. Do not build placeholders for those responsibilities. Existing help/version and configuration inspection remain truthful about available capabilities.
+
+## Validation Contract
+
+Begin behavior changes with a failing test through real capture-to-store-to-read interactions, then implement and refactor. Use real temporary Git repositories, real SQLite files and real internal modules. Mock or control only nondeterministic or external boundaries. No tests copying production functions or replacing the storage boundary with a fake repository.
+
+Required observations:
+
+- Capture different selected and supporting bytes through the existing selectors, persist them, close the writer, change or remove original files, and verify exact bytes, roles, comparison/configuration identities and source-range attribution through retained reads in a fresh process. Preserve deletion versus empty-file distinctions and valid empty selections. Reuse existing capture semantics instead of duplicating its entire regression suite.
+- Interrupt a child writer before and during commit. Previously acknowledged records remain readable; the attempted new capture is complete or absent, never partially successful. Explicitly exercise the interval after commit but before acknowledgement: lost acknowledgement does not prove that nothing was committed. Recovery must preserve that distinction rather than relabel uncertainty as success or failure.
+- Exercise unavailable/read-only storage, malformed or incompatible database versions, missing/corrupt referenced bytes, transaction failures and lock contention. Errors stay explicit. A failed write may prevent its own failure from being durably stored; do not promise otherwise or use technical logs as substitute authoritative records.
+- Use a deliberately small configured collection budget to test warning and refusal boundaries, actual SQLite auxiliary growth, outstanding reservations and capacity needed to conclude admitted work. Two independent writers must not both admit against the same available budget. Refusal preserves existing records and permits retained reads subject to actual I/O availability. No automatic evidence deletion.
+- Demonstrate initial schema creation, unchanged reopen, refusal of a newer unsupported version and atomic initialization failure. Add migration execution only when an actual earlier supported stored schema exists; do not invent historical versions or a migration framework.
+
+Choose explicit, verified SQLite journal and synchronization settings. The [official atomic commit documentation](https://sqlite.org/atomiccommit.html) and [synchronization contract](https://sqlite.org/pragma.html#pragma_synchronous) describe guarantees subject to the filesystem and device. `journal_size_limit` is not a bound on peak write growth. The admission formula and overshoot/failure handling must be stated and falsified against real writes; a sum of source lengths or a database-page limit alone does not qualify it.
+
+Record reproducible before/after measurements from real public-boundary capture/save/read journeys: one-file and small-batch workloads, admitted versus retained bytes, database plus auxiliary peak growth, persistence latency and process memory with sampling limits. Include synchronous commit cost. These observations do not establish the future complete analysis or resident budgets.
+
+During implementation, use focused tests and changed-file diagnostics. At the stabilized revision, run the repository's required CI-equivalent checks under its established frozen/offline and supply-chain rules. No dependency or version is selected by this draft. The implementation needs the project's exact-version registry checks and authorized dependency workflow before any addition or download.
+
+## Execution Boundaries
+
+Design preparation is authorized; implementation, worker launch, installs, commits, push, integration and deployment are not authorized by this draft. Delivery mode and execution mode remain unselected. A local checkout must be identified before formal artifact creation. The initial test-home isolation and daily-home exclusion remain binding.
+
+Require the repository-local mission-driven-dev skill and applicable phase references. Once formal artifacts are authorized, create a draft state and its initial history together, retaining unresolved mode/authority explicitly; validate their structure before readiness or launch. Do not manufacture a repository path merely to pass structural validation. Task packets are derived only immediately before authorized dispatch.
+
+Implementation may choose table layout and internal helper boundaries within the selected contract. Escalate changes to retention, quota semantics, acknowledged durability, source identity, transmission, public CLI scope or accepted architecture. Stop if correct bounded admission or recovery cannot be demonstrated; do not silently weaken an assertion or turn an operational failure into a clean result.
+
+## Completion
+
+Accept only the reviewed revision with the required integration, failure and measurement evidence and an independent whole-mission result under MDD. Distinguish locally implemented, tested, independently accepted, committed, published and integrated states. No publication or merge follows automatically from acceptance.
+
+The observable capability unlocked is durable capture recording and retained reads for the later report and analysis paths. The next permitted phase is continued mission preparation once its missing local-checkout and delivery inputs are resolved, not execution.
+
+## Remaining Preparation Inputs
+
+The same-database synchronous design is accepted. The local checkout, concrete delivery posture and eventual execution mode are not selected. The exact admission bound, synchronization settings, minimal persistent schema and measurement protocol must be resolved and recorded before dependent implementation work. They are not verified by this document. No formal MDD validator, application test or storage benchmark has run during this preparation. The mission must not be marked ready or executed on the strength of this conception decision alone.
+

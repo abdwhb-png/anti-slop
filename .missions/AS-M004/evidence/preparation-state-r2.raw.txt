@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "kind": "state",
+  "id": "AS-M004",
+  "revision": 2,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 1,
+    "path": "../../contract-draft.md"
+  },
+  "status": "draft",
+  "executionMode": null,
+  "interruption": null,
+  "history": "history.jsonl",
+  "lastSequence": 2,
+  "currentPacket": null,
+  "attempts": [],
+  "checkpoints": [],
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "evidence/preparation.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/structural-draft-v1.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/delivery-decision.json"
+    }
+  ],
+  "validation": null
+}
+

@@ -1,0 +1,24 @@
+command: git check-attr whitespace -- <paths>  (working-tree attributes)
+
+.missions/AS-M004/evidence/P03/tracked-source.diff: whitespace: -blank-at-eol
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt: whitespace: -blank-at-eol,-blank-at-eof
+.missions/AS-M004/evidence/conception-accepted.md: whitespace: -blank-at-eof
+.missions/AS-M004/evidence/preparation-state-r2.raw.txt: whitespace: -blank-at-eof
+.missions/AS-M004/evidence/P01/preparation.diff: whitespace: unspecified
+.missions/AS-M004/evidence/P01/README.md: whitespace: unspecified
+.missions/AS-M004/evidence/P05/transport-commit-report.raw.txt: whitespace: -blank-at-eol
+.missions/AS-M004/evidence/P05/before-whitespace-check.txt: whitespace: -blank-at-eol
+.missions/AS-M004/evidence/P05/before-staged-check.txt: whitespace: -blank-at-eol
+.missions/AS-M004/evidence/P05/implementation-report.md: whitespace: unspecified
+.missions/AS-M004/evidence/P05/policy-unit-tests.txt: whitespace: unspecified
+.missions/AS-M004/evidence/P04/implementation-report.md: whitespace: unspecified
+src/records/mod.rs: whitespace: unspecified
+tests/records.rs: whitespace: unspecified
+docs/missions/AS-M004/r2.md: whitespace: unspecified
+docs/PRD.md: whitespace: unspecified
+README.md: whitespace: unspecified
+.missions/AS-M003/evidence/P01/observation-1.log: whitespace: -blank-at-eof
+
+command: git --attr-source=HEAD check-attr whitespace -- .missions/AS-M004/evidence/P03/tracked-source.diff .missions/AS-M004/evidence/P05/transport-commit-report.raw.txt
+.missions/AS-M004/evidence/P03/tracked-source.diff: whitespace: unspecified
+.missions/AS-M004/evidence/P05/transport-commit-report.raw.txt: whitespace: unspecified

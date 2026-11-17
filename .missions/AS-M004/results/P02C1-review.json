@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P02C1-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P02C1",
+    "revision": 1,
+    "path": "../packets/P02C1.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accept the bounded effective-path quota correction after complete report, source/formula and real held-reader regression review; coordinator reran all 31 records tests. Actual canonical DB/WAL/SHM usage now matches the alias admission and returned postcommit usage. Existing transaction remains the reservation owner; warning/refusal and prior-read behavior remain covered. This is not full quota/mission qualification: the engineering allowance is supported by declared runtime/input assumptions and measured peaks, not a formal arbitrary-filesystem bound. P03 must qualify commit/I/O failures including CommittedUnmeasured, full journey resources and stabilized CI, and simplify manual symlink traversal if one native canonicalization after SQLite open preserves the same tested behavior. No final mission acceptance, checkpoint or publication.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/red-01-alias-undercount.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/green-04-final-records.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/formula-review.md"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "decision": "continue",
+    "rationale": "The corrected quota path and honest postcommit outcome remain within the single approved durable-capture PR. Remaining resource/failure qualification is a distinct next outcome."
+  },
+  "remainingQualification": [
+    "Exercise postcommit measurement failure and over-limit reporting with real public-boundary outcomes.",
+    "Replace custom symlink traversal with the existing OS/SQLite path owner where executable characterization proves equivalence; do not maintain a second resolver unnecessarily.",
+    "Verify exact capture/config input bounds in resource documents; do not assume sources equal file count."
+  ]
+}

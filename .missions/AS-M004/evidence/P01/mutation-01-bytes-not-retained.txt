@@ -1,0 +1,31 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.58s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 2 tests
+test retained_content_preserves_deletion_empty_and_equal_occurrences ... FAILED
+test retained_capture_survives_restart_and_loss_of_origins ... FAILED
+
+failures:
+
+---- retained_content_preserves_deletion_empty_and_equal_occurrences stdout ----
+
+thread 'retained_content_preserves_deletion_empty_and_equal_occurrences' (665245) panicked at tests/records.rs:333:5:
+assertion `left == right` failed
+  left: []
+ right: [102, 105, 108, 108, 101, 100, 10]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- retained_capture_survives_restart_and_loss_of_origins stdout ----
+
+thread 'retained_capture_survives_restart_and_loss_of_origins' (665244) panicked at tests/records.rs:292:5:
+assertion failed: status.success()
+
+
+failures:
+    retained_capture_survives_restart_and_loss_of_origins
+    retained_content_preserves_deletion_empty_and_equal_occurrences
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 8 filtered out; finished in 0.12s
+
+error: test failed, to rerun pass `--test records`

@@ -1,0 +1,27 @@
+{
+  "fixture": "/tmp/as-m004-p02-path-tnz13w32",
+  "counterfactual": "Hold a real read snapshot to preserve WAL backlog. Earlier no-reader attempt allowed last-close checkpoint and did not expose overshoot. Two canonical writes build backlog before alias admission.",
+  "before": {
+    "real.db-shm": 32768,
+    "real.db-wal": 6394272,
+    "real.db": 6328320
+  },
+  "refused": {
+    "exit": 0,
+    "out": "refused:Collection budget of 0 bytes would be exceeded: 6328320 bytes retained, admission needs 13340240",
+    "stderr": ""
+  },
+  "admittedBudget": 13340240,
+  "save": {
+    "exit": 0,
+    "out": "saved:5",
+    "stderr": ""
+  },
+  "after": {
+    "real.db-shm": 32768,
+    "real.db-wal": 9591392,
+    "real.db": 6328320
+  },
+  "actualCanonicalFootprint": 15952480,
+  "overBudget": true
+}

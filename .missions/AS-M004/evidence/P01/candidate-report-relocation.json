@@ -1,0 +1,24 @@
+{
+  "reason": "The v0.5 native default placed the returned report in private task data. Preserve the original unexamined receipt and report; register the byte-identical repository-owned report through the candidate owner so future typed result references remain self-contained. No implementation or tests changed during this reconciliation.",
+  "originalReportSha256": "9e1907cae8beb2384423994a62a808be0420fb437535dffd4d8fb55098de61d3",
+  "originalCandidate": {
+    "assignment": "2d57a9ff-8835-47da-8a3d-4f2972008fd5",
+    "generation": "s1794906814.562141.27268",
+    "actor": "as-m004-durable:s1794906814.562141.27268",
+    "role": "implementer",
+    "packet": {
+      "id": "AS-M004-P01",
+      "revision": 1,
+      "path": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree/.missions/AS-M004/packets/P01.md",
+      "digest": "3876dce3a28a7a847512fdda7f11195a92ebcfcd4262d2ee73079832e6cf199b"
+    },
+    "mission": "AS-M004",
+    "revision": 2,
+    "content": "556ee1cb87f8cf5a74bc4a62a97d46afa41155ef687a9667a30f11bcf3718f3c",
+    "report": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/report-2d57a9ff-8835-47da-8a3d-4f2972008fd5.md",
+    "reportDigest": "9e1907cae8beb2384423994a62a808be0420fb437535dffd4d8fb55098de61d3",
+    "complete": true
+  },
+  "newReport": "implementation-report.md",
+  "performedBy": "firstmate:coordinator"
+}

@@ -1,0 +1,101 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Running tests/config.rs (target/debug/deps/config-da0766aa73edf34d)
+
+running 19 tests
+test captured_values_and_bytes_survive_configuration_edits ... ok
+test commas_and_partial_alternatives_do_not_make_recursive_segment_boundaries ... ok
+test backslash_is_a_literal_filename_character ... ok
+test absent_root_uses_advisory_defaults_without_writes ... ok
+test explicit_file_and_symlinks_use_the_real_declaring_directory ... ok
+test duplicate_decoded_keys_are_rejected_even_in_unmatched_overrides ... ok
+test invalid_fields_have_actionable_locations_and_debug_omits_raw_bytes ... ok
+test invalid_jsonc_fields_values_and_contracts_fail_without_echoing_credentials ... ok
+test jsonc_ast_preserves_duplicate_decoded_keys_and_comments ... ok
+test jsonc_comments_and_trailing_commas_are_accepted ... ok
+test missing_explicit_invalid_and_dangling_files_do_not_fall_back ... ok
+test alternatives_compile_compositionally_at_the_pattern_limit ... ok
+test ordered_overrides_replace_policies_and_preserve_unrelated_rules_and_origins ... ok
+test per_path_disagreement_keeps_both_views_and_transmission_controls_are_rejected ... ok
+test question_mark_matches_one_unicode_scalar ... ok
+test recursive_segments_keep_their_meaning_inside_alternatives ... ok
+test unreadable_or_non_utf8_existing_files_are_errors ... ok
+test glob_dialect_handles_unicode_classes_braces_and_literal_control_characters ... ok
+test parser_and_matcher_enforce_actual_input_boundaries ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 18 tests
+test altered_retained_bytes_are_an_explicit_corruption ... ok
+test altered_source_provenance_is_an_explicit_corruption ... ok
+test child_process_probe ... ok
+test altered_configuration_bytes_are_an_explicit_corruption ... ok
+test altered_capture_provenance_is_an_explicit_corruption ... ok
+test extra_retained_membership_is_an_explicit_corruption ... ok
+test committed_capture_survives_lost_acknowledgement ... ok
+test failed_schema_initialization_leaves_no_partial_store ... ok
+test duplicate_retained_source_is_an_explicit_corruption ... ok
+test missing_retained_change_is_an_explicit_corruption ... ok
+test missing_retained_source_is_an_explicit_corruption ... ok
+test empty_selection_round_trips_with_its_identities ... ok
+test injected_write_failure_leaves_no_partial_capture ... ok
+test reopen_is_stable_and_incompatible_stores_are_rejected ... ok
+test retained_capture_survives_restart_and_loss_of_origins ... ok
+test retained_content_preserves_deletion_empty_and_equal_occurrences ... ok
+test writer_interrupted_before_commit_leaves_an_absent_capture ... ok
+test writer_contention_is_bounded_and_reported ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.80s
+
+     Running tests/schema.rs (target/debug/deps/schema-c63ef50b278f9388)
+
+running 3 tests
+test generated_schema_requires_the_exact_runtime_identity ... ok
+test regeneration_is_deterministic_and_local_artifact_matches_the_real_owner ... ok
+test structural_conformance_fixtures_pass_through_the_actual_resolver ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/workspace.rs (target/debug/deps/workspace-495356dac2dd9c10)
+
+running 36 tests
+test capture_observations ... ignored, run explicitly with --ignored --exact capture_observations --nocapture
+test absent_and_invalid_selected_configuration_fail_without_defaults ... ok
+test controlled_git_child ... ignored, subprocess entrypoint for controlled external Git observations
+test additions_deletions_literal_paths_and_empty_selection_are_distinct ... ok
+test empty_unstaged_capture_identity_still_binds_the_observed_index_generation ... ok
+test cancellation_empty_comparisons_and_required_head_are_distinct ... ok
+test exclusions_required_inputs_and_workspace_boundaries_are_explicit ... ok
+test capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers ... ok
+test executable_mode_changes_belong_to_the_captured_generation ... ok
+test expanding_git_inventory_stops_at_its_byte_limit ... ok
+test exact_content_renames_keep_both_paths_and_reject_either_exclusion ... ok
+test expanding_untracked_inventory_has_the_same_bounded_process_cleanup ... ok
+test explicit_base_is_resolved_once_even_when_the_reference_moves ... ok
+test file_acquisition_is_bounded_before_success ... ok
+test identical_ambiguous_rename_groups_remain_unpaired_evidence ... ok
+test intent_to_add_is_absent_from_staged_and_is_a_working_addition ... ok
+test live_growing_context_cannot_escape_acquisition_limits ... ok
+test four_comparisons_select_their_exact_sides_and_independent_context ... ok
+test missing_head_unmerged_index_and_unsupported_kinds_cannot_succeed ... ok
+test oversized_git_blob_is_rejected_before_body_acquisition ... ok
+test relative_external_configuration_keeps_existing_resolution_semantics ... ok
+test relevant_index_configuration_and_context_mutation_retries_a_bound_generation ... ok
+test missing_promised_object_is_not_retrieved ... ok
+test repeatedly_changing_inventory_is_explicitly_unstable ... ok
+test retained_configuration_and_ranges_share_the_actual_generation ... ok
+test early_exited_git_leader_cleans_up_stalled_descendant_pipe ... ok
+test staged_bytes_and_working_context_remain_independent ... ok
+test working_and_untracked_mutations_retry_without_combining_views ... ok
+test working_inputs_apply_limits_and_exclusions_before_retaining_untracked_content ... ok
+test retained_count_total_bytes_and_sparse_input_are_bounded ... ok
+test working_modes_capture_owner_execute_removal_with_group_execute_remaining ... ok
+test working_modes_ignore_group_or_other_execute_without_owner_execute ... ok
+test working_selections_reject_index_flags_that_hide_mutable_changes ... ok
+test working_ranges_absence_and_configuration_survive_later_edits ... ok
+test stalled_git_is_killed_and_reaped ... ok
+test owned_group_signals_reserve_the_leader_until_cleanup_finishes ... ok
+
+test result: ok. 34 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 6.18s
+

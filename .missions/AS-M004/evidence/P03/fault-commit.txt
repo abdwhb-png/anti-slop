@@ -1,0 +1,10 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.59s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 1 test
+controlled commit failure: error:Capture store is unavailable: disk I/O error
+test commit_io_failure_keeps_acknowledged_records_and_no_partial_capture ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 35 filtered out; finished in 0.26s
+

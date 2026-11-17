@@ -1,0 +1,10 @@
+Tu pilotes OpenCode et la revue indépendante (recommandé)
+
+Question scope: choose how to execute L04, granting the approved scope, necessary verified SQLite dependency, tests and measurements, independent final review, then commit and PR. Merge remains subject to separate approval.
+
+Subsequent user instructions:
+pour revue utilise codex
+revue indépendante hein pas la finale
+je veux dire pas les intermédiares
+
+Coordinator interpretation stated in chat: Codex performs the independent final whole-mission review; Firstmate examines OpenCode's intermediate packets. Implementation uses OpenCode / opencode-go/deepseek-v4.1-flash. No merge, No-Mistakes, provider/account change or daily-home modification is authorized.

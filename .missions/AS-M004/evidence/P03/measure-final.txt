@@ -1,0 +1,34 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.47s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 1 test
+test capture_save_commit_read_resource_protocol ... host=linux cpus=4 loadavg=Some("1.77 1.59 1.35")
+bounds files=512 file_bytes=1048576 total_bytes=16777216 config_bytes=1048576 budget=10737418240
+captures one_bytes=208 five_changes=5 five_bytes=5286 metadata_changes=480 metadata_bytes=1146 large_bytes=1048762
+captures large_batch_changes=8 large_batch_bytes=8388794
+journey=one_file_capture_only runs=30 p50_us=61448 p95_us=69155 raw_us=[69155, 66863, 63139, 64241, 59651, 59319, 60904, 60106, 58958, 65902, 59078, 60493, 61069, 59813, 60128, 58163, 58609, 64361, 63918, 64409, 63409, 68240, 62038, 64324, 75722, 69029, 65195, 60537, 61448, 59652]
+journey=five_file_capture_only runs=30 p50_us=91686 p95_us=110034 raw_us=[88818, 86221, 91638, 99024, 90715, 91628, 88771, 91173, 89465, 100708, 91686, 93798, 91666, 88643, 101293, 97970, 89839, 89353, 93859, 91777, 102406, 106157, 116200, 91768, 101607, 110034, 103844, 87638, 91568, 92923]
+journey=one_file_open runs=20 p50_us=773 p95_us=1034 raw_us=[1034, 773, 620, 966, 572, 847, 679, 789, 856, 656, 991, 1047, 559, 682, 791, 788, 661, 735, 638, 803]
+journey=one_file_save_commit runs=20 p50_us=409 p95_us=545 raw_us=[356, 441, 559, 344, 372, 409, 404, 440, 367, 465, 545, 344, 390, 483, 389, 458, 457, 422, 462, 404]
+journey=one_file_read runs=20 p50_us=231 p95_us=288 raw_us=[243, 234, 268, 190, 208, 222, 186, 288, 179, 259, 765, 177, 233, 247, 233, 249, 215, 202, 231, 190]
+journey=one_file_capture_save_read runs=20 p50_us=65804 p95_us=76295 raw_us=[63877, 68530, 71005, 76295, 63287, 71834, 66805, 68466, 60306, 61359, 65804, 68802, 59114, 58880, 61467, 87462, 66396, 62924, 60308, 69871]
+journey=five_file_open runs=20 p50_us=729 p95_us=878 raw_us=[605, 681, 656, 772, 743, 878, 735, 773, 622, 568, 729, 1323, 747, 726, 751, 765, 582, 559, 830, 695]
+journey=five_file_save_commit runs=20 p50_us=768 p95_us=883 raw_us=[722, 631, 883, 866, 807, 767, 866, 721, 744, 908, 818, 784, 768, 833, 769, 678, 674, 822, 717, 754]
+journey=five_file_read runs=20 p50_us=405 p95_us=450 raw_us=[383, 425, 442, 405, 433, 371, 447, 325, 397, 491, 429, 421, 334, 450, 439, 358, 372, 431, 357, 398]
+journey=five_file_capture_save_read runs=20 p50_us=97756 p95_us=110277 raw_us=[103360, 104847, 97756, 108922, 112344, 104468, 92893, 93305, 93334, 110277, 99339, 103928, 98532, 96043, 99018, 97581, 97174, 92695, 91043, 92779]
+journey=reopen runs=20 p50_us=276 p95_us=358 raw_us=[264, 212, 246, 317, 242, 354, 372, 261, 335, 282, 214, 321, 251, 301, 353, 276, 266, 358, 281, 203]
+peak case=one_file payload=208 admitted_limit=10737418240 retained=90456 save_us=303 storage_peak=90456 storage_peak_over_retained=0 tree_rss_peak=21884928 aliases=0 changes=1
+peak case=five_file payload=5286 admitted_limit=10737418240 retained=102816 save_us=464 storage_peak=102816 storage_peak_over_retained=0 tree_rss_peak=21884928 aliases=0 changes=5
+peak case=metadata_heavy payload=1146 admitted_limit=10737418240 retained=181096 save_us=14040 storage_peak=181096 storage_peak_over_retained=0 tree_rss_peak=21884928 aliases=0 changes=480
+peak case=large_single payload=1048762 admitted_limit=10737418240 retained=1149296 save_us=17602 storage_peak=1149296 storage_peak_over_retained=0 tree_rss_peak=23212032 aliases=0 changes=1
+peak case=large_batch payload=8388794 admitted_limit=10737418240 retained=16970168 save_us=145470 storage_peak=16970168 storage_peak_over_retained=0 tree_rss_peak=24174592 aliases=0 changes=8
+combined case=one_file capture_save_us=67798 payload=208 retained=90456 storage_peak=90456 tree_rss_peak=20996096
+combined case=five_file capture_save_us=94614 payload=5286 retained=102816 storage_peak=102816 tree_rss_peak=21000192
+combined case=large_batch capture_save_us=651817 payload=8388794 retained=16970168 storage_peak=16970168 tree_rss_peak=32600064
+peak case=held_reader payload=1048762 retained=3316416 save_us=36541 storage_peak=3316416
+memory self_vmhwm_kib=31372 self_vmrss_kib=20476
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.42s
+

@@ -1,0 +1,22 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.55s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 1 test
+test reopen_is_stable_and_incompatible_stores_are_rejected ... FAILED
+
+failures:
+
+---- reopen_is_stable_and_incompatible_stores_are_rejected stdout ----
+
+thread 'reopen_is_stable_and_incompatible_stores_are_rejected' (670468) panicked at tests/records.rs:425:5:
+assertion failed: matches!(retained.slice(&wrong_role), Err(StoreError::UnboundRange))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    reopen_is_stable_and_incompatible_stores_are_rejected
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.10s
+
+error: test failed, to rerun pass `--test records`

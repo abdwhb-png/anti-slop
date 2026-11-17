@@ -1,0 +1,17 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+error[E0432]: unresolved import `anti_slop::records`
+ --> tests/records.rs:8:5
+  |
+8 |     records::{BUSY_TIMEOUT, CaptureId, RetainedCapture, Store, StoreError},
+  |     ^^^^^^^ could not find `records` in `anti_slop`
+
+error[E0433]: cannot find `records` in `anti_slop`
+  --> tests/records.rs:96:45
+   |
+96 | fn retained_source_json(source: &anti_slop::records::RetainedSource) -> Value {
+   |                                             ^^^^^^^ could not find `records` in `anti_slop`
+
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `anti-slop` (test "records") due to 2 previous errors
+warning: build failed, waiting for other jobs to finish...

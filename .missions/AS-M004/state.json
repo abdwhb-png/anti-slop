@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "kind": "state",
+  "id": "AS-M004",
+  "revision": 17,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../docs/missions/AS-M004/r2.md"
+  },
+  "status": "validating",
+  "executionMode": "coordinated",
+  "interruption": null,
+  "history": "history.jsonl",
+  "lastSequence": 17,
+  "currentPacket": null,
+  "attempts": [
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P01",
+        "revision": 1,
+        "path": "packets/P01.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P01-review",
+        "revision": 1,
+        "path": "results/P01-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P01C1",
+        "revision": 1,
+        "path": "packets/P01C1.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P01C1-review",
+        "revision": 1,
+        "path": "results/P01C1-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P02",
+        "revision": 1,
+        "path": "packets/P02.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P02-review",
+        "revision": 1,
+        "path": "results/P02-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P02C1",
+        "revision": 1,
+        "path": "packets/P02C1.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P02C1-review",
+        "revision": 1,
+        "path": "results/P02C1-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P03",
+        "revision": 1,
+        "path": "packets/P03.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P03-review",
+        "revision": 1,
+        "path": "results/P03-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P03C1",
+        "revision": 1,
+        "path": "packets/P03C1.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P03C1-review",
+        "revision": 1,
+        "path": "results/P03C1-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P04",
+        "revision": 1,
+        "path": "packets/P04.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P04-review",
+        "revision": 1,
+        "path": "results/P04-review.json"
+      }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P05",
+        "revision": 1,
+        "path": "packets/P05.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P05-review",
+        "revision": 1,
+        "path": "results/P05-review.json"
+      }
+    }
+  ],
+  "checkpoints": [],
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "evidence/adoption.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/execution-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/conception-accepted.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/process-exception-authority.txt"
+    }
+  ],
+  "validation": {
+    "kind": "result",
+    "id": "AS-M004-final-r3",
+    "revision": 1,
+    "path": "results/final-r3.json"
+  }
+}

@@ -1,0 +1,10 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.52s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 1 test
+thread_child process=2356777 launcher_tid=2356806 git_pids=[2356807, 2356808, 2356809, 2356810] git_rss=13115392 own_rss=7028736 observed_tree_rss=20770816 observed_members=[(2356777, None), (2356807, Some(2356806)), (2356808, Some(2356806)), (2356809, Some(2356806)), (2356810, Some(2356806))] leader_children=""
+test tree_rss_includes_git_children_launched_from_a_nonleader_thread ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.04s
+

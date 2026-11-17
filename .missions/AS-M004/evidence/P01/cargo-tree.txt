@@ -1,0 +1,127 @@
+anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+├── clap v4.6.7
+│   ├── clap_builder v4.6.7
+│   │   ├── anstyle v1.0.14
+│   │   └── clap_lex v1.1.1
+│   └── clap_derive v4.6.7 (proc-macro)
+│       ├── heck v0.5.0
+│       ├── proc-macro2 v1.0.107
+│       │   └── unicode-ident v1.0.24
+│       ├── quote v1.0.47
+│       │   └── proc-macro2 v1.0.107 (*)
+│       └── syn v3.0.5
+│           ├── proc-macro2 v1.0.107 (*)
+│           ├── quote v1.0.47 (*)
+│           └── unicode-ident v1.0.24
+├── globset v0.4.20
+│   ├── aho-corasick v1.1.5
+│   │   └── memchr v2.8.3
+│   ├── bstr v1.13.1
+│   │   └── memchr v2.8.3
+│   ├── regex-automata v0.4.18
+│   │   ├── aho-corasick v1.1.5 (*)
+│   │   ├── memchr v2.8.3
+│   │   └── regex-syntax v0.8.11
+│   └── regex-syntax v0.8.11
+├── jsonc-parser v0.34.0
+├── regex-automata v0.4.18 (*)
+├── rusqlite v0.41.1
+│   ├── bitflags v2.13.2
+│   ├── fallible-iterator v0.3.0
+│   ├── fallible-streaming-iterator v0.1.9
+│   ├── libsqlite3-sys v0.39.1
+│   │   [build-dependencies]
+│   │   ├── cc v1.11.1
+│   │   │   ├── find-msvc-tools v0.1.15
+│   │   │   └── shlex v2.0.1
+│   │   ├── pkg-config v0.3.34
+│   │   └── vcpkg v0.2.15
+│   └── smallvec v1.16.2
+├── schemars v1.2.2
+│   ├── dyn-clone v1.0.20
+│   ├── ref-cast v1.0.27
+│   │   └── ref-cast-impl v1.0.27 (proc-macro)
+│   │       ├── proc-macro2 v1.0.107 (*)
+│   │       ├── quote v1.0.47 (*)
+│   │       └── syn v3.0.5 (*)
+│   ├── schemars_derive v1.2.2 (proc-macro)
+│   │   ├── proc-macro2 v1.0.107 (*)
+│   │   ├── quote v1.0.47 (*)
+│   │   ├── serde_derive_internals v0.30.0
+│   │   │   ├── proc-macro2 v1.0.107 (*)
+│   │   │   ├── quote v1.0.47 (*)
+│   │   │   └── syn v3.0.5 (*)
+│   │   └── syn v3.0.5 (*)
+│   ├── serde v1.0.229
+│   │   ├── serde_core v1.0.229
+│   │   └── serde_derive v1.0.229 (proc-macro)
+│   │       ├── proc-macro2 v1.0.107 (*)
+│   │       ├── quote v1.0.47 (*)
+│   │       └── syn v3.0.5 (*)
+│   └── serde_json v1.0.151
+│       ├── indexmap v2.14.2
+│       │   ├── equivalent v1.0.2
+│       │   └── hashbrown v0.17.1
+│       ├── itoa v1.0.18
+│       ├── memchr v2.8.3
+│       ├── serde_core v1.0.229
+│       └── zmij v1.0.23
+├── serde v1.0.229 (*)
+├── serde_json v1.0.151 (*)
+├── serde_path_to_error v0.1.20
+│   ├── itoa v1.0.18
+│   └── serde_core v1.0.229
+├── serde_toon_format v0.2.0
+│   ├── itoa v1.0.18
+│   ├── memchr v2.8.3
+│   ├── ryu v1.0.23
+│   ├── serde v1.0.229 (*)
+│   ├── serde_json v1.0.151 (*)
+│   ├── smallvec v1.16.2
+│   ├── smol_str v0.3.6
+│   └── thiserror v2.0.20
+│       └── thiserror-impl v2.0.20 (proc-macro)
+│           ├── proc-macro2 v1.0.107 (*)
+│           ├── quote v1.0.47 (*)
+│           └── syn v3.0.5 (*)
+├── sha2 v0.11.0
+│   ├── cfg-if v1.0.4
+│   ├── cpufeatures v0.3.1
+│   └── digest v0.11.3
+│       ├── block-buffer v0.12.1
+│       │   └── hybrid-array v0.4.15
+│       │       └── typenum v1.20.1
+│       └── crypto-common v0.2.2
+│           └── hybrid-array v0.4.15 (*)
+├── thiserror v2.0.20 (*)
+├── toml v1.1.6+spec-1.1.0
+│   ├── serde_core v1.0.229
+│   ├── serde_spanned v1.1.1
+│   │   └── serde_core v1.0.229
+│   ├── toml_datetime v1.1.1+spec-1.1.0
+│   │   └── serde_core v1.0.229
+│   ├── toml_parser v1.1.3+spec-1.1.0
+│   │   └── winnow v1.0.4
+│   └── winnow v1.0.4
+├── tracing v0.1.44
+│   ├── pin-project-lite v0.2.17
+│   ├── tracing-attributes v0.1.31 (proc-macro)
+│   │   ├── proc-macro2 v1.0.107 (*)
+│   │   ├── quote v1.0.47 (*)
+│   │   └── syn v2.0.119
+│   │       ├── proc-macro2 v1.0.107 (*)
+│   │       ├── quote v1.0.47 (*)
+│   │       └── unicode-ident v1.0.24
+│   └── tracing-core v0.1.36
+│       └── once_cell v1.21.4
+└── tracing-subscriber v0.3.23
+    ├── matchers v0.2.0
+    │   └── regex-automata v0.4.18 (*)
+    ├── once_cell v1.21.4
+    ├── regex-automata v0.4.18 (*)
+    ├── sharded-slab v0.1.7
+    │   └── lazy_static v1.5.0
+    ├── thread_local v1.1.10
+    │   └── cfg-if v1.0.4
+    ├── tracing v0.1.44 (*)
+    └── tracing-core v0.1.36 (*)

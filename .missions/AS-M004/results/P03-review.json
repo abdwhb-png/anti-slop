@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P03-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P03",
+    "revision": 1,
+    "path": "../packets/P03.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "correction_required",
+  "summary": "Functional P03 qualification examined: actual during-commit kill, commit I/O failure, committed measurement/over-limit outcomes, characterized native path simplification, reproducible resource limits, complete worker CI and current demonstration. Firstmate independently reran records38 and demo2 successfully. Before final review, correct the touched README/roadmap statements that still say AS-M003 integration is pending (PR3 is already integrated in baseline45dac3c), honor the one-physical-line prose instruction for added README paragraphs, and reuse existing support::hex and support::wait_bounded instead of duplicating both in the new demo target. This is bounded documentation/test-harness correction; no new product guarantee or redundant full production validation is requested.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/implementation-report-r2.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-during-commit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/ci-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/resource-protocol.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/demonstration-output.txt"
+    }
+  ],
+  "findings": [
+    {
+      "location": "README.md current status; docs/IMPLEMENTATION_ROADMAP.md status",
+      "issue": "Copied current prose falsely leaves AS-M003 record repair pending main integration even though PR3 merged into the starting baseline.",
+      "correction": "Replace only the stale clause with verified integration through PR3."
+    },
+    {
+      "location": "README.md Durable capture records",
+      "issue": "Added prose is manually line-wrapped contrary to the explicit writing instruction.",
+      "correction": "One physical line per prose paragraph, preserving headings and code blocks."
+    },
+    {
+      "location": "tests/records_demo.rs",
+      "issue": "Local hex and child wait duplicate existing shared test support; the copied wait also omits the canonical timeout cleanup and exit assertion.",
+      "correction": "Use support::hex and support::wait_bounded plus successful child status assertion. Rerun the real demo; no helper unit tests."
+    }
+  ]
+}

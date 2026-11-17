@@ -1,0 +1,26 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.79s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 18 tests
+test altered_source_provenance_is_an_explicit_corruption ... ok
+test child_process_probe ... ok
+test altered_configuration_bytes_are_an_explicit_corruption ... ok
+test altered_capture_provenance_is_an_explicit_corruption ... ok
+test altered_retained_bytes_are_an_explicit_corruption ... ok
+test duplicate_retained_source_is_an_explicit_corruption ... ok
+test failed_schema_initialization_leaves_no_partial_store ... ok
+test extra_retained_membership_is_an_explicit_corruption ... ok
+test committed_capture_survives_lost_acknowledgement ... ok
+test missing_retained_source_is_an_explicit_corruption ... ok
+test missing_retained_change_is_an_explicit_corruption ... ok
+test empty_selection_round_trips_with_its_identities ... ok
+test injected_write_failure_leaves_no_partial_capture ... ok
+test reopen_is_stable_and_incompatible_stores_are_rejected ... ok
+test retained_content_preserves_deletion_empty_and_equal_occurrences ... ok
+test retained_capture_survives_restart_and_loss_of_origins ... ok
+test writer_interrupted_before_commit_leaves_an_absent_capture ... ok
+test writer_contention_is_bounded_and_reported ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.74s
+

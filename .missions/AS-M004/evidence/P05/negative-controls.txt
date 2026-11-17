@@ -1,0 +1,65 @@
+temporary repository: /tmp/opencode/p05/negctl.VLtwSt
+baseline commit: edebcafcd071cba4b4f57e0149eaa58f3a871843
+core.attributesFile: /dev/null
+core.whitespace: <unset: git default>
+attribute files copied as configuration (no policy logic copied):
+111a452d46ffd0393e834cc795a209b24567cfa93b867a329a04259ce0c83343  .gitattributes
+b75cfeed3f7896d28a1dbe2429e4e20c28d19bad6a1327dc0597148a9fef126a  .missions/AS-M003/evidence/.gitattributes
+
+=== case 1: scoped raw archive is permitted and byte-identical
+--- case 1 scoped raw archive
+policy exit=0 expected=0
+$
+
+sha256 working=67c2218a521d7d495f78fd880c407682f3356be926282d7f5149ccb609c7c493 committed=67c2218a521d7d495f78fd880c407682f3356be926282d7f5149ccb609c7c493 repository=67c2218a521d7d495f78fd880c407682f3356be926282d7f5149ccb609c7c493
+
+=== case 2: new source file with trailing space is rejected
+fixture bytes (cat -A, bytes=16):
+let value = 1; $
+--- case 2 new source
+policy exit=1 expected=1
+src/new_source.rs:1: trailing whitespace.$
++let value = 1; $
+CI policy failed: Command ['git', 'diff', '--check', 'edebcafcd071cba4b4f57e0149eaa58f3a871843'] returned non-zero exit status 2.$
+
+=== case 3: authored mission Markdown report with trailing space and blank EOF is rejected
+fixture bytes (cat -A, bytes=20):
+# Authored report $
+$
+--- case 3 authored report
+policy exit=1 expected=1
+.missions/AS-M004/evidence/P05/authored-report.md:1: trailing whitespace.$
++# Authored report $
+.missions/AS-M004/evidence/P05/authored-report.md:2: new blank line at EOF.$
+CI policy failed: Command ['git', 'diff', '--check', 'edebcafcd071cba4b4f57e0149eaa58f3a871843'] returned non-zero exit status 2.$
+
+=== case 4: unlisted AS-M004 raw file is rejected
+fixture bytes (cat -A, bytes=21):
+diff --git a/a b/a$
+ $
+--- case 4 unlisted raw file
+policy exit=1 expected=1
+.missions/AS-M004/evidence/P01/preparation.diff:2: trailing whitespace.$
++ $
+.missions/AS-M004/evidence/P01/preparation.diff:2: new blank line at EOF.$
+CI policy failed: Command ['git', 'diff', '--check', 'edebcafcd071cba4b4f57e0149eaa58f3a871843'] returned non-zero exit status 2.$
+
+=== case 5: exempted frozen conception file still rejects blank-at-eol
+fixture bytes (cat -A, bytes=17):
+conception line $
+--- case 5 class narrowness
+policy exit=1 expected=1
+.missions/AS-M004/evidence/conception-accepted.md:1: trailing whitespace.$
++conception line $
+CI policy failed: Command ['git', 'diff', '--check', 'edebcafcd071cba4b4f57e0149eaa58f3a871843'] returned non-zero exit status 2.$
+
+=== case 6: two-class raw entry permits both observed classes
+fixture bytes (cat -A, bytes=10):
+measure $
+$
+--- case 6 two-class raw file
+policy exit=0 expected=0
+$
+
+=== final state
+(empty status means every fixture was cleared)

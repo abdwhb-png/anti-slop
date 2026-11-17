@@ -1,0 +1,54 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+warning: function `build_io_fault_interposer` is never used
+  --> tests/support/records/mod.rs:13:8
+   |
+13 | pub fn build_io_fault_interposer(directory: &Path) -> PathBuf {
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `hex` is never used
+  --> tests/support/records/mod.rs:79:8
+   |
+79 | pub fn hex(bytes: &[u8]) -> String {
+   |        ^^^
+
+warning: function `wait_bounded` is never used
+  --> tests/support/records/mod.rs:83:8
+   |
+83 | pub fn wait_bounded(child: &mut Child, limit: Duration) -> std::process::ExitStatus {
+   |        ^^^^^^^^^^^^
+
+warning: function `wait_for` is never used
+  --> tests/support/records/mod.rs:98:8
+   |
+98 | pub fn wait_for(path: &Path, limit: Duration) -> bool {
+   |        ^^^^^^^^
+
+warning: function `spawn_probe` is never used
+   --> tests/support/records/mod.rs:110:8
+    |
+110 | pub fn spawn_probe(mode: &str, variables: &[(&str, String)]) -> Child {
+    |        ^^^^^^^^^^^
+
+warning: `anti-slop` (test "records_measure") generated 5 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.45s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 1 test
+test capture_save_commit_read_resource_protocol ... host=linux cpus=4 loadavg=Some("1.09 1.05 1.16") page_size=
+bounds files=512 file_bytes=1048576 total_bytes=16777216 config_bytes=1048576 budget=10737418240
+
+thread 'capture_save_commit_read_resource_protocol' (1660309) panicked at tests/records_measure.rs:182:81:
+called `Result::unwrap()` on an `Err` value: Limit("Retained input count")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+FAILED
+
+failures:
+
+failures:
+    capture_save_commit_read_resource_protocol
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.40s
+
+error: test failed, to rerun pass `--test records_measure`

@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P05-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P05",
+    "revision": 1,
+    "path": "../packets/P05.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794918722.2688789.30962"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The cumulative archive whitespace failure is resolved through50 exact-path, observed-class attribute entries, preserving all raw and product bytes and active authored-source checks. Firstmate examined the complete corrected terminal report and real attribute delta, independently reran the six real-policy negative controls against the final attributes, actual cumulative/staged Git checks and whitespace wrapper, and verified all12 final-r2 source hashes. Final whole-mission acceptance remains a fresh Codex result.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/before-whitespace-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/before-staged-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/after-staged-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/negative-controls.sh"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/negative-controls.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/attributes-semantics.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/policy-unit-tests.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/policy-whitespace-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/preservation-hashes.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/transport-commit-report.raw.txt"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "5e19368c98fb46410b9d258bffa912fa9bac83e2",
+    "decision": "continue",
+    "rationale": "Preserve original local reviewed-content transport commit; package the same L04 outcome with verified narrowly scoped raw-evidence classification, no new product behavior or split."
+  },
+  "checksRun": [
+    "Full terminal report read; two factual wording corrections returned before native candidate binding; private owner copy byte-identical SHA2560670d0ebb0c368b27c9443a1cb97f038fd54baf908a74c265faf5aabb2ef87a4.",
+    "Parent rerun of negative-controls.sh with final .gitattributes SHA2564278f0afcf40a066b9f5686f972004f83ba49fb850efc07b0951ebe072db337c: actual policy exits0/1/1/1/1/0 match all six expected observations; byte-identical archive allowed, new source/authored report/unlisted archive/other class rejected.",
+    "Parent cumulative git diff --check and git diff --cached --check from original45dac3c241338c94166369fe821fe1d3499cf974: empty diagnostics, exit0. Actual Python whitespace wrapper exit0.",
+    "All12 final-r2 reviewed source hashes preserved; actual tracked delta restricted to .gitattributes plus coordinator state/history and new P05 evidence. Exactly14 staged paths: attribute file plus13 P05 files.",
+    "Reviewed19 existing CI policy tests executed by worker, before/after/counterfactual observations, unchanged proof hashes and current MDD state validator valid true.",
+    "Nonvisual whole demo applicability rechecked and reused explicitly through native progress with current implementation generation."
+  ],
+  "limits": [
+    "No unchanged Rust/Node/resource/fault/full-suite rerun. GitHub CI on final pushed head remains required.",
+    "The archive rules permit only exact paths/classes; future raw files remain subject to the full gate until explicitly classified.",
+    "No source repair, old evidence rewrite, commit, push/PR, merge or mission closure in this packet."
+  ]
+}

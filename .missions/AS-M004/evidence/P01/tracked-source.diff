@@ -1,0 +1,33 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index cfc87e2..5df6970 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -12,6 +12,7 @@ clap = { version = "=4.6.7", default-features = false, features = ["std", "deriv
+ globset = { version = "=0.4.20", default-features = false }
+ jsonc-parser = { version = "=0.34.0", default-features = false }
+ regex-automata = "=0.4.18"
++rusqlite = { version = "=0.41.1", default-features = false, features = ["bundled"] }
+ schemars = { version = "=1.2.2", features = ["preserve_order"] }
+ serde = { version = "=1.0.229", features = ["derive"] }
+ serde_json = "=1.0.151"
+@@ -29,4 +30,5 @@ incremental = true
+ 
+ [dev-dependencies]
+ assert_cmd = "=2.2.2"
++rusqlite = { version = "=0.41.1", default-features = false, features = ["bundled"] }
+ tempfile = "=3.27.0"
+diff --git a/src/lib.rs b/src/lib.rs
+index 8c48e18..80cafda 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -1,8 +1,9 @@
+ //! Shared Anti-Slop application library.
+ //!
+ //! Application operations will be introduced with their implementations.
+-//! Analysis, storage, and session behavior are not available yet.
++//! Analysis and session behavior are not available yet.
+ 
+ pub mod config;
+ pub mod output;
++pub mod records;
+ pub mod workspace;

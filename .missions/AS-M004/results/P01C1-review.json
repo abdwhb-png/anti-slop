@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P01C1-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P01C1",
+    "revision": 1,
+    "path": "../packets/P01C1.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted the bounded corrected capture persistence/read invariant after complete report, source and regression examination. Canonical storage integrity covers membership, provenance and bytes in one transaction; workspace/config generation algorithms remain unchanged. Seven actual behavior regressions failed before the production correction and then passed. Firstmate independently reran records (18), CLI (11) and output (3) tests successfully. The earlier import-only RED and download-order deviations retain the explicit limited user exception; no mission acceptance is implied. Budget admission/concurrent reservations, full crash matrix, measurements and final Codex review remain open.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/red-01-corruption-undetected.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/green-02-records-all.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/node-conformance-tests.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/policy-complete-graph.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/process-exception-authority.txt"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "decision": "continue",
+    "rationale": "Corrected retained-capture boundary remains part of one L04 durable-storage PR; original baseline and final target unchanged. Budget and resource qualification are not delivered by this packet."
+  }
+}

@@ -1,0 +1,3 @@
+command: python3 scripts/ci/policy.py whitespace --base 45dac3c241338c94166369fe821fe1d3499cf974
+exit: 0
+output:

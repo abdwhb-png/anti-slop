@@ -1,0 +1,16 @@
+{
+  "purpose": "Read-only observation of the real capture integration test. Interposition logs negative SIGKILL calls whose leader PID no longer exists, then forwards the original call unchanged. Git subprocesses clear LD_PRELOAD through production env_clear. No source change or PID-reuse experiment.",
+  "command": [
+    "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+    "staged_bytes_and_working_context_remain_independent",
+    "--exact",
+    "--nocapture",
+    "--test-threads=1"
+  ],
+  "exit": 0,
+  "observedAfterReap": 12,
+  "stdout": "\nrunning 1 test\ntest staged_bytes_and_working_context_remain_independent ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 19 filtered out; finished in 0.04s\n\n",
+  "stderr": "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862751 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862754 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862757 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862760 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862763 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862766 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862769 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862772 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862775 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862778 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862781 signal=9\nOBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3862784 signal=9\n",
+  "instrumentSourceSha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+  "limits": "This proves group signaling after loss of leader PID reservation; it does not reproduce PID reuse or harm to another process."
+}

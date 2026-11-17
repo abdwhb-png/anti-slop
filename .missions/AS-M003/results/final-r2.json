@@ -27,39 +27,39 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+      "path": "../evidence/recovery/retained/report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/initial-audit.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/initial-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/final-audit.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/final-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/source-evidence-audit.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/source-evidence-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/focused-checks.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/focused-checks.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/rename-mode-probe.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/rename-mode-probe.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/retained-ci-inspection.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/retained-ci-inspection.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/measurement-inspection.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/measurement-inspection.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-faa77758/historical-evidence-inspection.json"
+      "path": "../evidence/recovery/retained/final-review-faa77758/historical-evidence-inspection.json"
     },
     {
       "kind": "evidence",

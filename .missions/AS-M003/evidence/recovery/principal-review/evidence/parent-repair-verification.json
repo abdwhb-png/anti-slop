@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-17T07:01:04.728918+00:00",
+  "originalsComparedToGitHEAD": 14,
+  "retainedComparedToOldTask": 118,
+  "byteExactPathOnlyArtifacts": 11,
+  "replacements": 48,
+  "unchangedTrackedFiles": 467,
+  "exportFilesCompared": 639,
+  "candidatePriorJournalEvents": 20,
+  "candidateNewEvents": 1,
+  "productSourceChanged": false,
+  "historicalNarrativeGap": "External preflight report not inspected; published prerequisite verdict retained.",
+  "outcome": "passed"
+}

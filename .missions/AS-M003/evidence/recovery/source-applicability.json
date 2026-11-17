@@ -1,0 +1,30 @@
+{
+  "observedAt": "2026-11-17T06:41:58.293247+00:00",
+  "checkoutCommit": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+  "sourceHead": "1560c240d30711865bb01e039bad03c10f865662",
+  "tree": "3d3d07a1847e14463b638f794c7876711d2a2465",
+  "acceptedSourceHashes": {
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+  },
+  "actualBeforeStatusDocumentationEdit": {
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+  },
+  "statusDocumentationArchive": "originals/README.md",
+  "independentAcceptance": "../../results/final-r3.json",
+  "review": "retained/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+  "meaning": "Existing independent product acceptance applies to the merged source and the unchanged capture implementation. This repair is not a new independent product review; current-status README edits are separately disclosed."
+}

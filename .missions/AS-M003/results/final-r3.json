@@ -28,23 +28,23 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+      "path": "../evidence/recovery/retained/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-5823ce78/initial-audit.json"
+      "path": "../evidence/recovery/retained/final-review-5823ce78/initial-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-5823ce78/final-audit.json"
+      "path": "../evidence/recovery/retained/final-review-5823ce78/final-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-5823ce78/evidence-inspection.json"
+      "path": "../evidence/recovery/retained/final-review-5823ce78/evidence-inspection.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-5823ce78/focused-checks.json"
+      "path": "../evidence/recovery/retained/final-review-5823ce78/focused-checks.json"
     },
     {
       "kind": "evidence",

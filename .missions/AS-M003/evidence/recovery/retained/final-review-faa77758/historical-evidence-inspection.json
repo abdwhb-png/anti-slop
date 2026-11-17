@@ -1,0 +1,609 @@
+[
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red.log",
+    "sha256": "2ea3bd6398e435db2b0264984177f65dd243ef626ee979596e99ad060a95eea0",
+    "bytes": 5033,
+    "evidence": [
+      "",
+      "thread 'exclusions_required_inputs_and_workspace_boundaries_are_explicit' (3600478) panicked at tests/workspace.rs:101:109:",
+      "called `Result::unwrap_err()` on an `Ok` value: Capture { head: \"fac759ffd6a8c284fd4d3c3120733850b3ca98e0\", changes: [Change { path: \"a.ts\", before: Some(Source { path: \"a.ts\", role: Head, generation: \"\", git_blob: Some(\"564b12f45becba5fb2f70e270af067c1f13b3aab\"), bytes: [104, 101, 97, 100, 10] }), after: Some(Source { path: \"a.ts\", role: Index, generation: \"\", git_blob: Some(\"867e33f23d4510956a317ad31882d45057f0f402\"), bytes: [115, 101, 108, 101, 99, 116, 101, 100] }) }], context: [], configuration: Configuration { generation: \"2e4ccb44d53055a6fa441527ed58b677307f4412a7af9b168653d4ce6f01a0c7\", source: BuiltIn }, generation: \"\" }",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "---- retained_configuration_and_ranges_share_the_actual_generation stdout ----",
+      "",
+      "thread 'retained_configuration_and_ranges_share_the_actual_generation' (3600480) panicked at tests/workspace.rs:62:5:",
+      "assertion `left == right` failed",
+      "  left: None",
+      " right: Some([123, 34, 36, 115, 99, 104, 101, 109, 97, 34, 58, 34, 104, 116, 116, 112, 115, 58, 47, 47, 103, 105, 116, 104, 117, 98, 46, 99, 111, 109, 47, 97, 98, 100, 119, 104, 98, 45, 112, 110, 103, 47, 97, 110, 116, 105, 45, 115, 108, 111, 112, 47, 114, 101, 108, 101, 97, 115, 101, 115, 47, 100, 111, 119, 110, 108, 111, 97, 100, 47, 99, 111, 110, 102, 105, 103, 45, 118, 49, 46, 48, 46, 48, 47, 97, 110, 116, 105, 45, 115, 108, 111, 112, 46, 115, 99, 104, 101, 109, 97, 46, 106, 115, 111, 110, 34, 44, 34, 114, 117, 108, 101, 115, 34, 58, 123, 34, 82, 49, 34, 58, 34, 98, 108, 111, 99, 107, 34, 125, 44, 34, 111, 118, 101, 114, 114, 105, 100, 101, 115, 34, 58, 91, 123, 34, 105, 110, 99, 108, 117, 100, 101, 34, 58, 91, 34, 42, 42, 47, 42, 46, 116, 115, 34, 93, 44, 34, 114, 117, 108, 101, 115, 34, 58, 123, 34, 82, 49, 34, 58, 34, 111, 102, 102, 34, 125, 125, 93, 125])",
+      "",
+      "",
+      "thread 'file_acquisition_is_bounded_before_success' (3600479) panicked at tests/workspace.rs:125:114:",
+      "called `Result::unwrap_err()` on an `Ok` value: Capture { head: \"fac759ffd6a8c284fd4d3c3120733850b3ca98e0\", changes: [], context: [Source { path: \"huge\", role: Context, generation: \"\", git_blob: None, bytes: [120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 120, 1 [synthetic Debug bytes omitted: 5241444 characters]",
+      "",
+      "",
+      "failures:",
+      "test result: FAILED. 1 passed; 3 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red-compaction.json",
+    "sha256": "07e0aba1dc4e325bb7b7dd97279466d87101d805549b19e155545b55c6cdbe68",
+    "bytes": 257,
+    "evidence": [
+      {
+        "originalSha256": "8ab1cb8c5be4c91640564be71f72119c18077dbca0f247baa7b654673f81942b",
+        "originalBytes": 5246425,
+        "reason": "Compact synthetic repeated byte-array Debug output; retained failing assertions and test summary.",
+        "retainedBytes": 5033
+      }
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+    "sha256": "8a93cda7c31becb589d6e22b37bde9e9bf56edc5904a45f1ff533c39416a67ff",
+    "bytes": 1883,
+    "evidence": [
+      "",
+      "thread 'owned_group_signals_reserve_the_leader_until_cleanup_finishes' (3931685) panicked at tests/workspace.rs:1038:9:",
+      "staged_bytes_and_working_context_remain_independent: Group signaling after leader PID reservation was lost: OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931802 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931805 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931811 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931814 signal=9",
+      "staged_bytes_and_working_context_remain_independent: Group signaling after leader PID reservation was lost: OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931802 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931805 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931811 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931814 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931817 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931820 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931825 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931830 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931833 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931836 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931839 signal=9",
+      "OBSERVED_GROUP_SIGNAL_AFTER_LEADER_REAP pid=3931842 signal=9",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 20 filtered out; finished in 0.18s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/02-green.log",
+    "sha256": "c48b2d9d83696529739feb79474e47542c408f0eb9865fe434e28b47f26989bd",
+    "bytes": 611,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 20 filtered out; finished in 2.23s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/01-red-comparisons.log",
+    "sha256": "665c2e30162aaf959d17f37aacc6bfbb6873c551ab17437f6e78f9a951909323",
+    "bytes": 1534,
+    "evidence": [
+      "error[E0618]: expected function, found `Capture`",
+      "error[E0618]: expected function, found `Capture`"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/02-green-comparisons.log",
+    "sha256": "d77c84d6bc927df7c53d2a5318761b278a42b78a7ebf6962d9c80afd70b09440",
+    "bytes": 910,
+    "evidence": [
+      "error[E0277]: `Comparison` doesn't implement `Debug`"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/03-comparisons.log",
+    "sha256": "2400f9741de60548eb0c9640f6fbc715c429c54d57285c21eeeb3db010fbaaf6",
+    "bytes": 619,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 22 filtered out; finished in 0.25s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/04-red-renames.log",
+    "sha256": "0e749a4086ebeb9e6c0e6a8c73e6ea03a5471046b67b697d621149880fa88b06",
+    "bytes": 1180,
+    "evidence": [
+      "",
+      "thread 'exact_content_renames_keep_both_paths_and_reject_either_exclusion' (4279) panicked at tests/workspace.rs:1162:9:",
+      "assertion `left == right` failed: Unique identical deletion/addition must be attributed once: Staged",
+      "  left: 2",
+      " right: 1",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 24 filtered out; finished in 0.05s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/05-green-renames.log",
+    "sha256": "0e824c71bce8c14d0b43290295fab96f61097b0c38edde6452bd5a991fe5d5b1",
+    "bytes": 621,
+    "evidence": [
+      "test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 23 filtered out; finished in 0.40s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/10-red-index-flags.log",
+    "sha256": "e0a6ec4f9fcdcfc7f5dbdcc66b0177ba688664f1d99cf38a3617420aecf54fdf",
+    "bytes": 1684,
+    "evidence": [
+      "",
+      "thread 'working_selections_reject_index_flags_that_hide_mutable_changes' (265264) panicked at tests/workspace.rs:1202:13:",
+      "--assume-unchanged Unstaged: Ok(Capture { comparison: Comparison { selection: Unstaged, commit: None, before_role: Index, after_role: Working, command: [\"diff-files\", \"--raw\", \"--no-renames\", \"--no-relative\", \"--no-ext-diff\", \"--no-textconv\", \"--ignore-submodules=none\", \"--abbrev=64\", \"-z\", \"--\"] }, generation: \"2eb6a2dfa2e139174222836c1d734a39966b3867d5c412d95fa2e8c0b1a5b41e\", changes: [], context: [], configuration: Configuration { generation: \"fd30b2dc2b75af93f39c79666f0698c68a42c3086d8ea195a405712d85d711ce\", source: BuiltIn }, stats: CaptureStats { retained_files: 0, retained_bytes: 0, attempts: 1, git_processes: 5 } })",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.06s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/11-red-intent.log",
+    "sha256": "30d57ad031602e4dbba764d55ba40cb3e0480af48c3d451d9b9b1c5ffa97be0d",
+    "bytes": 1855,
+    "evidence": [
+      "",
+      "thread 'intent_to_add_is_absent_from_staged_and_is_a_working_addition' (265321) panicked at tests/workspace.rs:1213:5:",
+      "Intent is not a staged empty-file addition: Capture { comparison: Comparison { selection: Staged, commit: Some(\"48dc09eeb0f407d7d7e57a1f9681eab3b2fb62d4\"), before_role: Head, after_role: Index, command: [\"diff-index\", \"--cached\", \"--raw\", \"--no-renames\", \"--no-relative\", \"--no-ext-diff\", \"--no-textconv\", \"--ignore-submodules=none\", \"--abbrev=64\", \"-z\", \"48dc09eeb0f407d7d7e57a1f9681eab3b2fb62d4\", \"--\"] }, generation: \"ed79d3fbc8c64439b0d9423cc1aa7f45b489508811de26ef19542add28e87839\", changes: [Change { path: \"intent.ts\", before: None, after: Some(Source { path: \"intent.ts\", role: Index, generation: \"4ccea8ba9a8e67f4d0ef40179d6e87efd728dc0de17e697aed0822d09984d44e\", bytes: 0 }) }], context: [], configuration: Configuration { generation: \"1615f2f739537b61b5e1fb60a5b32ad584f42bcc5e392683465d46455fbd6af9\", source: BuiltIn }, stats: CaptureStats { retained_files: 1, retained_bytes: 0, attempts: 1, git_processes: 6 } }",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.08s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/12-green-index-flags.log",
+    "sha256": "ba950ac3db9d258900a640808e7032b82ac690e627edb39f62a3c5340e7e2ec6",
+    "bytes": 615,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.13s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/13-green-intent.log",
+    "sha256": "4ab38d2ae5b2961c0810875ff7abd4e1214c3c9d046a4a7861e8f3e00a260f63",
+    "bytes": 499,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 26 filtered out; finished in 0.10s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/14-0-qualification.log",
+    "sha256": "90fd9e878fe35aaadb25598b97e02b2251148561a45e267557bf97f6cd63ed0c",
+    "bytes": 1130,
+    "evidence": [
+      "",
+      "thread 'capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers' (292183) panicked at tests/workspace.rs:453:9:",
+      "Unstaged executed a project helper",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.10s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/15-0-mechanism-diagnosis.log",
+    "sha256": "f20c0df4c284dd5eb60693f3c1f6845678e840fd674d2c1e78f1aaff89424645",
+    "bytes": 1166,
+    "evidence": [
+      "",
+      "thread 'capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers' (329166) panicked at tests/workspace.rs:455:9:",
+      "Unstaged executed project helpers: [\"helper-ran-filter.probe.process\"]",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "",
+      "Unstaged executed project helpers: [\"helper-ran-filter.probe.process\"]",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.11s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/15-1-mechanism-diagnosis.log",
+    "sha256": "0acad986b28b728e52a3e685ec9b439410561d021afab876561da08908104c76",
+    "bytes": 457,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.26s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/16-red-empty-generation.log",
+    "sha256": "c9cb42f161e57e68f3d095f8c3d6e30886240ac8c8a293fb0c28231a22f98302",
+    "bytes": 1349,
+    "evidence": [
+      "",
+      "thread 'empty_unstaged_capture_identity_still_binds_the_observed_index_generation' (383790) panicked at tests/workspace.rs:1326:5:",
+      "assertion `left != right` failed: Empty selection is not absence of an observed source generation",
+      "  left: \"a280e8e1ab6dc9dae38ba72ebcd7e0203213ba36cff2d25e69aab73a154b2e29\"",
+      " right: \"a280e8e1ab6dc9dae38ba72ebcd7e0203213ba36cff2d25e69aab73a154b2e29\"",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.08s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/17-red-info-attributes.log",
+    "sha256": "006f0b419dda15bd4fd8fdbf7562248e50729973d69d024603bcd171ca925827",
+    "bytes": 1166,
+    "evidence": [
+      "",
+      "thread 'capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers' (388323) panicked at tests/workspace.rs:455:9:",
+      "Unstaged executed project helpers: [\"helper-ran-filter.probe.process\"]",
+      "note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace",
+      "",
+      "",
+      "Unstaged executed project helpers: [\"helper-ran-filter.probe.process\"]",
+      "test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.11s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/18-0-metadata-green.log",
+    "sha256": "027e1167c391663e615d1702a7d4a57b071d8c7c829cb434e3202999de1598de",
+    "bytes": 633,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.51s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/18-1-metadata-green.log",
+    "sha256": "53c3d5cf4d93a918acd49b1f14975888da2ec0b2218a9b89492866e8be4653e8",
+    "bytes": 523,
+    "evidence": [
+      "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.11s"
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/25-original-observer-green.json",
+    "sha256": "ee6265dc3870ce6fc592b781cda781289a72aa150f0b1ca41db352ca350afd68",
+    "bytes": 908,
+    "evidence": [
+      {
+        "command": [
+          "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+          "staged_bytes_and_working_context_remain_independent",
+          "--exact",
+          "--nocapture",
+          "--test-threads=1"
+        ],
+        "exit": 0,
+        "observedAfterReap": 0,
+        "stdout": "\nrunning 1 test\ntest staged_bytes_and_working_context_remain_independent ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 33 filtered out; finished in 0.08s\n\n",
+        "stderr": "",
+        "instrumentSourceSha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+        "instrumentBinarySha256": "6332f0250216a3944cdd7b78ef99f7d00255258f1f1a8bf45a7eb0ecfa9bbcc7",
+        "executableSha256": "bad705fc1ae28d75c2b47c8532e927a7cb6cdb56c19e41de9fd67374a98bc306",
+        "limits": "This proves group signaling after loss of leader PID reservation; it does not reproduce PID reuse or harm to another process."
+      }
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/27-tooling-output-red.json",
+    "sha256": "2fc488b446ed5a21b35508ff6a099b4af13bca45e78203ff329e620eb7f1b3f1",
+    "bytes": 378,
+    "evidence": [
+      {
+        "case": "isolated existing-output refusal before correction",
+        "sampler": "harmless external-boundary stand-in; no Cargo or real measurements",
+        "wrapperSha256": "693ae9a4438d6abe3c8bea1d3ff37a06b32c27905ee7f74e4509f93c87cc7e81",
+        "exit": 0,
+        "existingOutputPreserved": false,
+        "samplerStarted": true,
+        "expectedSafeAssertionExit": 1,
+        "stdout": "",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/28-tooling-output-green.json",
+    "sha256": "e4ed6a27d542b6b55b7270ceae705d57916e1e19e6fb555c941c585bc06a3aa7",
+    "bytes": 6097,
+    "evidence": [
+      {
+        "cases": [
+          {
+            "case": "existing",
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: output already exists; choose a new --output directory\n"
+          },
+          {
+            "case": "missing-output",
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: the following arguments are required: --output\n"
+          },
+          {
+            "case": "fresh",
+            "exit": 0,
+            "stdout": "",
+            "stderr": ""
+          },
+          {
+            "case": "repeat",
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: output already exists; choose a new --output directory\n"
+          },
+          {
+            "case": "unknown",
+            "exit": 2,
+            "stdout": "",
+            "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: the following arguments are required: --output\n"
+          },
+          {
+            "case": "help",
+            "exit": 0,
+            "stdout": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\n\nReuse P01's canonical sampler with a comparison and a fresh output directory.\n\npositional arguments:\n  {staged,unstaged,local,base}\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT       new directory for observations; existing paths are\n                        refused before sampling\n",
+            "stderr": ""
+          }
+        ],
+        "sampler": "harmless external-boundary stand-in; no application sampling or Cargo",
+        "realObservationsUnchanged": {
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-local.json": "afa33906c1e04d74ea77c52655b845703c6b58969558bd8ca6cd6817e8f398b3",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-base.json": "59a7038290bbdacc634c3c770cb866182617c904ccb98262c47cdca3de85e857",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-staged.json": "948da000d0ba042a2b49b57dac9423be438bdee3d06c9a429daee10f7ce0dc93",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measurements-unstaged.json": "094d2bb10444661f49bb5f6c0706c475e1446a15b55ed04e012a8652467a6065",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-1.log": "ed19788b5b85ac5ae2c5c34770acd9caa181035b1fa98139d3d6f77b4128b62a",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-5.log": "d0ae9aa10e0f8b0978c1f4a20512a992eda382ed5c8c0457cf9c54dc9c966afa",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-1.log": "18c73bbe6c709dcf73b92d8f75323e42d8a068eb7e62b0d30b3b5ca32a959444",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-local-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-5.log": "432284a13e5a0b50d783ce8e10ecd9ae690e205769222b69025dea8c9c2d96c8",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-5.log": "cbab431fad3c143fdb3ba208d826b21e55a09f721448036c19dd522e5647b55b",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-base-1.log": "b54df3808067501752d996ab10cd46e3f53744c25f31b0f988079f9ebd50db0d",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-unstaged-5.log": "2c48322481f55e2e623aa86ef3555d8f31e2513f5fbebcfbeb9a066f59de25f7",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/observation-staged-1.log": "948e5a17f8ca837de55d7ae29ae6e4d61551d6bc77d36800a619c2664657a9a3"
+        },
+        "existingRefusedBeforeSampler": true,
+        "freshDestinationExercised": true,
+        "measurementsApplicability": "Destination/argument validation only; capture code, scenarios and sampler unchanged."
+      }
+    ]
+  },
+  {
+    "oldFocusedChecks": [
+      {
+        "argv": [
+          "node",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+          "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+          "--json"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "relevant_index_configuration_and_context_mutation_retries_a_bound_generation",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "working_and_untracked_mutations_retry_without_combining_views",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "explicit_base_is_resolved_once_even_when_the_reference_moves",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "owned_group_signals_reserve_the_leader_until_cleanup_finishes",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "working_ranges_absence_and_configuration_survive_later_edits",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      },
+      {
+        "argv": [
+          "/home/abdwhb/.cargo/bin/cargo",
+          "test",
+          "--frozen",
+          "--test",
+          "workspace",
+          "retained_count_total_bytes_and_sparse_input_are_bounded",
+          "--",
+          "--exact",
+          "--nocapture"
+        ],
+        "exit": 0,
+        "output": null,
+        "log": null
+      }
+    ]
+  },
+  {
+    "priorAuditFiles": [
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe.rs",
+        "sha256": "26333871ffd7fc60257eb229c378c8cd08b28ece34eeb42fd23573b03ecead9a",
+        "bytes": 703
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log",
+        "sha256": "86f5689d41fe04a3814ac868886c152c0e76fe2ec117e98160db4f3ba7afe9a8",
+        "bytes": 541
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/explicit_base_is_resolved_once_even_when_the_reference_moves.log",
+        "sha256": "6ac457a7b726329f87faa479bafe2afeb80c2b297547dfb50a600840d8668e3a",
+        "bytes": 533
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/final-audit.json",
+        "sha256": "3a0886a2b79febbce7efe23088d16fcf17b29696a2b80b1f48dcdc2a46c520f7",
+        "bytes": 15945
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/focused-checks.json",
+        "sha256": "9b2b92b0cbe52f9b21fdda77ff726b4640f15eede1e430d5189bea42e60c8be0",
+        "bytes": 3084
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/initial-audit.json",
+        "sha256": "da122a385fceda6a68aa9ca9aca0e7da4469e470c87a8d42ab5533e0f3f4c7fb",
+        "bytes": 94161
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/measurement-inspection.json",
+        "sha256": "663dcb9bbd95c13835818d774b17921eccd7bac24673b769e579e43989b49cbc",
+        "bytes": 3198
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/measurement-output-refusal.json",
+        "sha256": "f118b63a15bf2ab92b9256b8da31bc39ad5e7ebf7bcc511ea08ad3d1c1ad897b",
+        "bytes": 500
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-probe.json",
+        "sha256": "e431a8ce45f3ed31394a45ec9d1a695d4cd54466b00bde2dd268ef90dbb2edf9",
+        "bytes": 954
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-probe-reproduction.json",
+        "sha256": "c493149d66441010a286fd388118c19526dd6406878fe96ac32234180d2acbd7",
+        "bytes": 1980
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-probe.json",
+        "sha256": "84a96422e1c299f43022f28433d81afc5e19dabfc8bfc0e88ffac99cdba3e48b",
+        "bytes": 4480
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log",
+        "sha256": "cbb3076ba47b09070dc16ea25bb36eed5b98919e11fffb1b612a31de5a1e2ad3",
+        "bytes": 535
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/probe-build.log",
+        "sha256": "014622a7144ae78baf485d185a0b1f5de7a8428a24b8ca0143b65b8dbbd455de",
+        "bytes": 466
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/probe-library-identity.json",
+        "sha256": "b2acb351969118a521b139e769c4c38d0d4a89b18bb8e2de601825f9999e9114",
+        "bytes": 486
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log",
+        "sha256": "861c14c3b68be74e0deb6756c85c1cb3db871f7213df32ce87daa6968cac64aa",
+        "bytes": 565
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/report-audit.json",
+        "sha256": "f10630b502fe915129364670f3fe494fb4b09762b5f639ff2ae09bb12ceeff53",
+        "bytes": 3023
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/retained-ci-inspection.json",
+        "sha256": "e07b6065c1c4774006f9fa8012dc247151862196fd1ed5ef40a8ed42ba3bf799",
+        "bytes": 20476
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/retained_count_total_bytes_and_sparse_input_are_bounded.log",
+        "sha256": "1b60d52a899c7347770ab4f0cb52a13a4852de93f015dad057bc6c075d452deb",
+        "bytes": 523
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/state.log",
+        "sha256": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d",
+        "bytes": 261
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/task-runtime-processes.json",
+        "sha256": "1a6d6d853c19053afb38494f6eb920d50aed9f2d699bf3eab9707d98bbd024a0",
+        "bytes": 135
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/unreadable-working-probe.json",
+        "sha256": "e3237cb45346a0c955ddabb24b0d08959284220400ac58749cb26351a4df42fd",
+        "bytes": 430
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/working_and_untracked_mutations_retry_without_combining_views.log",
+        "sha256": "1d7496f3d8b9cccf4a23092b091c740e69688242f3400639affe4a5a0848f8ce",
+        "bytes": 535
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/working_ranges_absence_and_configuration_survive_later_edits.log",
+        "sha256": "d4423685cdc953a1de2f2883329a90b314cf51e18ec703eca100f5bc8e34ecc9",
+        "bytes": 533
+      }
+    ]
+  }
+]

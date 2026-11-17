@@ -1,0 +1,18 @@
+{
+  "authority/repair-authority.md": {
+    "sha256": "8e68a202617500ce9d8db4893235bfa6f82d1b7ab23a3a2eb7eeb7c185aa830f",
+    "bytes": 964
+  },
+  "authority/pre-repair-activity.json": {
+    "sha256": "f44fb2eddef0a674cebd085e7d37e2f1acbdc2bc84a02a128aa84117563df8cb",
+    "bytes": 560
+  },
+  "forge/forge-observations.json": {
+    "sha256": "316ffd5141e2683c7dd43c08ad22622f6e33952ab6c5023f7b84f3fd5bc5cbcd",
+    "bytes": 19718
+  },
+  "forge/merge-source-proof.json": {
+    "sha256": "bc64203c18bf23232d974caec93ba31418b036182cf8bb5c95c3158117c4fa59",
+    "bytes": 1155
+  }
+}

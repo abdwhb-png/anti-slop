@@ -1,0 +1,1294 @@
+{
+  "P04ReportSha256": "258ee329c52036ef82982eaaf5b13637e658b0ad73158ba0eea675de33c8b3c4",
+  "precedingAcceptedReportSha256": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f",
+  "contractSha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3",
+  "authoritySha256": "55faa6ba3cc68697f492331315ee2672aefcd997dca98b05e145a467040ab0e5",
+  "allEightSourceFiles": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+  },
+  "eightSourceDifferences": [],
+  "priorEvidenceChecked": 234,
+  "priorEvidenceDifferences": [],
+  "P04TrackedDifferences": [
+    {
+      "path": ".missions/AS-M003/history.jsonl",
+      "expected": "463456b66e83b3e0382ddeddc7b9c61311d8d7bc6f48cd049dc1c1551524fd50",
+      "actual": "ecf00d975b9f0dd0d4b8108a8913054b39b980908f3b1cc5657e2f47ff415a4d"
+    },
+    {
+      "path": ".missions/AS-M003/state.json",
+      "expected": "f0e255042deb10b22d9ba0ccaf6fd1cbd6e00476fe707e14b71cefb714925dcd",
+      "actual": "bb4ab37607848d8e63bf1b2a26a3ab141b0861d5cd432511f1d56622bc66b84c"
+    },
+    {
+      "path": "scripts/ci/test_policy.py",
+      "expected": "1eb2835f3609893022b2ba1d8f9a7f5ad4c062447615c9de8018644901b9fc2c",
+      "actual": "cf152e7ab23a613cc7f83daa1d378cec2f3d6dcbcd4c12ac37dbf082e08d29d8"
+    }
+  ],
+  "changesSinceAcceptedReview": [
+    {
+      "path": ".missions/AS-M003/history.jsonl",
+      "expected": "8e8b3519236cef508d288291283cd687f0bc0f3b840e5d66695ca03eeb66f1aa",
+      "actual": "ecf00d975b9f0dd0d4b8108a8913054b39b980908f3b1cc5657e2f47ff415a4d"
+    },
+    {
+      "path": ".missions/AS-M003/state.json",
+      "expected": "bf3d605348d050c9bad5fc7dd4b4b42a20aab9e03bcfc0d2663ca95ce021f01c",
+      "actual": "bb4ab37607848d8e63bf1b2a26a3ab141b0861d5cd432511f1d56622bc66b84c"
+    },
+    {
+      "path": "scripts/ci/test_policy.py",
+      "expected": "1eb2835f3609893022b2ba1d8f9a7f5ad4c062447615c9de8018644901b9fc2c",
+      "actual": "cf152e7ab23a613cc7f83daa1d378cec2f3d6dcbcd4c12ac37dbf082e08d29d8"
+    }
+  ],
+  "P04CandidateDifferences": [],
+  "measurementArtifactsChecked": 24,
+  "measurementArtifactDifferences": [],
+  "P04LedgerHashChecks": [
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.json",
+      "recordMatches": true,
+      "logMatches": true
+    },
+    {
+      "record": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/12-audit-recorder-failure.json",
+      "recordMatches": true
+    }
+  ],
+  "whitespaceAttributes": {
+    "paths": 34,
+    "values": {
+      "whitespace=-blank-at-eol": 3,
+      "whitespace=-blank-at-eof": 31
+    },
+    "exactObservedPathsAndClasses": true,
+    "checkAttrOutput": [
+      ".missions/AS-M003/evidence/P01-C01/git-correction.diff: whitespace: -blank-at-eol",
+      ".missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01-C01/observation-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01-C01/observation-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/02b-green.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-1-before-object-admission.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-1-initial.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-5-before-object-admission.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-5-initial.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/observation-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P01/preparation.diff: whitespace: -blank-at-eol",
+      ".missions/AS-M003/evidence/P02/07-hold-format-check.log: whitespace: -blank-at-eol",
+      ".missions/AS-M003/evidence/P02/observation-base-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-base-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-local-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-local-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-staged-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-staged-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-unstaged-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P02/observation-unstaged-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/02-green-working-modes.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/03-capture-regressions.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-base-001/observation-base-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-local-001/observation-local-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-5.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-1.log: whitespace: -blank-at-eof",
+      ".missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-5.log: whitespace: -blank-at-eof"
+    ]
+  },
+  "stableCI": {
+    "receipt": {
+      "command": [
+        "bash",
+        "scripts/ci/check.sh"
+      ],
+      "environment": {
+        "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+        "CI_BASE_SHA": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+      },
+      "pathPrefix": "/home/abdwhb/.cargo/bin",
+      "startedAt": "2026-11-15T23:14:15.843295+00:00",
+      "elapsedSeconds": 8.608435472939163,
+      "exit": 0,
+      "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log"
+    },
+    "sha256": "193a0fe1230b2862df1b19803c80b2c8e9edf34887c86a6aa85a46197566b8b9",
+    "lines": 897,
+    "rustSummaries": [
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 11,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 19,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 3,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 34,
+        "failed": 0,
+        "ignored": 2
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      },
+      {
+        "passed": 0,
+        "failed": 0,
+        "ignored": 0
+      }
+    ],
+    "rustTotalPassed": 70,
+    "pythonTests": 19,
+    "editor": {
+      "tool": "VS Code JSON language service",
+      "version": "5.7.2",
+      "mode": "headless editor-service API",
+      "association": {
+        "artifact": "schemas/anti-slop.schema.json",
+        "registeredUri": "https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json",
+        "fileMatch": "*.jsonc"
+      },
+      "schemaDialect": "https://json-schema.org/draft/2020-12/schema",
+      "remoteRequests": [],
+      "cases": [
+        {
+          "name": "minimal",
+          "accepted": true,
+          "diagnostics": []
+        },
+        {
+          "name": "all-policies",
+          "accepted": true,
+          "diagnostics": []
+        },
+        {
+          "name": "empty-rules-overrides",
+          "accepted": true,
+          "diagnostics": []
+        },
+        {
+          "name": "ordered-overrides",
+          "accepted": true,
+          "diagnostics": []
+        },
+        {
+          "name": "unknown-root-field",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 2
+                },
+                "end": {
+                  "line": 2,
+                  "character": 12
+                }
+              },
+              "message": "Property provider is not allowed.",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "unknown-rule",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 4
+                },
+                "end": {
+                  "line": 3,
+                  "character": 9
+                }
+              },
+              "message": "Property R10 is not allowed.",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "unknown-policy",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 10
+                },
+                "end": {
+                  "line": 3,
+                  "character": 18
+                }
+              },
+              "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+              "severity": 1,
+              "code": 1
+            }
+          ]
+        },
+        {
+          "name": "options-unsupported",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 10
+                },
+                "end": {
+                  "line": 5,
+                  "character": 5
+                }
+              },
+              "message": "Incorrect type. Expected \"string\".",
+              "severity": 1
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 10
+                },
+                "end": {
+                  "line": 5,
+                  "character": 5
+                }
+              },
+              "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+              "severity": 1,
+              "code": 1
+            }
+          ]
+        },
+        {
+          "name": "rules-null",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 11
+                },
+                "end": {
+                  "line": 2,
+                  "character": 15
+                }
+              },
+              "message": "Incorrect type. Expected \"object\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "numeric-policy",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 10
+                },
+                "end": {
+                  "line": 3,
+                  "character": 11
+                }
+              },
+              "message": "Incorrect type. Expected \"string\".",
+              "severity": 1
+            },
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 10
+                },
+                "end": {
+                  "line": 3,
+                  "character": 11
+                }
+              },
+              "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+              "severity": 1,
+              "code": 1
+            }
+          ]
+        },
+        {
+          "name": "missing-identity",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 0
+                },
+                "end": {
+                  "line": 0,
+                  "character": 1
+                }
+              },
+              "message": "Missing property \"$schema\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "unknown-identity",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 1,
+                  "character": 13
+                },
+                "end": {
+                  "line": 1,
+                  "character": 115
+                }
+              },
+              "message": "Value must be \"https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json\".",
+              "severity": 1,
+              "code": 1
+            }
+          ]
+        },
+        {
+          "name": "overrides-not-array",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 2,
+                  "character": 15
+                },
+                "end": {
+                  "line": 2,
+                  "character": 17
+                }
+              },
+              "message": "Incorrect type. Expected \"array\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "empty-include",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 4,
+                  "character": 17
+                },
+                "end": {
+                  "line": 4,
+                  "character": 19
+                }
+              },
+              "message": "Array has too few items. Expected 1 or more.",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "missing-include",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 4
+                },
+                "end": {
+                  "line": 3,
+                  "character": 5
+                }
+              },
+              "message": "Missing property \"include\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "missing-override-rules",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 3,
+                  "character": 4
+                },
+                "end": {
+                  "line": 3,
+                  "character": 5
+                }
+              },
+              "message": "Missing property \"rules\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "unknown-override-field",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 8,
+                  "character": 6
+                },
+                "end": {
+                  "line": 8,
+                  "character": 13
+                }
+              },
+              "message": "Property scope is not allowed.",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "include-not-array",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 4,
+                  "character": 17
+                },
+                "end": {
+                  "line": 4,
+                  "character": 21
+                }
+              },
+              "message": "Incorrect type. Expected \"array\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "exclude-not-string",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 8,
+                  "character": 8
+                },
+                "end": {
+                  "line": 8,
+                  "character": 9
+                }
+              },
+              "message": "Incorrect type. Expected \"string\".",
+              "severity": 1
+            }
+          ]
+        },
+        {
+          "name": "override-rule-unknown",
+          "accepted": false,
+          "diagnostics": [
+            {
+              "range": {
+                "start": {
+                  "line": 8,
+                  "character": 8
+                },
+                "end": {
+                  "line": 8,
+                  "character": 12
+                }
+              },
+              "message": "Property R0 is not allowed.",
+              "severity": 1
+            }
+          ]
+        }
+      ],
+      "completion": {
+        "fields": [
+          {
+            "kind": 10,
+            "label": "$schema",
+            "insertText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\"",
+            "insertTextFormat": 2,
+            "filterText": "\"$schema\"",
+            "documentation": "Exact supported contract identity. This reserved release asset is unpublished; validation is offline.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 1,
+                  "character": 2
+                },
+                "end": {
+                  "line": 1,
+                  "character": 2
+                }
+              },
+              "newText": "\"\\$schema\": \"${1:https://github.com/abdwhb-png/anti-slop/releases/download/config-v1.0.0/anti-slop.schema.json}\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "rules",
+            "insertText": "\"rules\": {$1}",
+            "insertTextFormat": 2,
+            "filterText": "\"rules\"",
+            "documentation": "Root requested policies. Unspecified rules use built-in advisory defaults.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 1,
+                  "character": 2
+                },
+                "end": {
+                  "line": 1,
+                  "character": 2
+                }
+              },
+              "newText": "\"rules\": {$1}"
+            }
+          },
+          {
+            "kind": 10,
+            "label": "overrides",
+            "insertText": "\"overrides\": [$1]",
+            "insertTextFormat": 2,
+            "filterText": "\"overrides\"",
+            "documentation": "Matching overrides apply in declaration order, replacing assigned whole policies.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 1,
+                  "character": 2
+                },
+                "end": {
+                  "line": 1,
+                  "character": 2
+                }
+              },
+              "newText": "\"overrides\": [$1]"
+            }
+          }
+        ],
+        "rules": [
+          {
+            "kind": 10,
+            "label": "R1",
+            "insertText": "\"R1\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R1\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R1\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R2",
+            "insertText": "\"R2\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R2\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R2\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R3",
+            "insertText": "\"R3\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R3\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R3\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R4",
+            "insertText": "\"R4\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R4\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R4\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R5",
+            "insertText": "\"R5\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R5\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R5\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R6",
+            "insertText": "\"R6\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R6\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R6\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R7",
+            "insertText": "\"R7\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R7\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R7\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R8",
+            "insertText": "\"R8\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R8\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R8\""
+            }
+          },
+          {
+            "kind": 10,
+            "label": "R9",
+            "insertText": "\"R9\"",
+            "insertTextFormat": 2,
+            "filterText": "\"R9\"",
+            "documentation": "Requested policy; `block` does not establish qualification.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 117
+                }
+              },
+              "newText": "\"R9\""
+            }
+          }
+        ],
+        "policies": [
+          {
+            "kind": 12,
+            "label": "\"off\"",
+            "insertText": "\"off\"",
+            "insertTextFormat": 2,
+            "documentation": "Request no evaluation of this rule.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 122
+                },
+                "end": {
+                  "line": 0,
+                  "character": 122
+                }
+              },
+              "newText": "\"off\""
+            }
+          },
+          {
+            "kind": 12,
+            "label": "\"advisory\"",
+            "insertText": "\"advisory\"",
+            "insertTextFormat": 2,
+            "documentation": "Request evaluation without blocking; the default for unspecified root rules.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 122
+                },
+                "end": {
+                  "line": 0,
+                  "character": 122
+                }
+              },
+              "newText": "\"advisory\""
+            }
+          },
+          {
+            "kind": 12,
+            "label": "\"block\"",
+            "insertText": "\"block\"",
+            "insertTextFormat": 2,
+            "documentation": "Request blocking, subject to separate scope and qualification requirements.",
+            "textEdit": {
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 122
+                },
+                "end": {
+                  "line": 0,
+                  "character": 122
+                }
+              },
+              "newText": "\"block\""
+            }
+          }
+        ]
+      },
+      "hover": {
+        "contents": [
+          "Request evaluation without blocking; the default for unspecified root rules\\."
+        ],
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 116
+          },
+          "end": {
+            "line": 0,
+            "character": 120
+          }
+        }
+      },
+      "invalidSettingDiagnostics": [
+        {
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 121
+            },
+            "end": {
+              "line": 0,
+              "character": 129
+            }
+          },
+          "message": "Value is not accepted. Valid values: \"off\", \"advisory\", \"block\".",
+          "severity": 1,
+          "code": 1
+        }
+      ],
+      "jsoncCommentsTrailingCommas": "accepted",
+      "overrideBounds": "256 accepted;257 rejected"
+    },
+    "sourceHashes": {
+      "scripts/ci/policy.py": "6762a47d277764be03b38ee6286609ad084a13ef78d2e2033697ed6506489cb5",
+      "scripts/ci/check.sh": "23167b31e8661f6429f395c3f10efa9dccd485a3172fde2eaf4c569469a09137",
+      ".github/workflows/ci.yml": "a12088a440ed42e559a3c002db176f3194500e2de65827d7ceb32ed60cb9d913",
+      ".gitattributes": "7dd5b4b744228b297dc7d1c518536ad6c36bacd4b994323f2f9a1e085b1a76c6",
+      "Cargo.toml": "d34ba9820b310561cfedeed17ae5412c46e74eb867a93947d02d90b109310f78",
+      "Cargo.lock": "cac979bc7c283de4d7b1e0a29d836741df59c806a4cf2a0dfc1a0612106c7e9e",
+      "tools/config-conformance/package.json": "f686b1444e7962cdeae3b3619fcba1b84955023c6125528635889de45f0a5604",
+      "tools/config-conformance/package-lock.json": "4c10ac58900b5ec68a168d9742f66bf747b002847eeee64245e2bd31138dcaf4"
+    },
+    "sourceDifferencesFromBefore": []
+  },
+  "measurements": {
+    "scenarios": [
+      {
+        "selection": "staged",
+        "selectedFiles": 1,
+        "changedLines": 40,
+        "firstCaptureMicros": 21148,
+        "warmP50Micros": 20763,
+        "warmP95Micros": 23008,
+        "acquiredInputs": 3,
+        "acquiredBytes": 489,
+        "retainedInputs": 3,
+        "retainedBytes": 489,
+        "capturePhasePeakTreeRssKiB": 12592,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 26600,
+        "samplingIntervalP50Ms": 1.2957630679011345,
+        "samplingIntervalMaxMs": 2.7088229544460773
+      },
+      {
+        "selection": "staged",
+        "selectedFiles": 5,
+        "changedLines": 200,
+        "firstCaptureMicros": 62558,
+        "warmP50Micros": 63267,
+        "warmP95Micros": 67836,
+        "acquiredInputs": 11,
+        "acquiredBytes": 2249,
+        "retainedInputs": 11,
+        "retainedBytes": 2249,
+        "capturePhasePeakTreeRssKiB": 12776,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 26972,
+        "samplingIntervalP50Ms": 1.2904240284115076,
+        "samplingIntervalMaxMs": 3.282716032117605
+      },
+      {
+        "selection": "unstaged",
+        "selectedFiles": 1,
+        "changedLines": 40,
+        "firstCaptureMicros": 48950,
+        "warmP50Micros": 45365,
+        "warmP95Micros": 58679,
+        "acquiredInputs": 9,
+        "acquiredBytes": 605,
+        "retainedInputs": 3,
+        "retainedBytes": 489,
+        "capturePhasePeakTreeRssKiB": 12496,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 25492,
+        "samplingIntervalP50Ms": 1.3123539974913,
+        "samplingIntervalMaxMs": 4.110835026949644
+      },
+      {
+        "selection": "unstaged",
+        "selectedFiles": 5,
+        "changedLines": 200,
+        "firstCaptureMicros": 64872,
+        "warmP50Micros": 63857,
+        "warmP95Micros": 72580,
+        "acquiredInputs": 17,
+        "acquiredBytes": 2365,
+        "retainedInputs": 11,
+        "retainedBytes": 2249,
+        "capturePhasePeakTreeRssKiB": 12520,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 26504,
+        "samplingIntervalP50Ms": 1.3011409901082516,
+        "samplingIntervalMaxMs": 2.6154418010264635
+      },
+      {
+        "selection": "local",
+        "selectedFiles": 1,
+        "changedLines": 40,
+        "firstCaptureMicros": 44332,
+        "warmP50Micros": 45344,
+        "warmP95Micros": 54794,
+        "acquiredInputs": 9,
+        "acquiredBytes": 605,
+        "retainedInputs": 3,
+        "retainedBytes": 489,
+        "capturePhasePeakTreeRssKiB": 12460,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 28384,
+        "samplingIntervalP50Ms": 1.292477361857891,
+        "samplingIntervalMaxMs": 2.906298963353038
+      },
+      {
+        "selection": "local",
+        "selectedFiles": 5,
+        "changedLines": 200,
+        "firstCaptureMicros": 65792,
+        "warmP50Micros": 66154,
+        "warmP95Micros": 75718,
+        "acquiredInputs": 17,
+        "acquiredBytes": 2365,
+        "retainedInputs": 11,
+        "retainedBytes": 2249,
+        "capturePhasePeakTreeRssKiB": 12684,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 25028,
+        "samplingIntervalP50Ms": 1.2893618550151587,
+        "samplingIntervalMaxMs": 3.1197918578982353
+      },
+      {
+        "selection": "base",
+        "selectedFiles": 1,
+        "changedLines": 40,
+        "firstCaptureMicros": 44515,
+        "warmP50Micros": 44681,
+        "warmP95Micros": 48659,
+        "acquiredInputs": 9,
+        "acquiredBytes": 605,
+        "retainedInputs": 3,
+        "retainedBytes": 489,
+        "capturePhasePeakTreeRssKiB": 12700,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 26712,
+        "samplingIntervalP50Ms": 1.2993784621357918,
+        "samplingIntervalMaxMs": 2.329448936507106
+      },
+      {
+        "selection": "base",
+        "selectedFiles": 5,
+        "changedLines": 200,
+        "firstCaptureMicros": 67867,
+        "warmP50Micros": 67303,
+        "warmP95Micros": 124504,
+        "acquiredInputs": 17,
+        "acquiredBytes": 2365,
+        "retainedInputs": 11,
+        "retainedBytes": 2249,
+        "capturePhasePeakTreeRssKiB": 12572,
+        "sampledPeakTreeRssKiBIncludingFixtureSetup": 28876,
+        "samplingIntervalP50Ms": 1.3082559453323483,
+        "samplingIntervalMaxMs": 55.57859386317432
+      }
+    ],
+    "rawFieldsAndQuantilesMatch": true,
+    "invocationSourceHashesMatch": true,
+    "newRuns": false
+  },
+  "demonstration": {
+    "journey": [
+      {
+        "id": "comparison",
+        "actor": "library caller",
+        "context": "real Git fixture and four selection modes",
+        "action": "capture each exact comparison and supporting context",
+        "result": "before/after roles and independent context retain their actual bytes"
+      },
+      {
+        "id": "retained",
+        "actor": "library caller",
+        "context": "captured input followed by filesystem edits",
+        "action": "inspect the retained input and its configuration/ranges",
+        "result": "owned bytes and attribution still represent the captured generation"
+      },
+      {
+        "id": "failure",
+        "actor": "library caller",
+        "context": "excluded, unavailable and bounded inputs",
+        "action": "request a capture that cannot meet its contract",
+        "result": "explicit error instead of a successful partial capture"
+      }
+    ],
+    "evidence": [
+      {
+        "id": "comparison",
+        "evidence": [
+          {
+            "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+            "expected": "001f862b0f6f93357973ef8754ec43e83fa3e6119a01b453c1206105f832e046",
+            "actual": "001f862b0f6f93357973ef8754ec43e83fa3e6119a01b453c1206105f832e046"
+          }
+        ]
+      },
+      {
+        "id": "retained",
+        "evidence": [
+          {
+            "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+            "expected": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16",
+            "actual": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16"
+          }
+        ]
+      },
+      {
+        "id": "failure",
+        "evidence": [
+          {
+            "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+            "expected": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16",
+            "actual": "693b8c69e68b73cff19d6d3ec367df1927c275beb6949942fb9bb90a6a92fa16"
+          }
+        ]
+      }
+    ]
+  },
+  "frozenBundle": {
+    "compared": 34,
+    "differences": []
+  },
+  "history": {
+    "publishedPrefixPreserved": true,
+    "events": [
+      {
+        "sequence": 1,
+        "stateRevision": 1,
+        "status": "draft",
+        "actor": "contract-preparer",
+        "reason": "Created the canonical preparation graph after explicit approval of the contract, local clone and documentation writes. Coordinated mode follows the existing explicit home preference. No execution, agent launch, installation, commit or publication was authorized."
+      },
+      {
+        "sequence": 2,
+        "stateRevision": 2,
+        "status": "draft",
+        "actor": "contract-preparer",
+        "reason": "Recorded passing structural and documentation checks for the approved local preparation. Application source, installed MDD bundle and previous mission archives are unchanged. No execution readiness or independent mission acceptance is claimed."
+      },
+      {
+        "sequence": 3,
+        "stateRevision": 3,
+        "status": "draft",
+        "actor": "skill-update-preparer",
+        "reason": "Recorded explicit authorization to update the project skill to the qualified v0.5 pilot. The exact prior v0.2 distribution is archived and historical mission records are unchanged. Only the distribution prerequisite is resolved; no execution or worker launch is authorized."
+      },
+      {
+        "sequence": 4,
+        "stateRevision": 4,
+        "status": "draft",
+        "actor": "mission-coordinator",
+        "reason": "Recorded actual user approval of revision 2, prerequisite reviews and conditional implementation. Preserved the approved revision 1 and historical events. No independent acceptance, readiness, installation or implementation is claimed."
+      },
+      {
+        "sequence": 5,
+        "stateRevision": 5,
+        "status": "draft",
+        "actor": "mission-coordinator",
+        "reason": "Recorded tool-installation approval, verified installed versions, and actual independent prerequisite reviewer startup. The prerequisite gate remains unresolved; no packet or product implementation is launched."
+      },
+      {
+        "sequence": 6,
+        "stateRevision": 6,
+        "status": "draft",
+        "actor": "mission-coordinator",
+        "reason": "Received the complete independent prerequisite report. Contract r2 is accepted; AS-M002 runtime acceptance is blocked by the missing C toolchain. Verified evidence hashes and unchanged source. Preserved prior archives, recorded the actual user action, and kept the execution gate closed."
+      },
+      {
+        "sequence": 7,
+        "stateRevision": 7,
+        "status": "draft",
+        "actor": "mission-coordinator",
+        "reason": "Recorded the user confirmation and verified C compiler/linker availability. Resumed the same authorized independent prerequisite assignment in its retained worktree, preserving the prior blocked report. No implementation readiness or AS-M002 acceptance is claimed."
+      },
+      {
+        "sequence": 8,
+        "stateRevision": 8,
+        "status": "ready",
+        "actor": "mission-coordinator",
+        "reason": "Received and verified the complete independent cumulative prerequisite report: unchanged contract r2 and recovered AS-M002 current-tree suitability are accepted. Required focused Rust, build, Clippy, schema and boundary observations passed; source is unchanged. Existing explicit conditional execution authority now applies. No AS-M003 packet or implementation has started."
+      },
+      {
+        "sequence": 9,
+        "stateRevision": 9,
+        "status": "executing",
+        "actor": "mission-coordinator",
+        "reason": "Derived the next bounded staged-capture assignment after actual independent prerequisite acceptance. Verified native isolated worktree, exact approved preparation transfer and cumulative delivery baseline. No worker has started or application code changed at this record."
+      },
+      {
+        "sequence": 10,
+        "stateRevision": 10,
+        "status": "executing",
+        "actor": "mission-coordinator",
+        "reason": "Examined the complete P01 candidate and recorded correction_required through fm-control. An independent real syscall observation found group signals after leader reaping; its ownership assertion is RED. Preserved the rejected source/report/evidence and derived this bounded lifetime correction before any selector expansion."
+      },
+      {
+        "sequence": 11,
+        "stateRevision": 11,
+        "status": "executing",
+        "actor": "mission-coordinator",
+        "reason": "Accepted the corrected staged-capture outcome after complete report/source examination, protected-hash checks, original-observer GREEN replay and real lifecycle regression. Preserved its uncommitted source without a checkpoint commit. Derived the next coherent comparison/rename/whole-candidate qualification outcome within the approved mission."
+      },
+      {
+        "sequence": 12,
+        "stateRevision": 12,
+        "status": "executing",
+        "actor": "firstmate:primary-1890471",
+        "reason": "Preserve P02 and implementation history; user decision requested on the demonstrated TDD deviation. No retroactive RED is manufactured."
+      },
+      {
+        "sequence": 13,
+        "stateRevision": 13,
+        "status": "executing",
+        "actor": "firstmate:primary-1890471",
+        "reason": "The user explicitly chose to retain the implemented comparisons with the TDD deviation disclosed and all verification required. Resume the same P02 assignment; no historical RED is reconstructed and no other authority changes."
+      },
+      {
+        "sequence": 14,
+        "stateRevision": 14,
+        "status": "validating",
+        "actor": "firstmate:primary-1890471",
+        "reason": "P02 is independently examined by the non-implementing coordinator and accepted with the exact user-approved TDD exception retained. Proceed to the already-authorized fresh independent whole-mission validation; no integration or completion is recorded."
+      },
+      {
+        "sequence": 15,
+        "stateRevision": 15,
+        "status": "executing",
+        "actor": "firstmate:primary-1890471",
+        "reason": "The complete fresh independent mission review requires correction of working-mode normalization. Its negative verdict and rejected source are preserved; prepare the bounded P03 regression/correction under existing authority, then renew independent validation."
+      },
+      {
+        "sequence": 16,
+        "stateRevision": 16,
+        "status": "validating",
+        "actor": "firstmate:primary-1890471",
+        "reason": "P03 owner-execute correction is accepted as a packet with actual RED/GREEN, renewed stable CI/observations and coordinator replay. Preserve the prior negative final verdict and await a new fresh independent whole-mission result for corrected content. No integration or completion is recorded."
+      },
+      {
+        "sequence": 17,
+        "stateRevision": 17,
+        "status": "validating",
+        "actor": "firstmate:primary-1890471",
+        "reason": "Record the actual accepted fresh independent complete-mission verdict for corrected content, with the exact user-approved TDD exception and limitations preserved. The authorized local implementation/validation stage is achieved. Retain validating because no commit, publication or verified integration is authorized or recorded."
+      },
+      {
+        "sequence": 18,
+        "stateRevision": 18,
+        "status": "executing",
+        "actor": "firstmate:ci-correction",
+        "reason": "The user explicitly requests correction of remote CI. Preserve prior independent acceptance and begin P04 for the raw-evidence whitespace publication defect."
+      },
+      {
+        "sequence": 19,
+        "stateRevision": 19,
+        "status": "validating",
+        "actor": "firstmate:ci-correction",
+        "reason": "P04 complete report, immutable bytes, exact-class Git attributes and focused policy regressions examined and accepted; request fresh independent whole-mission validation before updating the existing PR."
+      }
+    ]
+  }
+}

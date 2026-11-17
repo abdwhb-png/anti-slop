@@ -1,0 +1,65 @@
+{
+  "at": "2026-11-17T07:15:45.711444+00:00",
+  "exportDirectory": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure",
+  "exportMethod": "Copy exact git ls-files entries plus intended recovery additions; no checkout, archive replacement, symlink or .git dependency.",
+  "copiedInputFiles": 660,
+  "gitDirectoryPresent": false,
+  "symlinks": [],
+  "oldTaskParentSiblingsPresent": false,
+  "activeArtifactsVisited": 17,
+  "repositoryContainedProofReferencesChecked": 183,
+  "results": [
+    {
+      "argv": [
+        "python3",
+        "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure/.missions/AS-M003/evidence/recovery/checks/verify-recovery.py"
+      ],
+      "cwd": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure",
+      "exit": 0,
+      "stdout": "{\"valid\": true, \"originalFiles\": 14, \"historicalEvents\": 20, \"pathOnlyArtifacts\": 11, \"pathReplacements\": 48, \"requiredTargets\": 40, \"retainedFiles\": 118, \"P04RecordAndReviewLogHashes\": 22, \"acceptedSourceHashes\": 8, \"activeState\": \"completed revision 21\", \"selectedCompletedEvent\": 21, \"initialProposedCandidate\": \"preserved unchanged\", \"reviewedEvidenceFilesUnchanged\": 633}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure/.agents/skills/mission-driven-dev/scripts/validate.mjs",
+        "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure/.missions/AS-M003/state.json",
+        "--json"
+      ],
+      "cwd": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure",
+      "exit": 0,
+      "stdout": "{\"valid\":true,\"issues\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "node",
+        "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure/.agents/skills/mission-driven-dev/scripts/validate.mjs",
+        "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure/.missions/AS-M003/results/final-r2.json",
+        "--json"
+      ],
+      "cwd": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/portable-final-closure",
+      "exit": 0,
+      "stdout": "{\"valid\":true,\"issues\":[]}\n",
+      "stderr": ""
+    }
+  ],
+  "documentationLinks": [
+    {
+      "file": "README.md",
+      "localLinksChecked": 29,
+      "missing": []
+    },
+    {
+      "file": "docs/IMPLEMENTATION_ROADMAP.md",
+      "localLinksChecked": 26,
+      "missing": []
+    },
+    {
+      "file": ".missions/AS-M003/evidence/recovery/README.md",
+      "localLinksChecked": 23,
+      "missing": []
+    }
+  ],
+  "limits": "The activated completed state and historical final-r2 graph are portable. The selected candidate was validated before publication; terminal history is not replayed. Preserved raw historical narrative links remain data and have their explicit relocation/gap inventory. This does not reexecute product tests or reconstruct the old runtime."
+}

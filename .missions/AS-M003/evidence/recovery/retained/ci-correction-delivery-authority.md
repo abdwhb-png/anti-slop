@@ -1,0 +1,5 @@
+# Existing AS-M003 PR delivery and corrective publication authority
+
+The user explicitly authorized the proposed commit, push and draft PR operations with “vasy livre la pr”. The resulting draft PR is https://github.com/abdwhb-png/anti-slop/pull/2 on fm/AS-M003-capture targeting main. After the remote whitespace failure was reported, the user instructed “mais pourquoi CI rouge ? c'est à adresser”. This authorizes correcting that demonstrated failure, validating it under the existing coordinated MDD mission, and updating the same PR with the accepted correction. The original authority is retained in delivery-authority-2026-11-15.md; the corrective instruction is retained in the mission's ci-correction-approval.json.
+
+Use the existing repository, branch, authentication route and draft PR. Preserve historical evidence, independent final acceptance, required CI and exact source/PR provenance. No merge, force push, history rewrite, No-Mistakes, dependency installation, daily Firstmate modification or destructive cleanup is authorized.

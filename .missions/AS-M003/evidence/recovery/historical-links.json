@@ -1,0 +1,3387 @@
+{
+  "scope": "Structured file-reference fields and Markdown links were inventoried. Command arguments, build binaries and every path embedded in raw stdout/source are historical data, not a recursively copied filesystem.",
+  "links": [
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "README.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/README.md"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "src/lib.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/lib.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "src/config/mod.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/config/mod.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "src/workspace/mod.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/mod.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "src/workspace/acquire.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/acquire.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "src/workspace/git.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/git.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "tests/workspace.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/tests/workspace.rs"
+    },
+    {
+      "owner": "coordinator/P01/candidate-source-manifest.json",
+      "reference": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "relation": "report",
+      "classification": "retained support queued",
+      "mappedPath": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/final-r1/rejected-source.tar.gz",
+      "relation": "archive",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/final-r1/rejected-source.tar.gz"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "src/workspace/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/mod.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "src/workspace/acquire.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "src/workspace/git.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/git.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "src/config/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/config/mod.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "src/lib.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/lib.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "tests/workspace.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/workspace.rs"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "tests/fixtures/process/observe-kill.c",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/fixtures/process/observe-kill.c"
+    },
+    {
+      "owner": "coordinator/final-r1/rejected-source-archive.json",
+      "reference": "README.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "README.md"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": ".missions/AS-M003/history.jsonl",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/history.jsonl"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": ".missions/AS-M003/state.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/state.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "scripts/ci/test_policy.py",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "scripts/ci/test_policy.py"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": ".missions/AS-M003/history.jsonl",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/history.jsonl"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": ".missions/AS-M003/state.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/state.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "scripts/ci/test_policy.py",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "scripts/ci/test_policy.py"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/02-committed-red.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/03-regression-red.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/04-regression-red-exact-classes.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/05-regression-green.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/06-whitespace-boundaries.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/07-policy-suite.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/08-actual-committed-green.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/12-audit-recorder-failure.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/12-audit-recorder-failure.json"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/10-stable-ci.log"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "final-review-5823ce78/evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "final-review-5823ce78/final-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/state.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/state.log"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/whitespace-tests.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/whitespace-tests.log"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/actual-whitespace.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/actual-whitespace.log"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log"
+    },
+    {
+      "owner": "final-review-5823ce78/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "../../docs/missions/AS-M003/r2.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "packets/P01-r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/packets/P01-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "results/P01-r1-review.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/results/P01-r1-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "packets/P01-C01-r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/packets/P01-C01-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "results/P01-C01-r1-review.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/results/P01-C01-r1-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "packets/P02-r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/packets/P02-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "results/P02-r1-review.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/results/P02-r1-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/preparation.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/preparation.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/approval.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/approval.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/preparation-checks.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/preparation-checks.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/mdd-skill-transition.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/mdd-skill-transition.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/orchestration-approval.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/orchestration-approval.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/oracle-contract-r1.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/oracle-contract-r1.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/tooling-approval-and-status.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/tooling-approval-and-status.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/prerequisite-review.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/prerequisite-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/compiler-ready-and-resumption.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/compiler-ready-and-resumption.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/prerequisites-accepted.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/prerequisites-accepted.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/isolation-and-authority.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/isolation-and-authority.json"
+    },
+    {
+      "owner": "final-review-d155e52e/final-audit.json",
+      "reference": "evidence/P02-tdd-exception-approved.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "owner": "final-review-d155e52e/mode-omission-probe.json",
+      "reference": "src/workspace/acquire.rs:90",
+      "relation": "source",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/working_modes_.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/working_modes_.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log"
+    },
+    {
+      "owner": "final-review-faa77758/focused-checks.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/03-red.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red-compaction.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/03-red-compaction.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/01-red.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/02-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/02-green.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/01-red-comparisons.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/01-red-comparisons.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/02-green-comparisons.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/02-green-comparisons.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/03-comparisons.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/03-comparisons.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/04-red-renames.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/04-red-renames.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/05-green-renames.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/05-green-renames.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/10-red-index-flags.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/10-red-index-flags.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/11-red-intent.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/11-red-intent.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/12-green-index-flags.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/12-green-index-flags.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/13-green-intent.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/13-green-intent.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/14-0-qualification.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/14-0-qualification.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/15-0-mechanism-diagnosis.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/15-0-mechanism-diagnosis.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/15-1-mechanism-diagnosis.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/15-1-mechanism-diagnosis.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/16-red-empty-generation.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/16-red-empty-generation.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/17-red-info-attributes.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/17-red-info-attributes.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/18-0-metadata-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/18-0-metadata-green.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/18-1-metadata-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/18-1-metadata-green.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/25-original-observer-green.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/25-original-observer-green.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/27-tooling-output-red.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/27-tooling-output-red.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/28-tooling-output-green.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/28-tooling-output-green.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/capture-probe.rs"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/explicit_base_is_resolved_once_even_when_the_reference_moves.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/explicit_base_is_resolved_once_even_when_the_reference_moves.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/final-audit.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/final-audit.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/focused-checks.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/focused-checks.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/initial-audit.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/initial-audit.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/measurement-inspection.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/measurement-inspection.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/measurement-output-refusal.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/measurement-output-refusal.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-probe.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/mode-omission-probe.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-probe-reproduction.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/mode-probe-reproduction.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-probe.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/mode-probe.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/probe-build.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/probe-build.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/probe-library-identity.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/probe-library-identity.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/report-audit.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/report-audit.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/retained-ci-inspection.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/retained-ci-inspection.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/retained_count_total_bytes_and_sparse_input_are_bounded.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/retained_count_total_bytes_and_sparse_input_are_bounded.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/state.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/state.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/task-runtime-processes.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/task-runtime-processes.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/unreadable-working-probe.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/unreadable-working-probe.json"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/working_and_untracked_mutations_retry_without_combining_views.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/working_and_untracked_mutations_retry_without_combining_views.log"
+    },
+    {
+      "owner": "final-review-faa77758/historical-evidence-inspection.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/working_ranges_absence_and_configuration_survive_later_edits.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/working_ranges_absence_and_configuration_survive_later_edits.log"
+    },
+    {
+      "owner": "final-review-faa77758/retained-ci-inspection.json",
+      "reference": ".missions/AS-M003/evidence/P03/04-full-ci.log",
+      "relation": "log",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/04-full-ci.log"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/final-r1/rejected-source.tar.gz",
+      "relation": "archive",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/final-r1/rejected-source.tar.gz"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "src/workspace/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/mod.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "src/workspace/acquire.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "src/workspace/git.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/git.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "src/config/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/config/mod.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "src/lib.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/lib.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "tests/workspace.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/workspace.rs"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "tests/fixtures/process/observe-kill.c",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/fixtures/process/observe-kill.c"
+    },
+    {
+      "owner": "final-review-faa77758/source-evidence-audit.json",
+      "reference": "README.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "README.md"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01-C01/source-state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/source-state.json"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01-C01/baseline.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/baseline.json"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "coordinator/P01/kill-observation.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-observation.json"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "coordinator/P01/kill-regression-red.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-regression-red.json"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "coordinator/P01/source-review.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/source-review.md"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/01-red.log"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json"
+    },
+    {
+      "owner": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01-C01/measurements.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/measurements.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/packets/P04-r1.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P04-r1.md"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/docs/missions/AS-M003/r2.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/01-live-profile.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/01-live-profile.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "remote-ci-outcome.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "remote-ci-outcome.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "committed-whitespace-reproduction.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "committed-whitespace-reproduction.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/scripts/ci/test_policy.py",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "scripts/ci/test_policy.py"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/02-committed-red.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/02-committed-red.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/03-regression-red.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/03-regression-red.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/04-regression-red-exact-classes.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/04-regression-red-exact-classes.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/05-regression-green.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/05-regression-green.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/06-whitespace-boundaries.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/06-whitespace-boundaries.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/07-policy-suite.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/07-policy-suite.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/08-actual-committed-green.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/08-actual-committed-green.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/02-validation-ledger.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/09-stable-candidate.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/09-stable-candidate.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/12-audit-recorder-failure.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/12-audit-recorder-failure.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/12-new-file-checks.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/10-stable-ci.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "p04-156023ed/10-stable-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/10-stable-ci.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/00-before-manifest.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/00-before-manifest.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/13-return-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/13-return-audit.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "demonstration.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "demonstration.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "worktree/docs/missions/AS-M003/r2.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "worktree/.missions/AS-M003/packets/P04-r1.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P04-r1.md"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/initial-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/initial-audit.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/inbox-acknowledgement.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/inbox-acknowledgement.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/evidence-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/evidence-inspection.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "remote-ci-outcome.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "remote-ci-outcome.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/focused-checks.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/focused-checks.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/10-stable-ci.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "p04-156023ed/10-stable-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/10-stable-ci.log"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "demonstration.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "demonstration.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "pr-body-ci-failed.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "pr-body-ci-failed.md"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/evidence-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/evidence-inspection.json"
+    },
+    {
+      "owner": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "reference": "final-review-5823ce78/final-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-5823ce78/final-audit.json"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/source-state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/source-state.json"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/tdd-gap.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/tdd-gap.md"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02-tdd-exception-approved.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/probe-git-attributes.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/probe-git-attributes.json"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/23-full-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/23-full-ci.log"
+    },
+    {
+      "owner": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/baseline.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/baseline.json"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/preparation.diff",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/preparation.diff"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/source-state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/source-state.json"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/01-red.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/01-red.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/02b-green.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/02b-green.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/03-red.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/03-red.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/04-green.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/04-green.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/05-red.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/05-red.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/08-red-mode.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/08-red-mode.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/09-green-mode.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/09-green-mode.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/17-red-object-admission.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/17-red-object-admission.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/18-0-green-object-admission.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/18-0-green-object-admission.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/locked-npm-verification.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/locked-npm-verification.json"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/10-locked-restore.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/10-locked-restore.log"
+    },
+    {
+      "owner": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P01/measurements.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurements.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/docs/missions/AS-M003/r2.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/state.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "candidates/s1794768506.3553234.1173-6508c722-06cb-4a2a-a694-d4bd33999ec4.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "candidates/s1794768506.3553234.1173-6508c722-06cb-4a2a-a694-d4bd33999ec4.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/source-state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/source-state.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "mdd-bundle/SKILL.md",
+      "relation": "historical Markdown link",
+      "classification": "frozen bundle bytes identical; use installed project copy",
+      "mappedPath": ".agents/skills/mission-driven-dev/SKILL.md"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "../AS-M003-preflight/report-after-recorder.md",
+      "relation": "historical Markdown link",
+      "classification": "outside authorized retained task; not read",
+      "mappedPath": null
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/initial-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/initial-audit.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/task-runtime-processes.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/task-runtime-processes.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/final-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/final-audit.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/src/workspace/acquire.rs:90",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/src/workspace/mod.rs:468",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "src/workspace/mod.rs"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/mode-omission-probe.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/mode-omission-probe.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/mode-probe.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/mode-probe.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/capture-probe.rs",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/capture-probe.rs"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/probe-build.log",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/probe-build.log"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/probe-library-identity.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/probe-library-identity.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02-tdd-exception-approved.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/tdd-gap.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/tdd-gap.md"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/focused-checks.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/focused-checks.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/23-full-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/23-full-ci.log"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/retained-ci-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/retained-ci-inspection.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "coordinator/P02/focused-checks.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P02/focused-checks.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "final-review-d155e52e/measurement-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-d155e52e/measurement-inspection.json"
+    },
+    {
+      "owner": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/packets/P03-r1.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P03-r1.md"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/docs/missions/AS-M003/r2.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/state.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/state.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "coordinator/final-r1/rejected-source-archive.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/final-r1/rejected-source-archive.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/08-source-identity.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/08-source-identity.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/src/workspace/acquire.rs",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/tests/workspace.rs",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "tests/workspace.rs"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/README.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "README.md"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/06-documentation-and-scope.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/06-documentation-and-scope.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/01-red-working-modes.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/01-red-working-modes.log"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/01-red-working-modes.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/01-red-working-modes.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/02-green-working-modes.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/02-green-working-modes.log"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/02-green-working-modes.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/02-green-working-modes.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/04-full-ci.log"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/04-full-ci.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/09-final-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/09-final-audit.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02-tdd-exception-approved.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/tdd-gap.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/tdd-gap.md"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/05-observation-runs.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/05-observation-runs.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/trial-staged-001/measurements-staged.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/trial-staged-001/measurements-staged.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/trial-unstaged-001/measurements-unstaged.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/trial-unstaged-001/measurements-unstaged.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/trial-local-001/measurements-local.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/trial-local-001/measurements-local.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/trial-base-001/measurements-base.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/trial-base-001/measurements-base.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/07-measurement-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/07-measurement-inspection.json"
+    },
+    {
+      "owner": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/docs/missions/AS-M003/r2.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/initial-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/initial-audit.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/source-evidence-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/source-evidence-audit.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/src/workspace/acquire.rs:90",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/rename-mode-probe.rs",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/rename-mode-probe.rs"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/rename-mode-probe.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/rename-mode-probe.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02-tdd-exception-approved.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02-tdd-exception-approved.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/tdd-gap.md",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/tdd-gap.md"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/historical-evidence-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/historical-evidence-inspection.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/focused-checks.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/focused-checks.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.json",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/04-full-ci.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/04-full-ci.log"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/retained-ci-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/retained-ci-inspection.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/audit-recorder-failure.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/audit-recorder-failure.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/final-audit.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/final-audit.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "final-review-faa77758/measurement-inspection.json",
+      "relation": "historical Markdown link",
+      "classification": "retained support queued",
+      "mappedPath": "final-review-faa77758/measurement-inspection.json"
+    },
+    {
+      "owner": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "reference": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "historical Markdown link",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "coordinator/P04/committed-demonstration-review.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "report",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "src/workspace/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/mod.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "src/workspace/acquire.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/acquire.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "src/workspace/git.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/workspace/git.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "src/config/mod.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/config/mod.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "src/lib.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "src/lib.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "tests/workspace.rs",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/workspace.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "tests/fixtures/process/observe-kill.c",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "tests/fixtures/process/observe-kill.c"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "README.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "README.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/final-consistency.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/final-consistency.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/baseline.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/baseline.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-initial.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-5-initial.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-initial.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurements-initial.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/09-green-mode.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/09-green-mode.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/12-remote-probe.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/12-remote-probe.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-0-green-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/18-0-green-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-3-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/13-3-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/03-red.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-setup-inclusive.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurements-setup-inclusive.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-1-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/13-1-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/02-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-5-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-5-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-0-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/13-0-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-before-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-1-before-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/06-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/06-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-1-recheck.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/15-1-recheck.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/11-focused-refactor.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/11-focused-refactor.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-before-object-admission.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurements-before-object-admission.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/08-red-mode.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/08-red-mode.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-1-green-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/18-1-green-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-2-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-2-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/04-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/04-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-before-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-5-before-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-5.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-4-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-4-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/01-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/01-red.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/source-state.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/source-state.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-0-recheck.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/15-0-recheck.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/07-controlled.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/07-controlled.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/14-clippy.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/14-clippy.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-1.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-2-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/13-2-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/05-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/05-red.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurement-build.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurement-build.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/locked-npm-verification.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/locked-npm-verification.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-2-green-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/18-2-green-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-1-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-1-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-3-recheck.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/15-3-recheck.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02b-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/02b-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/10-locked-restore.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/10-locked-restore.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/19-final-build.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/19-final-build.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/17-red-object-admission.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/17-red-object-admission.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/state-validation.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/state-validation.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measurements.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-initial.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/observation-1-initial.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/preparation.diff",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/preparation.diff"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measure.py",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/measure.py"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-0-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-0-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red-compaction.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/03-red-compaction.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/report-receipt.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/report-receipt.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-3-final-evidence.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/16-3-final-evidence.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-2-recheck.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01/15-2-recheck.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/baseline.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/baseline.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/02-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/02-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/state-before.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/state-before.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/observation-5.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-2-checks.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/05-2-checks.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/01-red.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/03-descendant-green.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/03-descendant-green.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/source-state.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/source-state.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/observation-1.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-1-checks.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/05-1-checks.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.c",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/waitid-abi.c"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/workspace-correction.diff",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/workspace-correction.diff"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurement-build.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/measurement-build.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/kill-observation-green.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-0-checks.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/05-0-checks.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/04-0-checks.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/04-0-checks.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/waitid-abi.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-1-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/06-1-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/measurements.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-3-checks.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/05-3-checks.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/git-correction.diff",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/git-correction.diff"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measure.py",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/measure.py"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-0-final-check.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/06-0-final-check.log"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/report-receipt.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P01-C01/report-receipt.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stdout",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-observation.stdout"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-regression-red.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-regression-red.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/observe-kill.c",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/observe-kill.c"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stderr",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-observation.stderr"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/kill-observation.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source-manifest.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source-manifest.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/source-review.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/source-review.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/README.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/README.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/lib.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/lib.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/tests/workspace.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/tests/workspace.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/git.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/git.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/mod.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/mod.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/acquire.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/workspace/acquire.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/config/mod.rs",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01/candidate-source/src/config/mod.rs"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/review.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01-C01/review.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/kill-observation-green.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01-C01/kill-observation-green.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source.tar.gz",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01-C01/accepted-source.tar.gz"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/cleanup-regression.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01-C01/cleanup-regression.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source-archive.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P01-C01/accepted-source-archive.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P02-r1.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P02-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-r1.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P01-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-C01-r1.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P01-C01-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-C01-r1-review.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/results/P01-C01-r1-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-r1-review.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/results/P01-r1-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/state.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/history.jsonl",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/history.jsonl"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/MAINTENANCE.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/MAINTENANCE.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/SKILL.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/SKILL.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/VALIDATION.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/VALIDATION.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/README.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/README.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/.missions/example/state.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/.missions/example/state.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/example/docs/roadmaps/example/r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/example/docs/roadmaps/example/r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/assets/handoffs.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/assets/handoffs.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/evals/brainstorming-compatibility.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/evals/brainstorming-compatibility.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/evals/evals.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/evals/evals.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/evals/qualification-2026-09-23.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/evals/qualification-2026-09-23.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/package.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/package.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/artifacts.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/artifacts.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/conception.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/conception.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/execution.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/execution.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/preparation.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/preparation.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/resumption.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/resumption.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/references/validation.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/references/validation.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".agents/skills/mission-driven-dev/tsconfig.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".agents/skills/mission-driven-dev/tsconfig.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/approval.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/approval.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/compiler-ready-and-resumption.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/compiler-ready-and-resumption.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/mdd-skill-transition.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/mdd-skill-transition.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/oracle-contract-r1.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/oracle-contract-r1.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/orchestration-approval.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/orchestration-approval.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/preparation-checks.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/preparation-checks.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/preparation.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/preparation.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/prerequisite-review.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/prerequisite-review.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/prerequisites-accepted.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/prerequisites-accepted.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": ".missions/AS-M003/evidence/tooling-approval-and-status.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/tooling-approval-and-status.json"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "docs/missions/AS-M003/r1.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "docs/missions/AS-M003/r1.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "docs/missions/AS-M003/r2.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "final-review-d155e52e/initial-audit.json",
+      "reference": "docs/IMPLEMENTATION_ROADMAP.md",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": "docs/IMPLEMENTATION_ROADMAP.md"
+    },
+    {
+      "owner": "final-review-d155e52e/report-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "relation": "report",
+      "classification": "retained support queued",
+      "mappedPath": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+    },
+    {
+      "owner": "final-review-faa77758/report-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "report",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/02-committed-red.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/02-committed-red.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/02-committed-red.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/03-regression-red.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/03-regression-red.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/03-regression-red.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/04-regression-red-exact-classes.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/04-regression-red-exact-classes.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/04-regression-red-exact-classes.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/05-regression-green.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/05-regression-green.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/05-regression-green.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/06-whitespace-boundaries.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/06-whitespace-boundaries.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/06-whitespace-boundaries.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/07-policy-suite.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/07-policy-suite.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/07-policy-suite.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/08-actual-committed-green.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/08-actual-committed-green.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/08-actual-committed-green.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/12-audit-recorder-failure.json",
+      "relation": "record",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/12-audit-recorder-failure.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/remote-ci-outcome.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "remote-ci-outcome.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/committed-whitespace-reproduction.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "committed-whitespace-reproduction.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/demonstration.json",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "demonstration.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P04/preparation-applicability.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "coordinator/P04/preparation-applicability.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log",
+      "relation": "log",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/10-stable-ci.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/delivery-authority-2026-11-15.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "delivery-authority-2026-11-15.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "reference": ".missions/AS-M003/evidence/P04/00-before-manifest.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/00-before-manifest.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "reference": ".missions/AS-M003/evidence/P04/01-live-profile.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/01-live-profile.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "reference": ".missions/AS-M003/evidence/P04/09-stable-candidate.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/09-stable-candidate.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "reference": ".missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/10-stable-ci.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "reference": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/00-before-manifest.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/00-before-manifest.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/01-live-profile.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/01-live-profile.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/02-validation-ledger.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/02-validation-ledger.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/09-stable-candidate.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/09-stable-candidate.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/10-stable-ci.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/10-stable-ci.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/11-demonstration-applicability.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": ".missions/AS-M003/evidence/P04/12-new-file-checks.json",
+      "relation": "path",
+      "classification": "project file present",
+      "mappedPath": ".missions/AS-M003/evidence/P04/12-new-file-checks.json"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md"
+    },
+    {
+      "owner": ".missions/AS-M003/evidence/P04/13-return-audit.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/p04-156023ed/10-stable-ci.log",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "p04-156023ed/10-stable-ci.log"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/delivery-authority-2026-11-15.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "delivery-authority-2026-11-15.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": "docs/missions/AS-M003/r2.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P03/03-capture-regressions.log",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/evidence/P03/03-capture-regressions.log"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/demonstration-reader-ci-green.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "demonstration-reader-ci-green.md"
+    },
+    {
+      "owner": "demonstration.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/pr-body-ci-green.md",
+      "relation": "path",
+      "classification": "retained support queued",
+      "mappedPath": "pr-body-ci-green.md"
+    },
+    {
+      "owner": "candidates/s1794768506.3553234.1173-6508c722-06cb-4a2a-a694-d4bd33999ec4.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P02-r1.md",
+      "relation": "path",
+      "classification": "historical-worktree-link; project counterpart present",
+      "mappedPath": ".missions/AS-M003/packets/P02-r1.md"
+    },
+    {
+      "owner": "candidates/s1794768506.3553234.1173-6508c722-06cb-4a2a-a694-d4bd33999ec4.json",
+      "reference": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "relation": "report",
+      "classification": "retained support queued",
+      "mappedPath": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+    }
+  ],
+  "caution": "Repository counterparts are navigation mappings, not assertions of byte equality for a historical generation. Original records, raw links, source manifests and archives remain exact. One prerequisite report link leaves the authorized task; it is explicitly retained as an unexpanded historical dependency."
+}

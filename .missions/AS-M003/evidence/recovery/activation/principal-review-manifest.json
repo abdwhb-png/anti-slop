@@ -1,0 +1,20 @@
+{
+  "files": {
+    "firstmate-repair-review.json": {
+      "sha256": "3d3638053db2fd04ab0ba52c3a20e5ac9565e15a1be85f4f8e7c218353aeb188",
+      "bytes": 1766,
+      "source": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/firstmate-repair-review.json"
+    },
+    "evidence/parent-repair-verification.json": {
+      "sha256": "c1a2bc0bb35441584167aa571f64c96c49e770ab60bd46c0909dfdecb239c958",
+      "bytes": 472,
+      "source": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/evidence/parent-repair-verification.json"
+    },
+    "repair-report.md": {
+      "sha256": "e4e1474a598cae74382f87e03e82bd8036262a1eb3f29eeeb18bc602a23a6b18",
+      "bytes": 15738,
+      "source": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/repair-report.md"
+    }
+  },
+  "secretSignatureFindings": []
+}

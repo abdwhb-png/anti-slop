@@ -1,0 +1,18 @@
+{
+  "assignment": "6508c722-06cb-4a2a-a694-d4bd33999ec4",
+  "generation": "s1794768506.3553234.1173",
+  "actor": "AS-M003-capture:s1794768506.3553234.1173",
+  "role": "implementer",
+  "packet": {
+    "id": "AS-M003-P02",
+    "revision": 1,
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P02-r1.md",
+    "digest": "a1c1007e674883bdfbc357540af4964866e51d4108c61639b6271df30cfac311"
+  },
+  "mission": "AS-M003",
+  "revision": 2,
+  "content": "90365754dd51b1d473784f53fa04d8cdd1a96e36d4a2efe7211cc84036b6d946",
+  "report": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+  "reportDigest": "e587ce64a2c8c5e2e387163140070d2e1b023c8295f2606e687e598ab759fb4e",
+  "complete": true
+}

@@ -1,0 +1,124 @@
+{
+  "currentSourceFiles": {
+    "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+    "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3"
+  },
+  "allEightMatchP03": true,
+  "P03ReturnSha256": "f68373b16ebe8fe73577f94460e3ca73f14eccce8e5498f95436a9ce2737fce7",
+  "oldReviewSha256": "6c47a59760b25e10c36746a120db9290b633ddd77ae2166d5f72ed28764d05d4",
+  "oldReviewAuditShaMatches": true,
+  "changesSincePreviousReview": [
+    "README.md",
+    "tests/workspace.rs",
+    "src/workspace/acquire.rs",
+    ".missions/AS-M003/history.jsonl",
+    ".missions/AS-M003/state.json"
+  ],
+  "changesFromP03Input": [
+    "README.md",
+    "tests/workspace.rs",
+    "src/workspace/acquire.rs",
+    ".missions/AS-M003/history.jsonl",
+    ".missions/AS-M003/state.json"
+  ],
+  "acquisitionExactMaskOnly": true,
+  "preexistingWorkspaceTestsUnchanged": true,
+  "archiveSha256": "fd6add9533bcecd4daf5f22eccf059c4aa8ec8ab12efb6fe6e90afbc7c0d0646",
+  "archiveManifest": {
+    "recordedAt": "2026-11-15T21:41:12.934083+00:00",
+    "archive": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/final-r1/rejected-source.tar.gz",
+    "sha256": "fd6add9533bcecd4daf5f22eccf059c4aa8ec8ab12efb6fe6e90afbc7c0d0646",
+    "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "candidateContent": "90365754dd51b1d473784f53fa04d8cdd1a96e36d4a2efe7211cc84036b6d946",
+    "sourceFiles": [
+      {
+        "path": "src/workspace/mod.rs",
+        "sha256": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+        "bytes": 27439
+      },
+      {
+        "path": "src/workspace/acquire.rs",
+        "sha256": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+        "bytes": 4859
+      },
+      {
+        "path": "src/workspace/git.rs",
+        "sha256": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+        "bytes": 7354
+      },
+      {
+        "path": "src/config/mod.rs",
+        "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+        "bytes": 19096
+      },
+      {
+        "path": "src/lib.rs",
+        "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+        "bytes": 239
+      },
+      {
+        "path": "tests/workspace.rs",
+        "sha256": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+        "bytes": 66435
+      },
+      {
+        "path": "tests/fixtures/process/observe-kill.c",
+        "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+        "bytes": 746
+      },
+      {
+        "path": "README.md",
+        "sha256": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+        "bytes": 19488
+      }
+    ],
+    "stateRevision": 14,
+    "purpose": "Preserve rejected uncommitted whole-mission candidate before bounded mode correction; no Git checkpoint or integration."
+  },
+  "archiveEntries": {
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/acquire.rs": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "tests/workspace.rs": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+    "README.md": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+    ".missions/AS-M003/state.json": "5a451a562643116e3527093c54ffa6b681c4f10582d36dd25376eb44d6eeaf72",
+    ".missions/AS-M003/history.jsonl": "4e00aafbc49d7195cf7d71332640dea6a712715f5e1b1771b716a00ac9912aa6",
+    ".missions/AS-M003/results/final-r1.json": "a6e6120a01472f469267babb223149f04b7d462d7664cbfdfac60f426ac88994",
+    "review-report.md": "6c47a59760b25e10c36746a120db9290b633ddd77ae2166d5f72ed28764d05d4"
+  },
+  "locksMatchHEAD": {
+    "Cargo.toml": true,
+    "Cargo.lock": true,
+    "tools/config-conformance/package.json": true,
+    "tools/config-conformance/package-lock.json": true
+  },
+  "transferEntriesChecked": 47,
+  "transferFailures": [],
+  "bundleFileCount": 34,
+  "bundleDifferences": [],
+  "frozenRecordedPin": "2e05f0d56bf47d215627110021fa26fc7e0b96c24a5736f87bcace661f0345b8",
+  "priorProtectedFilesChecked": 115,
+  "priorProtectedChanges": [
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/history.jsonl"
+  ],
+  "launchMetadata": {
+    "assignment": "faa77758-5126-42e8-875d-b1ceaad72f82",
+    "generation": "s1794779720.916078.13741",
+    "actor": "AS-M003-capture:s1794779720.916078.13741",
+    "role": "final-reviewer",
+    "packet": null,
+    "mission": "AS-M003",
+    "revision": 2,
+    "content": "d95cdf170f636367ccf89fd476c101ce8c37492877e2a1abc0c398321a1e4469"
+  }
+}

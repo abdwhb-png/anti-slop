@@ -1,0 +1,260 @@
+.missions/AS-M003/evidence/P01-C01/git-correction.diff:77: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01-C01/observation-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01-C01/observation-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/02b-green.log:9: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-1-before-object-admission.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-1-initial.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-5-before-object-admission.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-5-initial.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/observation-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P01/preparation.diff:6: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:8: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:11: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:13: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:27: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:30: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:32: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:34: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:36: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:39: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:41: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:45: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:48: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:97: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:99: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:102: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:134: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:136: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:139: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:141: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:143: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:145: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:148: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:150: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:158: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:160: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:163: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:165: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:167: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:169: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:177: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:179: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:181: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:333: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:339: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:352: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:360: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:364: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:373: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:375: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:378: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:380: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:382: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:399: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:406: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:408: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:410: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:413: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:416: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:419: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:421: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:423: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:425: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:430: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:432: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:434: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:456: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:458: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:468: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:470: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:474: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:477: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:484: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:486: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:489: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:491: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:496: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:498: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:505: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:508: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:510: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:512: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:515: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:517: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:519: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:521: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:524: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:533: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:589: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:668: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:724: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:734: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:773: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:858: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:864: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:999: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:1052: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:1261: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:1264: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:1266: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:1270: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:10: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:14: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:21: trailing whitespace.
++[m 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:52: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:61: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:73: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:75: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:85: trailing whitespace.
++[m 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:89: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:101: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:120: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:210: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:480: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:505: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:536: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:540: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:547: trailing whitespace.
++[m 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:578: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:587: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:594: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:680: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:761: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/observation-base-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-base-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-local-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-local-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-staged-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-staged-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-unstaged-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P02/observation-unstaged-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/02-green-working-modes.log:10: new blank line at EOF.
+.missions/AS-M003/evidence/P03/03-capture-regressions.log:44: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-base-001/observation-base-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-base-001/observation-base-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-local-001/observation-local-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-local-001/observation-local-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-5.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-1.log:7: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-unstaged-001/observation-unstaged-5.log:7: new blank line at EOF.
+CI policy failed: Command ['git', 'diff', '--check', 'd75639c1f6e6a6fa75ca0b07e7895ba3b98f9add'] returned non-zero exit status 2.

@@ -1,0 +1,8 @@
+test_maintained_files_and_unrelated_evidence_still_reject_whitespace (test_policy.WhitespaceTests.test_maintained_files_and_unrelated_evidence_still_reject_whitespace) ... ok
+test_raw_evidence_is_publishable_without_rewriting_bytes (test_policy.WhitespaceTests.test_raw_evidence_is_publishable_without_rewriting_bytes) ... ok
+test_raw_evidence_keeps_checks_for_other_whitespace_classes (test_policy.WhitespaceTests.test_raw_evidence_keeps_checks_for_other_whitespace_classes) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.165s
+
+OK

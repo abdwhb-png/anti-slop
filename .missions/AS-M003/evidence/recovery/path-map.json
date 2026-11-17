@@ -1,0 +1,401 @@
+{
+  "authority": "authority/repair-authority.md",
+  "referenceOccurrences": 48,
+  "affectedArtifacts": 11,
+  "requiredTargets": 40,
+  "artifacts": {
+    ".missions/AS-M003/history.jsonl": {
+      "sha256": "27d8b813505c4c7270875729afda05581e75ec0d04a714e29fd1979012be3b4b",
+      "bytes": 14886,
+      "repairedSha256": "97eb6861def7a3265da3482a497c024ffa28926c16502aaeed0ba7aedded1c19"
+    },
+    ".missions/AS-M003/packets/P03-r1.md": {
+      "sha256": "02e507f8e49f6d4cc4ce406b785ad9ed89783e0e9529e52ed38eb113be678d11",
+      "bytes": 5157,
+      "repairedSha256": "e3b460ea4701bc09e23b48985aac731e730b36a0884df63a6e884ed17dfdd035"
+    },
+    ".missions/AS-M003/packets/P04-r1.md": {
+      "sha256": "b4a03b3da56645c35d6dce9861fe0691bd8d648d4e9f7eaa541554e44a2d0cc0",
+      "bytes": 4622,
+      "repairedSha256": "9ba634b781e48e763f509a43591c11247d646e4f9acf057792f847e561e8df68"
+    },
+    ".missions/AS-M003/results/P01-C01-r1-review.json": {
+      "sha256": "dbe55da2fe92bce36d72c32288a1a634495fd1d117da3f0c21ae31d40b8eec45",
+      "bytes": 1927,
+      "repairedSha256": "baa0baec680cf1099b5014b6ced4ea2cd004785d3e7d5a7103bbd0c0675f8d52"
+    },
+    ".missions/AS-M003/results/P01-r1-review.json": {
+      "sha256": "77b4f95d3bfced683687a863b2496ad8a925ea000613ad397c817163fac5b8ad",
+      "bytes": 1391,
+      "repairedSha256": "528e221ab3fb7239736c63364c1e9de217385eaab99a67ee274da349546aab0e"
+    },
+    ".missions/AS-M003/results/P02-r1-review.json": {
+      "sha256": "1707fc37c794d5521519c8949b39b1d99c28c65a004db8100cd41504074ab72a",
+      "bytes": 2246,
+      "repairedSha256": "c2f88cbdae8ae7092e22f9793f04d2fbd2689f977ae4f44cb7dccfdd4374ad6a"
+    },
+    ".missions/AS-M003/results/P03-r1-review.json": {
+      "sha256": "6ec75bd61456cd2cf26a6ccc678ecffe9a81dda33f6635e8bc948388320f4188",
+      "bytes": 1901,
+      "repairedSha256": "ea841dd359a1630b49eec6cc1dc4e8bb2f09a93775f579719cef01e351bacbd4"
+    },
+    ".missions/AS-M003/results/P04-r1-review.json": {
+      "sha256": "35aad66761fe9151027cfbf1bdff63e086188b94fcfacc6bd2228e9e43f274cd",
+      "bytes": 1658,
+      "repairedSha256": "3585453f054d5f6e3c56f45b820e6281cb9ca4104af0ca021317148e065465a8"
+    },
+    ".missions/AS-M003/results/final-r1.json": {
+      "sha256": "a6e6120a01472f469267babb223149f04b7d462d7664cbfdfac60f426ac88994",
+      "bytes": 2273,
+      "repairedSha256": "a65ba6e3aaea49f593f69bc0276e4e7d67b2364556ae759e680c65e3bc975f68"
+    },
+    ".missions/AS-M003/results/final-r2.json": {
+      "sha256": "e21c59fc118c323bd4434bbf5c79db00061bbdebcaa3fa653d429c4eb8766bd1",
+      "bytes": 2671,
+      "repairedSha256": "da7d0a75c48ea8f9df6a5d7fa9b17478ac5b85da5a08180b4c96ee2ec12e9954"
+    },
+    ".missions/AS-M003/results/final-r3.json": {
+      "sha256": "c14f9b80b804336578dc1039e623e17f78c6f303781bd8ebfb51c5c6bd12cea8",
+      "bytes": 2328,
+      "repairedSha256": "52c00834c1ec5435e5476d994528a567933bc1e1b7354216daf877a8d3a216ce"
+    }
+  },
+  "references": [
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 10,
+      "before": "../../../coordinator/P01/source-review.md",
+      "after": "evidence/recovery/retained/coordinator/P01/source-review.md",
+      "retainedTarget": "coordinator/P01/source-review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 10,
+      "before": "../../../coordinator/P01/kill-regression-red.json",
+      "after": "evidence/recovery/retained/coordinator/P01/kill-regression-red.json",
+      "retainedTarget": "coordinator/P01/kill-regression-red.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 11,
+      "before": "../../../coordinator/P01-C01/review.md",
+      "after": "evidence/recovery/retained/coordinator/P01-C01/review.md",
+      "retainedTarget": "coordinator/P01-C01/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 11,
+      "before": "../../../coordinator/P01-C01/kill-observation-green.json",
+      "after": "evidence/recovery/retained/coordinator/P01-C01/kill-observation-green.json",
+      "retainedTarget": "coordinator/P01-C01/kill-observation-green.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 11,
+      "before": "../../../coordinator/P01-C01/cleanup-regression.json",
+      "after": "evidence/recovery/retained/coordinator/P01-C01/cleanup-regression.json",
+      "retainedTarget": "coordinator/P01-C01/cleanup-regression.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 14,
+      "before": "../../../coordinator/P02/review.md",
+      "after": "evidence/recovery/retained/coordinator/P02/review.md",
+      "retainedTarget": "coordinator/P02/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 15,
+      "before": "../../../coordinator/final-r1/rejected-source-archive.json",
+      "after": "evidence/recovery/retained/coordinator/final-r1/rejected-source-archive.json",
+      "retainedTarget": "coordinator/final-r1/rejected-source-archive.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/history.jsonl",
+      "line": 16,
+      "before": "../../../coordinator/P03/review.md",
+      "after": "evidence/recovery/retained/coordinator/P03/review.md",
+      "retainedTarget": "coordinator/P03/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/packets/P03-r1.md",
+      "line": 12,
+      "before": "../../../../coordinator/final-r1/rejected-source-archive.json",
+      "after": "../evidence/recovery/retained/coordinator/final-r1/rejected-source-archive.json",
+      "retainedTarget": "coordinator/final-r1/rejected-source-archive.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/packets/P04-r1.md",
+      "line": 26,
+      "before": "../../../../remote-ci-outcome.json",
+      "after": "../evidence/recovery/retained/remote-ci-outcome.json",
+      "retainedTarget": "remote-ci-outcome.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-C01-r1-review.json",
+      "line": 34,
+      "before": "../../../../report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "after": "../evidence/recovery/retained/report-02753f98-756b-4bac-93e1-c2301cb37b10.md",
+      "retainedTarget": "report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-C01-r1-review.json",
+      "line": 38,
+      "before": "../../../../coordinator/P01-C01/review.md",
+      "after": "../evidence/recovery/retained/coordinator/P01-C01/review.md",
+      "retainedTarget": "coordinator/P01-C01/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-C01-r1-review.json",
+      "line": 42,
+      "before": "../../../../coordinator/P01-C01/kill-observation-green.json",
+      "after": "../evidence/recovery/retained/coordinator/P01-C01/kill-observation-green.json",
+      "retainedTarget": "coordinator/P01-C01/kill-observation-green.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-C01-r1-review.json",
+      "line": 46,
+      "before": "../../../../coordinator/P01-C01/cleanup-regression.json",
+      "after": "../evidence/recovery/retained/coordinator/P01-C01/cleanup-regression.json",
+      "retainedTarget": "coordinator/P01-C01/cleanup-regression.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-r1-review.json",
+      "line": 29,
+      "before": "../../../../report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "after": "../evidence/recovery/retained/report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md",
+      "retainedTarget": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-r1-review.json",
+      "line": 33,
+      "before": "../../../../coordinator/P01/source-review.md",
+      "after": "../evidence/recovery/retained/coordinator/P01/source-review.md",
+      "retainedTarget": "coordinator/P01/source-review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-r1-review.json",
+      "line": 37,
+      "before": "../../../../coordinator/P01/kill-observation.json",
+      "after": "../evidence/recovery/retained/coordinator/P01/kill-observation.json",
+      "retainedTarget": "coordinator/P01/kill-observation.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-r1-review.json",
+      "line": 41,
+      "before": "../../../../coordinator/P01/kill-regression-red.json",
+      "after": "../evidence/recovery/retained/coordinator/P01/kill-regression-red.json",
+      "retainedTarget": "coordinator/P01/kill-regression-red.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P01-r1-review.json",
+      "line": 45,
+      "before": "../../../../coordinator/P01/candidate-source-manifest.json",
+      "after": "../evidence/recovery/retained/coordinator/P01/candidate-source-manifest.json",
+      "retainedTarget": "coordinator/P01/candidate-source-manifest.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P02-r1-review.json",
+      "line": 34,
+      "before": "../../../../report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "after": "../evidence/recovery/retained/report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md",
+      "retainedTarget": "report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P02-r1-review.json",
+      "line": 38,
+      "before": "../../../../coordinator/P02/review.md",
+      "after": "../evidence/recovery/retained/coordinator/P02/review.md",
+      "retainedTarget": "coordinator/P02/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P02-r1-review.json",
+      "line": 42,
+      "before": "../../../../coordinator/P02/focused-checks.json",
+      "after": "../evidence/recovery/retained/coordinator/P02/focused-checks.json",
+      "retainedTarget": "coordinator/P02/focused-checks.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P03-r1-review.json",
+      "line": 34,
+      "before": "../../../../report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "after": "../evidence/recovery/retained/report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "retainedTarget": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P03-r1-review.json",
+      "line": 38,
+      "before": "../../../../coordinator/P03/review.md",
+      "after": "../evidence/recovery/retained/coordinator/P03/review.md",
+      "retainedTarget": "coordinator/P03/review.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P03-r1-review.json",
+      "line": 42,
+      "before": "../../../../coordinator/P03/focused-checks.json",
+      "after": "../evidence/recovery/retained/coordinator/P03/focused-checks.json",
+      "retainedTarget": "coordinator/P03/focused-checks.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/P04-r1-review.json",
+      "line": 34,
+      "before": "../../../../report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "after": "../evidence/recovery/retained/report-156023ed-1926-49dc-a382-4f58dbc884e9.md",
+      "retainedTarget": "report-156023ed-1926-49dc-a382-4f58dbc884e9.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 29,
+      "before": "../../../../report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "after": "../evidence/recovery/retained/report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "retainedTarget": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 33,
+      "before": "../../../../final-review-d155e52e/mode-omission-probe.json",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/mode-omission-probe.json",
+      "retainedTarget": "final-review-d155e52e/mode-omission-probe.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 37,
+      "before": "../../../../final-review-d155e52e/mode-probe.json",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/mode-probe.json",
+      "retainedTarget": "final-review-d155e52e/mode-probe.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 41,
+      "before": "../../../../final-review-d155e52e/capture-probe.rs",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/capture-probe.rs",
+      "retainedTarget": "final-review-d155e52e/capture-probe.rs"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 45,
+      "before": "../../../../final-review-d155e52e/probe-library-identity.json",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/probe-library-identity.json",
+      "retainedTarget": "final-review-d155e52e/probe-library-identity.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 49,
+      "before": "../../../../final-review-d155e52e/focused-checks.json",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/focused-checks.json",
+      "retainedTarget": "final-review-d155e52e/focused-checks.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 53,
+      "before": "../../../../final-review-d155e52e/final-audit.json",
+      "after": "../evidence/recovery/retained/final-review-d155e52e/final-audit.json",
+      "retainedTarget": "final-review-d155e52e/final-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r1.json",
+      "line": 57,
+      "before": "../../../../coordinator/final-review-start.json",
+      "after": "../evidence/recovery/retained/coordinator/final-review-start.json",
+      "retainedTarget": "coordinator/final-review-start.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 30,
+      "before": "../../../../report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "after": "../evidence/recovery/retained/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+      "retainedTarget": "report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 34,
+      "before": "../../../../final-review-faa77758/initial-audit.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/initial-audit.json",
+      "retainedTarget": "final-review-faa77758/initial-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 38,
+      "before": "../../../../final-review-faa77758/final-audit.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/final-audit.json",
+      "retainedTarget": "final-review-faa77758/final-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 42,
+      "before": "../../../../final-review-faa77758/source-evidence-audit.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/source-evidence-audit.json",
+      "retainedTarget": "final-review-faa77758/source-evidence-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 46,
+      "before": "../../../../final-review-faa77758/focused-checks.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/focused-checks.json",
+      "retainedTarget": "final-review-faa77758/focused-checks.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 50,
+      "before": "../../../../final-review-faa77758/rename-mode-probe.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/rename-mode-probe.json",
+      "retainedTarget": "final-review-faa77758/rename-mode-probe.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 54,
+      "before": "../../../../final-review-faa77758/retained-ci-inspection.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/retained-ci-inspection.json",
+      "retainedTarget": "final-review-faa77758/retained-ci-inspection.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 58,
+      "before": "../../../../final-review-faa77758/measurement-inspection.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/measurement-inspection.json",
+      "retainedTarget": "final-review-faa77758/measurement-inspection.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r2.json",
+      "line": 62,
+      "before": "../../../../final-review-faa77758/historical-evidence-inspection.json",
+      "after": "../evidence/recovery/retained/final-review-faa77758/historical-evidence-inspection.json",
+      "retainedTarget": "final-review-faa77758/historical-evidence-inspection.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r3.json",
+      "line": 31,
+      "before": "../../../../report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "after": "../evidence/recovery/retained/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+      "retainedTarget": "report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r3.json",
+      "line": 35,
+      "before": "../../../../final-review-5823ce78/initial-audit.json",
+      "after": "../evidence/recovery/retained/final-review-5823ce78/initial-audit.json",
+      "retainedTarget": "final-review-5823ce78/initial-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r3.json",
+      "line": 39,
+      "before": "../../../../final-review-5823ce78/final-audit.json",
+      "after": "../evidence/recovery/retained/final-review-5823ce78/final-audit.json",
+      "retainedTarget": "final-review-5823ce78/final-audit.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r3.json",
+      "line": 43,
+      "before": "../../../../final-review-5823ce78/evidence-inspection.json",
+      "after": "../evidence/recovery/retained/final-review-5823ce78/evidence-inspection.json",
+      "retainedTarget": "final-review-5823ce78/evidence-inspection.json"
+    },
+    {
+      "artifact": ".missions/AS-M003/results/final-r3.json",
+      "line": 47,
+      "before": "../../../../final-review-5823ce78/focused-checks.json",
+      "after": "../evidence/recovery/retained/final-review-5823ce78/focused-checks.json",
+      "retainedTarget": "final-review-5823ce78/focused-checks.json"
+    }
+  ]
+}

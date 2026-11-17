@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "node",
+    "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.agents/skills/mission-driven-dev/scripts/validate.mjs",
+    "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/state.json",
+    "--json"
+  ],
+  "cwd": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+  "exit": 0,
+  "stdout": "{\"valid\":true,\"issues\":[]}\n",
+  "stderr": ""
+}

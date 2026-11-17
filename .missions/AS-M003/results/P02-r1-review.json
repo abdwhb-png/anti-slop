@@ -31,15 +31,15 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+      "path": "../evidence/recovery/retained/report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P02/review.md"
+      "path": "../evidence/recovery/retained/coordinator/P02/review.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P02/focused-checks.json"
+      "path": "../evidence/recovery/retained/coordinator/P02/focused-checks.json"
     },
     {
       "kind": "evidence",

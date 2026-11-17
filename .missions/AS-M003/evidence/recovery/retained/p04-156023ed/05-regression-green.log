@@ -1,0 +1,6 @@
+test_raw_evidence_is_publishable_without_rewriting_bytes (test_policy.WhitespaceTests.test_raw_evidence_is_publishable_without_rewriting_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.134s
+
+OK

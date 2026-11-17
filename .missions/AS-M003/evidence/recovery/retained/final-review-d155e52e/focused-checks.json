@@ -1,0 +1,125 @@
+[
+  {
+    "command": [
+      "node",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+      "--json"
+    ],
+    "name": "state",
+    "exit": 0,
+    "seconds": 0.05174499494023621
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "relevant_index_configuration_and_context_mutation_retries_a_bound_generation",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "relevant_index_configuration_and_context_mutation_retries_a_bound_generation",
+    "exit": 0,
+    "seconds": 0.20904647698625922
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "working_and_untracked_mutations_retry_without_combining_views",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "working_and_untracked_mutations_retry_without_combining_views",
+    "exit": 0,
+    "seconds": 0.41034875181503594
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "explicit_base_is_resolved_once_even_when_the_reference_moves",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "explicit_base_is_resolved_once_even_when_the_reference_moves",
+    "exit": 0,
+    "seconds": 0.1594127519056201
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "owned_group_signals_reserve_the_leader_until_cleanup_finishes",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "owned_group_signals_reserve_the_leader_until_cleanup_finishes",
+    "exit": 0,
+    "seconds": 4.334522980963811
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+    "exit": 0,
+    "seconds": 0.19923602184280753
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "working_ranges_absence_and_configuration_survive_later_edits",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "working_ranges_absence_and_configuration_survive_later_edits",
+    "exit": 0,
+    "seconds": 0.40906141186133027
+  },
+  {
+    "command": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "retained_count_total_bytes_and_sparse_input_are_bounded",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "name": "retained_count_total_bytes_and_sparse_input_are_bounded",
+    "exit": 0,
+    "seconds": 0.8072234699502587
+  }
+]

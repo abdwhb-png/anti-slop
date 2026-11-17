@@ -26,23 +26,23 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+      "path": "../evidence/recovery/retained/report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01/source-review.md"
+      "path": "../evidence/recovery/retained/coordinator/P01/source-review.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01/kill-observation.json"
+      "path": "../evidence/recovery/retained/coordinator/P01/kill-observation.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01/kill-regression-red.json"
+      "path": "../evidence/recovery/retained/coordinator/P01/kill-regression-red.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01/candidate-source-manifest.json"
+      "path": "../evidence/recovery/retained/coordinator/P01/candidate-source-manifest.json"
     }
   ]
 }

@@ -1,0 +1,386 @@
+[
+  {
+    "selector": "staged",
+    "files": 1,
+    "lines": 40,
+    "firstMs": 21.148,
+    "p50Ms": 20.763,
+    "p95Ms": 23.008,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      3,
+      489
+    ],
+    "retained": [
+      3,
+      489
+    ],
+    "captureTreePeakKiB": 12592,
+    "setupInclusivePeakKiB": 26600,
+    "gitPerCapture": 8,
+    "samplingP50Ms": 1.2957630679011345,
+    "samplingMaxMs": 2.7088229544460773,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "f99775aa938ff0641b503ea88b0e95f87bcad5ab96d50662f52cbbcf397f038d",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.62841796875,
+        0.72119140625,
+        0.8310546875
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "staged",
+    "files": 5,
+    "lines": 200,
+    "firstMs": 62.558,
+    "p50Ms": 63.267,
+    "p95Ms": 67.836,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      11,
+      2249
+    ],
+    "retained": [
+      11,
+      2249
+    ],
+    "captureTreePeakKiB": 12776,
+    "setupInclusivePeakKiB": 26972,
+    "gitPerCapture": 24,
+    "samplingP50Ms": 1.2904240284115076,
+    "samplingMaxMs": 3.282716032117605,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "fb72e0fb1e35947434780af79ca6f89d711ba45c84e1d2edb146b49523702491",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.62841796875,
+        0.72119140625,
+        0.8310546875
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "unstaged",
+    "files": 1,
+    "lines": 40,
+    "firstMs": 48.95,
+    "p50Ms": 45.365,
+    "p95Ms": 58.679,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      9,
+      605
+    ],
+    "retained": [
+      3,
+      489
+    ],
+    "captureTreePeakKiB": 12496,
+    "setupInclusivePeakKiB": 25492,
+    "gitPerCapture": 16,
+    "samplingP50Ms": 1.3123539974913,
+    "samplingMaxMs": 4.110835026949644,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "635214b567cd801d2411ec7b3fbf4ace6d23e21b198ae3fe139b3f661a946ae4",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.57763671875,
+        0.708984375,
+        0.826171875
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "unstaged",
+    "files": 5,
+    "lines": 200,
+    "firstMs": 64.872,
+    "p50Ms": 63.857,
+    "p95Ms": 72.58,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      17,
+      2365
+    ],
+    "retained": [
+      11,
+      2249
+    ],
+    "captureTreePeakKiB": 12520,
+    "setupInclusivePeakKiB": 26504,
+    "gitPerCapture": 24,
+    "samplingP50Ms": 1.3011409901082516,
+    "samplingMaxMs": 2.6154418010264635,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "32c5a8aaf216d2ac021eb162c91757ec2e7fe7dc854eb7fa7c49fda6762a2f32",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.57763671875,
+        0.708984375,
+        0.826171875
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "local",
+    "files": 1,
+    "lines": 40,
+    "firstMs": 44.332,
+    "p50Ms": 45.344,
+    "p95Ms": 54.794,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      9,
+      605
+    ],
+    "retained": [
+      3,
+      489
+    ],
+    "captureTreePeakKiB": 12460,
+    "setupInclusivePeakKiB": 28384,
+    "gitPerCapture": 17,
+    "samplingP50Ms": 1.292477361857891,
+    "samplingMaxMs": 2.906298963353038,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "1758895cb09837705e890006808a4da707f99c6f3351f4198905b9cbbf58ec50",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.53125,
+        0.69677734375,
+        0.8212890625
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "local",
+    "files": 5,
+    "lines": 200,
+    "firstMs": 65.792,
+    "p50Ms": 66.154,
+    "p95Ms": 75.718,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      17,
+      2365
+    ],
+    "retained": [
+      11,
+      2249
+    ],
+    "captureTreePeakKiB": 12684,
+    "setupInclusivePeakKiB": 25028,
+    "gitPerCapture": 25,
+    "samplingP50Ms": 1.2893618550151587,
+    "samplingMaxMs": 3.1197918578982353,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "42f1f66a41f0daba6e6430627aa8558a20edb827aad03ff5e885f116f0ca50f4",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.53125,
+        0.69677734375,
+        0.8212890625
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "base",
+    "files": 1,
+    "lines": 40,
+    "firstMs": 44.515,
+    "p50Ms": 44.681,
+    "p95Ms": 48.659,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      9,
+      605
+    ],
+    "retained": [
+      3,
+      489
+    ],
+    "captureTreePeakKiB": 12700,
+    "setupInclusivePeakKiB": 26712,
+    "gitPerCapture": 17,
+    "samplingP50Ms": 1.2993784621357918,
+    "samplingMaxMs": 2.329448936507106,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "54c753c47976adfad6ed850fee240b1ae8ecddc5c1d5545009c267bcbe70267d",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.80908203125,
+        0.751953125,
+        0.83837890625
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  },
+  {
+    "selector": "base",
+    "files": 5,
+    "lines": 200,
+    "firstMs": 67.867,
+    "p50Ms": 67.303,
+    "p95Ms": 124.504,
+    "rawMatchesJson": true,
+    "samples": 30,
+    "acquired": [
+      17,
+      2365
+    ],
+    "retained": [
+      11,
+      2249
+    ],
+    "captureTreePeakKiB": 12572,
+    "setupInclusivePeakKiB": 28876,
+    "gitPerCapture": 25,
+    "samplingP50Ms": 1.3082559453323483,
+    "samplingMaxMs": 55.57859386317432,
+    "captureNames": [
+      "capture_observa",
+      "git",
+      "workspace-98a92"
+    ],
+    "rawSha256": "9ee43cd5e58d2d5b9850df5dd9668cbc01a1d05c4d461270d5d6c0da18e354b4",
+    "host": {
+      "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.43",
+      "machine": "x86_64",
+      "logicalCpus": 4,
+      "loadAverage": [
+        0.80908203125,
+        0.751953125,
+        0.83837890625
+      ],
+      "rust": "rustc 1.96.1 (31fca3adb 2026-06-26)",
+      "git": "git version 2.56.0"
+    },
+    "command": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+      "--ignored",
+      "--exact",
+      "capture_observations",
+      "--nocapture"
+    ]
+  }
+]

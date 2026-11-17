@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "python3",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02/measure.py",
+    "staged",
+    "--output",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P02"
+  ],
+  "exit": 2,
+  "stdout": "",
+  "stderr": "usage: measure.py [-h] --output OUTPUT {staged,unstaged,local,base}\nmeasure.py: error: output already exists; choose a new --output directory\n"
+}

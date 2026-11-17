@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-17T06:41:58.282756+00:00",
+  "argv": [
+    "node",
+    "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.agents/skills/mission-driven-dev/scripts/validate.mjs",
+    "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json",
+    "--json"
+  ],
+  "cwd": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+  "exit": 1,
+  "stdout": "{\"valid\":false,\"issues\":[{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/final-audit.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/focused-checks.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/historical-evidence-inspection.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/initial-audit.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/measurement-inspection.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/rename-mode-probe.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/retained-ci-inspection.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../final-review-faa77758/source-evidence-audit.json\"},{\"path\":\"/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/results/final-r2.json\",\"rule\":\"reference-missing\",\"message\":\"Referenced file is unavailable: ../../../../report-faa77758-5126-42e8-875d-b1ceaad72f82.md\"}]}\n",
+  "stderr": ""
+}

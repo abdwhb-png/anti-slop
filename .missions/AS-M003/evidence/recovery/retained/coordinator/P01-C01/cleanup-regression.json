@@ -1,0 +1,12 @@
+{
+  "command": "cargo test --frozen --test workspace owned_group_signals_reserve_the_leader_until_cleanup_finishes -- --exact",
+  "cache": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+  "result": {
+    "chunk_id": "557401",
+    "wall_time_seconds": 0.000010586,
+    "exit_code": 0,
+    "original_token_count": 43,
+    "output": "test owned_group_signals_reserve_the_leader_until_cleanup_finishes ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 21 filtered out; finished in 4.14s\n\n"
+  },
+  "scope": "Coordinator replay of actual capture/process-lifetime scenarios; no production changes."
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179",
+    "staged_bytes_and_working_context_remain_independent",
+    "--exact",
+    "--nocapture",
+    "--test-threads=1"
+  ],
+  "exit": 0,
+  "observedAfterReap": 0,
+  "stdout": "\nrunning 1 test\ntest staged_bytes_and_working_context_remain_independent ... ok\n\ntest result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 21 filtered out; finished in 0.04s\n\n",
+  "stderr": "",
+  "observerUnchanged": true,
+  "scope": "Same real public staged-capture scenario and original syscall observer, rerun by the coordinator on corrected code."
+}

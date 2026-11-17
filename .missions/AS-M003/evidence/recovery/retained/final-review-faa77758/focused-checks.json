@@ -1,0 +1,120 @@
+[
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "working_modes_",
+      "--",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.5019569396972656,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/working_modes_.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "exact_content_renames_keep_both_paths_and_reject_either_exclusion",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.4836466312408447,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "four_comparisons_select_their_exact_sides_and_independent_context",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.32362914085388184,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "owned_group_signals_reserve_the_leader_until_cleanup_finishes",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 4.400128602981567,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.6114263534545898,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "retained_configuration_and_ranges_share_the_actual_generation",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.18838071823120117,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  },
+  {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "relevant_index_configuration_and_context_mutation_retries_a_bound_generation",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "exit": 0,
+    "seconds": 0.17337965965270996,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log",
+    "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+  }
+]

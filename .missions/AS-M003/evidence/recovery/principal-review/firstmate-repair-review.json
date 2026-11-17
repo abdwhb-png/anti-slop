@@ -1,0 +1,36 @@
+{
+  "at": "2026-11-17T07:02:19.123769+00:00",
+  "actor": "firstmate:AS-M003-record-repair-review",
+  "scope": "Authorized archive and path-only record repair; not fresh product implementation acceptance.",
+  "outcome": "accepted",
+  "evidence": [
+    "evidence/parent-repair-verification.json",
+    "repair-report.md"
+  ],
+  "verified": [
+    "14 archived originals equal Git HEAD bytes",
+    "118 retained files equal exact old-task originals",
+    "11 historical artifacts differ only by 48 selected path strings",
+    "467 unrelated tracked files unchanged",
+    "639 exported files equal working tree; no Git directory or symlinks",
+    "Frozen installed validator: exported state, final-r2, and completion candidate all exited 0 with valid=true",
+    "15 exact raw-file whitespace attributes, no wildcard/policy change",
+    "Published prerequisite verdict remains retained; one external preflight narrative source unverified"
+  ],
+  "independentProductAcceptance": "Original accepted final-r3 retained; no fresh product review claimed.",
+  "activationAuthorized": true,
+  "activationConditions": [
+    "Update candidate event to actual activation time and record principal acceptance without awaiting-review wording",
+    "Make integrity checker validate exact pre-repair archive plus repaired 20-event prefix and exact completed candidate, instead of requiring obsolete active validating state",
+    "Validate revised candidate against repaired current graph before guarded compare-and-publish; rerun actual and portable checks after activation"
+  ],
+  "commitAuthorized": false,
+  "publicationAuthorized": false,
+  "mergeAuthorized": false,
+  "notRun": [
+    "Application tests",
+    "Project-wide CI",
+    "Benchmarks",
+    "New network verification"
+  ]
+}

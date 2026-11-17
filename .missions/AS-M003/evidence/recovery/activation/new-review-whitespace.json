@@ -1,0 +1,16 @@
+{
+  "at": "2026-11-17T07:13:34.194924+00:00",
+  "argv": [
+    "git",
+    "diff",
+    "--no-index",
+    "--check",
+    "/dev/null",
+    "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/principal-review/repair-report.md"
+  ],
+  "cwd": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+  "exit": 3,
+  "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/principal-review/repair-report.md:102: new blank line at EOF.\n",
+  "stderr": "",
+  "earlierAttempt": "The first completed-whitespace collection stopped on this new byte-preserved principal-review report before writing its success receipt."
+}

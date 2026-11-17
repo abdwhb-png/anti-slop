@@ -1,0 +1,276 @@
+{
+  "at": "2026-11-17T06:48:51.947684+00:00",
+  "observedRawFiles": 15,
+  "results": [
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:2: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:17: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:19: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:21: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:23: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:25: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:27: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:29: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:31: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:33: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:35: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:37: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:39: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:41: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:43: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:45: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:47: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:49: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:51: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:53: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:55: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:57: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:59: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:61: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:63: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:65: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:67: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:69: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:71: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:73: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:75: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:77: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:79: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:81: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:83: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:85: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:87: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:89: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:91: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:93: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:95: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:97: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:99: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:101: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:103: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:105: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:107: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:109: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:111: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:113: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:115: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:117: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:119: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:121: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:123: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:125: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:127: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:129: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:131: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:133: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:135: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:137: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:139: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:141: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:143: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:145: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:147: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:149: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:151: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:153: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:155: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:157: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:159: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:161: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:163: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:165: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:167: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:169: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:171: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:173: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:175: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:177: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:179: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:181: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:183: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:185: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:187: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:189: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:191: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:193: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:195: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:197: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:199: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:201: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:203: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:205: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:207: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:209: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:211: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:213: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:215: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:217: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:219: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:221: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:223: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:225: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:227: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:229: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:231: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:233: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:235: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:237: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:239: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log:241: trailing whitespace.\n++ \n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eol"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-observation.stdout"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-observation.stdout:6: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log:12: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log:12: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log:8: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/working_modes_.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/working_modes_.log:9: new blank line at EOF.\n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eof"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:2: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:17: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:19: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:21: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:23: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:25: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:27: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:29: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:31: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:33: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:35: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:37: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:39: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:41: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:43: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:45: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:47: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:49: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:51: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:53: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:55: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:57: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:59: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:61: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:63: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:65: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:67: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:69: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:71: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:73: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:75: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:77: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:79: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:81: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:83: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:85: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:87: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:89: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:91: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:93: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:95: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:97: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:99: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:101: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:103: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:105: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:107: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:109: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:111: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:113: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:115: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:117: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:119: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:121: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:123: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:125: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:127: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:129: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:131: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:133: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:135: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:137: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:139: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:141: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:143: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:145: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:147: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:149: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:151: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:153: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:155: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:157: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:159: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:161: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:163: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:165: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:167: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:169: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:171: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:173: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:175: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:177: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:179: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:181: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:183: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:185: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:187: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:189: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:191: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:193: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:195: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:197: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:199: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:201: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:203: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:205: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:207: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:209: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:211: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:213: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:215: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:217: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:219: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:221: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:223: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:225: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:227: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:229: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:231: trailing whitespace.\n++\u001b[m\u000f \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:233: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:235: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:237: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:239: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log:241: trailing whitespace.\n++ \n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eol"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/03-regression-red.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/03-regression-red.log:11: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/03-regression-red.log:14: trailing whitespace.\n++ \n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eol"
+      ]
+    },
+    {
+      "argv": [
+        "git",
+        "-c",
+        "core.quotePath=false",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/04-regression-red-exact-classes.log"
+      ],
+      "exit": 3,
+      "stdout": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/04-regression-red-exact-classes.log:11: trailing whitespace.\n++ \n/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/04-regression-red-exact-classes.log:13: trailing whitespace.\n++ \n",
+      "stderr": "",
+      "observedClasses": [
+        "-blank-at-eol"
+      ]
+    }
+  ]
+}

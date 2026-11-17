@@ -1,0 +1,2059 @@
+{
+  "at": "2026-11-17T06:48:52.221516+00:00",
+  "cwd": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+  "rawExactPathAttributes": 15,
+  "checkedFiles": 157,
+  "results": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/.gitattributes"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/README.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/authority/pre-repair-activity.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/authority/repair-authority.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/after-final-r2.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/after-state.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/before-final-r2.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/before-state.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/pre-repair-tracked-hashes.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/raw-whitespace-before.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/repaired-and-candidate.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/secret-scan.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/verify-recovery.py"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/whitespace-recorder-attempt.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/checks/whitespace-recorder-probe.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/closure-candidate.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/forge/forge-observations.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/forge/merge-source-proof.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/historical-links.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/integration-proof.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/history.jsonl"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/packets/P03-r1.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/packets/P04-r1.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/P01-C01-r1-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/P01-r1-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/P02-r1-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/P03-r1-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/P04-r1-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/final-r1.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/final-r2.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/results/final-r3.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/.missions/AS-M003/state.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/README.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals/docs/IMPLEMENTATION_ROADMAP.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/originals-manifest.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/parent-evidence-manifest.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/path-map.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/candidates/s1794768506.3553234.1173-6508c722-06cb-4a2a-a694-d4bd33999ec4.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/ci-correction-delivery-authority.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/committed-whitespace-reproduction.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/README.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/src/config/mod.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/src/lib.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/src/workspace/acquire.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/src/workspace/git.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/src/workspace/mod.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source/tests/workspace.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/candidate-source-manifest.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-observation.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-observation.stderr"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-observation.stdout"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/kill-regression-red.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/observe-kill.c"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01/source-review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01-C01/accepted-source-archive.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01-C01/accepted-source.tar.gz"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01-C01/cleanup-regression.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01-C01/kill-observation-green.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P01-C01/review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P02/focused-checks.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P02/review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P03/focused-checks.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P03/review.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P04/committed-demonstration-review.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P04/final-review-start.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/P04/preparation-applicability.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/final-r1/rejected-source-archive.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/final-r1/rejected-source.tar.gz"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/final-review-r2-start.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/coordinator/final-review-start.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/corrected-publication.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/delivery-authority-2026-11-15.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/demonstration-reader-ci-green.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/demonstration.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/actual-whitespace.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/evidence-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/final-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/focused-checks.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/inbox-acknowledgement.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/initial-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/state.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/whitespace-tests.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/capture-probe.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/explicit_base_is_resolved_once_even_when_the_reference_moves.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/final-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/focused-checks.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/initial-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/measurement-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/measurement-output-refusal.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/mode-omission-probe.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/mode-probe-reproduction.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/mode-probe.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/probe-build.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/probe-library-identity.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/report-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/retained-ci-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/retained_count_total_bytes_and_sparse_input_are_bounded.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/state.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/task-runtime-processes.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/unreadable-working-probe.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/working_and_untracked_mutations_retry_without_combining_views.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-d155e52e/working_ranges_absence_and_configuration_survive_later_edits.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/audit-recorder-failure.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/final-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/focused-checks.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/historical-evidence-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/initial-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/measurement-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/rename-mode-probe.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/rename-mode-probe.rs"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/report-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/retained-ci-inspection.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/source-evidence-audit.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/final-review-faa77758/working_modes_.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/02-committed-red.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/03-regression-red.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/03-regression-red.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/04-regression-red-exact-classes.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/04-regression-red-exact-classes.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/05-regression-green.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/05-regression-green.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/06-whitespace-boundaries.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/06-whitespace-boundaries.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/07-policy-suite.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/07-policy-suite.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/08-actual-committed-green.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/08-actual-committed-green.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/10-stable-ci.log"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/p04-156023ed/12-audit-recorder-failure.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/pr-body-ci-failed.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/pr-body-ci-green.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/publication-source-provenance.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/remote-ci-corrected.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/remote-ci-outcome.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-156023ed-1926-49dc-a382-4f58dbc884e9.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained/report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/retained-manifest.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--no-index",
+        "--check",
+        "/dev/null",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/evidence/recovery/source-applicability.json"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

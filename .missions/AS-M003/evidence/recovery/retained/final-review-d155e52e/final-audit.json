@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-15T21:35:10.349286+00:00",
+  "initialFilesCompared": 414,
+  "changedOrMissingFiles": [],
+  "newWorktreeFiles": [],
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "branch": "fm/AS-M003-capture",
+  "gitStatus": " M .agents/skills/mission-driven-dev/MAINTENANCE.md\n M .agents/skills/mission-driven-dev/SKILL.md\n M .agents/skills/mission-driven-dev/VALIDATION.md\n M .agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md\n M .agents/skills/mission-driven-dev/assets/handoffs.md\n M .agents/skills/mission-driven-dev/evals/evals.json\n M .agents/skills/mission-driven-dev/references/artifacts.md\n M .agents/skills/mission-driven-dev/references/execution.md\n M .agents/skills/mission-driven-dev/references/preparation.md\n M .agents/skills/mission-driven-dev/references/resumption.md\n M .agents/skills/mission-driven-dev/references/validation.md\n M .agents/skills/mission-driven-dev/scripts/validate.mjs\n M .agents/skills/mission-driven-dev/src/cli.ts\n M .agents/skills/mission-driven-dev/src/schema.ts\n M .agents/skills/mission-driven-dev/src/validate.ts\n M .agents/skills/mission-driven-dev/tests/cli.test.ts\n M .agents/skills/mission-driven-dev/tests/validate.test.ts\n M README.md\n M docs/IMPLEMENTATION_ROADMAP.md\n M src/config/mod.rs\n M src/lib.rs\n D src/workspace/.gitkeep\n?? .agents/skills/mission-driven-dev/.gitignore\n?? .agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl\n?? .agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md\n?? .agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json\n?? .agents/skills/mission-driven-dev/assets/example/.missions/example/state.json\n?? .agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json\n?? .missions/AS-M003/evidence/P01-C01/01-red.log\n?? .missions/AS-M003/evidence/P01-C01/02-green.log\n?? .missions/AS-M003/evidence/P01-C01/03-descendant-green.log\n?? .missions/AS-M003/evidence/P01-C01/04-0-checks.log\n?? .missions/AS-M003/evidence/P01-C01/05-0-checks.log\n?? .missions/AS-M003/evidence/P01-C01/05-1-checks.log\n?? .missions/AS-M003/evidence/P01-C01/05-2-checks.log\n?? .missions/AS-M003/evidence/P01-C01/05-3-checks.log\n?? .missions/AS-M003/evidence/P01-C01/06-0-final-check.log\n?? .missions/AS-M003/evidence/P01-C01/06-1-final-check.log\n?? .missions/AS-M003/evidence/P01-C01/baseline.json\n?? .missions/AS-M003/evidence/P01-C01/git-correction.diff\n?? .missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json\n?? .missions/AS-M003/evidence/P01-C01/kill-observation-green.json\n?? .missions/AS-M003/evidence/P01-C01/measure.py\n?? .missions/AS-M003/evidence/P01-C01/measurement-build.log\n?? .missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json\n?? .missions/AS-M003/evidence/P01-C01/measurements.json\n?? .missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log\n?? .missions/AS-M003/evidence/P01-C01/observation-1.log\n?? .missions/AS-M003/evidence/P01-C01/observation-1.phase\n?? .missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log\n?? .missions/AS-M003/evidence/P01-C01/observation-5.log\n?? .missions/AS-M003/evidence/P01-C01/observation-5.phase\n?? .missions/AS-M003/evidence/P01-C01/report-receipt.json\n?? .missions/AS-M003/evidence/P01-C01/source-state.json\n?? .missions/AS-M003/evidence/P01-C01/state-before.log\n?? .missions/AS-M003/evidence/P01-C01/waitid-abi.c\n?? .missions/AS-M003/evidence/P01-C01/waitid-abi.log\n?? .missions/AS-M003/evidence/P01-C01/workspace-correction.diff\n?? .missions/AS-M003/evidence/P01/01-red.log\n?? .missions/AS-M003/evidence/P01/02-green.log\n?? .missions/AS-M003/evidence/P01/02b-green.log\n?? .missions/AS-M003/evidence/P01/03-red-compaction.json\n?? .missions/AS-M003/evidence/P01/03-red.log\n?? .missions/AS-M003/evidence/P01/04-green.log\n?? .missions/AS-M003/evidence/P01/05-red.log\n?? .missions/AS-M003/evidence/P01/06-green.log\n?? .missions/AS-M003/evidence/P01/07-controlled.log\n?? .missions/AS-M003/evidence/P01/08-red-mode.log\n?? .missions/AS-M003/evidence/P01/09-green-mode.log\n?? .missions/AS-M003/evidence/P01/10-locked-restore.log\n?? .missions/AS-M003/evidence/P01/11-focused-refactor.log\n?? .missions/AS-M003/evidence/P01/12-remote-probe.log\n?? .missions/AS-M003/evidence/P01/13-0-final-check.log\n?? .missions/AS-M003/evidence/P01/13-1-final-check.log\n?? .missions/AS-M003/evidence/P01/13-2-final-check.log\n?? .missions/AS-M003/evidence/P01/13-3-final-check.log\n?? .missions/AS-M003/evidence/P01/14-clippy.log\n?? .missions/AS-M003/evidence/P01/15-0-recheck.log\n?? .missions/AS-M003/evidence/P01/15-1-recheck.log\n?? .missions/AS-M003/evidence/P01/15-2-recheck.log\n?? .missions/AS-M003/evidence/P01/15-3-recheck.log\n?? .missions/AS-M003/evidence/P01/16-0-final-evidence.log\n?? .missions/AS-M003/evidence/P01/16-1-final-evidence.log\n?? .missions/AS-M003/evidence/P01/16-2-final-evidence.log\n?? .missions/AS-M003/evidence/P01/16-3-final-evidence.log\n?? .missions/AS-M003/evidence/P01/16-4-final-evidence.log\n?? .missions/AS-M003/evidence/P01/16-5-final-evidence.log\n?? .missions/AS-M003/evidence/P01/17-red-object-admission.log\n?? .missions/AS-M003/evidence/P01/18-0-green-object-admission.log\n?? .missions/AS-M003/evidence/P01/18-1-green-object-admission.log\n?? .missions/AS-M003/evidence/P01/18-2-green-object-admission.log\n?? .missions/AS-M003/evidence/P01/19-final-build.log\n?? .missions/AS-M003/evidence/P01/baseline.json\n?? .missions/AS-M003/evidence/P01/final-consistency.json\n?? .missions/AS-M003/evidence/P01/locked-npm-verification.json\n?? .missions/AS-M003/evidence/P01/measure.py\n?? .missions/AS-M003/evidence/P01/measurement-build.log\n?? .missions/AS-M003/evidence/P01/measurements-before-object-admission.json\n?? .missions/AS-M003/evidence/P01/measurements-initial.json\n?? .missions/AS-M003/evidence/P01/measurements-setup-inclusive.json\n?? .missions/AS-M003/evidence/P01/measurements.json\n?? .missions/AS-M003/evidence/P01/observation-1-before-object-admission.log\n?? .missions/AS-M003/evidence/P01/observation-1-initial.log\n?? .missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log\n?? .missions/AS-M003/evidence/P01/observation-1.log\n?? .missions/AS-M003/evidence/P01/observation-1.phase\n?? .missions/AS-M003/evidence/P01/observation-5-before-object-admission.log\n?? .missions/AS-M003/evidence/P01/observation-5-initial.log\n?? .missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log\n?? .missions/AS-M003/evidence/P01/observation-5.log\n?? .missions/AS-M003/evidence/P01/observation-5.phase\n?? .missions/AS-M003/evidence/P01/preparation.diff\n?? .missions/AS-M003/evidence/P01/report-receipt.json\n?? .missions/AS-M003/evidence/P01/source-state.json\n?? .missions/AS-M003/evidence/P01/state-validation.log\n?? .missions/AS-M003/evidence/P02-tdd-decision-pending.json\n?? .missions/AS-M003/evidence/P02-tdd-exception-approved.json\n?? .missions/AS-M003/evidence/P02/01-red-comparisons.log\n?? .missions/AS-M003/evidence/P02/02-green-comparisons.log\n?? .missions/AS-M003/evidence/P02/03-comparisons.log\n?? .missions/AS-M003/evidence/P02/04-red-renames.log\n?? .missions/AS-M003/evidence/P02/05-green-renames.log\n?? .missions/AS-M003/evidence/P02/06-hold-capture-check.log\n?? .missions/AS-M003/evidence/P02/07-hold-format-check.log\n?? .missions/AS-M003/evidence/P02/08-hold-clippy.log\n?? .missions/AS-M003/evidence/P02/09-resumed-state.log\n?? .missions/AS-M003/evidence/P02/10-red-index-flags.log\n?? .missions/AS-M003/evidence/P02/11-red-intent.log\n?? .missions/AS-M003/evidence/P02/12-green-index-flags.log\n?? .missions/AS-M003/evidence/P02/13-green-intent.log\n?? .missions/AS-M003/evidence/P02/14-0-qualification.log\n?? .missions/AS-M003/evidence/P02/14-1-qualification.log\n?? .missions/AS-M003/evidence/P02/14-2-qualification.log\n?? .missions/AS-M003/evidence/P02/14-3-qualification.log\n?? .missions/AS-M003/evidence/P02/14-4-qualification.log\n?? .missions/AS-M003/evidence/P02/15-0-mechanism-diagnosis.log\n?? .missions/AS-M003/evidence/P02/15-1-mechanism-diagnosis.log\n?? .missions/AS-M003/evidence/P02/16-red-empty-generation.log\n?? .missions/AS-M003/evidence/P02/17-red-info-attributes.log\n?? .missions/AS-M003/evidence/P02/18-0-metadata-green.log\n?? .missions/AS-M003/evidence/P02/18-1-metadata-green.log\n?? .missions/AS-M003/evidence/P02/18-2-metadata-green.log\n?? .missions/AS-M003/evidence/P02/18-3-metadata-green.log\n?? .missions/AS-M003/evidence/P02/19-0-working-coherence.log\n?? .missions/AS-M003/evidence/P02/19-1-working-coherence.log\n?? .missions/AS-M003/evidence/P02/19-2-working-coherence.log\n?? .missions/AS-M003/evidence/P02/20-focused-suite.log\n?? .missions/AS-M003/evidence/P02/21-working-limits.log\n?? .missions/AS-M003/evidence/P02/22-0-stable-focused.log\n?? .missions/AS-M003/evidence/P02/22-1-stable-focused.log\n?? .missions/AS-M003/evidence/P02/23-full-ci.log\n?? .missions/AS-M003/evidence/P02/24-measure-base.log\n?? .missions/AS-M003/evidence/P02/24-measure-local.log\n?? .missions/AS-M003/evidence/P02/24-measure-staged.log\n?? .missions/AS-M003/evidence/P02/24-measure-unstaged.log\n?? .missions/AS-M003/evidence/P02/25-original-observer-green.json\n?? .missions/AS-M003/evidence/P02/26-nonvisual-demo.log\n?? .missions/AS-M003/evidence/P02/27-tooling-output-red.json\n?? .missions/AS-M003/evidence/P02/28-tooling-output-green.json\n?? .missions/AS-M003/evidence/P02/29-document-source-checks.json\n?? .missions/AS-M003/evidence/P02/30-state-final.log\n?? .missions/AS-M003/evidence/P02/baseline.json\n?? .missions/AS-M003/evidence/P02/decision-hold-preservation.json\n?? .missions/AS-M003/evidence/P02/decision-hold-source.json\n?? .missions/AS-M003/evidence/P02/decision-hold-source.tar.gz\n?? .missions/AS-M003/evidence/P02/measure-before-output-guard.txt\n?? .missions/AS-M003/evidence/P02/measure.py\n?? .missions/AS-M003/evidence/P02/measurement-build-base.log\n?? .missions/AS-M003/evidence/P02/measurement-build-local.log\n?? .missions/AS-M003/evidence/P02/measurement-build-staged.log\n?? .missions/AS-M003/evidence/P02/measurement-build-unstaged.log\n?? .missions/AS-M003/evidence/P02/measurements-base.json\n?? .missions/AS-M003/evidence/P02/measurements-local.json\n?? .missions/AS-M003/evidence/P02/measurements-staged.json\n?? .missions/AS-M003/evidence/P02/measurements-unstaged.json\n?? .missions/AS-M003/evidence/P02/observation-base-1.log\n?? .missions/AS-M003/evidence/P02/observation-base-1.phase\n?? .missions/AS-M003/evidence/P02/observation-base-5.log\n?? .missions/AS-M003/evidence/P02/observation-base-5.phase\n?? .missions/AS-M003/evidence/P02/observation-local-1.log\n?? .missions/AS-M003/evidence/P02/observation-local-1.phase\n?? .missions/AS-M003/evidence/P02/observation-local-5.log\n?? .missions/AS-M003/evidence/P02/observation-local-5.phase\n?? .missions/AS-M003/evidence/P02/observation-staged-1.log\n?? .missions/AS-M003/evidence/P02/observation-staged-1.phase\n?? .missions/AS-M003/evidence/P02/observation-staged-5.log\n?? .missions/AS-M003/evidence/P02/observation-staged-5.phase\n?? .missions/AS-M003/evidence/P02/observation-unstaged-1.log\n?? .missions/AS-M003/evidence/P02/observation-unstaged-1.phase\n?? .missions/AS-M003/evidence/P02/observation-unstaged-5.log\n?? .missions/AS-M003/evidence/P02/observation-unstaged-5.phase\n?? .missions/AS-M003/evidence/P02/probe-git-attributes-single-file.json\n?? .missions/AS-M003/evidence/P02/probe-git-attributes-single-file.py\n?? .missions/AS-M003/evidence/P02/probe-git-attributes.json\n?? .missions/AS-M003/evidence/P02/probe-git-attributes.py\n?? .missions/AS-M003/evidence/P02/report-receipt.json\n?? .missions/AS-M003/evidence/P02/source-state.json\n?? .missions/AS-M003/evidence/P02/state-before.log\n?? .missions/AS-M003/evidence/P02/tdd-gap.md\n?? .missions/AS-M003/evidence/approval.json\n?? .missions/AS-M003/evidence/compiler-ready-and-resumption.json\n?? .missions/AS-M003/evidence/isolation-and-authority.json\n?? .missions/AS-M003/evidence/mdd-skill-transition.json\n?? .missions/AS-M003/evidence/oracle-contract-r1.json\n?? .missions/AS-M003/evidence/orchestration-approval.json\n?? .missions/AS-M003/evidence/preparation-checks.json\n?? .missions/AS-M003/evidence/preparation.json\n?? .missions/AS-M003/evidence/prerequisite-review.json\n?? .missions/AS-M003/evidence/prerequisites-accepted.json\n?? .missions/AS-M003/evidence/tooling-approval-and-status.json\n?? .missions/AS-M003/history.jsonl\n?? .missions/AS-M003/packets/P01-C01-r1.md\n?? .missions/AS-M003/packets/P01-r1.md\n?? .missions/AS-M003/packets/P02-r1.md\n?? .missions/AS-M003/results/P01-C01-r1-review.json\n?? .missions/AS-M003/results/P01-r1-review.json\n?? .missions/AS-M003/results/P02-r1-review.json\n?? .missions/AS-M003/state.json\n?? docs/missions/AS-M003/r1.md\n?? docs/missions/AS-M003/r2.md\n?? src/workspace/acquire.rs\n?? src/workspace/git.rs\n?? src/workspace/mod.rs\n?? tests/fixtures/process/observe-kill.c\n?? tests/workspace.rs\n",
+  "state": {
+    "schemaVersion": 1,
+    "kind": "state",
+    "id": "AS-M003",
+    "revision": 14,
+    "mission": {
+      "kind": "mission",
+      "id": "AS-M003",
+      "revision": 2,
+      "path": "../../docs/missions/AS-M003/r2.md"
+    },
+    "status": "validating",
+    "executionMode": "coordinated",
+    "interruption": null,
+    "history": "history.jsonl",
+    "lastSequence": 14,
+    "currentPacket": null,
+    "attempts": [
+      {
+        "packet": {
+          "kind": "packet",
+          "id": "AS-M003-P01",
+          "revision": 1,
+          "path": "packets/P01-r1.md"
+        },
+        "result": {
+          "kind": "result",
+          "id": "AS-M003-P01-review",
+          "revision": 1,
+          "path": "results/P01-r1-review.json"
+        }
+      },
+      {
+        "packet": {
+          "kind": "packet",
+          "id": "AS-M003-P01-C01",
+          "revision": 1,
+          "path": "packets/P01-C01-r1.md"
+        },
+        "result": {
+          "kind": "result",
+          "id": "AS-M003-P01-C01-review",
+          "revision": 1,
+          "path": "results/P01-C01-r1-review.json"
+        }
+      },
+      {
+        "packet": {
+          "kind": "packet",
+          "id": "AS-M003-P02",
+          "revision": 1,
+          "path": "packets/P02-r1.md"
+        },
+        "result": {
+          "kind": "result",
+          "id": "AS-M003-P02-review",
+          "revision": 1,
+          "path": "results/P02-r1-review.json"
+        }
+      }
+    ],
+    "checkpoints": [],
+    "evidence": [
+      {
+        "kind": "evidence",
+        "path": "evidence/preparation.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/approval.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/preparation-checks.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/mdd-skill-transition.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/orchestration-approval.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/oracle-contract-r1.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/tooling-approval-and-status.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/prerequisite-review.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/compiler-ready-and-resumption.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/prerequisites-accepted.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/isolation-and-authority.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/P02-tdd-exception-approved.json"
+      }
+    ],
+    "validation": null
+  },
+  "projectWritesByReviewer": false,
+  "privateEvidenceDirectory": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e",
+  "pendingInboxMessages": []
+}

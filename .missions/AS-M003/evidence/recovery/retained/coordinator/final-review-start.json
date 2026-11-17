@@ -1,0 +1,21 @@
+{
+  "observedAt": "2026-11-15T21:28:33.396467+00:00",
+  "assignment": "d155e52e-9239-45cf-bab5-dfe904b42e29",
+  "actor": "AS-M003-capture:s1794778014.665471.32014",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173"
+  ],
+  "role": "final-reviewer",
+  "handoff": "data/AS-M003/evidence/final-review-handoff.md",
+  "stateRevision": 14,
+  "controlSequence": [
+    "assign final-reviewer confirmed old agent exit",
+    "start created new execution generation in same retained worktree"
+  ],
+  "actualProfileObservedInUI": "codex/gpt-6.1-sol/xhigh",
+  "currentLocalSettingsAndCatalogVerified": true,
+  "metadataAxes": "default/default; known MDD forwarding limitation, not qualified",
+  "contextProvenance": "Fresh launch-brief processing observed; reviewer reports new thread 01a1e11b-2e88-7ca0-8677-a15b10533d6f without resume. Distinct recorded execution from all implementation.",
+  "content": "90365754dd51b1d473784f53fa04d8cdd1a96e36d4a2efe7211cc84036b6d946",
+  "authority": "Existing explicit AS-M003 orchestration and independent final validation grant; no new implementation, publication or route authority."
+}

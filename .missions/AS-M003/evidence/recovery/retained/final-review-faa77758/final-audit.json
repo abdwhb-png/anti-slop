@@ -1,0 +1,157 @@
+{
+  "at": 1794780164.01322,
+  "filesCompared": 466,
+  "changedOrMissing": [],
+  "newProjectFiles": [],
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "branch": "fm/AS-M003-capture",
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\"valid\":true,\"issues\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "READMEChangedLines": [
+    "- This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides a bounded four-selector source-capture candidate through `workspace::capture`; AS-M003 whole-mission acceptance remains pending. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.\n",
+    "+ This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides bounded four-selector source capture through `workspace::capture`; the [AS-M003 mission state](.missions/AS-M003/state.json) owns its packet and whole-mission verdicts. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.\n",
+    "- The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00\u2013L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 now has a local candidate for all four source comparisons, retained inputs and exact-content rename attribution. Corrected staged capture was accepted; the complete candidate still requires packet examination and fresh independent whole-mission validation.\n",
+    "+ The [progressive first-release roadmap](docs/IMPLEMENTATION_ROADMAP.md) preserves the original L00\u2013L15 plan. AS-M001 is completed with independent acceptance in its [state](.missions/AS-M001/state.json). The AS-M002 configuration slice was recovered from the original implementation and validator chat records after its uncommitted worktree disappeared. The [recovery record](.missions/AS-M002/recovery/README.md) distinguishes historical acceptance, fresh verification and missing mission records. This branch is a review candidate; the original complete state/history and packet evidence have not been recovered. AS-M003 has a local implementation of all four source comparisons, retained inputs and exact-content rename attribution. Its [mission state](.missions/AS-M003/state.json) records packet examination and independent whole-mission validation.\n"
+  ],
+  "observationSourceBindingsVerified": true,
+  "priorFocusedEvidence": [
+    {
+      "argv": [
+        "node",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+        "--json"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "relevant_index_configuration_and_context_mutation_retries_a_bound_generation",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "working_and_untracked_mutations_retry_without_combining_views",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "explicit_base_is_resolved_once_even_when_the_reference_moves",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "owned_group_signals_reserve_the_leader_until_cleanup_finishes",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "working_ranges_absence_and_configuration_survive_later_edits",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    },
+    {
+      "argv": [
+        "/home/abdwhb/.cargo/bin/cargo",
+        "test",
+        "--frozen",
+        "--test",
+        "workspace",
+        "retained_count_total_bytes_and_sparse_input_are_bounded",
+        "--",
+        "--exact",
+        "--nocapture"
+      ],
+      "exit": 0,
+      "statusLines": []
+    }
+  ],
+  "inboxPending": [],
+  "stateRevision": 16
+}

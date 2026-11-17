@@ -1,0 +1,9 @@
+{
+  "linkedLibrary": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/libanti_slop.rlib",
+  "sha256": "7d093c2af0230e590148d19ea28984d7ef6fb3528b9e16d394f543882576f85c",
+  "matchingDependencyArtifacts": [
+    "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/libanti_slop-5be74591d0d79fa7.rlib"
+  ],
+  "probeSha256": "09b4cceb2170d6e8cca22dd45e9089c9edc2b536a1b48c7df923f1913fcc05df",
+  "sourceSha256": "26333871ffd7fc60257eb229c378c8cd08b28ece34eeb42fd23573b03ecead9a"
+}

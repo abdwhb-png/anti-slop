@@ -1,0 +1,96 @@
+{
+  "at": "2026-11-17T07:31:15.764612+00:00",
+  "authoritySha256": "1de1f18e0a792fd2b4e3b5ae8d031ca4fa71879b15857fd3e9f687057127840a",
+  "fetch": {
+    "argv": [
+      "git",
+      "-C",
+      "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+      "fetch",
+      "--unshallow",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "observedToolOutput": "From https://github.com/abdwhb-png/anti-slop\n * branch            main       -> FETCH_HEAD\n"
+  },
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+        "rev-parse",
+        "--is-shallow-repository",
+        "HEAD",
+        "refs/remotes/origin/main",
+        "FETCH_HEAD"
+      ],
+      "exit": 0,
+      "stdout": "false\ne8e7b8b4bca28aa397437083966228d3cdbefa67\ne8e7b8b4bca28aa397437083966228d3cdbefa67\ne8e7b8b4bca28aa397437083966228d3cdbefa67\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+        "merge-base",
+        "HEAD",
+        "origin/main"
+      ],
+      "exit": 0,
+      "stdout": "e8e7b8b4bca28aa397437083966228d3cdbefa67\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+        "merge-base",
+        "--is-ancestor",
+        "origin/main",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+        "merge-base",
+        "--is-ancestor",
+        "1560c240d30711865bb01e039bad03c10f865662",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+        "show",
+        "--no-patch",
+        "--format=%H %P %T",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "e8e7b8b4bca28aa397437083966228d3cdbefa67 d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add 1560c240d30711865bb01e039bad03c10f865662 3d3d07a1847e14463b638f794c7876711d2a2465\n",
+      "stderr": ""
+    }
+  ],
+  "preparedBase": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+  "originMain": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+  "target": "main",
+  "historyRewrite": false,
+  "stateSha256": "4c5d692d5b70bc90b2e2d712e1eb3891dc5aa6a4d77a681d31ce8dacaad6e5cb",
+  "journalSha256": "0df6a32fb1928460eb62b8aaa6014456d683eb1c2419c52ea2205c2ed65ee0d8",
+  "limits": "Observed origin/main and ancestry after the authorized unshallow fetch. Final committed head and coordinator review are recorded separately; no push or PR open occurred."
+}

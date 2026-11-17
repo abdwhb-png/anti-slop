@@ -1,0 +1,6 @@
+{
+  "step": "First explicit untracked-file whitespace audit after demonstration hash reconciliation",
+  "failure": "AssertionError at recorder line 30: expected git diff --no-index --check exit 0. Git returns 1 for a clean nonempty no-index diff, with empty diagnostics.",
+  "candidateFilesChanged": false,
+  "correction": "Probe actual Git exit behavior and require the clean result with no diagnostics; preserve this audit-recorder failure."
+}

@@ -26,35 +26,35 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+      "path": "../evidence/recovery/retained/report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/mode-omission-probe.json"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/mode-omission-probe.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/mode-probe.json"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/mode-probe.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/capture-probe.rs"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/capture-probe.rs"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/probe-library-identity.json"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/probe-library-identity.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/focused-checks.json"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/focused-checks.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../final-review-d155e52e/final-audit.json"
+      "path": "../evidence/recovery/retained/final-review-d155e52e/final-audit.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/final-review-start.json"
+      "path": "../evidence/recovery/retained/coordinator/final-review-start.json"
     },
     {
       "kind": "evidence",

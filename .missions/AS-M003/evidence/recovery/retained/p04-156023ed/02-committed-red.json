@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "scripts/ci/policy.py",
+    "whitespace",
+    "--base",
+    "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+  ],
+  "exit": 1
+}

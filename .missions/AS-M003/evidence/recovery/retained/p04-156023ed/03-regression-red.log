@@ -1,0 +1,24 @@
+test_raw_evidence_is_publishable_without_rewriting_bytes (test_policy.WhitespaceTests.test_raw_evidence_is_publishable_without_rewriting_bytes) ... FAIL
+
+======================================================================
+FAIL: test_raw_evidence_is_publishable_without_rewriting_bytes (test_policy.WhitespaceTests.test_raw_evidence_is_publishable_without_rewriting_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/scripts/ci/test_policy.py", line 241, in test_raw_evidence_is_publishable_without_rewriting_bytes
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : .missions/AS-M003/evidence/P01/preparation.diff:2: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P01/preparation.diff:2: new blank line at EOF.
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:2: trailing whitespace.
++ 
+.missions/AS-M003/evidence/P02/07-hold-format-check.log:2: new blank line at EOF.
+.missions/AS-M003/evidence/P03/03-capture-regressions.log:2: new blank line at EOF.
+.missions/AS-M003/evidence/P03/trial-staged-001/observation-staged-1.log:2: new blank line at EOF.
+CI policy failed: Command ['git', 'diff', '--check', '678e83472311738eb3db85629ad018b99f1d1624'] returned non-zero exit status 2.
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.146s
+
+FAILED (failures=1)

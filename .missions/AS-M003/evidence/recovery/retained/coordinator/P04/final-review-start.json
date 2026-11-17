@@ -1,0 +1,10 @@
+{
+  "assignment": "5823ce78-a5bb-43dd-a2fa-3ad2df852aca",
+  "actor": "AS-M003-capture:s1794784897.1580054.32156",
+  "role": "final-reviewer",
+  "actualProfileObservedInUI": "codex/gpt-6.1-sol/xhigh",
+  "sourceContent": "436028f9c93517a03a8e73c8ed7825928b7f694e54827acc69e4e7302bc7ec23",
+  "stateRevision": 19,
+  "provenance": "Fresh control-owned start after verified implementer stop. Real tmux pane observed reading frozen state, exact attributes, CI evidence and retained acceptance; a new CLI execution was launched without resume/fork. Distinct from all three implementation actors.",
+  "limits": "Profile forwarding and serving-side identity are not qualified; no route/account/model settings changed."
+}

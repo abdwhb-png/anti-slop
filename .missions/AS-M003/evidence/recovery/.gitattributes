@@ -1,0 +1,16 @@
+# Exact observed whitespace classes in byte-preserved recovered raw evidence.
+retained/committed-whitespace-reproduction.log whitespace=-blank-at-eol
+retained/coordinator/P01/kill-observation.stdout whitespace=-blank-at-eof
+retained/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log whitespace=-blank-at-eof
+retained/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log whitespace=-blank-at-eof
+retained/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log whitespace=-blank-at-eof
+retained/final-review-faa77758/capture_preserves_git_state_and_does_not_execute_filters_or_diff_helpers.log whitespace=-blank-at-eof
+retained/final-review-faa77758/exact_content_renames_keep_both_paths_and_reject_either_exclusion.log whitespace=-blank-at-eof
+retained/final-review-faa77758/four_comparisons_select_their_exact_sides_and_independent_context.log whitespace=-blank-at-eof
+retained/final-review-faa77758/owned_group_signals_reserve_the_leader_until_cleanup_finishes.log whitespace=-blank-at-eof
+retained/final-review-faa77758/relevant_index_configuration_and_context_mutation_retries_a_bound_generation.log whitespace=-blank-at-eof
+retained/final-review-faa77758/retained_configuration_and_ranges_share_the_actual_generation.log whitespace=-blank-at-eof
+retained/final-review-faa77758/working_modes_.log whitespace=-blank-at-eof
+retained/p04-156023ed/02-committed-red.log whitespace=-blank-at-eol
+retained/p04-156023ed/03-regression-red.log whitespace=-blank-at-eol
+retained/p04-156023ed/04-regression-red-exact-classes.log whitespace=-blank-at-eol

@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "kind": "state",
   "id": "AS-M003",
-  "revision": 20,
+  "revision": 21,
   "mission": {
     "kind": "mission",
     "id": "AS-M003",
     "revision": 2,
     "path": "../../docs/missions/AS-M003/r2.md"
   },
-  "status": "validating",
+  "status": "completed",
   "executionMode": "coordinated",
   "interruption": null,
   "history": "history.jsonl",
-  "lastSequence": 20,
+  "lastSequence": 21,
   "currentPacket": null,
   "attempts": [
     {
@@ -148,6 +148,30 @@
     {
       "kind": "evidence",
       "path": "evidence/ci-correction-approval.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/README.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/authority/repair-authority.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/integration-proof.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/path-map.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/principal-review/firstmate-repair-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "evidence/recovery/principal-review/evidence/parent-repair-verification.json"
     }
   ],
   "validation": {
@@ -155,5 +179,19 @@
     "id": "AS-M003-final-review",
     "revision": 3,
     "path": "results/final-r3.json"
+  },
+  "integration": {
+    "head": "1560c240d30711865bb01e039bad03c10f865662",
+    "target": "main",
+    "evidence": [
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/integration-proof.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/forge/merge-source-proof.json"
+      }
+    ]
   }
 }

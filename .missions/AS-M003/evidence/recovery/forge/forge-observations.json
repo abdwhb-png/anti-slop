@@ -1,0 +1,230 @@
+{
+  "observedAt": "2026-11-17 00:25:58 UTC",
+  "sources": [
+    "https://api.github.com/repos/abdwhb-png/anti-slop/pulls/2",
+    "https://api.github.com/repos/abdwhb-png/anti-slop/commits/1560c240d30711865bb01e039bad03c10f865662/check-runs"
+  ],
+  "pr": {
+    "url": "https://github.com/abdwhb-png/anti-slop/pull/2",
+    "state": "closed",
+    "merged": true,
+    "mergedAt": "2026-11-16T22:24:28Z",
+    "mergeCommit": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+    "head": "1560c240d30711865bb01e039bad03c10f865662",
+    "base": "main",
+    "body": "## Summary\n\nAdd the AS-M003 library boundary for capturing selected Git changes and explicit supporting context as immutable, attributable inputs. Callers can choose staged, unstaged, local or an exact supplied base, retain the actual source/configuration bytes, and receive explicit failure when the capture is incomplete, unstable or exceeds its limits.\n\nThe implementation shares the existing configuration owner, preserves literal exclusions and exact rename attribution, and bounds file acquisition and owned Git subprocesses. This PR also includes the previously approved MDD v0.5 skill transition, mission preparation and retained execution evidence. No analysis verdict or new product CLI is introduced.\n\nThe CI publication correction preserves every historical evidence byte. Native Git attributes except only the observed whitespace class for each of 34 named raw evidence files; source, documentation, maintained metadata, unrelated evidence and other whitespace classes retain their checks. Three integration regressions exercise the actual policy entrypoint in real Git repositories. [Correction and byte-preservation audit](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P04/13-return-audit.json).\n\n<!-- pr-demonstration:start -->\n## Demonstration\n\nA library caller can capture the intended Git comparison, inspect its exact before/after bytes and keep separate supporting context even after the files change.\n\n### Follow the journey\n\n1. **Library caller — choose the comparison and explicit context.** The real fixture gives `a.ts` four different contents: `base`, `new head`, `index` and `working`. The observed captures are:\n\n   | Selection | Before | After | Separate context |\n   | --- | --- | --- | --- |\n   | Staged | HEAD: `new head` | Index: `index` | Working: `working` |\n   | Unstaged | Index: `index` | Working: `working` | Working: `working` |\n   | Local | HEAD: `new head` | Working: `working` | Working: `working` |\n   | Explicit base | Supplied commit: `base` | Working: `working` | Working: `working` |\n\n   The explicit base is resolved once and compared directly; the fixture distinguishes it from merge-base. [Actual observed output](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log).\n\n2. **Library caller — keep captured bytes after files change.** The public-boundary regression edits the originals after capture and verifies that retained source bytes, configuration, ranges and generation attribution still describe the captured input. [Executable integration scenarios](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/tests/workspace.rs), including `working_ranges_absence_and_configuration_survive_later_edits`.\n\n3. **Library caller — reject excluded, missing or oversized inputs explicitly.** Excluded required context, missing objects and resource-limit violations produce explicit errors. The tests also verify that filters/helpers do not execute and owned stalled Git processes are cleaned up. [Capture regression results](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P03/03-capture-regressions.log).\n\n### Try it\n\nNo hosted trial applies: this change exposes a Rust library boundary. On Linux with the repository's pinned toolchain and dependencies available, check out this PR and run:\n\n```sh\ncargo test --frozen --test workspace four_comparisons_select_their_exact_sides_and_independent_context -- --exact --nocapture\ncargo test --frozen --test workspace working_ranges_absence_and_configuration_survive_later_edits -- --exact\ncargo test --frozen --test workspace exclusions_required_inputs_and_workspace_boundaries_are_explicit -- --exact\n```\n\nThe first command prints the four comparisons above; the next two exercise retained inputs and explicit rejection through the real library.\n\n### What remains limited\n\nCapture is qualified locally on Linux. It does not claim a filesystem-wide atomic snapshot, analyzer execution, durable analysis runs, cold-disk performance or complete ADR-007 production-budget qualification. Controlled warm debug observations are retained with their sampling limits, including the slowest observed case. All admitted candidates count toward capture limits, including unchanged working inputs. No-Mistakes was not run.\n\n<details>\n<summary>Source, retained evidence and checks</summary>\n\n- **Source:** PR head `1560c240d30711865bb01e039bad03c10f865662`, based on `d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add`. The capture source and fixtures remain byte-identical to the independently accepted implementation. The CI correction and its regression coverage were checked on the current candidate; committed source applicability and the remote run were verified separately. Historical records retain their original revision and authority limits.\n- **Checks:** the final local `scripts/ci/check.sh` passed: 70 Rust tests, 19 Python policy tests, formatting, build, Clippy, doctests, schema freshness and actual headless editor conformance. [Current local CI receipt](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P04/10-stable-ci.json). [Remote Linux CI](https://github.com/abdwhb-png/anti-slop/actions/runs/43775569101) passed for this PR head, including the preserved raw evidence. The original failed run remains historical evidence.\n- **Independent acceptance:** the fresh final reviewer accepted the complete corrected AS-M003 r2 outcome after the CI correction, exercised the affected policy boundary and checked applicability of unchanged capture and measurement evidence. [Immutable final result](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/results/final-r3.json). Detailed worker reports referenced outside the worktree remain in the local task archive; this branch alone is not a portable archive of those external records.\n- **TDD exception:** an earlier comparison extension was implemented before a valid RED. The user explicitly approved retaining it with the discrepancy recorded, complete checks and independent final review. [Exact approved exception](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P02-tdd-exception-approved.json). Subsequent corrective changes have retained genuine RED/GREEN evidence.\n- **Measurements:** [renewed controlled capture observations](https://github.com/abdwhb-png/anti-slop/tree/1560c240d30711865bb01e039bad03c10f865662/.missions/AS-M003/evidence/P03); reproducible commands and limits are in the [README](https://github.com/abdwhb-png/anti-slop/blob/1560c240d30711865bb01e039bad03c10f865662/README.md). These are observations, not production performance guarantees.\n\n</details>\n<!-- pr-demonstration:end -->\n\n## Delivery status\n\nDraft PR for review, with independent local acceptance retained. The mission remains `validating` until verified integration. Publication authority is separate from the earlier execution grant; merge is not authorized.\n"
+  },
+  "checks": [
+    {
+      "name": "Linux CI",
+      "status": "completed",
+      "conclusion": "success",
+      "headSha": "1560c240d30711865bb01e039bad03c10f865662",
+      "url": "https://github.com/abdwhb-png/anti-slop/actions/runs/43775569101/job/133000966532",
+      "completedAt": "2026-11-15T23:35:39Z"
+    }
+  ],
+  "stateValidation": {
+    "valid": false,
+    "issues": [
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/final-r1/rejected-source-archive.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P01-C01/cleanup-regression.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P01-C01/kill-observation-green.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P01-C01/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P01/kill-regression-red.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P01/source-review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P02/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/history.jsonl",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../coordinator/P03/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/packets/P03-r1.md",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/final-r1/rejected-source-archive.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/packets/P04-r1.md",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../remote-ci-outcome.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/final-review-start.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/capture-probe.rs"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/final-audit.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/focused-checks.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/mode-omission-probe.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/mode-probe.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-d155e52e/probe-library-identity.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r1.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-d155e52e-9239-45cf-bab5-dfe904b42e29.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r3.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-5823ce78/evidence-inspection.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r3.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-5823ce78/final-audit.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r3.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-5823ce78/focused-checks.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r3.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../final-review-5823ce78/initial-audit.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/final-r3.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-C01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01-C01/cleanup-regression.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-C01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01-C01/kill-observation-green.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-C01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01-C01/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-C01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01/candidate-source-manifest.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01/kill-observation.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01/kill-regression-red.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P01/source-review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P01-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P02-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P02/focused-checks.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P02-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P02/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P02-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-6508c722-06cb-4a2a-a694-d4bd33999ec4.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P03-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P03/focused-checks.json"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P03-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../coordinator/P03/review.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P03-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md"
+      },
+      {
+        "path": "/home/abdwhb/engineering/firstmate-orchestration-test/projects/anti-slop/.missions/AS-M003/results/P04-r1-review.json",
+        "rule": "reference-missing",
+        "message": "Referenced file is unavailable: ../../../../report-156023ed-1926-49dc-a382-4f58dbc884e9.md"
+      }
+    ]
+  },
+  "limitations": [
+    "Observed forge state is not independent semantic acceptance or historical publication authority."
+  ]
+}

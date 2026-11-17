@@ -1,0 +1,25 @@
+{
+  "observedAt": "2026-11-17T06:33:04.144800+00:00",
+  "exactOldEndpoint": "firstmate:fm-AS-M003-capture",
+  "endpointExit": 1,
+  "endpointOutput": "can't find window: fm-AS-M003-capture\n",
+  "recordedReviewerPids": [
+    {
+      "pid": 1594151,
+      "exists": false
+    },
+    {
+      "pid": 1581890,
+      "exists": false
+    },
+    {
+      "pid": 3553909,
+      "exists": false
+    },
+    {
+      "pid": 3108050,
+      "exists": false
+    }
+  ],
+  "scope": "Exact recorded prior task endpoint and reviewer identities only; no old-home writes/control."
+}

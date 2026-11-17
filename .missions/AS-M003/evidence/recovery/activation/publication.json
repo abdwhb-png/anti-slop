@@ -1,0 +1,25 @@
+{
+  "startedAt": "2026-11-17T07:09:09.070746+00:00",
+  "selectedCandidateSha256": "55ef8e2180f1e81c11e0769ccd7b315ce200eed1784f4a79d7ba9f2d5edee2c4",
+  "previousStateSha256": "ab0aec4a29813447df08339a4f49afbc7706d72a21ddee950590a66e102262cc",
+  "previousJournalSha256": "97eb6861def7a3265da3482a497c024ffa28926c16502aaeed0ba7aedded1c19",
+  "previousFiles": "previous/.missions/AS-M003/",
+  "rollbackExercised": false,
+  "limits": "Guarded synchronous two-file publication with atomic replacement per file and retained previous bytes. The pair is not a crash-atomic filesystem transaction; rollback on synchronous failure is implemented, not fault-injected.",
+  "actualStateCheck": {
+    "argv": [
+      "node",
+      "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.agents/skills/mission-driven-dev/scripts/validate.mjs",
+      "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop/.missions/AS-M003/state.json",
+      "--json"
+    ],
+    "cwd": "/home/abdwhb/.treehouse/anti-slop-d03436/1/anti-slop",
+    "exit": 0,
+    "stdout": "{\"valid\":true,\"issues\":[]}\n",
+    "stderr": ""
+  },
+  "outcome": "completed locally",
+  "stateSha256": "4c5d692d5b70bc90b2e2d712e1eb3891dc5aa6a4d77a681d31ce8dacaad6e5cb",
+  "journalSha256": "0df6a32fb1928460eb62b8aaa6014456d683eb1c2419c52ea2205c2ed65ee0d8",
+  "finishedAt": "2026-11-17T07:09:09.145883+00:00"
+}

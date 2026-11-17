@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "python3",
+    "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m003-closure/check-recovery-whitespace.py"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "AssertionError at line 15: expected git no-index --check returncode in (0, 1, 2); observed returncode 3 on retained/committed-whitespace-reproduction.log.",
+  "rootCause": "Recorder rejected the actual combined diff/nonempty whitespace-error result. The focused probe retained full native diagnostics with exit 3 and empty stderr.",
+  "correction": "Admit exit 3 only during the before-observation scan. The final clean check still requires exit 0 or 1 and empty diagnostics. No raw file bytes or policy implementation changed."
+}

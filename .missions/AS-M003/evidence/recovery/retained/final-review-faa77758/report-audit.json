@@ -1,0 +1,95 @@
+{
+  "report": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-faa77758-5126-42e8-875d-b1ceaad72f82.md",
+  "sha256": "46484a23c8496babfec07687566f333dc93c4fe2959f6615a749aaf0d4c0140f",
+  "words": 3511,
+  "localLinks": [
+    {
+      "target": "worktree/docs/missions/AS-M003/r2.md",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/initial-audit.json",
+      "exists": true
+    },
+    {
+      "target": "report-e56f7570-c50b-4a74-b58c-b3149c43c30b.md",
+      "exists": true
+    },
+    {
+      "target": "report-d155e52e-9239-45cf-bab5-dfe904b42e29.md",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/source-evidence-audit.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/src/workspace/acquire.rs:90",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/rename-mode-probe.rs",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/rename-mode-probe.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/.missions/AS-M003/evidence/P02-tdd-exception-approved.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/.missions/AS-M003/evidence/P02/tdd-gap.md",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/historical-evidence-inspection.json",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/focused-checks.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/.missions/AS-M003/evidence/P03/04-full-ci.log",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/retained-ci-inspection.json",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/audit-recorder-failure.json",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/final-audit.json",
+      "exists": true
+    },
+    {
+      "target": "final-review-faa77758/measurement-inspection.json",
+      "exists": true
+    },
+    {
+      "target": "worktree/.missions/AS-M003/evidence/P02/26-nonvisual-demo.log",
+      "exists": true
+    }
+  ],
+  "changedProjectFiles": [],
+  "pendingInbox": [],
+  "actor": "AS-M003-capture:s1794779720.916078.13741",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173",
+    "AS-M003-capture:s1794779016.795528.15663"
+  ],
+  "freshContext": true,
+  "scope": "mission",
+  "outcome": "accepted",
+  "stateRevision": 16,
+  "projectRecordsWritten": false
+}

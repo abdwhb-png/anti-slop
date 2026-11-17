@@ -1,0 +1,12 @@
+{
+  "failedCheck": "initial final-preservation recorder assertion",
+  "changedOrMissing": [],
+  "unfilteredNewNames": [
+    "src/workspace/.gitkeep"
+  ],
+  "nonexistentTrackedNames": [
+    "src/workspace/.gitkeep"
+  ],
+  "cause": "Initial snapshot retained existing files only. Final inventory accidentally included the already deleted tracked reservation marker. Compare existing files consistently; preserve this failed recorder attempt.",
+  "productChanged": false
+}

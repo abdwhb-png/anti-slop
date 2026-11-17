@@ -1,0 +1,12 @@
+{
+  "uid": 1000,
+  "modeDuringCapture": "000",
+  "argv": [
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-fixture",
+    "local"
+  ],
+  "exit": 0,
+  "stdout": "ERROR Unavailable(\"Required path is unavailable or contains a symlink: a.ts\")\n",
+  "stderr": ""
+}

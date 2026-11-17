@@ -1,0 +1,3 @@
+/home/abdwhb/.cargo/bin/rustc --edition=2024 --crate-name final_review_probe /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe.rs --extern anti_slop=/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/libanti_slop.rlib -L dependency=/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps -o /home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe
+
+exit=0

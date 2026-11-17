@@ -1,0 +1,14 @@
+{
+  "conclusion": "success",
+  "databaseId": 43775569101,
+  "event": "pull_request",
+  "headSha": "1560c240d30711865bb01e039bad03c10f865662",
+  "status": "completed",
+  "url": "https://github.com/abdwhb-png/anti-slop/actions/runs/43775569101",
+  "workflowName": "CI",
+  "jobId": 133000966532,
+  "policyTests": 19,
+  "rustTests": 70,
+  "defaultIgnoredRustEntrypoints": 2,
+  "checks": "All workflow steps and the full repository verification passed; actual logs inspected via the GitHub connector. No check waived."
+}

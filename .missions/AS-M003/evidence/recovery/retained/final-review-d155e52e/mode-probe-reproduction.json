@@ -1,0 +1,50 @@
+{
+  "fixture": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+  "baseline": {
+    "bytes": "same bytes\n",
+    "filesystemMode": "0744",
+    "gitMode": "100755"
+  },
+  "after": {
+    "bytes": "same bytes\n",
+    "filesystemMode": "0654",
+    "gitMode": "100644"
+  },
+  "gitComparisonArgv": [
+    "git",
+    "-C",
+    "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+    "-c",
+    "core.filemode=true",
+    "diff",
+    "--raw",
+    "HEAD",
+    "--"
+  ],
+  "probeArgv": [
+    [
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+      "staged"
+    ],
+    [
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+      "unstaged"
+    ],
+    [
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+      "local"
+    ],
+    [
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/capture-probe",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-d155e52e/mode-omission-fixture",
+      "base"
+    ]
+  ],
+  "expectedWorkingCapture": "One a.ts change: same bytes, before Executable, after Regular; Staged remains empty.",
+  "observed": "All captures return success; every working comparison is empty.",
+  "libraryIdentity": "probe-library-identity.json",
+  "observation": "mode-omission-probe.json"
+}

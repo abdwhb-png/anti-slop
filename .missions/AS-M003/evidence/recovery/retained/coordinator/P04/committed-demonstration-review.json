@@ -1,0 +1,15 @@
+{
+  "stage": "review",
+  "head": "1560c240d30711865bb01e039bad03c10f865662",
+  "report": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+  "complete": true,
+  "outcome": "accepted",
+  "scenes": [
+    "comparison",
+    "retained",
+    "failure"
+  ],
+  "criteria": [
+    "capture-contract"
+  ]
+}

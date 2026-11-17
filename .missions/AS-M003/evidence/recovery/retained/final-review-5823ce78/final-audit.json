@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-15T23:32:27.599767+00:00",
+  "actor": "AS-M003-capture:s1794784897.1580054.32156",
+  "head": "aab8746a39859edccd1e4326fef45c5e8bf0959e",
+  "branch": "fm/AS-M003-capture",
+  "filesCompared": 479,
+  "changedOrMissing": [],
+  "newProjectFiles": [],
+  "indexEntriesUnchanged": true,
+  "status": " M .missions/AS-M003/history.jsonl\n M .missions/AS-M003/state.json\n M scripts/ci/test_policy.py\n?? .missions/AS-M003/evidence/.gitattributes\n?? .missions/AS-M003/evidence/P04/\n?? .missions/AS-M003/evidence/ci-correction-approval.json\n?? .missions/AS-M003/packets/P04-r1.md\n?? .missions/AS-M003/results/P04-r1-review.json\n",
+  "stateValidation": {
+    "exit": 0,
+    "output": "{\"valid\":true,\"issues\":[]}"
+  },
+  "stateRevision": 19,
+  "pendingInbox": [],
+  "report": {
+    "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/report-5823ce78-a5bb-43dd-a2fa-3ad2df852aca.md",
+    "sha256": "cf1a7c33e0f99b9cade5743baf2595d45247f51d8d16f3a9a48325ff3eae8b95",
+    "words": 2213,
+    "missingLinksExceptThisAudit": []
+  }
+}

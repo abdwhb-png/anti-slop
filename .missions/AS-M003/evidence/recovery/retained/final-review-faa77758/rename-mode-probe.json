@@ -1,0 +1,167 @@
+{
+  "build": {
+    "argv": [
+      "/home/abdwhb/.cargo/bin/rustc",
+      "--edition=2024",
+      "--crate-name",
+      "independent_rename_mode_probe",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-mode-probe.rs",
+      "--extern",
+      "anti_slop=/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/libanti_slop.rlib",
+      "-L",
+      "dependency=/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps",
+      "-o",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-mode-probe"
+    ],
+    "exit": 0,
+    "sourceSha256": "05804469f92d88d14eecd708c9763e7de7e866acd9fdfd9771fa455b0ec8e204",
+    "librarySha256": "0b6323989f6bcc3bb371ed82bba811fe32e48196733e4052fae9b366f92dcd21",
+    "matchingDependencies": [
+      "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/libanti_slop-5be74591d0d79fa7.rlib"
+    ]
+  },
+  "observations": [
+    {
+      "case": "paired",
+      "argv": [
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-mode-probe",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-paired-fixture",
+        "paired"
+      ],
+      "exit": 0,
+      "stdout": "PASS Unstaged paired=true changes=1\nPASS Local paired=true changes=1\nPASS Base(\"HEAD\") paired=true changes=1\n",
+      "stderr": "",
+      "fixtureGit": [
+        {
+          "argv": [
+            "init",
+            "-q"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "config",
+            "core.filemode",
+            "true"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "add",
+            "a.ts"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "commit",
+            "-qm",
+            "baseline"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "ec04cd7bb043050285bf9ca2dc0fb10d354e6ddb\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "ec04cd7bb043050285bf9ca2dc0fb10d354e6ddb\n",
+          "stderr": ""
+        }
+      ],
+      "indexUnchanged": true,
+      "headUnchanged": true
+    },
+    {
+      "case": "unpaired",
+      "argv": [
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-mode-probe",
+        "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-faa77758/rename-unpaired-fixture",
+        "unpaired"
+      ],
+      "exit": 0,
+      "stdout": "PASS Unstaged paired=false changes=2\nPASS Local paired=false changes=2\nPASS Base(\"HEAD\") paired=false changes=2\n",
+      "stderr": "",
+      "fixtureGit": [
+        {
+          "argv": [
+            "init",
+            "-q"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "config",
+            "core.filemode",
+            "true"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "add",
+            "a.ts"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "commit",
+            "-qm",
+            "baseline"
+          ],
+          "exit": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "3fb351b770a6eb2393a5d219fe2c43687bd2339f\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit": 0,
+          "stdout": "3fb351b770a6eb2393a5d219fe2c43687bd2339f\n",
+          "stderr": ""
+        }
+      ],
+      "indexUnchanged": true,
+      "headUnchanged": true
+    }
+  ]
+}

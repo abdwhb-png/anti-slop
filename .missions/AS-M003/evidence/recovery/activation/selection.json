@@ -1,0 +1,50 @@
+{
+  "selectedAt": "2026-11-17T07:07:57.775312+00:00",
+  "originalProposedCandidateSha256": "ed42b719b27bcdd8ac479d49b18a7579b9eeadd92e607bccdf9aeef31f249ae2",
+  "selectedCandidateSha256": "55ef8e2180f1e81c11e0769ccd7b315ce200eed1784f4a79d7ba9f2d5edee2c4",
+  "previousStateSha256": "ab0aec4a29813447df08339a4f49afbc7706d72a21ddee950590a66e102262cc",
+  "previousJournalSha256": "97eb6861def7a3265da3482a497c024ffa28926c16502aaeed0ba7aedded1c19",
+  "selectedStateSha256": "4c5d692d5b70bc90b2e2d712e1eb3891dc5aa6a4d77a681d31ce8dacaad6e5cb",
+  "selectedJournalSha256": "0df6a32fb1928460eb62b8aaa6014456d683eb1c2419c52ea2205c2ed65ee0d8",
+  "event": {
+    "schemaVersion": 1,
+    "kind": "event",
+    "sequence": 21,
+    "stateRevision": 21,
+    "at": "2026-11-17T07:07:57.775312+00:00",
+    "actor": "as-m003-closure:record-repair",
+    "mission": {
+      "kind": "mission",
+      "id": "AS-M003",
+      "revision": 2,
+      "path": "../../docs/missions/AS-M003/r2.md"
+    },
+    "status": "completed",
+    "interruption": null,
+    "reason": "Activated local completion after firstmate independently accepted the bounded reference repair and its portable evidence. The original final-r3 remains independent product acceptance. Exact originals, 48 path-only replacements and the repaired 20-event journal prefix are preserved; source publication, successful exact-head CI and identical merge tree are retained. The current dated authority acknowledges the existing merge while historical merge permission remains unlocated. This records local mission closure only; the repair is uncommitted and unpublished, with no new commit, publication, merge or later-mission authority.",
+    "evidence": [
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/README.md"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/authority/repair-authority.md"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/integration-proof.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/principal-review/firstmate-repair-review.json"
+      },
+      {
+        "kind": "evidence",
+        "path": "evidence/recovery/principal-review/evidence/parent-repair-verification.json"
+      }
+    ]
+  },
+  "review": "../principal-review/firstmate-repair-review.json",
+  "publicationAuthority": "Local state/journal activation only; commit/publication withheld."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "recordedOn": "2026-11-17",
+  "sourceHead": "1560c240d30711865bb01e039bad03c10f865662",
+  "target": "main",
+  "mergeCommit": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+  "sourceTree": "3d3d07a1847e14463b638f794c7876711d2a2465",
+  "mergeTree": "3d3d07a1847e14463b638f794c7876711d2a2465",
+  "pullRequest": "https://github.com/abdwhb-png/anti-slop/pull/2",
+  "independentSourceAcceptance": "../../results/final-r3.json",
+  "originalAcceptanceBytes": "originals/.missions/AS-M003/results/final-r3.json",
+  "sourceApplicability": "source-applicability.json",
+  "primaryObservations": [
+    "forge/forge-observations.json",
+    "forge/merge-source-proof.json"
+  ],
+  "ci": {
+    "head": "1560c240d30711865bb01e039bad03c10f865662",
+    "conclusion": "success",
+    "url": "https://github.com/abdwhb-png/anti-slop/actions/runs/43775569101",
+    "retainedObservation": "retained/remote-ci-corrected.json"
+  },
+  "publicationAuthority": [
+    "retained/delivery-authority-2026-11-15.md",
+    "retained/ci-correction-delivery-authority.md"
+  ],
+  "publicationChain": [
+    "retained/publication-source-provenance.json",
+    "retained/remote-ci-outcome.json",
+    "retained/corrected-publication.json",
+    "retained/coordinator/P04/committed-demonstration-review.json",
+    "retained/demonstration-reader-ci-green.md"
+  ],
+  "historicalMergeDecision": {
+    "status": "unlocated",
+    "presentDayDisposition": "authority/repair-authority.md",
+    "meaning": "The current dated authority acknowledges the existing merge and permits this record correction and subsequent evidence-based closure. It does not recover, invent or backdate historical merge permission."
+  },
+  "limits": "Supplied primary forge observations are attributed to firstmate; no network, new CI, merge or fresh independent product review was performed in this repair. The accepted final-r3 verdict remains the original product acceptance. Commit/publication of the repair and activation of the closure candidate are separately withheld."
+}

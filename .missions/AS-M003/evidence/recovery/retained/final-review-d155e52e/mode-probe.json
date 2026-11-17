@@ -1,0 +1,77 @@
+[
+  {
+    "mode": "0o654",
+    "gitIndex": "100644 c735202fb0d3c35e7fa4675a376d62142f607ef2 0\ta.ts\n",
+    "gitDiff": "",
+    "staged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=57055b094f6c7f04d7886b8c967b3a8eba99bed8cf150b22ad68110959089b6e attempts=1\n",
+      "stderr": ""
+    },
+    "unstaged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=b86bb9d54e85e745ee469fb2fbd689fc16f3b08011a73f4a93dc7c64fcd053e1 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Index, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "local": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=6511e214d01b4e6418fa2cc8b9f2c2f9c90ef4d22083671e22de8a11603b94d0 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Head, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "base": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=27dca433659a2ddb31469a67efdd39d9b3b12bb28e3269335a4920d17951d8e7 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Base, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    }
+  },
+  {
+    "mode": "0o645",
+    "gitIndex": "100644 c735202fb0d3c35e7fa4675a376d62142f607ef2 0\ta.ts\n",
+    "gitDiff": "",
+    "staged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=57055b094f6c7f04d7886b8c967b3a8eba99bed8cf150b22ad68110959089b6e attempts=1\n",
+      "stderr": ""
+    },
+    "unstaged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=b86bb9d54e85e745ee469fb2fbd689fc16f3b08011a73f4a93dc7c64fcd053e1 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Index, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "local": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=6511e214d01b4e6418fa2cc8b9f2c2f9c90ef4d22083671e22de8a11603b94d0 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Head, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "base": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=27dca433659a2ddb31469a67efdd39d9b3b12bb28e3269335a4920d17951d8e7 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Base, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    }
+  },
+  {
+    "mode": "0o744",
+    "gitIndex": "100644 c735202fb0d3c35e7fa4675a376d62142f607ef2 0\ta.ts\n",
+    "gitDiff": ":100644 100755 c735202 0000000 M\ta.ts\n",
+    "staged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=57055b094f6c7f04d7886b8c967b3a8eba99bed8cf150b22ad68110959089b6e attempts=1\n",
+      "stderr": ""
+    },
+    "unstaged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=b86bb9d54e85e745ee469fb2fbd689fc16f3b08011a73f4a93dc7c64fcd053e1 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Index, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "local": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=6511e214d01b4e6418fa2cc8b9f2c2f9c90ef4d22083671e22de8a11603b94d0 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Head, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    },
+    "base": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=27dca433659a2ddb31469a67efdd39d9b3b12bb28e3269335a4920d17951d8e7 attempts=1\nCHANGE \"a.ts\" before=Some((\"a.ts\", Base, Some(Regular), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10])) after=Some((\"a.ts\", Working, Some(Executable), [115, 97, 109, 101, 32, 98, 121, 116, 101, 115, 10]))\n",
+      "stderr": ""
+    }
+  }
+]

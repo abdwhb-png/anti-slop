@@ -1,0 +1,45 @@
+{
+  "baseCommit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d",
+      "bytes": 16052
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "bytes": 239
+    },
+    {
+      "path": "src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "bytes": 19096
+    },
+    {
+      "path": "src/workspace/mod.rs",
+      "sha256": "843ea9e16063819a697fcd51f3b17fc08061bbf36d852bba4900a579ae488cf9",
+      "bytes": 15536
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "sha256": "9401934c580df51925325bebc60ec1498ba9765793a20e358544e5a416ca200a",
+      "bytes": 4220
+    },
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "c545f4a0e7df4f92141efd28d10417d04d643d418f747184c4cbbcbe863fa111",
+      "bytes": 6526
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "ddaf80cf7c5434e6c918ea1f5950458ac6812e8e22d50ba9df07d89ce5e2766c",
+      "bytes": 34267
+    }
+  ],
+  "deleted": [
+    "src/workspace/.gitkeep"
+  ],
+  "candidateContent": "b6f985f026fa0899ed9c4aa401a369650745feed86af58678ba2858a802133f2",
+  "report": "report-cc7e6b14-818f-41b2-8135-f0bb9c5d01cf.md"
+}

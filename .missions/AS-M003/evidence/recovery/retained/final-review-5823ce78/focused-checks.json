@@ -1,0 +1,133 @@
+[
+  {
+    "name": "state",
+    "argv": [
+      "node",
+      "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/mdd-bundle/scripts/validate.mjs",
+      ".missions/AS-M003/state.json",
+      "--json"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:32.818751+00:00",
+    "elapsedSeconds": 0.04165482008829713,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/state.log",
+    "sha256": "0b991f6dea584a336b927daec0f7c74d3257d3103598a56857f1371b8f48cd22"
+  },
+  {
+    "name": "whitespace-tests",
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "test_policy.WhitespaceTests",
+      "-v"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/scripts/ci",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:32.860599+00:00",
+    "elapsedSeconds": 1.090828720945865,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/whitespace-tests.log",
+    "sha256": "0d3dc9af1dd02e9f0b636e71dd4545c3a604668c3f953d79f08a097e36332dfe"
+  },
+  {
+    "name": "actual-whitespace",
+    "argv": [
+      "python3",
+      "scripts/ci/policy.py",
+      "whitespace",
+      "--base",
+      "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:33.951648+00:00",
+    "elapsedSeconds": 0.05885000107809901,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/actual-whitespace.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "four_comparisons_select_their_exact_sides_and_independent_context",
+    "argv": [
+      "cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "four_comparisons_select_their_exact_sides_and_independent_context",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:34.010718+00:00",
+    "elapsedSeconds": 0.4088993240147829,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/four_comparisons_select_their_exact_sides_and_independent_context.log",
+    "sha256": "5ab2cfb19a7eea4d377b2407affa7920bdc7abede6142c8c7ef42ab98763e4c4"
+  },
+  {
+    "name": "working_ranges_absence_and_configuration_survive_later_edits",
+    "argv": [
+      "cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "working_ranges_absence_and_configuration_survive_later_edits",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:34.419855+00:00",
+    "elapsedSeconds": 0.3922089231200516,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/working_ranges_absence_and_configuration_survive_later_edits.log",
+    "sha256": "a071382a7876dfda71b6f6ab92c3ce7ba8d4fb2e269d649faac3a056ae218905"
+  },
+  {
+    "name": "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+    "argv": [
+      "cargo",
+      "test",
+      "--frozen",
+      "--test",
+      "workspace",
+      "exclusions_required_inputs_and_workspace_boundaries_are_explicit",
+      "--",
+      "--exact",
+      "--nocapture"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2"
+    },
+    "startedAt": "2026-11-15T23:24:34.812350+00:00",
+    "elapsedSeconds": 0.24374043382704258,
+    "exit": 0,
+    "log": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/final-review-5823ce78/exclusions_required_inputs_and_workspace_boundaries_are_explicit.log",
+    "sha256": "cbc023cec7157b2f60153db712e6e5a316b4d43592743967df08f02281af9a0f"
+  }
+]

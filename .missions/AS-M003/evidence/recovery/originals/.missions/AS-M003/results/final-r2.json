@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M003-final-review",
+  "revision": 2,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M003",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M003/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "AS-M003-capture:s1794779720.916078.13741",
+  "implementers": [
+    "AS-M003-capture:s1794768506.3553234.1173",
+    "AS-M003-capture:s1794779016.795528.15663"
+  ],
+  "freshContext": true,
+  "outcome": "accepted",
+  "summary": "The fresh independent reviewer accepts the complete corrected r2 capture outcome with the exact user-approved earlier TDD exception and documented bounds retained. The original mode defect is corrected through genuine RED/GREEN and independently exercised at selection/rename/context/range boundaries. Actual current source hashes, complete contract/design, corrected CI, negative evidence and renewed controlled observations support acceptance; no outstanding blocking defect or scope decision remains. Integration, publication and complete analysis qualification are not claimed.",
+  "deliveryAssessment": {
+    "commit": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+    "decision": "continue",
+    "rationale": "The accepted complete capture boundary remains one coherent future main delivery. Current authority stops with a reviewed local candidate; commit, publication and integration remain separately unauthorized."
+  },
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../../../../report-faa77758-5126-42e8-875d-b1ceaad72f82.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/initial-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/final-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/source-evidence-audit.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/focused-checks.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/rename-mode-probe.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/retained-ci-inspection.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/measurement-inspection.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../../final-review-faa77758/historical-evidence-inspection.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/08-source-identity.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02-tdd-exception-approved.json"
+    }
+  ]
+}

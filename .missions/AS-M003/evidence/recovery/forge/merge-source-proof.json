@@ -1,0 +1,23 @@
+{
+  "observedAt": "2026-11-17 00:29:54 UTC",
+  "prUrl": "https://github.com/abdwhb-png/anti-slop/pull/2",
+  "headCommit": "1560c240d30711865bb01e039bad03c10f865662",
+  "headTree": "3d3d07a1847e14463b638f794c7876711d2a2465",
+  "mergeCommit": "e8e7b8b4bca28aa397437083966228d3cdbefa67",
+  "mergeTree": "3d3d07a1847e14463b638f794c7876711d2a2465",
+  "identicalGitTrees": true,
+  "ci": {
+    "url": "https://github.com/abdwhb-png/anti-slop/actions/runs/43775569101",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "1560c240d30711865bb01e039bad03c10f865662",
+    "event": "pull_request",
+    "runAttempt": 1
+  },
+  "sources": [
+    "https://api.github.com/repos/abdwhb-png/anti-slop/git/commits/1560c240d30711865bb01e039bad03c10f865662",
+    "https://api.github.com/repos/abdwhb-png/anti-slop/git/commits/e8e7b8b4bca28aa397437083966228d3cdbefa67",
+    "https://api.github.com/repos/abdwhb-png/anti-slop/actions/runs/43775569101"
+  ],
+  "meaning": "The merged main Git tree equals the successful final PR-head Git tree. This does not repair missing proof references or by itself prove independent acceptance and publication authority."
+}

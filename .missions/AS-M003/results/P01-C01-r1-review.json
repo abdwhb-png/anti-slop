@@ -31,19 +31,19 @@
   "evidence": [
     {
       "kind": "evidence",
-      "path": "../../../../report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
+      "path": "../evidence/recovery/retained/report-02753f98-756b-4bac-93e1-c2301cb37b10.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01-C01/review.md"
+      "path": "../evidence/recovery/retained/coordinator/P01-C01/review.md"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01-C01/kill-observation-green.json"
+      "path": "../evidence/recovery/retained/coordinator/P01-C01/kill-observation-green.json"
     },
     {
       "kind": "evidence",
-      "path": "../../../../coordinator/P01-C01/cleanup-regression.json"
+      "path": "../evidence/recovery/retained/coordinator/P01-C01/cleanup-regression.json"
     },
     {
       "kind": "evidence",

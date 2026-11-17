@@ -1,0 +1,51 @@
+{
+  "recordedAt": "2026-11-15T21:41:12.934083+00:00",
+  "archive": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/final-r1/rejected-source.tar.gz",
+  "sha256": "fd6add9533bcecd4daf5f22eccf059c4aa8ec8ab12efb6fe6e90afbc7c0d0646",
+  "head": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add",
+  "candidateContent": "90365754dd51b1d473784f53fa04d8cdd1a96e36d4a2efe7211cc84036b6d946",
+  "sourceFiles": [
+    {
+      "path": "src/workspace/mod.rs",
+      "sha256": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+      "bytes": 27439
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "sha256": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+      "bytes": 4859
+    },
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+      "bytes": 7354
+    },
+    {
+      "path": "src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "bytes": 19096
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "bytes": 239
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+      "bytes": 66435
+    },
+    {
+      "path": "tests/fixtures/process/observe-kill.c",
+      "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+      "bytes": 746
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+      "bytes": 19488
+    }
+  ],
+  "stateRevision": 14,
+  "purpose": "Preserve rejected uncommitted whole-mission candidate before bounded mode correction; no Git checkpoint or integration."
+}

@@ -1,0 +1,29 @@
+{
+  "filesystemMode": "0o654",
+  "gitIndex": "100755 c735202fb0d3c35e7fa4675a376d62142f607ef2 0\ta.ts\n",
+  "gitDiff": ":100755 100644 c735202 0000000 M\ta.ts\n",
+  "source": "src/workspace/acquire.rs:90",
+  "captures": {
+    "staged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=a3578b0ddb7ea6bd8c25d667f60cac35534791c248b5b544ca1cda77a0c671f8 attempts=1\n",
+      "stderr": ""
+    },
+    "unstaged": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=89ba7e5f52561c064135b60445ee318d60f678b5748975802161960a9f1fbf73 attempts=1\n",
+      "stderr": ""
+    },
+    "local": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=c7a4e42f1c2812d4f860b048af1c46cf68c9187b11d11d042eb21391b1ffb3d4 attempts=1\n",
+      "stderr": ""
+    },
+    "base": {
+      "exit": 0,
+      "stdout": "SUCCESS generation=53d637f70b083ba290225691feb975683c0d303547ea4af0e5eb70527d8500a6 attempts=1\n",
+      "stderr": ""
+    }
+  },
+  "omissionObserved": true
+}

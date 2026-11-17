@@ -1,0 +1,1320 @@
+{
+  "at": "2026-11-15T21:30:18.653262+00:00",
+  "actor": "AS-M003-capture:s1794778014.665471.32014",
+  "session": "01a1e11b-2e88-7ca0-8677-a15b10533d6f",
+  "thread": "01a1e11b-2e88-7ca0-8677-a15b10533d6f",
+  "backend": "tmux",
+  "codexPID": 667959,
+  "processStartUTC": "2026-11-15T21:26:56.200000+00:00",
+  "launchOptionsBeforeBrief": [
+    "codex",
+    "--dangerously-bypass-approvals-and-sandbox",
+    "--disable",
+    "hooks",
+    "-c",
+    "notify=[\"bash\",\"-c\",\"touch '/home/abdwhb/engineering/firstmate-anti-slop-test/state/AS-M003-capture.turn-ended'\"]"
+  ],
+  "resumeOptionPresent": false,
+  "configuredProfile": {
+    "model": "gpt-6.1-sol",
+    "model_reasoning_effort": "xhigh"
+  },
+  "reportSha256": "e587ce64a2c8c5e2e387163140070d2e1b023c8295f2606e687e598ab759fb4e",
+  "reportHashMatchesBrief": true,
+  "productFiles": [
+    {
+      "path": "src/workspace/mod.rs",
+      "sha256": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+      "bytes": 27439,
+      "actualSha256": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+      "match": true
+    },
+    {
+      "path": "src/workspace/acquire.rs",
+      "sha256": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+      "bytes": 4859,
+      "actualSha256": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+      "match": true
+    },
+    {
+      "path": "src/workspace/git.rs",
+      "sha256": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+      "bytes": 7354,
+      "actualSha256": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+      "match": true
+    },
+    {
+      "path": "src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "bytes": 19096,
+      "actualSha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "match": true
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "bytes": 239,
+      "actualSha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "match": true
+    },
+    {
+      "path": "tests/workspace.rs",
+      "sha256": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+      "bytes": 66435,
+      "actualSha256": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+      "match": true
+    },
+    {
+      "path": "tests/fixtures/process/observe-kill.c",
+      "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+      "bytes": 746,
+      "actualSha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+      "bytes": 19488,
+      "actualSha256": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+      "match": true
+    }
+  ],
+  "protectedFiles": [
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/final-consistency.json",
+      "sha256": "fd11129410686349c689518a4bdb2549e13a384ee21ed90f20a8ebc1b8dc1796",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/baseline.json",
+      "sha256": "773416d4efca75d16f7ae8dd7e05a4bf302f816f2e017903f8336c9f214b7773",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-initial.log",
+      "sha256": "ba727d435dabc0da4bd83a5e681e07a75e970b7cd0143bfb86f96d839344a746",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-initial.json",
+      "sha256": "dba6b7dac310c703f912c0f39aa514555cc25896703487c0b2d0ab8bcbbaa65e",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/09-green-mode.log",
+      "sha256": "55eac3cfccba509e328c5da086f32682755e24f3a662e4c4cd8b2aeca5f93490",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/12-remote-probe.log",
+      "sha256": "4acdea5822a12a551a625b0aeaf53bebaa3efbb27f62455c89ba3e70eaa9e619",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-0-green-object-admission.log",
+      "sha256": "d06c92cf7b53d7ae7f585447dfcaa03fc37129ed03d611954f82433be716665f",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-3-final-check.log",
+      "sha256": "551dbe22938c29a385657e1ba7fedec7940eb16294a937232927f50091260a4d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red.log",
+      "sha256": "2ea3bd6398e435db2b0264984177f65dd243ef626ee979596e99ad060a95eea0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-setup-inclusive.json",
+      "sha256": "bab5c54eab543ff459328e5419b082810f75a3a666b030a034fb1b8bce7f4a41",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-1-final-check.log",
+      "sha256": "94fefbd940650846e35c64f7ecb0305c4e409617b0bbd0e8a9c2cd1a0d9f648d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02-green.log",
+      "sha256": "cbe658afcec1b271d6d2cd575e5ad445cd4f4a3a9cc9dc9bb471b1b5da7ce857",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-5-final-evidence.log",
+      "sha256": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-0-final-check.log",
+      "sha256": "09c63f52264050369c2283f53e39c35e0829591927db1fe8c269712389b33f5f",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-before-object-admission.log",
+      "sha256": "3fab889cb0265b0a66dbcd08ccebdf3d7414758d266f00f9207a4f64f0526158",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/06-green.log",
+      "sha256": "11b3e2c7bd78b60c8e852e6275b4d8ddda17a6aef63909382a35a02695285f96",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-1-recheck.log",
+      "sha256": "64a69d67dc83d00a806f1c8c74d0e64b6357acdb5480322d283bedf37a1674cf",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/11-focused-refactor.log",
+      "sha256": "5aebc1d6135a46824e1a0a132cff8816552ea0fbc11654af6b4b47a127861829",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements-before-object-admission.json",
+      "sha256": "4ad91ac1efab856f310cfc478f7caf338c23895604453848d2480af95e69cc90",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/08-red-mode.log",
+      "sha256": "a5d7eeff1810713728edc74501cfae758f49dd9f1505f4aa764d5e71a7916a2e",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-1-green-object-admission.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-2-final-evidence.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/04-green.log",
+      "sha256": "3a827afe218b53fc477bb906a6b441dda70d3d2719426774859cddc4dad61ee9",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-before-object-admission.log",
+      "sha256": "bc8ce3641a75abed00319646a28f1b113cb8f2d3c3fb6c39be94d6e0235a0fed",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5.log",
+      "sha256": "3f6a041e06e28a7b337e681662a12a28bf852eb1246a7c0c5a87a9f77dd098f0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-4-final-evidence.log",
+      "sha256": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/01-red.log",
+      "sha256": "4ed98555bfc9d93b9ea3acb2ee23f8b0c3ef5a1db2690691ca3d3e491cd5888e",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log",
+      "sha256": "bd6b7744f4be84d3641f8b65bc63561c711f535c972921de72d71c22b404d7b5",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/source-state.json",
+      "sha256": "1296ab6232003e1f262cb76c574dc916d534852b9bc2b7b555300d4fc24f90f5",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-0-recheck.log",
+      "sha256": "762c624d69a5c0a0c936e83d7651d2940bf600db45955bb3bee13ac3bc62a641",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/07-controlled.log",
+      "sha256": "cff5213d8d23c00f152023cb1d6f7e654fd8ae5a6374830f897757bc635e9e19",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/14-clippy.log",
+      "sha256": "c3144e72794964cec7041df7d7250943907aeba9f6d96e7e7fe22033c87d1a77",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1.log",
+      "sha256": "49dfd888fc73170a02c2363bd62e30340db6bce39284c47e172186bd6961f6b5",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/13-2-final-check.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/05-red.log",
+      "sha256": "b9b0828c3e06157d53e957bc28ba3353e1d0e4430f21ce55b77d924e82df6332",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurement-build.log",
+      "sha256": "438145a40e66c46097a1a3084f49421e644a887257ea00b2594cd49cd1b6d4bb",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/locked-npm-verification.json",
+      "sha256": "67ff9286ce89ee264da50f9a94d0d3346c41babb3cd06963e4a4f4c9b12ee83f",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/18-2-green-object-admission.log",
+      "sha256": "ccc03bb44368c8733872d6a2f26130c23a481368d8c2e3daf8d9f8508ba33557",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-1-final-evidence.log",
+      "sha256": "e1f31117003fa241f79b1698465952ec4a1332b77d8f5fdf5a9d274f23e4c26e",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-3-recheck.log",
+      "sha256": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/02b-green.log",
+      "sha256": "09fab6ab2a23e1c9e3ce2bb6f4bbdb0c746107613cc7664b53e66ead848ce711",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/10-locked-restore.log",
+      "sha256": "111fd75a14af536c19935a4c0c02c8cb6fbf255e1f9ddbf96632ba3fc1427245",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log",
+      "sha256": "1fa314ecdac708784d223fffbb89d1c9ced775996646ddf54618b092ba043e23",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/19-final-build.log",
+      "sha256": "8da0eaad822d2f7a60a6d75187818dbbbe80b3cfa403ec1517f3f8067519530c",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/17-red-object-admission.log",
+      "sha256": "0477b978b1a741a794e018f80ca3e39bd3a95368ef00e4d8a4f4f403f796beac",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/state-validation.log",
+      "sha256": "0b991f6dea584a336b927daec0f7c74d3257d3103598a56857f1371b8f48cd22",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-5.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measurements.json",
+      "sha256": "b2295b9010c94d43d578066567fc864bbefd1e42436e08a65dfbee4e1fea4c37",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/observation-1-initial.log",
+      "sha256": "acbaffa0e6e505581c0938f77ca4491f5b489ebefe3bb7c38fffdf1d2056fe2a",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/preparation.diff",
+      "sha256": "dbc8f9185d99003597efe612c4e56ee8162926c05a15cd2cf9c9a2793ed3d4c9",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/measure.py",
+      "sha256": "fa68f1160d76978749948b70593fc27eecc5810537939a763172703d8b75eab9",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-0-final-evidence.log",
+      "sha256": "607f0fdadf8d9b5b6851106a13ee8ca822812ecce21383134a42dd5dff6ec7aa",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/03-red-compaction.json",
+      "sha256": "07e0aba1dc4e325bb7b7dd97279466d87101d805549b19e155545b55c6cdbe68",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/report-receipt.json",
+      "sha256": "3080821dc50c341932e05440b928a86e890f7d8172ca99fb72c6747abc921f94",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/16-3-final-evidence.log",
+      "sha256": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01/15-2-recheck.log",
+      "sha256": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/baseline.json",
+      "sha256": "addfc0d0054ab11fb277497b483a6ecad96b0c7ee9f514996cc65e068fb262b0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json",
+      "sha256": "98e4b8cb701c2bf3f7cf63dfca411b21b901d7c433bad4064434c366e4bfe9a7",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log",
+      "sha256": "90e262b0808ac049a944a3edb395d16be56184d3de793b26f07c93057a904489",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/02-green.log",
+      "sha256": "c48b2d9d83696529739feb79474e47542c408f0eb9865fe434e28b47f26989bd",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/state-before.log",
+      "sha256": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log",
+      "sha256": "2c293386bc557fee049673e776cbad1ada26df8ae08ba1acbca57ce19a5948e8",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5.log",
+      "sha256": "98d52dcf2a6731fbb640b4e7351a9c5e25e0734747367ca692859bb6cf983c20",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-2-checks.log",
+      "sha256": "be466c0e72501dcb52972bff59f31dcf2b388e68a878d49a458f60cedab6ac41",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/01-red.log",
+      "sha256": "8a93cda7c31becb589d6e22b37bde9e9bf56edc5904a45f1ff533c39416a67ff",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json",
+      "sha256": "c68b375a75d23695955d8ce60d338f3fc4e4320f1d2fe5afe6fd4f372cd9ffeb",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/03-descendant-green.log",
+      "sha256": "a174a8165ce476d14c2eb8f6af0dd272a7fb28880ee48cc06f3959ca55822279",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/source-state.json",
+      "sha256": "c37c516244b55ed992369dd347d1e6f4d18fa390bd9580c9a02b0e5023f0e196",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1.log",
+      "sha256": "19b2f654b6b89bd323772ddd5b098671bec8d22b4a9f8a41e986cdd17dddfed5",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-1-checks.log",
+      "sha256": "a7f6c4cc7b20061af86cf9468f71ffd9bc30f2a199819087ee4bf4f94978112a",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.c",
+      "sha256": "ad2db765a7af983cc650e76eb2d6b8c0a3bef89c7c8c3595e3f5fc8f14776721",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/workspace-correction.diff",
+      "sha256": "6d951f1f24bf2f8bffa9a18c0a51283543d7bc52633e3b4dd2b091e1d9100794",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurement-build.log",
+      "sha256": "06172201da34d3a06618c59c87fc3456106eb3e7943e523fb933f1bd1515fb39",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/kill-observation-green.json",
+      "sha256": "085427e853e36f4e1cce6c0c15e2cbfb1962ab77a04dc205d6ef2dabe355014d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-0-checks.log",
+      "sha256": "12b59811769d23b2d94b4736a555662c7bd2da4e87831e69050625af5a1121d4",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/04-0-checks.log",
+      "sha256": "5a63b3293e7286a02e265d6f1fcd19b9eb29b16e60ede59c39277a293529a5ad",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/waitid-abi.log",
+      "sha256": "713055c7af14b73fb22d0cc99fa4761b98d00b02f097280811e1404d1f4728ae",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-1-final-check.log",
+      "sha256": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-5.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measurements.json",
+      "sha256": "96cb293377285501cb60d3ee3d0f4c7d0c54aeb37d26f9f76d53485fda5a99f6",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/observation-1.phase",
+      "sha256": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/05-3-checks.log",
+      "sha256": "cc06b20de8f4bf52226cae6d47e6a446ed5a36e898c1c6b4c3cacea88705c328",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/git-correction.diff",
+      "sha256": "b5b20d6e0e7f0394123c62d727e248cc2461ae0a18096a7cc2af20d47a941d2b",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/measure.py",
+      "sha256": "249a470bbcdb35c86ae0d397fbf5d80a530442130ea91076b41feb4103232165",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/06-0-final-check.log",
+      "sha256": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/evidence/P01-C01/report-receipt.json",
+      "sha256": "11b6aa5011fd9b2ac20bb02a6db70c3a8f8cc49d8bba45ec9d29fd96c46aa2c7",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stdout",
+      "sha256": "083a755b1be7dad53318b523e21cc734f58a5760654884b28dfef53126073f2d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/observe-kill.so",
+      "sha256": "6332f0250216a3944cdd7b78ef99f7d00255258f1f1a8bf45a7eb0ecfa9bbcc7",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-regression-red.json",
+      "sha256": "cce4991929d987d7ea1e0217c8225416d16c541c001fa4fb3d64967618ca72e8",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/observe-kill.c",
+      "sha256": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.stderr",
+      "sha256": "0942c4510d7ce932c7de7a39428f0347eff88cc933deea89046431d1f7b4a214",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/kill-observation.json",
+      "sha256": "16dad0ab660aa51ec9df4b48abbf92e9ba5dd5d1ef145f4a6aa1be550b3b6be0",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source-manifest.json",
+      "sha256": "57f13f86c6647e05e6aa36341264f308e6e329eef40cdc0bdffceb88ea992498",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/source-review.md",
+      "sha256": "fcd744af0cf8dcbdb930f1e81183c76ffcaee135211d1071f14cf3aced376171",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/README.md",
+      "sha256": "500eb783d21695583da8a6caf2d19c3cff921752c922758d9992a1a4a10b880d",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/lib.rs",
+      "sha256": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/tests/workspace.rs",
+      "sha256": "ddaf80cf7c5434e6c918ea1f5950458ac6812e8e22d50ba9df07d89ce5e2766c",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/git.rs",
+      "sha256": "c545f4a0e7df4f92141efd28d10417d04d643d418f747184c4cbbcbe863fa111",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/mod.rs",
+      "sha256": "843ea9e16063819a697fcd51f3b17fc08061bbf36d852bba4900a579ae488cf9",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/workspace/acquire.rs",
+      "sha256": "9401934c580df51925325bebc60ec1498ba9765793a20e358544e5a416ca200a",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01/candidate-source/src/config/mod.rs",
+      "sha256": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/review.md",
+      "sha256": "f0fabe7c014b3c7501d0aafb8ce99fbef49f1d635dcb6885c9a807dc5d2ea5e4",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/kill-observation-green.json",
+      "sha256": "5f7ace3908495419b7071723bc41908556e7b27c95dbc88e0ef5db8162976041",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source.tar.gz",
+      "sha256": "90b38d8702f9a5618fec834f317643a3bc4e62c6bec8b5e97ac91b1564e398ea",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/cleanup-regression.json",
+      "sha256": "d5de1f1da1bba2f5088f1c1e592ffc180a9f1110f0f72da6cb01b0f6fa14b7a5",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/coordinator/P01-C01/accepted-source-archive.json",
+      "sha256": "1cd120bee9414f68a2886ea2bbce364279bb132493ae2694c089218e702146b2",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P02-r1.md",
+      "sha256": "a1c1007e674883bdfbc357540af4964866e51d4108c61639b6271df30cfac311",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-r1.md",
+      "sha256": "b39648f92445c290f9951202a0776767d466f5feb8a2134d36a75b5e0803790e",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/packets/P01-C01-r1.md",
+      "sha256": "2caa022ea231b33ee596a60f33b1ae98a1d81da98042eb5d9a5634c44db5ffeb",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-C01-r1-review.json",
+      "sha256": "dbe55da2fe92bce36d72c32288a1a634495fd1d117da3f0c21ae31d40b8eec45",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/results/P01-r1-review.json",
+      "sha256": "77b4f95d3bfced683687a863b2496ad8a925ea000613ad397c817163fac5b8ad",
+      "match": true
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/state.json",
+      "sha256": "0d941a1cbb25c02cf3fe317d446868a6cb1d02a9a9c3958ec12248d12a1681a1",
+      "match": false
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/.missions/AS-M003/history.jsonl",
+      "sha256": "de700f0fd81cf789843e4d0fdfb778aeb4aa27fd173b0419fde61e4bc3dfbed6",
+      "match": false
+    },
+    {
+      "path": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree/docs/missions/AS-M003/r2.md",
+      "sha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3",
+      "match": true
+    }
+  ],
+  "transferredFilesExcludingStateHistory": [
+    {
+      "path": ".agents/skills/mission-driven-dev/.gitignore",
+      "sha256": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/MAINTENANCE.md",
+      "sha256": "cf6336236821d0bcebc869d879372087281871c31e0f1c45d144d4585998490b",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/SKILL.md",
+      "sha256": "07ea8e04b84306f5342e30d9090989bd662c9e52b8f60a57e62b5b5314a147e9",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/VALIDATION.md",
+      "sha256": "e0e8d5b3973019dba44716139635562855fa8e24f5f53fb63091f6c0c733f46a",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/README.md",
+      "sha256": "28f7fbc935ef948442a60dceda9f73cadf4fb82f759bdd1295387a801bc11030",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl",
+      "sha256": "04fe99767632e28f9e47a58ad8cfc755db9650d5a76648bbf7b363a2b91a29e6",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md",
+      "sha256": "8a4c65388610e51889de56fa0d72a046521e11807c27e585d85c3d6e403b5617",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json",
+      "sha256": "750c247e470f45680d282204edc9ff3fc49f18b6a7f9d99fe7087a556aa32eae",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/.missions/example/state.json",
+      "sha256": "8df60463036b55e5015a8ef73e18ab1d6d6fd6bb6fe4348577a4f42d5c8d39a1",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md",
+      "sha256": "fdc335dda0d03c0c5048cb0f08b26b57753ab375a662fae6ceff4c3190f94431",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/example/docs/roadmaps/example/r1.md",
+      "sha256": "9dd41da71aa5cf9e686729f4d59e9969fee90d32a5b00f0d64940fe7bc4f66ef",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/assets/handoffs.md",
+      "sha256": "5558ae40c01ac3afdd75c6d0ce11a70edca068b08331efed4a2f10b8a3935849",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/bun.lock",
+      "sha256": "51c1e574fc5f89e0d7963ec01db667b6d034aa26ff2379c97771544209d413b6",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/bunfig.toml",
+      "sha256": "1f88070dfbb538f07ef4b0808696ff35f54083b114c8f854df1bd4ec60472ad7",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/brainstorming-compatibility.json",
+      "sha256": "077186dd4d049ddacb01f0625930c1e7d2713324fba7365dcfd8bbf2bd7d66ff",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/evals.json",
+      "sha256": "1220f7ed165c76ac7ad22e3e4199ab85c6cc275aaaefc48e1e44ae53cd2f43c8",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/qualification-2026-09-23.json",
+      "sha256": "bfb6d5eec30d5813a8bb91641a59fa6ea357e123a46ffbb7bea24842c21059a1",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json",
+      "sha256": "f9a054713b68cf43824996198c197961a59c4ffd58211e8da0eb706dba80ed67",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/package.json",
+      "sha256": "658050154767a3a29263ad6a63390f2aa2f844d2f2ef9e226c810ca69331ba97",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/artifacts.md",
+      "sha256": "a8db2129edbc35f31791802295aca6623e30b98f3d42b21dde224ec06469a6d5",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/conception.md",
+      "sha256": "8ae5894646591163803aaa2ef6e49f8952dd83e4ae46451e7490afa145d2660b",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/execution.md",
+      "sha256": "28b802af62b9065ad480a9942a2fd08baa99522b59c5554ad8fbbab949411dc1",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/preparation.md",
+      "sha256": "ce99c3373c7befde76db129b147ecab46730d1bb75e3ea845ec82886bdb4c25c",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/resumption.md",
+      "sha256": "8b14d513bca57cd24626ad9c04d310a09458ba7b869ec149d8e6ce488fecd6b1",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/references/validation.md",
+      "sha256": "0b0ced853b3e505c286d383d1b8d0b9609fa80e56b6cd6aa962986455a8fe2ee",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/scripts/build.mjs",
+      "sha256": "5605aa80553c9d50efcb6cbd443a118774e477938c6d6d76822a599a0456aa79",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/scripts/validate.mjs",
+      "sha256": "cf4c29f03b76e005b20d0f82962101036ca8a1f6b555a0e60bd0ddc6e9bb64e8",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/cli.ts",
+      "sha256": "fe80bb614f9dac9b068663af7e81cb88b63bc87ded67aa71f7b2239ef2f352d3",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/schema.ts",
+      "sha256": "492681286d51b81bec71e9eee549978be1be15f4725e6b47e79d30ecd8c199bb",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/src/validate.ts",
+      "sha256": "eec1872b3a590db40d0b157a94da89f227d94dc97989efcddfc151f8b7357f8a",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/bundle.test.ts",
+      "sha256": "3a8563f916574e0b09a3320f25c02ff5f22cf69057a7d589c81c226e5f5381b8",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/cli.test.ts",
+      "sha256": "e1545914c79193542482c303d8d57b5a18139f4999c17e136941ddd48f1d2658",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tests/validate.test.ts",
+      "sha256": "5c9b947c8f62694d5b880200c264212c4c2ae1a5f3785b3f28c7846fca86433f",
+      "match": true
+    },
+    {
+      "path": ".agents/skills/mission-driven-dev/tsconfig.json",
+      "sha256": "cf34df5579a0977ba779623d4ce46aaf127a925d63ec0be189127528e374f2e0",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/approval.json",
+      "sha256": "73cf26790bfec7b1180089ffe1bd3961e903df86aeea6f36244f1bbc5c573f92",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/compiler-ready-and-resumption.json",
+      "sha256": "7b9e3206dbaa41093e50b9ec46a36ac41b26434c8aad56aaf52fcb69b21f3ce5",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/mdd-skill-transition.json",
+      "sha256": "a6150d8bade6bd55a36d368803d2bfc90bb3a93efe418d6c8bb946d6cac94da5",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/oracle-contract-r1.json",
+      "sha256": "2570545aac3afd51751a1c80ed6c92b9adfb4328821b013471c6d6307621f7f2",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/orchestration-approval.json",
+      "sha256": "fc876597f046634ce6b8395b885ded44fbcd7e2229713421b36a207ff9f908fe",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/preparation-checks.json",
+      "sha256": "d6571d6b9741aa4eca45946aa2203d3ead4313dd43c4e956c873c82af14dcd66",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/preparation.json",
+      "sha256": "65a2f41889f704c73fcb6643dd7bc818e671c04a0653ea181ae2ae6bfd75df73",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/prerequisite-review.json",
+      "sha256": "1d9b02e680edf01aacba715d0d278363a81ce361d8cf73b17c269b0699aab6d9",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/prerequisites-accepted.json",
+      "sha256": "3f0ca30d6c4125ec222e9b8c49447d1797582bb5173fce4b1e2931501d3e62e6",
+      "match": true
+    },
+    {
+      "path": ".missions/AS-M003/evidence/tooling-approval-and-status.json",
+      "sha256": "ecec7092fea9a7ba119599fe6ab6b485e3834fc40a5c720391ce604848224bc2",
+      "match": true
+    },
+    {
+      "path": "docs/missions/AS-M003/r1.md",
+      "sha256": "4a6981c711bd422ac9e2ca2e91dc005624a16f2361c0b6ba22de14cf2d850d91",
+      "match": true
+    },
+    {
+      "path": "docs/missions/AS-M003/r2.md",
+      "sha256": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3",
+      "match": true
+    },
+    {
+      "path": "docs/IMPLEMENTATION_ROADMAP.md",
+      "sha256": "c68cee286f24bb51a37ee46f5e847325492d0e06c25a74635ad47569769cf8bb",
+      "match": true
+    }
+  ],
+  "bundleFileCount": 34,
+  "bundleInstalledDifferences": [],
+  "initialWorktreeFiles": {
+    ".gitignore": "849776484493cb95f9be705941795a2b831ab20d0e163fbd1c90fce46cb50a24",
+    "Cargo.lock": "cac979bc7c283de4d7b1e0a29d836741df59c806a4cf2a0dfc1a0612106c7e9e",
+    ".gitattributes": "7dd5b4b744228b297dc7d1c518536ad6c36bacd4b994323f2f9a1e085b1a76c6",
+    "AGENTS.md": "cf0456c56a03890996ff80cc29f1fbad0bb62dcbf0767ecdd4a3f76d920030c5",
+    "rust-toolchain.toml": "d378cc6bc4c46cf85f3bc26a191bcb13a6f9efab78f758b39029555f88dc6e79",
+    "Cargo.toml": "d34ba9820b310561cfedeed17ae5412c46e74eb867a93947d02d90b109310f78",
+    "README.md": "0e4f2d27cb4a94a738fdab46d7888c08b61e2ed8486bc96ed6b6718af608e7cc",
+    "docs/configuration.md": "7768fc417affd13ab54f9faad8a47263391736c7404ac8b53a07b0f42564e680",
+    "docs/IMPLEMENTATION_ROADMAP.md": "c68cee286f24bb51a37ee46f5e847325492d0e06c25a74635ad47569769cf8bb",
+    "docs/agent-workflow-validation.md": "dcec6816128a4af467130289ca1a66e057a8cc9d3f3fb6d8f8c622c735006110",
+    "docs/PRD.md": "bfd2645b7bb9f37f807d29a060697b716af410c0138ad16ae691d1bbdb12d1ae",
+    "src/cli.rs": "0a32b8f8cb8843084e9c943db8ddc7ec754ff56692f06c6e1e720f5e6dd8cd55",
+    "src/lib.rs": "065bfad2b62782708c55024918e618d523a5279ce103b17665ed3de143dcbf57",
+    "src/output.rs": "59c2c2499852f584bd8584e0dc526ff8d7a2e068dc76e98d37b4ff34604021a6",
+    "src/main.rs": "a1ea4646e96340a929a3edea462b788289f941168b19d365b0ce7f462ec572b4",
+    "examples/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "examples/config_schema.rs": "29adbb92aafb968f786f8f6846e8fcaea02c6f35633c6c333122bcf9dccab0ff",
+    "schemas/anti-slop.schema.json": "4222aa04c0050bba4cfdc65dbac33f669fddf783717cab4ff4c878afc0b70355",
+    "tests/workspace.rs": "39bc424d14ab36755a4e46315a4ed2f1669b7ea3ba79d955dec76005b4b2f998",
+    "tests/cli.rs": "9b2142f30e67765f946a90b05d3525e6a348df826b955f4d651ee5b505069426",
+    "tests/config.rs": "2c8c40c89f7c549daf29cd9322ef161f0395cbe40f04e8e27f197989457defd1",
+    "tests/schema.rs": "2cfb0383d98227fc977d1146bd21017de5b387d76a11b5d18a9e383a98495ebd",
+    "tests/output.rs": "d18a7fa60557feb66569a994375da9c074ce6ac9dba3e773b4c9ca066b625b66",
+    "tests/support/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/contracts/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/fixtures/reports/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/fixtures/output/reference-v4.1.json": "691ad8c6a0306e5dfcb4a1a64b9a21480c4af3cf0c0fbaef4838aa5c0b5b5ab6",
+    "tests/fixtures/output/README.md": "8b781bd4353087a26c5148ff4788547b0bbb5ac41f6d20103def5322dd3e69c6",
+    "tests/fixtures/typescript/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/fixtures/config/conformance.json": "478629d50c2de2ef3581e3392a42ff450e3d13bb5bf838e7f6c43b7d3f07d3ff",
+    "tests/fixtures/config/README.md": "e577ff651a08f3d7521fcd3c6d783cbb5674e87b9e6d2b6b8a439a4d56e2be3c",
+    "tests/fixtures/process/observe-kill.c": "6e25fb424a439e95ee437bb906c12a30a1352e42f567e345c9c57aa340bb16e3",
+    "tests/fixtures/php/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/fixtures/rust/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".github/workflows/ci.yml": "a12088a440ed42e559a3c002db176f3194500e2de65827d7ceb32ed60cb9d913",
+    ".agents/skills/README.md": "4d9a8278dd654b62a006984ad3b19dfedecbea9127e03934fdd558471a1c3849",
+    ".agents/skills/axi/SKILL.md": "2f5a6b3dd6f84bb3ee56d814ac6dde00c3c2b54fd0b0554129c2680a655948c4",
+    ".agents/skills/mission-driven-dev/bunfig.toml": "1f88070dfbb538f07ef4b0808696ff35f54083b114c8f854df1bd4ec60472ad7",
+    ".agents/skills/mission-driven-dev/tsconfig.json": "cf34df5579a0977ba779623d4ce46aaf127a925d63ec0be189127528e374f2e0",
+    ".agents/skills/mission-driven-dev/.gitignore": "4d56952b0fb13bf8f9b6c13a6d4c34a075bac3af447636a1df4335d7576e2f97",
+    ".agents/skills/mission-driven-dev/package.json": "658050154767a3a29263ad6a63390f2aa2f844d2f2ef9e226c810ca69331ba97",
+    ".agents/skills/mission-driven-dev/SKILL.md": "07ea8e04b84306f5342e30d9090989bd662c9e52b8f60a57e62b5b5314a147e9",
+    ".agents/skills/mission-driven-dev/VALIDATION.md": "e0e8d5b3973019dba44716139635562855fa8e24f5f53fb63091f6c0c733f46a",
+    ".agents/skills/mission-driven-dev/bun.lock": "51c1e574fc5f89e0d7963ec01db667b6d034aa26ff2379c97771544209d413b6",
+    ".agents/skills/mission-driven-dev/MAINTENANCE.md": "cf6336236821d0bcebc869d879372087281871c31e0f1c45d144d4585998490b",
+    ".agents/skills/anti-slop-analyzer-qualification/SKILL.md": "36ec04c7191acbce86a199e50a6c39d913d76aad9d22ba3ca8822592690b2e23",
+    ".agents/skills/anti-slop-rule-evidence/SKILL.md": "fa3c5949636910ca71b47f370564f16c9d1e0e4b435aedb34abbcc3bed930012",
+    ".agents/skills/anti-slop-rule-evidence/evals/evals.json": "fcf2925182cff0eaa148b206c13105bf6b6ed5e3efb80fa53e37e0b21864b1ad",
+    ".agents/skills/anti-slop-analyzer-qualification/evals/evals.json": "8df55b2107c766506317dfbae0ad2c5e15abf8a64647c62d98fa97dba9904ed8",
+    ".agents/skills/mission-driven-dev/src/schema.ts": "492681286d51b81bec71e9eee549978be1be15f4725e6b47e79d30ecd8c199bb",
+    ".agents/skills/mission-driven-dev/src/cli.ts": "fe80bb614f9dac9b068663af7e81cb88b63bc87ded67aa71f7b2239ef2f352d3",
+    ".agents/skills/mission-driven-dev/src/validate.ts": "eec1872b3a590db40d0b157a94da89f227d94dc97989efcddfc151f8b7357f8a",
+    ".agents/skills/mission-driven-dev/scripts/validate.mjs": "cf4c29f03b76e005b20d0f82962101036ca8a1f6b555a0e60bd0ddc6e9bb64e8",
+    ".agents/skills/mission-driven-dev/scripts/build.mjs": "5605aa80553c9d50efcb6cbd443a118774e477938c6d6d76822a599a0456aa79",
+    ".agents/skills/mission-driven-dev/assets/handoffs.md": "5558ae40c01ac3afdd75c6d0ce11a70edca068b08331efed4a2f10b8a3935849",
+    ".agents/skills/mission-driven-dev/assets/README.md": "28f7fbc935ef948442a60dceda9f73cadf4fb82f759bdd1295387a801bc11030",
+    ".agents/skills/mission-driven-dev/evals/evals.json": "1220f7ed165c76ac7ad22e3e4199ab85c6cc275aaaefc48e1e44ae53cd2f43c8",
+    ".agents/skills/mission-driven-dev/evals/brainstorming-compatibility.json": "077186dd4d049ddacb01f0625930c1e7d2713324fba7365dcfd8bbf2bd7d66ff",
+    ".agents/skills/mission-driven-dev/evals/qualification-2026-10-14.json": "f9a054713b68cf43824996198c197961a59c4ffd58211e8da0eb706dba80ed67",
+    ".agents/skills/mission-driven-dev/evals/qualification-2026-09-23.json": "bfb6d5eec30d5813a8bb91641a59fa6ea357e123a46ffbb7bea24842c21059a1",
+    ".agents/skills/mission-driven-dev/references/resumption.md": "8b14d513bca57cd24626ad9c04d310a09458ba7b869ec149d8e6ce488fecd6b1",
+    ".agents/skills/mission-driven-dev/references/validation.md": "0b0ced853b3e505c286d383d1b8d0b9609fa80e56b6cd6aa962986455a8fe2ee",
+    ".agents/skills/mission-driven-dev/references/artifacts.md": "a8db2129edbc35f31791802295aca6623e30b98f3d42b21dde224ec06469a6d5",
+    ".agents/skills/mission-driven-dev/references/conception.md": "8ae5894646591163803aaa2ef6e49f8952dd83e4ae46451e7490afa145d2660b",
+    ".agents/skills/mission-driven-dev/references/preparation.md": "ce99c3373c7befde76db129b147ecab46730d1bb75e3ea845ec82886bdb4c25c",
+    ".agents/skills/mission-driven-dev/references/execution.md": "28b802af62b9065ad480a9942a2fd08baa99522b59c5554ad8fbbab949411dc1",
+    ".agents/skills/mission-driven-dev/tests/bundle.test.ts": "3a8563f916574e0b09a3320f25c02ff5f22cf69057a7d589c81c226e5f5381b8",
+    ".agents/skills/mission-driven-dev/tests/cli.test.ts": "e1545914c79193542482c303d8d57b5a18139f4999c17e136941ddd48f1d2658",
+    ".agents/skills/mission-driven-dev/tests/validate.test.ts": "5c9b947c8f62694d5b880200c264212c4c2ae1a5f3785b3f28c7846fca86433f",
+    ".agents/skills/mission-driven-dev/assets/example/docs/missions/example/r1.md": "fdc335dda0d03c0c5048cb0f08b26b57753ab375a662fae6ceff4c3190f94431",
+    ".agents/skills/mission-driven-dev/assets/example/docs/roadmaps/example/r1.md": "9dd41da71aa5cf9e686729f4d59e9969fee90d32a5b00f0d64940fe7bc4f66ef",
+    ".agents/skills/mission-driven-dev/assets/example/.missions/example/history.jsonl": "04fe99767632e28f9e47a58ad8cfc755db9650d5a76648bbf7b363a2b91a29e6",
+    ".agents/skills/mission-driven-dev/assets/example/.missions/example/state.json": "8df60463036b55e5015a8ef73e18ab1d6d6fd6bb6fe4348577a4f42d5c8d39a1",
+    ".agents/skills/mission-driven-dev/assets/example/.missions/example/packet-r1.md": "8a4c65388610e51889de56fa0d72a046521e11807c27e585d85c3d6e403b5617",
+    ".agents/skills/mission-driven-dev/assets/example/.missions/example/result-r1.json": "750c247e470f45680d282204edc9ff3fc49f18b6a7f9d99fe7087a556aa32eae",
+    "bridges/typescript/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bridges/php/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/ci/.gitignore": "9967fbf6a68b4488fb0a6eb19a6c36b1d408a47312b8825b6d38062e10d5c07a",
+    "scripts/ci/policy.py": "6762a47d277764be03b38ee6286609ad084a13ef78d2e2033697ed6506489cb5",
+    "scripts/ci/test_policy.py": "1eb2835f3609893022b2ba1d8f9a7f5ad4c062447615c9de8018644901b9fc2c",
+    "scripts/ci/check.sh": "23167b31e8661f6429f395c3f10efa9dccd485a3172fde2eaf4c569469a09137",
+    "scripts/ci/__pycache__/policy.cpython-315.pyc": "8a51ca7eec8485f5716d1d45a452bbcec87bc7e87f86312e3e84ebed3b05e292",
+    "scripts/ci/__pycache__/test_policy.cpython-315.pyc": "bf468def4bcbf1f22b0389fe2518123bd2d22869d1c2d018eecf9b67bca7f77d",
+    "src/engine/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/output/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/workspace/git.rs": "35a2d29bd81f3a58156f53b68dd0ad11d3aa939467f9367cfe12ac4c6c6f0147",
+    "src/workspace/mod.rs": "1730df9797da17df9fc193e1e92715e3cf356e027a30f02c8449089501df333d",
+    "src/workspace/acquire.rs": "a308b10a1d6d2cb89759263d2d1a3c0ddd81db36c024ea6e03790ca9d939c0e7",
+    "src/config/parse.rs": "986d5bdd3923be0a5aed8563ad99b66594a35b29369b5679956330b6f70cb78e",
+    "src/config/mod.rs": "5a206735c36dc9fd3ac94ad5fae2a9063f7363c410caf49f4f697ef1020879d7",
+    "src/config/schema.rs": "420024b16251cbe222daf6710a9d976dcbf74afd1d6e1c8d2ef07969324820b3",
+    "src/config/pattern.rs": "df8b1a9c5d5b689a5a40fe94eebf8fb8ab19a6f095d5d543001d8710a0543084",
+    "src/policy/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/rules/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/session/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/judges/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/records/migrations/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis/typescript/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis/php/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis/rust/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/templates/task.md": "d066a44b0e496048fd6e624914a19f4f803f9c6028892596acb6ca8ad0baf7a2",
+    "docs/decisions/002-replaceable-native-language-analyzers.md": "66c0537072916be947feec5d11e4795bd33d1748793c23738311bd3a50600659",
+    "docs/decisions/004-provider-neutral-assessment.md": "33b5e61bce6c411fce33d25430c2b8c41672578e39a90df929e9e902a0da88b0",
+    "docs/decisions/005-local-evidence-store-and-dataset-exports.md": "44ed7b469dd07cf2c6d140a597b181febbd11d795a8fa4d33e06881fe493d125",
+    "docs/decisions/001-rust-engine-and-client-owned-sessions.md": "e6fb15f40f1ee6fc0f38494ae2090ee490217a11475ece6d978fde83abb47056",
+    "docs/decisions/007-performance-budgets-and-qualification.md": "b4106a774e5fc40634ede2448f6cd2a0758e39c3483c9c890fffdfd51c503fe4",
+    "docs/decisions/003-evidence-first-rules-and-selective-blocking.md": "d194b30b81a5824be5ee1c1be0dfbbc3445ff724075d91db0cae2390e5ebf437",
+    "docs/decisions/008-project-configuration-and-schema.md": "82e30021d22009b03deb947dc290f185f235107a7de93140182a450596b0a10b",
+    "docs/decisions/006-output-formats-and-shared-projection.md": "954885d914ff13265be0c66095856598c2afcf3ef3c68148b7986627e50fbe93",
+    "docs/decisions/README.md": "3cf12e6951c229f1c3cf985c7a8827706618385ffe5b982317f8d59574773892",
+    "docs/research/2026-09-22-rust-analyzer-alternatives.md": "567ed256880a3ad554335b929b492b45441451e0d046715028bfa1fc5db79b61",
+    "docs/research/2026-09-22-bootstrap-dependencies.json": "6ea76d58b973a122729e03dcc7658f488e1d3a9aedf94b20a458d4b139942b6e",
+    "docs/tasks/repository-ci.md": "dbf61702905848ce6835b14c97cc7d4c3793b19806b5cb30ec5716dcc72b310a",
+    "docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md": "efc46d764a90e40f02c2d05993c5002e94981ba95d1a96de2b8de19ff86650e6",
+    "docs/brainstorming-decisions/2026-09-22-anti-slop-design.md": "830b6de856b3fab2ce692db79edcbc23c4d4b30578b99b7e5a211343ed76d906",
+    "docs/brainstorming-decisions/2026-09-22-anti-slop-architecture.md": "ef7b58de92c1a77d2f1cab246bb1dd1e4104a989b2af417eb810840643dbd338",
+    "docs/validation/2026-09-22-agent-workflows.json": "67f7ecde72c66f8295e45e86f2d276a0bf22dedaa25bb9c53b4f6ed26b9b3de6",
+    "docs/missions/AS-M001/r2.md": "89f5a32376fccf921c406a9013761a6dca1ed1dabb09cee7b8aa35253fef3ecb",
+    "docs/missions/AS-M001/r1.md": "10b0ea668f3ba2b9548affff7cc599636b3ab855e65549bfef6fe0f9050d94aa",
+    "docs/missions/AS-M003/r2.md": "4d2f83723c3633a111042404da19f80f1ae3ef2bce296a4cb38fcabd0ee576b3",
+    "docs/missions/AS-M003/r1.md": "4a6981c711bd422ac9e2ca2e91dc005624a16f2361c0b6ba22de14cf2d850d91",
+    "docs/research/2026-09-22-trellis-o9/cache-probe.json": "f9544edd7f67f9f916abe4a4501bf8086a72517b728b656457cf21690876a2f1",
+    "docs/research/2026-09-22-trellis-o9/configured-probe.json": "cb77196dc0a4fe15ef28411a2ffa45ae89675361efb6d208974f71ef9d4ae335",
+    "docs/research/2026-09-22-trellis-o9/summary.json": "078f00935867e7ed0237872f06aa958787e1f23d1ed01562217a39e58161d37f",
+    "docs/research/2026-09-22-trellis-o9/manifest.json": "ee8e747c32abec2702c723279bf2a760a80fbbecba6e6b5b9e734aa3b38bc727",
+    "docs/research/2026-09-22-trellis-o9/probe.py": "c403a1f8007c0ff39ae55466686e378965b59d608fcca6f98000b212a844372f",
+    "docs/research/2026-09-22-trellis-o9/evidence.tar.gz": "c5af9eacb13123304adceffa5488e0e36819aceadd6db74248b5780ecb44dce2",
+    "docs/research/2026-09-22-trellis-o9/registry-verification.json": "d33d1f8b7a609098a847de40a64d9d89e6ccc752972440a54a15ce4dc9cd50a3",
+    "docs/research/2026-09-22-trellis-o9/README.md": "a3647acccfbe4f62f1323cee85a03e8509cdd8ce128ed9234192f9ebdaf974ff",
+    "docs/research/2026-09-22-language-qualification/qualification-checks.json": "0300a59c3a302aac382a834cfec79321b136d37be941ac65498069e2f773ec6b",
+    "docs/research/2026-09-22-language-qualification/typescript6-registry.json": "222c8b0fc18cb7d7c4f283dc04476831999dbdbb8db39072bf10300991bc1054",
+    "docs/research/2026-09-22-language-qualification/provenance.json": "f6e72c590befcb0a2e5d4f794d02176f7ebe32d9f89596c529c29bf98091cc71",
+    "docs/research/2026-09-22-language-qualification/fixture-manifest.json": "4bbf2d58c9579a099c822d6617d8ed6d03e378e7318cab39c9c6a7a93e93c4f9",
+    "docs/research/2026-09-22-language-qualification/validation.json": "49ef71a2b9b8a1b722697d0ddf7e52f1b8bafa30f6f92ab79239d86f076a9c9d",
+    "docs/research/2026-09-22-language-qualification/typescript7-registry.json": "4fb7ca9be68fb21a9b149a0e1216c6272638dde67eaa461756045ca751f06c20",
+    "docs/research/2026-09-22-language-qualification/evidence.tar.gz": "fa93032b50e1ecf67aa363cbd8fafb6e4192a301f3c73421e179cab5c77cb851",
+    "docs/research/2026-09-22-language-qualification/oxc-lock-registry.json": "c89b411c97aa54acb474b5003db2b21bf124a1368fec49f310171be9b73c7338",
+    "docs/research/2026-09-22-language-qualification/revolt-registry.json": "b329c6205d692c1d9a1a245822ddd970aff5a820ce358db2034824e2f8490b47",
+    "docs/research/2026-09-22-language-qualification/artifact-manifest.json": "d165982e2aa8ef5b092333ace8201612d8e290184ef96e598439d87c531eb5a1",
+    "docs/research/2026-09-22-language-qualification/rust-sysroot-registry.json": "d5a11bc73ab073753859ded33ed0417994993a81f14750c4a37b630f8e6bcd99",
+    "docs/research/2026-09-22-language-qualification/performance-summary.json": "971f27c0e0789d30d0c5492735cbfc4ed2b50e77805d37c1b11208555376bf39",
+    "docs/research/2026-09-22-language-qualification/README.md": "1a5755141185013c2b2e9fc0568c7f82adc3dfe1c6b3b2d0c34d8bc585bae0b3",
+    "docs/research/2026-09-22-source-coherence/probe.py": "8d2c0799e75de7d80d0ce5a128b6673ae5e1e5d14ecf380a0c4ef448f879388d",
+    "docs/research/2026-09-22-source-coherence/evidence.tar.gz": "2e7b024aa00a2e34aa7861c8e25f2a728e934d6820f1e93435514835bee421f4",
+    "docs/research/2026-09-22-source-coherence/results.json": "26037927deac91eab84ab4a7543eaf73bcd9936c9df3070e9dc29c50b620b024",
+    "docs/research/2026-09-22-source-coherence/artifact-manifest.json": "f2994819fbfc7b5c14e567976a758480f2b30549e866cd6dd226de19aad5cc52",
+    "docs/research/2026-09-22-source-coherence/README.md": "ede5174e2d786ae5660d56e7fc2bbb242e6a512126004f287048eee334e6252a",
+    "docs/research/2026-09-22-language-qualification/probes/mago_watch_probe.py": "b93cc326cce37cd8ac36aa6ea8a5ec5717a6e081ea66066c0cabfbef8870e3de",
+    "docs/research/2026-09-22-language-qualification/probes/rust_lsp_probe.py": "038ee4e06ad7d3042c1d68e9365e76a3f10969c5f12cf41d3f344cd78e680d84",
+    "docs/research/2026-09-22-language-qualification/probes/typescript_probe.cjs": "1072d28188294d545f370e6e28566245d53d6f32b2f85a8cd94a31b6f7e83842",
+    "docs/research/2026-09-22-language-qualification/probes/typescript7_api_probe.mjs": "ab0c80dc43c1ec998a4745a10dbe8bad963d92df31052d0150f95073d47d2cde",
+    "docs/research/2026-09-22-language-qualification/probes/run_measurements.py": "1359eebb1b0de886ca3a7c5e63d70b683862f8a6891d5beb99c9ce756ef7001e",
+    "docs/research/2026-09-22-language-qualification/probes/mago_worker.php": "1dde3cce6e1cff757bfd67cfe4a76317828457416a89e374e22a2ff4a437aeb2",
+    "docs/research/2026-09-22-language-qualification/probes/summarize_results.py": "e06e2668557eea0f060ede104b706f05264f2edfe15cfdd822f1b33547cde4fe",
+    "docs/research/2026-09-22-language-qualification/probes/typescript7_lsp_probe.py": "19968281907e09dc11dcffd7bdd2bc25cf443e3d72c07440a5c92e9dd305cf7f",
+    "docs/research/2026-09-22-language-qualification/probes/measure.py": "b11d5164f2d6ff8c3db7c0c295654854805ecce25c385bedd54078f151610832",
+    "docs/research/2026-09-22-language-qualification/probes/verify_results.py": "8c78c4b653c66f1e8142e9ecf089c2a48eba1966ef76a589fabe3b76254ce8c6",
+    "docs/research/2026-09-22-language-qualification/probes/generate_fixtures.py": "2d7ed22682148a723aefb4d323b41123a1f6e7a0f4a4fc13f1d08d423deaa098",
+    "docs/research/2026-09-22-language-qualification/probes/oxc-probe/Cargo.lock": "b37cf4a81fe6c08a227fd698065996f567c1a843408b060a44ed7d35e4dc1096",
+    "docs/research/2026-09-22-language-qualification/probes/oxc-probe/Cargo.toml": "c2353b57d3cb741ae59384b3e6a8081e1fd2470fb2cbd34ef7282aaadf2850e6",
+    "docs/research/2026-09-22-language-qualification/probes/php-sdk/composer.lock": "128dc8e2a5242f4eecfbab4cae4fb3ace96252c37d8358303dc53d8b31ea4eb8",
+    "docs/research/2026-09-22-language-qualification/probes/php-sdk/composer.json": "d7fd8e6188ee54070d4729ca2615c0a8a70ce9c5135d9b3ee891c926a6d56bdf",
+    "docs/research/2026-09-22-language-qualification/probes/oxc-probe/src/main.rs": "6a9a5a7666a774b5e97d56a5047c0ddc495fab31da2bd39d2164dc83f188d97c",
+    "tools/config-conformance/.gitignore": "ca1838cde9e4cfb493f3ea87a08bf973a9d6102aac688fc8828107d5586042aa",
+    "tools/config-conformance/package.json": "f686b1444e7962cdeae3b3619fcba1b84955023c6125528635889de45f0a5604",
+    "tools/config-conformance/schema.mjs": "1ddd2b87aa9ed471685f49702135506ca3bc3ab7a782655886211d70cf7b77c6",
+    "tools/config-conformance/decode.mjs": "393aa866455304fc138cdac2d93e5b9b6a4066e4b4c65289f3799702c1274b53",
+    "tools/config-conformance/README.md": "0a9ffc3141b015073e49d8cb2043fed9160f9cb0b445d90939404857afd9efb4",
+    "tools/config-conformance/package-lock.json": "4c10ac58900b5ec68a168d9742f66bf747b002847eeee64245e2bd31138dcaf4",
+    ".missions/AS-M001/history.jsonl": "b4c476a060e94934348f3a0ecd57a3389c6e9515ce4758c6d6b2ffd54781cd27",
+    ".missions/AS-M001/state.json": "2f3580408d1db251f9de579e27eb938fca64bf2751a8c8ef9a7a6d64985e130a",
+    ".missions/AS-M003/history.jsonl": "4e00aafbc49d7195cf7d71332640dea6a712715f5e1b1771b716a00ac9912aa6",
+    ".missions/AS-M003/state.json": "5a451a562643116e3527093c54ffa6b681c4f10582d36dd25376eb44d6eeaf72",
+    ".missions/AS-M003/evidence/prerequisite-review.json": "1d9b02e680edf01aacba715d0d278363a81ce361d8cf73b17c269b0699aab6d9",
+    ".missions/AS-M003/evidence/tooling-approval-and-status.json": "ecec7092fea9a7ba119599fe6ab6b485e3834fc40a5c720391ce604848224bc2",
+    ".missions/AS-M003/evidence/oracle-contract-r1.json": "2570545aac3afd51751a1c80ed6c92b9adfb4328821b013471c6d6307621f7f2",
+    ".missions/AS-M003/evidence/isolation-and-authority.json": "d779830963df035eff42322e11e4580d92b52d4c8dd5282193c6905f33046ff6",
+    ".missions/AS-M003/evidence/preparation-checks.json": "d6571d6b9741aa4eca45946aa2203d3ead4313dd43c4e956c873c82af14dcd66",
+    ".missions/AS-M003/evidence/compiler-ready-and-resumption.json": "7b9e3206dbaa41093e50b9ec46a36ac41b26434c8aad56aaf52fcb69b21f3ce5",
+    ".missions/AS-M003/evidence/orchestration-approval.json": "fc876597f046634ce6b8395b885ded44fbcd7e2229713421b36a207ff9f908fe",
+    ".missions/AS-M003/evidence/prerequisites-accepted.json": "3f0ca30d6c4125ec222e9b8c49447d1797582bb5173fce4b1e2931501d3e62e6",
+    ".missions/AS-M003/evidence/mdd-skill-transition.json": "a6150d8bade6bd55a36d368803d2bfc90bb3a93efe418d6c8bb946d6cac94da5",
+    ".missions/AS-M003/evidence/preparation.json": "65a2f41889f704c73fcb6643dd7bc818e671c04a0653ea181ae2ae6bfd75df73",
+    ".missions/AS-M003/evidence/P02-tdd-decision-pending.json": "4243efffd9b66d497a21d0b0f67b09fb5360c51d8f1c61641c3e602798d4ea14",
+    ".missions/AS-M003/evidence/P02-tdd-exception-approved.json": "b4eaafdd967dbd45df2ce53dc08030a86cba83f87f3f6473e842f247488001cf",
+    ".missions/AS-M003/evidence/approval.json": "73cf26790bfec7b1180089ffe1bd3961e903df86aeea6f36244f1bbc5c573f92",
+    ".missions/AS-M003/results/P02-r1-review.json": "1707fc37c794d5521519c8949b39b1d99c28c65a004db8100cd41504074ab72a",
+    ".missions/AS-M003/results/P01-C01-r1-review.json": "dbe55da2fe92bce36d72c32288a1a634495fd1d117da3f0c21ae31d40b8eec45",
+    ".missions/AS-M003/results/P01-r1-review.json": "77b4f95d3bfced683687a863b2496ad8a925ea000613ad397c817163fac5b8ad",
+    ".missions/AS-M003/packets/P02-r1.md": "a1c1007e674883bdfbc357540af4964866e51d4108c61639b6271df30cfac311",
+    ".missions/AS-M003/packets/P01-r1.md": "b39648f92445c290f9951202a0776767d466f5feb8a2134d36a75b5e0803790e",
+    ".missions/AS-M003/packets/P01-C01-r1.md": "2caa022ea231b33ee596a60f33b1ae98a1d81da98042eb5d9a5634c44db5ffeb",
+    ".missions/AS-M003/evidence/P02/16-red-empty-generation.log": "c9cb42f161e57e68f3d095f8c3d6e30886240ac8c8a293fb0c28231a22f98302",
+    ".missions/AS-M003/evidence/P02/observation-staged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/baseline.json": "0942ae37305a6448bc416511b582d07c02b0f7097f06e938e939506d48c35c3e",
+    ".missions/AS-M003/evidence/P02/probe-git-attributes-single-file.py": "b05c163eddedf258a8fcaf7375dcfd30433a77e6a458a2a7f104ce4a3bc6b01c",
+    ".missions/AS-M003/evidence/P02/15-0-mechanism-diagnosis.log": "f20c0df4c284dd5eb60693f3c1f6845678e840fd674d2c1e78f1aaff89424645",
+    ".missions/AS-M003/evidence/P02/24-measure-local.log": "d31f7086e891379a66cd0686c9fc0fb738c165fff2b1f74a8f9a9718f5200e7a",
+    ".missions/AS-M003/evidence/P02/observation-local-1.log": "ed19788b5b85ac5ae2c5c34770acd9caa181035b1fa98139d3d6f77b4128b62a",
+    ".missions/AS-M003/evidence/P02/decision-hold-preservation.json": "60bed5a37fdb7972b3c33ea4c004703b3edda004aa4d6cd82b2f04077eed3b19",
+    ".missions/AS-M003/evidence/P02/measurements-local.json": "afa33906c1e04d74ea77c52655b845703c6b58969558bd8ca6cd6817e8f398b3",
+    ".missions/AS-M003/evidence/P02/27-tooling-output-red.json": "2fc488b446ed5a21b35508ff6a099b4af13bca45e78203ff329e620eb7f1b3f1",
+    ".missions/AS-M003/evidence/P02/06-hold-capture-check.log": "d0d5285fbdace040d17e7efa8b2a98e5254566c5bd0dac64a425ec001f20f2c7",
+    ".missions/AS-M003/evidence/P02/observation-local-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/18-0-metadata-green.log": "027e1167c391663e615d1702a7d4a57b071d8c7c829cb434e3202999de1598de",
+    ".missions/AS-M003/evidence/P02/18-1-metadata-green.log": "53c3d5cf4d93a918acd49b1f14975888da2ec0b2218a9b89492866e8be4653e8",
+    ".missions/AS-M003/evidence/P02/09-resumed-state.log": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203",
+    ".missions/AS-M003/evidence/P02/20-focused-suite.log": "c8748a95efbae9f5bc2fdc1d67c49bbe5821f796762300bd680ade790c44efc4",
+    ".missions/AS-M003/evidence/P02/state-before.log": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203",
+    ".missions/AS-M003/evidence/P02/19-2-working-coherence.log": "daf299ac53fbfd1fdd0367136db61b62c9b22138e5eca91101271c33473e6196",
+    ".missions/AS-M003/evidence/P02/24-measure-base.log": "5933bfc752ecf2e7491f684f810d37cf629d096ddaa3679d38e652f0bfabd3e0",
+    ".missions/AS-M003/evidence/P02/03-comparisons.log": "2400f9741de60548eb0c9640f6fbc715c429c54d57285c21eeeb3db010fbaaf6",
+    ".missions/AS-M003/evidence/P02/observation-unstaged-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/12-green-index-flags.log": "ba950ac3db9d258900a640808e7032b82ac690e627edb39f62a3c5340e7e2ec6",
+    ".missions/AS-M003/evidence/P02/observation-local-5.log": "d0ae9aa10e0f8b0978c1f4a20512a992eda382ed5c8c0457cf9c54dc9c966afa",
+    ".missions/AS-M003/evidence/P02/measurement-build-local.log": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877",
+    ".missions/AS-M003/evidence/P02/observation-unstaged-1.log": "18c73bbe6c709dcf73b92d8f75323e42d8a068eb7e62b0d30b3b5ca32a959444",
+    ".missions/AS-M003/evidence/P02/observation-base-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/30-state-final.log": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203",
+    ".missions/AS-M003/evidence/P02/15-1-mechanism-diagnosis.log": "0acad986b28b728e52a3e685ec9b439410561d021afab876561da08908104c76",
+    ".missions/AS-M003/evidence/P02/probe-git-attributes-single-file.json": "8c4607a9345f0b6232d6bd47375b01c714b1be17d2c6ea00aaf6272708c888a8",
+    ".missions/AS-M003/evidence/P02/08-hold-clippy.log": "90e8e69cd453fb5ac606bd9bb1a092f6a060687df61a29cefdafdbf7b891d14f",
+    ".missions/AS-M003/evidence/P02/decision-hold-source.tar.gz": "d3d96bf2a67c0cae01cbde2dcf2e88517ba43902c4030fb8c45fd73d12a73d03",
+    ".missions/AS-M003/evidence/P02/source-state.json": "412c590955d393c1cde2db9fdcce2c16f738b31d57024261780f9424443ec8bd",
+    ".missions/AS-M003/evidence/P02/29-document-source-checks.json": "4c029bb9e3c21fe261dae361a7f49e1e92555ce8fc8ffa07dd0548e671cfa5bd",
+    ".missions/AS-M003/evidence/P02/14-0-qualification.log": "90fd9e878fe35aaadb25598b97e02b2251148561a45e267557bf97f6cd63ed0c",
+    ".missions/AS-M003/evidence/P02/11-red-intent.log": "30d57ad031602e4dbba764d55ba40cb3e0480af48c3d451d9b9b1c5ffa97be0d",
+    ".missions/AS-M003/evidence/P02/probe-git-attributes.py": "549b2258de81eb01c9ebc7ea485145c2f161bb46d6bf91f749d8075a3245625b",
+    ".missions/AS-M003/evidence/P02/observation-local-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/19-1-working-coherence.log": "610dfccfd94047ad14c0302b9eb7ca892026f8404992e91743b294d7e0e0a64f",
+    ".missions/AS-M003/evidence/P02/observation-base-5.log": "432284a13e5a0b50d783ce8e10ecd9ae690e205769222b69025dea8c9c2d96c8",
+    ".missions/AS-M003/evidence/P02/measurement-build-unstaged.log": "8e8124be3f9d711349c894ddc3f2f497a4919371751975c88558624a7aa2170e",
+    ".missions/AS-M003/evidence/P02/observation-staged-5.log": "cbab431fad3c143fdb3ba208d826b21e55a09f721448036c19dd522e5647b55b",
+    ".missions/AS-M003/evidence/P02/tdd-gap.md": "6c50fac44107f3b8ede515068651b7c574d626fddcd646f8bd54e677dc5593d2",
+    ".missions/AS-M003/evidence/P02/measurement-build-base.log": "97baa9858849e0d77c78d45cbf53394fd9b49ea663a30a24f6d3e1c71caee877",
+    ".missions/AS-M003/evidence/P02/14-3-qualification.log": "c321a2ace4e9ab46a7d85a2cb2813eb45a9e2dfa57d7d43a3b3e0c808069112c",
+    ".missions/AS-M003/evidence/P02/25-original-observer-green.json": "ee6265dc3870ce6fc592b781cda781289a72aa150f0b1ca41db352ca350afd68",
+    ".missions/AS-M003/evidence/P02/24-measure-unstaged.log": "4c542d678886ee486a4009b1d3d2690b3a9a7f688e90ed957059ab59905e3f17",
+    ".missions/AS-M003/evidence/P02/17-red-info-attributes.log": "006f0b419dda15bd4fd8fdbf7562248e50729973d69d024603bcd171ca925827",
+    ".missions/AS-M003/evidence/P02/22-0-stable-focused.log": "e4a953a3403760b5fe237720c31c662369b5cef573d21c713115ea261900d608",
+    ".missions/AS-M003/evidence/P02/probe-git-attributes.json": "1ed40f4fed3245dbe658564b6445c3f339254a911c784ac9a3098a8dcd2699e9",
+    ".missions/AS-M003/evidence/P02/14-1-qualification.log": "7ccd26d23700a4c491f26ff53aa20964d9e29e8e855c085bea847e03cd86c5b8",
+    ".missions/AS-M003/evidence/P02/04-red-renames.log": "0e749a4086ebeb9e6c0e6a8c73e6ea03a5471046b67b697d621149880fa88b06",
+    ".missions/AS-M003/evidence/P02/01-red-comparisons.log": "665c2e30162aaf959d17f37aacc6bfbb6873c551ab17437f6e78f9a951909323",
+    ".missions/AS-M003/evidence/P02/19-0-working-coherence.log": "a121cd67a3d1bc065c1573cf0973a2d26779923939c345d860bfa4600a1b26a9",
+    ".missions/AS-M003/evidence/P02/13-green-intent.log": "4ab38d2ae5b2961c0810875ff7abd4e1214c3c9d046a4a7861e8f3e00a260f63",
+    ".missions/AS-M003/evidence/P02/decision-hold-source.json": "d6307318f2858c7439fbd49d2a120fbdb6df199a664eb7f001d6ec4e3add568b",
+    ".missions/AS-M003/evidence/P02/measurements-base.json": "59a7038290bbdacc634c3c770cb866182617c904ccb98262c47cdca3de85e857",
+    ".missions/AS-M003/evidence/P02/measurement-build-staged.log": "9f03be70b63205b5c8ad6c522d69bc5fd87ada160ab64e051dd24a7be4742564",
+    ".missions/AS-M003/evidence/P02/23-full-ci.log": "371215c9fae37b31b9292838a7e2770d4a8d9361f6bdd6ef156b23823958d1de",
+    ".missions/AS-M003/evidence/P02/observation-base-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/05-green-renames.log": "0e824c71bce8c14d0b43290295fab96f61097b0c38edde6452bd5a991fe5d5b1",
+    ".missions/AS-M003/evidence/P02/18-3-metadata-green.log": "abfa3cf5c121505d6e3055b88319532a92971a365ccf33a9819ed2a287b0f228",
+    ".missions/AS-M003/evidence/P02/observation-unstaged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/measure-before-output-guard.txt": "693ae9a4438d6abe3c8bea1d3ff37a06b32c27905ee7f74e4509f93c87cc7e81",
+    ".missions/AS-M003/evidence/P02/24-measure-staged.log": "2fe76086e283fc1d799622730042e795d44e7ce7bffbe86122d96584d6784d28",
+    ".missions/AS-M003/evidence/P02/07-hold-format-check.log": "8a61f8fccf393fe1c86aec0fb4d63ca4472be1bc3f084b711eac83a9219a2e56",
+    ".missions/AS-M003/evidence/P02/02-green-comparisons.log": "d77c84d6bc927df7c53d2a5318761b278a42b78a7ebf6962d9c80afd70b09440",
+    ".missions/AS-M003/evidence/P02/observation-staged-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P02/28-tooling-output-green.json": "e4ed6a27d542b6b55b7270ceae705d57916e1e19e6fb555c941c585bc06a3aa7",
+    ".missions/AS-M003/evidence/P02/21-working-limits.log": "a2aefab8c6b60f8d03d19cf6119e74748899e83fa0e2613f2f8b006da356b511",
+    ".missions/AS-M003/evidence/P02/14-2-qualification.log": "8ff67fbe0380fafd84bcb929bf590bebd70e79f5285bcd9c8b741e5c1fc01954",
+    ".missions/AS-M003/evidence/P02/observation-base-1.log": "b54df3808067501752d996ab10cd46e3f53744c25f31b0f988079f9ebd50db0d",
+    ".missions/AS-M003/evidence/P02/observation-unstaged-5.log": "2c48322481f55e2e623aa86ef3555d8f31e2513f5fbebcfbeb9a066f59de25f7",
+    ".missions/AS-M003/evidence/P02/measurements-staged.json": "948da000d0ba042a2b49b57dac9423be438bdee3d06c9a429daee10f7ce0dc93",
+    ".missions/AS-M003/evidence/P02/measure.py": "e5737659ec5e57a0798a9f38f1a1b1e518f96def2329e64756e178d6a1af0839",
+    ".missions/AS-M003/evidence/P02/10-red-index-flags.log": "e0a6ec4f9fcdcfc7f5dbdcc66b0177ba688664f1d99cf38a3617420aecf54fdf",
+    ".missions/AS-M003/evidence/P02/observation-staged-1.log": "948e5a17f8ca837de55d7ae29ae6e4d61551d6bc77d36800a619c2664657a9a3",
+    ".missions/AS-M003/evidence/P02/14-4-qualification.log": "3798e9fd1b7acbc3ee41977152a275fd085578d9bbda3c91026c02fde4fc21b9",
+    ".missions/AS-M003/evidence/P02/18-2-metadata-green.log": "605645759bfe25643d75a6e3d7d6417a46818cfeb5671fae543f583a7075b456",
+    ".missions/AS-M003/evidence/P02/26-nonvisual-demo.log": "001f862b0f6f93357973ef8754ec43e83fa3e6119a01b453c1206105f832e046",
+    ".missions/AS-M003/evidence/P02/measurements-unstaged.json": "094d2bb10444661f49bb5f6c0706c475e1446a15b55ed04e012a8652467a6065",
+    ".missions/AS-M003/evidence/P02/22-1-stable-focused.log": "61bca771740bd7563baf9b7af5c1637a55055295f689cc3c3957bcaba40e5963",
+    ".missions/AS-M003/evidence/P02/report-receipt.json": "4dcb5beb37153fee6188642ff594c37fc2eb828fe1dcdca5d61b7a1ad8bbe2d7",
+    ".missions/AS-M003/evidence/P01-C01/baseline.json": "addfc0d0054ab11fb277497b483a6ecad96b0c7ee9f514996cc65e068fb262b0",
+    ".missions/AS-M003/evidence/P01-C01/kill-observation-green-final.json": "98e4b8cb701c2bf3f7cf63dfca411b21b901d7c433bad4064434c366e4bfe9a7",
+    ".missions/AS-M003/evidence/P01-C01/observation-5-before-fixture-correction.log": "90e262b0808ac049a944a3edb395d16be56184d3de793b26f07c93057a904489",
+    ".missions/AS-M003/evidence/P01-C01/02-green.log": "c48b2d9d83696529739feb79474e47542c408f0eb9865fe434e28b47f26989bd",
+    ".missions/AS-M003/evidence/P01-C01/state-before.log": "c9bed6eb3a1d43a4a1aa9dace8ee93e2468f2ba8ec8182fabce9b5b9679b8203",
+    ".missions/AS-M003/evidence/P01-C01/observation-1-before-fixture-correction.log": "2c293386bc557fee049673e776cbad1ada26df8ae08ba1acbca57ce19a5948e8",
+    ".missions/AS-M003/evidence/P01-C01/observation-5.log": "98d52dcf2a6731fbb640b4e7351a9c5e25e0734747367ca692859bb6cf983c20",
+    ".missions/AS-M003/evidence/P01-C01/05-2-checks.log": "be466c0e72501dcb52972bff59f31dcf2b388e68a878d49a458f60cedab6ac41",
+    ".missions/AS-M003/evidence/P01-C01/01-red.log": "8a93cda7c31becb589d6e22b37bde9e9bf56edc5904a45f1ff533c39416a67ff",
+    ".missions/AS-M003/evidence/P01-C01/measurements-before-fixture-correction.json": "c68b375a75d23695955d8ce60d338f3fc4e4320f1d2fe5afe6fd4f372cd9ffeb",
+    ".missions/AS-M003/evidence/P01-C01/03-descendant-green.log": "a174a8165ce476d14c2eb8f6af0dd272a7fb28880ee48cc06f3959ca55822279",
+    ".missions/AS-M003/evidence/P01-C01/source-state.json": "c37c516244b55ed992369dd347d1e6f4d18fa390bd9580c9a02b0e5023f0e196",
+    ".missions/AS-M003/evidence/P01-C01/observation-1.log": "19b2f654b6b89bd323772ddd5b098671bec8d22b4a9f8a41e986cdd17dddfed5",
+    ".missions/AS-M003/evidence/P01-C01/05-1-checks.log": "a7f6c4cc7b20061af86cf9468f71ffd9bc30f2a199819087ee4bf4f94978112a",
+    ".missions/AS-M003/evidence/P01-C01/waitid-abi.c": "ad2db765a7af983cc650e76eb2d6b8c0a3bef89c7c8c3595e3f5fc8f14776721",
+    ".missions/AS-M003/evidence/P01-C01/workspace-correction.diff": "6d951f1f24bf2f8bffa9a18c0a51283543d7bc52633e3b4dd2b091e1d9100794",
+    ".missions/AS-M003/evidence/P01-C01/measurement-build.log": "06172201da34d3a06618c59c87fc3456106eb3e7943e523fb933f1bd1515fb39",
+    ".missions/AS-M003/evidence/P01-C01/kill-observation-green.json": "085427e853e36f4e1cce6c0c15e2cbfb1962ab77a04dc205d6ef2dabe355014d",
+    ".missions/AS-M003/evidence/P01-C01/05-0-checks.log": "12b59811769d23b2d94b4736a555662c7bd2da4e87831e69050625af5a1121d4",
+    ".missions/AS-M003/evidence/P01-C01/04-0-checks.log": "5a63b3293e7286a02e265d6f1fcd19b9eb29b16e60ede59c39277a293529a5ad",
+    ".missions/AS-M003/evidence/P01-C01/waitid-abi.log": "713055c7af14b73fb22d0cc99fa4761b98d00b02f097280811e1404d1f4728ae",
+    ".missions/AS-M003/evidence/P01-C01/06-1-final-check.log": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d",
+    ".missions/AS-M003/evidence/P01-C01/observation-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P01-C01/measurements.json": "96cb293377285501cb60d3ee3d0f4c7d0c54aeb37d26f9f76d53485fda5a99f6",
+    ".missions/AS-M003/evidence/P01-C01/observation-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P01-C01/05-3-checks.log": "cc06b20de8f4bf52226cae6d47e6a446ed5a36e898c1c6b4c3cacea88705c328",
+    ".missions/AS-M003/evidence/P01-C01/git-correction.diff": "b5b20d6e0e7f0394123c62d727e248cc2461ae0a18096a7cc2af20d47a941d2b",
+    ".missions/AS-M003/evidence/P01-C01/measure.py": "249a470bbcdb35c86ae0d397fbf5d80a530442130ea91076b41feb4103232165",
+    ".missions/AS-M003/evidence/P01-C01/06-0-final-check.log": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38",
+    ".missions/AS-M003/evidence/P01-C01/report-receipt.json": "11b6aa5011fd9b2ac20bb02a6db70c3a8f8cc49d8bba45ec9d29fd96c46aa2c7",
+    ".missions/AS-M003/evidence/P01/final-consistency.json": "fd11129410686349c689518a4bdb2549e13a384ee21ed90f20a8ebc1b8dc1796",
+    ".missions/AS-M003/evidence/P01/baseline.json": "773416d4efca75d16f7ae8dd7e05a4bf302f816f2e017903f8336c9f214b7773",
+    ".missions/AS-M003/evidence/P01/observation-5-initial.log": "ba727d435dabc0da4bd83a5e681e07a75e970b7cd0143bfb86f96d839344a746",
+    ".missions/AS-M003/evidence/P01/measurements-initial.json": "dba6b7dac310c703f912c0f39aa514555cc25896703487c0b2d0ab8bcbbaa65e",
+    ".missions/AS-M003/evidence/P01/09-green-mode.log": "55eac3cfccba509e328c5da086f32682755e24f3a662e4c4cd8b2aeca5f93490",
+    ".missions/AS-M003/evidence/P01/12-remote-probe.log": "4acdea5822a12a551a625b0aeaf53bebaa3efbb27f62455c89ba3e70eaa9e619",
+    ".missions/AS-M003/evidence/P01/18-0-green-object-admission.log": "d06c92cf7b53d7ae7f585447dfcaa03fc37129ed03d611954f82433be716665f",
+    ".missions/AS-M003/evidence/P01/13-3-final-check.log": "551dbe22938c29a385657e1ba7fedec7940eb16294a937232927f50091260a4d",
+    ".missions/AS-M003/evidence/P01/03-red.log": "2ea3bd6398e435db2b0264984177f65dd243ef626ee979596e99ad060a95eea0",
+    ".missions/AS-M003/evidence/P01/measurements-setup-inclusive.json": "bab5c54eab543ff459328e5419b082810f75a3a666b030a034fb1b8bce7f4a41",
+    ".missions/AS-M003/evidence/P01/13-1-final-check.log": "94fefbd940650846e35c64f7ecb0305c4e409617b0bbd0e8a9c2cd1a0d9f648d",
+    ".missions/AS-M003/evidence/P01/02-green.log": "cbe658afcec1b271d6d2cd575e5ad445cd4f4a3a9cc9dc9bb471b1b5da7ce857",
+    ".missions/AS-M003/evidence/P01/16-5-final-evidence.log": "6523761db2fed6f6442e03301f7a0fa36b335cf8e63b7327b8345d0a5f56180d",
+    ".missions/AS-M003/evidence/P01/13-0-final-check.log": "09c63f52264050369c2283f53e39c35e0829591927db1fe8c269712389b33f5f",
+    ".missions/AS-M003/evidence/P01/observation-1-before-object-admission.log": "3fab889cb0265b0a66dbcd08ccebdf3d7414758d266f00f9207a4f64f0526158",
+    ".missions/AS-M003/evidence/P01/06-green.log": "11b3e2c7bd78b60c8e852e6275b4d8ddda17a6aef63909382a35a02695285f96",
+    ".missions/AS-M003/evidence/P01/15-1-recheck.log": "64a69d67dc83d00a806f1c8c74d0e64b6357acdb5480322d283bedf37a1674cf",
+    ".missions/AS-M003/evidence/P01/11-focused-refactor.log": "5aebc1d6135a46824e1a0a132cff8816552ea0fbc11654af6b4b47a127861829",
+    ".missions/AS-M003/evidence/P01/measurements-before-object-admission.json": "4ad91ac1efab856f310cfc478f7caf338c23895604453848d2480af95e69cc90",
+    ".missions/AS-M003/evidence/P01/08-red-mode.log": "a5d7eeff1810713728edc74501cfae758f49dd9f1505f4aa764d5e71a7916a2e",
+    ".missions/AS-M003/evidence/P01/18-1-green-object-admission.log": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+    ".missions/AS-M003/evidence/P01/16-2-final-evidence.log": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+    ".missions/AS-M003/evidence/P01/04-green.log": "3a827afe218b53fc477bb906a6b441dda70d3d2719426774859cddc4dad61ee9",
+    ".missions/AS-M003/evidence/P01/observation-5-before-object-admission.log": "bc8ce3641a75abed00319646a28f1b113cb8f2d3c3fb6c39be94d6e0235a0fed",
+    ".missions/AS-M003/evidence/P01/observation-5.log": "3f6a041e06e28a7b337e681662a12a28bf852eb1246a7c0c5a87a9f77dd098f0",
+    ".missions/AS-M003/evidence/P01/16-4-final-evidence.log": "0503d7c5a0b5a5d16cebc9a050c0f1d121e154d5e7e1a210ff396edb32063f38",
+    ".missions/AS-M003/evidence/P01/01-red.log": "4ed98555bfc9d93b9ea3acb2ee23f8b0c3ef5a1db2690691ca3d3e491cd5888e",
+    ".missions/AS-M003/evidence/P01/observation-5-setup-inclusive.log": "bd6b7744f4be84d3641f8b65bc63561c711f535c972921de72d71c22b404d7b5",
+    ".missions/AS-M003/evidence/P01/source-state.json": "1296ab6232003e1f262cb76c574dc916d534852b9bc2b7b555300d4fc24f90f5",
+    ".missions/AS-M003/evidence/P01/15-0-recheck.log": "762c624d69a5c0a0c936e83d7651d2940bf600db45955bb3bee13ac3bc62a641",
+    ".missions/AS-M003/evidence/P01/07-controlled.log": "cff5213d8d23c00f152023cb1d6f7e654fd8ae5a6374830f897757bc635e9e19",
+    ".missions/AS-M003/evidence/P01/14-clippy.log": "c3144e72794964cec7041df7d7250943907aeba9f6d96e7e7fe22033c87d1a77",
+    ".missions/AS-M003/evidence/P01/observation-1.log": "49dfd888fc73170a02c2363bd62e30340db6bce39284c47e172186bd6961f6b5",
+    ".missions/AS-M003/evidence/P01/13-2-final-check.log": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+    ".missions/AS-M003/evidence/P01/05-red.log": "b9b0828c3e06157d53e957bc28ba3353e1d0e4430f21ce55b77d924e82df6332",
+    ".missions/AS-M003/evidence/P01/measurement-build.log": "438145a40e66c46097a1a3084f49421e644a887257ea00b2594cd49cd1b6d4bb",
+    ".missions/AS-M003/evidence/P01/locked-npm-verification.json": "67ff9286ce89ee264da50f9a94d0d3346c41babb3cd06963e4a4f4c9b12ee83f",
+    ".missions/AS-M003/evidence/P01/18-2-green-object-admission.log": "ccc03bb44368c8733872d6a2f26130c23a481368d8c2e3daf8d9f8508ba33557",
+    ".missions/AS-M003/evidence/P01/16-1-final-evidence.log": "e1f31117003fa241f79b1698465952ec4a1332b77d8f5fdf5a9d274f23e4c26e",
+    ".missions/AS-M003/evidence/P01/15-3-recheck.log": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554",
+    ".missions/AS-M003/evidence/P01/02b-green.log": "09fab6ab2a23e1c9e3ce2bb6f4bbdb0c746107613cc7664b53e66ead848ce711",
+    ".missions/AS-M003/evidence/P01/10-locked-restore.log": "111fd75a14af536c19935a4c0c02c8cb6fbf255e1f9ddbf96632ba3fc1427245",
+    ".missions/AS-M003/evidence/P01/observation-1-setup-inclusive.log": "1fa314ecdac708784d223fffbb89d1c9ced775996646ddf54618b092ba043e23",
+    ".missions/AS-M003/evidence/P01/19-final-build.log": "8da0eaad822d2f7a60a6d75187818dbbbe80b3cfa403ec1517f3f8067519530c",
+    ".missions/AS-M003/evidence/P01/17-red-object-admission.log": "0477b978b1a741a794e018f80ca3e39bd3a95368ef00e4d8a4f4f403f796beac",
+    ".missions/AS-M003/evidence/P01/state-validation.log": "0b991f6dea584a336b927daec0f7c74d3257d3103598a56857f1371b8f48cd22",
+    ".missions/AS-M003/evidence/P01/observation-5.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P01/measurements.json": "b2295b9010c94d43d578066567fc864bbefd1e42436e08a65dfbee4e1fea4c37",
+    ".missions/AS-M003/evidence/P01/observation-1.phase": "eebbf6457e46a7f63acdf9b97390f790ba443d60cfa44b607da7e5c40aa1cc1d",
+    ".missions/AS-M003/evidence/P01/observation-1-initial.log": "acbaffa0e6e505581c0938f77ca4491f5b489ebefe3bb7c38fffdf1d2056fe2a",
+    ".missions/AS-M003/evidence/P01/preparation.diff": "dbc8f9185d99003597efe612c4e56ee8162926c05a15cd2cf9c9a2793ed3d4c9",
+    ".missions/AS-M003/evidence/P01/measure.py": "fa68f1160d76978749948b70593fc27eecc5810537939a763172703d8b75eab9",
+    ".missions/AS-M003/evidence/P01/16-0-final-evidence.log": "607f0fdadf8d9b5b6851106a13ee8ca822812ecce21383134a42dd5dff6ec7aa",
+    ".missions/AS-M003/evidence/P01/03-red-compaction.json": "07e0aba1dc4e325bb7b7dd97279466d87101d805549b19e155545b55c6cdbe68",
+    ".missions/AS-M003/evidence/P01/report-receipt.json": "3080821dc50c341932e05440b928a86e890f7d8172ca99fb72c6747abc921f94",
+    ".missions/AS-M003/evidence/P01/16-3-final-evidence.log": "cb5ef11e7f6090324bc22dcf7a64f046ddf1db16cac97e7dfca83abd66aa8554",
+    ".missions/AS-M003/evidence/P01/15-2-recheck.log": "6af71d4eb79c367a78c0543b3baaf7fee12b6f15f7e614602e41a8738b3615e0",
+    ".missions/AS-M002/recovery/check-06.txt": "403914d9ed615ae899e11c8683d2535c5881bbd17cc454152efbd1b019b0b560",
+    ".missions/AS-M002/recovery/check-05.txt": "11144467c0e0f2502339c6fa21ceba73fbdaf7daac86218941b73fa79dd3c21a",
+    ".missions/AS-M002/recovery/source-comparisons.json": "f40ee2e1b8d134665564b8d0b69799b511a33c819b20bfae943d4d506eb1ca8f",
+    ".missions/AS-M002/recovery/check-04.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".missions/AS-M002/recovery/check-01.txt": "d923f38f361fe320a1142dfb51b2f9832fe7a89f3039cce1d66111c63aded407",
+    ".missions/AS-M002/recovery/original-cargo-lock.patch": "e45ca639821dea9c8ba05914cb01a29819e59b0665e804b08866acd48a789d7a",
+    ".missions/AS-M002/recovery/historical-validator-report.md": "b1816cffa1872dddc05a651d1eb70f2ae8eb30c80ceafae28100cc3dd5b9e8c2",
+    ".missions/AS-M002/recovery/contract-r4.txt": "9ef59240f439d145521c0b5917570a2c3db9a1935698ab215698279260a5ec03",
+    ".missions/AS-M002/recovery/checks.json": "7c5d6db74052064664faf8724a0e8ef839cf10c5d5c373c236821a3585452036",
+    ".missions/AS-M002/recovery/npm-registry-check.json": "19b96fc47638d3c6c6aa3b298f5d5b3fd420a8ca981b2429349b595657dc8ce0",
+    ".missions/AS-M002/recovery/check-03.txt": "dba59515bdeeedceab326bc959a7f38a4f50107bb85c6a47384137ca6616a424",
+    ".missions/AS-M002/recovery/check-02.txt": "5dbd354a0409114816d469fa79d855e1e05db90ca0f8a93185953132fff72020",
+    ".missions/AS-M002/recovery/document-checks.json": "b7cbef8b2a7a098c92b095fdd59a8a417bcd23d691775f8c0acccf65a3949138",
+    ".missions/AS-M002/recovery/cargo-registry-check.json": "e7cf06f4aa97d7ff59b032e87a8b45230538ae5a8104f25c0e90e0ee221c9c1c",
+    ".missions/AS-M002/recovery/README.md": "0663f12926527be6d42a3b8b3e2f63ca0d8ef88dee4f8b4be9af29eed92184ff",
+    ".missions/AS-M001/evidence/closure-checks.json": "584cf92831a019885bc0fad9882954f872666c2381cab4ac6b695fc1660c041e",
+    ".missions/AS-M001/evidence/AS-M001-P004-accepted.json": "88dda7e4a1a38399d8d2b5c8c1240919d3c91541476592f27c334adc324ccfaf",
+    ".missions/AS-M001/evidence/authorization-2026-10-13.md": "a0d77191bcf95a977739dcc591cefab0eab5d59664f04d70843d7785672aad8c",
+    ".missions/AS-M001/evidence/P001-author.md": "0017384ae1950cc21c8a94f79b9bc6d99ec4adc9ce5360d76341d35ce7a96a4c",
+    ".missions/AS-M001/evidence/mission-validation-handoff.md": "c60b7887a2782998c7baa2a2db057880dc1b45893eeb9812c0162eff6a4a3b19",
+    ".missions/AS-M001/evidence/initial-coordination.json": "9633148540c3c51155761d9cdc635b14b84b071a4ba8723309b78d02d562fedf",
+    ".missions/AS-M001/evidence/AS-M001-P002-acceptance.md": "66468be788724848eb599b6901c2019af18e2219a0f3ff104c851ac457016ab2",
+    ".missions/AS-M001/evidence/AS-M001-P002-dispatch.json": "02b34e27c5375e87b51804230b9e37def491916f63829e8c99be5c748be7ff6e",
+    ".missions/AS-M001/evidence/review-boundary.json": "342817e8ef2f179a89c0dc63033f30a8bc1e174d2be93546e7def01f57ffa6d4",
+    ".missions/AS-M001/evidence/preparation-2026-09-23.md": "b275a1947cbc78d64482dcd8f78cdebfbd8d1c58602246182c410de153f2fb8e",
+    ".missions/AS-M001/evidence/P003-author.md": "ab2a3709788a140dfddb9401491205a64912d2211882cea8e812da6e4d446b8d",
+    ".missions/AS-M001/evidence/AS-M001-P001-dispatch.json": "ddb4064c14fe807bc329f64d4f03dfadf3349039974af805741c8839254f7e0a",
+    ".missions/AS-M001/evidence/AS-M001-P001-accepted.json": "4fc4c73e8b746851362b20d2820f4d57e52be10516b17c6ac3f2362111681c82",
+    ".missions/AS-M001/evidence/documentation-check.py": "c1e7cb7fedfe8fcdd916a40aa5d386b8016b1e03147e831b7d15f8069be19207",
+    ".missions/AS-M001/evidence/AS-M001-P003-accepted.json": "ad61cc7e87cfb61ac42e20d551332d1e5c915a101041a9d343cc748706147d43",
+    ".missions/AS-M001/evidence/mission-validation-01.md": "a8d2abc30c4a19bbfd228b240469072c9adfa82c925ea83199a4c54d01c552f5",
+    ".missions/AS-M001/evidence/AS-M001-P004-dispatch.json": "0b37e0604b01a81765354d55ea838cf492dc7374bfa62c191dfcb71a3a7d5e1c",
+    ".missions/AS-M001/evidence/AS-M001-P004-acceptance.md": "126262725eb314c6ae008b7546c36f1fe5ae622832253fd5addb2982c6d097c0",
+    ".missions/AS-M001/evidence/P002-author.md": "c39d95764af0fa48c399a9d4b3ae05dedf4054702a9a5329ae01af0ab2ef67a9",
+    ".missions/AS-M001/evidence/AS-M001-P002-accepted.json": "5fec869947665bcc2f195ec658173bdf6ffca936d67bad4d52f72bbca18f01a2",
+    ".missions/AS-M001/evidence/mission-validation-handoff-02.md": "c4b2ddc99be5846a6e958d63d6e80af21bea78a5a455638d245c17c7b1dc1054",
+    ".missions/AS-M001/evidence/P004-author.md": "3b60c79c06aa0b387ab6ad3ca6e1947e0fcd38d5daa28a2a270533a2d9129bef",
+    ".missions/AS-M001/evidence/AS-M001-P001-acceptance.md": "af82d69ea097ac01b08f3b9c51830d584c2801fefa4d23ce3adc37a4ba90f4e8",
+    ".missions/AS-M001/evidence/mission-validation-02.md": "54c7859c9c6ebc70d01fe6365f6ad85a5035b5f9134a070144264f38ee36c728",
+    ".missions/AS-M001/evidence/review-boundary-02.json": "2e25ad3bb8ab1425f61e362608df6313b8dcd89d2708c27a354e73c9ae501278",
+    ".missions/AS-M001/evidence/AS-M001-P003-acceptance.md": "f0414dc2b23be27d939ecd115e30b059d482373709a3a1a8a852b5bdcfbac29c",
+    ".missions/AS-M001/evidence/AS-M001-P003-dispatch.json": "4fb7b5c6e5cf70e25246b72e64ffaa246913d085a05e4da76aa354055ca8b6e2",
+    ".missions/AS-M001/results/AS-M001-P004-acceptance.json": "be9f224e7288457801eb48f98b6cf174b5591d1395246483d587bfc6a062f3fe",
+    ".missions/AS-M001/results/AS-M001-validation-02.json": "84ab1667a0660089a6f5ffb5a5850ea2cd6eb5b5aa1ec77591234acc921c1804",
+    ".missions/AS-M001/results/AS-M001-P002-acceptance.json": "b0a1cbe4d75c6c070457e0d1c105ac149314704692ad8995c621d3ecb04b261a",
+    ".missions/AS-M001/results/AS-M001-P001-acceptance.json": "d3f2c4ba0047e9e8add6036e87a31a8cc5d7825d118ee35b5c508a267f7d5037",
+    ".missions/AS-M001/results/AS-M001-validation-01.json": "3a17c38159c97406c9e2b18685b98545c55969f57266795e55a3bc6630dee066",
+    ".missions/AS-M001/results/AS-M001-P003-acceptance.json": "955c45a403a40e4bdd9602705c92bc917a1d11b7c79e3511394d93bc50ac4e59",
+    ".missions/AS-M001/packets/AS-M001-P001.md": "f152c7d86751465193b53e9efbdb7f198ee1d927b71a56c3687b1b88246cc4e7",
+    ".missions/AS-M001/packets/AS-M001-P002.md": "5c476bb0d520431238a8756e7e8e269a595a04682d76337eece36b676f265564",
+    ".missions/AS-M001/packets/AS-M001-P003.md": "2772a37cd96c876690b8863d5ce476d907db0bda015d09b9f9e3a95aa5352d19",
+    ".missions/AS-M001/packets/AS-M001-P004.md": "0111d95384cfbf546de8a8af5b4a553b4905d37d2357ddd4f732385cfb2da0e4",
+    "benchmarks/scenarios/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "locksMatchHEAD": {
+    "Cargo.toml": true,
+    "Cargo.lock": true,
+    "tools/config-conformance/package.json": true,
+    "tools/config-conformance/package-lock.json": true
+  }
+}

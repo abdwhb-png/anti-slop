@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "scripts/ci",
+    "-p",
+    "test_policy.py",
+    "-k",
+    "WhitespaceTests",
+    "-v"
+  ],
+  "exit": 1
+}

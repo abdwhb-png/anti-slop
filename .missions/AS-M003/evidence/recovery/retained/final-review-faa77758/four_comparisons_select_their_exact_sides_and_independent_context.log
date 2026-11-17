@@ -1,0 +1,12 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running tests/workspace.rs (/home/abdwhb/.cache/anti-slop/898a1afa07c789d2/debug/deps/workspace-98a92785f5cb9179)
+
+running 1 test
+DEMO selection=Staged commit=Some("4bcdf6d824b74d092a7d54fe97c9296ef94d585b") paths=[".gitignore", "a.ts", "staged-only.ts"] a.before=Head/"new head\n" a.after=Index/"index\n" context="working\n"
+DEMO selection=Unstaged commit=None paths=["a.ts", "untracked.ts"] a.before=Index/"index\n" a.after=Working/"working\n" context="working\n"
+DEMO selection=Local commit=Some("4bcdf6d824b74d092a7d54fe97c9296ef94d585b") paths=[".gitignore", "a.ts", "staged-only.ts", "untracked.ts"] a.before=Head/"new head\n" a.after=Working/"working\n" context="working\n"
+DEMO selection=Base("release") commit=Some("0b4f1fe59c484cd21ec58f36d8078bed0bbba76a") paths=[".gitignore", "a.ts", "staged-only.ts", "untracked.ts"] a.before=Base/"base\n" a.after=Working/"working\n" context="working\n"
+test four_comparisons_select_their_exact_sides_and_independent_context ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 35 filtered out; finished in 0.26s
+

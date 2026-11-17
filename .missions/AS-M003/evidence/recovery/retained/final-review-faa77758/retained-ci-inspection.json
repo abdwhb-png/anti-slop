@@ -1,0 +1,63 @@
+{
+  "record": {
+    "at": "2026-11-15T21:47:28.724674+00:00",
+    "command": [
+      "bash",
+      "scripts/ci/check.sh"
+    ],
+    "cwd": "/home/abdwhb/engineering/firstmate-anti-slop-test/data/AS-M003-capture/worktree",
+    "environment": {
+      "CARGO_TARGET_DIR": "/home/abdwhb/.cache/anti-slop/898a1afa07c789d2",
+      "CI_BASE_SHA": "d75639c1f6e6a6fa75ca0b07e7895ba3b98f9add"
+    },
+    "exit": 0,
+    "durationSeconds": 8.971245672088116,
+    "log": ".missions/AS-M003/evidence/P03/04-full-ci.log",
+    "sourceHashes": {
+      "src/workspace/acquire.rs": "5eb7631cca611f64116b84b62c6166292c23d12b1f8c81a141c329ccf2e5b390",
+      "tests/workspace.rs": "fbc484fde78fc438c28d57543ebf6b24cd331950dc27e885cf4a9de43b060f92",
+      "README.md": "77761092128582a7dccbb6e1de7123d4495e75dacd24c14fefb32816c9d24e18"
+    },
+    "logSha256": "2d11bb78e7a6524b4737fd97c27d451773c56cede7b30f024bd040a3e52fc984"
+  },
+  "hashVerified": true,
+  "statusLines": [
+    "Ran 16 tests in 0.733s",
+    "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.50s",
+    "    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.48s",
+    "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.11s",
+    "test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s",
+    "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s",
+    "test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "test result: ok. 34 passed; 0 failed; 2 ignored; 0 measured; 0 filtered out; finished in 5.34s",
+    "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s",
+    "test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s",
+    "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.60s",
+    "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.19s"
+  ],
+  "editor": {
+    "tool": "VS Code JSON language service",
+    "version": "5.7.2",
+    "mode": "headless editor-service API",
+    "cases": 20,
+    "accepted": [
+      "minimal",
+      "all-policies",
+      "empty-rules-overrides",
+      "ordered-overrides"
+    ],
+    "remoteRequests": [],
+    "completionFieldLabels": [
+      "$schema",
+      "rules",
+      "overrides"
+    ],
+    "hoverPresent": true,
+    "invalidSettingDiagnostics": 1,
+    "jsonc": "accepted",
+    "bounds": "256 accepted;257 rejected"
+  }
+}

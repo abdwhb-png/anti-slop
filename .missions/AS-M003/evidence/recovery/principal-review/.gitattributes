@@ -1,0 +1,2 @@
+# Preserve the observed terminal blank line in the exact report accepted by firstmate.
+repair-report.md whitespace=-blank-at-eof

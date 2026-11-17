@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "state",
   "id": "AS-M004",
-  "revision": 14,
+  "revision": 17,
   "mission": {
     "kind": "mission",
     "id": "AS-M004",
@@ -13,7 +13,7 @@
   "executionMode": "coordinated",
   "interruption": null,
   "history": "history.jsonl",
-  "lastSequence": 14,
+  "lastSequence": 17,
   "currentPacket": null,
   "attempts": [
     {
@@ -113,6 +113,20 @@
         "revision": 1,
         "path": "results/P04-review.json"
       }
+    },
+    {
+      "packet": {
+        "kind": "packet",
+        "id": "AS-M004-P05",
+        "revision": 1,
+        "path": "packets/P05.md"
+      },
+      "result": {
+        "kind": "result",
+        "id": "AS-M004-P05-review",
+        "revision": 1,
+        "path": "results/P05-review.json"
+      }
     }
   ],
   "checkpoints": [],
@@ -136,8 +150,8 @@
   ],
   "validation": {
     "kind": "result",
-    "id": "AS-M004-final-r2",
+    "id": "AS-M004-final-r3",
     "revision": 1,
-    "path": "results/final-r2.json"
+    "path": "results/final-r3.json"
   }
 }

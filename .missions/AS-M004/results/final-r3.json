@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-final-r3",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "as-m004-durable:s1794919828.2861616.27570",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268",
+    "as-m004-durable:s1794916284.2288889.8486",
+    "as-m004-durable:s1794918722.2688789.30962"
+  ],
+  "freshContext": true,
+  "outcome": "accepted",
+  "summary": "AS-M004 revision 2 remains supported across the complete L04 contract. P05 resolves delivery whitespace through narrow archive classification while preserving the product, demonstration and previously accepted functional/design/resource proof. Independent cumulative checks include every staged P05 file and pass from the original mission base. No remaining concrete defect or architecture blocker was identified. This is an independent result for Firstmate examination, not mission closure or publication.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "final-r3.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "final-r2.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P05-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../packets/P05.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/before-whitespace-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/before-staged-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/after-staged-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/attributes-semantics.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/negative-controls.sh"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/negative-controls.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/policy-unit-tests.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/policy-whitespace-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/preservation-hashes.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/index-state.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/mdd-state-validation.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P05/transport-commit-report.raw.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/ci-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measure-current.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/resource-protocol-current.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/demo-output.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/execution-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/process-exception-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records_demo.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../.gitattributes"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "5e19368c98fb46410b9d258bffa912fa9bac83e2",
+    "decision": "continue",
+    "rationale": "One coherent L04 library delivery on fm/as-m004-durable targets main from 45dac3c241338c94166369fe821fe1d3499cf974. HEAD transports the exact final-r2 product plus administrative records; this assessment also includes the current staged attributes/P05 evidence and unstaged/untracked administration. An ordinary subsequent commit can transport these accepted bytes without amending HEAD or rewriting history. Reconcile that exact commit and run published-head CI separately; no split or new product decision is required."
+  },
+  "reviewVerdict": {
+    "decision": "APPROVE",
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "architecturalStatus": "CLEAR",
+    "findings": []
+  },
+  "contextProvenance": {
+    "basis": "This fresh launch contains instructions and the final-r3 assignment, with no inherited implementation dialogue. Its actual actor differs from all three implementers and prior reviewers. The previous reviewer performed only Git transport; unchanged source hashes confirm that it introduced no implementation. Review angles were examined locally; no subagent or additional lane ran.",
+    "limits": "Codex/ChatGPT, gpt-6.1-sol and xhigh are launcher-supplied provenance, not independently introspected server routing. All ten inbox messages were already handled; their historical assignments are superseded by this launch. No inbox or other-home state was changed."
+  },
+  "sourceScope": {
+    "baseCommit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "head": "5e19368c98fb46410b9d258bffa912fa9bac83e2",
+    "target": "main",
+    "branch": "fm/as-m004-durable",
+    "inspection": "HEAD has the original base as sole parent; local main equals that base. The cumulative committed delta contains 177 paths: 172 added, five modified. All twelve nonadministrative paths match final-r2 SHA-256/size in HEAD, index and working tree. All 175 committed paths other than coordinator state/history remain byte-identical; the latter changes only register P05 and renew validation. Exactly fourteen paths are staged: attributes plus thirteen P05 files. P05 packet/result are untracked and were checked separately. base..HEAD alone was not the review scope.",
+    "hashes": {
+      "priorResultSha256": "3aa2cc020ee868a95963e2b6084c771946f36d5990d99d6c593ac0bbd688bdbb",
+      "attributesSha256": "4278f0afcf40a066b9f5686f972004f83ba49fb850efc07b0951ebe072db337c",
+      "p05ReportSha256": "0670d0ebb0c368b27c9443a1cb97f038fd54baf908a74c265faf5aabb2ef87a4",
+      "preOutputInventorySha256": "573647bb2136fe3b0754293a159de77a9fe9c3b2fc3ea327e0dc53ee25e8c6ce",
+      "indexSha256": "6bbd5a780440bfa1910a7bbcadc7564aaad017532e1d002a5dfc9bf40f8517ae"
+    },
+    "inventoryMethod": "851 sorted tracked/nonignored-untracked files before this output; entries {path,sha256,bytes}, SHA-256 of Python json.dumps(entries,sort_keys=True,separators=(comma,colon)). Index digest hashes git ls-files --stage -z."
+  },
+  "packagingAssessment": "The trigger was indexing raw archives; earlier diff checks omitted untracked files. Successful transport did not establish whitespace readiness. The 4,824-byte attributes file retains the existing patch rule and adds fifty literal AS-M004 paths, disabling only their observed blank-at-eol/blank-at-eof classes. The historical set exactly equals the 47 diagnostic paths; three new raw transcripts quote those diagnostics. Authored Markdown, code, tests, other/future missions and space-before-tab remain checked. Policy/CI code and existing AS-M003 attributes equal the original base; core.whitespace/core.attributesFile are unset and info/attributes is absent. No proof was normalized or removed.",
+  "checksRun": [
+    {
+      "command": "Frozen v0.5 node mdd-bundle/scripts/validate.mjs .missions/AS-M004/state.json --json",
+      "result": "Intake exit 0; valid:true, issues:[]."
+    },
+    {
+      "command": "SHA-256/size, Git blob and preservation-table comparisons",
+      "result": "All twelve final-r2 source entries and all 62 preservation-table rows match. Original evidence/results are preserved; P04 after-source equals tests/records_measure.rs."
+    },
+    {
+      "command": "git --attr-source=HEAD diff --check BASE HEAD; git --attr-source=HEAD diff --cached --check BASE",
+      "result": "BASE is the original full mission base above. Both exit 2: respectively 101 diagnostics/47 files and 293/50 files. Original output exactly matches both retained before captures. Current staged failures map exactly to the fifty path/class exclusions."
+    },
+    {
+      "command": "git diff --check BASE; git diff --cached --check BASE; git diff --cached --check; git diff --check; python3 scripts/ci/policy.py whitespace --base BASE",
+      "result": "All five exit 0 with empty diagnostics. Cumulative staged comparison covers 191 paths, including all thirteen new P05 proof files. Untracked P05 packet/result checks using git diff --no-index --check /dev/null PATH produce no diagnostics (exit 1 indicates differing files)."
+    },
+    {
+      "command": "Independent temporary Git fixture using actual attributes and actual scripts/ci/policy.py, without copied policy logic",
+      "result": "Eight asserted exits: raw archive 0, source 1, authored report 1, unlisted archive 1, conception trailing space 1, two permitted classes 0, future mission 1, raw space-before-tab 1. Working/index raw bytes remain identical; allowed archive SHA-256 67c2218a521d7d495f78fd880c407682f3356be926282d7f5149ccb609c7c493."
+    },
+    {
+      "command": "Frozen v0.5 validators on results/final-r3.json and state.json after result creation",
+      "result": "Both exit 0; valid:true, issues:[]. Structural validation only; state.validation remains null."
+    },
+    {
+      "command": "Post-output inventory/index/HEAD comparison and git diff --no-index --check /dev/null results/final-r3.json",
+      "result": "All 851 preexisting tracked/nonignored files and the complete index retain their recorded digests; HEAD is unchanged. Final result has no whitespace diagnostic (exit 1 is the file difference). Only this administrative project output was added."
+    }
+  ],
+  "unchangedProofApplicability": [
+    "The complete accepted final-r2 contractAssessment/checksRun/reusedChecks remain applicable by the twelve verified source hashes and preserved evidence. This supports exact source/context/configuration/comparison retention, ranges, integrity, occurrence identities, deletion/empty cases, schema initialization/reopen/newer-version refusal and atomic initialization failure.",
+    "It also supports explicit storage/corruption/transaction/lock failures, interruption before/during commit and after commit before acknowledgement, complete-or-absent recovery, committed-unmeasured/overshoot outcomes, warning/refusal/reservation accounting, effective alias paths, concurrent-writer exclusion and retained reads without automatic deletion.",
+    "P04 corrected full task-child enumeration and real nonleader Git coverage remain unchanged and independently qualified by final-r2. Retain its complete capture/save/commit/read, DB/auxiliary/buffer and process-tree measurements. Prior P03 capture-tree RSS is superseded. Preserve final-r2 architecture CLEAR, dependency qualification and stabilized CI-equivalent evidence; renew only the invalidated whitespace surface here.",
+    "P05 policy-unit-tests.txt records nineteen existing tests passing; Firstmate independently rechecked final attributes and controls. Those tests and policy code are unchanged. Historical TDD/download-order exceptions remain solely those in process-exception-authority.txt; configuration before/after validation introduces no production deviation."
+  ],
+  "demonstration": {
+    "judgment": "Complete nonvisual journey remains supported; all three scenes retain observed status through explicit reuse, not a new runtime claim.",
+    "scenes": [
+      {
+        "id": "save",
+        "status": "observed-reused",
+        "detail": "Real Git capture selects a.ts with guide.ts context; synchronous save acknowledges id 1 and retained footprint."
+      },
+      {
+        "id": "quota",
+        "status": "observed-reused",
+        "detail": "Zero-budget second save explicitly refuses; first selected bytes remain readable."
+      },
+      {
+        "id": "reopen",
+        "status": "observed-reused",
+        "detail": "Origins are removed; successful fresh process reads exact working/context bytes, roles, selection/commit and matching recorded generations."
+      }
+    ],
+    "applicability": "Read the complete current private demonstration record, real records_demo.rs and P03C1 output. All nine scene evidence/report/applicability digests and contract digest match. Output SHA-256 28b5f5628e61663f4fc1bc7cbc57932520763a2d786a7038ed9b9085307a6aa0; tests/support/dependencies are unchanged in HEAD and this correction.",
+    "trial": "Local reproduction: cargo test --frozen --test records_demo -- --nocapture. Not rerun here. This library slice has no hosted trial or visual UI; terminal consultation remains L05. No scene gap was found. Firstmate owns subsequent PR presentation and reader examination."
+  },
+  "limitsAndNotRun": [
+    "No Rust/Node/resource/fault/concurrency/build/Clippy/format/full-CI rerun: their inputs did not change. Existing CI proof establishes its executed functional scope, while this review supplies renewed cumulative whitespace proof. No GitHub CI is claimed for HEAD or a future published commit.",
+    "Retain final-r2 limits: sampled logical storage and approximate RSS can miss peaks/share pages; warm Linux debug observations do not certify other hosts, physical power-loss durability, hard quotas or future ADR-007 analysis/resident budgets. No new threat model or guarantee was added.",
+    "P05 prose embeds a prior self-digest; current demonstration/P05-review references resolve to the actual final report hash recorded above. Applicability uses directly rehashed bytes rather than that embedded historical claim.",
+    "No product/test/doc/evidence/attribute repair, dependency action, project stage/commit, provider/account change, notification, publication, No-Mistakes, merge, cleanup or state/history edit occurred. Only this result and its byte-identical private copy are authorized outputs."
+  ],
+  "handoff": {
+    "status": "done: candidate ready for examination",
+    "nextAction": "Firstmate examines this exact result, registers state.validation before native binding, and separately reconciles/commits accepted delivery bytes. Published-head CI, whole-PR reader examination and any publication remain with Firstmate; merge requires explicit user approval. Mission state remains validating. The loaded notify-me workflow remains with that outcome owner."
+  }
+}

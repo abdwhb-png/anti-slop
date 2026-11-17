@@ -1,0 +1,27 @@
+command: python3 -m unittest discover -s scripts/ci -p 'test_*.py' -v
+test_eligible_versions_match_locked_integrity (test_policy.DependencyTests.test_eligible_versions_match_locked_integrity) ... ok
+test_exact_seven_day_boundary_is_eligible (test_policy.DependencyTests.test_exact_seven_day_boundary_is_eligible) ... ok
+test_lock_comparison_checks_added_changed_and_missing_history (test_policy.DependencyTests.test_lock_comparison_checks_added_changed_and_missing_history) ... ok
+test_metadata_network_failure_fails_dependency_qualification (test_policy.DependencyTests.test_metadata_network_failure_fails_dependency_qualification) ... ok
+test_new_yanked_and_checksum_mismatched_cargo_versions_fail (test_policy.DependencyTests.test_new_yanked_and_checksum_mismatched_cargo_versions_fail) ... ok
+test_unavailable_or_wrong_npm_integrity_fails (test_policy.DependencyTests.test_unavailable_or_wrong_npm_integrity_fails) ... ok
+test_young_npm_version_and_changed_tarball_fail (test_policy.DependencyTests.test_young_npm_version_and_changed_tarball_fail) ... ok
+test_api_errors_fall_back_to_full_verification (test_policy.ReuseTests.test_api_errors_fall_back_to_full_verification) ... CI reuse unavailable (OSError); running full verification.
+ok
+test_cli_manual_dispatch_always_requests_full_verification (test_policy.ReuseTests.test_cli_manual_dispatch_always_requests_full_verification) ... ok
+test_cross_host_redirect_drops_authentication (test_policy.ReuseTests.test_cross_host_redirect_drops_authentication) ... ok
+test_direct_push_and_non_tip_pr_associations_run_fully (test_policy.ReuseTests.test_direct_push_and_non_tip_pr_associations_run_fully) ... ok
+test_merge_squash_and_rebase_reuse_identical_tested_trees (test_policy.ReuseTests.test_merge_squash_and_rebase_reuse_identical_tested_trees) ... ok
+test_missing_expired_or_malformed_proof_runs_fully (test_policy.ReuseTests.test_missing_expired_or_malformed_proof_runs_fully) ... ok
+test_receipt_mismatches_cannot_claim_success (test_policy.ReuseTests.test_receipt_mismatches_cannot_claim_success) ... ok
+test_receipts_are_bounded_data_and_never_extracted (test_policy.ReuseTests.test_receipts_are_bounded_data_and_never_extracted) ... ok
+test_server_metadata_must_confirm_successful_current_pr_attempt (test_policy.ReuseTests.test_server_metadata_must_confirm_successful_current_pr_attempt) ... ok
+test_maintained_files_and_unrelated_evidence_still_reject_whitespace (test_policy.WhitespaceTests.test_maintained_files_and_unrelated_evidence_still_reject_whitespace) ... ok
+test_raw_evidence_is_publishable_without_rewriting_bytes (test_policy.WhitespaceTests.test_raw_evidence_is_publishable_without_rewriting_bytes) ... ok
+test_raw_evidence_keeps_checks_for_other_whitespace_classes (test_policy.WhitespaceTests.test_raw_evidence_keeps_checks_for_other_whitespace_classes) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 1.791s
+
+OK
+exit: 0

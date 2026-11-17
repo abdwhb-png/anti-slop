@@ -1,0 +1,86 @@
+# Preservation verification
+
+HEAD: 5e19368c98fb46410b9d258bffa912fa9bac83e2
+base: 45dac3c241338c94166369fe821fe1d3499cf974
+branch: fm/as-m004-durable
+
+The table below was produced before any edit and again after the attribute
+edit. Both runs produced identical bytes.
+
+## final-r2 reviewed paths (12)
+ee591e40f18fbebb86f0ec83797c4e708c75031552d17bb052deb73644c15381  21955  Cargo.lock
+1ce7a7ffab0e04eef594aab73a379dcdd30e2a59981f6d7252352aa4073a8bcb  1228  Cargo.toml
+31ee116ec702895c29aba1a4f53e66e9c87f3fb23ed7ee578bde89a023068c1d  22735  README.md
+4d9e648088157787dfbbce470cc8198ea73ccf23b514ad215a7b8cb16e8af6f3  47528  docs/IMPLEMENTATION_ROADMAP.md
+3940a1398bc310f78c3dcd6939bdd10488ce2352380f2f7e1fcea124fe25e294  12370  docs/missions/AS-M004/r2.md
+21936cdd0940b7cf1f6212ef1769a2c58eee03622bf9d264449c6a55477a835f  246  src/lib.rs
+5a07558619c4b97968c18d7b75f196a89863b39f02084aa568f915028726992d  46273  src/records/mod.rs
+a14a8756726d46601c416d5a16bba9e3b80b11f0d6b192ec56142bd2ff447db2  71187  tests/records.rs
+b45bc98099f974949016b30e2f8f20336675bbe8c3557004104b25044ebd1a49  4818  tests/records_demo.rs
+1aa6fdeb1e7779055f0141fbfd252f1ef5062bc47b8073052a7df147b298a6fd  24827  tests/records_measure.rs
+23ea7d4d9d106b47098b4b32f5afc6bd6d12e2d95b724fd7ccf2bb7fb038b8c7  4925  tests/support/records/io_fault.c
+3153e82bf624ab807d98a9ef79eae4d185b60f573f30b882a51019f6472973b4  3870  tests/support/records/mod.rs
+
+## demonstration inputs
+28b5f5628e61663f4fc1bc7cbc57932520763a2d786a7038ed9b9085307a6aa0  1142  .missions/AS-M004/evidence/P03C1/demo-output.txt
+22b68713ab69e43a1b52c7ec019ad28af84723ecb5859dbff25bb3272d62f773  15855  .missions/AS-M004/evidence/P04/implementation-report.md
+ed6908949ba95826f80e23766b0621793db38c5424bd58be787fa5de4c85d38f  24061  .missions/AS-M004/evidence/P05/transport-commit-report.raw.txt
+
+## 47 whitespace-flagged raw evidence files
+3fb1b9b95404844d360cbdc2fe2a2a7907d20d06f9ffab5dc1cf964f8d605a62  3915  .missions/AS-M004/evidence/P01/Cargo.lock.diff
+df84abacfc3e0262640acb785e31f651455a0157b4811516ae831e540d6cc918  989  .missions/AS-M004/evidence/P01/green-02-records.txt
+d871ab1984d8f650613952319d98c42ed3ca1336c6e3e35fc30a29c71b2c6d54  989  .missions/AS-M004/evidence/P01/green-03-records-final.txt
+55eeb7d8153a6faa0d61ef9a1731d7e9b9264e978b97a33236cb87ee74b11d5d  1337  .missions/AS-M004/evidence/P01/green-attempt-01.txt
+2b5a14406d3f887874628fbb1e53f0bbbb5b495f11be40d2263385f5abcbf507  5842  .missions/AS-M004/evidence/P01/tests-non-node-final.txt
+ca123a9e1e85664f9a6cc0df5ff28a04a0e1b1b0f3ffbdf2eae70611a400ab8c  5726  .missions/AS-M004/evidence/P01/tests-without-node-conformance.txt
+c3422f9bec53a9768721cbc0afbea7eb9894bda26de4f31a9e9b198c028f8aef  1219  .missions/AS-M004/evidence/P01/tracked-source.diff
+3fb1b9b95404844d360cbdc2fe2a2a7907d20d06f9ffab5dc1cf964f8d605a62  3915  .missions/AS-M004/evidence/P01C1/Cargo.lock.diff
+5930155c92a22f314b122d44854cc347257e31d41c14b6555ebaaa3550f870b3  8195  .missions/AS-M004/evidence/P01C1/full-cargo-tests.txt
+35a194f4da39350316816e7c78b57c819c0a263766ad42f3c6f570f246e7df12  826  .missions/AS-M004/evidence/P01C1/green-01-corruption-detected.txt
+10fde862e29d0d932bfef55d23f6e12dd5dde240a0e5f788c46c777f89f44074  1499  .missions/AS-M004/evidence/P01C1/green-02-records-all.txt
+ab70a6db7170735e7d2923c2ebef92a896a845a4c284973117aef2bac85ec7de  1391  .missions/AS-M004/evidence/P01C1/node-conformance-tests.txt
+d8b2f4c76d16915d8374c405ccedd68170386d5a2e75234cc05823f71f3d7820  6236  .missions/AS-M004/evidence/P01C1/tests-non-node.txt
+5e0274e72979703852865ece235adb9bae01bfe41c1802ac09b5f21fc8ae5d7c  1029  .missions/AS-M004/evidence/P01C1/tracked-source.diff
+3fb1b9b95404844d360cbdc2fe2a2a7907d20d06f9ffab5dc1cf964f8d605a62  3915  .missions/AS-M004/evidence/P02/Cargo.lock.diff
+f2d5cfa34b32174c67e284c4a7112aae4f07d148420a28bb6093d108a1e04579  8917  .missions/AS-M004/evidence/P02/full-tests.txt
+49a5ec3663103913302decceb9150d8239a923ae592da8b498f5b14e99315d64  2209  .missions/AS-M004/evidence/P02/green-01-admission.txt
+e1379e781636d9b80bf1cec48089ea50507c2c342199b5b961f7c018c2295041  2209  .missions/AS-M004/evidence/P02/green-02-admission-backlog.txt
+02ca93bcef87099559daea0bdc8b73c8b69ae219256abaf6ee21fc27f90eb9cb  2344  .missions/AS-M004/evidence/P02/green-03-checkpoints.txt
+0337c791760f01d7be39e984c835982d6985f4e18f89483ae809af1d95dadbec  2413  .missions/AS-M004/evidence/P02/green-04-records-final.txt
+35ee5ef9ce5d58b5a1885918d7e384d301e4e5110e9ff6a5d68b161467deb46f  2413  .missions/AS-M004/evidence/P02/green-05-final.txt
+5e0274e72979703852865ece235adb9bae01bfe41c1802ac09b5f21fc8ae5d7c  1029  .missions/AS-M004/evidence/P02/tracked-source.diff
+3fb1b9b95404844d360cbdc2fe2a2a7907d20d06f9ffab5dc1cf964f8d605a62  3915  .missions/AS-M004/evidence/P02C1/Cargo.lock.diff
+9aac49fc8a59c1e1271b7eaba16d6b3f5651641b1e6696d0aef49b12a58bc873  8864  .missions/AS-M004/evidence/P02C1/full-tests.txt
+f1ab74afb498855a49f1320c897c9ce6a44dbd99f0461e3f6ff9067c152b06e2  2476  .missions/AS-M004/evidence/P02C1/green-01-alias-and-postcommit.txt
+4ea5beec5df517abc4ea616bb7611e098a353d345dffdfdbe8dcf4650e86c39b  2476  .missions/AS-M004/evidence/P02C1/green-02-all-records.txt
+f1c918328de3f59fe87041fa64904b550ff5f2ad3e0463a98c34868a15d127f3  682  .missions/AS-M004/evidence/P02C1/green-03-alias-observations.txt
+23b31ba9383c2431a854680082a18aa168450451fc7bb1d6dbad307b12a03fb1  2602  .missions/AS-M004/evidence/P02C1/green-04-final-records.txt
+5e0274e72979703852865ece235adb9bae01bfe41c1802ac09b5f21fc8ae5d7c  1029  .missions/AS-M004/evidence/P02C1/tracked-source.diff
+3cd6758eed3a0b18ca0abb489945cde0032f538c22274ce48e08221980a7a560  2843  .missions/AS-M004/evidence/P03-green-01-path-simplification.txt
+3fb1b9b95404844d360cbdc2fe2a2a7907d20d06f9ffab5dc1cf964f8d605a62  3915  .missions/AS-M004/evidence/P03/Cargo.lock.diff
+5258806ac66001ab37066dc03e950267fa8c4afc55444c5479d670184dc5ebe6  1142  .missions/AS-M004/evidence/P03/demonstration-output.txt
+00a26649f6a7036f4d92326fded922fbc6feed4c2d9ea53af1884aba5a98a051  535  .missions/AS-M004/evidence/P03/fault-commit.txt
+4ddf3d15a06655d2a538195a571a72a4871f2b537599a841c5d80e8e4a69022d  495  .missions/AS-M004/evidence/P03/fault-during-commit.txt
+6d5ebdba28a5fdeee38a2622582e646165cf7a5c37a11cf55fc212f3520c3688  685  .missions/AS-M004/evidence/P03/fault-postcommit.txt
+73c8d672c1c1d2740b835305e1cfe197c5e948781242e4f1f932185063e33259  4793  .missions/AS-M004/evidence/P03/measure-01.txt
+aa6e3f7143cfcd60f9f5c5d4b8c3c646c3fdad6d32852f7f518bb8ab79ccb113  5034  .missions/AS-M004/evidence/P03/measure-02.txt
+459e7034e3f4a17fec44adcbada61502995d853f2de6bfa632920026a43dbc70  5418  .missions/AS-M004/evidence/P03/measure-03.txt
+d025137e6cc218bcf4887c125be6e8dd5b26300ee8a5184fce24d747202270ad  4343  .missions/AS-M004/evidence/P03/measure-final.txt
+e94615392239192fa03195bec2add7f9cf68b0bb2b4546753ff80d9bec535ff7  2636  .missions/AS-M004/evidence/P03/records-all.txt
+67c2218a521d7d495f78fd880c407682f3356be926282d7f5149ccb609c7c493  12701  .missions/AS-M004/evidence/P03/tracked-source.diff
+28b5f5628e61663f4fc1bc7cbc57932520763a2d786a7038ed9b9085307a6aa0  1142  .missions/AS-M004/evidence/P03C1/demo-output.txt
+718cfb790d81807d0a00439e96c288b7a3a348fb0789102a059ad8e1a061edce  782  .missions/AS-M004/evidence/P04/green-01-thread-child-observed.txt
+7e04b8069552fd735f50cd4241225d9d943fcc688953f953c37592821cb9f20f  5142  .missions/AS-M004/evidence/P04/measure-current.txt
+ca3c9d6100328f7eda6c917dd2e77c0bc13c5d815b3291f07f16870278e2ae24  12957  .missions/AS-M004/evidence/P04/measurement-source.diff.txt
+7b438eb1e770119282b366e93053fa04656706e626ab7f623fa44fd4fac758b2  12748  .missions/AS-M004/evidence/conception-accepted.md
+25c99a9bf1f8879102b7471250493848fa1f3f894b227a917acd65ea88f1fe8e  686  .missions/AS-M004/evidence/preparation-state-r2.raw.txt
+
+## comparison of the two runs
+before-table sha256: f95dafded7b539e5c3d60bb9858805bd8f695abeb378cc5d277b5831afea4912
+after-table  sha256: f95dafded7b539e5c3d60bb9858805bd8f695abeb378cc5d277b5831afea4912
+diff: none
+
+## tracked files whose content differs from HEAD
+DIFF .gitattributes
+DIFF .missions/AS-M004/history.jsonl
+DIFF .missions/AS-M004/state.json

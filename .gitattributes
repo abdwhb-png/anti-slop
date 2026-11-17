@@ -1,2 +1,64 @@
 # Unified patches retain a space prefix on blank context lines.
 *.patch -whitespace
+
+# AS-M004 retained raw evidence preserves the bytes its commands produced:
+# unified-diff context lines and captured command transcripts carry trailing
+# spaces and terminal blank lines. Each entry disables only the class observed
+# in that exact file, so authored source, documentation, reports, other missions
+# and every other whitespace class keep their checks. The frozen conception and
+# preparation copies are historical records whose bytes must not be normalized.
+.missions/AS-M004/evidence/P01/Cargo.lock.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P01/green-02-records.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01/green-03-records-final.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01/green-attempt-01.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01/tests-non-node-final.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01/tests-without-node-conformance.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01/tracked-source.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P01C1/full-cargo-tests.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01C1/green-01-corruption-detected.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01C1/green-02-records-all.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01C1/node-conformance-tests.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01C1/tests-non-node.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P01C1/tracked-source.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P02/Cargo.lock.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P02/full-tests.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/green-01-admission.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/green-02-admission-backlog.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/green-03-checkpoints.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/green-04-records-final.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/green-05-final.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02/tracked-source.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P02C1/full-tests.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02C1/green-01-alias-and-postcommit.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02C1/green-02-all-records.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02C1/green-03-alias-observations.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02C1/green-04-final-records.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P02C1/tracked-source.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P03-green-01-path-simplification.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/Cargo.lock.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P03/demonstration-output.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/fault-commit.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/fault-during-commit.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/fault-postcommit.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/measure-01.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/measure-02.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/measure-03.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/measure-final.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/records-all.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P03/tracked-source.diff whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P03C1/demo-output.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P04/green-01-thread-child-observed.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P04/measure-current.txt whitespace=-blank-at-eof
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt whitespace=-blank-at-eol,-blank-at-eof
+.missions/AS-M004/evidence/conception-accepted.md whitespace=-blank-at-eof
+.missions/AS-M004/evidence/preparation-state-r2.raw.txt whitespace=-blank-at-eof
+
+# These P05 files are raw transcripts: the copied transport report quotes the
+# failing gate and the two captures reproduce it, so all three carry the same
+# trailing-space content lines Git echoed. They are byte-preserved raw output,
+# not authored text, and only that class is disabled.
+.missions/AS-M004/evidence/P05/before-staged-check.txt whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P05/before-whitespace-check.txt whitespace=-blank-at-eol
+.missions/AS-M004/evidence/P05/transport-commit-report.raw.txt whitespace=-blank-at-eol

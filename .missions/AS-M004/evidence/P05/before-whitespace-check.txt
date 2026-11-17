@@ -1,0 +1,168 @@
+command: git diff --check 45dac3c241338c94166369fe821fe1d3499cf974
+exit: 2
+output:
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:16: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:33: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:51: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:64: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:82: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:95: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:115: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/Cargo.lock.diff:128: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/green-02-records.txt:18: new blank line at EOF.
+.missions/AS-M004/evidence/P01/green-03-records-final.txt:18: new blank line at EOF.
+.missions/AS-M004/evidence/P01/green-attempt-01.txt:27: new blank line at EOF.
+.missions/AS-M004/evidence/P01/tests-non-node-final.txt:94: new blank line at EOF.
+.missions/AS-M004/evidence/P01/tests-without-node-conformance.txt:93: new blank line at EOF.
+.missions/AS-M004/evidence/P01/tracked-source.diff:14: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01/tracked-source.diff:29: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:16: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:33: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:51: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:64: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:82: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:95: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:115: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/Cargo.lock.diff:128: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P01C1/full-cargo-tests.txt:146: new blank line at EOF.
+.missions/AS-M004/evidence/P01C1/green-01-corruption-detected.txt:15: new blank line at EOF.
+.missions/AS-M004/evidence/P01C1/green-02-records-all.txt:26: new blank line at EOF.
+.missions/AS-M004/evidence/P01C1/node-conformance-tests.txt:27: new blank line at EOF.
+.missions/AS-M004/evidence/P01C1/tests-non-node.txt:101: new blank line at EOF.
+.missions/AS-M004/evidence/P01C1/tracked-source.diff:23: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:16: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:33: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:51: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:64: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:82: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:95: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:115: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/Cargo.lock.diff:128: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02/full-tests.txt:158: new blank line at EOF.
+.missions/AS-M004/evidence/P02/green-01-admission.txt:37: new blank line at EOF.
+.missions/AS-M004/evidence/P02/green-02-admission-backlog.txt:37: new blank line at EOF.
+.missions/AS-M004/evidence/P02/green-03-checkpoints.txt:39: new blank line at EOF.
+.missions/AS-M004/evidence/P02/green-04-records-final.txt:40: new blank line at EOF.
+.missions/AS-M004/evidence/P02/green-05-final.txt:40: new blank line at EOF.
+.missions/AS-M004/evidence/P02/tracked-source.diff:23: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:16: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:33: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:51: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:64: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:82: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:95: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:115: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/Cargo.lock.diff:128: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P02C1/full-tests.txt:158: new blank line at EOF.
+.missions/AS-M004/evidence/P02C1/green-01-alias-and-postcommit.txt:41: new blank line at EOF.
+.missions/AS-M004/evidence/P02C1/green-02-all-records.txt:41: new blank line at EOF.
+.missions/AS-M004/evidence/P02C1/green-03-alias-observations.txt:11: new blank line at EOF.
+.missions/AS-M004/evidence/P02C1/green-04-final-records.txt:42: new blank line at EOF.
+.missions/AS-M004/evidence/P02C1/tracked-source.diff:23: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03-green-01-path-simplification.txt:45: new blank line at EOF.
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:16: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:33: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:51: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:64: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:82: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:95: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:115: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/Cargo.lock.diff:128: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/demonstration-output.txt:18: new blank line at EOF.
+.missions/AS-M004/evidence/P03/fault-commit.txt:10: new blank line at EOF.
+.missions/AS-M004/evidence/P03/fault-during-commit.txt:10: new blank line at EOF.
+.missions/AS-M004/evidence/P03/fault-postcommit.txt:11: new blank line at EOF.
+.missions/AS-M004/evidence/P03/measure-01.txt:62: new blank line at EOF.
+.missions/AS-M004/evidence/P03/measure-02.txt:64: new blank line at EOF.
+.missions/AS-M004/evidence/P03/measure-03.txt:67: new blank line at EOF.
+.missions/AS-M004/evidence/P03/measure-final.txt:34: new blank line at EOF.
+.missions/AS-M004/evidence/P03/records-all.txt:45: new blank line at EOF.
+.missions/AS-M004/evidence/P03/tracked-source.diff:18: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:20: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:23: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:25: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:28: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:30: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:32: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:34: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:84: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:101: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:103: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:106: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:108: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03/tracked-source.diff:119: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P03C1/demo-output.txt:18: new blank line at EOF.
+.missions/AS-M004/evidence/P04/green-01-thread-child-observed.txt:10: new blank line at EOF.
+.missions/AS-M004/evidence/P04/measure-current.txt:36: new blank line at EOF.
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:18: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:35: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:144: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:148: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:332: trailing whitespace.
++ 
+.missions/AS-M004/evidence/P04/measurement-source.diff.txt:332: new blank line at EOF.
+.missions/AS-M004/evidence/conception-accepted.md:76: new blank line at EOF.
+.missions/AS-M004/evidence/preparation-state-r2.raw.txt:36: new blank line at EOF.

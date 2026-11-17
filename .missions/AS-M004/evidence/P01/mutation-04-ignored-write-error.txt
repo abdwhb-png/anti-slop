@@ -1,0 +1,22 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.71s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 1 test
+test injected_write_failure_leaves_no_partial_capture ... FAILED
+
+failures:
+
+---- injected_write_failure_leaves_no_partial_capture stdout ----
+
+thread 'injected_write_failure_leaves_no_partial_capture' (672223) panicked at tests/records.rs:508:5:
+assertion failed: matches!(store.save_capture(&second), Err(StoreError::Failed(_)))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    injected_write_failure_leaves_no_partial_capture
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.15s
+
+error: test failed, to rerun pass `--test records`

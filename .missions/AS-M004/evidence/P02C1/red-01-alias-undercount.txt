@@ -1,0 +1,19 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.83s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 1 test
+
+thread 'quota_accounting_uses_the_effective_database_files' (1385597) panicked at tests/records.rs:1180:5:
+alias retained=4096 canonical_before=6459976 admitted=7016016 saved=Ok(CaptureId(3)) canonical_after=9657096
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test quota_accounting_uses_the_effective_database_files ... FAILED
+
+failures:
+
+failures:
+    quota_accounting_uses_the_effective_database_files
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 30 filtered out; finished in 1.52s
+
+error: test failed, to rerun pass `--test records`

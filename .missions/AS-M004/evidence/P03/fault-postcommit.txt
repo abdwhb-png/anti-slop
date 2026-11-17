@@ -1,0 +1,11 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 2 tests
+postcommit over-limit result: saved:2:over=true:retained=2212328
+postcommit measurement failure: error:Capture 2 was committed, but its retained storage could not be measured: Capture store is unavailable: Cannot measure the capture store: No such file or directory (os error 2)
+test postcommit_over_limit_is_reported_with_committed_identity ... ok
+test postcommit_measurement_failure_preserves_the_committed_record ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 34 filtered out; finished in 0.26s
+

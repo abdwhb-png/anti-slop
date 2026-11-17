@@ -1,0 +1,11 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.50s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 1 test
+alias batch=3 retained=9657096 canonical_before=9657096 required=26289248 canonical_after=12854216 post_commit=12854216
+alias batch=4 retained=12854216 canonical_before=12854216 required=32683488 canonical_after=16051336 post_commit=16051336
+test quota_accounting_uses_the_effective_database_files ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 30 filtered out; finished in 1.48s
+

@@ -1,0 +1,123 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index cfc87e2..8e572cd 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -12,6 +12,7 @@ clap = { version = "=4.6.7", default-features = false, features = ["std", "deriv
+ globset = { version = "=0.4.20", default-features = false }
+ jsonc-parser = { version = "=0.34.0", default-features = false }
+ regex-automata = "=0.4.18"
++rusqlite = { version = "=0.41.1", default-features = false, features = ["bundled"] }
+ schemars = { version = "=1.2.2", features = ["preserve_order"] }
+ serde = { version = "=1.0.229", features = ["derive"] }
+ serde_json = "=1.0.151"
+diff --git a/README.md b/README.md
+index ca26619..8301326 100644
+--- a/README.md
++++ b/README.md
+@@ -4,11 +4,11 @@ A Rust tool for evidence-based code review, designed for explicit CLI/CI analysi
+ 
+ ## Current status
+ 
+-This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides bounded four-selector source capture through `workspace::capture`, independently accepted and merged through [the AS-M003 delivery](https://github.com/abdwhb-png/anti-slop/pull/2). Its [mission state](.missions/AS-M003/state.json) records completed local closure after the [reviewed historical-reference recovery](.missions/AS-M003/evidence/recovery/README.md); this delivery branch preserves the correction, with integration into main pending. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, storage and dataset export are **not implemented**. Unknown commands fail; no command claims that a repository passed analysis.
++This repository contains [accepted architecture decisions](docs/decisions/README.md), a [PRD with approved product workflows and acceptance criteria](docs/PRD.md), qualification experiments and the first local Rust configuration slice. The [initial request, provenance and evaluation contracts](docs/PRD.md) are documented through AS-M001; its [mission state](.missions/AS-M001/state.json) owns independent acceptance. The shared library provides bounded four-selector source capture through `workspace::capture`, independently accepted and merged through [the AS-M003 delivery](https://github.com/abdwhb-png/anti-slop/pull/2). Its [mission state](.missions/AS-M003/state.json) records completed local closure after the [reviewed historical-reference recovery](.missions/AS-M003/evidence/recovery/README.md); this delivery branch preserves the correction, with integration into main pending. The shared library also exposes durable capture records through `records::Store`; the [AS-M004 mission state](.missions/AS-M004/state.json) owns their current qualification and acceptance. The executable provides help/version and read-only `config explain` with validated JSONC, advisory defaults, ordered overrides and winning origins. Its TOON-default and explicit JSON views share the Rust resolver/output owners. Analysis, resident sessions, rules, model calls, reports and dataset export are **not implemented**; durable capture recording is a library capability, not a CLI command. Unknown commands fail; no command claims that a repository passed analysis.
+ 
+ The first usable version targets Linux, including WSL2. macOS and native Windows are later work. This is the selected support scope, not a completed platform qualification.
+ 
+-The initial dependency group is installed in the root Cargo package. Later engine, storage, codec and language dependencies remain in the [bootstrap design](docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md) until the corresponding implementation begins. The existing research probes retain their own manifests and lockfiles; they are not workspace members.
++The initial dependency group and the SQLite storage dependency are installed in the root Cargo package. Later engine, codec and language dependencies remain in the [bootstrap design](docs/brainstorming-decisions/2026-09-22-anti-slop-bootstrap-proposal.md) until the corresponding implementation begins. The existing research probes retain their own manifests and lockfiles; they are not workspace members.
+ 
+ Project configuration is specified as a root `.anti-slop.jsonc` with a versioned `$schema` link and path overrides in [ADR-008](docs/decisions/008-project-configuration-and-schema.md). That decision documents O1's limits and the compatible path toward O2 subproject configurations. The local loader and inspection boundary are available; see [the local configuration contract](docs/configuration.md). The generated local schema and headless VS Code editor-service conformance are available; the reserved public schema URL is unpublished; the installed TOML parser belongs to the earlier scaffold and does not define the selected format.
+ 
+@@ -51,6 +51,54 @@ HEAD/base is pinned once. Captured object identities supply stored bytes; releva
+ 
+ For the complete small nonvisual journey, run `cargo test --frozen --test workspace four_comparisons_select_their_exact_sides_and_independent_context -- --exact --nocapture`; the real fixture has distinct base/merge-base/HEAD/index/working bytes, staged-only and ignored/untracked inputs, plus independent context. Failure, mutation and retained-range cases are in the same public-boundary test target. Run `python3 .missions/AS-M003/evidence/P02/measure.py staged --output .missions/AS-M003/evidence/P02/trial-staged-001` (or `unstaged`, `local`, `base`, with a fresh output directory) for one-file and five-file/200-changed-line timing, acquisition/retention counts and owned-process sampling. Existing output paths are refused before build/sampling; choose a new directory for each relaunch. [P02 evidence](.missions/AS-M003/evidence/P02/) retains its observations, limits and the explicitly approved TDD sequencing exception; [P03 evidence](.missions/AS-M003/evidence/P03/) retains renewed measurements after the mode correction. Historical evidence stays unchanged. This is a local library demonstration with no hosted trial; the implementation was published and merged through [the AS-M003 delivery](https://github.com/abdwhb-png/anti-slop/pull/2).
+ 
++## Durable capture records
++
++`records` stores a completed `workspace::Capture` and reads its exact bytes and
++provenance back later, including after the originating files and Git objects are
++gone. The store is a local SQLite database; the interface is library-only.
++
++```rust,no_run
++use anti_slop::{
++    records::{Budget, Store},
++    workspace::{CaptureRequest, Selection, capture},
++};
++use std::path::Path;
++
++let captured = capture(
++    Path::new("/path/to/repository"),
++    &CaptureRequest::new(Selection::Local),
++)?;
++let mut store = Store::open_with_budget(
++    Path::new("/workspace/.anti-slop/records.sqlite3"),
++    Budget::default(), // 10 GiB per workspace
++)?;
++let saved = store.save_capture(&captured)?;
++let retained = store.read_capture(saved.id)?;
++# Ok::<(), Box<dyn std::error::Error>>(())
++```
++
++A save retains the source bytes, roles, generations, Git blob and mode
++identities, comparison selection/commit, configuration identity and bytes in
++one SQLite transaction. A returned `SavedCapture` follows a completed commit and
++carries the measured retained footprint. Reads verify a records-owned integrity
++digest over the complete membership, provenance and bytes; missing, altered,
++duplicate or extra evidence returns an explicit corruption error. Retained reads
++include deletion-versus-empty distinctions, valid empty captures and independent
++occurrences of equal content.
++
++WAL mode with `synchronous = FULL` provides the selected durability; SQLite
++removes the WAL when the last connection closes. The store enforces an
++application admission budget (10 GiB default, warning at 80%, explicit refusal
++at the limit). The reservation covers database pages, WAL/SHM/journal files,
++checkpoint duplication and the existing WAL backlog; it is an engineering
++allowance under the bundled SQLite settings, not a hard filesystem quota.
++Opening a store below its retained size does not prevent retained reads.
++
++The store uses schema version 1, which has not shipped; no migration history is
++provided. Purge/export, analysis, report rendering and admission for model work
++are later outcomes. `cargo test --frozen --test records` exercises the public
++library boundary; the record code has no analysis or CLI command.
++
+ ## Toolchain and dependencies
+ 
+ - One Cargo package: `anti-slop`; library: `anti_slop`; binary: `anti-slop`.
+@@ -138,7 +186,8 @@ analysis qualification.
+ | `src/workspace/` | Four explicit source comparisons, retained generations and bounded read-only Git/filesystem acquisition. |
+ | `src/analysis/` | Reserved language-analysis module. |
+ | `src/rules/`, `src/judges/`, `src/policy/` | Reserved evidence rules, provider adapters and qualification decisions. |
+-| `src/records/`, `src/engine/` | Reserved durable records and shared orchestration. |
++| `src/records/` | Durable capture records, storage integrity and admission. |
++| `src/engine/` | Reserved shared orchestration. |
+ | `src/output.rs` | Shared configuration inspection projection and TOON/JSON encoding. |
+ | `src/output/`, `src/session/` | Reserved analysis report rendering and resident protocol. |
+ | `bridges/typescript/`, `bridges/php/` | Reserved native API workers; no packages installed here. |
+diff --git a/docs/IMPLEMENTATION_ROADMAP.md b/docs/IMPLEMENTATION_ROADMAP.md
+index fbec596..90c6682 100644
+--- a/docs/IMPLEMENTATION_ROADMAP.md
++++ b/docs/IMPLEMENTATION_ROADMAP.md
+@@ -16,7 +16,7 @@
+ 
+ # Anti-Slop progressive implementation roadmap
+ 
+-Prepared: 2026-09-23. Status reconciliation: 2026-11-17. **AS-M001 is independently accepted. AS-M002 was implemented and independently accepted in its original cloud worktree, then recovered after those uncommitted files disappeared.** Its [recovery record](../.missions/AS-M002/recovery/README.md) records fresh checks and missing audit evidence. AS-M003 source capture was independently accepted and merged through [its delivery](https://github.com/abdwhb-png/anti-slop/pull/2). Its [local mission closure is completed](../.missions/AS-M003/state.json) after [reviewed historical-reference recovery](../.missions/AS-M003/evidence/recovery/README.md); this delivery branch carries the record correction, with main integration pending. AS-M004/L04 remains set aside pending a separate boundary decision; W01 as a whole remains unapproved.
++Prepared: 2026-09-23. Status reconciliation: 2026-11-17. **AS-M001 is independently accepted. AS-M002 was implemented and independently accepted in its original cloud worktree, then recovered after those uncommitted files disappeared.** Its [recovery record](../.missions/AS-M002/recovery/README.md) records fresh checks and missing audit evidence. AS-M003 source capture was independently accepted and merged through [its delivery](https://github.com/abdwhb-png/anti-slop/pull/2). Its [local mission closure is completed](../.missions/AS-M003/state.json) after [reviewed historical-reference recovery](../.missions/AS-M003/evidence/recovery/README.md); this delivery branch carries the record correction, with main integration pending. AS-M004/L04 durable capture records are implemented and under final qualification; its [mission state](../.missions/AS-M004/state.json) owns acceptance, and W01 as a whole remains unapproved.
+ 
+ This is the existing roadmap's first workflow revision. It retains the complete 2026-09-22 plan [below](#retained-2026-09-22-plan), unchanged, as historical planning context. The active view above that history owns current sequencing. Historical subtask prompts are not current dispatch instructions. No PRD, ADR, research record or roadmap file has been replaced or moved.
+ 
+diff --git a/src/lib.rs b/src/lib.rs
+index 8c48e18..80cafda 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -1,8 +1,9 @@
+ //! Shared Anti-Slop application library.
+ //!
+ //! Application operations will be introduced with their implementations.
+-//! Analysis, storage, and session behavior are not available yet.
++//! Analysis and session behavior are not available yet.
+ 
+ pub mod config;
+ pub mod output;
++pub mod records;
+ pub mod workspace;

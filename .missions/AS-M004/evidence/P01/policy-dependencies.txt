@@ -1,0 +1,10 @@
+Qualified cargo cc@1.11.1
+Qualified cargo fallible-iterator@0.3.0
+Qualified cargo fallible-streaming-iterator@0.1.9
+Qualified cargo find-msvc-tools@0.1.15
+Qualified cargo libsqlite3-sys@0.39.1
+Qualified cargo pkg-config@0.3.34
+Qualified cargo rusqlite@0.41.1
+Qualified cargo shlex@2.0.1
+Qualified cargo vcpkg@0.2.15
+Qualified 9 added/changed locked registry packages.

@@ -1,0 +1,3 @@
+Poursuivre et documenter ces deux écarts (recommandé)
+
+Answered scope: preserve and correct the existing L04 candidate, with a one-time exception limited to the historical import-only initial RED and the Socket downloads before release-age checks. Require actual behavioral RED before future production changes, all mission checks and the independent final Codex review. This decision accepts no code and grants no merge or No-Mistakes authority.

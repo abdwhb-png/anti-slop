@@ -1,0 +1,678 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-final-r2",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "as-m004-durable:s1794917371.2499360.5599",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268",
+    "as-m004-durable:s1794916284.2288889.8486"
+  ],
+  "freshContext": true,
+  "outcome": "accepted",
+  "summary": "The complete AS-M004 revision-2 dirty delivery has sufficient evidence for an accepted independent whole-mission review. P04 resolves final-r1's one high qualification blocker: the observer now walks all task child lists recursively, deduplicates process IDs, and includes the actual nonleader-thread Git children in the consuming resource protocol. I independently reran both measurement tests with an external OS parentage observation; both passed. Cumulative production, dependency, failure, quota, API/design and complete demonstration evidence remains applicable after verified source hashes. No remaining concrete defect or architecture blocker was identified. This result does not change mission state, commit, publish, integrate or close the mission.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "final-r2.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "final-r1.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P01-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P01C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P02-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P02C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P03-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P03C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P04-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/execution-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/process-exception-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/adoption.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/dependency-qualification.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/policy-dependencies.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/policy-complete-graph.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/red-01-corruption-undetected.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/integrity-notes.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/red-01-admission-absent.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/admission-formula.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/red-01-alias-undercount.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/formula-review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/implementation-report-r2.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/failure-notes.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-during-commit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-commit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-postcommit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/ci-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/resource-protocol.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/measure-final.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/demonstration-intake.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/demo-output.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/clippy-demo.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/format-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../packets/P04.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/regression-evidence.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/red-01-thread-child-omitted.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/green-01-thread-child-observed.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measurement-source-before.raw.rs.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measurement-source-after.raw.rs.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measurement-source.diff.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/resource-protocol-current.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measure-current.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/ci-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../Cargo.lock"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../Cargo.toml"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../README.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../docs/IMPLEMENTATION_ROADMAP.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../docs/missions/AS-M004/r2.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../src/lib.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../src/records/mod.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records_demo.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records_measure.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/support/records/io_fault.c"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/support/records/mod.rs"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "decision": "continue",
+    "rationale": "The complete cumulative library capture/save/read capability, SQLite dependency and schema, integrity/recovery/admission behavior, tests, documentation, demonstration and renewed resources remain one coherent L04 delivery to main on the integrated AS-M003/PR3 base. P04 restores required qualification without a production change or new product scope. No split or dependency boundary decision is needed. This assessment covers the source-hashed dirty tree, not implementation in baseline HEAD; eventual committed-head GitHub CI and publication remain separate."
+  },
+  "reviewVerdict": {
+    "decision": "APPROVE",
+    "severityCounts": {
+      "critical": 0,
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "architecturalStatus": "CLEAR",
+    "reviewers": [
+      {
+        "actor": "as-m004-durable:s1794917371.2499360.5599",
+        "scope": "One fresh complete whole-mission review of correctness, contract, API, architectural ownership, dependency delta, failure/quota evidence, resource correction and whole nonvisual demonstration."
+      }
+    ],
+    "independentSpecialistLanesRun": 0,
+    "reason": "The prior reproduced mandatory observer omission is corrected and renewed live. The cumulative approved result is supported within its declared engineering and sampling limits; no additional concrete blocker was found."
+  },
+  "contextProvenance": {
+    "executionIdentity": "as-m004-durable:s1794917371.2499360.5599",
+    "basis": "The current initial context contains project instructions and the final-r2 review brief, with no inherited implementation conversation. This is the new execution launched after the controlled old-agent stop supplied by Firstmate, separate from both actual implementers and the prior final-r1 reviewer. I read the approved contract, current source, old rejection, P04 correction and underlying evidence independently. Independence rests on this separate fresh launch and lack of implementation dialogue, not a role rename.",
+    "limits": "The controlled stop and launch-selected Codex CLI 0.167.0 / gpt-6.1-sol / xhigh / existing ChatGPT login are launcher-supplied provenance. I did not supervise lifecycle, inspect another home's endpoints, introspect server-side model routing or change provider/account. The exact actual launcher-provided execution identity above is the sole reviewer actor.",
+    "delegation": "No subagent, extra specialist lane, supervisor, external executor or additional review hierarchy ran. The one user-confirmed independent review is this Codex context; review-delegation's angles were examined locally.",
+    "inbox": "Read the exact task inbox and all seven already-handled messages. No pending message was present. Historical 006 assigned P03C1 and 007 ended final-r1 for lifecycle control; both are superseded by the later final-r2 launch. Acknowledged in commentary without moving or editing inbox bytes."
+  },
+  "sourceScope": {
+    "baseCommit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "head": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "target": "main",
+    "localMain": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "branch": "fm/as-m004-durable",
+    "workingTree": "All L04 implementation remains uncommitted. The tracked working-tree changes and all untracked records/test/support/mission paths were included; base..HEAD is empty and was not substituted for review scope. The index is unchanged. AS-M003 and PR3 are integrated in this base and were not reopened.",
+    "reviewedPaths": [
+      {
+        "path": "Cargo.lock",
+        "sha256": "ee591e40f18fbebb86f0ec83797c4e708c75031552d17bb052deb73644c15381",
+        "bytes": 21955
+      },
+      {
+        "path": "Cargo.toml",
+        "sha256": "1ce7a7ffab0e04eef594aab73a379dcdd30e2a59981f6d7252352aa4073a8bcb",
+        "bytes": 1228
+      },
+      {
+        "path": "README.md",
+        "sha256": "31ee116ec702895c29aba1a4f53e66e9c87f3fb23ed7ee578bde89a023068c1d",
+        "bytes": 22735
+      },
+      {
+        "path": "docs/IMPLEMENTATION_ROADMAP.md",
+        "sha256": "4d9e648088157787dfbbce470cc8198ea73ccf23b514ad215a7b8cb16e8af6f3",
+        "bytes": 47528
+      },
+      {
+        "path": "docs/missions/AS-M004/r2.md",
+        "sha256": "3940a1398bc310f78c3dcd6939bdd10488ce2352380f2f7e1fcea124fe25e294",
+        "bytes": 12370
+      },
+      {
+        "path": "src/lib.rs",
+        "sha256": "21936cdd0940b7cf1f6212ef1769a2c58eee03622bf9d264449c6a55477a835f",
+        "bytes": 246
+      },
+      {
+        "path": "src/records/mod.rs",
+        "sha256": "5a07558619c4b97968c18d7b75f196a89863b39f02084aa568f915028726992d",
+        "bytes": 46273
+      },
+      {
+        "path": "tests/records.rs",
+        "sha256": "a14a8756726d46601c416d5a16bba9e3b80b11f0d6b192ec56142bd2ff447db2",
+        "bytes": 71187
+      },
+      {
+        "path": "tests/records_demo.rs",
+        "sha256": "b45bc98099f974949016b30e2f8f20336675bbe8c3557004104b25044ebd1a49",
+        "bytes": 4818
+      },
+      {
+        "path": "tests/records_measure.rs",
+        "sha256": "1aa6fdeb1e7779055f0141fbfd252f1ef5062bc47b8073052a7df147b298a6fd",
+        "bytes": 24827
+      },
+      {
+        "path": "tests/support/records/io_fault.c",
+        "sha256": "23ea7d4d9d106b47098b4b32f5afc6bd6d12e2d95b724fd7ccf2bb7fb038b8c7",
+        "bytes": 4925
+      },
+      {
+        "path": "tests/support/records/mod.rs",
+        "sha256": "3153e82bf624ab807d98a9ef79eae4d185b60f573f30b882a51019f6472973b4",
+        "bytes": 3870
+      }
+    ],
+    "p04DeltaVerification": "All 11 other paths in final-r1 sourceScope.reviewedPaths match their recorded SHA-256 and byte counts exactly. Only tests/records_measure.rs changed, from 15,382 bytes / 73ffa7ac07559ea87f2d91f70850fa6a9957e3235a5c5b80aa7976858dfa5379 to 24,827 bytes / 1aa6fdeb1e7779055f0141fbfd252f1ef5062bc47b8073052a7df147b298a6fd. The preserved after-source equals the current file; applying each retained unified-diff hunk in memory to the preserved before-source reproduces the after-source byte-for-byte. A literal comparison with Python difflib initially differed in hunk boundaries (GNU diff uses different matching); exact hunk application resolves that representational difference.",
+    "preReportDirtyManifest": {
+      "fileCount": 176,
+      "bytes": 899835,
+      "sha256": "3bd5a1797c72c0e2476a24cc5817584f05aa77897b93816f47a1bfd2a7669ba7",
+      "method": "Sorted union of git diff --name-only and git ls-files --others --exclude-standard. Entries {path,sha256,bytes}; SHA-256 of Python json.dumps(entries,sort_keys=True,separators=(',',':')). Taken before this administrative result. The same manifest is checked immediately before writing. This is a local source observation, not native candidate binding."
+    },
+    "administrativeScope": "The complete dirty inventory includes docs/missions/AS-M004/r2.md and all .missions/AS-M004 contracts, packets, state/history, retained rejected results, correction reports and raw evidence. Current implementation/test/support and dependency/docs delta were read completely. Mission state, every packet result including final-r1/P04, required authority and historical correction/resource/failure/demonstration evidence were examined. Historical raw logs/snapshots were inventoried and used as supporting proof; they are not new implementations or proof of current acceptance by themselves.",
+    "preservation": "No production, test, documentation, prior evidence, state/history, dependency, index or commit was changed. Cargo/tests wrote ignored cache and controlled temporary fixtures only. The only project output is this complete administrative result; the permitted private owner report is byte-identical."
+  },
+  "findings": [],
+  "resolvedPriorFindings": [
+    {
+      "source": "final-r1.json",
+      "severity": "high",
+      "location": "tests/records_measure.rs:67",
+      "status": "resolved",
+      "issue": "Leader-only child enumeration omitted real Git launched by libtest worker threads from capture-journey RSS.",
+      "correction": "owned_tree_pids enumerates every /proc/<pid>/task/<tid>/children for each owned process, recurses and deduplicates PIDs. tree_rss uses this authoritative observer and sums VmRSS once per process. The consuming protocol and regression use that same implementation. RESOURCE_PROTOCOL_LOCK excludes artificial held Git from normal workload measurements.",
+      "proof": "P04 retains an actual assertion RED with own-only RSS despite four known live Git children, then GREEN with known child membership and numeric RSS coverage. The current source and unified diff were verified. Independent current rerun passed both tests and external /proc observation confirmed the concrete Git PIDs under the nonleader TID reported by each combined journey.",
+      "limits": "The exact intermediate RED-stage fixture source was not byte-retained, so a byte-exact replay of that intermediate test is unavailable. The genuine failing log, pre-fix observer and final source are retained; the intended failure and corrected consumer are causally supported. This is not a retroactive TDD waiver or a claim that sampling captures every peak."
+    }
+  ],
+  "contractAssessment": [
+    {
+      "criterion": "Synchronous source retention and fresh-process recovery after loss of origins",
+      "status": "supported",
+      "locations": [
+        "src/records/mod.rs:258",
+        "src/records/mod.rs:428",
+        "tests/records.rs:219"
+      ],
+      "detail": "save_capture consumes the real immutable workspace::Capture without recapture or configuration re-resolution. One SQLite transaction retains comparison selection/resolved commit, generations, exact configuration bytes/provenance, ordered change membership and before/after/context bytes, roles, Git blob/mode identities. A fresh-process read after deleting the whole repository compares the full retained projection and bound range with the captured input. Tests retain deletion versus present empty bytes, empty captures and independent repeated occurrence IDs. Capture-only records add no fictitious analyzer/model/policy success."
+    },
+    {
+      "criterion": "Integrity, ranges and occurrence provenance",
+      "status": "supported",
+      "locations": [
+        "src/records/mod.rs:531",
+        "src/records/mod.rs:825",
+        "src/records/mod.rs:929",
+        "tests/records.rs:711"
+      ],
+      "detail": "One domain-separated, length/presence-encoded SHA-256 implementation covers the header, counts, ordinals, membership, provenance and actual bytes at save/read in a single read snapshot. Missing/extra/duplicate membership and modified source/configuration/provenance are rejected before returning a retained result. Ranges bind path, role and generation before slicing. AUTOINCREMENT occurrence IDs remain separate from equal content/generations; no dedup merges provenance. This is corruption detection, not a keyed authenticity guarantee; whole-row deletion is NotFound."
+    },
+    {
+      "criterion": "Schema creation, reopen and compatibility",
+      "status": "supported within this slice",
+      "locations": [
+        "src/records/mod.rs:198",
+        "src/records/mod.rs:654",
+        "tests/records.rs:433",
+        "tests/records.rs:521"
+      ],
+      "detail": "Schema v1 DDL and user_version are in one transaction. The conflicting-view test proves failed initialization leaves version zero and no partial store tables. Unchanged reopen and refusal of version 2, unrelated database, malformed bytes and unavailable parent are covered. verify checks the three table names and integrity column, not a complete schema fingerprint; incompatible later reads/writes still return explicit errors. There is no actually shipped earlier schema, so no speculative migration framework is required."
+    },
+    {
+      "criterion": "Complete-or-absent writes, durability and honest acknowledgement outcomes",
+      "status": "supported with recorded fault limits",
+      "locations": [
+        "src/records/mod.rs:259",
+        "src/records/mod.rs:413",
+        "src/records/mod.rs:631",
+        "tests/records.rs:614",
+        "tests/records.rs:1311",
+        "tests/support/records/io_fault.c"
+      ],
+      "detail": "BEGIN IMMEDIATE, all inserts and one commit own the capture. WAL and synchronous FULL are set and verified. Installed rusqlite source confirms default rollback on transaction drop and explicit COMMIT. Real triggers, lock-wait termination, WAL-write EIO, a kill inside the WAL sync call after frames are written, and postcommit/preack termination cover distinct failures. Prior acknowledged bytes survive; an interrupted attempt is complete or absent. The during-commit case legitimately recovered complete from OS-cached frames and does not prove physical power-loss durability. CommittedUnmeasured names the committed ID when postcommit footprint measurement fails; measured overshoot returns the committed ID and over_limit without deleting data. A general I/O/commit error does not establish absence or exactly-once retry."
+    },
+    {
+      "criterion": "80% warning, admission/reservations and independent writers",
+      "status": "supported under declared engineering assumptions",
+      "locations": [
+        "src/records/mod.rs:242",
+        "src/records/mod.rs:312",
+        "src/records/mod.rs:1165",
+        "tests/records.rs:900",
+        "tests/records.rs:966",
+        "tests/records.rs:1039"
+      ],
+      "detail": "The warning uses overflow-safe u128 integer arithmetic. Admission adds actual DB/WAL/SHM/journal lengths to a checked reservation for real row/payload lists, WAL frame overhead, checkpoint duplication and current WAL backlog. BEGIN IMMEDIATE holds writer ownership through save, so outstanding required capacity has no separate ledger or crash-leaked reservation. Real tests cover required-1 refusal/required admission, two competing processes admitting only one capture, old-record reads under a lower budget and bounded busy errors. This synchronous capture ends within its transaction and needs no separate future-work terminal-status lifecycle or background queue. The constants are conservative measured allowances, not a hard filesystem quota, disk-block reservation or proof for arbitrary SQLite settings."
+    },
+    {
+      "criterion": "Effective database identity and accounting assumptions",
+      "status": "supported in qualified conditions",
+      "locations": [
+        "src/records/mod.rs:183",
+        "src/records/mod.rs:1230",
+        "tests/records.rs:1128",
+        "tests/records.rs:1156",
+        "tests/records.rs:1197"
+      ],
+      "detail": "SQLite opens the supplied path, then OS canonicalization binds accounting to the existing effective database path. This replaces the prior custom resolver. Held-reader file/directory aliases, new files through aliased parents and dangling final symlinks exercise actual DB/WAL paths, not a no-reader counterexample that checkpoints away the defect. Installed bundled Unix VFS source confirms symlink component resolution. Page size is read; the qualified bundled default uses zero reserved page bytes and default auto-checkpoint behavior. The formula computes actual rows/byte lengths and does not infer retained source count from inventory count. Changed SQLite settings/builds, path replacement, other files or physical allocated blocks are not silently qualified."
+    },
+    {
+      "criterion": "Real storage, buffers, synchronous persistence cost and owned-process observations",
+      "status": "supported with sampling limits",
+      "locations": [
+        "tests/records_measure.rs:362",
+        "tests/records_measure.rs:487",
+        "tests/records_measure.rs:533",
+        "../evidence/P04/resource-protocol-current.md"
+      ],
+      "detail": "The current P04 protocol renews one/five-file capture/save/read, separate fresh open/reopen and synchronous save cost, metadata-heavy, 1 MiB, 8 MiB and held-reader cases. Raw nearest-rank percentile arithmetic was checked. Both current measurement tests were independently rerun with external OS parentage observation. The corrected combined journeys include the real Git child scope, while per-process RSS is counted once. P03 capture-journey tree-memory claims are superseded and are not current proof. The measurements include harness/prepared retained inputs and are not an isolated allocator-cost or future ADR-007 budget result."
+    },
+    {
+      "criterion": "Module/API complexity and shared ownership",
+      "status": "supported; architecture CLEAR",
+      "locations": [
+        "src/lib.rs:7",
+        "src/records/mod.rs:163",
+        "src/records/mod.rs:698",
+        "src/records/mod.rs:840",
+        "tests/records_measure.rs:67"
+      ],
+      "detail": "One records module hides SQLite, schema, transaction/admission ownership, errors and reconstruction behind open/save/read/usage. It reuses workspace/config types and generation owners without new pass-through service layers, crate, repository interface, universal result model, external blob publication protocol or queue lifecycle. Borrowed digest views and owned stored rows serve different lifetimes while keeping the integrity algorithm authoritative once. The long linear save/read methods follow cohesive row construction and recovery; extracting shallow layers would expose more concepts. P04's held-child guard, kernel-known IDs, shared lock and membership probe have concrete qualification purposes; its additional size alone is not a smell finding."
+    },
+    {
+      "criterion": "Dependency qualification and implementation-process history",
+      "status": "supported as retained historical evidence",
+      "locations": [
+        "Cargo.toml:15",
+        "Cargo.lock",
+        "../evidence/P01/dependency-qualification.md",
+        "../evidence/P01C1/policy-complete-graph.txt",
+        "../evidence/process-exception-authority.txt"
+      ],
+      "detail": "The actual Cargo delta adds exact rusqlite 0.41.1 with defaults disabled and bundled SQLite, plus nine locked additions without unrelated upgrades; tests use the same real binding. Installed binding and SQLite build/source were inspected. The retained live-registry/Socket policy proof covers the resolved additions and complete restored graph. No registry freshness, latest-version recommendation or dependency change was made in this review. The import-only initial RED and pre-age-check downloads remain historical deviations with only their specific user exception; they are not relabelled compliant and do not waive subsequent behavioral RED. Later integrity, admission, alias and P04 regression logs preserve intended behavior failures."
+    },
+    {
+      "criterion": "Current documentation and complete nonvisual demonstration",
+      "status": "supported",
+      "locations": [
+        "README.md:54",
+        "docs/IMPLEMENTATION_ROADMAP.md:19",
+        "tests/records_demo.rs:21",
+        "../evidence/P03/demonstration-intake.md",
+        "../evidence/P03C1/implementation-report.md"
+      ],
+      "detail": "README describes only locally available library capture records, states the existing-parent precondition, links acceptance to mission state and distinguishes analysis/report/export/CLI scope. The roadmap correctly places PR3 in the starting base. The whole demonstration remains recognizable in order: real synthetic repository, selected a.ts plus independent guide.ts context, save/footprint, explicit zero-budget second-save refusal with prior readability, delete origins, then exact retained bytes/roles/generations in a successful fresh process. The local Cargo trial is usable; fixture hashes vary per temporary repository and dirty-base applicability is disclosed. P03C1 reuses shared hex/wait support and renews that whole story; P04 changes none of its inputs. No hosted trial, UI/screenshots or publication is implied. Checked repository-local Markdown targets exist."
+    }
+  ],
+  "checksRun": [
+    {
+      "command": "node /home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/mdd-bundle/scripts/validate.mjs .missions/AS-M004/state.json --json",
+      "result": "Ran at intake and after substantive observations; exit 0, valid:true, issues:[]. State/history were not modified."
+    },
+    {
+      "command": "/home/abdwhb/.cargo/bin/cargo test --frozen --test records_measure -- --nocapture --test-threads=1",
+      "result": "Ran once under an external Python /proc observer of the actual test process; exit 0, 2 passed in 10.15 s. Both the normal resource protocol and known-child regression executed. The external observer adds load, so these figures are independent confirmation, not a replacement frozen benchmark.",
+      "observations": {
+        "host": "Linux 7.0.0-42-generic x86_64 GNU/Linux",
+        "cpus": 4,
+        "load": "0.95 0.99 1.07",
+        "processPid": 2522169,
+        "externalMonitorIterations": 3149,
+        "combined": [
+          {
+            "case": "one_file",
+            "captureSaveMicroseconds": 60934,
+            "payload": 208,
+            "retained": 90456,
+            "storagePeak": 90456,
+            "sampledTreeRss": 33796096,
+            "gitPid": 2531607,
+            "listedUnderTid": 2522170,
+            "leaderGitPeak": 0,
+            "otherThreadGitPeak": 1
+          },
+          {
+            "case": "five_file",
+            "captureSaveMicroseconds": 87991,
+            "payload": 5286,
+            "retained": 102816,
+            "storagePeak": 102816,
+            "sampledTreeRss": 33808384,
+            "gitPid": 2531701,
+            "listedUnderTid": 2522170,
+            "leaderGitPeak": 0,
+            "otherThreadGitPeak": 1
+          },
+          {
+            "case": "large_batch",
+            "captureSaveMicroseconds": 608462,
+            "payload": 8388794,
+            "retained": 16970168,
+            "storagePeak": 16970168,
+            "sampledTreeRss": 52420608,
+            "gitPid": 2531765,
+            "listedUnderTid": 2522170,
+            "leaderGitPeak": 0,
+            "otherThreadGitPeak": 1
+          }
+        ],
+        "regression": {
+          "launcherTid": 2532019,
+          "knownGitPids": [
+            2532020,
+            2532021,
+            2532022,
+            2532023
+          ],
+          "ownRss": 10526720,
+          "knownGitRss": 8974336,
+          "observedTreeRss": 21843968,
+          "leaderChildren": "",
+          "allKnownMembershipPairsReported": true
+        },
+        "externalEvidence": "The external observer independently read the same three combined-journey Git PIDs and all four held regression PIDs from those nonleader task child files while the process leader child list was empty. The full test stdout was retained below; the enormous redundant external PID inventory was terminal-truncated, so no complete external-inventory count is claimed.",
+        "oneFileCaptureSaveReadP50P95Microseconds": [
+          59444,
+          67439
+        ],
+        "fiveFileCaptureSaveReadP50P95Microseconds": [
+          93899,
+          108625
+        ],
+        "oneFileSaveCommitP50P95Microseconds": [
+          409,
+          466
+        ],
+        "fiveFileSaveCommitP50P95Microseconds": [
+          705,
+          859
+        ],
+        "reopenP50P95Microseconds": [
+          212,
+          395
+        ]
+      }
+    },
+    {
+      "command": "/home/abdwhb/.cargo/bin/cargo clippy --frozen --test records_measure -- -D warnings",
+      "result": "Exit 0 on the affected target; no warning. No repeated project-wide lint run."
+    },
+    {
+      "command": "/home/abdwhb/.cargo/bin/cargo fmt --all -- --check; git diff --check",
+      "result": "Both exited 0; read-only formatting/whitespace checks wrote no source."
+    },
+    {
+      "command": "Git read-only state, complete dirty-file SHA-256 inventory, final-r1 reviewedPaths comparison and P04 raw-source/unified-hunk reconstruction",
+      "result": "HEAD and local main equal baseline; source branch fm/as-m004-durable; base..HEAD and staged diff empty. All 11 unaffected reviewed source paths hash-identical. P04 after-source equals current; retained diff reconstructs it exactly. All three adoption archives match their original SHA-256 values. Pre-report dirty manifest recorded above."
+    },
+    {
+      "command": "Python inspection of P04 measure-current.txt raw series and repository-local Markdown links",
+      "result": "All 11 p50/p95 series agree with raw nearest-rank arithmetic and stated run counts. All 58 checked local Markdown file targets exist. This checks links and arithmetic, not runtime or external publication."
+    },
+    {
+      "command": "/home/abdwhb/.cargo/bin/rustc --version; /home/abdwhb/.cargo/bin/cargo --version; node --version; uname -srmo",
+      "result": "Rust 1.96.1 (31fca3adb 2026-06-26), Cargo 1.96.1 (356927216 2026-06-26), Node v26.13.0, Linux 7.0.0-42-generic x86_64 GNU/Linux."
+    },
+    {
+      "command": "Read installed rusqlite transaction/drop and bundled SQLite source/build; fetch official SQLite atomic/WAL/synchronous/file-format and Linux task-children documentation through the available Exa connector",
+      "result": "Verified transaction rollback/commit mechanics, qualified WAL/FULL behavior and assumptions, default bundled page/checkpoint settings, Unix symlink resolution, per-task child ownership and non-precise /proc snapshots. Initial connector calls were rejected for using url instead of required urls; corrected batched fetch succeeded. No install or package-selection action occurred."
+    },
+    {
+      "command": "node /home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/mdd-bundle/scripts/validate.mjs .missions/AS-M004/results/final-r2.json --json; node /home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/mdd-bundle/scripts/validate.mjs .missions/AS-M004/state.json --json",
+      "result": "After writing the complete result, both validators returned exit 0, valid:true, issues:[]. This is structural consistency only; no state.validation registration or acceptance was performed."
+    },
+    {
+      "command": "Post-output SHA-256 preservation and owner-copy comparison; git rev-parse HEAD; git diff --cached --name-only",
+      "result": "All 176 preexisting reviewed dirty files remain byte-identical after excluding only this administrative result. Fingerprint remains 3bd5a1797c72c0e2476a24cc5817584f05aa77897b93816f47a1bfd2a7669ba7; owner copy identical; HEAD equals deliveryAssessment.commit and staged diff remains empty."
+    }
+  ],
+  "reusedChecks": [
+    {
+      "proof": "final-r1.json checksRun and P03/P03C1 evidence",
+      "scope": "38 records and 2 demonstration tests, transactional/integrity/schema/alias/quota/fault behavior, prior full CI-equivalent validation and renewed P03C1 demo/Clippy/format",
+      "basis": "The current production, manifest/lock, other tests/support and README/roadmap are hash-identical to those reviewed inputs. I read the actual code and supporting failure/demo logs rather than treating the old verdict as acceptance. Final-r1 remains correction_required; its unaffected proof is reused only for these claims, never its invalid capture-tree-memory observations."
+    },
+    {
+      "proof": "../evidence/P04/ci-check.txt and P04-review.json",
+      "scope": "One complete stabilized PATH=/home/abdwhb/.cargo/bin:$PATH CI_BASE_SHA=45dac3c241338c94166369fe821fe1d3499cf974 bash scripts/ci/check.sh",
+      "basis": "Reviewed current worker receipt and raw output against scripts/ci/check.sh and exact P04 after-source; packet was independently examined by nonimplementing Firstmate. Its required script completed formatting, 19 Python policy tests, whitespace, frozen workspace build, all-target tests (CLI11, config19, output3, records38, demo2, measurement2, schema3, workspace34 passed/2 pre-existing ignored), zero doctests, Clippy -D warnings, generated-schema check and offline Node editor-service conformance. This review did not rerun that unchanged full suite; it renewed the affected measurement target, focused Clippy and read-only format check."
+    }
+  ],
+  "checksNotRun": [
+    "Did not rerun unaffected records/demo/CLI/config/output/workspace suites or the complete CI script in this final-r2 context; their source applicability and retained executed proof are specified above.",
+    "GitHub Actions against an eventual committed/pushed head has not run for this uncommitted candidate and remains required by the delivery workflow.",
+    "Did not reconstruct or execute an invented byte-exact intermediate RED fixture; that source was not retained. Did not repeat mutation experiments or rerun historical failing implementations.",
+    "No networked dependency registry requalification, download, install, manifest/lock edit, tool installation, version recommendation or provider/account change.",
+    "No hosted trial, browser/visual capture, external publication, notification, No-Mistakes, commit, stage, push, PR, merge, deployment, cleanup/discard, state/history change or mission acceptance/closure.",
+    "No cold-disk, multi-host/WSL-specific runtime, alternative SQLite build/filesystem, physical power-loss/device/fsync-lie, arbitrary-path replacement, or future complete analyzer/model/report/resident ADR-007 budget certification."
+  ],
+  "limits": [
+    "The corrected observer covers the actual process tree scope at sampled observations; it does not capture every child or instantaneous peak. A 1 ms sleep plus observer work can miss transient children, task reparenting/exits and higher peaks. PID reuse is not excluded. /proc disappearance is skipped; this is not a qualified general-purpose observer for restricted/unavailable procfs. Real known-child and normal-journey probes on this host establish the relevant coverage.",
+    "Per-process VmRSS can count shared pages more than once and the kernel RSS itself is approximate. The tree sum is not unique physical memory. Both harness and prepared capture buffers are included, and it is not an isolated product-memory delta.",
+    "Storage peaks are sampled logical DB and auxiliary file lengths, not allocated filesystem blocks or a formal all-instant peak bound. Most current peaks equal final retained size; the longer historical checkpoint observations and near-boundary tests support the engineering allowance without proving a hard quota.",
+    "One warm-cache Linux host, debug build, declared fixtures, 20/30-observation latency series and single peak runs provide local evidence, not tail-confidence or future ADR-007 B1-B4 acceptance.",
+    "SQLite WAL/FULL guarantees depend on the real VFS/filesystem/device honoring writes and synchronization. Process-kill/EIO fixtures establish recovery and caller-visible outcomes at those seams, not physical durability certification.",
+    "The genuine P04 RED output and old observer are retained, but not the byte-exact intermediate fixture; its intended failure is supported, with that reproducibility limit explicit. The earlier P01 TDD/download deviations retain only their separate historical user exception.",
+    "Review applies to the complete dirty source fingerprint above, not a new commit. Final-r1 and all historical failures remain preserved. Eventual candidate binding, committed-head CI and Firstmate's state/acceptance/delivery actions are outside this result."
+  ],
+  "primarySources": [
+    {
+      "title": "SQLite atomic commit",
+      "url": "https://sqlite.org/atomiccommit.html",
+      "assessment": "Checked hardware/OS assumptions; this page describes rollback mode, so it is not used as the WAL mechanism proof."
+    },
+    {
+      "title": "SQLite synchronous",
+      "url": "https://sqlite.org/pragma.html#pragma_synchronous",
+      "assessment": "WAL FULL sync/ACID contract checked with explicit storage-stack assumptions."
+    },
+    {
+      "title": "SQLite WAL",
+      "url": "https://sqlite.org/wal.html",
+      "assessment": "Commit-record, single-writer, long-reader/checkpoint and default 1000-page behavior checked against installed source."
+    },
+    {
+      "title": "SQLite database and WAL format",
+      "url": "https://sqlite.org/fileformat2.html#walformat",
+      "assessment": "Page/overflow and WAL header/frame accounting checked against the declared engineering formula."
+    },
+    {
+      "title": "Linux proc task children",
+      "url": "https://www.kernel.org/doc/html/latest/filesystems/proc.html#proc-pid-task-tid-children-information-about-task-children",
+      "assessment": "Per-task child list, recursion and potentially omitted/exiting-child snapshot limitations checked against live observation."
+    }
+  ],
+  "reviewMeasurementOutput": "    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.06s\n     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)\n\nrunning 2 tests\ntest capture_save_commit_read_resource_protocol ... host=linux cpus=4 loadavg=Some(\"0.95 0.99 1.07\")\nbounds files=512 file_bytes=1048576 total_bytes=16777216 config_bytes=1048576 budget=10737418240\ncaptures one_bytes=208 five_changes=5 five_bytes=5286 metadata_changes=480 metadata_bytes=1146 large_bytes=1048762\ncaptures large_batch_changes=8 large_batch_bytes=8388794\njourney=one_file_capture_only runs=30 p50_us=61054 p95_us=78652 raw_us=[60397, 58798, 61355, 68531, 73512, 78652, 76269, 65400, 69442, 58646, 60235, 61054, 60109, 61610, 59798, 78729, 66442, 60238, 58045, 66627, 59797, 58234, 58369, 60404, 72907, 63573, 63255, 58572, 59358, 65160]\njourney=five_file_capture_only runs=30 p50_us=93591 p95_us=99763 raw_us=[99763, 99185, 96661, 95255, 96329, 92149, 93591, 88983, 94422, 93849, 87254, 87815, 84640, 85440, 92739, 87884, 94804, 96977, 97395, 88793, 91844, 96171, 93609, 86230, 91284, 88711, 95357, 89098, 93906, 104541]\njourney=one_file_open runs=20 p50_us=713 p95_us=910 raw_us=[2586, 613, 727, 811, 727, 598, 653, 910, 794, 839, 576, 797, 713, 675, 573, 607, 806, 813, 591, 593]\njourney=one_file_save_commit runs=20 p50_us=409 p95_us=466 raw_us=[567, 376, 409, 371, 398, 404, 404, 436, 416, 465, 466, 421, 357, 425, 414, 431, 437, 401, 346, 367]\njourney=one_file_read runs=20 p50_us=207 p95_us=266 raw_us=[238, 195, 246, 192, 209, 185, 266, 210, 251, 193, 260, 199, 197, 239, 190, 182, 259, 207, 268, 200]\njourney=one_file_capture_save_read runs=20 p50_us=59444 p95_us=67439 raw_us=[72940, 63018, 57935, 62070, 62235, 58667, 59136, 61991, 60821, 67439, 66611, 61057, 57819, 58201, 59084, 57749, 63923, 59146, 59444, 58973]\njourney=five_file_open runs=20 p50_us=642 p95_us=948 raw_us=[670, 565, 652, 584, 693, 667, 596, 566, 708, 613, 633, 557, 856, 583, 896, 710, 1210, 642, 948, 590]\njourney=five_file_save_commit runs=20 p50_us=705 p95_us=859 raw_us=[720, 719, 736, 638, 695, 751, 632, 691, 844, 815, 676, 646, 709, 677, 945, 859, 668, 746, 705, 695]\njourney=five_file_read runs=20 p50_us=347 p95_us=465 raw_us=[358, 332, 321, 328, 335, 357, 331, 385, 329, 467, 333, 405, 338, 416, 369, 445, 347, 465, 350, 341]\njourney=five_file_capture_save_read runs=20 p50_us=93899 p95_us=108625 raw_us=[93441, 93596, 88529, 93899, 95445, 99820, 89625, 89164, 97007, 102401, 92318, 91130, 96953, 87485, 93257, 94817, 108625, 119325, 96481, 98638]\njourney=reopen runs=20 p50_us=212 p95_us=395 raw_us=[296, 237, 197, 179, 213, 180, 334, 419, 385, 223, 201, 194, 257, 395, 197, 192, 173, 169, 271, 212]\npeak case=one_file payload=208 admitted_limit=10737418240 retained=90456 save_us=173 storage_peak=90456 storage_peak_over_retained=0 tree_rss_peak=21749760 aliases=0 changes=1\npeak case=five_file payload=5286 admitted_limit=10737418240 retained=102816 save_us=480 storage_peak=102816 storage_peak_over_retained=0 tree_rss_peak=21749760 aliases=0 changes=5\npeak case=metadata_heavy payload=1146 admitted_limit=10737418240 retained=181096 save_us=15420 storage_peak=181096 storage_peak_over_retained=0 tree_rss_peak=21753856 aliases=0 changes=480\npeak case=large_single payload=1048762 admitted_limit=10737418240 retained=1149296 save_us=20263 storage_peak=1149296 storage_peak_over_retained=0 tree_rss_peak=23105536 aliases=0 changes=1\npeak case=large_batch payload=8388794 admitted_limit=10737418240 retained=16970168 save_us=145485 storage_peak=16970168 storage_peak_over_retained=0 tree_rss_peak=24064000 aliases=0 changes=8\ncombined case=one_file capture_save_us=60934 payload=208 retained=90456 storage_peak=90456 tree_rss_peak=33796096 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2531607, 2522170)) process_pid=2522169\ncombined case=five_file capture_save_us=87991 payload=5286 retained=102816 storage_peak=102816 tree_rss_peak=33808384 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2531701, 2522170)) process_pid=2522169\ncombined case=large_batch capture_save_us=608462 payload=8388794 retained=16970168 storage_peak=16970168 tree_rss_peak=52420608 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2531765, 2522170)) process_pid=2522169\npeak case=held_reader payload=1048762 retained=3316416 save_us=35835 storage_peak=3316416\nmemory self_vmhwm_kib=31392 self_vmrss_kib=24676\nok\ntest tree_rss_includes_git_children_launched_from_a_nonleader_thread ... thread_child process=2522169 launcher_tid=2532019 git_pids=[2532020, 2532021, 2532022, 2532023] git_rss=8974336 own_rss=10526720 observed_tree_rss=21843968 observed_members=[(2522169, None), (2532020, Some(2532019)), (2532021, Some(2532019)), (2532022, Some(2532019)), (2532023, Some(2532019))] leader_children=\"\"\nok\n\ntest result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.15s\n\n\n",
+  "report": "APPROVE; architecture CLEAR; critical 0, high 0, medium 0, low 0. No remaining concrete defect was identified in the complete approved AS-M004 revision-2 delivery. The previous high blocker is resolved: the resource protocol's authoritative observer enumerates all task child lists recursively and deduplicates process PIDs before summing RSS. Its actual consuming regression and all renewed resource journeys pass. Independent OS observation confirmed the same Git children reported by the current normal capture journeys under nonleader TID 2522170 while the leader child list was empty. The renewed sampled combined tree RSS is approximately 33.8 MB for one/five files and 52.4 MB for eight 1 MiB files in this diagnostic run; these are local sampled figures with the detailed limits above, not future product-budget claims.\n\nThe whole review includes synchronous capture/save/read after deleting origins, integrity and occurrence identity, schema compatibility/atomic creation, complete-or-absent writes and acknowledgement ambiguity, postcommit measurement/overshoot truth, warning/admission/reservations/concurrent writers, actual effective database paths, database/auxiliary and buffer costs, dependency/process evidence, module/API complexity and the complete nonvisual demonstration. Unchanged runtime proof is reused by verified hashes; the prior rejected verdict is never treated as acceptance. The required stabilized full CI was executed by P04 and examined here; this reviewer reran only affected measurement/Clippy and read-only format checks. Source is implemented and locally tested but still uncommitted. The accepted independent result is for Firstmate to examine and register; it does not itself accept/close the mission or authorize publication/integration.",
+  "handoff": {
+    "status": "done: candidate ready for examination",
+    "nextAction": "Firstmate examines and registers this exact administrative result reference in state.validation before native candidate binding, then follows the existing separately governed acceptance/commit/CI/publication workflow. Do not edit historical final-r1 or treat this result as mission closure or merge authority.",
+    "notification": "The shared notify-me skill was loaded. No external notification was sent: this worker is restricted to reporting only to Firstmate and to the single authorized administrative output. Outcome notification remains with that owner."
+  }
+}

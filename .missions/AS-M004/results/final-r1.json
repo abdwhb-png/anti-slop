@@ -1,0 +1,464 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-final-r1",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "mission",
+  "packet": null,
+  "actor": "as-m004-durable:s1794915007.2080463.16096",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": true,
+  "outcome": "correction_required",
+  "summary": "The complete uncommitted AS-M004 revision-2 delivery was reviewed in one fresh Codex context. The records and demonstration suites and the full CI-equivalent script pass. One mandatory resource-qualification defect remains: the purported process-tree RSS sampler follows only main-thread children, while the real capture fixture launches Git from the libtest worker thread. Live observation confirms those children are omitted systematically. Correct the sampler and renew the affected memory evidence; no additional production-code blocker was identified. This report does not accept or close the mission.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "final-r1.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P01-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P01C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P02-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P02C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P03-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "P03C1-review.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/execution-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/process-exception-authority.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/adoption.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/dependency-qualification.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/policy-dependencies.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/policy-complete-graph.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/red-01-corruption-undetected.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01C1/integrity-notes.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/red-01-admission-absent.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/red-01-alias-undercount.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02C1/formula-review.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/implementation-report-r2.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/failure-notes.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-during-commit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-commit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/fault-postcommit.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/ci-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/resource-protocol.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/measure-final.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03/demonstration-intake.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/demo-output.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/clippy-demo.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/format-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../src/records/mod.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records_demo.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/records_measure.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/support/records/mod.rs"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../tests/support/records/io_fault.c"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../Cargo.toml"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../Cargo.lock"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../README.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../../../docs/IMPLEMENTATION_ROADMAP.md"
+    }
+  ],
+  "reviewVerdict": {
+    "decision": "REQUEST CHANGES",
+    "severityCounts": {
+      "critical": 0,
+      "high": 1,
+      "medium": 0,
+      "low": 0
+    },
+    "architecturalStatus": "CLEAR",
+    "reviewers": [
+      {
+        "actor": "as-m004-durable:s1794915007.2080463.16096",
+        "scope": "One complete whole-mission review covering correctness, contract, API, ownership, dependency delta, resources, failure evidence and demonstration."
+      }
+    ],
+    "independentSpecialistLanesRun": 0,
+    "reason": "Required whole-owned-process memory accounting has a reproduced systematic omission. Passing behavior and CI checks do not establish the missing measurement."
+  },
+  "contextProvenance": {
+    "executionIdentity": "as-m004-durable:s1794915007.2080463.16096",
+    "implementerIdentity": "as-m004-durable:s1794906814.562141.27268",
+    "basis": "This is the new no-history execution launched for final review, following the controlled old-agent stop described by Firstmate in the current handoff. Its initial context contains the review assignment and project instructions, not the implementer's earlier implementation conversation. I independently read source, contracts and retained packet evidence and ran the checks below. Independence is based on this separate launch and no inherited implementation dialogue, not a renamed role.",
+    "limits": "The old-agent stop is launcher-supplied provenance; I did not supervise it or inspect other agents' endpoints. Codex / gpt-6.1-sol / xhigh using the existing ChatGPT login is the launch-selected profile; I made no provider/account change and did not independently introspect authentication or server-side model routing.",
+    "delegation": "No nested agents, specialist lanes or additional review hierarchy were launched. The user's single confirmed review is this context; review-delegation's reporting angles were considered locally.",
+    "inbox": "Read and acknowledged exact task inbox message 006.msg in commentary. It points to an earlier P03C1 assignment; the later final-review launch brief governs this execution. No inbox file was moved or changed."
+  },
+  "sourceScope": {
+    "baseCommit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "head": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "target": "main",
+    "branch": "fm/as-m004-durable",
+    "workingTree": "All L04 source remains uncommitted. The review includes the tracked working-tree diff and every listed untracked implementation/test/support/mission path; base..HEAD is empty and was not used as the source scope. AS-M003/PR3 is integrated in the base and was not reopened.",
+    "reviewedPaths": [
+      {
+        "path": "Cargo.lock",
+        "sha256": "ee591e40f18fbebb86f0ec83797c4e708c75031552d17bb052deb73644c15381",
+        "bytes": 21955
+      },
+      {
+        "path": "Cargo.toml",
+        "sha256": "1ce7a7ffab0e04eef594aab73a379dcdd30e2a59981f6d7252352aa4073a8bcb",
+        "bytes": 1228
+      },
+      {
+        "path": "README.md",
+        "sha256": "31ee116ec702895c29aba1a4f53e66e9c87f3fb23ed7ee578bde89a023068c1d",
+        "bytes": 22735
+      },
+      {
+        "path": "docs/IMPLEMENTATION_ROADMAP.md",
+        "sha256": "4d9e648088157787dfbbce470cc8198ea73ccf23b514ad215a7b8cb16e8af6f3",
+        "bytes": 47528
+      },
+      {
+        "path": "docs/missions/AS-M004/r2.md",
+        "sha256": "3940a1398bc310f78c3dcd6939bdd10488ce2352380f2f7e1fcea124fe25e294",
+        "bytes": 12370
+      },
+      {
+        "path": "src/lib.rs",
+        "sha256": "21936cdd0940b7cf1f6212ef1769a2c58eee03622bf9d264449c6a55477a835f",
+        "bytes": 246
+      },
+      {
+        "path": "src/records/mod.rs",
+        "sha256": "5a07558619c4b97968c18d7b75f196a89863b39f02084aa568f915028726992d",
+        "bytes": 46273
+      },
+      {
+        "path": "tests/records.rs",
+        "sha256": "a14a8756726d46601c416d5a16bba9e3b80b11f0d6b192ec56142bd2ff447db2",
+        "bytes": 71187
+      },
+      {
+        "path": "tests/records_demo.rs",
+        "sha256": "b45bc98099f974949016b30e2f8f20336675bbe8c3557004104b25044ebd1a49",
+        "bytes": 4818
+      },
+      {
+        "path": "tests/records_measure.rs",
+        "sha256": "73ffa7ac07559ea87f2d91f70850fa6a9957e3235a5c5b80aa7976858dfa5379",
+        "bytes": 15382
+      },
+      {
+        "path": "tests/support/records/io_fault.c",
+        "sha256": "23ea7d4d9d106b47098b4b32f5afc6bd6d12e2d95b724fd7ccf2bb7fb038b8c7",
+        "bytes": 4925
+      },
+      {
+        "path": "tests/support/records/mod.rs",
+        "sha256": "3153e82bf624ab807d98a9ef79eae4d185b60f573f30b882a51019f6472973b4",
+        "bytes": 3870
+      }
+    ],
+    "administrativeScope": ".missions/AS-M004/ contains 151 pre-existing mission records/evidence files, including six packet reports/results, retained failures, correction evidence, authority, state/history and raw preparation records. All were inventoried/read for structural or outcome evidence; complete implementation/test source and relevant design/qualification narratives were examined directly.",
+    "preReportDirtyManifest": {
+      "fileCount": 163,
+      "bytes": 725876,
+      "sha256": "75641ae53c814c81e1aacbb9d49cd6e2026732fc6c3660c4a0c7e8ef67a6f0a9",
+      "method": "Sorted union of git diff --name-only and git ls-files --others --exclude-standard. Each entry is {path,sha256,bytes}; SHA-256 of json.dumps(entries,sort_keys=True,separators=(',',':')). UTF-8 path order. Taken before this report. This is a local review observation, not a native candidate binding."
+    },
+    "preservation": "No production/test/doc/evidence, state/history, dependency, index or commit change was made by this reviewer. Tests wrote only ignored build caches and controlled temporary fixtures. The only new project output is this administrative result; its private owner copy is byte-identical."
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "category": "Mandatory resource qualification",
+      "title": "Process-tree memory sampler omits children launched by the test thread",
+      "location": "tests/records_measure.rs:57",
+      "relatedLocations": [
+        "tests/records_measure.rs:52",
+        "tests/records_measure.rs:69",
+        ".missions/AS-M004/evidence/P03/resource-protocol.md:54",
+        ".missions/AS-M004/evidence/P03/implementation-report-r2.md:144"
+      ],
+      "issue": "tree_rss walks /proc/<pid>/task/<pid>/children for each process. That is the leader thread's immediate-child list, not the union of children of all threads in the process. The libtest worker executes capture and launches the real Git children from a different TID. Their PIDs never enter this sampler's process list; rss_bytes therefore sums only the test/store process in the capture journeys.",
+      "causalReproduction": {
+        "command": "/home/abdwhb/.cargo/bin/cargo test --frozen --test records_measure -- --nocapture --test-threads=1",
+        "instrumentation": "Ran this unchanged real fixture from a Python parent. While it ran, read /proc/<records_measure-pid>/task/*/children and each observed child's comm; compare with /proc/<records_measure-pid>/task/<records_measure-pid>/children. No source was edited.",
+        "observed": {
+          "testPid": 2106689,
+          "launchingThread": 2106694,
+          "gitChild": 2116266,
+          "gitComm": "git",
+          "leaderThreadChildren": "",
+          "monitorIterations": 1401,
+          "testExit": 0,
+          "testElapsedSeconds": 10.28
+        },
+        "reproduce": "Run the command with an external /proc observer; locate its records_measure process, enumerate every task's children, and compare the live Git child's parent TID with the PID used by line 57. The leader list is empty while the worker list contains Git. The kernel documentation specifies that children belongs to the particular PID/TID pair.",
+        "primarySource": "https://www.kernel.org/doc/html/latest/filesystems/proc.html#proc-pid-task-tid-children-information-about-task-children"
+      },
+      "impact": "The mandatory capture/save resource observation does not account for the whole owned process tree. The retained text's claim that live Git children are included is false; this is more than the disclosed chance of missing short peaks at a 1 ms sampling interval. It does not prove a product budget overrun or a production storage defect, but the mission cannot be accepted with this required evidence incomplete.",
+      "boundedCorrection": "In the existing measurement harness, collect children across all /proc/<pid>/task/*/children entries for each owned process and recurse, deduplicating process PIDs, or use an already available external whole-process observer that covers thread-launched children. Verify against an actual live Git child during the real capture fixture, rerun the affected memory journeys, and retain corrected source-linked measurements and limits in new evidence without overwriting historical observations. Preserve the sampling/RSS limitations. No new production framework, CLI, workload or physical-fault certification is required."
+    }
+  ],
+  "contractAssessment": [
+    {
+      "criterion": "Synchronous capture retention and fresh-process reads after source loss",
+      "status": "supported",
+      "detail": "save_capture consumes real workspace::Capture without recapture or configuration re-resolution. Header, ordered change membership, source bytes/roles/generations/Git modes/blob identities and captured configuration commit in one SQLite transaction. The full retained JSON/range equality test deletes the repository and reads through a child process. Deletion, present empty bytes, legitimate empty selection and repeated occurrence identities remain distinct."
+    },
+    {
+      "criterion": "Storage integrity and occurrence provenance",
+      "status": "supported",
+      "detail": "The records-owned domain-separated, length/presence-encoded SHA-256 covers header, membership, ordinals, provenance and bytes in both save and read. Reconstruction uses the same read snapshot and explicitly rejects inconsistent membership. Missing, extra/duplicate, altered source/configuration and provenance regressions pass. It is an integrity digest, not a MAC or a replacement workspace identity. Whole-capture deletion is NotFound; no new adversarial guarantees are inferred. AUTOINCREMENT occurrences are independent even for equal capture generations."
+    },
+    {
+      "criterion": "Schema initialization and compatibility",
+      "status": "supported within stated slice",
+      "detail": "Only unshipped schema v1 exists. Initialization DDL and user_version are transactional; the conflicting-object test leaves version zero and no partial tables. Unchanged reopen, newer unsupported version, unrelated database, malformed file and unavailable parent are exercised. The existing schema check is limited to the store table names and integrity column; it is not a full schema fingerprint. Missing/incompatible columns subsequently produce explicit SQLite errors, not a clean captured result. No invented migration framework is needed."
+    },
+    {
+      "criterion": "Complete-or-absent transactions and honest acknowledgement outcomes",
+      "status": "supported with stated fault limits",
+      "detail": "BEGIN IMMEDIATE and one SQLite commit contain all bytes/references. Insert/trigger failure, lock-wait termination, actual WAL-write EIO and kill inside commit are exercised. The during-commit interposer stops before real WAL sync returns, after frames are written; reopening may legitimately find the attempt complete. A postcommit/preack kill leaves a readable record and does not imply absence. CommittedUnmeasured carries the committed id when measurement fails; committed over-limit usage is explicit and never deletes evidence. General I/O errors are not proof of absence. This is process/call-boundary evidence, not power-loss or device certification."
+    },
+    {
+      "criterion": "80% warning, quota admission, reservations and concurrent writers",
+      "status": "supported under engineering assumptions",
+      "detail": "Warning uses u128 integer arithmetic; refusal compares measured retained bytes plus a checked reservation against the explicit per-store budget. The write lock owns reservation lifetime, preventing two writers from simultaneously admitting against the same remaining capacity without a separate ledger. Refusal and recovery preserve retained reads. DB, WAL, SHM and journal lengths, overflow/page and b-tree allowances, checkpoint duplication and existing WAL backlog are included. Held-reader file/directory symlink regressions now use the effective canonical path; new/dangling symlink cases pass. The formula is conservative application policy, not physical disk reservation or a formal arbitrary-filesystem bound."
+    },
+    {
+      "criterion": "Runtime assumptions and reservation arithmetic",
+      "status": "supported with limits",
+      "detail": "Page size is read at open; WAL and synchronous FULL are set and verified. The reviewed bundled build supplies default zero reserved bytes and default auto-checkpoint behavior. Actual workspace/config owners bound acquired inputs; the formula computes the actual retained row and byte lists rather than relying only on inventory file count. The fixed page/metadata allowances and 64 KiB auxiliary margin remain engineering assumptions falsified by near-boundary, metadata-heavy, large-write, backlog and checkpoint fixtures. Different SQLite builds/settings or unsupported path replacement need qualification; no hard-quota claim is accepted."
+    },
+    {
+      "criterion": "Full-path resource measurements",
+      "status": "correction_required",
+      "detail": "Capture-only and capture/save/read latency, separate open/reopen and synchronous-save cost, plus actual DB/auxiliary storage were reproduced. Existing 20/30-observation percentile and one-host warm-cache limits are explicit. Storage sampling is a lower bound. Whole-owned-process memory is not established because of the reproduced finding; the retained 'tree RSS' values must not be treated as complete tree measurements."
+    },
+    {
+      "criterion": "Module/API design and ownership",
+      "status": "supported",
+      "detail": "records is one cohesive module hiding SQLite schema, transactions, admission and reconstruction behind open/save/read/usage. Workspace/config enums and identities are reused; SQL and binding errors do not escape as provider-specific/public DB types. Stored owned rows and borrowed digest views localize one canonical integrity implementation; their duplication serves distinct lifetimes. Long linear save/read methods are cohesive rather than an automatic reason to add layers. No background queue, external blob protocol, universal AST/result type, new crate or speculative migration/plugin framework was added. No architecture blocker was identified in this single review context."
+    },
+    {
+      "criterion": "Dependency and process evidence",
+      "status": "supported as retained historical qualification",
+      "detail": "The actual delta is one exact rusqlite 0.41.1 dependency with default features disabled and bundled SQLite, plus nine locked additions without unrelated package upgrades. Installed rusqlite transaction/drop behavior and bundled build source were inspected. P01 policy evidence qualifies the selected graph; P01C1 records complete-graph qualification and locked Node restoration. The initial import-only RED and pre-age-check downloads remain historical deviations covered solely by the explicit process-exception-authority.txt; they are not relabelled compliant or used to waive later checks. Later corruption, admission and alias corrections retain actual behavioral RED evidence. No install, live registry requalification, version recommendation or provider change was performed here."
+    },
+    {
+      "criterion": "Documentation and complete nonvisual demonstration",
+      "status": "supported except resource text identified above",
+      "detail": "The current README and roadmap distinguish locally implemented library records from acceptance, CLI analysis and future releases, and correctly place PR3 in the base. The complete P03 story remains capture selected a.ts plus separate guide.ts context, save, explicit quota refusal preserving the earlier record, remove origins, and fresh-process exact read. P03C1 renews that whole demo after support reuse, with assertions on child success. Trial command, synthetic data, source/dirty-base identity, parent-directory precondition and limits are usable as a reader. There is no hosted trial or visual surface; neither screenshots nor publication are required. Unchanged production qualification remains applicable after the docs/demo-only P03C1 correction; the memory finding is an independent defect in that retained qualification."
+    }
+  ],
+  "checksRun": [
+    {
+      "command": "node /home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/mdd-bundle/scripts/validate.mjs .missions/AS-M004/state.json --json",
+      "result": "Ran at start and again after review observations: exit 0, valid:true, issues:[]. State/history unchanged."
+    },
+    {
+      "command": "cargo test --frozen --test records --test records_demo",
+      "result": "Initial shell lookup failed with exit 127 because Cargo was not on PATH. Reissued with /home/abdwhb/.cargo/bin/cargo: exit 0; records 38 passed and demonstration 2 passed."
+    },
+    {
+      "command": "/home/abdwhb/.cargo/bin/cargo test --frozen --test records_measure -- --nocapture --test-threads=1",
+      "result": "Exit 0, one real protocol test passed in 10.28 seconds under external process-parentage observation. The test passes despite the reproduced process-tree omission.",
+      "observations": {
+        "host": "Linux",
+        "cpus": 4,
+        "load": "2.27 1.76 1.43",
+        "oneFileCaptureSaveReadP95Microseconds": 71475,
+        "fiveFileCaptureSaveReadP95Microseconds": 125080,
+        "oneFileSaveCommitP95Microseconds": 461,
+        "fiveFileSaveCommitP95Microseconds": 891,
+        "largeBatchPayload": 8388794,
+        "largeBatchRetained": 16970168,
+        "metadataPayload": 1146,
+        "metadataRetained": 181096,
+        "reportedCombinedLargeBatchRss": 32018432,
+        "memoryInterpretation": "Reported RSS omits worker-thread children; not complete process-tree evidence. The external observer itself adds load; this rerun is diagnostic, not a replacement frozen measurement."
+      }
+    },
+    {
+      "command": "PATH=/home/abdwhb/.cargo/bin:$PATH CI_BASE_SHA=45dac3c241338c94166369fe821fe1d3499cf974 bash scripts/ci/check.sh",
+      "result": "Full script invoked and then repeated with compact stdout capture to retain an untruncated exit/result receipt. Final exit 0: formatting; 19 Python policy tests; whitespace policy; frozen workspace build; all-target tests (CLI 11, config 19, output 3, records 38, demo 2, resource protocol 1, schema 3, workspace 34 with 2 pre-existing ignored); doctest target with zero tests; Clippy -D warnings; generated-schema --check; Node headless editor-service conformance. A green measurement test does not validate its observer."
+    },
+    {
+      "command": "git status --short; git branch --show-current; git rev-parse HEAD; git diff --check; git diff --numstat; complete dirty-file inventory and SHA-256 calculation",
+      "result": "Branch/base and complete dirty scope match the brief. No source change during review; whitespace check clean. The pre-report manifest is recorded above."
+    },
+    {
+      "command": "Local Markdown-target check for README, roadmap, mission contract and current demonstration/report; adoption historical SHA-256 comparison",
+      "result": "No missing local Markdown targets in those files. All three retained raw preparation files match adoption.json historical hashes. This checks local existence/integrity only, not remote publication."
+    },
+    {
+      "command": "node --version; /home/abdwhb/.cargo/bin/rustc --version",
+      "result": "Node v26.13.0; rustc 1.96.1 (31fca3adb 2026-06-26)."
+    },
+    {
+      "command": "Frozen MDD validate.mjs on .missions/AS-M004/results/final-r1.json and state.json; pre-report dirty manifest comparison excluding final-r1.json",
+      "result": "Result and state validators both returned exit 0, valid:true, issues:[]. All 163 reviewed pre-existing dirty files retain the same manifest hash and HEAD is unchanged. Administrative report registration and native candidate binding are left to Firstmate."
+    }
+  ],
+  "checksNotRun": [
+    "GitHub Actions against an eventual committed/pushed delivery head; all reviewed L04 source is still uncommitted. That CI remains necessary before delivery.",
+    "Fresh networked registry/Socket download qualification; reviewed the retained qualified exact dependency graph and ran frozen builds instead. No dependency change was proposed.",
+    "Hardware/power-loss, lying-fsync, live filesystem remount, exhaustive physical journal failures, arbitrary SQLite build/settings or filesystem/path replacement qualification.",
+    "Future analyzer/model/report/resident/feedback/export/purge behavior or ADR-007 B1-B4 product budgets. These remain outside this mission slice.",
+    "Hosted trial, screenshots, PR publication, notification delivery, No-Mistakes, staging/commit/push/merge, state/history edits or mission closure. These actions are not this reviewer's authority."
+  ],
+  "primaryReferences": [
+    {
+      "title": "SQLite synchronization",
+      "url": "https://sqlite.org/pragma.html#pragma_synchronous",
+      "assessment": "Official FULL/WAL synchronization contract checked; device/filesystem guarantees remain conditional."
+    },
+    {
+      "title": "SQLite atomic commit",
+      "url": "https://sqlite.org/atomiccommit.html",
+      "assessment": "Official all-or-none and OS/fsync assumptions checked; process-kill evidence is not power-loss certification."
+    },
+    {
+      "title": "SQLite WAL",
+      "url": "https://sqlite.org/wal.html",
+      "assessment": "Official frame/checkpoint and long-reader behavior checked against installed bundled implementation and retained resource assumptions."
+    },
+    {
+      "title": "Linux proc task children",
+      "url": "https://www.kernel.org/doc/html/latest/filesystems/proc.html#proc-pid-task-tid-children-information-about-task-children",
+      "assessment": "Confirms the child list belongs to a specific task; supported independently by the live fixture observation."
+    }
+  ],
+  "deliveryReview": {
+    "head": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "target": "main",
+    "assessment": "The cumulative library/API/schema/dependency/tests/docs outcome remains coherent as the one approved AS-M004 PR on the integrated AS-M003 base. No split, extra framework or new product scope is needed. The bounded memory qualification correction is required before an accepted deliveryAssessment can be issued. Current source is implemented and locally tested; not independently accepted as a whole, committed, published or integrated."
+  },
+  "report": "REQUEST CHANGES. One high-severity qualification defect remains: the process-tree memory observer reads only the leader-thread children file, while the actual Rust test worker launches Git from a different thread. The unchanged protocol passed, but an external observer saw Git PID 2116266 under TID 2106694 of test process 2106689 while the leader's child list was empty. Those children are therefore absent from the reported tree RSS regardless of sampling frequency. Correct the existing observer, verify it against real live Git children, and renew the affected memory evidence and claims. Preserve historical measurements and their applicability limits. The full contract was examined in one fresh review context, including source capture/save/read after source loss, integrity and occurrence distinctions, schema/version handling, complete-or-absent writes, postcommit truth, quota/refusal/concurrency, effective path aliases, resource evidence, dependency/process history, design ownership and the complete nonvisual demonstration. The 38 records tests, two demo tests, real resource fixture and complete CI-equivalent checks pass. No additional production-code or architectural blocker was found; these checks do not cure the reproduced mandatory measurement gap. The initial TDD/download deviations retain only their explicit historical exception. No specialist lanes or nested agents ran, and no source was repaired. This is the terminal independent review result for Firstmate to examine and register, not packet acceptance, mission closure or publication authority.",
+  "handoff": {
+    "status": "done: candidate ready for examination",
+    "nextAction": "Firstmate examines this correction_required result and prepares only the bounded resource-observer/evidence correction through the existing MDD workflow.",
+    "notification": "The notify-me skill was loaded. No external notification was sent because this worker is restricted to returning its review to Firstmate; acceptance and outcome notification remain with that owner."
+  }
+}

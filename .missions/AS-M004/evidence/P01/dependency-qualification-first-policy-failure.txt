@@ -1,0 +1,20 @@
+Transcript of the first dependency-policy run in this packet (2026-11-17),
+after `sfw cargo metadata` had resolved the graph and locked `cc 1.11.2`
+(published 2026-11-13, four days before qualification).
+
+Command (worktree root):
+    python3 scripts/ci/policy.py dependencies --base 45dac3c241338c94166369fe821fe1d3499cf974
+
+Observed output:
+    CI policy failed: Release age, yank status or locked integrity did not qualify
+    EXIT:1
+
+The policy script reports one generic failure for any package outside the
+seven-day window, with a mismatched checksum or yanked. The candidate named in
+this run was `cc 1.11.2`, confirmed by its registry publication date and by the
+subsequent success after pinning:
+
+    sfw cargo update -p cc --precise 1.11.1
+    Downgrading cc v1.11.2 -> v1.11.1
+
+The final passing run is `policy-dependencies.txt`.

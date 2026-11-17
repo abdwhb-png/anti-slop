@@ -1,0 +1,39 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.41s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 29 tests
+test altered_capture_provenance_is_an_explicit_corruption ... ok
+test altered_retained_bytes_are_an_explicit_corruption ... ok
+test altered_configuration_bytes_are_an_explicit_corruption ... ok
+test child_process_probe ... ok
+test admission_boundary_matches_the_reported_requirement ... ok
+test altered_source_provenance_is_an_explicit_corruption ... ok
+test committed_capture_survives_lost_acknowledgement ... ok
+test duplicate_retained_source_is_an_explicit_corruption ... ok
+test budget_refusal_preserves_prior_records_and_reads ... ok
+test failed_schema_initialization_leaves_no_partial_store ... ok
+test extra_retained_membership_is_an_explicit_corruption ... ok
+test empty_selection_round_trips_with_its_identities ... ok
+test injected_write_failure_leaves_no_partial_capture ... ok
+test missing_retained_source_is_an_explicit_corruption ... ok
+test missing_retained_change_is_an_explicit_corruption ... ok
+test reopen_is_stable_and_incompatible_stores_are_rejected ... ok
+test interrupted_admission_leaks_no_capacity ... ok
+test retained_capture_survives_restart_and_loss_of_origins ... ok
+payload=8388794 retained_before=65736 reservation=18263672 required=18329408 final=16941328 peak=15417616 samples=134
+test retained_content_preserves_deletion_empty_and_equal_occurrences ... ok
+test large_capture_peak_stays_within_admitted_budget ... ok
+test repeated_large_writes_remain_admitted_and_accounted ... ok
+test retained_usage_counts_database_and_auxiliary_files ... ok
+test source_lengths_alone_do_not_qualify_admission ... ok
+test two_processes_cannot_both_admit_one_capture ... ok
+test unavailable_storage_accounting_blocks_admission ... ok
+test warning_starts_at_the_eighty_percent_line ... ok
+test writer_interrupted_before_commit_leaves_an_absent_capture ... ok
+checkpoint usages: [1149296, 2232856, 3316416, 8635288, 8635288, 8635288]
+test repeated_writes_and_checkpoints_remain_accounted ... ok
+test writer_contention_is_bounded_and_reported ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.73s
+

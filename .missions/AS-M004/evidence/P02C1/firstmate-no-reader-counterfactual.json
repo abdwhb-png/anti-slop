@@ -1,0 +1,25 @@
+{
+  "fixture": "/tmp/as-m004-p02-path-tnz13w32",
+  "before": {
+    "alias.db": 3174400,
+    "real.db": 3174400
+  },
+  "refused": {
+    "exit": 0,
+    "out": "refused:Collection budget of 0 bytes would be exceeded: 3174400 bytes retained, admission needs 10186320",
+    "stderr": ""
+  },
+  "admittedBudget": 10186320,
+  "save": {
+    "exit": 0,
+    "out": "saved:2",
+    "stderr": ""
+  },
+  "after": {
+    "alias.db": 6328320,
+    "real.db": 6328320
+  },
+  "actualCanonicalFootprint": 6328320,
+  "overBudget": false,
+  "conclusion": "SQLite auxiliary files use the resolved database path, while records measures the caller alias. The admitted write exceeds its declared budget if overBudget is true."
+}

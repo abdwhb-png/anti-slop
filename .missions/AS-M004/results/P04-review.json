@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P04-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P04",
+    "revision": 1,
+    "path": "../packets/P04.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794916284.2288889.8486"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "The one final-r1 observer defect is corrected in the existing measurement target. Actual behavioral RED/GREEN, live nonleader Git membership and renewed resource evidence support this bounded correction. Firstmate independently reran both measurement-target tests and verified unchanged production/dependency/demo/document hashes; final whole-mission acceptance remains a separate fresh Codex review.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/red-01-thread-child-omitted.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/green-01-thread-child-observed.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measure-current.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/resource-protocol-current.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/regression-evidence.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/measurement-source.diff.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P04/ci-check.txt"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "decision": "continue",
+    "rationale": "Same library L04 PR and unchanged production behavior; correction only restores required process-memory evidence."
+  },
+  "checksRun": [
+    "Read complete terminal report and verified byte-identical owner copy; examined current observer/consumer/regression and exact preserved source delta.",
+    "Independently reran cargo test --frozen --test records_measure -- --nocapture --test-threads=1: exit 0, two tests passed in 10.14s. Live Git children observed under nonleader TID 2468763 for all three capture journeys; regression reported all four known child PIDs and summed RSS.",
+    "Compared every final-r1 reviewed source path SHA256: only tests/records_measure.rs changed; old observer source hash retained.",
+    "Read worker actual RED/GREEN, renewed protocol/raw measurement and required stabilized CI output; reviewed CI-equivalent completion without rerunning unchanged whole suite.",
+    "Frozen MDD state validator before progression: valid true."
+  ],
+  "limits": [
+    "One-host warm-cache debug observations; 1ms sample can miss transient children/peaks; per-process RSS may double-count shared pages.",
+    "No physical power-loss/device/fsync-lie certification or future product budgets.",
+    "Initial RED-stage fixture text is not byte-retained; actual failing log and pre-fix observer are retained.",
+    "No commit, publication, final mission acceptance or merge implied."
+  ]
+}

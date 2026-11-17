@@ -1,0 +1,18 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running tests/records_demo.rs (target/debug/deps/records_demo-c529ed9cd73a72fd)
+
+running 2 tests
+test demo_child_read ... ok
+capture selection=Local commit=2926a2173ff66fae78b822525467d5634ca164b8 generation=ee0d5c569435ac5f9f25fde2cf0e7d1f050122d28104e57ba9521d3150f1d732
+selected path=a.ts after_role=Working before=686561640a after=776f726b696e672073656c65637465640a context=67756964650a
+saved id=1 retained=90456 limit=4194304 warning=false over_limit=false
+quota refused retained=90456 required=687568 while prior id=1 stays readable
+origins removed: true
+fresh process read:
+id=1 selection=Local commit=2926a2173ff66fae78b822525467d5634ca164b8 generation=ee0d5c569435ac5f9f25fde2cf0e7d1f050122d28104e57ba9521d3150f1d732
+path=a.ts role=Working bytes=776f726b696e672073656c65637465640a generation=e9e019435c08bbbbb8a121fddb481c3fa3a9cbbcd70d3e4859d3401df29cbbcf
+context_role=Context context_bytes=67756964650a
+test demo_capture_save_read_and_quota_boundary ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+

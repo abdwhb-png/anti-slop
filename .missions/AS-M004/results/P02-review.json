@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P02-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P02",
+    "revision": 1,
+    "path": "../packets/P02.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "correction_required",
+  "summary": "All 30 records tests rerun successfully, but an independent actual public-boundary probe falsifies admission through a supported symlink path. With a pinned reader and canonical WAL backlog, alias admission measured only 6328320 bytes, accepted a limit of 13340240, and returned saved:5 while canonical DB+WAL+SHM occupied 15952480. SQLite uses real-path auxiliary files; lexical caller-path suffixes silently undercount them. A no-reader counterfactual checkpointed on last close and did not expose this defect. Reject P02; correct effective database identity/accounting or explicitly refuse unsupported paths before writes, with behavioral RED and held-reader regression. No new architecture or weaker quota policy is requested.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/admission-formula.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P02/green-05-final.txt"
+    }
+  ],
+  "observation": {
+    "fixture": "/tmp/as-m004-p02-path-tnz13w32",
+    "counterfactual": "Hold a real read snapshot to preserve WAL backlog. Earlier no-reader attempt allowed last-close checkpoint and did not expose overshoot. Two canonical writes build backlog before alias admission.",
+    "before": {
+      "real.db-shm": 32768,
+      "real.db-wal": 6394272,
+      "real.db": 6328320
+    },
+    "refused": {
+      "exit": 0,
+      "out": "refused:Collection budget of 0 bytes would be exceeded: 6328320 bytes retained, admission needs 13340240",
+      "stderr": ""
+    },
+    "admittedBudget": 13340240,
+    "save": {
+      "exit": 0,
+      "out": "saved:5",
+      "stderr": ""
+    },
+    "after": {
+      "real.db-shm": 32768,
+      "real.db-wal": 9591392,
+      "real.db": 6328320
+    },
+    "actualCanonicalFootprint": 15952480,
+    "overBudget": true
+  }
+}

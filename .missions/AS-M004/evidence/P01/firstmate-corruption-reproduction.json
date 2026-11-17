@@ -1,0 +1,126 @@
+{
+  "fixture": "/tmp/as-m004-p01-review-06o2g8al",
+  "binary": "/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree/target/debug/deps/records-67182fda11cdf0af",
+  "observations": [
+    {
+      "case": "baseline",
+      "sql": null,
+      "readProcessExit": 0,
+      "returnedCapture": {
+        "id": 1,
+        "selection": "local",
+        "resolved_commit": "04c5fea10f364953ff7353ecfde4931341cf4064",
+        "generation": "ecd064625101dd4837dfbe006f2c605c794512834a57da26f8e8eb1eee0b7b26",
+        "configuration": {
+          "generation": "8a92f15576585fca0271dc435bbb142f9056e35e72e1aa3a313f4381323cd54a",
+          "source": {
+            "kind": "built_in"
+          },
+          "captured": null
+        },
+        "changes": [
+          {
+            "path": "a.ts",
+            "before": {
+              "path": "a.ts",
+              "role": "head",
+              "generation": "aab5c5f3babc01425fe15b350d5fe58d07272cf4dddbe501ebf7eeefd5d82a56",
+              "git_blob": "90be1f3056c4f471f977a28497b8d4b392c55a02",
+              "git_mode": "regular",
+              "bytes": "6265666f72650a"
+            },
+            "after": {
+              "path": "a.ts",
+              "role": "working",
+              "generation": "855b092d9f2f92f96082adba136d764da330ccc5f56e4fc9e43e820804db33a4",
+              "git_blob": null,
+              "git_mode": "regular",
+              "bytes": "61667465720a"
+            }
+          }
+        ],
+        "context": [],
+        "slice": null
+      },
+      "stderr": ""
+    },
+    {
+      "case": "missing-source",
+      "sql": "DELETE FROM capture_sources WHERE side='after'",
+      "readProcessExit": 0,
+      "returnedCapture": {
+        "id": 1,
+        "selection": "local",
+        "resolved_commit": "04c5fea10f364953ff7353ecfde4931341cf4064",
+        "generation": "ecd064625101dd4837dfbe006f2c605c794512834a57da26f8e8eb1eee0b7b26",
+        "configuration": {
+          "generation": "8a92f15576585fca0271dc435bbb142f9056e35e72e1aa3a313f4381323cd54a",
+          "source": {
+            "kind": "built_in"
+          },
+          "captured": null
+        },
+        "changes": [
+          {
+            "path": "a.ts",
+            "before": {
+              "path": "a.ts",
+              "role": "head",
+              "generation": "aab5c5f3babc01425fe15b350d5fe58d07272cf4dddbe501ebf7eeefd5d82a56",
+              "git_blob": "90be1f3056c4f471f977a28497b8d4b392c55a02",
+              "git_mode": "regular",
+              "bytes": "6265666f72650a"
+            },
+            "after": null
+          }
+        ],
+        "context": [],
+        "slice": null
+      },
+      "stderr": ""
+    },
+    {
+      "case": "changed-bytes",
+      "sql": "UPDATE capture_sources SET bytes=CAST('xxxxx' || char(10) AS BLOB) WHERE side='after'",
+      "readProcessExit": 0,
+      "returnedCapture": {
+        "id": 1,
+        "selection": "local",
+        "resolved_commit": "04c5fea10f364953ff7353ecfde4931341cf4064",
+        "generation": "ecd064625101dd4837dfbe006f2c605c794512834a57da26f8e8eb1eee0b7b26",
+        "configuration": {
+          "generation": "8a92f15576585fca0271dc435bbb142f9056e35e72e1aa3a313f4381323cd54a",
+          "source": {
+            "kind": "built_in"
+          },
+          "captured": null
+        },
+        "changes": [
+          {
+            "path": "a.ts",
+            "before": {
+              "path": "a.ts",
+              "role": "head",
+              "generation": "aab5c5f3babc01425fe15b350d5fe58d07272cf4dddbe501ebf7eeefd5d82a56",
+              "git_blob": "90be1f3056c4f471f977a28497b8d4b392c55a02",
+              "git_mode": "regular",
+              "bytes": "6265666f72650a"
+            },
+            "after": {
+              "path": "a.ts",
+              "role": "working",
+              "generation": "855b092d9f2f92f96082adba136d764da330ccc5f56e4fc9e43e820804db33a4",
+              "git_blob": null,
+              "git_mode": "regular",
+              "bytes": "78787878780a"
+            }
+          }
+        ],
+        "context": [],
+        "slice": null
+      },
+      "stderr": ""
+    }
+  ],
+  "conclusion": "The actual retained-read public boundary returns success after removing a source row or changing retained bytes while keeping its generation. Corruption is not detected."
+}

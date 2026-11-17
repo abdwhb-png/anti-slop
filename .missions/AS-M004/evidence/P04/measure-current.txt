@@ -1,0 +1,36 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.40s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 2 tests
+test capture_save_commit_read_resource_protocol ... host=linux cpus=4 loadavg=Some("0.63 0.92 1.13")
+bounds files=512 file_bytes=1048576 total_bytes=16777216 config_bytes=1048576 budget=10737418240
+captures one_bytes=208 five_changes=5 five_bytes=5286 metadata_changes=480 metadata_bytes=1146 large_bytes=1048762
+captures large_batch_changes=8 large_batch_bytes=8388794
+journey=one_file_capture_only runs=30 p50_us=61675 p95_us=75362 raw_us=[71852, 73423, 60412, 59292, 61499, 58806, 58731, 61947, 66935, 86040, 69160, 67989, 62023, 64066, 61768, 63505, 59104, 57585, 61675, 69832, 65135, 60364, 66512, 60955, 75362, 60412, 61009, 60063, 60469, 59988]
+journey=five_file_capture_only runs=30 p50_us=89659 p95_us=100420 raw_us=[98449, 90588, 91247, 94439, 95804, 85385, 98706, 99562, 87319, 92377, 89072, 87543, 88489, 89676, 89659, 100585, 94589, 100420, 94571, 94126, 86926, 87381, 88396, 97343, 86197, 87940, 88109, 88301, 88671, 86788]
+journey=one_file_open runs=20 p50_us=716 p95_us=916 raw_us=[904, 613, 665, 716, 761, 705, 744, 711, 644, 648, 620, 609, 765, 740, 725, 732, 598, 916, 953, 800]
+journey=one_file_save_commit runs=20 p50_us=393 p95_us=466 raw_us=[453, 423, 485, 456, 388, 345, 373, 338, 351, 340, 343, 418, 430, 424, 466, 393, 350, 357, 454, 455]
+journey=one_file_read runs=20 p50_us=200 p95_us=398 raw_us=[199, 188, 212, 226, 196, 183, 247, 179, 211, 175, 180, 245, 236, 230, 200, 187, 181, 344, 398, 829]
+journey=one_file_capture_save_read runs=20 p50_us=62469 p95_us=90485 raw_us=[63975, 60010, 62054, 61101, 62469, 60184, 62466, 62507, 59506, 58758, 60530, 69984, 67157, 74933, 60093, 64738, 84656, 86023, 92752, 90485]
+journey=five_file_open runs=20 p50_us=702 p95_us=931 raw_us=[702, 889, 594, 771, 726, 931, 569, 782, 527, 616, 706, 655, 566, 802, 685, 1008, 739, 631, 761, 605]
+journey=five_file_save_commit runs=20 p50_us=699 p95_us=1470 raw_us=[1470, 623, 617, 873, 4334, 604, 799, 699, 687, 627, 768, 648, 925, 629, 780, 811, 610, 810, 771, 643]
+journey=five_file_read runs=20 p50_us=359 p95_us=439 raw_us=[347, 326, 342, 437, 501, 368, 436, 330, 351, 359, 393, 319, 436, 343, 412, 439, 333, 436, 338, 363]
+journey=five_file_capture_save_read runs=20 p50_us=92720 p95_us=148241 raw_us=[148299, 119940, 97552, 98618, 126731, 148241, 96057, 90996, 87410, 90100, 88780, 89123, 86136, 88324, 93564, 92444, 103093, 88920, 92720, 101475]
+journey=reopen runs=20 p50_us=288 p95_us=360 raw_us=[360, 276, 242, 264, 232, 259, 309, 288, 280, 296, 290, 297, 360, 293, 288, 323, 288, 327, 288, 251]
+peak case=one_file payload=208 admitted_limit=10737418240 retained=90456 save_us=217 storage_peak=90456 storage_peak_over_retained=0 tree_rss_peak=22163456 aliases=0 changes=1
+peak case=five_file payload=5286 admitted_limit=10737418240 retained=102816 save_us=445 storage_peak=102816 storage_peak_over_retained=0 tree_rss_peak=22163456 aliases=0 changes=5
+peak case=metadata_heavy payload=1146 admitted_limit=10737418240 retained=181096 save_us=12946 storage_peak=181096 storage_peak_over_retained=0 tree_rss_peak=22167552 aliases=0 changes=480
+peak case=large_single payload=1048762 admitted_limit=10737418240 retained=1149296 save_us=18647 storage_peak=1149296 storage_peak_over_retained=0 tree_rss_peak=23502848 aliases=0 changes=1
+peak case=large_batch payload=8388794 admitted_limit=10737418240 retained=16970168 save_us=145843 storage_peak=16970168 storage_peak_over_retained=0 tree_rss_peak=24461312 aliases=0 changes=8
+combined case=one_file capture_save_us=59755 payload=208 retained=90456 storage_peak=90456 tree_rss_peak=34279424 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2382930, 2372415)) process_pid=2372414
+combined case=five_file capture_save_us=87728 payload=5286 retained=102816 storage_peak=102816 tree_rss_peak=34279424 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2383024, 2372415)) process_pid=2372414
+combined case=large_batch capture_save_us=614575 payload=8388794 retained=16970168 storage_peak=16970168 tree_rss_peak=52887552 git_children_peak=1 git_via_leader_peak=0 git_via_other_thread_peak=1 git_child_listed_under=Some((2383089, 2372415)) process_pid=2372414
+peak case=held_reader payload=1048762 retained=3316416 save_us=47252 storage_peak=3316416
+memory self_vmhwm_kib=31848 self_vmrss_kib=20748
+ok
+test tree_rss_includes_git_children_launched_from_a_nonleader_thread ... thread_child process=2372414 launcher_tid=2383316 git_pids=[2383317, 2383318, 2383319, 2383320] git_rss=12898304 own_rss=10592256 observed_tree_rss=24383488 observed_members=[(2372414, None), (2383317, Some(2383316)), (2383318, Some(2383316)), (2383319, Some(2383316)), (2383320, Some(2383316))] leader_children=""
+ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.41s
+

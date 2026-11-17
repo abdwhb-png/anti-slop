@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P03C1-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P03C1",
+    "revision": 1,
+    "path": "../packets/P03C1.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "accepted",
+  "summary": "Accepted the bounded documentation/demo-support correction after full terminal report and actual diff examination. Both current AS-M003 references now reflect verified PR3 integration; new README paragraphs are unwrapped and the parent-directory precondition is explicit. The demo reuses the existing hex and bounded child-wait owners and asserts child success. Worker reran the actual demo2 plus focused Clippy/format/whitespace checks. Previous P03 production/failure/resource and full CI evidence remains applicable to unchanged production/measurement inputs; current demo evidence covers the only executable change. The whole mission now proceeds to the separately authorized fresh Codex final review; no self-acceptance, commit or publication.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/demo-output.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/clippy-demo.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/format-check.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P03C1/diff-check.txt"
+    }
+  ],
+  "deliveryAssessment": {
+    "commit": "45dac3c241338c94166369fe821fe1d3499cf974",
+    "decision": "continue",
+    "rationale": "Current docs and demonstration describe the same complete L04 library capability. Unchanged production qualification and the focused demo refresh support one coherent PR; final independent acceptance remains required."
+  }
+}

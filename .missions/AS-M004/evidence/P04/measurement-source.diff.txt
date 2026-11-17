@@ -1,0 +1,332 @@
+--- .missions/AS-M004/evidence/P04/measurement-source-before.raw.rs.txt	2026-11-17 11:50:45.504097059 +0000
++++ tests/records_measure.rs	2026-11-17 11:59:16.439715551 +0000
+@@ -16,15 +16,27 @@
+ use std::{
+     fs,
+     path::Path,
++    process::{Command, Stdio},
+     sync::{
+-        Arc,
++        Arc, Mutex, MutexGuard,
+         atomic::{AtomicBool, AtomicU64, Ordering},
++        mpsc,
+     },
+     thread,
+     time::{Duration, Instant},
+ };
+ use tempfile::TempDir;
+ 
++/// The protocol and the thread-child regression keep one process tree; running them
++/// concurrently would mix the regression's blocked Git child into the protocol's peaks.
++static RESOURCE_PROTOCOL_LOCK: Mutex<()> = Mutex::new(());
++
++fn resource_protocol_guard() -> MutexGuard<'static, ()> {
++    RESOURCE_PROTOCOL_LOCK
++        .lock()
++        .unwrap_or_else(|poisoned| poisoned.into_inner())
++}
++
+ fn file_bytes(path: &Path) -> u64 {
+     fs::metadata(path).map_or(0, |metadata| metadata.len())
+ }
+@@ -49,24 +61,102 @@
+     })
+ }
+ 
+-fn tree_rss(pid: u32) -> u64 {
+-    let mut pids = vec![pid];
++/// Every process currently reported inside the owned tree, paired with the thread that
++/// listed it (`None` for the root). A child belongs to the task that created it, so every
++/// `/proc/<pid>/task/<tid>/children` list is read, not only the leader thread's.
++fn owned_tree_pids(pid: u32) -> Vec<(u32, Option<u32>)> {
++    let mut pids = vec![(pid, None)];
+     let mut index = 0;
+     while index < pids.len() {
+-        let current = pids[index];
+-        let path = format!("/proc/{current}/task/{current}/children");
+-        if let Ok(children) = fs::read_to_string(path) {
+-            for child in children.split_whitespace() {
+-                if let Ok(child) = child.parse::<u32>()
+-                    && !pids.contains(&child)
+-                {
+-                    pids.push(child);
++        let current = pids[index].0;
++        if let Ok(tasks) = fs::read_dir(format!("/proc/{current}/task")) {
++            for task in tasks.flatten() {
++                let Some(tid) = task
++                    .file_name()
++                    .to_str()
++                    .and_then(|name| name.parse::<u32>().ok())
++                else {
++                    continue;
++                };
++                let Ok(children) =
++                    fs::read_to_string(format!("/proc/{current}/task/{tid}/children"))
++                else {
++                    continue;
++                };
++                for child in children.split_whitespace() {
++                    if let Ok(child) = child.parse::<u32>()
++                        && !pids.iter().any(|(known, _)| *known == child)
++                    {
++                        pids.push((child, Some(tid)));
++                    }
+                 }
+             }
+         }
+         index += 1;
+     }
+-    pids.iter().filter_map(|pid| rss_bytes(*pid)).sum()
++    pids
++}
++
++/// Sum of each owned process's RSS, read once per process id. A process that exited between
++/// being listed and being read contributes nothing; that death race is not evidence that
++/// observation was unavailable.
++fn tree_rss(pid: u32) -> u64 {
++    owned_tree_pids(pid)
++        .iter()
++        .filter_map(|(pid, _)| rss_bytes(*pid))
++        .sum()
++}
++
++fn process_comm(pid: u32) -> Option<String> {
++    fs::read_to_string(format!("/proc/{pid}/comm"))
++        .ok()
++        .map(|comm| comm.trim().to_owned())
++}
++
++/// The kernel names the current task under `/proc/thread-self`, so this is the TID that
++/// owns any child this thread launches, not merely the thread-group leader id.
++fn current_thread_id() -> u32 {
++    fs::read_link("/proc/thread-self")
++        .ok()
++        .and_then(|link| link.file_name()?.to_str()?.parse().ok())
++        .expect("Linux exposes the current TID through /proc/thread-self")
++}
++
++fn child_listed_under(process: u32, tid: u32, child: u32) -> bool {
++    fs::read_to_string(format!("/proc/{process}/task/{tid}/children"))
++        .map(|children| {
++            children
++                .split_whitespace()
++                .any(|candidate| candidate.parse::<u32>() == Ok(child))
++        })
++        .unwrap_or(false)
++}
++
++/// A real Git child launched from a nonleader thread that stays alive until this guard is
++/// dropped. The kernel reparents a thread's children when that thread exits, so the
++/// launcher must remain alive for the parentage to stay observable; dropping the guard
++/// signals the launcher, which kills and reaps Git even when an assertion fails.
++struct ThreadHeldGit {
++    launcher_tid: u32,
++    git: Vec<u32>,
++    release: Option<mpsc::Sender<()>>,
++    launcher: Option<thread::JoinHandle<()>>,
++}
++
++impl ThreadHeldGit {
++    /// Small Git processes hold little resident memory, so several are held at once: the
++    /// omitted memory must exceed ordinary process-RSS drift for the regression to be
++    /// decisive on both the old and the corrected observer.
++    const CHILDREN: usize = 4;
++}
++
++impl Drop for ThreadHeldGit {
++    fn drop(&mut self) {
++        drop(self.release.take());
++        if let Some(launcher) = self.launcher.take() {
++            let _ = launcher.join();
++        }
++    }
+ }
+ 
+ fn own_status(field: &str) -> u64 {
+@@ -165,7 +255,112 @@
+ }
+ 
+ #[test]
++fn tree_rss_includes_git_children_launched_from_a_nonleader_thread() {
++    let _protocol = resource_protocol_guard();
++    let repository = support::repository();
++    let process = std::process::id();
++    let (ready_sender, ready_receiver) = mpsc::channel();
++    let (release_sender, release_receiver) = mpsc::channel::<()>();
++    let root = repository.path().to_owned();
++    let launcher = thread::spawn(move || {
++        let tid = current_thread_id();
++        let mut children = Vec::with_capacity(ThreadHeldGit::CHILDREN);
++        for _ in 0..ThreadHeldGit::CHILDREN {
++            children.push(
++                Command::new("git")
++                    .arg("-C")
++                    .arg(&root)
++                    .args(["cat-file", "--batch"])
++                    .stdin(Stdio::piped())
++                    .stdout(Stdio::piped())
++                    .stderr(Stdio::null())
++                    .spawn()
++                    .expect("a real Git process is required for the child observation"),
++            );
++        }
++        ready_sender
++            .send((tid, children.iter().map(std::process::Child::id).collect()))
++            .expect("the test receives the launched Git children");
++        let _ = release_receiver.recv();
++        for child in &mut children {
++            let _ = child.kill();
++            let _ = child.wait();
++        }
++    });
++    let (launcher_tid, git) = ready_receiver
++        .recv()
++        .expect("the launcher thread reports its live Git children");
++    let held = ThreadHeldGit {
++        launcher_tid,
++        git,
++        release: Some(release_sender),
++        launcher: Some(launcher),
++    };
++    assert_ne!(
++        held.launcher_tid, process,
++        "the regression must launch Git from a nonleader thread"
++    );
++    assert!(
++        held.git.iter().all(|pid| *pid != process),
++        "every Git child runs in its own process image"
++    );
++
++    let deadline = Instant::now() + Duration::from_secs(5);
++    let mut listed = false;
++    while Instant::now() < deadline {
++        if held
++            .git
++            .iter()
++            .all(|git| child_listed_under(process, held.launcher_tid, *git))
++        {
++            listed = true;
++            break;
++        }
++        thread::sleep(Duration::from_millis(5));
++    }
++    assert!(
++        listed,
++        "the live Git children {:?} must be listed under TID {} of process {process}",
++        held.git, held.launcher_tid
++    );
++
++    let leader_children =
++        fs::read_to_string(format!("/proc/{process}/task/{process}/children")).unwrap_or_default();
++    let membership = owned_tree_pids(process);
++    let own_before = rss_bytes(process).expect("the test process RSS is observable");
++    let child_before: u64 = held.git.iter().filter_map(|pid| rss_bytes(*pid)).sum();
++    let observed = tree_rss(process);
++    let own_after = rss_bytes(process).expect("the test process RSS stays observable");
++    let child_after: u64 = held.git.iter().filter_map(|pid| rss_bytes(*pid)).sum();
++    let own = own_before.min(own_after);
++    let child_rss = child_before.min(child_after);
++    println!(
++        "thread_child process={process} launcher_tid={} git_pids={:?} git_rss={child_rss} own_rss={own} observed_tree_rss={observed} observed_members={membership:?} leader_children={:?}",
++        held.launcher_tid,
++        held.git,
++        leader_children.trim()
++    );
++    assert!(
++        child_rss > 0,
++        "the live Git children must hold resident memory"
++    );
++    assert!(
++        held.git.iter().all(|git| membership
++            .iter()
++            .any(|(pid, listed_under)| pid == git && *listed_under == Some(held.launcher_tid))),
++        "the observer must report every Git child under the nonleader TID that launched it: {membership:?}"
++    );
++    assert!(
++        observed >= own.saturating_add(child_rss),
++        "tree_rss {observed} must include the {child_rss}-byte Git children {:?} launched by nonleader TID {}; own process RSS is {own}",
++        held.git,
++        held.launcher_tid
++    );
++}
++
++#[test]
+ fn capture_save_commit_read_resource_protocol() {
++    let _protocol = resource_protocol_guard();
+     println!(
+         "host={} cpus={} loadavg={:?}",
+         std::env::consts::OS,
+@@ -342,15 +537,47 @@
+     let sampling = Arc::new(AtomicBool::new(true));
+     let peak_storage = Arc::new(AtomicU64::new(storage_files(&database)));
+     let peak_tree = Arc::new(AtomicU64::new(tree_rss(std::process::id())));
++    let peak_git = Arc::new(AtomicU64::new(0));
++    let peak_git_leader = Arc::new(AtomicU64::new(0));
++    let peak_git_thread = Arc::new(AtomicU64::new(0));
++    let git_example = Arc::new(Mutex::new(None::<(u32, u32)>));
+     let flag = Arc::clone(&sampling);
+     let storage = Arc::clone(&peak_storage);
+     let tree = Arc::clone(&peak_tree);
++    let git = Arc::clone(&peak_git);
++    let git_leader = Arc::clone(&peak_git_leader);
++    let git_thread = Arc::clone(&peak_git_thread);
++    let example = Arc::clone(&git_example);
+     let monitor_database = database.clone();
+     let pid = std::process::id();
+     let monitor = thread::spawn(move || {
+         while flag.load(Ordering::Relaxed) {
+             storage.fetch_max(storage_files(&monitor_database), Ordering::Relaxed);
+             tree.fetch_max(tree_rss(pid), Ordering::Relaxed);
++            let (mut total, mut leader, mut other) = (0_u64, 0_u64, 0_u64);
++            let mut sample = None;
++            for (child, listed_under) in owned_tree_pids(pid) {
++                if process_comm(child).as_deref() != Some("git") {
++                    continue;
++                }
++                total += 1;
++                match listed_under {
++                    Some(tid) if tid == pid => leader += 1,
++                    Some(tid) => {
++                        other += 1;
++                        sample = Some((child, tid));
++                    }
++                    None => {}
++                }
++            }
++            git.fetch_max(total, Ordering::Relaxed);
++            git_leader.fetch_max(leader, Ordering::Relaxed);
++            git_thread.fetch_max(other, Ordering::Relaxed);
++            if sample.is_some() {
++                *example
++                    .lock()
++                    .unwrap_or_else(|poisoned| poisoned.into_inner()) = sample;
++            }
+             thread::sleep(Duration::from_millis(1));
+         }
+     });
+@@ -362,13 +589,23 @@
+     peak_tree.fetch_max(tree_rss(pid), Ordering::Relaxed);
+     sampling.store(false, Ordering::Relaxed);
+     monitor.join().unwrap();
++    let example = *git_example
++        .lock()
++        .unwrap_or_else(|poisoned| poisoned.into_inner());
+     println!(
+-        "combined case={name} capture_save_us={} payload={} retained={} storage_peak={} tree_rss_peak={}",
++        "combined case={name} capture_save_us={} payload={} retained={} storage_peak={} tree_rss_peak={} git_children_peak={} git_via_leader_peak={} git_via_other_thread_peak={} git_child_listed_under={example:?} process_pid={pid}",
+         micros(elapsed),
+         captured.stats().retained_bytes,
+         saved.usage.retained,
+         peak_storage.load(Ordering::Relaxed),
+-        peak_tree.load(Ordering::Relaxed)
++        peak_tree.load(Ordering::Relaxed),
++        peak_git.load(Ordering::Relaxed),
++        peak_git_leader.load(Ordering::Relaxed),
++        peak_git_thread.load(Ordering::Relaxed)
++    );
++    assert!(
++        peak_git.load(Ordering::Relaxed) > 0,
++        "the real capture journey must observe its Git children; an unobserved child is not a complete tree measurement"
+     );
+ }
+ 

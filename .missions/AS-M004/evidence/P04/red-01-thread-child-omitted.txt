@@ -1,0 +1,20 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.44s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 1 test
+thread_child process=2344558 launcher_tid=2344587 git_pids=[2344588, 2344589, 2344590, 2344591] git_rss=18546688 own_rss=7073792 observed_tree_rss=7073792 leader_children=""
+
+thread 'tree_rss_includes_git_children_launched_from_a_nonleader_thread' (2344559) panicked at tests/records_measure.rs:319:5:
+tree_rss 7073792 must include the 18546688-byte Git children [2344588, 2344589, 2344590, 2344591] launched by nonleader TID 2344587; own process RSS is 7073792
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test tree_rss_includes_git_children_launched_from_a_nonleader_thread ... FAILED
+
+failures:
+
+failures:
+    tree_rss_includes_git_children_launched_from_a_nonleader_thread
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.05s
+
+error: test failed, to rerun pass `--test records_measure`

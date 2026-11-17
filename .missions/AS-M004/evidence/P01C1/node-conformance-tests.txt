@@ -1,0 +1,27 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.07s
+     Running tests/cli.rs (target/debug/deps/cli-5dcfa939dcea819f)
+
+running 11 tests
+test help_is_available ... ok
+test config_explain_returns_defaults_as_json ... ok
+test config_help_describes_the_exact_local_inspection_surface ... ok
+test invocation_without_arguments_is_not_a_successful_analysis ... ok
+test invalid_existing_configuration_and_explicit_missing_file_have_distinct_exits ... ok
+test default_toon_and_explicit_json_have_identical_real_cli_views ... ok
+test unavailable_analysis_is_rejected ... ok
+test real_cli_explicit_selection_ordered_overrides_and_cwd_are_read_only ... ok
+test version_matches_package_metadata ... ok
+test missing_flag_values_identify_the_flag_and_preserve_encoding ... ok
+test inspection_argument_errors_are_structured_redacted_and_precede_file_access ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+
+     Running tests/output.rs (target/debug/deps/output-e8450d914227e444)
+
+running 3 tests
+test default_and_mixed_origins_interoperate_with_independent_reference_decoder ... ok
+test pinned_specification_examples_qualify_the_selected_codec_forms ... ok
+test all_inspection_string_forms_and_located_null_errors_interoperate ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.80s
+

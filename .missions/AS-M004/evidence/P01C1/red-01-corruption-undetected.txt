@@ -1,0 +1,64 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.86s
+     Running tests/records.rs (target/debug/deps/records-67182fda11cdf0af)
+
+running 7 tests
+test altered_source_provenance_is_an_explicit_corruption ... FAILED
+test altered_capture_provenance_is_an_explicit_corruption ... FAILED
+test altered_retained_bytes_are_an_explicit_corruption ... FAILED
+test altered_configuration_bytes_are_an_explicit_corruption ... FAILED
+test extra_retained_membership_is_an_explicit_corruption ... FAILED
+test missing_retained_source_is_an_explicit_corruption ... FAILED
+test duplicate_retained_source_is_an_explicit_corruption ... FAILED
+
+failures:
+
+---- altered_source_provenance_is_an_explicit_corruption stdout ----
+
+thread 'altered_source_provenance_is_an_explicit_corruption' (892073) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- altered_capture_provenance_is_an_explicit_corruption stdout ----
+
+thread 'altered_capture_provenance_is_an_explicit_corruption' (892070) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+---- altered_retained_bytes_are_an_explicit_corruption stdout ----
+
+thread 'altered_retained_bytes_are_an_explicit_corruption' (892072) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+---- altered_configuration_bytes_are_an_explicit_corruption stdout ----
+
+thread 'altered_configuration_bytes_are_an_explicit_corruption' (892071) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+---- extra_retained_membership_is_an_explicit_corruption stdout ----
+
+thread 'extra_retained_membership_is_an_explicit_corruption' (892436) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+---- missing_retained_source_is_an_explicit_corruption stdout ----
+
+thread 'missing_retained_source_is_an_explicit_corruption' (892438) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+---- duplicate_retained_source_is_an_explicit_corruption stdout ----
+
+thread 'duplicate_retained_source_is_an_explicit_corruption' (892434) panicked at tests/records.rs:732:18:
+corrupted retained evidence was returned as a complete capture
+
+
+failures:
+    altered_capture_provenance_is_an_explicit_corruption
+    altered_configuration_bytes_are_an_explicit_corruption
+    altered_retained_bytes_are_an_explicit_corruption
+    altered_source_provenance_is_an_explicit_corruption
+    duplicate_retained_source_is_an_explicit_corruption
+    extra_retained_membership_is_an_explicit_corruption
+    missing_retained_source_is_an_explicit_corruption
+
+test result: FAILED. 0 passed; 7 failed; 0 ignored; 0 measured; 10 filtered out; finished in 0.20s
+
+error: test failed, to rerun pass `--test records`

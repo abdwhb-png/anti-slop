@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "kind": "result",
+  "id": "AS-M004-P01-review",
+  "revision": 1,
+  "mission": {
+    "kind": "mission",
+    "id": "AS-M004",
+    "revision": 2,
+    "path": "../../../docs/missions/AS-M004/r2.md"
+  },
+  "scope": "packet",
+  "packet": {
+    "kind": "packet",
+    "id": "AS-M004-P01",
+    "revision": 1,
+    "path": "../packets/P01.md"
+  },
+  "actor": "firstmate:coordinator",
+  "implementers": [
+    "as-m004-durable:s1794906814.562141.27268"
+  ],
+  "freshContext": false,
+  "outcome": "correction_required",
+  "summary": "Rejected: public retained read returns success with missing source rows or modified bytes bound to the old generation. The coordinator independently reran all 10 records tests successfully and reproduced both undetected corruptions with the real test executable/public module. Initial RED was an unresolved import, not a failing behavior assertion; subsequent mutations establish sensitivity but do not retroactively satisfy TDD. Download-before-release-age-check deviation is disclosed. Existing locked Node conformance packages are absent; CLI/output tests remain failing until environment restoration. No checkpoint or mission advancement accepted.",
+  "evidence": [
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/implementation-report.md"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/firstmate-corruption-reproduction.json"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/red-02-capability-absent.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/policy-dependencies.txt"
+    },
+    {
+      "kind": "evidence",
+      "path": "../evidence/P01/full-tests.txt"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "high",
+      "location": "src/records/mod.rs:240",
+      "trigger": "DELETE capture_sources after successful save, or UPDATE its bytes without changing recorded generation",
+      "observed": "read_capture succeeds with after None or altered bytes under unchanged identity",
+      "requiredCorrection": "Retain and verify enough authoritative capture membership and content integrity to reject missing, extra/duplicate, or altered source/configuration evidence; use real failing public-boundary regression before changing production."
+    },
+    {
+      "severity": "process",
+      "requiredDecision": "Explicit one-time disposition of historical TDD sequencing and pre-release-age-check downloads is needed before acceptance; do not fabricate RED history."
+    }
+  ]
+}

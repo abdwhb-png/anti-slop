@@ -1,0 +1,67 @@
+   Compiling anti-slop v0.1.0 (/home/abdwhb/engineering/firstmate-orchestration-test/data/as-m004-durable/worktree)
+warning: function `build_io_fault_interposer` is never used
+  --> tests/support/records/mod.rs:13:8
+   |
+13 | pub fn build_io_fault_interposer(directory: &Path) -> PathBuf {
+   |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `hex` is never used
+  --> tests/support/records/mod.rs:79:8
+   |
+79 | pub fn hex(bytes: &[u8]) -> String {
+   |        ^^^
+
+warning: function `wait_bounded` is never used
+  --> tests/support/records/mod.rs:83:8
+   |
+83 | pub fn wait_bounded(child: &mut Child, limit: Duration) -> std::process::ExitStatus {
+   |        ^^^^^^^^^^^^
+
+warning: function `wait_for` is never used
+  --> tests/support/records/mod.rs:98:8
+   |
+98 | pub fn wait_for(path: &Path, limit: Duration) -> bool {
+   |        ^^^^^^^^
+
+warning: function `spawn_probe` is never used
+   --> tests/support/records/mod.rs:110:8
+    |
+110 | pub fn spawn_probe(mode: &str, variables: &[(&str, String)]) -> Child {
+    |        ^^^^^^^^^^^
+
+warning: `anti-slop` (test "records_measure") generated 5 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.32s
+     Running tests/records_measure.rs (target/debug/deps/records_measure-66b8486e2ca348d0)
+
+running 1 test
+test capture_save_commit_read_resource_protocol ... host=linux cpus=4 loadavg=Some("0.98 1.03 1.13")
+bounds files=512 file_bytes=1048576 total_bytes=16777216 config_bytes=1048576 budget=10737418240
+captures one_bytes=208 five_changes=5 five_bytes=5286 metadata_changes=480 metadata_bytes=1146 large_bytes=1048762
+captures large_batch_changes=8 large_batch_bytes=8388794
+journey=one_file_capture_only runs=30 p50_us=68470 p95_us=86978 raw_us=[74200, 98309, 80849, 63889, 73185, 63306, 61419, 60284, 61440, 62161, 60865, 74696, 86978, 77903, 76848, 78809, 68470, 59977, 83761, 66620, 61397, 62058, 64252, 58253, 66659, 68769, 72146, 69736, 74537, 70342]
+journey=five_file_capture_only runs=30 p50_us=93373 p95_us=105968 raw_us=[118173, 93373, 105874, 94561, 85577, 93085, 104998, 94957, 86293, 86034, 95203, 87761, 102420, 101944, 96771, 86865, 87100, 89375, 104527, 94216, 86988, 84004, 85355, 86955, 100419, 105968, 99494, 90071, 99963, 85458]
+journey=one_file_open runs=20 p50_us=759 p95_us=905 raw_us=[836, 587, 715, 542, 932, 717, 782, 780, 624, 804, 759, 777, 741, 795, 683, 791, 905, 650, 686, 760]
+journey=one_file_save_commit runs=20 p50_us=405 p95_us=477 raw_us=[334, 477, 420, 477, 386, 361, 473, 358, 385, 433, 366, 359, 439, 392, 464, 431, 366, 418, 426, 405]
+journey=one_file_read runs=20 p50_us=234 p95_us=277 raw_us=[198, 261, 192, 246, 258, 185, 277, 197, 301, 262, 221, 204, 259, 192, 258, 274, 190, 207, 234, 236]
+journey=one_file_capture_save_read runs=20 p50_us=60825 p95_us=74682 raw_us=[57657, 60825, 58869, 67451, 80994, 60876, 59826, 74682, 63600, 64663, 61770, 68074, 62551, 59412, 58811, 60347, 62080, 60210, 60055, 59860]
+journey=five_file_open runs=20 p50_us=705 p95_us=984 raw_us=[815, 791, 600, 644, 713, 644, 839, 804, 543, 643, 684, 708, 811, 1154, 864, 705, 984, 577, 702, 689]
+journey=five_file_save_commit runs=20 p50_us=749 p95_us=905 raw_us=[652, 749, 754, 789, 632, 907, 901, 625, 856, 905, 715, 885, 653, 880, 673, 767, 670, 729, 656, 891]
+journey=five_file_read runs=20 p50_us=374 p95_us=476 raw_us=[342, 356, 359, 374, 340, 463, 459, 345, 346, 451, 324, 476, 326, 477, 405, 442, 319, 416, 382, 449]
+journey=five_file_capture_save_read runs=20 p50_us=94656 p95_us=108399 raw_us=[100053, 103271, 90916, 105906, 88735, 91769, 98546, 94656, 105958, 89533, 89782, 108399, 129523, 99283, 99643, 89442, 91639, 98366, 91804, 90673]
+journey=reopen runs=20 p50_us=308 p95_us=345 raw_us=[374, 345, 335, 315, 325, 313, 303, 305, 276, 292, 308, 333, 321, 308, 296, 328, 283, 278, 297, 297]
+peak case=one_file payload=208 admitted_limit=10737418240 retained=90456 save_us=237 storage_peak=90456 storage_peak_over_retained=0 tree_rss_peak=21630976 aliases=0 changes=1
+peak case=five_file payload=5286 admitted_limit=10737418240 retained=102816 save_us=661 storage_peak=102816 storage_peak_over_retained=0 tree_rss_peak=21630976 aliases=0 changes=5
+peak case=metadata_heavy payload=1146 admitted_limit=10737418240 retained=181096 save_us=18175 storage_peak=181096 storage_peak_over_retained=0 tree_rss_peak=21630976 aliases=0 changes=480
+peak case=large_single payload=1048762 admitted_limit=10737418240 retained=1149296 save_us=17892 storage_peak=1149296 storage_peak_over_retained=0 tree_rss_peak=22958080 aliases=0 changes=1
+peak case=large_batch payload=8388794 admitted_limit=10737418240 retained=16970168 save_us=143789 storage_peak=16970168 storage_peak_over_retained=0 tree_rss_peak=23920640 aliases=0 changes=8
+combined case=one_file capture_save_us=61890 payload=208 retained=90456 storage_peak=90456 tree_rss_peak=20742144
+combined case=five_file capture_save_us=89882 payload=5286 retained=102816 storage_peak=102816 tree_rss_peak=20742144
+combined case=large_batch capture_save_us=639639 payload=8388794 retained=16970168 storage_peak=16970168 tree_rss_peak=32342016
+peak case=held_reader payload=1048762 retained=3316416 save_us=38432 storage_peak=3316416
+memory self_vmhwm_kib=31312 self_vmrss_kib=20224
+ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.43s
+
